@@ -1,0 +1,288 @@
+{
+  "track": "overdrive_pulse.ogg",
+  "bpm": 120,
+  "offset": 0.1,
+  "events": [
+    {
+      "beat": 8,
+      "type": "BAR"
+    },
+    {
+      "beat": 12,
+      "type": "GAP"
+    },
+    {
+      "beat": 14,
+      "type": "NOTE",
+      "dur": 2
+    },
+    {
+      "beat": 16,
+      "type": "GAP"
+    },
+    {
+      "beat": 17,
+      "type": "BAR"
+    },
+    {
+      "beat": 18,
+      "type": "NOTE"
+    },
+    {
+      "beat": 19,
+      "type": "BAR"
+    },
+    {
+      "beat": 20,
+      "type": "NOTE"
+    },
+    {
+      "beat": 21,
+      "type": "BAR"
+    },
+    {
+      "beat": 22,
+      "type": "GAP"
+    },
+    {
+      "beat": 23,
+      "type": "BAR"
+    },
+    {
+      "beat": 24.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 24.5,
+      "type": "BAR"
+    },
+    {
+      "beat": 25.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 25.5,
+      "type": "BAR"
+    },
+    {
+      "beat": 26.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 26.5,
+      "type": "GAP"
+    },
+    {
+      "beat": 27.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 27.5,
+      "type": "NOTE"
+    },
+    {
+      "beat": 28.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 28.5,
+      "type": "GAP"
+    },
+    {
+      "beat": 29.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 29.5,
+      "type": "BAR"
+    },
+    {
+      "beat": 30.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 30.5,
+      "type": "BAR"
+    },
+    {
+      "beat": 31.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 31.5,
+      "type": "BAR"
+    },
+    {
+      "beat": 32.0,
+      "type": "BAR",
+      "dur": 4
+    },
+    {
+      "beat": 32.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 32.5,
+      "type": "GAP"
+    },
+    {
+      "beat": 33.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 33.5,
+      "type": "NOTE"
+    },
+    {
+      "beat": 34.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 34.5,
+      "type": "GAP"
+    },
+    {
+      "beat": 35.0,
+      "type": "BAR",
+      "dur": 4
+    },
+    {
+      "beat": 37.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 39.0,
+      "type": "NOTE",
+      "dur": 4
+    },
+    {
+      "beat": 41.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 42.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 42.5,
+      "type": "NOTE"
+    },
+    {
+      "beat": 43.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 43.5,
+      "type": "GAP"
+    },
+    {
+      "beat": 44.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 44.5,
+      "type": "BAR"
+    },
+    {
+      "beat": 45.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 45.5,
+      "type": "GAP"
+    },
+    {
+      "beat": 46.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 46.5,
+      "type": "NOTE"
+    },
+    {
+      "beat": 47.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 47.5,
+      "type": "BAR"
+    },
+    {
+      "beat": 48.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 48.5,
+      "type": "BAR"
+    },
+    {
+      "beat": 49.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 49.5,
+      "type": "NOTE"
+    },
+    {
+      "beat": 50.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 50.5,
+      "type": "NOTE"
+    },
+    {
+      "beat": 51.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 51.5,
+      "type": "GAP"
+    },
+    {
+      "beat": 52.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 52.5,
+      "type": "BAR"
+    },
+    {
+      "beat": 53.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 53.5,
+      "type": "GAP"
+    },
+    {
+      "beat": 54.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 54.5,
+      "type": "NOTE"
+    },
+    {
+      "beat": 55,
+      "type": "NOTE"
+    },
+    {
+      "beat": 57,
+      "type": "BAR"
+    },
+    {
+      "beat": 58,
+      "type": "BAR",
+      "dur": 4
+    },
+    {
+      "beat": 59,
+      "type": "GAP"
+    },
+    {
+      "beat": 61,
+      "type": "NOTE"
+    }
+  ]
+}

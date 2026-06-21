@@ -15,13 +15,22 @@ export interface TrackDef {
 
 export const TRACKS: TrackDef[] = [
   {
-    id: "groove",
-    title: "Sweet Papa Groove",
+    id: "overdrive",
+    title: "Overdrive Pulse",
     artist: "Sweet Papa & the Tones",
-    bpm: 88,
-    map: "maps/sweetpapa_groove.beatmap.json",
-    audio: "assets/tracks/sweetpapa_groove.ogg",
-    color: 0xff5dcb,
+    bpm: 120,
+    map: "maps/overdrive_pulse.beatmap.json",
+    audio: "assets/tracks/overdrive_pulse.ogg",
+    color: 0xff2d95,
+  },
+  {
+    id: "midnight",
+    title: "Midnight Run",
+    artist: "Sweet Papa & the Tones",
+    bpm: 128,
+    map: "maps/midnight_run.beatmap.json",
+    audio: "assets/tracks/midnight_run.ogg",
+    color: 0x2de2e6,
   },
   {
     id: "neon",
@@ -30,7 +39,16 @@ export const TRACKS: TrackDef[] = [
     bpm: 92,
     map: "maps/neon_nights.beatmap.json",
     audio: "assets/tracks/neon_nights.ogg",
-    color: 0x4cc9ff,
+    color: 0xb14cff,
+  },
+  {
+    id: "groove",
+    title: "Sweet Papa Groove",
+    artist: "Sweet Papa & the Tones",
+    bpm: 88,
+    map: "maps/sweetpapa_groove.beatmap.json",
+    audio: "assets/tracks/sweetpapa_groove.ogg",
+    color: 0xffd23c,
   },
 ];
 

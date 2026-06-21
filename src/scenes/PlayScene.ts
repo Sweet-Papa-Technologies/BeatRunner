@@ -2,7 +2,7 @@ import Phaser from "phaser";
 import { AudioEngine } from "../audio/AudioEngine";
 import { parseBeatmap } from "../core/beatmap";
 import type { Beatmap, EventType } from "../core/beatmap";
-import { beatTime, judge, nearestBeat } from "../core/timing";
+import { beatTime, judge } from "../core/timing";
 import type { Judgment } from "../core/timing";
 import { applyHit, accuracy, gradeFor, initialScore, multiplier } from "../core/scoring";
 import type { ScoreState } from "../core/scoring";
@@ -10,36 +10,50 @@ import { RunController } from "../core/run";
 import { trackById } from "../game/tracks";
 import type { RunResult, TrackDef } from "../game/tracks";
 import {
-  COLORS, LEAD_TIME, STAGE, TYPE_FOR_ACTION, VIEW, tierColor,
-  type ActionName,
+  COLORS, HIGHWAY, LANE_COLORS, LANE_COUNT, LANE_FOR_TYPE, LEAD_TIME, MISS_GRACE,
+  VIEW, tierColor,
 } from "../game/config";
-import { shockwave, sparkleBurst, starfield, spawnStreak, ambientSparkles } from "../game/fx";
+import { project, laneX } from "../game/highway";
+import { shockwave, sparkleBurst, laneBeam, ambientSparkles } from "../game/fx";
 
-interface LiveEvent {
-  beat: number;
+interface LiveNote {
+  lane: number;
   type: EventType;
+  beat: number;
   targetTime: number;
+  /** sustain seconds (0 for a tap). */
+  dur: number;
+  endTime: number;
   spawned: boolean;
+  /** head has been judged (hit or auto-missed). */
   judged: boolean;
-  sprite?: Phaser.GameObjects.Container;
+  /** currently holding a sustain. */
+  holding: boolean;
+  holdDone: boolean;
+  lastTick: number;
+  head?: Phaser.GameObjects.Container;
+  core?: Phaser.GameObjects.Image;
+  ringImg?: Phaser.GameObjects.Image;
   glow?: Phaser.GameObjects.Image;
+  tail?: Phaser.GameObjects.Graphics;
 }
 
-const MISS_GRACE = 0.12;
-const OB_COLOR: Record<EventType, number> = { GAP: COLORS.gap, BAR: COLORS.bar, NOTE: COLORS.note };
-const OB_TEX: Record<EventType, string> = { GAP: "ob_gap", BAR: "ob_bar", NOTE: "ob_note" };
-const POSE: Record<ActionName, string> = { Jump: "hero_jump", Duck: "hero_duck", Strike: "hero_strike" };
-const Y_FOR_TYPE: Record<EventType, number> = {
-  GAP: STAGE.groundY - 8,
-  BAR: STAGE.groundY - 110,
-  NOTE: STAGE.groundY - 150,
+const HIT_WINDOW = 0.14;     // a press only consumes a note within this of its target
+const SUSTAIN_TICK = 0.1;    // seconds between sustain bonus ticks
+const SUSTAIN_POINTS = 8;
+const HOLD_BONUS = 120;
+
+const LANE_KEYS: Record<string, number> = {
+  LEFT: 0, A: 0, J: 0,
+  DOWN: 1, S: 1, K: 1, SPACE: 1,
+  RIGHT: 2, D: 2, L: 2,
 };
 
 export class PlayScene extends Phaser.Scene {
   private audio!: AudioEngine;
   private track!: TrackDef;
   private beatmap!: Beatmap;
-  private liveEvents: LiveEvent[] = [];
+  private notes: LiveNote[] = [];
   private run!: RunController;
   private score: ScoreState = initialScore();
   private maxCombo = 0;
@@ -47,22 +61,29 @@ export class PlayScene extends Phaser.Scene {
   private started = false;
   private ended = false;
   private paused = false;
+  private laneDown: boolean[] = [false, false, false];
 
-  // visuals
-  private layers: Phaser.GameObjects.TileSprite[] = [];
+  // world
+  private sky!: Phaser.GameObjects.TileSprite;
+  private ridge!: Phaser.GameObjects.TileSprite;
+  private city!: Phaser.GameObjects.TileSprite;
+  private sunGlow!: Phaser.GameObjects.Image;
+  private grid!: Phaser.GameObjects.Graphics;
+  private laneGlows: Phaser.GameObjects.Rectangle[] = [];
+  private pads: Phaser.GameObjects.Image[] = [];
+  private padGlows: Phaser.GameObjects.Image[] = [];
   private hero!: Phaser.GameObjects.Sprite;
   private heroAura!: Phaser.GameObjects.Image;
-  private beatGlow!: Phaser.GameObjects.Image;
-  private horizon!: Phaser.GameObjects.Graphics;
-  private heroBaseY = STAGE.groundY;
+  private heroBaseY = 0;
   private heroBusy = false;
-  private ghostTimer = 0;
   private particles!: Phaser.GameObjects.Particles.ParticleEmitter;
+  private gridPhase = 0;
   private lastBeatPulsed = -1;
 
   // hud
   private scoreText!: Phaser.GameObjects.Text;
   private comboText!: Phaser.GameObjects.Text;
+  private comboLabel!: Phaser.GameObjects.Text;
   private multText!: Phaser.GameObjects.Text;
   private judgeText!: Phaser.GameObjects.Text;
   private progress!: Phaser.GameObjects.Graphics;
@@ -73,8 +94,8 @@ export class PlayScene extends Phaser.Scene {
   }
 
   init(data: { trackId: string }): void {
-    this.track = trackById(data?.trackId ?? "groove");
-    this.liveEvents = [];
+    this.track = trackById(data?.trackId ?? "overdrive");
+    this.notes = [];
     this.score = initialScore();
     this.maxCombo = 0;
     this.prevMult = 1;
@@ -82,20 +103,23 @@ export class PlayScene extends Phaser.Scene {
     this.ended = false;
     this.paused = false;
     this.lastBeatPulsed = -1;
-    this.layers = [];
+    this.gridPhase = 0;
     this.heroBusy = false;
-    this.ghostTimer = 0;
+    this.laneDown = [false, false, false];
+    this.pads = [];
+    this.padGlows = [];
+    this.laneGlows = [];
   }
 
   async create(): Promise<void> {
     this.audio = this.registry.get("audio") as AudioEngine;
-    this.cameras.main.fadeIn(280, 0, 0, 0);
+    this.cameras.main.fadeIn(300, 0, 0, 0);
     this.buildWorld();
     this.buildHud();
     this.bindInput();
 
-    const loading = this.add.text(VIEW.width / 2, VIEW.height / 2, "loading the groove…", {
-      fontFamily: "system-ui, sans-serif", fontSize: "28px", color: "#ffffff",
+    const loading = this.add.text(VIEW.width / 2, VIEW.height / 2, "syncing the highway…", {
+      fontFamily: "system-ui, sans-serif", fontSize: "26px", color: "#ffffff",
     }).setOrigin(0.5).setDepth(100);
 
     try {
@@ -109,128 +133,182 @@ export class PlayScene extends Phaser.Scene {
       return;
     }
 
-    this.liveEvents = this.beatmap.events.map((ev) => ({
-      beat: ev.beat,
-      type: ev.type,
-      targetTime: beatTime(ev.beat, this.beatmap.bpm, this.beatmap.offset),
-      spawned: false,
-      judged: false,
-    }));
+    this.notes = this.beatmap.events.map((ev) => {
+      const targetTime = beatTime(ev.beat, this.beatmap.bpm, this.beatmap.offset);
+      const dur = ev.dur ? (ev.dur / this.beatmap.bpm) * 60 : 0;
+      return {
+        lane: LANE_FOR_TYPE[ev.type], type: ev.type, beat: ev.beat,
+        targetTime, dur, endTime: targetTime + dur,
+        spawned: false, judged: false, holding: false, holdDone: false, lastTick: 0,
+      };
+    });
 
     this.run = new RunController({ clock: () => this.audio.now(), trackDuration: this.audio.duration });
     this.run.start();
     loading.destroy();
+    this.audio.setMetronome(true);
     this.countIn();
   }
 
   // ---------- world ----------
   private buildWorld(): void {
-    starfield(this, VIEW.width, VIEW.height, 100);
+    this.sky = this.add.tileSprite(0, 0, VIEW.width, VIEW.height, "od_sky").setOrigin(0).setDepth(0);
+    this.fitTile(this.sky, "od_sky");
+    this.ridge = this.add.tileSprite(0, 0, VIEW.width, VIEW.height, "od_ridge").setOrigin(0).setDepth(1).setAlpha(0.6);
+    this.fitTile(this.ridge, "od_ridge");
+    // distant skyline sits as a thin band right on the horizon, behind the road
+    this.city = this.add.tileSprite(0, HIGHWAY.vpY - 64, VIEW.width, 150, "od_city").setOrigin(0).setDepth(1).setAlpha(0.5);
 
-    this.layers = [
-      this.add.tileSprite(0, 0, VIEW.width, VIEW.height, "bg_sky").setOrigin(0).setDepth(1),
-      this.add.tileSprite(0, 0, VIEW.width, VIEW.height, "bg_city").setOrigin(0).setAlpha(0.85).setDepth(1),
-      this.add.tileSprite(0, VIEW.height - 230, VIEW.width, 230, "bg_near").setOrigin(0, 0).setDepth(2),
-    ];
+    // soft pulsing sun bloom anchored on the horizon
+    this.sunGlow = this.add.image(HIGHWAY.vpX, HIGHWAY.vpY + 6, "glow")
+      .setBlendMode(Phaser.BlendModes.ADD).setTint(COLORS.sun).setAlpha(0.5).setScale(9).setDepth(1);
+
+    // darken the foreground so the road + notes read cleanly: gentle fade at the
+    // horizon, deep solid black over the near road.
+    const veil = this.add.graphics().setDepth(2);
+    const fadeTop = HIGHWAY.vpY + 4, fadeH = 220;
+    veil.fillGradientStyle(0x0a0420, 0x0a0420, 0x0a0420, 0x0a0420, 0, 0, 0.9, 0.9);
+    veil.fillRect(0, fadeTop, VIEW.width, fadeH);
+    veil.fillStyle(0x0a0420, 0.9);
+    veil.fillRect(0, fadeTop + fadeH, VIEW.width, VIEW.height - fadeTop - fadeH);
+
+    // animated perspective road grid
+    this.grid = this.add.graphics().setDepth(2);
+
+    // lane glow strips (brighten as notes approach / on hit)
+    for (let i = 0; i < LANE_COUNT; i++) {
+      const x = laneX(i);
+      const strip = this.add.rectangle(x, (HIGHWAY.vpY + HIGHWAY.hitY) / 2, 90, HIGHWAY.hitY - HIGHWAY.vpY, LANE_COLORS[i], 0.0)
+        .setBlendMode(Phaser.BlendModes.ADD).setDepth(3);
+      this.laneGlows.push(strip);
+    }
+
+    // hit-line + three lane pads
+    const hitGfx = this.add.graphics().setDepth(3);
+    const lx = laneX(0) - 70, rx = laneX(2) + 70;
+    hitGfx.lineStyle(3, 0xffffff, 0.5);
+    hitGfx.lineBetween(lx, HIGHWAY.hitY, rx, HIGHWAY.hitY);
+    hitGfx.lineStyle(8, 0xffffff, 0.12);
+    hitGfx.lineBetween(lx, HIGHWAY.hitY + 4, rx, HIGHWAY.hitY + 4);
+
+    for (let i = 0; i < LANE_COUNT; i++) {
+      const x = laneX(i);
+      const padGlow = this.add.image(x, HIGHWAY.hitY, "glow")
+        .setBlendMode(Phaser.BlendModes.ADD).setTint(LANE_COLORS[i]).setAlpha(0.32).setScale(2.6).setDepth(3);
+      const pad = this.add.image(x, HIGHWAY.hitY, "pad").setTint(LANE_COLORS[i]).setAlpha(0.85).setScale(0.92).setDepth(4);
+      this.tweens.add({ targets: pad, angle: 360, duration: 9000, repeat: -1 });
+      this.padGlows.push(padGlow);
+      this.pads.push(pad);
+    }
 
     ambientSparkles(this, VIEW.width, VIEW.height);
 
-    // neon horizon + ground reflection (re-drawn each beat for the flash)
-    this.horizon = this.add.graphics().setDepth(2);
-    this.drawHorizon(0.8);
-
-    // pocket marker
-    const pocket = this.add.graphics().setDepth(2);
-    pocket.lineStyle(2, 0xffffff, 0.18);
-    pocket.lineBetween(STAGE.actionX, 130, STAGE.actionX, STAGE.groundY + 64);
-    const pmGlow = this.add.image(STAGE.actionX, STAGE.groundY - 70, "glow")
-      .setBlendMode(Phaser.BlendModes.ADD).setTint(0xffffff).setAlpha(0.10).setScale(2, 5).setDepth(2);
-    this.tweens.add({ targets: pmGlow, alpha: 0.22, duration: 900, yoyo: true, repeat: -1, ease: "Sine.inOut" });
-
-    // beat glow behind hero
-    this.beatGlow = this.add.image(STAGE.actionX, STAGE.groundY - 70, "glow")
-      .setBlendMode(Phaser.BlendModes.ADD).setTint(this.track.color).setAlpha(0.5).setScale(4.5).setDepth(4);
-
-    // hero aura + sprite
-    this.heroAura = this.add.image(STAGE.actionX, STAGE.groundY - 60, "glow")
-      .setBlendMode(Phaser.BlendModes.ADD).setTint(COLORS.hero).setAlpha(0.5).setScale(3).setDepth(5);
-    this.hero = this.add.sprite(STAGE.actionX, this.heroBaseY, "hero_run1").setDepth(6).setOrigin(0.5, 1).setScale(0.46);
+    // reacting mascot in the foreground corner
+    this.heroBaseY = HIGHWAY.hitY + 86;
+    this.heroAura = this.add.image(150, this.heroBaseY - 54, "glow")
+      .setBlendMode(Phaser.BlendModes.ADD).setTint(COLORS.hero).setAlpha(0.45).setScale(3.4).setDepth(5);
+    this.hero = this.add.sprite(150, this.heroBaseY, this.textures.exists("hero_run1") ? "hero_run1" : "hero")
+      .setOrigin(0.5, 1).setScale(0.62).setDepth(6);
     if (this.anims.exists("hero-run")) this.hero.play("hero-run");
+    this.tweens.add({ targets: this.hero, y: this.heroBaseY - 8, duration: 320, yoyo: true, repeat: -1, ease: "Sine.inOut" });
 
     this.particles = this.add.particles(0, 0, "spark", {
       lifespan: 560, speed: { min: 90, max: 360 }, scale: { start: 0.8, end: 0 },
-      rotate: { start: 0, end: 360 }, gravityY: 300,
+      rotate: { start: 0, end: 360 }, gravityY: 260,
       blendMode: Phaser.BlendModes.ADD, emitting: false,
     }).setDepth(9);
   }
 
-  private drawHorizon(intensity: number): void {
-    const y = STAGE.groundY + 64;
-    this.horizon.clear();
-    this.horizon.fillStyle(0x05030d, 0.85);
-    this.horizon.fillRect(0, y, VIEW.width, VIEW.height - y);
-    this.horizon.lineStyle(4, this.track.color, intensity);
-    this.horizon.lineBetween(0, y, VIEW.width, y);
-    this.horizon.lineStyle(2, 0xffffff, intensity * 0.6);
-    this.horizon.lineBetween(0, y + 3, VIEW.width, y + 3);
+  private fitTile(t: Phaser.GameObjects.TileSprite, key: string): void {
+    const src = this.textures.get(key).getSourceImage();
+    if (src && src.width) t.setTileScale(VIEW.width / src.width);
+  }
+
+  private drawGrid(intensity: number): void {
+    const g = this.grid;
+    g.clear();
+    const vpX = HIGHWAY.vpX, vpY = HIGHWAY.vpY, hitY = HIGHWAY.hitY;
+    const edgeU = 1.9; // road half-width in lane-spread units
+    const gpx = (u: number, d: number) => vpX + u * HIGHWAY.spread * d;
+    const gpy = (d: number) => vpY + (hitY - vpY) * d;
+
+    // longitudinal lane lines (road edges + lane boundaries)
+    const cols = [-edgeU, -1.5, -0.5, 0.5, 1.5, edgeU];
+    for (const u of cols) {
+      const edge = Math.abs(u) > 1.6;
+      g.lineStyle(edge ? 3 : 2, edge ? 0x6cf2ff : 0xff7adf, (edge ? 0.5 : 0.28) * intensity);
+      g.lineBetween(gpx(u, 0.02), gpy(0.02), gpx(u, 1.25), gpy(1.25));
+    }
+
+    // transverse rungs, denser near the horizon, scrolling toward the camera
+    const N = 16;
+    for (let i = 0; i < N; i++) {
+      const frac = ((i + (this.gridPhase % 1)) / N);
+      const d = Math.pow(frac, 2.0) * 1.25;
+      if (d < 0.02) continue;
+      const a = (0.12 + 0.5 * d) * intensity;
+      g.lineStyle(d > 0.7 ? 3 : 2, 0x9b6cff, Math.min(0.6, a));
+      g.lineBetween(gpx(-edgeU, d), gpy(d), gpx(edgeU, d), gpy(d));
+    }
   }
 
   private buildHud(): void {
     const f = (size: number) => ({ fontFamily: "system-ui, sans-serif", fontSize: `${size}px`, color: "#ffffff" });
-    this.scoreText = this.add.text(28, 22, "0", { ...f(46), fontStyle: "bold" }).setDepth(20);
-    this.scoreText.setShadow(0, 0, "#9b8cff", 12, true, true);
-    this.add.text(30, 74, "SCORE", { ...f(16), color: "#9b8cff" }).setDepth(20);
+    this.scoreText = this.add.text(30, 22, "0", { ...f(50), fontStyle: "bold" }).setDepth(20);
+    this.scoreText.setShadow(0, 0, "#2de2e6", 14, true, true);
+    this.add.text(32, 78, "SCORE", { ...f(15), color: "#6cf2c4" }).setDepth(20);
 
-    this.comboText = this.add.text(VIEW.width - 28, 18, "", { ...f(58), fontStyle: "bold" })
-      .setOrigin(1, 0).setDepth(20);
-    this.multText = this.add.text(VIEW.width - 30, 86, "", { ...f(24), fontStyle: "bold" }).setOrigin(1, 0).setDepth(20);
+    this.comboText = this.add.text(VIEW.width / 2, 150, "", { ...f(80), fontStyle: "bold" }).setOrigin(0.5).setDepth(19).setAlpha(0);
+    this.comboLabel = this.add.text(VIEW.width / 2, 198, "", { ...f(18), color: "#cfc6ff", fontStyle: "bold" }).setOrigin(0.5).setDepth(19).setAlpha(0);
+    this.multText = this.add.text(VIEW.width - 30, 22, "", { ...f(46), fontStyle: "bold" }).setOrigin(1, 0).setDepth(20);
 
-    this.judgeText = this.add.text(STAGE.actionX, 250, "", { ...f(46), fontStyle: "bold" })
+    this.judgeText = this.add.text(HIGHWAY.vpX, HIGHWAY.hitY - 120, "", { ...f(44), fontStyle: "bold" })
       .setOrigin(0.5).setDepth(20).setAlpha(0);
 
     this.progress = this.add.graphics().setDepth(20);
 
-    const hint = "SPACE/↑ Jump · ↓ Duck · F Strike · P pause";
-    this.add.text(VIEW.width / 2, VIEW.height - 24, hint, { ...f(17), color: "#ffffff" })
-      .setOrigin(0.5).setDepth(20).setAlpha(0.55);
+    const hint = "◄ ▼ ►  /  A S D  /  J K L   —   hit the lanes on the beat   ·   P pause";
+    this.add.text(VIEW.width / 2, VIEW.height - 22, hint, { ...f(16), color: "#ffffff" })
+      .setOrigin(0.5).setDepth(20).setAlpha(0.5);
   }
 
   // ---------- input ----------
   private bindInput(): void {
     const kb = this.input.keyboard;
     if (!kb) return;
-    kb.on("keydown-SPACE", () => this.act("Jump"));
-    kb.on("keydown-UP", () => this.act("Jump"));
-    kb.on("keydown-W", () => this.act("Jump"));
-    kb.on("keydown-DOWN", () => this.act("Duck"));
-    kb.on("keydown-S", () => this.act("Duck"));
-    kb.on("keydown-F", () => this.act("Strike"));
-    kb.on("keydown-J", () => this.act("Strike"));
+    for (const key of Object.keys(LANE_KEYS)) {
+      kb.on(`keydown-${key}`, () => this.pressLane(LANE_KEYS[key]));
+      kb.on(`keyup-${key}`, () => this.releaseLane(LANE_KEYS[key]));
+    }
     kb.on("keydown-P", () => this.togglePause());
     kb.on("keydown-ESC", () => this.togglePause());
     kb.on("keydown-M", () => this.audio.setMetronome(false));
 
     this.input.on("pointerdown", (p: Phaser.Input.Pointer) => {
       if (this.paused) return;
-      const third = p.x / VIEW.width;
-      this.act(third < 0.34 ? "Jump" : third < 0.67 ? "Duck" : "Strike");
+      const lane = p.x < VIEW.width / 3 ? 0 : p.x < (VIEW.width * 2) / 3 ? 1 : 2;
+      this.pressLane(lane);
+    });
+    this.input.on("pointerup", (p: Phaser.Input.Pointer) => {
+      const lane = p.x < VIEW.width / 3 ? 0 : p.x < (VIEW.width * 2) / 3 ? 1 : 2;
+      this.releaseLane(lane);
     });
   }
 
   // ---------- countdown ----------
   private countIn(): void {
     const beatMs = (60 / this.beatmap.bpm) * 1000;
-    const big = this.add.text(VIEW.width / 2, VIEW.height / 2 - 40, "", {
-      fontFamily: "system-ui, sans-serif", fontSize: "140px", color: "#ffffff", fontStyle: "bold",
+    const big = this.add.text(VIEW.width / 2, VIEW.height / 2 - 30, "", {
+      fontFamily: "system-ui, sans-serif", fontSize: "150px", color: "#ffffff", fontStyle: "bold",
     }).setOrigin(0.5).setDepth(30);
-    big.setShadow(0, 0, "#ff5dcb", 30, true, true);
+    big.setShadow(0, 0, "#ff2d95", 30, true, true);
     const seq = ["3", "2", "1", "GO!"];
     seq.forEach((label, i) => {
       this.time.delayedCall(i * beatMs, () => {
         big.setText(label).setScale(0.3).setAlpha(1);
-        big.setColor(label === "GO!" ? "#7af2c4" : "#ffffff");
+        big.setColor(label === "GO!" ? "#6cf2c4" : "#ffffff");
         this.audio.sfx("count");
-        shockwave(this, VIEW.width / 2, VIEW.height / 2 - 40, label === "GO!" ? 0x7af2c4 : 0xffffff, { scale: 3.2 });
+        shockwave(this, VIEW.width / 2, VIEW.height / 2 - 30, label === "GO!" ? 0x6cf2c4 : 0xffffff, { scale: 3.4 });
         this.tweens.add({ targets: big, scale: 1.25, duration: beatMs * 0.6, ease: "Back.out" });
         this.tweens.add({ targets: big, alpha: 0, delay: beatMs * 0.55, duration: beatMs * 0.4 });
       });
@@ -247,31 +325,25 @@ export class PlayScene extends Phaser.Scene {
 
   // ---------- main loop ----------
   update(_t: number, delta: number): void {
-    this.layers[0].tilePositionX += delta * 0.012;
-    this.layers[1].tilePositionX += delta * 0.06;
-    this.layers[2].tilePositionX += delta * 0.26;
+    this.sky.tilePositionX += delta * 0.004;
+    this.ridge.tilePositionX += delta * 0.012;
+    this.city.tilePositionX += delta * 0.03;
 
-    if (!this.started || this.ended || this.paused) return;
+    if (!this.started || this.ended || this.paused) {
+      if (!this.started) this.drawGrid(0.7);
+      return;
+    }
 
     this.audio.pumpMetronome();
     const songTime = this.audio.songTime();
+    this.gridPhase += delta * 0.0011 * (this.beatmap.bpm / 100);
 
     this.updateBeatPulse(songTime);
-    this.updateGhosts(delta);
-    this.updateEvents(songTime);
+    this.drawGrid(0.85);
+    this.updateNotes(songTime);
     this.updateHud(songTime);
 
     if (this.run.tick() === "Results") this.finish();
-  }
-
-  private updateGhosts(delta: number): void {
-    this.ghostTimer -= delta;
-    if (this.ghostTimer > 0) return;
-    this.ghostTimer = 55;
-    const g = this.add.image(this.hero.x, this.hero.y, this.hero.texture.key)
-      .setOrigin(0.5, 1).setScale(this.hero.scaleX, this.hero.scaleY)
-      .setTint(tierColor(this.score.combo)).setAlpha(0.35).setBlendMode(Phaser.BlendModes.ADD).setDepth(5);
-    this.tweens.add({ targets: g, alpha: 0, x: g.x - 40, duration: 320, onComplete: () => g.destroy() });
   }
 
   private updateBeatPulse(songTime: number): void {
@@ -280,131 +352,201 @@ export class PlayScene extends Phaser.Scene {
     this.lastBeatPulsed = beat;
     const accent = beat % 4 === 0;
 
-    this.tweens.add({ targets: this.cameras.main, zoom: accent ? 1.018 : 1.009, duration: 95, yoyo: true, ease: "Sine.inOut" });
-
-    this.beatGlow.setScale(accent ? 6 : 5).setAlpha(accent ? 0.8 : 0.6);
-    this.tweens.add({ targets: this.beatGlow, scale: 4.2, alpha: 0.4, duration: 260, ease: "Quad.out" });
-
+    this.tweens.add({ targets: this.cameras.main, zoom: accent ? 1.02 : 1.01, duration: 90, yoyo: true, ease: "Sine.inOut" });
+    this.sunGlow.setScale(accent ? 10.5 : 9.6).setAlpha(accent ? 0.7 : 0.55);
+    this.tweens.add({ targets: this.sunGlow, scale: 9, alpha: 0.45, duration: 280, ease: "Quad.out" });
     this.heroAura.setTint(tierColor(this.score.combo));
-    this.drawHorizon(accent ? 1 : 0.8);
-
-    if (accent) spawnStreak(this, VIEW.width, VIEW.height, this.track.color);
-    if (beat % 2 === 0) spawnStreak(this, VIEW.width, VIEW.height, 0xffffff);
+    // mascot bob accent
+    if (accent && !this.heroBusy) {
+      this.tweens.add({ targets: this.hero, scaleY: 0.66, duration: 90, yoyo: true, ease: "Quad.out" });
+    }
   }
 
-  private updateEvents(songTime: number): void {
-    const rightX = STAGE.spawnX;
-    for (const e of this.liveEvents) {
-      if (e.judged) continue;
+  private updateNotes(songTime: number): void {
+    // decay lane glows; proximity/hit re-energize them below
+    for (const lg of this.laneGlows) lg.fillAlpha *= 0.82;
 
-      if (!e.spawned && songTime >= e.targetTime - LEAD_TIME) {
-        e.spawned = true;
-        this.spawnObstacle(e, rightX);
+    for (const n of this.notes) {
+      if (n.holdDone) continue;
+
+      if (!n.spawned && songTime >= n.targetTime - LEAD_TIME) {
+        n.spawned = true;
+        this.spawnNote(n);
+      }
+      if (!n.spawned) continue;
+
+      const pHead = 1 - (n.targetTime - songTime) / LEAD_TIME;
+
+      // sustain handling
+      if (n.holding) {
+        this.updateHold(n, songTime);
       }
 
-      if (e.spawned && e.sprite) {
-        const frac = Phaser.Math.Clamp((e.targetTime - songTime) / LEAD_TIME, -0.4, 1);
-        e.sprite.x = STAGE.actionX + (rightX - STAGE.actionX) * frac;
-        if (e.glow) e.glow.x = e.sprite.x;
-        // proximity telegraph: brighten as it nears the pocket
-        const near = 1 - Phaser.Math.Clamp(Math.abs(e.sprite.x - STAGE.actionX) / 300, 0, 1);
-        if (e.glow) e.glow.setAlpha(0.25 + near * 0.5);
+      // position the head (clamp at the hit-line while holding)
+      const dispP = n.holding ? Math.min(pHead, 1.0) : pHead;
+      const pr = project(n.lane, dispP);
+      if (n.head) {
+        n.head.setPosition(pr.x, pr.y).setScale(pr.scale).setAlpha(n.holding ? 1 : pr.alpha);
+      }
+      // lane proximity glow
+      if (!n.judged) {
+        const near = Phaser.Math.Clamp(pHead, 0, 1);
+        const cur = this.laneGlows[n.lane];
+        cur.fillAlpha = Math.max(cur.fillAlpha, 0.04 + near * near * 0.16);
       }
 
-      if (e.spawned && !e.judged && songTime > e.targetTime + MISS_GRACE) {
-        this.resolve(e, "Miss", true);
+      // hold tail
+      if (n.dur > 0 && n.tail) this.drawTail(n, songTime, dispP);
+
+      // auto-miss the head
+      if (!n.judged && songTime > n.targetTime + MISS_GRACE) {
+        this.resolve(n, "Miss", true);
+      }
+      // a missed tap flies off the bottom — clean it up
+      if (n.judged && !n.holding && n.dur === 0 && pHead > 1.4) {
+        this.killNote(n);
       }
     }
   }
 
-  private spawnObstacle(e: LiveEvent, x: number): void {
-    const color = OB_COLOR[e.type];
-    const y = Y_FOR_TYPE[e.type];
-    e.glow = this.add.image(x, y, "glow").setBlendMode(Phaser.BlendModes.ADD).setTint(color)
-      .setAlpha(0.4).setScale(2.4).setDepth(4);
+  private spawnNote(n: LiveNote): void {
+    const color = LANE_COLORS[n.lane];
+    const pr = project(n.lane, 0);
+    const glow = this.add.image(0, 0, "glow").setBlendMode(Phaser.BlendModes.ADD).setTint(color).setAlpha(0.55).setScale(1.6);
+    const ringImg = this.add.image(0, 0, "ring").setBlendMode(Phaser.BlendModes.ADD).setTint(0xffffff).setAlpha(0.6).setScale(0.62);
+    const core = this.add.image(0, 0, "note").setTint(color).setScale(0.5);
+    const sheen = this.add.image(0, -14, "sheen").setTint(0xffffff).setAlpha(0.5).setScale(0.42).setBlendMode(Phaser.BlendModes.ADD);
+    const head = this.add.container(pr.x, pr.y, [glow, ringImg, core, sheen]).setDepth(5).setScale(pr.scale);
+    n.head = head; n.core = core; n.ringImg = ringImg; n.glow = glow;
+    this.tweens.add({ targets: ringImg, angle: 360, duration: 3200, repeat: -1 });
 
-    const img = this.add.image(0, 0, OB_TEX[e.type]).setOrigin(0.5, e.type === "GAP" ? 1 : 0.5);
-    img.setScale(e.type === "BAR" ? 0.62 : 0.44);
-    const halo = this.add.image(0, 0, "ring").setBlendMode(Phaser.BlendModes.ADD).setTint(color).setAlpha(0.5).setScale(0.6);
-    const cont = this.add.container(x, y, [halo, img]).setDepth(5);
-    e.sprite = cont;
-
-    // spawn pop
-    cont.setScale(0.2);
-    this.tweens.add({ targets: cont, scale: 1, duration: 240, ease: "Back.out" });
-    // idle life
-    this.tweens.add({ targets: halo, angle: 360, duration: 4000, repeat: -1 });
-    if (e.type === "NOTE") {
-      this.tweens.add({ targets: img, angle: { from: -8, to: 8 }, duration: 500, yoyo: true, repeat: -1, ease: "Sine.inOut" });
-      this.tweens.add({ targets: cont, y: y - 14, duration: 600, yoyo: true, repeat: -1, ease: "Sine.inOut" });
-    } else {
-      this.tweens.add({ targets: halo, scale: 0.75, duration: 420, yoyo: true, repeat: -1, ease: "Sine.inOut" });
+    if (n.dur > 0) {
+      n.tail = this.add.graphics().setDepth(4).setBlendMode(Phaser.BlendModes.ADD);
     }
+  }
+
+  private drawTail(n: LiveNote, songTime: number, headDispP: number): void {
+    const g = n.tail!;
+    g.clear();
+    const pBottom = headDispP;                                   // head end (nearer camera)
+    const pTop = 1 - (n.endTime - songTime) / LEAD_TIME;         // sustain end (further up)
+    if (pTop >= pBottom) return;
+    const top = project(n.lane, Math.max(0, pTop));
+    const bot = project(n.lane, Math.min(pBottom, 1.0));
+    const wTop = 26 * top.scale, wBot = 26 * bot.scale;
+    g.fillStyle(LANE_COLORS[n.lane], n.holding ? 0.6 : 0.34);
+    g.fillPoints([
+      new Phaser.Geom.Point(top.x - wTop, top.y),
+      new Phaser.Geom.Point(top.x + wTop, top.y),
+      new Phaser.Geom.Point(bot.x + wBot, bot.y),
+      new Phaser.Geom.Point(bot.x - wBot, bot.y),
+    ], true);
+  }
+
+  private updateHold(n: LiveNote, songTime: number): void {
+    if (!this.laneDown[n.lane]) { this.endHold(n, false); return; }
+    if (songTime >= n.endTime) { this.endHold(n, true); return; }
+    if (songTime - n.lastTick >= SUSTAIN_TICK) {
+      n.lastTick = songTime;
+      this.score = { ...this.score, score: this.score.score + SUSTAIN_POINTS };
+      this.particles.setParticleTint(LANE_COLORS[n.lane]);
+      this.particles.emitParticleAt(laneX(n.lane), HIGHWAY.hitY, 2);
+    }
+  }
+
+  private endHold(n: LiveNote, complete: boolean): void {
+    n.holding = false;
+    n.holdDone = true;
+    if (complete) {
+      this.score = { ...this.score, score: this.score.score + HOLD_BONUS };
+      shockwave(this, laneX(n.lane), HIGHWAY.hitY, LANE_COLORS[n.lane], { scale: 2.6 });
+      sparkleBurst(this, laneX(n.lane), HIGHWAY.hitY, LANE_COLORS[n.lane], 18);
+      this.flashPad(n.lane, 1);
+    }
+    this.killNote(n);
+  }
+
+  private killNote(n: LiveNote): void {
+    n.head?.destroy(); n.head = undefined;
+    if (n.tail) { n.tail.destroy(); n.tail = undefined; }
   }
 
   private updateHud(songTime: number): void {
     this.scoreText.setText(`${this.score.score}`);
-    if (this.score.combo > 1) {
-      this.comboText.setText(`${this.score.combo}`);
-      const col = Phaser.Display.Color.IntegerToColor(tierColor(this.score.combo)).rgba;
-      this.comboText.setColor(col);
-      const m = multiplier(this.score.combo);
-      this.multText.setText(m > 1 ? `×${m}` : "");
-      this.multText.setColor(col);
-    } else {
-      this.comboText.setText("");
-      this.multText.setText("");
-    }
+    const m = multiplier(this.score.combo);
+    if (m > 1) {
+      this.multText.setText(`×${m}`);
+      this.multText.setColor(Phaser.Display.Color.IntegerToColor(tierColor(this.score.combo)).rgba);
+    } else this.multText.setText("");
 
     const p = Phaser.Math.Clamp(songTime / this.audio.duration, 0, 1);
     this.progress.clear();
-    this.progress.fillStyle(0xffffff, 0.12); this.progress.fillRect(0, 0, VIEW.width, 6);
-    this.progress.fillStyle(this.track.color, 1); this.progress.fillRect(0, 0, VIEW.width * p, 6);
-    this.progress.fillStyle(0xffffff, 0.9); this.progress.fillCircle(VIEW.width * p, 3, 5);
+    this.progress.fillStyle(0xffffff, 0.12); this.progress.fillRect(0, VIEW.height - 6, VIEW.width, 6);
+    this.progress.fillStyle(this.track.color, 1); this.progress.fillRect(0, VIEW.height - 6, VIEW.width * p, 6);
+    this.progress.fillStyle(0xffffff, 0.9); this.progress.fillCircle(VIEW.width * p, VIEW.height - 3, 5);
   }
 
   // ---------- actions & judgment ----------
-  private act(action: ActionName): void {
+  private pressLane(lane: number): void {
     if (!this.started || this.ended || this.paused) return;
-    const wantType = TYPE_FOR_ACTION[action];
-    const songTime = this.audio.songTime();
-    const candidates = this.liveEvents.filter(
-      (e) => !e.judged && e.type === wantType && Math.abs(e.targetTime - songTime) <= 0.26,
-    );
-    this.animateHero(action);
-    if (candidates.length === 0) return;
+    this.laneDown[lane] = true;
+    this.animateHit(lane);
+    this.flashPad(lane, 0.6);
 
-    const target = nearestBeat(songTime, candidates.map((c) => c.targetTime));
-    const ev = candidates.find((c) => c.targetTime === target)!;
-    this.resolve(ev, judge(songTime, ev.targetTime), false);
+    const songTime = this.audio.songTime();
+    let best: LiveNote | undefined;
+    let bestDist = Infinity;
+    for (const n of this.notes) {
+      if (n.judged || n.lane !== lane) continue;
+      const d = Math.abs(n.targetTime - songTime);
+      if (d <= HIT_WINDOW && d < bestDist) { best = n; bestDist = d; }
+    }
+    if (!best) return; // harmless whiff
+    this.resolve(best, judge(songTime, best.targetTime), false);
   }
 
-  private resolve(e: LiveEvent, result: Judgment, auto: boolean): void {
-    e.judged = true;
+  private releaseLane(lane: number): void {
+    this.laneDown[lane] = false;
+  }
+
+  private resolve(n: LiveNote, result: Judgment, auto: boolean): void {
+    n.judged = true;
     this.score = applyHit(this.score, result);
     this.maxCombo = Math.max(this.maxCombo, this.score.combo);
     this.audio.sfx(result);
-    this.flashJudge(result);
+    this.flashJudge(result, n.lane);
 
-    const sprite = e.sprite;
-    const glow = e.glow;
-    if (glow) this.tweens.add({ targets: glow, alpha: 0, duration: 220, onComplete: () => glow.destroy() });
-    if (sprite) {
-      this.tweens.killTweensOf(sprite);
-      if (result === "Miss") {
-        this.tweens.add({ targets: sprite, alpha: 0, y: sprite.y + 36, angle: 20, duration: 280, onComplete: () => sprite.destroy() });
-      } else {
-        shockwave(this, sprite.x, sprite.y, OB_COLOR[e.type], { scale: 2.2 });
-        sparkleBurst(this, sprite.x, sprite.y, result === "Perfect" ? COLORS.perfect : COLORS.good, result === "Perfect" ? 22 : 12);
-        this.particles.setParticleTint(result === "Perfect" ? COLORS.perfect : COLORS.good);
-        this.particles.emitParticleAt(sprite.x, sprite.y, result === "Perfect" ? 18 : 8);
-        this.tweens.add({ targets: sprite, alpha: 0, scale: sprite.scale * 1.9, duration: 220, onComplete: () => sprite.destroy() });
-      }
+    if (result === "Miss") {
+      if (n.head) {
+        this.tweens.killTweensOf(n.head);
+        this.tweens.add({ targets: n.head, alpha: 0, duration: 240, onComplete: () => this.killNote(n) });
+      } else this.killNote(n);
+      if (auto) this.stumble();
+      this.prevMult = 1;
+      return;
     }
 
-    if (result !== "Miss") this.checkComboMilestone();
-    if (result === "Miss" && !auto) return;
-    if (result === "Miss") this.stumble();
+    // hit!
+    const color = LANE_COLORS[n.lane];
+    const x = laneX(n.lane);
+    this.flashPad(n.lane, 1);
+    laneBeam(this, x, HIGHWAY.hitY, HIGHWAY.vpY, color);
+    shockwave(this, x, HIGHWAY.hitY, color, { scale: result === "Perfect" ? 2.4 : 1.8 });
+    sparkleBurst(this, x, HIGHWAY.hitY, result === "Perfect" ? COLORS.perfect : color, result === "Perfect" ? 22 : 12);
+    this.particles.setParticleTint(result === "Perfect" ? COLORS.perfect : color);
+    this.particles.emitParticleAt(x, HIGHWAY.hitY, result === "Perfect" ? 16 : 8);
+
+    if (n.dur > 0 && this.laneDown[n.lane]) {
+      // begin sustain — keep head pinned at the hit-line
+      n.holding = true;
+      n.lastTick = this.audio.songTime();
+      this.tweens.killTweensOf(n.head!);
+    } else if (n.head) {
+      this.tweens.killTweensOf(n.head);
+      this.tweens.add({ targets: n.head, alpha: 0, scale: n.head.scale * 1.7, duration: 200, onComplete: () => this.killNote(n) });
+    }
+
+    this.checkComboMilestone();
   }
 
   private checkComboMilestone(): void {
@@ -412,66 +554,67 @@ export class PlayScene extends Phaser.Scene {
     if (m > this.prevMult) {
       this.prevMult = m;
       const col = tierColor(this.score.combo);
-      shockwave(this, this.hero.x, this.hero.y - 80, col, { scale: 4 });
-      sparkleBurst(this, this.hero.x, this.hero.y - 80, col, 30);
-      this.cameras.main.flash(160, 60, 40, 90);
-      const t = this.add.text(VIEW.width / 2, 360, `×${m} COMBO!`, {
-        fontFamily: "system-ui, sans-serif", fontSize: "52px", color: Phaser.Display.Color.IntegerToColor(col).rgba, fontStyle: "bold",
-      }).setOrigin(0.5).setDepth(25).setScale(0.5);
-      this.tweens.add({ targets: t, scale: 1.2, duration: 220, ease: "Back.out" });
-      this.tweens.add({ targets: t, alpha: 0, y: 320, delay: 500, duration: 400, onComplete: () => t.destroy() });
-    } else if (this.score.combo === 0) {
-      this.prevMult = 1;
+      shockwave(this, VIEW.width / 2, 170, col, { scale: 4 });
+      sparkleBurst(this, VIEW.width / 2, 170, col, 30);
+      this.cameras.main.flash(150, 50, 30, 80);
     }
   }
 
-  private animateHero(action: ActionName): void {
-    if (this.heroBusy) return;
-    this.heroBusy = true;
-    const poseKey = POSE[action];
-    const hadAnim = this.anims.exists("hero-run");
-    if (this.textures.exists(poseKey)) { this.hero.anims.stop(); this.hero.setTexture(poseKey); }
-    const restore = () => {
-      this.heroBusy = false;
-      if (hadAnim) this.hero.play("hero-run");
-    };
-
-    if (action === "Jump") {
-      this.tweens.add({ targets: this.hero, y: this.heroBaseY - 180, duration: 280, yoyo: true, ease: "Quad.out", onComplete: restore });
-      this.tweens.add({ targets: this.heroAura, y: this.heroBaseY - 240, duration: 280, yoyo: true, ease: "Quad.out" });
-    } else if (action === "Duck") {
-      this.tweens.add({ targets: this.hero, scaleY: 0.3, duration: 130, yoyo: true, hold: 140, ease: "Quad.out", onComplete: restore });
-    } else {
-      this.tweens.add({ targets: this.hero, scaleX: 0.56, duration: 90, yoyo: true, ease: "Quad.out", onComplete: restore });
-      const fx = this.add.image(STAGE.actionX + 80, Y_FOR_TYPE.NOTE, "ring").setBlendMode(Phaser.BlendModes.ADD)
-        .setTint(COLORS.note).setDepth(7).setScale(0.3);
-      this.tweens.add({ targets: fx, scale: 1.6, alpha: 0, duration: 240, onComplete: () => fx.destroy() });
+  private animateHit(lane: number): void {
+    // mascot reacts on every press
+    const poses = ["hero_jump", "hero_strike", "hero_duck"];
+    const pose = poses[lane];
+    if (!this.heroBusy && this.textures.exists(pose)) {
+      this.heroBusy = true;
+      this.hero.anims.stop();
+      this.hero.setTexture(pose);
+      this.tweens.add({ targets: this.hero, y: this.heroBaseY - 26, duration: 130, yoyo: true, ease: "Quad.out",
+        onComplete: () => {
+          this.heroBusy = false;
+          if (this.anims.exists("hero-run")) this.hero.play("hero-run");
+        } });
     }
+  }
+
+  private flashPad(lane: number, strength: number): void {
+    const pad = this.pads[lane], glow = this.padGlows[lane];
+    pad.setScale(0.92 + 0.3 * strength).setAlpha(1);
+    this.tweens.add({ targets: pad, scale: 0.92, alpha: 0.85, duration: 220, ease: "Quad.out" });
+    glow.setAlpha(0.32 + 0.5 * strength).setScale(2.6 + strength);
+    this.tweens.add({ targets: glow, alpha: 0.32, scale: 2.6, duration: 240, ease: "Quad.out" });
+    this.laneGlows[lane].fillAlpha = 0.3 * strength;
   }
 
   // ---------- juice ----------
-  private flashJudge(result: Judgment): void {
+  private flashJudge(result: Judgment, lane: number): void {
     const colors: Record<Judgment, number> = { Perfect: COLORS.perfect, Good: COLORS.good, Miss: COLORS.miss };
     const label: Record<Judgment, string> = { Perfect: "PERFECT", Good: "GOOD", Miss: "MISS" };
-    this.judgeText.setText(label[result]);
-    this.judgeText.setColor(Phaser.Display.Color.IntegerToColor(colors[result]).rgba);
-    this.judgeText.setShadow(0, 0, Phaser.Display.Color.IntegerToColor(colors[result]).rgba, 18, true, true);
-    this.judgeText.setAlpha(1).setScale(0.6).setY(250);
-    this.tweens.add({ targets: this.judgeText, scale: 1.15, y: 230, duration: 180, ease: "Back.out" });
-    this.tweens.add({ targets: this.judgeText, alpha: 0, delay: 260, duration: 240 });
+    const col = Phaser.Display.Color.IntegerToColor(colors[result]).rgba;
+    this.judgeText.setText(label[result]).setColor(col).setX(laneX(lane));
+    this.judgeText.setShadow(0, 0, col, 16, true, true);
+    this.judgeText.setAlpha(1).setScale(0.6).setY(HIGHWAY.hitY - 110);
+    this.tweens.add({ targets: this.judgeText, scale: 1.1, y: HIGHWAY.hitY - 130, duration: 160, ease: "Back.out" });
+    this.tweens.add({ targets: this.judgeText, alpha: 0, delay: 240, duration: 240 });
 
-    if (result === "Perfect") {
-      this.cameras.main.flash(120, 80, 60, 30);
-      this.cameras.main.shake(140, 0.006);
-    } else if (result === "Good") {
-      this.cameras.main.flash(80, 30, 70, 50);
+    // combo readout
+    if (this.score.combo > 1 && result !== "Miss") {
+      this.comboText.setText(`${this.score.combo}`);
+      this.comboLabel.setText("COMBO");
+      const ccol = Phaser.Display.Color.IntegerToColor(tierColor(this.score.combo)).rgba;
+      this.comboText.setColor(ccol); this.comboLabel.setColor(ccol);
+      this.comboText.setAlpha(1).setScale(0.8); this.comboLabel.setAlpha(0.85);
+      this.tweens.add({ targets: this.comboText, scale: 1, duration: 140, ease: "Back.out" });
+    } else if (result === "Miss") {
+      this.tweens.add({ targets: [this.comboText, this.comboLabel], alpha: 0, duration: 220 });
     }
+
+    if (result === "Perfect") { this.cameras.main.flash(110, 70, 50, 30); this.cameras.main.shake(120, 0.005); }
+    else if (result === "Good") this.cameras.main.flash(70, 20, 60, 50);
   }
 
   private stumble(): void {
-    this.cameras.main.shake(190, 0.009);
-    this.tweens.add({ targets: this.hero, angle: { from: -12, to: 0 }, duration: 320, ease: "Elastic.out" });
-    const v = this.add.rectangle(0, 0, VIEW.width, VIEW.height, COLORS.miss, 0.2).setOrigin(0).setDepth(15);
+    this.cameras.main.shake(180, 0.008);
+    const v = this.add.rectangle(0, 0, VIEW.width, VIEW.height, COLORS.miss, 0.18).setOrigin(0).setDepth(15);
     this.tweens.add({ targets: v, alpha: 0, duration: 260, onComplete: () => v.destroy() });
   }
 
@@ -482,7 +625,7 @@ export class PlayScene extends Phaser.Scene {
     if (this.paused) {
       this.run.pause();
       this.audio.pause();
-      const bg = this.add.rectangle(0, 0, VIEW.width, VIEW.height, 0x05030d, 0.72).setOrigin(0);
+      const bg = this.add.rectangle(0, 0, VIEW.width, VIEW.height, 0x0a0420, 0.74).setOrigin(0);
       const t = this.add.text(VIEW.width / 2, VIEW.height / 2, "PAUSED\n\nP / ESC to resume", {
         fontFamily: "system-ui, sans-serif", fontSize: "42px", color: "#ffffff", align: "center",
       }).setOrigin(0.5);
@@ -508,11 +651,11 @@ export class PlayScene extends Phaser.Scene {
       perfects: this.score.perfects,
       goods: this.score.goods,
       misses: this.score.misses,
-      total: this.liveEvents.length,
+      total: this.notes.length,
       accuracy: acc,
       grade: gradeFor(acc),
     };
-    this.cameras.main.fadeOut(420, 0, 0, 0);
+    this.cameras.main.fadeOut(440, 0, 0, 0);
     this.cameras.main.once("camerafadeoutcomplete", () => this.scene.start("Results", result));
   }
 }

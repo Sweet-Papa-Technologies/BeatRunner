@@ -5,91 +5,122 @@
   "events": [
     {
       "beat": 8,
-      "type": "GAP"
+      "type": "BAR"
     },
     {
       "beat": 12,
-      "type": "NOTE"
+      "type": "GAP"
     },
     {
       "beat": 14,
-      "type": "GAP"
+      "type": "NOTE",
+      "dur": 2
     },
     {
       "beat": 16,
-      "type": "NOTE"
-    },
-    {
-      "beat": 18,
-      "type": "BAR"
-    },
-    {
-      "beat": 19,
-      "type": "NOTE"
-    },
-    {
-      "beat": 20,
-      "type": "NOTE"
-    },
-    {
-      "beat": 22,
       "type": "GAP"
     },
     {
-      "beat": 24,
-      "type": "NOTE"
-    },
-    {
-      "beat": 25,
-      "type": "NOTE"
-    },
-    {
-      "beat": 26,
-      "type": "GAP"
-    },
-    {
-      "beat": 28,
-      "type": "GAP"
-    },
-    {
-      "beat": 30,
-      "type": "NOTE"
-    },
-    {
-      "beat": 32,
+      "beat": 17,
       "type": "BAR"
     },
     {
-      "beat": 34,
-      "type": "NOTE"
+      "beat": 18.0,
+      "type": "GAP"
     },
     {
-      "beat": 35,
-      "type": "NOTE"
-    },
-    {
-      "beat": 36,
-      "type": "NOTE"
-    },
-    {
-      "beat": 38,
+      "beat": 19.0,
       "type": "BAR"
+    },
+    {
+      "beat": 20.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 21.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 22.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 23.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 24.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 25.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 26.0,
+      "type": "BAR",
+      "dur": 4
+    },
+    {
+      "beat": 28.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 30.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 31.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 32.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 33.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 34.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 35.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 36.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 37.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 38.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 39.0,
+      "type": "NOTE"
     },
     {
       "beat": 40,
-      "type": "GAP"
+      "type": "NOTE"
+    },
+    {
+      "beat": 41,
+      "type": "BAR",
+      "dur": 4
     },
     {
       "beat": 42,
-      "type": "NOTE"
+      "type": "BAR"
     },
     {
-      "beat": 43,
-      "type": "NOTE"
-    },
-    {
-      "beat": 45,
-      "type": "NOTE"
+      "beat": 44,
+      "type": "GAP"
     }
   ]
 }

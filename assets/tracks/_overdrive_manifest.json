@@ -1,0 +1,14 @@
+{
+  "tracks": [
+    {
+      "file": "overdrive_pulse.ogg",
+      "duration": 65.536,
+      "prompt": "high energy driving synthwave instrumental, pulsing analog bass arpeggio, punchy four-on-the-floor electronic drums, bright lead synth, retro outrun night drive, steady 120 bpm, euphoric and propulsive"
+    },
+    {
+      "file": "midnight_run.ogg",
+      "duration": 65.536,
+      "prompt": "energetic darksynth retrowave instrumental, gated reverb drums, gritty saw bass, soaring neon lead, cyberpunk chase momentum, steady 128 bpm, intense and cinematic"
+    }
+  ]
+}

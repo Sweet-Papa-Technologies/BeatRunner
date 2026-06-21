@@ -67,6 +67,19 @@ export function spawnStreak(scene: Phaser.Scene, w: number, h: number, color: nu
   });
 }
 
+/** A bright tapering beam that fires up a lane toward the vanishing point on a hit. */
+export function laneBeam(
+  scene: Phaser.Scene, x: number, hitY: number, vpY: number, color: number,
+): void {
+  const h = hitY - vpY;
+  const beam = scene.add.rectangle(x, hitY, 40, h, color, 0.5)
+    .setOrigin(0.5, 1).setBlendMode(Phaser.BlendModes.ADD).setDepth(7).setAlpha(0);
+  scene.tweens.add({
+    targets: beam, alpha: 0.9, scaleX: 0.2, duration: 90, yoyo: true, hold: 50,
+    ease: "Quad.out", onComplete: () => beam.destroy(),
+  });
+}
+
 /** Floating drifting embers/sparkles for ambient life. */
 export function ambientSparkles(scene: Phaser.Scene, w: number, h: number): Phaser.GameObjects.Particles.ParticleEmitter {
   return scene.add.particles(0, 0, "spark", {

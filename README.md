@@ -1,14 +1,19 @@
-# In the Pocket
+# OVERDRIVE
 
-A neon **rhythm auto-runner** built on your own lo-fi tracks. Auto-run through a
-pulsing synthwave city, hit **Jump / Duck / Strike** in time with obstacles that
-arrive on the beat, build combo, and light the world up. Casual-first: missing the
-beat never kills you — it just scores lower and breaks your combo.
+A **synthwave rhythm highway** built on your own tracks. Notes rush toward you
+down a neon perspective road — strike them in time across **three lanes** (the
+left / centre / right of the highway), chain holds, build combo, and make the
+world pulse. Casual-first: missing never kills you — it just scores lower and
+breaks your combo.
 
 Engine: **Phaser 3 + TypeScript + Vite**. Deterministic core: **framework-free TS**,
 test-driven via the FoFo Agentic SDLC loop. Art + music: **generated on Vertex AI**
-(Imagen 3 sprites/backgrounds, Gemini 2.5 Flash Image hero animation frames,
-Lyria music).
+(Imagen 3 backgrounds, Gemini 2.5 Flash Image mascot frames, Lyria music).
+
+> Recycled from *In the Pocket*: the entire pure, unit-tested core
+> (`timing` / `scoring` / `beatmap` / `run` / `AudioEngine`) is untouched — only
+> the presentation and gameplay shell were rebuilt into the lane highway. The
+> beat-map schema gained one backward-compatible optional field (`dur`) for holds.
 
 ![title](docs/screenshots/title.jpeg)
 ![gameplay](docs/screenshots/gameplay.jpeg)
@@ -22,8 +27,9 @@ npm test           # vitest — the deterministic core suite
 npm run build      # typecheck + production build to dist/
 ```
 
-Controls: **SPACE/↑** Jump (GAP), **↓** Duck (BAR), **F** Strike (NOTE), **P** pause,
-**M** mute metronome. Touch: bottom thirds = Jump / Duck / Strike.
+Controls: lanes are **◄ ▼ ►** / **A S D** / **J K L** (left / centre / right),
+**P** pause, **M** mute metronome. Touch: left / middle / right thirds of the
+screen. Hold a lane through a sustain note for bonus.
 
 ## Architecture
 
@@ -77,7 +83,10 @@ See `policy.json`, `gates.config`, `TEST-REQS.yaml`, `PROVENANCE.yaml`.
 Requires a GCP project with Vertex AI enabled and `gcloud` auth:
 
 ```bash
-VERTEX_PROJECT=<your-project> python3 tools/generate_assets.py all   # Imagen + Lyria
-VERTEX_PROJECT=<your-project> python3 tools/generate_hero_anim.py    # Gemini hero frames
-python3 tools/make_beatmaps.py                                       # author charts
+VERTEX_PROJECT=<your-project> python3 tools/generate_overdrive_assets.py all  # Imagen sky/ridge/city + Lyria tracks
+VERTEX_PROJECT=<your-project> python3 tools/generate_hero_anim.py             # Gemini mascot frames
+python3 tools/make_overdrive_maps.py                                         # author lane charts (with holds)
 ```
+
+The original *In the Pocket* generators (`generate_assets.py`, `make_beatmaps.py`)
+are kept for provenance.

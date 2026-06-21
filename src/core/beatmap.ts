@@ -12,6 +12,13 @@ export const EVENT_TYPES: readonly EventType[] = ["GAP", "BAR", "NOTE"];
 export interface BeatmapEvent {
   beat: number;
   type: EventType;
+  /**
+   * Optional sustain length in beats. When present (> 0) the event is a HOLD:
+   * the player presses on `beat` and keeps the lane held for `dur` beats.
+   * Absent/undefined means a normal tap. Backward-compatible: maps without
+   * `dur` parse exactly as before.
+   */
+  dur?: number;
 }
 
 export interface Beatmap {
@@ -72,6 +79,13 @@ export function parseBeatmap(raw: unknown): Beatmap {
     }
     if (!isEventType(ev.type)) {
       throw new BeatmapError(`event[${i}].type must be one of ${EVENT_TYPES.join("|")}`);
+    }
+    // Optional sustain length (holds). Only validated when provided.
+    if (ev.dur !== undefined && ev.dur !== null) {
+      if (!isFiniteNumber(ev.dur) || ev.dur <= 0) {
+        throw new BeatmapError(`event[${i}].dur must be a number > 0 when present`);
+      }
+      return { beat: ev.beat, type: ev.type, dur: ev.dur };
     }
     return { beat: ev.beat, type: ev.type };
   });

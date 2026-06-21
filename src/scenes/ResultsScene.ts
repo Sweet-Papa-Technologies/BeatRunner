@@ -2,7 +2,7 @@ import Phaser from "phaser";
 import { trackById } from "../game/tracks";
 import type { RunResult } from "../game/tracks";
 import { COLORS, VIEW } from "../game/config";
-import { starfield, ambientSparkles, shockwave, sparkleBurst, spawnStreak } from "../game/fx";
+import { ambientSparkles, shockwave, sparkleBurst, spawnStreak } from "../game/fx";
 
 const GRADE_COLORS: Record<string, number> = {
   S: 0xfff27a, A: 0x7af2c4, B: 0x4cc9ff, C: 0x9b8cff, D: 0xff5d7a,
@@ -24,12 +24,11 @@ export class ResultsScene extends Phaser.Scene {
     const track = trackById(r.trackId);
     this.cameras.main.fadeIn(360, 0, 0, 0);
 
-    this.add.image(VIEW.width / 2, VIEW.height / 2, "bg_sky").setDisplaySize(VIEW.width, VIEW.height);
-    this.add.image(VIEW.width / 2, VIEW.height / 2, "bg_city").setDisplaySize(VIEW.width, VIEW.height).setAlpha(0.5);
-    starfield(this, VIEW.width, VIEW.height, 90);
+    this.add.image(VIEW.width / 2, VIEW.height / 2, "od_sky").setDisplaySize(VIEW.width, VIEW.height);
+    this.add.image(VIEW.width / 2, VIEW.height - 130, "od_city").setDisplaySize(VIEW.width, 300).setAlpha(0.4);
     ambientSparkles(this, VIEW.width, VIEW.height);
 
-    const bestKey = `itp_best_${r.trackId}`;
+    const bestKey = `od_best_${r.trackId}`;
     const prevBest = Number(localStorage.getItem(bestKey) ?? 0);
     const isBest = r.score > prevBest;
     if (isBest) localStorage.setItem(bestKey, String(r.score));
