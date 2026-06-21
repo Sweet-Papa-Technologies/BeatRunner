@@ -1,0 +1,141 @@
+# TEST-REQS.yaml
+# Judge-owned mapping from every spec requirement ID to concrete, observable
+# test intents. Source: in-the-pocket-spec.md section 5 (plus 4 and 6).
+# These are RED by design until src/core/* is implemented.
+
+module: timing.ts
+requirements:
+  REQ-TIME-01:
+    title: Beat time
+    formula: "beatTime(n, bpm, offset) = offset + (n / bpm) * 60  (seconds)"
+    intents:
+      - "beatTime(0, 120, 0) === 0"
+      - "beatTime(4, 120, 0) === 2.0"
+      - "offset is added: beatTime(0, 120, 0.30) === 0.30"
+      - "offset default is 0 when omitted"
+      - "fractional bpm (93.5) computes within float epsilon, no rounding loss"
+
+  REQ-TIME-02:
+    title: Judgment windows
+    rule: "d=|t-b|; d<=0.050 Perfect; d<=0.120 Good; else Miss. Windows are config constants."
+    intents:
+      - "exact hit d=0 -> Perfect"
+      - "boundary d=0.050 -> Perfect (inclusive)"
+      - "d=0.051 -> Good"
+      - "boundary d=0.120 -> Good (inclusive)"
+      - "d=0.121 -> Miss"
+      - "windows symmetric: early and late by same d give same judgment"
+      - "DEFAULT_WINDOWS constant equals {perfect:0.05, good:0.12}"
+      - "custom windows override defaults"
+
+  REQ-TIME-03:
+    title: Nearest-beat selection
+    rule: "judge against the CLOSEST candidate beat time; exact tie resolves to the EARLIER (smaller) beat; throws on empty array"
+    intents:
+      - "beats [1.00,1.50], input 1.25 -> picks 1.00 (closer/earlier on tie)"
+      - "picks genuinely nearest, not merely next: input 1.40 -> 1.50"
+      - "exact tie resolves to earlier beat (the smaller value)"
+      - "unsorted candidate list still yields the nearest"
+      - "empty array throws"
+
+  REQ-TIME-04:
+    title: Audio-clock source of truth (injectable)
+    rule: "createClock(now) returns a Clock that reads from injected now(); deterministic, no real audio"
+    intents:
+      - "Clock returns the value produced by injected now()"
+      - "Clock reflects subsequent changes to the injected source (re-reads now())"
+
+module: scoring.ts
+requirements:
+  REQ-SCORE-01:
+    title: Base points
+    rule: "Perfect=100, Good=50, Miss=0"
+    intents:
+      - "basePoints('Perfect')===100, 'Good')===50, 'Miss')===0"
+      - "BASE_POINTS record matches the table exactly"
+
+  REQ-SCORE-02:
+    title: Combo
+    rule: "increments by 1 on Perfect or Good; resets to 0 on Miss"
+    intents:
+      - "sequence P,G,M,P yields combo 1,2,0,1"
+      - "Miss resets combo to 0 regardless of prior value"
+
+  REQ-SCORE-03:
+    title: Multiplier tiers
+    rule: "x1 combo 0-9, x2 10-19, x3 20-29, x4 30+; applied to base of current hit"
+    intents:
+      - "multiplier boundaries: 0->1, 9->1, 10->2, 19->2, 20->3, 29->3, 30->4, 100->4"
+      - "Perfect while combo=12 awards 100*2=200 (score delta)"
+
+  REQ-SCORE-04:
+    title: Run total non-decreasing
+    rule: "score is running sum of awarded points; strictly non-decreasing across a run"
+    intents:
+      - "property test over deterministic judgment sequence: score never decreases"
+
+  REQ-SCORE-05:
+    title: Grade
+    rule: "accuracy% = (perfects+goods)/total*100; S>=95 A>=85 B>=70 C>=50 else D; 0 events -> 0% accuracy"
+    intents:
+      - "gradeFor boundaries: 95->S, 94.99->A, 85->A, 84.99->B, 70->B, 69.99->C, 50->C, 49.99->D, 0->D"
+      - "accuracy=0 when total events=0"
+      - "accuracy counts perfects+goods over total"
+
+module: beatmap.ts
+requirements:
+  REQ-MAP-01:
+    title: Schema validation
+    rule: "valid map loads; bpm<=0, offset<0, negative beat, unknown type, missing fields rejected with typed BeatmapError"
+    intents:
+      - "valid raw object parses to Beatmap with track/bpm/offset/events"
+      - "bpm<=0 throws BeatmapError"
+      - "offset<0 throws BeatmapError"
+      - "negative beat throws BeatmapError"
+      - "unknown event type throws BeatmapError"
+      - "missing required fields throw BeatmapError"
+      - "non-object input throws BeatmapError"
+
+  REQ-MAP-02:
+    title: Ordering and dedup
+    rule: "events returned sorted ascending by beat; same (beat,type) de-duplicated; different types at same beat kept"
+    intents:
+      - "unsorted events come back sorted ascending by beat"
+      - "duplicate same (beat,type) collapses to one"
+      - "different types at same beat are both kept"
+
+  REQ-MAP-03:
+    title: Spawn lead
+    rule: "spawnTime = max(0, beatTime(beat,bpm,offset) - leadTime)"
+    intents:
+      - "leadTime=2.0, bpm=120, offset=0, beat=8 (=4.0s) -> 2.0"
+      - "negative result clamps to 0 (pre-spawn at t=0)"
+      - "offset is included via beatTime"
+
+module: run.ts
+requirements:
+  REQ-RUN-01:
+    title: State machine
+    rule: "Loading->Countdown->Playing->Results->Loading legal; all others illegal (throw RunError)"
+    intents:
+      - "each legal transition returns the target phase"
+      - "Results->Loading (retry) legal"
+      - "illegal e.g. Loading->Playing, Playing->Loading, Countdown->Results throw RunError"
+      - "RunController starts in Loading"
+
+  REQ-RUN-02:
+    title: Pause/resume sync (drift-free elapsed)
+    rule: "elapsed() excludes paused spans; no drift across pause/resume"
+    intents:
+      - "play to 10, pause, advance to 25 paused, resume, advance to 27 -> elapsed ~= 12 (not 27)"
+      - "isPaused() reflects pause/resume"
+      - "elapsed advances normally with clock when not paused"
+
+  REQ-RUN-03:
+    title: End condition
+    rule: "run reaches Results exactly once at track end; tick is idempotent afterward"
+    intents:
+      - "tick() transitions Playing->Results once when elapsed()>=trackDuration"
+      - "before track end tick() stays Playing"
+      - "calling tick() again after end stays Results and does not re-fire"
+      - "isEnded() true only after Results reached"

@@ -1,0 +1,38 @@
+{
+  "_comment": "Thresholds and patterns for In the Pocket. Spec lives in in-the-pocket-spec.md; IDs look like REQ-TIME-01.",
+
+  "gates": {
+    "spec-lint": {
+      "spec_file": "in-the-pocket-spec.md",
+      "id_pattern": "REQ-[A-Z]+-\\d+",
+      "acceptance_label": "Accept"
+    },
+    "trace-gate": {
+      "spec_file": "in-the-pocket-spec.md",
+      "id_pattern": "REQ-[A-Z]+-\\d+",
+      "test_reqs": "TEST-REQS.yaml",
+      "test_glob": ["tests/**/*.test.ts", "tests/**/*.spec.ts"]
+    },
+    "redgreen-gate": {
+      "test_command": "npm test --silent",
+      "timeout_seconds": 600
+    },
+    "intent-gate": {
+      "test_launchers": ["it", "test", "fit", "xit", "specify"],
+      "assertion_roots": ["should"],
+      "banned_mocks": [],
+      "allow_snapshot_only": false,
+      "fail_on": ["assertion-free", "trivial"]
+    },
+    "separation-gate": {
+      "manifest": "PROVENANCE.yaml"
+    },
+    "semantic-test-judge": {
+      "spec_file": "in-the-pocket-spec.md",
+      "escalate_below": 0.6
+    },
+    "fresh-eyes-review": {
+      "spec_file": "in-the-pocket-spec.md"
+    }
+  }
+}

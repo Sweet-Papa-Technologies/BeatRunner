@@ -1,0 +1,14 @@
+{
+  "tracks": [
+    {
+      "file": "sweetpapa_groove.ogg",
+      "duration": 65.536,
+      "prompt": "warm chill lo-fi hip hop instrumental, mellow Rhodes piano, soft vinyl crackle, laid-back boom-bap drums, steady 88 bpm, cozy night vibe"
+    },
+    {
+      "file": "neon_nights.ogg",
+      "duration": 65.536,
+      "prompt": "dreamy synthwave lo-fi beat, glowing analog synth pads, gentle arpeggio, steady 92 bpm, neon city night, relaxed groove"
+    }
+  ]
+}

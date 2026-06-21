@@ -1,0 +1,99 @@
+{
+  "track": "neon_nights.ogg",
+  "bpm": 92,
+  "offset": 0.15,
+  "events": [
+    {
+      "beat": 8,
+      "type": "GAP"
+    },
+    {
+      "beat": 12,
+      "type": "NOTE"
+    },
+    {
+      "beat": 15,
+      "type": "GAP"
+    },
+    {
+      "beat": 17,
+      "type": "NOTE"
+    },
+    {
+      "beat": 19,
+      "type": "BAR"
+    },
+    {
+      "beat": 20,
+      "type": "NOTE"
+    },
+    {
+      "beat": 21,
+      "type": "NOTE"
+    },
+    {
+      "beat": 23,
+      "type": "GAP"
+    },
+    {
+      "beat": 25,
+      "type": "NOTE"
+    },
+    {
+      "beat": 26,
+      "type": "NOTE"
+    },
+    {
+      "beat": 27,
+      "type": "GAP"
+    },
+    {
+      "beat": 29,
+      "type": "GAP"
+    },
+    {
+      "beat": 31,
+      "type": "NOTE"
+    },
+    {
+      "beat": 33,
+      "type": "BAR"
+    },
+    {
+      "beat": 35,
+      "type": "NOTE"
+    },
+    {
+      "beat": 36,
+      "type": "NOTE"
+    },
+    {
+      "beat": 37,
+      "type": "NOTE"
+    },
+    {
+      "beat": 39,
+      "type": "BAR"
+    },
+    {
+      "beat": 41,
+      "type": "GAP"
+    },
+    {
+      "beat": 43,
+      "type": "NOTE"
+    },
+    {
+      "beat": 44,
+      "type": "NOTE"
+    },
+    {
+      "beat": 45,
+      "type": "NOTE"
+    },
+    {
+      "beat": 47,
+      "type": "NOTE"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# FoFo provenance — who authored what (Author != Judge enforced by native subagent contexts).
+units:
+  - unit: core/timing
+    tests_by: fofo-judge (spec-only subagent)
+    code_by: author (main context)
+  - unit: core/scoring
+    tests_by: fofo-judge (spec-only subagent)
+    code_by: author (main context)
+  - unit: core/beatmap
+    tests_by: fofo-judge (spec-only subagent)
+    code_by: author (main context)
+  - unit: core/run
+    tests_by: fofo-judge (spec-only subagent)
+    code_by: author (main context)
