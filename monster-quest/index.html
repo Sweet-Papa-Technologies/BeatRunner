@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Monster Quest — Spirit Warden</title>
+<link rel="stylesheet" href="src/ui.css" />
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<div id="game-root">
+  <canvas id="scene"></canvas>
+
+  <!-- LOADING -->
+  <div id="loader" class="overlay center">
+    <div class="loader-inner">
+      <div class="logo-glow">MONSTER&nbsp;QUEST</div>
+      <div class="logo-sub">SPIRIT&nbsp;WARDEN</div>
+      <div class="bar"><div id="bar-fill"></div></div>
+      <div id="load-status">Summoning the realm…</div>
+    </div>
+  </div>
+
+  <!-- TITLE -->
+  <div id="title" class="overlay center hidden">
+    <div class="title-art"></div>
+    <div class="title-content">
+      <h1 class="title-main">MONSTER QUEST</h1>
+      <h2 class="title-sub">✦ SPIRIT WARDEN ✦</h2>
+      <button id="btn-start" class="menu-btn">⚔ BEGIN QUEST</button>
+      <button id="btn-skip" class="menu-btn ghost">▶ Skip to Gameplay</button>
+      <p class="title-hint">WASD / Arrows — Move · Space — Jump · J — Attack · E — Companion Power<br/>1·2·3 — Switch Companion · F — Capture nearby spirit</p>
+    </div>
+  </div>
+
+  <!-- CUTSCENE -->
+  <div id="cutscene" class="overlay hidden">
+    <div id="cs-image"></div>
+    <div id="cs-vignette"></div>
+    <div id="cs-textbox"><p id="cs-text"></p><span id="cs-cont">▼ click / space</span></div>
+    <button id="cs-skip" class="cs-skip">Skip ⏭</button>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud" class="hidden">
+    <div id="hud-top">
+      <div id="hearts"></div>
+      <div id="objective">◈ <span id="obj-text">Explore the Vale of Lumina</span></div>
+      <div id="gem-count">💎 <span id="gems">0</span></div>
+    </div>
+    <div id="roster"></div>
+    <div id="hint-toast" class="hidden"></div>
+    <div id="dialogue" class="hidden">
+      <div id="dlg-portrait"></div>
+      <div id="dlg-body"><div id="dlg-name"></div><p id="dlg-text"></p><span id="dlg-cont">▼</span></div>
+    </div>
+    <div id="boss-bar-wrap" class="hidden">
+      <div id="boss-name">THE SHADOW KING</div>
+      <div id="boss-bar"><div id="boss-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- FADE / BANNERS -->
+  <div id="fade" class="overlay"></div>
+  <div id="banner" class="overlay center hidden"><div id="banner-text"></div></div>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
