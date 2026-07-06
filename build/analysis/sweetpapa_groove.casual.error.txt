@@ -1,0 +1,1 @@
+groove/casual: designer failed gates after 3 attempts. Last violations: hold share 0% outside 10%-20% (sustain candidates available: 7).

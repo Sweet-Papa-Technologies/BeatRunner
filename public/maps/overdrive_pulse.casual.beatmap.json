@@ -1,0 +1,191 @@
+{
+  "track": "overdrive_pulse.ogg",
+  "bpm": 119.945,
+  "offset": 0.177,
+  "events": [
+    {
+      "beat": 4.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 6.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 8.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 10.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 12.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 14.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 16.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 18.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 20.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 22.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 24.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 26.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 28.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 29.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 30.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 31.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 32.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 33.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 34.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 35.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 36.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 37.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 38.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 39.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 40.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 41.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 42.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 43.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 44.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 45.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 46.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 47.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 48.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 49.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 50.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 51.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 52.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 53.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 54.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 55.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 56.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 57.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 58.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 59.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 60.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 62.0,
+      "type": "BAR"
+    }
+  ]
+}

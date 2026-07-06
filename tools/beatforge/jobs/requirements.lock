@@ -1,0 +1,11 @@
+# Pinned deps installed on the Colab VM for jobs/analyze_job.py (REQ-COMPUTE-04).
+# Exact pins so re-running analysis on the same audio yields byte-identical
+# analysis.json. Bump deliberately; a change invalidates the analysis cache.
+numpy==1.26.4
+scipy==1.13.1
+soundfile==0.12.1
+librosa==0.10.2.post1
+madmom==0.16.1
+torch==2.3.1
+torchaudio==2.3.1
+demucs==4.0.1

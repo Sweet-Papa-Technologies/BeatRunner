@@ -1,0 +1,16 @@
+{
+  "track_id": "midnight",
+  "bpm": 127.987,
+  "offset": 0.349,
+  "stem_source": "none",
+  "beat_backend": "local_dsp",
+  "charts": {
+    "casual": {
+      "events": 10,
+      "attempts": 1,
+      "critic_score": 4,
+      "gates_pass": true,
+      "map": "public/maps/midnight_run.casual.beatmap.json"
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "track": "neon_nights.ogg",
+  "bpm": 137.95,
+  "offset": 0.105,
+  "events": [
+    {
+      "beat": 4.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 5.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 6.0,
+      "type": "NOTE",
+      "dur": 2.0
+    },
+    {
+      "beat": 9.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 10.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 11.0,
+      "type": "NOTE",
+      "dur": 2.0
+    },
+    {
+      "beat": 15.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 17.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 19.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 21.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 25.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 27.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 29.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 33.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 35.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 37.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 41.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 43.0,
+      "type": "GAP",
+      "dur": 2.0
+    },
+    {
+      "beat": 50.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 56.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 62.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 68.0,
+      "type": "NOTE"
+    }
+  ]
+}

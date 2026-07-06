@@ -7,8 +7,8 @@ import type { Judgment } from "../core/timing";
 import { applyHit, accuracy, gradeFor, initialScore, multiplier } from "../core/scoring";
 import type { ScoreState } from "../core/scoring";
 import { RunController } from "../core/run";
-import { trackById } from "../game/tracks";
-import type { RunResult, TrackDef } from "../game/tracks";
+import { trackById, mapForDifficulty } from "../game/tracks";
+import type { RunResult, TrackDef, Difficulty } from "../game/tracks";
 import {
   COLORS, HIGHWAY, LANE_COLORS, LANE_COUNT, LANE_FOR_TYPE, LEAD_TIME, MISS_GRACE,
   VIEW, tierColor,
@@ -52,6 +52,7 @@ const LANE_KEYS: Record<string, number> = {
 export class PlayScene extends Phaser.Scene {
   private audio!: AudioEngine;
   private track!: TrackDef;
+  private difficulty: Difficulty = "standard";
   private beatmap!: Beatmap;
   private notes: LiveNote[] = [];
   private run!: RunController;
@@ -93,8 +94,9 @@ export class PlayScene extends Phaser.Scene {
     super("Play");
   }
 
-  init(data: { trackId: string }): void {
+  init(data: { trackId: string; difficulty?: Difficulty }): void {
     this.track = trackById(data?.trackId ?? "overdrive");
+    this.difficulty = data?.difficulty ?? "standard";
     this.notes = [];
     this.score = initialScore();
     this.maxCombo = 0;
@@ -123,7 +125,8 @@ export class PlayScene extends Phaser.Scene {
     }).setOrigin(0.5).setDepth(100);
 
     try {
-      const mapRaw = await (await fetch(this.track.map)).json();
+      const mapUrl = mapForDifficulty(this.track, this.difficulty);
+      const mapRaw = await (await fetch(mapUrl)).json();
       this.beatmap = parseBeatmap(mapRaw);
       const audioBuf = await (await fetch(this.track.audio)).arrayBuffer();
       await this.audio.decode(audioBuf);

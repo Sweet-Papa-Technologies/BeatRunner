@@ -1,0 +1,118 @@
+{
+  "design_notes": "S0 introduces the synth groove with a clean introductory hold. S1 steps into the drop with an active 1-beat cadence to match the onset intensity. S2 maintains a steady, casual 2-beat alternating rhythm across all lanes to sustain momentum. S3 transitions into a spacious break, letting the pattern breathe deeply with a much lower density.",
+  "sections": [
+    {
+      "name": "Intro",
+      "start_bar": 0,
+      "intent": "Introduce the beat cleanly with a simple flow."
+    },
+    {
+      "name": "Drop Start",
+      "start_bar": 2,
+      "intent": "Build excitement with a steady alternating lane sweep."
+    },
+    {
+      "name": "Main Drop",
+      "start_bar": 3,
+      "intent": "Sustain energy using casual 2-beat spacing."
+    },
+    {
+      "name": "Break/Outro",
+      "start_bar": 11,
+      "intent": "Let the chart breathe with long-spaced notes."
+    }
+  ],
+  "events": [
+    {
+      "ref": "m008",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m010",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m012",
+      "lane": "NOTE",
+      "hold_beats": 2
+    },
+    {
+      "ref": "m018",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m020",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m022",
+      "lane": "NOTE",
+      "hold_beats": 2
+    },
+    {
+      "ref": "m030",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m034",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m038",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "m042",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m050",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m054",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "m058",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m066",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m070",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "m074",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m082",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m086",
+      "lane": "GAP",
+      "hold_beats": 2
+    },
+    {
+      "ref": "m099",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "m111",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m123",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m135",
+      "lane": "NOTE"
+    }
+  ]
+}

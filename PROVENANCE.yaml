@@ -12,3 +12,28 @@ units:
   - unit: core/run
     tests_by: fofo-judge (spec-only subagent)
     code_by: author (main context)
+
+  # BEATFORGE (IMPROVE.MD) — Author != Judge holds across MODEL invocations too.
+  # The chart designer and the chart critic are SEPARATE Gemini 3.5 Flash calls
+  # with separate contexts (REQ-QA-04); deterministic gates referee both.
+  - unit: beatforge/chart-designer
+    role: Author
+    model: gemini-3.5-flash (audio input, thinkingLevel=high, global/v1beta1)
+    context: track audio + analysis.json + design brief + difficulty budget
+    code_by: author (main context)
+    tests_by: pytest tools/beatforge/tests (offline, InMemoryBackend)
+  - unit: beatforge/chart-critic
+    role: Judge
+    model: gemini-3.5-flash (audio input, thinkingLevel=high, global/v1beta1)
+    context: FRESH — track audio + final resolved chart only; never sees the
+             designer's working context (REQ-QA-04)
+    code_by: author (main context)
+  - unit: beatforge/ar-critic
+    role: Judge (Workstream A)
+    model: gemini-3.5-flash (audio input) — scores Lyria candidate chartability
+    context: candidate audio + brief; separate from generation
+  - unit: beatforge/dsp-truth
+    role: deterministic referee
+    context: numpy/scipy DSP (local) or madmom+Demucs (Colab); no model involved
+    code_by: author (main context)
+    tests_by: pytest tools/beatforge/tests/test_dsp.py

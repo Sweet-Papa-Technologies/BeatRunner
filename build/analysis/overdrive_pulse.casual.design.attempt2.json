@@ -1,0 +1,218 @@
+{
+  "design_notes": "The chart is designed for a casual-first experience, focusing on a clean 1-beat rhythm. In the intro, we establish a spacious 2-beat cadence alternating lanes to let players get used to the highway. During the high-energy drop, the density increases smoothly to a 1-beat flow pattern, utilizing a looping swept rotation (BAR-GAP-NOTE) to keep hands moving naturally without double-tapping. The outro mirrors the intro's spacing for a relaxing wind-down.",
+  "sections": [
+    {
+      "name": "Intro",
+      "start_bar": 0,
+      "intent": "spacious introduction"
+    },
+    {
+      "name": "Drop",
+      "start_bar": 7,
+      "intent": "high-energy full-beat flow"
+    },
+    {
+      "name": "Outro",
+      "start_bar": 15,
+      "intent": "calm wind-down"
+    }
+  ],
+  "events": [
+    {
+      "ref": "p001",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p007",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p013",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p019",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p025",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p031",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p037",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p043",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p049",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p055",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p061",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p067",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p073",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p079",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p085",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p088",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p091",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p094",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p097",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p100",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p103",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p106",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p109",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p112",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p115",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p118",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p121",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p124",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p127",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p129",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p133",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p136",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p139",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p142",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p145",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p148",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p151",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p154",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p157",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p160",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p163",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p166",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p169",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p172",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p175",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p178",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p181",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p187",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p193",
+      "lane": "GAP"
+    }
+  ]
+}

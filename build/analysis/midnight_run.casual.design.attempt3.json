@@ -1,0 +1,59 @@
+{
+  "design_notes": "S0 acts as the build-up, starting with sparse 12-beat spacing and gradually compressing to 8-beat and 5-beat gaps to signal the incoming peak. S1 represents the high-energy drop, featuring the song's primary sustain on a central lane to anchor the player during the transition. S2 guides the player through the outro with comfortable, evenly-spaced notes that ease the density back down.",
+  "sections": [
+    {
+      "name": "S0",
+      "start_bar": 0,
+      "intent": "intro"
+    },
+    {
+      "name": "S1",
+      "start_bar": 15,
+      "intent": "drop"
+    },
+    {
+      "name": "S2",
+      "start_bar": 16,
+      "intent": "outro"
+    }
+  ],
+  "events": [
+    {
+      "ref": "p017",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p041",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p065",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p089",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p105",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p115",
+      "lane": "GAP"
+    },
+    {
+      "ref": "s006",
+      "lane": "BAR",
+      "hold_beats": 2
+    },
+    {
+      "ref": "p130",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p138",
+      "lane": "GAP"
+    }
+  ]
+}

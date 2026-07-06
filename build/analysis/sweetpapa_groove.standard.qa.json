@@ -1,0 +1,128 @@
+{
+  "track_id": "groove",
+  "difficulty": "standard",
+  "attempts": 1,
+  "metrics": {
+    "difficulty": "standard",
+    "event_count": 51,
+    "onset_events": 0,
+    "grid_events": 51,
+    "onset_alignment": 1.0,
+    "lane_share": {
+      "GAP": 0.3333,
+      "BAR": 0.4118,
+      "NOTE": 0.2549
+    },
+    "hold_share": 0.0,
+    "sustain_available": 7,
+    "peak_nps_4s": 3.0,
+    "peak_nps_window_s": [
+      6.1,
+      10.1
+    ],
+    "repaired": 3,
+    "repaired_fraction": 0.0556,
+    "dropped": {
+      "window": 3,
+      "grid": 0,
+      "snap": 0
+    },
+    "per_bar_counts": [
+      0,
+      5,
+      8,
+      8,
+      8,
+      7,
+      4,
+      4,
+      2,
+      2,
+      2,
+      1
+    ],
+    "density_energy": {
+      "spearman": -0.0355,
+      "peak_in_top_section": false,
+      "breathes": false
+    },
+    "usable_sustains": 0,
+    "flat_track_exempt": true,
+    "gates": {
+      "onset_alignment": true,
+      "lane_balance": true,
+      "hold_share": true,
+      "nps": true,
+      "repaired": true,
+      "density_spearman": true,
+      "density_peak": true,
+      "density_breathes": true
+    }
+  },
+  "critic": {
+    "score": 5,
+    "verdict": "The chart is rhythmically accurate but suffers from poor structural pacing, a complete lack of hold notes, and a highly monotonous stream in the drop that overstays its welcome into the outro.",
+    "issues": [
+      {
+        "where": "bar 6-11 / 10.2s-16.3s",
+        "problem": "The peak-density stream continues deep into the outro, ignoring the musical wind-down that begins at bar 6.",
+        "severity": "high"
+      },
+      {
+        "where": "entire chart",
+        "problem": "Zero hold notes are used, missing key opportunities to map synthwave's characteristic long, sustained chords and basslines.",
+        "severity": "medium"
+      },
+      {
+        "where": "bar 3-10 / 6.1s-16.3s",
+        "problem": "A relentless 30-note continuous quarter-note stream lacks any rests or rhythmic variety, making it feel monotonous and overmapped for a Standard difficulty.",
+        "severity": "medium"
+      },
+      {
+        "where": "bar 13-17 / 22.4s-30.6s",
+        "problem": "The ending transitions abruptly into sparse whole notes with no holds to sustain the remaining synth tail, feeling empty.",
+        "severity": "low"
+      }
+    ],
+    "human_review": true
+  },
+  "repairs": [
+    {
+      "reason": "outside_playable_window",
+      "ref": "grid:1.0",
+      "beat": 1.0
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "grid:2.0",
+      "beat": 2.0
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "grid:3.0",
+      "beat": 3.0
+    }
+  ],
+  "design_notes": "We introduced subtle guide taps at beats 1.0, 2.0, and 3.0 during the intro to prevent the starting silence and cue the player into the tempo. The drop section features a high-density, highly flowing sequence that completely avoids direct outer-lane GAP-to-NOTE jumps on consecutive eighth notes by threading every high-energy transition through the center BAR lane. In the outro, we drastically lowered density and syncopation, sticking purely to whole-beat and double-beat intervals to match the wind-down of the music. In compliance with the hardware constraint of zero sustain candidates, no holds are used.",
+  "design_sections": [
+    {
+      "name": "Intro",
+      "start_bar": 0,
+      "intent": "Ease the player in and establish the 88 BPM pulse."
+    },
+    {
+      "name": "Drop",
+      "start_bar": 2,
+      "intent": "Flowing eighth-note rhythm with no direct outer jumps."
+    },
+    {
+      "name": "Outro",
+      "start_bar": 6,
+      "intent": "Wind down with sparse, on-beat lane transitions."
+    }
+  ],
+  "previews": {
+    "click": "/Users/fterry/.foreman/worktrees/FRM-1041/build/analysis/sweetpapa_groove.standard.preview.ogg"
+  },
+  "map_path": "public/maps/sweetpapa_groove.standard.beatmap.json"
+}

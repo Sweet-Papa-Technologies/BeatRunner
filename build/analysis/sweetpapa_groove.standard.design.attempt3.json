@@ -1,0 +1,230 @@
+{
+  "design_notes": "S0 introduces the beat with sparse kicks on the BAR lane and snares on NOTE, building familiarity with the 88 BPM tempo using simple downbeats before a brief sweep leads into the drop. S1 increases density during the high-energy drop, utilizing a steady BAR-kick backbone interspersed with quick GAP/NOTE snare alternations on 0.5-beat subdivisions to emulate synthwave propulsion. S2 guides the player through the outro wind-down, maintaining the core kick-and-snare flow but gradually spacing out the offbeat hits to let the rhythm breathe as the track resolves.",
+  "sections": [
+    {
+      "name": "S0",
+      "start_bar": 0,
+      "intent": "intro"
+    },
+    {
+      "name": "S1",
+      "start_bar": 2,
+      "intent": "drop"
+    },
+    {
+      "name": "S2",
+      "start_bar": 6,
+      "intent": "outro"
+    }
+  ],
+  "events": [
+    {
+      "ref": "p010",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p012",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p014",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p016",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p017",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p019",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p021",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p023",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p024",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p025",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p027",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p029",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p031",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p032",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p033",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p035",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p037",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p039",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p040",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p041",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p043",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p045",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p047",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p049",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p050",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p051",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p053",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p055",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p056",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p057",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p059",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p061",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p063",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p064",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p065",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p067",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p069",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p071",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p072",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p073",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p075",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p077",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p079",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p081",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p082",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p084",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p086",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p088",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p089",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p090",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p092",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p094",
+      "lane": "NOTE"
+    }
+  ]
+}

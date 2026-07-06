@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "beatforge designer output (Workstream C)",
+  "type": "object",
+  "required": ["events"],
+  "properties": {
+    "design_notes": {"type": "string"},
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "start_bar", "intent"],
+        "properties": {
+          "name": {"type": "string"},
+          "start_bar": {"type": "integer", "minimum": 0},
+          "intent": {"type": "string"}
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ref", "lane"],
+        "additionalProperties": false,
+        "properties": {
+          "ref": {
+            "type": "string",
+            "description": "onset id (p017/m042/s003) or grid:<beat>. NEVER a raw time.",
+            "pattern": "^([pms]\\d+|grid:\\d+(\\.\\d+)?)$"
+          },
+          "lane": {"type": "string", "enum": ["GAP", "BAR", "NOTE"]},
+          "hold_beats": {"type": "number", "exclusiveMinimum": 0}
+        }
+      }
+    }
+  }
+}

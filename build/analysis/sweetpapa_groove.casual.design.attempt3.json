@@ -1,0 +1,130 @@
+{
+  "design_notes": "The intro (S0) sets up a relaxed pace with a slow 2-beat spacing pattern. The drop (S1) introduces structured, cascading 3-note sweeps that flow from left to right (GAP -> BAR -> NOTE) to emphasize the synth melody while maintaining a casual-friendly density. The outro (S2) shifts to alternating center-lane transitions and concludes with a playful sequence of steps, keeping the chart engaging but easy to navigate.",
+  "sections": [
+    {
+      "name": "Intro",
+      "start_bar": 0,
+      "intent": "Introduce basic rhythm with comfortable 2-beat spacing."
+    },
+    {
+      "name": "Drop",
+      "start_bar": 2,
+      "intent": "Add flow and energy through gentle 3-note sweeps on the beat."
+    },
+    {
+      "name": "Outro",
+      "start_bar": 6,
+      "intent": "Wind down with alternating lane movements and a clean resolution."
+    }
+  ],
+  "events": [
+    {
+      "ref": "m010",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m014",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m019",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "m023",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m025",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m027",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "m031",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m033",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m035",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "m039",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m041",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m043",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "m047",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m050",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m051",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "m055",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "m059",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m063",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m067",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m071",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "m075",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m079",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m084",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m086",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "m090",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m092",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m094",
+      "lane": "BAR"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "track_id": "overdrive",
+  "bpm": 119.945,
+  "offset": 0.177,
+  "stem_source": "none",
+  "beat_backend": "local_dsp",
+  "charts": {
+    "casual": {
+      "events": 46,
+      "attempts": 2,
+      "critic_score": 4,
+      "gates_pass": true,
+      "map": "public/maps/overdrive_pulse.casual.beatmap.json"
+    },
+    "standard": {
+      "events": 83,
+      "attempts": 1,
+      "critic_score": 9,
+      "gates_pass": true,
+      "map": "public/maps/overdrive_pulse.standard.beatmap.json"
+    },
+    "overdrive": {
+      "events": 110,
+      "attempts": 2,
+      "critic_score": 9,
+      "gates_pass": true,
+      "map": "public/maps/overdrive_pulse.overdrive.beatmap.json"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "score": 9,
+  "verdict": "An exceptionally clean and rhythmic chart with outstanding physical flow and perfect audio sync, slightly held back by a complete lack of hold notes.",
+  "issues": [
+    {
+      "where": "entire chart",
+      "problem": "The chart contains zero hold notes. Synthwave tracks are defined by sustained chords and soaring synth leads, which are prime candidates for the game's press-and-hold sustain mechanics.",
+      "severity": "medium"
+    }
+  ]
+}

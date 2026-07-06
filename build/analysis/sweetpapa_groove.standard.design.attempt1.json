@@ -1,0 +1,238 @@
+{
+  "design_notes": "We introduced subtle guide taps at beats 1.0, 2.0, and 3.0 during the intro to prevent the starting silence and cue the player into the tempo. The drop section features a high-density, highly flowing sequence that completely avoids direct outer-lane GAP-to-NOTE jumps on consecutive eighth notes by threading every high-energy transition through the center BAR lane. In the outro, we drastically lowered density and syncopation, sticking purely to whole-beat and double-beat intervals to match the wind-down of the music. In compliance with the hardware constraint of zero sustain candidates, no holds are used.",
+  "sections": [
+    {
+      "name": "Intro",
+      "start_bar": 0,
+      "intent": "Ease the player in and establish the 88 BPM pulse."
+    },
+    {
+      "name": "Drop",
+      "start_bar": 2,
+      "intent": "Flowing eighth-note rhythm with no direct outer jumps."
+    },
+    {
+      "name": "Outro",
+      "start_bar": 6,
+      "intent": "Wind down with sparse, on-beat lane transitions."
+    }
+  ],
+  "events": [
+    {
+      "ref": "grid:1.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:2.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:3.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:4.0",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:5.0",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "grid:6.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:6.5",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:7.0",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:8.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:8.5",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:9.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:9.5",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "grid:10.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:10.5",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:11.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:11.5",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "grid:12.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:12.5",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:13.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:13.5",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "grid:14.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:14.5",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:15.0",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:15.5",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:16.0",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "grid:16.5",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "grid:17.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:17.5",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:18.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:18.5",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "grid:19.0",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "grid:19.5",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:20.0",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:20.5",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:21.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:21.5",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "grid:22.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:22.5",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:23.0",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:24.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:25.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:26.0",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:27.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:28.0",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "grid:29.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:30.0",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:31.0",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "grid:32.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:34.0",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:36.0",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "grid:38.0",
+      "lane": "BAR"
+    },
+    {
+      "ref": "grid:40.0",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:42.0",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "grid:44.0",
+      "lane": "BAR"
+    }
+  ]
+}
