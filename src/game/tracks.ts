@@ -53,7 +53,7 @@ export const TRACKS: TrackDef[] = [
     id: "midnight",
     title: "Midnight Run",
     artist: "Sweet Papa & the Tones",
-    bpm: 127.987,
+    bpm: 129.07,
     map: "maps/midnight_run.standard.beatmap.json",
     maps: {
       casual: "maps/midnight_run.casual.beatmap.json",
@@ -105,6 +105,8 @@ export function trackById(id: string): TrackDef {
 /** Data handed from Play -> Results via the scene start payload. */
 export interface RunResult {
   trackId: string;
+  /** Difficulty that was played, so Results' RETRY can replay the same chart. */
+  difficulty: Difficulty;
   score: number;
   maxCombo: number;
   perfects: number;

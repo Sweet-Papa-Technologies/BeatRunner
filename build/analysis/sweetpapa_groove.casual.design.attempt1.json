@@ -1,190 +1,95 @@
 {
-  "design_notes": "S0 introduces the rhythm with a clean, low-density progression starting at Bar 1 to let players settle into the tempo. S1 leverages a continuous stream of integer-beat taps mapping the driving synthwave kicks directly to the center BAR lane, while the melodies alternate outer lanes in a shifting left-to-right wave motion that changes direction every bar. S2 maintains the rhythmic flow while easing the player through the outro with the same smooth alternating pattern, ensuring a satisfying and physically balanced end to the track.",
+  "design_notes": "The chart is designed for casual play, utilizing a very clean, rhythmic 2-beat spacing that aligns perfectly with the melodic lead and drum accents. The lane shifts mirror the rising and falling pitch of the synthwave lead, creating a natural physical wave (GAP-BAR-NOTE on rising phrases, NOTE-BAR-GAP on falling phrases). Three comfortably spaced hold notes are introduced at key energy peaks (beats 20, 36, and 43), ensuring we hit the exact 15% hold note target without ever overloading the casual player's coordination.",
   "sections": [
     {
       "name": "S0",
       "start_bar": 0,
-      "intent": "intro"
-    },
-    {
-      "name": "S1",
-      "start_bar": 2,
-      "intent": "drop"
-    },
-    {
-      "name": "S2",
-      "start_bar": 6,
-      "intent": "outro"
+      "intent": "Introduce the wave-like melodic movement and comfortable 2-beat rhythm flow."
     }
   ],
   "events": [
     {
-      "ref": "m010",
+      "ref": "p009",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p014",
       "lane": "BAR"
     },
     {
-      "ref": "m012",
-      "lane": "GAP"
-    },
-    {
-      "ref": "m014",
+      "ref": "p018",
       "lane": "NOTE"
     },
     {
-      "ref": "m017",
-      "lane": "GAP"
-    },
-    {
-      "ref": "m019",
+      "ref": "p022",
       "lane": "BAR"
     },
     {
-      "ref": "m021",
-      "lane": "NOTE"
-    },
-    {
-      "ref": "m023",
+      "ref": "p027",
       "lane": "GAP"
     },
     {
-      "ref": "m025",
-      "lane": "NOTE"
-    },
-    {
-      "ref": "m027",
+      "ref": "p032",
       "lane": "BAR"
     },
     {
-      "ref": "m029",
-      "lane": "GAP"
-    },
-    {
-      "ref": "m031",
+      "ref": "p036",
       "lane": "NOTE"
     },
     {
-      "ref": "m033",
-      "lane": "GAP"
-    },
-    {
-      "ref": "m035",
+      "ref": "p040",
       "lane": "BAR"
     },
     {
-      "ref": "m037",
-      "lane": "NOTE"
+      "ref": "s001",
+      "lane": "GAP",
+      "hold_beats": 2.0
     },
     {
-      "ref": "m039",
-      "lane": "GAP"
-    },
-    {
-      "ref": "m041",
-      "lane": "NOTE"
-    },
-    {
-      "ref": "m043",
+      "ref": "p052",
       "lane": "BAR"
     },
     {
-      "ref": "m045",
-      "lane": "GAP"
-    },
-    {
-      "ref": "m047",
+      "ref": "p056",
       "lane": "NOTE"
     },
     {
-      "ref": "m050",
+      "ref": "p060",
       "lane": "GAP"
     },
     {
-      "ref": "m051",
+      "ref": "p066",
       "lane": "BAR"
     },
     {
-      "ref": "m053",
+      "ref": "p070",
       "lane": "NOTE"
     },
     {
-      "ref": "m055",
+      "ref": "p074",
       "lane": "GAP"
     },
     {
-      "ref": "m057",
-      "lane": "NOTE"
+      "ref": "m081",
+      "lane": "NOTE",
+      "hold_beats": 2.0
     },
     {
-      "ref": "m059",
+      "ref": "p088",
       "lane": "BAR"
     },
     {
-      "ref": "m061",
+      "ref": "p092",
       "lane": "GAP"
     },
     {
-      "ref": "m063",
+      "ref": "m096",
+      "lane": "BAR",
+      "hold_beats": 2.0
+    },
+    {
+      "ref": "p102",
       "lane": "NOTE"
-    },
-    {
-      "ref": "m065",
-      "lane": "GAP"
-    },
-    {
-      "ref": "m067",
-      "lane": "BAR"
-    },
-    {
-      "ref": "m069",
-      "lane": "NOTE"
-    },
-    {
-      "ref": "m071",
-      "lane": "GAP"
-    },
-    {
-      "ref": "m073",
-      "lane": "NOTE"
-    },
-    {
-      "ref": "m075",
-      "lane": "BAR"
-    },
-    {
-      "ref": "m077",
-      "lane": "GAP"
-    },
-    {
-      "ref": "m079",
-      "lane": "NOTE"
-    },
-    {
-      "ref": "m082",
-      "lane": "GAP"
-    },
-    {
-      "ref": "m084",
-      "lane": "BAR"
-    },
-    {
-      "ref": "m086",
-      "lane": "NOTE"
-    },
-    {
-      "ref": "m088",
-      "lane": "GAP"
-    },
-    {
-      "ref": "m090",
-      "lane": "NOTE"
-    },
-    {
-      "ref": "m092",
-      "lane": "BAR"
-    },
-    {
-      "ref": "m094",
-      "lane": "GAP"
     }
   ]
 }

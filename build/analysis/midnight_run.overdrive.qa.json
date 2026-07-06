@@ -1,57 +1,58 @@
 {
   "track_id": "midnight",
   "difficulty": "overdrive",
-  "attempts": 2,
+  "attempts": 1,
   "metrics": {
     "difficulty": "overdrive",
-    "event_count": 67,
-    "onset_events": 67,
+    "event_count": 74,
+    "onset_events": 74,
     "grid_events": 0,
     "onset_alignment": 1.0,
     "lane_share": {
-      "GAP": 0.3582,
-      "BAR": 0.3433,
-      "NOTE": 0.2985
+      "GAP": 0.2973,
+      "BAR": 0.3919,
+      "NOTE": 0.3108
     },
-    "hold_share": 0.0597,
-    "sustain_available": 11,
-    "peak_nps_4s": 3.0,
+    "hold_share": 0.0676,
+    "sustain_available": 25,
+    "peak_nps_4s": 3.75,
     "peak_nps_window_s": [
-      18.63,
-      22.63
+      9.5,
+      13.5
     ],
-    "repaired": 9,
-    "repaired_fraction": 0.1184,
+    "repaired": 0,
+    "repaired_fraction": 0.0,
     "dropped": {
-      "window": 7,
+      "window": 0,
       "grid": 0,
-      "snap": 2
+      "snap": 0
     },
     "per_bar_counts": [
       0,
-      4,
-      4,
+      6,
       5,
       4,
       4,
-      4,
-      4,
-      4,
-      4,
+      7,
       6,
       5,
       4,
       4,
       4,
+      5,
       4,
-      3,
+      4,
+      4,
+      4,
+      4,
       0
     ],
     "density_energy": {
-      "spearman": 0.3201,
-      "peak_in_top_section": false,
+      "spearman": 0.2183,
+      "peak_in_top_section": true,
       "breathes": false
     },
+    "usable_sustains": 7,
     "flat_track_exempt": true,
     "gates": {
       "onset_alignment": true,
@@ -65,97 +66,43 @@
     }
   },
   "critic": {
-    "score": 3,
-    "verdict": "The chart is severely undermined by incorrect structural mapping, leaving the actual 15-second drop completely flat while misplaced syncopations clutter the outro.",
+    "score": 7,
+    "verdict": "A solid and physically comfortable chart with clean lane-alternation flow, but it suffers from a premature drop in energy during the second drop section.",
     "issues": [
       {
-        "where": "bar 8 / 15.0s",
-        "problem": "The musical drop begins here, but the chart fails to increase density or intensity, continuing the exact same slow pace as the quiet intro.",
-        "severity": "high"
-      },
-      {
-        "where": "bar 15 / 28.1s",
-        "problem": "Misaligned section definitions place the 'drop' at the very end during the outro transition, resulting in awkward syncopations when the music is actually winding down.",
-        "severity": "high"
-      },
-      {
-        "where": "bar 1 to 15 / 2.2s to 28.0s",
-        "problem": "Endless, mindless repetition of the same lane rotation (BAR -> NOTE -> GAP) that ignores the actual melodic pitch and shape.",
+        "where": "bar 7 / 14.14s",
+        "problem": "Drop 2 abruptly loses energy, shifting from engaging eighth-note streams to sparse quarter-note taps, which deflates the climax.",
         "severity": "medium"
       },
       {
-        "where": "bar 3 / 6.6s",
-        "problem": "A 1.5-beat hold note is placed on a short synth pluck that has no musical sustain, making the hold feel empty and unrewarding.",
+        "where": "bar 13 / 24.37s",
+        "problem": "The transition into the outro lacks contrast because it maintains the exact same quarter-note density as the preceding section, making the song's exit feel flat.",
         "severity": "low"
       }
-    ],
-    "human_review": true
+    ]
   },
-  "repairs": [
-    {
-      "reason": "outside_playable_window",
-      "ref": "p001",
-      "beat": 0.0
-    },
-    {
-      "reason": "outside_playable_window",
-      "ref": "p003",
-      "beat": 1.0
-    },
-    {
-      "reason": "outside_playable_window",
-      "ref": "p005",
-      "beat": 2.0
-    },
-    {
-      "reason": "outside_playable_window",
-      "ref": "p007",
-      "beat": 3.0
-    },
-    {
-      "reason": "outside_playable_window",
-      "ref": "s000",
-      "beat": 3.5
-    },
-    {
-      "reason": "snap_gt_35ms",
-      "ref": "s005",
-      "beat": 59.5,
-      "snap_ms": 39.4
-    },
-    {
-      "reason": "snap_gt_35ms",
-      "ref": "s006",
-      "beat": 61.0,
-      "snap_ms": 44.5
-    },
-    {
-      "reason": "outside_playable_window",
-      "ref": "p138",
-      "beat": 67.0
-    },
-    {
-      "reason": "outside_playable_window",
-      "ref": "p140",
-      "beat": 68.0
-    }
-  ],
-  "design_notes": "The intro sets up a steady synthwave rhythm with comfortable 1-beat steps, introducing outer lane claps and centering the kick on the BAR lane. Short 1.5-beat holds are introduced with simple tap accompaniments to build physical familiarity.\n\nThe drop ramps up the energy, delivering a long 2-beat central anchor hold with rhythmic tap syncopations on the outer lanes. This rewards players with a highly flowing, satisfying movement pattern during the track's climax.\n\nThe outro cools down the intensity, transitioning from the drop into spacious, nicely spaced single taps that naturally resolve with the fading synthesizer chords.",
+  "repairs": [],
+  "design_notes": "S0 (Intro) sets a steady retro-synth foundation with sparse 1-beat spacing that guides the player gently onto the highway, featuring long holds matching the sustained sub-bass. S1 (Drop) spikes the intensity into a maximum density passage with alternating outer lane taps following the high-energy mid-band claps and driving low kick-drums. S2 (Drop Part 2) keeps a balanced but highly-dynamic syncopated feel, with periodic breaks to give players breathing room and melodic contour-tracking runs that shift smoothly from left to right. S3 (Outro) provides a grand climax with dramatic lane sweeps, ending on a sustained high-band melody hold and a final, satisfying punchy center-lane note.",
   "design_sections": [
     {
-      "name": "Intro",
+      "name": "S0",
       "start_bar": 0,
-      "intent": "Establish the fundamental synthwave pulse with clean, alternating 1.0-beat lane patterns and short holds."
+      "intent": "Gentle intro pacing with long holds to establish the groove"
     },
     {
-      "name": "Drop",
-      "start_bar": 15,
-      "intent": "Maximize physical flow with a long central BAR hold while keeping outer taps clear and responsive."
+      "name": "S1",
+      "start_bar": 5,
+      "intent": "Peak drop energy with driving alternating lane sequences"
     },
     {
-      "name": "Outro",
-      "start_bar": 16,
-      "intent": "Gradually wind down the density to allow players to breathe as the rhythm highway resolves."
+      "name": "S2",
+      "start_bar": 7,
+      "intent": "Dynamic syncopation and breathers following the melody contour"
+    },
+    {
+      "name": "S3",
+      "start_bar": 13,
+      "intent": "Grand finale outro with high-density sweeps and a closing statement"
     }
   ],
   "previews": {

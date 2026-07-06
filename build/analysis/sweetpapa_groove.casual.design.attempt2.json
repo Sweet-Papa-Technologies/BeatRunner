@@ -1,105 +1,107 @@
 {
-  "design_notes": "S0 (Intro): Starts with a stabilizing center BAR hold at beat 4 to introduce the basic mechanics, transitioning into comfortable 2-beat interval taps that alternate lanes.\nS1 (Drop): The intensity ramps up slightly, establishing a steady alternating highway flow on the main beats. A GAP lane hold on beat 17 anchors the middle of the drop.\nS2 (Outro): Maintains rhythmic momentum but stretches the patterns cleanly. A final NOTE lane hold at beat 32 gives a satisfying completion feel before the track fades out.",
+  "design_notes": "The chart matches the synthwave pacing with high precision, mapping the density directly to the track's energy levels. In high-energy bars, a rhythmic sequence of 3 taps is featured, alternating naturally across the three lanes. In the lower-energy breaks, the density drops to a single tap or hold to allow the player to breathe. Sustained synth-leads are caught with comfortable, two-beat holds that keep other lanes clear to preserve the casual flow.",
   "sections": [
     {
       "name": "S0",
       "start_bar": 0,
-      "intent": "Introductory comfort with a central hold and basic alternating lane taps."
-    },
-    {
-      "name": "S1",
-      "start_bar": 2,
-      "intent": "Drive rhythmic density slightly higher with steady lane transitions and a left-lane hold."
-    },
-    {
-      "name": "S2",
-      "start_bar": 6,
-      "intent": "Gradual wind-down using a final right-lane hold and symmetric alternating taps to close out."
+      "intent": "Follow the fluctuating energy peaks and valleys with matching step densities, utilizing clean lane switches and spacious holds on sustained leads."
     }
   ],
   "events": [
     {
-      "ref": "grid:4.0",
-      "lane": "BAR",
-      "hold_beats": 2
-    },
-    {
-      "ref": "m017",
+      "ref": "grid:1.0",
       "lane": "GAP"
     },
     {
-      "ref": "m021",
+      "ref": "grid:3.0",
       "lane": "NOTE"
     },
     {
-      "ref": "m025",
-      "lane": "GAP"
-    },
-    {
-      "ref": "m029",
-      "lane": "NOTE"
-    },
-    {
-      "ref": "m033",
+      "ref": "p012",
       "lane": "BAR"
     },
     {
-      "ref": "grid:17.0",
+      "ref": "p018",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p020",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p024",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p030",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p036",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p040",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p042",
+      "lane": "BAR"
+    },
+    {
+      "ref": "s001",
       "lane": "GAP",
       "hold_beats": 2
     },
     {
-      "ref": "m043",
+      "ref": "p054",
       "lane": "BAR"
     },
     {
-      "ref": "m047",
+      "ref": "p056",
       "lane": "NOTE"
     },
     {
-      "ref": "m051",
+      "ref": "p060",
       "lane": "GAP"
     },
     {
-      "ref": "m055",
-      "lane": "NOTE"
-    },
-    {
-      "ref": "m059",
+      "ref": "p066",
       "lane": "BAR"
     },
     {
-      "ref": "m063",
+      "ref": "p072",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p074",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p078",
       "lane": "GAP"
     },
     {
-      "ref": "grid:32.0",
+      "ref": "m081",
       "lane": "NOTE",
       "hold_beats": 2
     },
     {
-      "ref": "m073",
+      "ref": "p090",
       "lane": "BAR"
     },
     {
-      "ref": "m077",
+      "ref": "p092",
       "lane": "GAP"
     },
     {
-      "ref": "m082",
-      "lane": "NOTE"
+      "ref": "m096",
+      "lane": "NOTE",
+      "hold_beats": 2
     },
     {
-      "ref": "m086",
-      "lane": "GAP"
-    },
-    {
-      "ref": "m090",
+      "ref": "grid:46.0",
       "lane": "BAR"
-    },
-    {
-      "ref": "m094",
-      "lane": "NOTE"
     }
   ]
 }

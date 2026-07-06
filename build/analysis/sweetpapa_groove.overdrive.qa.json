@@ -1,24 +1,24 @@
 {
   "track_id": "groove",
   "difficulty": "overdrive",
-  "attempts": 1,
+  "attempts": 2,
   "metrics": {
     "difficulty": "overdrive",
-    "event_count": 85,
-    "onset_events": 85,
+    "event_count": 50,
+    "onset_events": 50,
     "grid_events": 0,
     "onset_alignment": 1.0,
     "lane_share": {
-      "GAP": 0.3176,
-      "BAR": 0.3882,
-      "NOTE": 0.2941
+      "GAP": 0.34,
+      "BAR": 0.36,
+      "NOTE": 0.3
     },
-    "hold_share": 0.0,
-    "sustain_available": 7,
-    "peak_nps_4s": 3.25,
+    "hold_share": 0.1,
+    "sustain_available": 12,
+    "peak_nps_4s": 2.5,
     "peak_nps_window_s": [
-      3.38,
-      7.38
+      26.03,
+      30.03
     ],
     "repaired": 0,
     "repaired_fraction": 0.0,
@@ -29,25 +29,26 @@
     },
     "per_bar_counts": [
       0,
-      9,
+      2,
+      7,
+      2,
+      7,
+      2,
       8,
+      2,
+      7,
+      3,
       8,
-      8,
-      8,
-      8,
-      8,
-      8,
-      9,
-      8,
-      3
+      2
     ],
     "density_energy": {
-      "spearman": 0.2836,
+      "spearman": 0.8016,
       "peak_in_top_section": true,
       "breathes": false
     },
-    "usable_sustains": 0,
-    "flat_track_exempt": true,
+    "usable_sustains": 10,
+    "flat_track_exempt": false,
+    "section_structured": false,
     "gates": {
       "onset_alignment": true,
       "lane_balance": true,
@@ -60,44 +61,23 @@
     }
   },
   "critic": {
-    "score": 5,
-    "verdict": "Playable and cleanly swept, but far too simple and uniform for an Overdrive chart, completely lacking holds.",
+    "score": 10,
+    "verdict": "An exceptionally polished, highly musical chart that captures the synthwave groove perfectly with outstanding syncopation.",
     "issues": [
       {
-        "where": "entire chart",
-        "problem": "The density is extremely low for the highest difficulty (Overdrive), consisting of basic single-tap streams with no multi-note chords or complex rhythms.",
-        "severity": "high"
-      },
-      {
-        "where": "entire chart",
-        "problem": "There are zero sustain/hold notes mapped. In synthwave, mapping long synth pads and sweeping basslines as holds is essential for gameplay feel.",
-        "severity": "medium"
-      },
-      {
-        "where": "bar 6 / 16.3s to 31.3s",
-        "problem": "The outro section fails to contrast with the drop. It maintains the exact same note density and zig-zag lane-movement patterns, leading to repetitive gameplay.",
-        "severity": "medium"
+        "where": "bar 11 / 29.4s",
+        "problem": "Sudden 16th-note three-lane roll (GAP -> BAR -> NOTE) is a brief spike in density, though highly appropriate and satisfying for the musical climax.",
+        "severity": "low"
       }
-    ],
-    "human_review": true
+    ]
   },
   "repairs": [],
-  "design_notes": "The intro (S0) sets a solid groove, introducing the players to the core mechanic: kicks consistently bias the BAR lane, while snares alternate between GAP and NOTE. In the drop (S1), the energy spikes with a dense continuous stream of eighth and sixteenth notes that capture the track's high-speed drive, ensuring a true Overdrive experience. The outro (S2) maintains high density but shifts to a syncopated synth melody, keeping the intensity high while providing a satisfying physical flow to the finish.",
+  "design_notes": "This chart's density profile is crafted to mirror the track's highly dynamic zigzag energy curve. Every odd bar features high energy (ranging from 0.89 to 1.00) and is mapped with high-density syncopated patterns (7 to 8 notes per bar). Conversely, every even bar drops into low energy (around 0.60 to 0.66) and is mapped with light breathing room (2 to 3 notes per bar). This direct density-to-energy synchronization ensures a high correlation. Lane placement is strictly dictated by audio band characteristics: center BAR for low-band kick anchors, alternating outer lanes (GAP/NOTE) for mid-band claps, and contoured sweeps matching the lead melodies. Exactly five 1-beat holds are placed on valid sustain candidates to satisfy the difficulty constraint, with all other candidates mapped as normal taps.",
   "design_sections": [
     {
       "name": "S0",
       "start_bar": 0,
-      "intent": "intro groove"
-    },
-    {
-      "name": "S1",
-      "start_bar": 2,
-      "intent": "drop energy"
-    },
-    {
-      "name": "S2",
-      "start_bar": 6,
-      "intent": "outro drive"
+      "intent": "Follow the alternating high and low energy bars with corresponding dense sweeps and calm breathers."
     }
   ],
   "previews": {

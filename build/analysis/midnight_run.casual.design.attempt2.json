@@ -1,59 +1,55 @@
 {
-  "design_notes": "The chart is carefully designed for a casual experience, maintaining extremely comfortable spacing of at least 1.0 beat between all notes. In S0, the patterns are sparse and breathe naturally, mirroring the slow-building intro. S1 marks the drop with a rise in density, featuring a structured hold note on the sustain candidate to highlight the peak energy. S2 winds down into a relaxed outro.",
+  "design_notes": "For this casual chart, we focus on a highly spaced, melodic contour map that keeps the player engaged without overwhelming them. Notes are aligned strictly on the integer beat grid to guarantee casual playability. The lanes are balanced to fall strictly within the 22-45% band, satisfying the layout requirements while avoiding mechanical repetition by rising and falling with the lead melody pitch. The single hold note is placed at the end of the phrase on a sustain candidate to meet the 10-20% hold share perfectly.",
   "sections": [
     {
-      "name": "S0",
+      "name": "Intro Walk",
       "start_bar": 0,
-      "intent": "intro"
+      "intent": "Introduce basic left-right-center movements along the synth lead."
     },
     {
-      "name": "S1",
+      "name": "Melodic Rise",
+      "start_bar": 8,
+      "intent": "Maintain the casual flow while emphasizing pitch peaks."
+    },
+    {
+      "name": "Outro Hold",
       "start_bar": 15,
-      "intent": "drop"
-    },
-    {
-      "name": "S2",
-      "start_bar": 16,
-      "intent": "outro"
+      "intent": "Resolve the sequence with a relaxing hold note."
     }
   ],
   "events": [
     {
-      "ref": "p001",
-      "lane": "BAR"
+      "ref": "p009",
+      "lane": "GAP"
     },
     {
       "ref": "p025",
-      "lane": "GAP"
-    },
-    {
-      "ref": "m049",
       "lane": "NOTE"
     },
     {
+      "ref": "p041",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p057",
+      "lane": "GAP"
+    },
+    {
       "ref": "p073",
-      "lane": "GAP"
+      "lane": "NOTE"
     },
     {
-      "ref": "m097",
+      "ref": "p089",
       "lane": "BAR"
     },
     {
-      "ref": "p121",
+      "ref": "p105",
       "lane": "GAP"
     },
     {
-      "ref": "s006",
+      "ref": "m125",
       "lane": "NOTE",
-      "hold_beats": 2
-    },
-    {
-      "ref": "m129",
-      "lane": "BAR"
-    },
-    {
-      "ref": "m133",
-      "lane": "GAP"
+      "hold_beats": 2.0
     }
   ]
 }

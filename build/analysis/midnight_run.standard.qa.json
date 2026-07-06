@@ -4,54 +4,55 @@
   "attempts": 2,
   "metrics": {
     "difficulty": "standard",
-    "event_count": 70,
-    "onset_events": 70,
+    "event_count": 78,
+    "onset_events": 78,
     "grid_events": 0,
     "onset_alignment": 1.0,
     "lane_share": {
-      "GAP": 0.3286,
-      "BAR": 0.3286,
-      "NOTE": 0.3429
+      "GAP": 0.3333,
+      "BAR": 0.3205,
+      "NOTE": 0.3462
     },
-    "hold_share": 0.0571,
-    "sustain_available": 11,
-    "peak_nps_4s": 3.25,
+    "hold_share": 0.0769,
+    "sustain_available": 25,
+    "peak_nps_4s": 4.0,
     "peak_nps_window_s": [
-      26.13,
-      30.13
+      9.5,
+      13.5
     ],
-    "repaired": 8,
-    "repaired_fraction": 0.1026,
+    "repaired": 0,
+    "repaired_fraction": 0.0,
     "dropped": {
-      "window": 7,
+      "window": 0,
       "grid": 0,
-      "snap": 1
+      "snap": 0
     },
     "per_bar_counts": [
       0,
+      4,
       3,
       4,
-      5,
       4,
-      4,
-      4,
-      4,
-      4,
-      4,
+      7,
+      7,
+      6,
+      6,
+      6,
       6,
       5,
       4,
       4,
       4,
-      8,
-      3,
+      4,
+      4,
       0
     ],
     "density_energy": {
-      "spearman": 0.3712,
-      "peak_in_top_section": false,
+      "spearman": 0.0446,
+      "peak_in_top_section": true,
       "breathes": false
     },
+    "usable_sustains": 6,
     "flat_track_exempt": true,
     "gates": {
       "onset_alignment": true,
@@ -65,86 +66,43 @@
     }
   },
   "critic": {
-    "score": 4,
-    "verdict": "Technically on-beat, but incredibly lazy and monotonous due to a repeating three-lane 'stair' pattern that ignores the actual musical structure.",
+    "score": 9,
+    "verdict": "An exceptionally polished and rhythmically precise chart with fantastic physical flow, minorly held back only by slightly abrupt intro holds.",
     "issues": [
       {
-        "where": "bar 1 to 10 / 2.6s - 19.1s",
-        "problem": "Monotonous repeating 'stair' pattern (Center -> Left -> Right) that completely ignores the actual rhythm, melody, and drum changes in the music.",
-        "severity": "high"
+        "where": "bar 2 / 2.9s",
+        "problem": "The 3-beat hold on the BAR lane overlaps with a tap on the NOTE lane at 3.6s, which introduces multi-lane multitasking a bit too early in the warm-up intro for a Standard difficulty chart.",
+        "severity": "low"
       },
       {
-        "where": "bar 11 / 19.8s and 20.7s",
-        "problem": "Arbitrary 1-beat holds placed on GAP/NOTE lanes that do not correspond to any distinct sustained synth notes in the audio.",
-        "severity": "medium"
-      },
-      {
-        "where": "bar 16 to 17 / 28.4s - 30.4s",
-        "problem": "The drop climax simply doubles the speed of the same repetitive stair pattern into 8th notes, offering no engaging layout or musical expression for the player.",
-        "severity": "high"
+        "where": "bar 5 / 9.4s",
+        "problem": "The transition into the first drop features a sudden, untelegraphed jump to continuous eighth-note density. A brief preparatory drum-fill pattern would make this spike feel more natural.",
+        "severity": "low"
       }
-    ],
-    "human_review": true
+    ]
   },
-  "repairs": [
-    {
-      "reason": "outside_playable_window",
-      "ref": "m001",
-      "beat": 0.0
-    },
-    {
-      "reason": "outside_playable_window",
-      "ref": "m003",
-      "beat": 1.0
-    },
-    {
-      "reason": "outside_playable_window",
-      "ref": "m005",
-      "beat": 2.0
-    },
-    {
-      "reason": "outside_playable_window",
-      "ref": "m007",
-      "beat": 3.0
-    },
-    {
-      "reason": "outside_playable_window",
-      "ref": "s000",
-      "beat": 3.5
-    },
-    {
-      "reason": "snap_gt_35ms",
-      "ref": "s005",
-      "beat": 59.5,
-      "snap_ms": 39.4
-    },
-    {
-      "reason": "outside_playable_window",
-      "ref": "p138",
-      "beat": 67.0
-    },
-    {
-      "reason": "outside_playable_window",
-      "ref": "m137",
-      "beat": 68.0
-    }
-  ],
-  "design_notes": "The chart starts with a steady 1-beat rhythm in the intro (S0), using brief holds to introduce players to the synth sustains. The drop (S1) ramps up the intensity with a fast, alternating 0.5-beat pattern across all three lanes to capture the peak energy. Finally, the outro (S2) dials the energy back down, allowing players to breathe with a spacious 1-beat sequence. This chart perfectly balances all three lanes (GAP, BAR, NOTE) within the required 22%-45% range.",
+  "repairs": [],
+  "design_notes": "S0 sets up the rhythm on the center lane with long holds, introducing standard difficulty expectations while keeping density low. S1 escalates into a dense, high-energy drop characterized by 0.5-beat subdivisions, active outer-lane swaps, and short holds. S2 keeps the intensity going with balanced offbeat syncopations, alternating lanes carefully to guarantee comfortable flow. S3 provides a relaxed outro, returning to steady quarter-note paces to let the player breathe before the song fades.",
   "design_sections": [
     {
       "name": "Intro",
       "start_bar": 0,
-      "intent": "Introduce basic 1-beat patterns and simple holds."
+      "intent": "Introduce the groove with sparse beats and long, stabilizing BAR holds."
     },
     {
-      "name": "Drop",
-      "start_bar": 15,
-      "intent": "Ramp up density with a fast alternating melody sequence."
+      "name": "Drop Build",
+      "start_bar": 5,
+      "intent": "Ramp up density with 0.5-beat syncopation and active lane-switching."
+    },
+    {
+      "name": "Main Drop",
+      "start_bar": 7,
+      "intent": "Maintain high energy with playful offbeat motifs and balanced lane distribution."
     },
     {
       "name": "Outro",
-      "start_bar": 16,
-      "intent": "Let the song breathe with a spacious cool-down."
+      "start_bar": 13,
+      "intent": "Wind down with simplified, quarter-note rhythms and a final satisfying hold."
     }
   ],
   "previews": {

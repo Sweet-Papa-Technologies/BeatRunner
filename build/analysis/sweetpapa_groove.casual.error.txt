@@ -1,1 +1,1 @@
-groove/casual: designer failed gates after 3 attempts. Last violations: hold share 0% outside 10%-20% (sustain candidates available: 7).
+groove/casual: designer failed gates after 3 attempts. Last violations: no low-energy section breathes — thin out a break/quiet section.

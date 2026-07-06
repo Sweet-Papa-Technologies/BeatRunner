@@ -1,0 +1,68 @@
+[
+  {
+    "round": 1,
+    "prompt": "128-BPM darkwave night-drive: steady kick, gated snare, moody analog bass, a hooky lead in the second half.",
+    "cards": [
+      {
+        "tempo_stability": 10,
+        "transient_clarity": 9,
+        "structural_contrast": 9,
+        "intro_cleanliness": 10,
+        "mix_punch": 9,
+        "genre_fit": 10,
+        "critique": "This track is an exceptional candidate for rhythm-game charting, delivering a highly stable 128 BPM tempo and an immediate start on the very first beat with zero intro lag. The transient clarity is superb; the kick and gated snare are sharp, distinct, and sit proudly at the forefront of the mix without being obscured by the bassline or pads. Structurally, the progression is spot-on for a short snippet, building from a driving analog bassline into a very clear, hooky synth lead in the second half that provides the perfect melodic payoff. It completely nails the darkwave night-drive aesthetic and is ready for charting.",
+        "prompt_rewrite": "",
+        "weighted": 9.429,
+        "round": 1,
+        "candidate": 0,
+        "wav": "/Users/fterry/.foreman/worktrees/FRM-1041/build/analysis/midnight_run.gen/round1_cand0.wav",
+        "prompt": "128-BPM darkwave night-drive: steady kick, gated snare, moody analog bass, a hooky lead in the second half."
+      },
+      {
+        "tempo_stability": 10,
+        "transient_clarity": 9,
+        "structural_contrast": 9,
+        "intro_cleanliness": 10,
+        "mix_punch": 9,
+        "genre_fit": 10,
+        "critique": "This track is an excellent candidate for a rhythm game chart. It hits the ground running immediately at 0:00 with no dead air or slow fades, ensuring players can engage with the rhythm instantly. The 128 BPM tempo is perfectly locked and stable, while the clean, punchy kicks and gated snares provide incredibly sharp transient markers that are a dream to chart. The mix keeps the drums forward and uncluttered, leaving plenty of room for the moody analog bassline. Structurally, it evolves beautifully over its short duration, introducing a rolling arpeggiated motif at the 8-second mark and escalating into a hooky, soaring synth lead in the second half to provide excellent gameplay contrast.",
+        "prompt_rewrite": "",
+        "weighted": 9.429,
+        "round": 1,
+        "candidate": 1,
+        "wav": "/Users/fterry/.foreman/worktrees/FRM-1041/build/analysis/midnight_run.gen/round1_cand1.wav",
+        "prompt": "128-BPM darkwave night-drive: steady kick, gated snare, moody analog bass, a hooky lead in the second half."
+      },
+      {
+        "tempo_stability": 10,
+        "transient_clarity": 10,
+        "structural_contrast": 9,
+        "intro_cleanliness": 10,
+        "mix_punch": 9,
+        "genre_fit": 10,
+        "critique": "This track is an exceptional candidate for a rhythm-game chart, delivering a rock-solid, unambiguous 128-BPM grid that starts instantly without any distracting silence. The transient clarity is stellar: the punchy four-on-the-floor kick and crisp gated snare provide unmistakable physical cues for mapping note taps. The mix is beautifully punchy, keeping the rhythm section forward and clear of any muddy low-end build-up. Structurally, the track transitions beautifully at the halfway mark, introducing a hooky, soaring analog synth lead that provides a perfect cue for a density or pattern shift in the chart. This track is fully production-ready and highly chartable.",
+        "prompt_rewrite": "",
+        "weighted": 9.643,
+        "round": 1,
+        "candidate": 2,
+        "wav": "/Users/fterry/.foreman/worktrees/FRM-1041/build/analysis/midnight_run.gen/round1_cand2.wav",
+        "prompt": "128-BPM darkwave night-drive: steady kick, gated snare, moody analog bass, a hooky lead in the second half."
+      },
+      {
+        "tempo_stability": 10,
+        "transient_clarity": 9,
+        "structural_contrast": 9,
+        "intro_cleanliness": 10,
+        "mix_punch": 9,
+        "genre_fit": 10,
+        "critique": "This track is an outstanding candidate for a rhythm-game chart, delivering a rock-solid 128 BPM grid and crisp, highly defined transients that make note-mapping effortless. Starting immediately with a pulsing analog bassline prevents wasted space, and the introduction of the melodic, hooky synth lead at the halfway mark provides a clear structural pivot perfect for a chart intensity spike. The mix balance keeps the driving kick and gated snare prominent, ensuring the rhythmic pulse is never lost beneath the retro pads. It perfectly matches the darkwave night-drive brief and is ready for release.",
+        "prompt_rewrite": "",
+        "weighted": 9.429,
+        "round": 1,
+        "candidate": 3,
+        "wav": "/Users/fterry/.foreman/worktrees/FRM-1041/build/analysis/midnight_run.gen/round1_cand3.wav",
+        "prompt": "128-BPM darkwave night-drive: steady kick, gated snare, moody analog bass, a hooky lead in the second half."
+      }
+    ]
+  }
+]

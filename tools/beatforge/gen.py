@@ -77,6 +77,8 @@ def generate_track(track_id: str, opts: config.RunOptions, client: VertexClient)
     (work / "gen-log.json").write_text(json.dumps(log, indent=2))
     (config.BUILD_DIR / f"{base}.gen-log.json").write_text(json.dumps(log, indent=2))
 
+    if best is None:
+        raise RuntimeError(f"{track_id}: no candidates were generated to master")
     winner_wav = best["wav"]
     ogg = _master(winner_wav, base)
     (config.BUILD_DIR / f"{base}.winner-scorecard.json").write_text(json.dumps(best, indent=2))
@@ -116,9 +118,14 @@ def _master(wav_path: str, base: str) -> Path:
              f"loudnorm=I={config.TARGET_LUFS}:TP={config.TARGET_TRUE_PEAK_DBTP}:LRA=11:print_format=json",
              "-f", "null", "-"], capture_output=True, text=True)
         stats = _parse_loudnorm(meas.stderr)
+        # pass 2: apply, guided by the measured values. Use DYNAMIC mode
+        # (linear=false): linear mode disables loudnorm's true-peak limiter, so on
+        # hot material it either overshoots TP or clamps gain and undershoots -14
+        # (groove landed at -15.3/-0.5). Dynamic mode reliably hits BOTH the -14
+        # integrated target and the -1.0 dBTP ceiling. LRA=11 keeps it gentle.
         af = (f"loudnorm=I={config.TARGET_LUFS}:TP={config.TARGET_TRUE_PEAK_DBTP}:LRA=11:"
               f"measured_I={stats['input_i']}:measured_TP={stats['input_tp']}:"
-              f"measured_LRA={stats['input_lra']}:measured_thresh={stats['input_thresh']}:linear=true")
+              f"measured_LRA={stats['input_lra']}:measured_thresh={stats['input_thresh']}:linear=false")
         for out in (out_src, out_pub):
             out.parent.mkdir(parents=True, exist_ok=True)
             subprocess.run(

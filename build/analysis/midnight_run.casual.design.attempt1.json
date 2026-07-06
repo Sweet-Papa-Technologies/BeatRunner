@@ -1,62 +1,141 @@
 {
-  "design_notes": "S0 introduces the core rhythm of the synthwave groove with a comfortable, sparse tapping pattern that alternates outer lanes to build initial player familiarity. S1 represents the track's climatic drop where we suddenly increase density to 1-beat intervals, mapping a driving sequence that flows smoothly into a 2-beat hold on the center lane. S2 winds down the experience during the outro, providing a satisfying resolution with alternating taps that let the energy breathe.",
+  "design_notes": "For the intro, we establish a steady half-note pace, introducing the center-lane hold that represents the low-end drone. We resolve the momentum-killing gap right before the drop by keeping beats 15, 17, 19, and 20 active, creating a clean transition. In the drop, we fix the empty climax issue by keeping a rhythmic, engaging half-note groove with mirrored and answered phrases to avoid boring stairs or repetitive lane patterns. Finally, the outro eases off the tension, winding down into a sparse pattern.",
   "sections": [
     {
       "name": "S0",
       "start_bar": 0,
-      "intent": "intro"
+      "intent": "Establish the groove and build momentum up to the drop."
     },
     {
       "name": "S1",
-      "start_bar": 15,
-      "intent": "drop"
+      "start_bar": 5,
+      "intent": "Drive peak energy at the drop entry with clean transitions."
     },
     {
       "name": "S2",
-      "start_bar": 16,
-      "intent": "outro"
+      "start_bar": 7,
+      "intent": "Maintain the peak energy of the main drop with balanced lane-switching patterns."
+    },
+    {
+      "name": "S3",
+      "start_bar": 13,
+      "intent": "Wind down the chart, providing a satisfying breathing space."
     }
   ],
   "events": [
     {
-      "ref": "p009",
-      "lane": "BAR"
-    },
-    {
-      "ref": "p025",
+      "ref": "p008",
       "lane": "GAP"
     },
     {
-      "ref": "p041",
-      "lane": "NOTE"
-    },
-    {
-      "ref": "p073",
-      "lane": "BAR"
-    },
-    {
-      "ref": "p105",
-      "lane": "GAP"
-    },
-    {
-      "ref": "p121",
-      "lane": "NOTE"
-    },
-    {
-      "ref": "p123",
-      "lane": "GAP"
-    },
-    {
-      "ref": "m125",
+      "ref": "s001",
       "lane": "BAR",
       "hold_beats": 2
     },
     {
-      "ref": "m129",
+      "ref": "p019",
+      "lane": "GAP"
+    },
+    {
+      "ref": "s002",
+      "lane": "NOTE",
+      "hold_beats": 2
+    },
+    {
+      "ref": "p027",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p032",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p036",
       "lane": "NOTE"
     },
     {
-      "ref": "p136",
+      "ref": "p040",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p042",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p046",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p051",
+      "lane": "GAP"
+    },
+    {
+      "ref": "s008",
+      "lane": "BAR",
+      "hold_beats": 2
+    },
+    {
+      "ref": "p062",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p067",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p071",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p075",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p079",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p084",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p088",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p092",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p096",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p101",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p105",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p113",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p120",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p127",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p133",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "m140",
       "lane": "GAP"
     }
   ]

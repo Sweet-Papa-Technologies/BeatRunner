@@ -1,29 +1,29 @@
 {
   "track_id": "overdrive",
   "difficulty": "casual",
-  "attempts": 2,
+  "attempts": 1,
   "metrics": {
     "difficulty": "casual",
-    "event_count": 46,
-    "onset_events": 46,
+    "event_count": 34,
+    "onset_events": 34,
     "grid_events": 0,
     "onset_alignment": 1.0,
     "lane_share": {
-      "GAP": 0.3043,
-      "BAR": 0.413,
-      "NOTE": 0.2826
+      "GAP": 0.3235,
+      "BAR": 0.3529,
+      "NOTE": 0.3235
     },
     "hold_share": 0.0,
     "sustain_available": 0,
-    "peak_nps_4s": 2.0,
+    "peak_nps_4s": 1.5,
     "peak_nps_window_s": [
-      14.18,
-      18.18
+      13.18,
+      17.18
     ],
-    "repaired": 3,
-    "repaired_fraction": 0.0612,
+    "repaired": 0,
+    "repaired_fraction": 0.0,
     "dropped": {
-      "window": 3,
+      "window": 0,
       "grid": 0,
       "snap": 0
     },
@@ -35,22 +35,23 @@
       2,
       2,
       2,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
+      3,
+      3,
+      2,
+      2,
+      3,
+      3,
+      2,
+      2,
       2,
       0
     ],
     "density_energy": {
-      "spearman": -0.0364,
+      "spearman": 0.1751,
       "peak_in_top_section": false,
       "breathes": false
     },
+    "usable_sustains": 0,
     "flat_track_exempt": true,
     "gates": {
       "onset_alignment": true,
@@ -64,69 +65,37 @@
     }
   },
   "critic": {
-    "score": 4,
-    "verdict": "A highly repetitive, mechanically copy-pasted chart that completely lacks hold notes and ignores musical phrasing.",
+    "score": 9,
+    "verdict": "A perfectly executed casual chart with crisp rhythm alignment, logical lane mapping, and clear density progression.",
     "issues": [
       {
-        "where": "bar 7-15 / 14.18s - 30.19s",
-        "problem": "The entire drop is mapped as a monotonous, repeating 3-lane stair pattern (NOTE -> BAR -> GAP) on every single quarter beat, completely ignoring the melodic contour and snare backbeats.",
-        "severity": "high"
-      },
-      {
-        "where": "entire chart",
-        "problem": "The chart contains zero hold notes, missing clear opportunities to map sustained synth pads in both the intro and outro.",
-        "severity": "medium"
-      },
-      {
-        "where": "bar 0-7 / 2.17s - 14.18s",
-        "problem": "The intro relies on a rigid, repeating half-note pattern (BAR -> NOTE -> BAR -> GAP) that feels too mechanical and ignores key synth accents.",
-        "severity": "medium"
-      },
-      {
-        "where": "bar 15-17 / 30.19s - 34.00s",
-        "problem": "The outro cuts off abruptly at 31.19s with a single note, leaving the remaining bars of the outro completely empty.",
+        "where": "bars 1-7 / 2.1s - 14.0s",
+        "problem": "The intro consists entirely of single taps, missing opportunities to use sustain holds for the long, atmospheric synthwave pad chords.",
         "severity": "low"
       }
-    ],
-    "human_review": true
+    ]
   },
-  "repairs": [
-    {
-      "reason": "outside_playable_window",
-      "ref": "p001",
-      "beat": 0.0
-    },
-    {
-      "reason": "outside_playable_window",
-      "ref": "p007",
-      "beat": 2.0
-    },
-    {
-      "reason": "outside_playable_window",
-      "ref": "p193",
-      "beat": 64.0
-    }
-  ],
-  "design_notes": "S0 (Intro) introduces the rhythm gently with moderate energy, using a comfortable 2-beat spacing that maps kicks to the center BAR lane and snares to alternating outer lanes. S1 (Drop) features higher musical density, where we double the tap frequency to a clean 1-beat spacing, utilizing fluid left-to-right sweeps across lanes to capture the energetic synth leads. S2 (Outro) provides a satisfying cooldown, returning to the relaxed 2-beat spacing to let the chart breathe as the highway finishes.",
+  "repairs": [],
+  "design_notes": "The intro (S0) establishes a steady, relaxed pace using a 2-beat spacing pattern. Lane placement responds directly to the melodic rise and fall of the synth lead, alternating cleanly to prevent physical strain. In the drop (S1), the chart increases in density, introducing 1-beat steps that mimic the high-energy percussion. To maintain a casual-friendly flow, brief 1-beat gaps are placed at the end of each bar to let the player breathe. The outro (S2) winds down immediately, letting the pattern fade out naturally with the remaining audio onsets.",
   "design_sections": [
     {
-      "name": "Intro",
+      "name": "S0",
       "start_bar": 0,
-      "intent": "Establish rhythmic pulse with comfortable spacing"
+      "intent": "Introduce a relaxed, alternating flow to ease the player into the synthwave rhythm."
     },
     {
-      "name": "Drop",
+      "name": "S1",
       "start_bar": 7,
-      "intent": "Increase density and utilize left-right motion for the synth lead"
+      "intent": "Amplify excitement with denser 1-beat patterns that match the energetic drop while leaving rhythmic breaks."
     },
     {
-      "name": "Outro",
+      "name": "S2",
       "start_bar": 15,
-      "intent": "Wind down to a comfortable finish"
+      "intent": "Provide a clean, sparse wind-down to conclude the short track gracefully."
     }
   ],
   "previews": {
-    "click": "/Users/fterry/.foreman/worktrees/FRM-1041/build/analysis/overdrive_pulse.preview.ogg"
+    "click": "/Users/fterry/.foreman/worktrees/FRM-1041/build/analysis/overdrive_pulse.casual.preview.ogg"
   },
   "map_path": "public/maps/overdrive_pulse.casual.beatmap.json"
 }

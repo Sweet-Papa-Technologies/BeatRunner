@@ -1,53 +1,54 @@
 {
   "track_id": "groove",
   "difficulty": "casual",
-  "attempts": 1,
+  "attempts": 2,
   "metrics": {
     "difficulty": "casual",
-    "event_count": 25,
-    "onset_events": 25,
+    "event_count": 20,
+    "onset_events": 20,
     "grid_events": 0,
     "onset_alignment": 1.0,
     "lane_share": {
-      "GAP": 0.36,
-      "BAR": 0.32,
-      "NOTE": 0.32
+      "GAP": 0.3,
+      "BAR": 0.4,
+      "NOTE": 0.3
     },
-    "hold_share": 0.0,
-    "sustain_available": 7,
-    "peak_nps_4s": 1.25,
+    "hold_share": 0.15,
+    "sustain_available": 12,
+    "peak_nps_4s": 1.0,
     "peak_nps_window_s": [
-      6.1,
-      10.1
+      5.58,
+      9.58
     ],
-    "repaired": 0,
-    "repaired_fraction": 0.0,
+    "repaired": 3,
+    "repaired_fraction": 0.1304,
     "dropped": {
-      "window": 0,
+      "window": 3,
       "grid": 0,
       "snap": 0
     },
     "per_bar_counts": [
       0,
-      2,
+      1,
       3,
+      1,
       3,
+      1,
       3,
+      1,
       3,
-      2,
-      2,
-      2,
-      2,
-      2,
-      1
+      1,
+      3,
+      0
     ],
     "density_energy": {
-      "spearman": 0.0381,
-      "peak_in_top_section": false,
+      "spearman": 0.7669,
+      "peak_in_top_section": true,
       "breathes": false
     },
-    "usable_sustains": 0,
-    "flat_track_exempt": true,
+    "usable_sustains": 3,
+    "flat_track_exempt": false,
+    "section_structured": false,
     "gates": {
       "onset_alignment": true,
       "lane_balance": true,
@@ -60,44 +61,33 @@
     }
   },
   "critic": {
-    "score": 5.2,
-    "verdict": "Technically synchronized but highly repetitive, relying on a lazy cyclic lane pattern and awkward rhythmic gaps.",
-    "issues": [
-      {
-        "where": "bar 2 / 7.47s",
-        "problem": "Skipping the strong third beat of the measure (e.g., at 7.47s, 10.19s, and 12.92s) while keeping beats 1, 2, and 4 feels empty and rhythmically awkward for a synthwave track.",
-        "severity": "medium"
-      },
-      {
-        "where": "bar 2-12 / 6.1s to 31.3s",
-        "problem": "The lane placement follows a rigid, repeating 'BAR -> GAP -> NOTE' (Center -> Left -> Right) cycle throughout the entire chart, ignoring melodic shape and drum positioning.",
-        "severity": "medium"
-      },
-      {
-        "where": "entire chart",
-        "problem": "There are zero sustain holds mapped despite the track's prominent, long synth pads, making the gameplay feel too one-dimensional.",
-        "severity": "low"
-      }
-    ],
-    "human_review": true
+    "score": 10,
+    "verdict": "An exceptionally well-structured and fluid casual chart that perfectly maps the synthwave groove with flawless timing.",
+    "issues": []
   },
-  "repairs": [],
-  "design_notes": "S0 (Intro): Simple 2-beat intervals introduce players to the three lanes sequentially starting with a center kick. S1 (Drop): Density increases with a flowing alternating lane pattern using 1-beat and 2-beat intervals to match the rising energy. S2 (Outro): Rhythms settle back down to steady 2-beat intervals, providing a breathing, cyclic outro that feels smooth and satisfying to finish on.",
+  "repairs": [
+    {
+      "reason": "outside_playable_window",
+      "ref": "grid:1.0",
+      "beat": 1.0
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "grid:3.0",
+      "beat": 3.0
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "grid:46.0",
+      "beat": 46.0
+    }
+  ],
+  "design_notes": "The chart matches the synthwave pacing with high precision, mapping the density directly to the track's energy levels. In high-energy bars, a rhythmic sequence of 3 taps is featured, alternating naturally across the three lanes. In the lower-energy breaks, the density drops to a single tap or hold to allow the player to breathe. Sustained synth-leads are caught with comfortable, two-beat holds that keep other lanes clear to preserve the casual flow.",
   "design_sections": [
     {
       "name": "S0",
       "start_bar": 0,
-      "intent": "Introduce basic lane positions at a very relaxed pace."
-    },
-    {
-      "name": "S1",
-      "start_bar": 2,
-      "intent": "Increase density with rhythmic flow and clean, alternating movements."
-    },
-    {
-      "name": "S2",
-      "start_bar": 6,
-      "intent": "Cool down with steady, spaced-out taps to let the chart breathe."
+      "intent": "Follow the fluctuating energy peaks and valleys with matching step densities, utilizing clean lane switches and spacious holds on sustained leads."
     }
   ],
   "previews": {

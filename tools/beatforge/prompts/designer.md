@@ -11,14 +11,44 @@ position, a strength, a low/mid/high band character, and sustain info), the
 sections, and a per-bar energy curve.
 
 YOUR JOB: design a **{difficulty}** chart as a single JSON object. Chart the
-MUSIC, not a metronome:
-  * kicks (low-band onsets) bias the center BAR lane;
-  * snares/claps (mid-band) alternate the outer GAP/NOTE lanes;
-  * melodic runs map pitch contour to lane movement (rising = left→right);
-  * sustained notes (sustain=true onsets, ids starting `s`) become HOLDS;
+MUSIC, not a metronome. LANE ASSIGNMENT IS DRIVEN BY EACH ONSET'S BAND CHARACTER
+(the `bands` low/mid/high in the analysis), never by a fixed rotation:
+  * low-band dominant (kick)      -> BAR (center);
+  * mid-band dominant (snare/clap) -> alternate the outer lanes GAP / NOTE;
+  * high-band dominant (hat/lead)  -> follow the melodic contour: as the lead
+    rises in pitch move left→right (GAP→BAR→NOTE), as it falls move right→left;
+  * sustained notes (sustain=true onsets, ids starting `s`) become HOLDS — and
+    ONLY those; never put a hold where you don't actually hear a sustained note;
   * section transitions get a telegraphed accent (a hold or a distinctive
-    3-note sweep). Symmetry and flow matter more than novelty.
+    3-note sweep).
   * density must RISE into high-energy sections and BREATHE in the breaks.
+
+AVOID THESE FAILURES (they are the #1 and #2 reasons charts get rejected by the
+music critic — do not commit them):
+  1. NO MECHANICAL LANE ROTATION. A repeating fixed sequence like
+     center→left→right→center→left→right ("the stair") that ignores what the
+     drums and melody are actually doing is an automatic fail. Every lane choice
+     must be justified by that onset's band/pitch, not by position in a loop.
+  2. NO RELENTLESS STREAMS. Do not place a note on every onset. Leave rests and
+     rhythmic space; a continuous quarter-note wall with no gaps feels
+     over-mapped and monotonous. Reserve the busiest, most continuous passage for
+     the single highest-energy section, and thin everything else. When the music
+     winds down (outro/break), the notes must wind down with it.
+  3. NO COPY-PASTE PHRASES. Vary the pattern every 2–4 bars; never repeat the same
+     motif more than twice before changing it. Mirror and answer phrases instead
+     of duplicating them.
+Symmetry and flow matter more than novelty, but monotony is worse than either.
+
+DENSITY & PACING (a chart that is too EMPTY is as bad as one too dense):
+  * The NPS budget is a CEILING, not a target. Fill the chart so it feels like
+    the song. On casual, still place a note on most of the strong beats — roughly
+    one note every 1–2 beats during active sections; do NOT leave 4–8 beat holes
+    that make the track feel dead. "Easy" means forgiving spacing, not emptiness.
+  * Do NOT front-load intensity: the INTRO should be the SPARSEST part. Ramp up
+    into the build, hit peak density on the DROP (the highest-energy section),
+    then ease off through the break/outro. Match the per-bar energy curve.
+  * When you use a hold, keep the held lane clear for the hold's whole duration —
+    never place another note in the SAME lane while it is being held.
 
 HARD RULES (violations are rejected, not negotiated):
   * Place events ONLY by onset ID (e.g. "p017", "m042", "s003") or by

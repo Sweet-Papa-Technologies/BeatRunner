@@ -1,28 +1,14 @@
 {
   "track_id": "groove",
   "bpm": 88.002,
-  "offset": 0.649,
+  "offset": 0.122,
   "stem_source": "none",
   "beat_backend": "local_dsp",
   "charts": {
-    "casual": {
-      "events": 25,
-      "attempts": 1,
-      "critic_score": 5.2,
-      "gates_pass": true,
-      "map": "public/maps/sweetpapa_groove.casual.beatmap.json"
-    },
-    "standard": {
-      "events": 51,
-      "attempts": 1,
-      "critic_score": 5,
-      "gates_pass": true,
-      "map": "public/maps/sweetpapa_groove.standard.beatmap.json"
-    },
     "overdrive": {
-      "events": 85,
-      "attempts": 1,
-      "critic_score": 5,
+      "events": 50,
+      "attempts": 2,
+      "critic_score": 10,
       "gates_pass": true,
       "map": "public/maps/sweetpapa_groove.overdrive.beatmap.json"
     }

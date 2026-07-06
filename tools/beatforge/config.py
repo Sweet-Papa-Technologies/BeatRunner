@@ -175,6 +175,11 @@ DENSITY_ENERGY_SPEARMAN_MIN = 0.55  # REQ-QA-02
 # (alignment/lane/NPS/hold/repair still fully enforced). Workstream A tracks,
 # which are generated WITH contrast, clear this bar and get the full gate.
 DENSITY_GATE_MIN_CV = 0.12
+# The section-level shape gates (peak-in-drop, breathes) require the track to have
+# ≥2 sections whose energy actually differs by at least this much (0..1 scale). A
+# steady groove with bar-level oscillation but one uniform section does not, so
+# those two gates exempt (the bar-level Spearman gate still applies).
+SECTION_STRUCTURE_MIN_SPREAD = 0.15
 CRITIC_SHIP_THRESHOLD = 7.0         # REQ-QA-04
 DESIGN_MAX_ATTEMPTS = 3             # REQ-QA-03 re-prompt loop cap
 
