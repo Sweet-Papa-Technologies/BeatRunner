@@ -1,0 +1,1 @@
+midnight/casual: designer failed gates after 3 attempts. Last violations: Your chart was rejected: 22% of events repaired away (>15%); chart fails, triggering re-prompt. Fix it and resubmit.

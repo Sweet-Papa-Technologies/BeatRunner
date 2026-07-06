@@ -1,0 +1,59 @@
+{
+  "design_notes": "The chart is carefully designed for a casual experience, maintaining extremely comfortable spacing of at least 1.0 beat between all notes. In S0, the patterns are sparse and breathe naturally, mirroring the slow-building intro. S1 marks the drop with a rise in density, featuring a structured hold note on the sustain candidate to highlight the peak energy. S2 winds down into a relaxed outro.",
+  "sections": [
+    {
+      "name": "S0",
+      "start_bar": 0,
+      "intent": "intro"
+    },
+    {
+      "name": "S1",
+      "start_bar": 15,
+      "intent": "drop"
+    },
+    {
+      "name": "S2",
+      "start_bar": 16,
+      "intent": "outro"
+    }
+  ],
+  "events": [
+    {
+      "ref": "p001",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p025",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m049",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p073",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m097",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p121",
+      "lane": "GAP"
+    },
+    {
+      "ref": "s006",
+      "lane": "NOTE",
+      "hold_beats": 2
+    },
+    {
+      "ref": "m129",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m133",
+      "lane": "GAP"
+    }
+  ]
+}

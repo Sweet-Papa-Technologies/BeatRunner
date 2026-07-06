@@ -1,0 +1,48 @@
+{
+  "track": "midnight_run.ogg",
+  "bpm": 127.987,
+  "offset": 0.349,
+  "events": [
+    {
+      "beat": 4.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 12.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 20.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 36.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 52.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 60.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 61.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 62.0,
+      "type": "BAR",
+      "dur": 2.0
+    },
+    {
+      "beat": 64.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 66.0,
+      "type": "GAP"
+    }
+  ]
+}

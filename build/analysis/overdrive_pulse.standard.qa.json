@@ -1,0 +1,146 @@
+{
+  "track_id": "overdrive",
+  "difficulty": "standard",
+  "attempts": 1,
+  "metrics": {
+    "difficulty": "standard",
+    "event_count": 83,
+    "onset_events": 83,
+    "grid_events": 0,
+    "onset_alignment": 1.0,
+    "lane_share": {
+      "GAP": 0.3012,
+      "BAR": 0.3735,
+      "NOTE": 0.3253
+    },
+    "hold_share": 0.0,
+    "sustain_available": 0,
+    "peak_nps_4s": 3.25,
+    "peak_nps_window_s": [
+      13.18,
+      17.18
+    ],
+    "repaired": 9,
+    "repaired_fraction": 0.0978,
+    "dropped": {
+      "window": 9,
+      "grid": 0,
+      "snap": 0
+    },
+    "per_bar_counts": [
+      0,
+      4,
+      5,
+      5,
+      5,
+      5,
+      5,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      7,
+      5,
+      0
+    ],
+    "density_energy": {
+      "spearman": -0.052,
+      "peak_in_top_section": false,
+      "breathes": false
+    },
+    "flat_track_exempt": true,
+    "gates": {
+      "onset_alignment": true,
+      "lane_balance": true,
+      "hold_share": true,
+      "nps": true,
+      "repaired": true,
+      "density_spearman": true,
+      "density_peak": true,
+      "density_breathes": true
+    }
+  },
+  "critic": {
+    "score": 9,
+    "verdict": "An exceptionally clean and rhythmic chart with outstanding physical flow and perfect audio sync, slightly held back by a complete lack of hold notes.",
+    "issues": [
+      {
+        "where": "entire chart",
+        "problem": "The chart contains zero hold notes. Synthwave tracks are defined by sustained chords and soaring synth leads, which are prime candidates for the game's press-and-hold sustain mechanics.",
+        "severity": "medium"
+      }
+    ]
+  },
+  "repairs": [
+    {
+      "reason": "outside_playable_window",
+      "ref": "p001",
+      "beat": 0.0
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "p004",
+      "beat": 1.0
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "p007",
+      "beat": 2.0
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "p010",
+      "beat": 3.0
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "p188",
+      "beat": 62.5
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "p190",
+      "beat": 63.0
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "p191",
+      "beat": 63.5
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "p193",
+      "beat": 64.0
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "p194",
+      "beat": 64.5
+    }
+  ],
+  "design_notes": "S0 (Intro): Starts with a clean kick-on-downbeat backbeat pattern on the center and outer lanes to let players get into the rhythm. Gradually introduces syncopated offbeats every two bars, increasing the interest without overloading the player. Ends with a telegraphed 3-note sweep from left to right leading into the drop.\nS1 (Drop): The drop hits with a structured, high-energy 4-beat cycle alternating BAR, GAP, and NOTE, paused by a syncopated gap to keep the flow extremely danceable and avoid fatigue. The second half of the drop mirrors this pattern to keep players engaged. Ends with another prominent 3-note sweep leading into the climax.\nS2 (Outro/Climax): The highest energy section features a continuous, rapid 0.5-beat alternating stream of notes across all three lanes, providing a thrilling climax before ending on a final, satisfying center BAR kick.",
+  "design_sections": [
+    {
+      "name": "S0",
+      "start_bar": 0,
+      "intent": "intro"
+    },
+    {
+      "name": "S1",
+      "start_bar": 7,
+      "intent": "drop"
+    },
+    {
+      "name": "S2",
+      "start_bar": 15,
+      "intent": "outro"
+    }
+  ],
+  "previews": {
+    "click": "/Users/fterry/.foreman/worktrees/FRM-1041/build/analysis/overdrive_pulse.preview.ogg"
+  },
+  "map_path": "public/maps/overdrive_pulse.standard.beatmap.json"
+}

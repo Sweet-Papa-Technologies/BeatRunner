@@ -1,0 +1,124 @@
+{
+  "track_id": "neon",
+  "difficulty": "overdrive",
+  "attempts": 1,
+  "metrics": {
+    "difficulty": "overdrive",
+    "event_count": 91,
+    "onset_events": 91,
+    "grid_events": 0,
+    "onset_alignment": 1.0,
+    "lane_share": {
+      "GAP": 0.3297,
+      "BAR": 0.3297,
+      "NOTE": 0.3407
+    },
+    "hold_share": 0.0659,
+    "sustain_available": 25,
+    "peak_nps_4s": 4.0,
+    "peak_nps_window_s": [
+      3.58,
+      7.58
+    ],
+    "repaired": 0,
+    "repaired_fraction": 0.0,
+    "dropped": {
+      "window": 0,
+      "grid": 0,
+      "snap": 0
+    },
+    "per_bar_counts": [
+      0,
+      4,
+      8,
+      5,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      7,
+      4,
+      4,
+      4,
+      5,
+      4,
+      4,
+      6,
+      0
+    ],
+    "density_energy": {
+      "spearman": 0.3149,
+      "peak_in_top_section": false,
+      "breathes": true
+    },
+    "usable_sustains": 25,
+    "flat_track_exempt": true,
+    "gates": {
+      "onset_alignment": true,
+      "lane_balance": true,
+      "hold_share": true,
+      "nps": true,
+      "repaired": true,
+      "density_spearman": true,
+      "density_peak": true,
+      "density_breathes": true
+    }
+  },
+  "critic": {
+    "score": 6,
+    "verdict": "Perfectly timed but lacks the complexity and lane variety required for an Overdrive chart, relying on highly repetitive 3-lane sweeps.",
+    "issues": [
+      {
+        "where": "10.5s - 16.2s",
+        "problem": "Highly repetitive GAP -> NOTE -> BAR pattern repeats 7 times consecutively, causing the segment to feel very monotonous.",
+        "severity": "medium"
+      },
+      {
+        "where": "19.6s - 29.6s",
+        "problem": "A nearly unbroken 24-beat quarter-note L-C-R sweep is used. This is far too simple and physically repetitive for an Overdrive difficulty.",
+        "severity": "high"
+      },
+      {
+        "where": "bar 18 / 31.2s",
+        "problem": "The chart ends abruptly at 31.2s, leaving the final outro section (bars 18-19) completely empty, which feels anticlimactic.",
+        "severity": "low"
+      }
+    ],
+    "human_review": true
+  },
+  "repairs": [],
+  "design_notes": "S0: Slowly introduces the synth textures with steady, spaced-out taps alternating between the outer GAP and NOTE lanes, anchored by a central hold. S1: Marking the drop's arrival, the speed increases to a dense sequence of 8th notes weaving left-to-right to match the rising melodic line. S2: Maintains the peak energy of the drop by alternating lanes on 8th notes, throwing in rhythmic holds that challenge coordination with single off-lane taps. S3: The track enters a calmer phase, prompting a spacious layout of 4-on-the-floor kicks on the center BAR lane and occasional side accents to let the player breathe. S4: A brief final outro that tapers off quickly, concluding the chart with a satisfying single-note resolution.",
+  "design_sections": [
+    {
+      "name": "S0",
+      "start_bar": 0,
+      "intent": "Intro with a slow build-up, introducing the BAR lane hold and comfortable alternating taps on the outer lanes."
+    },
+    {
+      "name": "S1",
+      "start_bar": 2,
+      "intent": "The drop starts with a high-intensity stream of alternating notes across all three lanes, building momentum."
+    },
+    {
+      "name": "S2",
+      "start_bar": 3,
+      "intent": "Main body of the drop, keeping high energy with 0.5 beat intervals, incorporating rhythmic holds and playful taps during holds."
+    },
+    {
+      "name": "S3",
+      "start_bar": 11,
+      "intent": "Break section with a lower energy profile, allowing the player to breathe with sparse 1.0 beat spacing before a final hold sequence."
+    },
+    {
+      "name": "S4",
+      "start_bar": 18,
+      "intent": "The outro winds down cleanly, culminating in a single final note on the NOTE lane."
+    }
+  ],
+  "previews": {
+    "click": "/Users/fterry/.foreman/worktrees/FRM-1041/build/analysis/neon_nights.overdrive.preview.ogg"
+  },
+  "map_path": "public/maps/neon_nights.overdrive.beatmap.json"
+}

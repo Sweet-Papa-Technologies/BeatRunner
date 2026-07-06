@@ -1,0 +1,100 @@
+{
+  "design_notes": "S0 and S1 introduce the casual player with basic alternating taps and an early, comfortable GAP-lane hold to establish the rhythm. S2 establishes a highly satisfying and consistent flow utilizing 4-beat spacing to prevent visual clutter while ensuring no massive sparse gaps exist, highlighted by a strong physical downbeat resolution on beat 12. S3 and S4 maintain the drive of the second drop with a prominent downbeat tap at beat 44, using alternating outer lane movements to keep up the momentum before ending on a final, natural resolution.",
+  "sections": [
+    {
+      "name": "Intro",
+      "start_bar": 0,
+      "intent": "Gentle rhythm introduction with a simple sustain."
+    },
+    {
+      "name": "First Drop",
+      "start_bar": 3,
+      "intent": "Driving, comfortable lane-alternating patterns with clear downbeat resolutions."
+    },
+    {
+      "name": "Second Drop",
+      "start_bar": 11,
+      "intent": "Strong drop transition entry followed by smooth, continuous movement into the outro."
+    }
+  ],
+  "events": [
+    {
+      "ref": "p008",
+      "lane": "BAR"
+    },
+    {
+      "ref": "m012",
+      "lane": "GAP",
+      "hold_beats": 2
+    },
+    {
+      "ref": "p024",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p033",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p041",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m044",
+      "lane": "NOTE",
+      "hold_beats": 2
+    },
+    {
+      "ref": "p049",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p057",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p066",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p074",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p082",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p090",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p098",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p106",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p114",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p122",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p130",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p138",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p144",
+      "lane": "NOTE"
+    }
+  ]
+}

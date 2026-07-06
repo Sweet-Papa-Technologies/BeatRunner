@@ -85,8 +85,43 @@ Requires a GCP project with Vertex AI enabled and `gcloud` auth:
 ```bash
 VERTEX_PROJECT=<your-project> python3 tools/generate_overdrive_assets.py all  # Imagen sky/ridge/city + Lyria tracks
 VERTEX_PROJECT=<your-project> python3 tools/generate_hero_anim.py             # Gemini mascot frames
-python3 tools/make_overdrive_maps.py                                         # author lane charts (with holds)
 ```
 
-The original *In the Pocket* generators (`generate_assets.py`, `make_beatmaps.py`)
-are kept for provenance.
+## BEATFORGE — music-aware charts (canonical pipeline)
+
+Charts are no longer hand-authored on a hardcoded BPM. **beatforge** measures each
+track's real tempo/grid/onsets with DSP, then **Gemini 3.5 Flash *listens* to the
+audio** and designs three difficulties by *selecting DSP-provided onset candidates
+by ID* — it never invents a timestamp. Deterministic gates referee every chart, and
+a separate fresh-context Gemini critic judges musicality (Author ≠ Judge). Spec:
+[`IMPROVE.MD`](IMPROVE.MD).
+
+```bash
+# Prereqs: VERTEX_PROJECT + gcloud auth (or ~/.assetforge/sa-key.json), ffmpeg,
+# and local python deps numpy/scipy/soundfile (+ matplotlib for PNG previews).
+# Optional higher-fidelity DSP on a GPU: the Colab CLI —
+#   uv tool install git+https://github.com/googlecolab/google-colab-cli
+#   colab new    # once, to flush the browser-auth loop
+PYTHONPATH=tools python3 -m beatforge all            # analyze + chart 4 tracks × 3 difficulties
+PYTHONPATH=tools python3 -m beatforge analyze        # Workstream B only (DSP truth, no LLM)
+PYTHONPATH=tools python3 -m beatforge chart --track neon --difficulty standard
+PYTHONPATH=tools python3 -m beatforge validate       # re-parse emitted maps (schema parity)
+PYTHONPATH=tools python3 -m beatforge all --with-gen  # also run the Lyria×Gemini A&R audio loop
+```
+
+**Compute split** — `[V]` Vertex (Gemini 3.5 Flash designer/critic + Lyria, reached
+via the `global`/`v1beta1` endpoint), `[C]` Colab GPU (optional: madmom + Demucs
+stems, `--backend colab`), `[L]` local CPU (default: numpy/scipy DSP, HPSS-only,
+stamped `stem_source: none`). Backend is abstracted in `tools/beatforge/compute.py`;
+Colab failures fail loudly unless `--allow-local-fallback`.
+
+**How charts are made / auditing them** — every run writes to `build/analysis/`:
+`<track>.analysis.json` (measured bpm/offset/onsets/sections), per-difficulty
+`.design.json` (the designer's raw output + `design_notes` explaining each section),
+`.critic.json` (the independent musicality review), `.qa.json` (objective metrics +
+gate results), and `.preview.png` / `.preview.ogg` (a timeline image and a
+click-track — *listen to the click-track to verify notes land on the music*).
+Emitted maps land in `public/maps/<track>.<difficulty>.beatmap.json`.
+
+The original generators (`make_overdrive_maps.py`, `make_beatmaps.py`,
+`generate_assets.py`) are kept for provenance; beatforge is the canonical path.

@@ -1,0 +1,107 @@
+{
+  "track_id": "groove",
+  "difficulty": "overdrive",
+  "attempts": 1,
+  "metrics": {
+    "difficulty": "overdrive",
+    "event_count": 85,
+    "onset_events": 85,
+    "grid_events": 0,
+    "onset_alignment": 1.0,
+    "lane_share": {
+      "GAP": 0.3176,
+      "BAR": 0.3882,
+      "NOTE": 0.2941
+    },
+    "hold_share": 0.0,
+    "sustain_available": 7,
+    "peak_nps_4s": 3.25,
+    "peak_nps_window_s": [
+      3.38,
+      7.38
+    ],
+    "repaired": 0,
+    "repaired_fraction": 0.0,
+    "dropped": {
+      "window": 0,
+      "grid": 0,
+      "snap": 0
+    },
+    "per_bar_counts": [
+      0,
+      9,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      9,
+      8,
+      3
+    ],
+    "density_energy": {
+      "spearman": 0.2836,
+      "peak_in_top_section": true,
+      "breathes": false
+    },
+    "usable_sustains": 0,
+    "flat_track_exempt": true,
+    "gates": {
+      "onset_alignment": true,
+      "lane_balance": true,
+      "hold_share": true,
+      "nps": true,
+      "repaired": true,
+      "density_spearman": true,
+      "density_peak": true,
+      "density_breathes": true
+    }
+  },
+  "critic": {
+    "score": 5,
+    "verdict": "Playable and cleanly swept, but far too simple and uniform for an Overdrive chart, completely lacking holds.",
+    "issues": [
+      {
+        "where": "entire chart",
+        "problem": "The density is extremely low for the highest difficulty (Overdrive), consisting of basic single-tap streams with no multi-note chords or complex rhythms.",
+        "severity": "high"
+      },
+      {
+        "where": "entire chart",
+        "problem": "There are zero sustain/hold notes mapped. In synthwave, mapping long synth pads and sweeping basslines as holds is essential for gameplay feel.",
+        "severity": "medium"
+      },
+      {
+        "where": "bar 6 / 16.3s to 31.3s",
+        "problem": "The outro section fails to contrast with the drop. It maintains the exact same note density and zig-zag lane-movement patterns, leading to repetitive gameplay.",
+        "severity": "medium"
+      }
+    ],
+    "human_review": true
+  },
+  "repairs": [],
+  "design_notes": "The intro (S0) sets a solid groove, introducing the players to the core mechanic: kicks consistently bias the BAR lane, while snares alternate between GAP and NOTE. In the drop (S1), the energy spikes with a dense continuous stream of eighth and sixteenth notes that capture the track's high-speed drive, ensuring a true Overdrive experience. The outro (S2) maintains high density but shifts to a syncopated synth melody, keeping the intensity high while providing a satisfying physical flow to the finish.",
+  "design_sections": [
+    {
+      "name": "S0",
+      "start_bar": 0,
+      "intent": "intro groove"
+    },
+    {
+      "name": "S1",
+      "start_bar": 2,
+      "intent": "drop energy"
+    },
+    {
+      "name": "S2",
+      "start_bar": 6,
+      "intent": "outro drive"
+    }
+  ],
+  "previews": {
+    "click": "/Users/fterry/.foreman/worktrees/FRM-1041/build/analysis/sweetpapa_groove.overdrive.preview.ogg"
+  },
+  "map_path": "public/maps/sweetpapa_groove.overdrive.beatmap.json"
+}

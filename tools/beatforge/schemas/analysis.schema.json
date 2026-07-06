@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "beatforge analysis.json (Workstream B ground truth)",
+  "type": "object",
+  "required": ["bpm", "offset", "duration_s", "meter", "beats", "onsets",
+               "sections", "energy_curve", "beat_backend", "stem_source"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "track_id": {"type": "string"},
+    "track_file": {"type": "string"},
+    "duration_s": {"type": "number", "exclusiveMinimum": 0},
+    "sample_rate": {"type": "integer"},
+    "bpm": {"type": "number", "exclusiveMinimum": 0},
+    "offset": {"type": "number", "minimum": 0},
+    "meter": {"type": "integer", "minimum": 1},
+    "beat_backend": {"type": "string", "enum": ["madmom_dbn", "librosa", "local_dsp"]},
+    "stem_source": {"type": "string", "enum": ["stem_demucs", "none"]},
+    "cache_key": {"type": "string"},
+    "tempo_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["bpm", "score"],
+        "properties": {
+          "bpm": {"type": "number"},
+          "score": {"type": "number"},
+          "weighted": {"type": "number"},
+          "phase_s": {"type": "number"},
+          "chosen": {"type": "boolean"}
+        }
+      }
+    },
+    "beats": {"type": "array", "items": {"type": "number"}},
+    "downbeat_indices": {"type": "array", "items": {"type": "integer"}},
+    "sustain_available": {"type": "integer", "minimum": 0},
+    "onsets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "time", "nearest_beat", "snap_error_ms", "strength",
+                     "bands", "source", "sustain"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[pms]\\d+$"},
+          "time": {"type": "number", "minimum": 0},
+          "nearest_beat": {"type": "number"},
+          "snap_error_ms": {"type": "number"},
+          "strength": {"type": "number", "minimum": 0},
+          "bands": {
+            "type": "object",
+            "required": ["low", "mid", "high"],
+            "properties": {
+              "low": {"type": "number"},
+              "mid": {"type": "number"},
+              "high": {"type": "number"}
+            }
+          },
+          "source": {"type": "string"},
+          "sustain": {"type": "boolean"},
+          "sustain_beats": {"type": "number"}
+        }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "start_bar", "end_bar", "energy_pct", "role_guess"],
+        "properties": {
+          "name": {"type": "string"},
+          "start_bar": {"type": "integer", "minimum": 0},
+          "end_bar": {"type": "integer", "minimum": 0},
+          "energy_pct": {"type": "number"},
+          "role_guess": {"type": "string"},
+          "heuristic": {"type": "boolean"}
+        }
+      }
+    },
+    "energy_curve": {"type": "array", "items": {"type": "number"}}
+  }
+}

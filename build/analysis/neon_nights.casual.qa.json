@@ -1,0 +1,108 @@
+{
+  "track_id": "neon",
+  "difficulty": "casual",
+  "attempts": 2,
+  "metrics": {
+    "difficulty": "casual",
+    "event_count": 22,
+    "onset_events": 22,
+    "grid_events": 0,
+    "onset_alignment": 1.0,
+    "lane_share": {
+      "GAP": 0.3636,
+      "BAR": 0.3182,
+      "NOTE": 0.3182
+    },
+    "hold_share": 0.1364,
+    "sustain_available": 25,
+    "peak_nps_4s": 1.5,
+    "peak_nps_window_s": [
+      1.84,
+      5.84
+    ],
+    "repaired": 0,
+    "repaired_fraction": 0.0,
+    "dropped": {
+      "window": 0,
+      "grid": 0,
+      "snap": 0
+    },
+    "per_bar_counts": [
+      0,
+      3,
+      3,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0
+    ],
+    "density_energy": {
+      "spearman": 0.3266,
+      "peak_in_top_section": true,
+      "breathes": true
+    },
+    "usable_sustains": 23,
+    "flat_track_exempt": true,
+    "gates": {
+      "onset_alignment": true,
+      "lane_balance": true,
+      "hold_share": true,
+      "nps": true,
+      "repaired": true,
+      "density_spearman": true,
+      "density_peak": true,
+      "density_breathes": true
+    }
+  },
+  "critic": {
+    "score": 9,
+    "verdict": "An excellent, rhythmically pristine casual chart that perfectly captures the synthwave grid and track structure.",
+    "issues": [
+      {
+        "where": "bar 18 / 18.8s - 29.6s",
+        "problem": "The outro spacing drops to 6-beat intervals, which feels slightly too sparse and disengaging, even for a casual difficulty.",
+        "severity": "low"
+      }
+    ]
+  },
+  "repairs": [],
+  "design_notes": "S0 introduces the synth groove with a clean introductory hold. S1 steps into the drop with an active 1-beat cadence to match the onset intensity. S2 maintains a steady, casual 2-beat alternating rhythm across all lanes to sustain momentum. S3 transitions into a spacious break, letting the pattern breathe deeply with a much lower density.",
+  "design_sections": [
+    {
+      "name": "Intro",
+      "start_bar": 0,
+      "intent": "Introduce the beat cleanly with a simple flow."
+    },
+    {
+      "name": "Drop Start",
+      "start_bar": 2,
+      "intent": "Build excitement with a steady alternating lane sweep."
+    },
+    {
+      "name": "Main Drop",
+      "start_bar": 3,
+      "intent": "Sustain energy using casual 2-beat spacing."
+    },
+    {
+      "name": "Break/Outro",
+      "start_bar": 11,
+      "intent": "Let the chart breathe with long-spaced notes."
+    }
+  ],
+  "previews": {
+    "click": "/Users/fterry/.foreman/worktrees/FRM-1041/build/analysis/neon_nights.casual.preview.ogg"
+  },
+  "map_path": "public/maps/neon_nights.casual.beatmap.json"
+}

@@ -1,0 +1,132 @@
+{
+  "track_id": "overdrive",
+  "difficulty": "casual",
+  "attempts": 2,
+  "metrics": {
+    "difficulty": "casual",
+    "event_count": 46,
+    "onset_events": 46,
+    "grid_events": 0,
+    "onset_alignment": 1.0,
+    "lane_share": {
+      "GAP": 0.3043,
+      "BAR": 0.413,
+      "NOTE": 0.2826
+    },
+    "hold_share": 0.0,
+    "sustain_available": 0,
+    "peak_nps_4s": 2.0,
+    "peak_nps_window_s": [
+      14.18,
+      18.18
+    ],
+    "repaired": 3,
+    "repaired_fraction": 0.0612,
+    "dropped": {
+      "window": 3,
+      "grid": 0,
+      "snap": 0
+    },
+    "per_bar_counts": [
+      0,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      2,
+      0
+    ],
+    "density_energy": {
+      "spearman": -0.0364,
+      "peak_in_top_section": false,
+      "breathes": false
+    },
+    "flat_track_exempt": true,
+    "gates": {
+      "onset_alignment": true,
+      "lane_balance": true,
+      "hold_share": true,
+      "nps": true,
+      "repaired": true,
+      "density_spearman": true,
+      "density_peak": true,
+      "density_breathes": true
+    }
+  },
+  "critic": {
+    "score": 4,
+    "verdict": "A highly repetitive, mechanically copy-pasted chart that completely lacks hold notes and ignores musical phrasing.",
+    "issues": [
+      {
+        "where": "bar 7-15 / 14.18s - 30.19s",
+        "problem": "The entire drop is mapped as a monotonous, repeating 3-lane stair pattern (NOTE -> BAR -> GAP) on every single quarter beat, completely ignoring the melodic contour and snare backbeats.",
+        "severity": "high"
+      },
+      {
+        "where": "entire chart",
+        "problem": "The chart contains zero hold notes, missing clear opportunities to map sustained synth pads in both the intro and outro.",
+        "severity": "medium"
+      },
+      {
+        "where": "bar 0-7 / 2.17s - 14.18s",
+        "problem": "The intro relies on a rigid, repeating half-note pattern (BAR -> NOTE -> BAR -> GAP) that feels too mechanical and ignores key synth accents.",
+        "severity": "medium"
+      },
+      {
+        "where": "bar 15-17 / 30.19s - 34.00s",
+        "problem": "The outro cuts off abruptly at 31.19s with a single note, leaving the remaining bars of the outro completely empty.",
+        "severity": "low"
+      }
+    ],
+    "human_review": true
+  },
+  "repairs": [
+    {
+      "reason": "outside_playable_window",
+      "ref": "p001",
+      "beat": 0.0
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "p007",
+      "beat": 2.0
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "p193",
+      "beat": 64.0
+    }
+  ],
+  "design_notes": "S0 (Intro) introduces the rhythm gently with moderate energy, using a comfortable 2-beat spacing that maps kicks to the center BAR lane and snares to alternating outer lanes. S1 (Drop) features higher musical density, where we double the tap frequency to a clean 1-beat spacing, utilizing fluid left-to-right sweeps across lanes to capture the energetic synth leads. S2 (Outro) provides a satisfying cooldown, returning to the relaxed 2-beat spacing to let the chart breathe as the highway finishes.",
+  "design_sections": [
+    {
+      "name": "Intro",
+      "start_bar": 0,
+      "intent": "Establish rhythmic pulse with comfortable spacing"
+    },
+    {
+      "name": "Drop",
+      "start_bar": 7,
+      "intent": "Increase density and utilize left-right motion for the synth lead"
+    },
+    {
+      "name": "Outro",
+      "start_bar": 15,
+      "intent": "Wind down to a comfortable finish"
+    }
+  ],
+  "previews": {
+    "click": "/Users/fterry/.foreman/worktrees/FRM-1041/build/analysis/overdrive_pulse.preview.ogg"
+  },
+  "map_path": "public/maps/overdrive_pulse.casual.beatmap.json"
+}

@@ -1,0 +1,178 @@
+{
+  "design_notes": "S0 introduces spacious, atmospheric pad sounds using long, 4-beat sustained holds at key phrases (beats 0, 8, 16) with light, single taps in alternating lanes. This gets players flowing without visual clutter. S1 drives the drop with kick-centric center hits and alternating outer lane snares. To make the melody feel alive, runs rise (GAP -> BAR -> NOTE) and fall (NOTE -> BAR -> GAP) cleanly on integer beats, perfectly respecting the casual subdivision. S2 bridges into the outro with a 4-beat hold representing the fading synth pad decay, resolving on a final tap at beat 64 to resolve the abrupt cut-off issue.",
+  "sections": [
+    {
+      "name": "S0",
+      "start_bar": 0,
+      "intent": "Intro synth pads and light build-up"
+    },
+    {
+      "name": "S1",
+      "start_bar": 7,
+      "intent": "Main driving synthwave drop with melodic runs"
+    },
+    {
+      "name": "S2",
+      "start_bar": 15,
+      "intent": "Resolving outro with sustained synth decay"
+    }
+  ],
+  "events": [
+    {
+      "ref": "grid:0.0",
+      "lane": "GAP",
+      "hold_beats": 4
+    },
+    {
+      "ref": "p016",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p019",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "grid:8.0",
+      "lane": "NOTE",
+      "hold_beats": 4
+    },
+    {
+      "ref": "p040",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p043",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:16.0",
+      "lane": "GAP",
+      "hold_beats": 4
+    },
+    {
+      "ref": "p064",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p067",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p073",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p079",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p085",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p088",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p091",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p097",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p100",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p103",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p109",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p112",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p115",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p118",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p124",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p127",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p129",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p133",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p139",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p145",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p148",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p151",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p157",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p160",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p163",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p165",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p171",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p174",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p177",
+      "lane": "GAP"
+    },
+    {
+      "ref": "grid:60.0",
+      "lane": "GAP",
+      "hold_beats": 4
+    },
+    {
+      "ref": "p193",
+      "lane": "NOTE"
+    }
+  ]
+}

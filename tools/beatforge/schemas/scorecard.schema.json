@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "beatforge A&R chartability scorecard (Workstream A, REQ-GEN-02)",
+  "type": "object",
+  "required": ["tempo_stability", "transient_clarity", "structural_contrast",
+               "intro_cleanliness", "mix_punch", "genre_fit", "critique"],
+  "properties": {
+    "tempo_stability": {"type": "number", "minimum": 0, "maximum": 10},
+    "transient_clarity": {"type": "number", "minimum": 0, "maximum": 10},
+    "structural_contrast": {"type": "number", "minimum": 0, "maximum": 10},
+    "intro_cleanliness": {"type": "number", "minimum": 0, "maximum": 10},
+    "mix_punch": {"type": "number", "minimum": 0, "maximum": 10},
+    "genre_fit": {"type": "number", "minimum": 0, "maximum": 10},
+    "critique": {"type": "string"},
+    "prompt_rewrite": {"type": "string"}
+  }
+}

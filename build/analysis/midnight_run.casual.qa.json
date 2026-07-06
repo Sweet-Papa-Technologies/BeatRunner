@@ -1,0 +1,113 @@
+{
+  "track_id": "midnight",
+  "difficulty": "casual",
+  "attempts": 1,
+  "metrics": {
+    "difficulty": "casual",
+    "event_count": 10,
+    "onset_events": 10,
+    "grid_events": 0,
+    "onset_alignment": 1.0,
+    "lane_share": {
+      "GAP": 0.4,
+      "BAR": 0.3,
+      "NOTE": 0.3
+    },
+    "hold_share": 0.1,
+    "sustain_available": 11,
+    "peak_nps_4s": 1.25,
+    "peak_nps_window_s": [
+      28.48,
+      32.48
+    ],
+    "repaired": 0,
+    "repaired_fraction": 0.0,
+    "dropped": {
+      "window": 0,
+      "grid": 0,
+      "snap": 0
+    },
+    "per_bar_counts": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      3,
+      2,
+      0
+    ],
+    "density_energy": {
+      "spearman": 0.439,
+      "peak_in_top_section": false,
+      "breathes": false
+    },
+    "usable_sustains": 9,
+    "flat_track_exempt": true,
+    "gates": {
+      "onset_alignment": true,
+      "lane_balance": true,
+      "hold_share": true,
+      "nps": true,
+      "repaired": true,
+      "density_spearman": true,
+      "density_peak": true,
+      "density_breathes": true
+    }
+  },
+  "critic": {
+    "score": 4,
+    "verdict": "A mechanically timed but severely under-mapped and structurally confusing chart that feels empty and unengaging.",
+    "issues": [
+      {
+        "where": "Intro (0.0s - 28.0s)",
+        "problem": "The density is extremely sparse, leaving gaps of up to 7.5 seconds (16 beats) between notes. Even for a casual chart, this feels inactive and boring.",
+        "severity": "high"
+      },
+      {
+        "where": "Drop (28.4s - 30.3s)",
+        "problem": "The drop section is defined as only 1 bar long, which is structurally bizarre and results in a sudden, brief spike in note density that ends as quickly as it starts.",
+        "severity": "medium"
+      },
+      {
+        "where": "Entire Chart",
+        "problem": "Lane placement follows a rigid, repeating cycle (BAR -> GAP -> NOTE) instead of reflecting the actual synthwave percussion or melody contour.",
+        "severity": "medium"
+      }
+    ],
+    "human_review": true
+  },
+  "repairs": [],
+  "design_notes": "S0 introduces the core rhythm of the synthwave groove with a comfortable, sparse tapping pattern that alternates outer lanes to build initial player familiarity. S1 represents the track's climatic drop where we suddenly increase density to 1-beat intervals, mapping a driving sequence that flows smoothly into a 2-beat hold on the center lane. S2 winds down the experience during the outro, providing a satisfying resolution with alternating taps that let the energy breathe.",
+  "design_sections": [
+    {
+      "name": "S0",
+      "start_bar": 0,
+      "intent": "intro"
+    },
+    {
+      "name": "S1",
+      "start_bar": 15,
+      "intent": "drop"
+    },
+    {
+      "name": "S2",
+      "start_bar": 16,
+      "intent": "outro"
+    }
+  ],
+  "previews": {
+    "click": "/Users/fterry/.foreman/worktrees/FRM-1041/build/analysis/midnight_run.casual.preview.ogg"
+  },
+  "map_path": "public/maps/midnight_run.casual.beatmap.json"
+}

@@ -1,0 +1,154 @@
+{
+  "track_id": "midnight",
+  "difficulty": "standard",
+  "attempts": 2,
+  "metrics": {
+    "difficulty": "standard",
+    "event_count": 70,
+    "onset_events": 70,
+    "grid_events": 0,
+    "onset_alignment": 1.0,
+    "lane_share": {
+      "GAP": 0.3286,
+      "BAR": 0.3286,
+      "NOTE": 0.3429
+    },
+    "hold_share": 0.0571,
+    "sustain_available": 11,
+    "peak_nps_4s": 3.25,
+    "peak_nps_window_s": [
+      26.13,
+      30.13
+    ],
+    "repaired": 8,
+    "repaired_fraction": 0.1026,
+    "dropped": {
+      "window": 7,
+      "grid": 0,
+      "snap": 1
+    },
+    "per_bar_counts": [
+      0,
+      3,
+      4,
+      5,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      6,
+      5,
+      4,
+      4,
+      4,
+      8,
+      3,
+      0
+    ],
+    "density_energy": {
+      "spearman": 0.3712,
+      "peak_in_top_section": false,
+      "breathes": false
+    },
+    "flat_track_exempt": true,
+    "gates": {
+      "onset_alignment": true,
+      "lane_balance": true,
+      "hold_share": true,
+      "nps": true,
+      "repaired": true,
+      "density_spearman": true,
+      "density_peak": true,
+      "density_breathes": true
+    }
+  },
+  "critic": {
+    "score": 4,
+    "verdict": "Technically on-beat, but incredibly lazy and monotonous due to a repeating three-lane 'stair' pattern that ignores the actual musical structure.",
+    "issues": [
+      {
+        "where": "bar 1 to 10 / 2.6s - 19.1s",
+        "problem": "Monotonous repeating 'stair' pattern (Center -> Left -> Right) that completely ignores the actual rhythm, melody, and drum changes in the music.",
+        "severity": "high"
+      },
+      {
+        "where": "bar 11 / 19.8s and 20.7s",
+        "problem": "Arbitrary 1-beat holds placed on GAP/NOTE lanes that do not correspond to any distinct sustained synth notes in the audio.",
+        "severity": "medium"
+      },
+      {
+        "where": "bar 16 to 17 / 28.4s - 30.4s",
+        "problem": "The drop climax simply doubles the speed of the same repetitive stair pattern into 8th notes, offering no engaging layout or musical expression for the player.",
+        "severity": "high"
+      }
+    ],
+    "human_review": true
+  },
+  "repairs": [
+    {
+      "reason": "outside_playable_window",
+      "ref": "m001",
+      "beat": 0.0
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "m003",
+      "beat": 1.0
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "m005",
+      "beat": 2.0
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "m007",
+      "beat": 3.0
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "s000",
+      "beat": 3.5
+    },
+    {
+      "reason": "snap_gt_35ms",
+      "ref": "s005",
+      "beat": 59.5,
+      "snap_ms": 39.4
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "p138",
+      "beat": 67.0
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "m137",
+      "beat": 68.0
+    }
+  ],
+  "design_notes": "The chart starts with a steady 1-beat rhythm in the intro (S0), using brief holds to introduce players to the synth sustains. The drop (S1) ramps up the intensity with a fast, alternating 0.5-beat pattern across all three lanes to capture the peak energy. Finally, the outro (S2) dials the energy back down, allowing players to breathe with a spacious 1-beat sequence. This chart perfectly balances all three lanes (GAP, BAR, NOTE) within the required 22%-45% range.",
+  "design_sections": [
+    {
+      "name": "Intro",
+      "start_bar": 0,
+      "intent": "Introduce basic 1-beat patterns and simple holds."
+    },
+    {
+      "name": "Drop",
+      "start_bar": 15,
+      "intent": "Ramp up density with a fast alternating melody sequence."
+    },
+    {
+      "name": "Outro",
+      "start_bar": 16,
+      "intent": "Let the song breathe with a spacious cool-down."
+    }
+  ],
+  "previews": {
+    "click": "/Users/fterry/.foreman/worktrees/FRM-1041/build/analysis/midnight_run.standard.preview.ogg"
+  },
+  "map_path": "public/maps/midnight_run.standard.beatmap.json"
+}

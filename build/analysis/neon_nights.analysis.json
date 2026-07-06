@@ -1,0 +1,4986 @@
+{
+  "schema_version": "local_dsp_v1",
+  "track_file": "neon_nights.ogg",
+  "duration_s": 32.768,
+  "sample_rate": 22050,
+  "bpm": 137.95,
+  "offset": 0.105,
+  "meter": 4,
+  "beat_backend": "local_dsp",
+  "stem_source": "none",
+  "tempo_candidates": [
+    {
+      "bpm": 45.938,
+      "score": 0.50425,
+      "weighted": 0.15424,
+      "phase_s": 0.52478,
+      "chosen": false
+    },
+    {
+      "bpm": 51.68,
+      "score": 0.16319,
+      "weighted": 0.06557,
+      "phase_s": 0.24381,
+      "chosen": false
+    },
+    {
+      "bpm": 68.906,
+      "score": 1.06816,
+      "weighted": 0.71932,
+      "phase_s": 0.52245,
+      "chosen": false
+    },
+    {
+      "bpm": 91.875,
+      "score": 0.7182,
+      "weighted": 0.65531,
+      "phase_s": 0.52478,
+      "chosen": false
+    },
+    {
+      "bpm": 103.359,
+      "score": 0.3121,
+      "weighted": 0.30329,
+      "phase_s": 0.2322,
+      "chosen": false
+    },
+    {
+      "bpm": 137.812,
+      "score": 1.46865,
+      "weighted": 1.43295,
+      "phase_s": 0.09166,
+      "chosen": true
+    }
+  ],
+  "beats": [
+    0.105,
+    0.5399,
+    0.9749,
+    1.4098,
+    1.8448,
+    2.2797,
+    2.7146,
+    3.1496,
+    3.5845,
+    4.0195,
+    4.4544,
+    4.8893,
+    5.3243,
+    5.7592,
+    6.1942,
+    6.6291,
+    7.064,
+    7.499,
+    7.9339,
+    8.3689,
+    8.8038,
+    9.2387,
+    9.6737,
+    10.1086,
+    10.5436,
+    10.9785,
+    11.4134,
+    11.8484,
+    12.2833,
+    12.7183,
+    13.1532,
+    13.5881,
+    14.0231,
+    14.458,
+    14.893,
+    15.3279,
+    15.7628,
+    16.1978,
+    16.6327,
+    17.0677,
+    17.5026,
+    17.9375,
+    18.3725,
+    18.8074,
+    19.2424,
+    19.6773,
+    20.1122,
+    20.5472,
+    20.9821,
+    21.4171,
+    21.852,
+    22.2869,
+    22.7219,
+    23.1568,
+    23.5918,
+    24.0267,
+    24.4617,
+    24.8966,
+    25.3315,
+    25.7665,
+    26.2014,
+    26.6364,
+    27.0713,
+    27.5062,
+    27.9412,
+    28.3761,
+    28.8111,
+    29.246,
+    29.6809,
+    30.1159,
+    30.5508,
+    30.9858,
+    31.4207,
+    31.8556,
+    32.2906,
+    32.7255
+  ],
+  "downbeat_indices": [
+    3,
+    7,
+    11,
+    15,
+    19,
+    23,
+    27,
+    31,
+    35,
+    39,
+    43,
+    47,
+    51,
+    55,
+    59,
+    63,
+    67,
+    71,
+    75
+  ],
+  "onsets": [
+    {
+      "id": "p000",
+      "time": 0.1094,
+      "nearest_beat": 0.0,
+      "snap_error_ms": 4.4,
+      "strength": 0.5041,
+      "bands": {
+        "low": 0.062,
+        "mid": 0.424,
+        "high": 0.515
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m000",
+      "time": 0.1101,
+      "nearest_beat": 0.0,
+      "snap_error_ms": 5.1,
+      "strength": 0.4563,
+      "bands": {
+        "low": 0.062,
+        "mid": 0.424,
+        "high": 0.515
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m001",
+      "time": 0.3235,
+      "nearest_beat": 0.5,
+      "snap_error_ms": 1.0,
+      "strength": 0.6202,
+      "bands": {
+        "low": 0.254,
+        "mid": 0.39,
+        "high": 0.356
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p001",
+      "time": 0.3241,
+      "nearest_beat": 0.5,
+      "snap_error_ms": 1.6,
+      "strength": 0.6893,
+      "bands": {
+        "low": 0.254,
+        "mid": 0.39,
+        "high": 0.356
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p002",
+      "time": 0.5444,
+      "nearest_beat": 1.0,
+      "snap_error_ms": 4.4,
+      "strength": 0.569,
+      "bands": {
+        "low": 0.157,
+        "mid": 0.275,
+        "high": 0.568
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m002",
+      "time": 0.5447,
+      "nearest_beat": 1.0,
+      "snap_error_ms": 4.7,
+      "strength": 0.5688,
+      "bands": {
+        "low": 0.157,
+        "mid": 0.275,
+        "high": 0.568
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p003",
+      "time": 0.7619,
+      "nearest_beat": 1.5,
+      "snap_error_ms": 4.5,
+      "strength": 0.4183,
+      "bands": {
+        "low": 0.127,
+        "mid": 0.33,
+        "high": 0.542
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m003",
+      "time": 0.7623,
+      "nearest_beat": 1.5,
+      "snap_error_ms": 4.9,
+      "strength": 0.4214,
+      "bands": {
+        "low": 0.127,
+        "mid": 0.33,
+        "high": 0.542
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p004",
+      "time": 0.9794,
+      "nearest_beat": 2.0,
+      "snap_error_ms": 4.5,
+      "strength": 0.4083,
+      "bands": {
+        "low": 0.187,
+        "mid": 0.361,
+        "high": 0.452
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m004",
+      "time": 0.9796,
+      "nearest_beat": 2.0,
+      "snap_error_ms": 4.7,
+      "strength": 0.3881,
+      "bands": {
+        "low": 0.187,
+        "mid": 0.361,
+        "high": 0.452
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m005",
+      "time": 1.1939,
+      "nearest_beat": 2.5,
+      "snap_error_ms": 1.6,
+      "strength": 0.6595,
+      "bands": {
+        "low": 0.226,
+        "mid": 0.45,
+        "high": 0.324
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p005",
+      "time": 1.1951,
+      "nearest_beat": 2.5,
+      "snap_error_ms": 2.7,
+      "strength": 0.7336,
+      "bands": {
+        "low": 0.226,
+        "mid": 0.45,
+        "high": 0.324
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m006",
+      "time": 1.4153,
+      "nearest_beat": 3.0,
+      "snap_error_ms": 5.4,
+      "strength": 0.8555,
+      "bands": {
+        "low": 0.177,
+        "mid": 0.148,
+        "high": 0.675
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p006",
+      "time": 1.4175,
+      "nearest_beat": 3.0,
+      "snap_error_ms": 7.7,
+      "strength": 0.9256,
+      "bands": {
+        "low": 0.177,
+        "mid": 0.148,
+        "high": 0.675
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m007",
+      "time": 1.6343,
+      "nearest_beat": 3.5,
+      "snap_error_ms": 7.0,
+      "strength": 0.3885,
+      "bands": {
+        "low": 0.261,
+        "mid": 0.363,
+        "high": 0.376
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p007",
+      "time": 1.6347,
+      "nearest_beat": 3.5,
+      "snap_error_ms": 7.4,
+      "strength": 0.4681,
+      "bands": {
+        "low": 0.261,
+        "mid": 0.363,
+        "high": 0.376
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m008",
+      "time": 1.8487,
+      "nearest_beat": 4.0,
+      "snap_error_ms": 3.9,
+      "strength": 0.4952,
+      "bands": {
+        "low": 0.164,
+        "mid": 0.263,
+        "high": 0.573
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p008",
+      "time": 1.8489,
+      "nearest_beat": 4.0,
+      "snap_error_ms": 4.2,
+      "strength": 0.5327,
+      "bands": {
+        "low": 0.164,
+        "mid": 0.263,
+        "high": 0.573
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m009",
+      "time": 2.0732,
+      "nearest_beat": 4.5,
+      "snap_error_ms": 10.9,
+      "strength": 0.1362,
+      "bands": {
+        "low": 0.189,
+        "mid": 0.31,
+        "high": 0.501
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p009",
+      "time": 2.0755,
+      "nearest_beat": 4.5,
+      "snap_error_ms": 13.3,
+      "strength": 0.1688,
+      "bands": {
+        "low": 0.189,
+        "mid": 0.31,
+        "high": 0.501
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m010",
+      "time": 2.2811,
+      "nearest_beat": 5.0,
+      "snap_error_ms": 1.4,
+      "strength": 0.6301,
+      "bands": {
+        "low": 0.157,
+        "mid": 0.478,
+        "high": 0.365
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p010",
+      "time": 2.2815,
+      "nearest_beat": 5.0,
+      "snap_error_ms": 1.8,
+      "strength": 0.69,
+      "bands": {
+        "low": 0.209,
+        "mid": 0.422,
+        "high": 0.37
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m011",
+      "time": 2.5,
+      "nearest_beat": 5.5,
+      "snap_error_ms": 2.8,
+      "strength": 0.5119,
+      "bands": {
+        "low": 0.298,
+        "mid": 0.42,
+        "high": 0.282
+      },
+      "source": "mix_full",
+      "sustain": true,
+      "sustain_beats": 1.92
+    },
+    {
+      "id": "p011",
+      "time": 2.5001,
+      "nearest_beat": 5.5,
+      "snap_error_ms": 2.9,
+      "strength": 0.6208,
+      "bands": {
+        "low": 0.298,
+        "mid": 0.42,
+        "high": 0.282
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "time": 2.5426,
+      "nearest_beat": 5.5,
+      "snap_error_ms": 45.4,
+      "strength": 0.4442,
+      "bands": {
+        "low": 0.476,
+        "mid": 0.258,
+        "high": 0.266
+      },
+      "source": "harmonic_sustain",
+      "sustain": true,
+      "sustain_beats": 1.87,
+      "id": "s000"
+    },
+    {
+      "id": "p012",
+      "time": 2.7193,
+      "nearest_beat": 6.0,
+      "snap_error_ms": 4.6,
+      "strength": 0.4518,
+      "bands": {
+        "low": 0.329,
+        "mid": 0.325,
+        "high": 0.346
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m012",
+      "time": 2.7195,
+      "nearest_beat": 6.0,
+      "snap_error_ms": 4.8,
+      "strength": 0.4234,
+      "bands": {
+        "low": 0.329,
+        "mid": 0.325,
+        "high": 0.346
+      },
+      "source": "mix_full",
+      "sustain": true,
+      "sustain_beats": 1.41
+    },
+    {
+      "id": "p013",
+      "time": 2.9386,
+      "nearest_beat": 6.5,
+      "snap_error_ms": 6.5,
+      "strength": 0.3975,
+      "bands": {
+        "low": 0.271,
+        "mid": 0.4,
+        "high": 0.329
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m013",
+      "time": 2.9386,
+      "nearest_beat": 6.5,
+      "snap_error_ms": 6.5,
+      "strength": 0.3898,
+      "bands": {
+        "low": 0.271,
+        "mid": 0.4,
+        "high": 0.329
+      },
+      "source": "mix_full",
+      "sustain": true,
+      "sustain_beats": 0.99
+    },
+    {
+      "id": "m014",
+      "time": 3.1533,
+      "nearest_beat": 7.0,
+      "snap_error_ms": 3.7,
+      "strength": 0.8252,
+      "bands": {
+        "low": 0.217,
+        "mid": 0.16,
+        "high": 0.623
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p014",
+      "time": 3.1568,
+      "nearest_beat": 7.0,
+      "snap_error_ms": 7.2,
+      "strength": 0.902,
+      "bands": {
+        "low": 0.217,
+        "mid": 0.16,
+        "high": 0.623
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m015",
+      "time": 3.3817,
+      "nearest_beat": 7.5,
+      "snap_error_ms": 14.6,
+      "strength": 0.173,
+      "bands": {
+        "low": 0.117,
+        "mid": 0.294,
+        "high": 0.589
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p015",
+      "time": 3.3823,
+      "nearest_beat": 7.5,
+      "snap_error_ms": 15.3,
+      "strength": 0.2066,
+      "bands": {
+        "low": 0.117,
+        "mid": 0.294,
+        "high": 0.589
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p016",
+      "time": 3.591,
+      "nearest_beat": 8.0,
+      "snap_error_ms": 6.5,
+      "strength": 0.525,
+      "bands": {
+        "low": 0.112,
+        "mid": 0.382,
+        "high": 0.506
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m016",
+      "time": 3.5911,
+      "nearest_beat": 8.0,
+      "snap_error_ms": 6.5,
+      "strength": 0.4842,
+      "bands": {
+        "low": 0.112,
+        "mid": 0.382,
+        "high": 0.506
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m017",
+      "time": 3.8023,
+      "nearest_beat": 8.5,
+      "snap_error_ms": 0.3,
+      "strength": 0.5967,
+      "bands": {
+        "low": 0.234,
+        "mid": 0.442,
+        "high": 0.324
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p017",
+      "time": 3.8027,
+      "nearest_beat": 8.5,
+      "snap_error_ms": 0.7,
+      "strength": 0.6653,
+      "bands": {
+        "low": 0.234,
+        "mid": 0.442,
+        "high": 0.324
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "time": 3.8545,
+      "nearest_beat": 8.5,
+      "snap_error_ms": 52.5,
+      "strength": 0.4429,
+      "bands": {
+        "low": 0.521,
+        "mid": 0.232,
+        "high": 0.248
+      },
+      "source": "harmonic_sustain",
+      "sustain": true,
+      "sustain_beats": 1.23,
+      "id": "s001"
+    },
+    {
+      "id": "p018",
+      "time": 4.0219,
+      "nearest_beat": 9.0,
+      "snap_error_ms": 2.4,
+      "strength": 0.5216,
+      "bands": {
+        "low": 0.312,
+        "mid": 0.269,
+        "high": 0.419
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m018",
+      "time": 4.0228,
+      "nearest_beat": 9.0,
+      "snap_error_ms": 3.3,
+      "strength": 0.4806,
+      "bands": {
+        "low": 0.312,
+        "mid": 0.269,
+        "high": 0.419
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m019",
+      "time": 4.2366,
+      "nearest_beat": 9.5,
+      "snap_error_ms": -0.4,
+      "strength": 0.6249,
+      "bands": {
+        "low": 0.323,
+        "mid": 0.378,
+        "high": 0.299
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p019",
+      "time": 4.2374,
+      "nearest_beat": 9.5,
+      "snap_error_ms": 0.5,
+      "strength": 0.6898,
+      "bands": {
+        "low": 0.323,
+        "mid": 0.378,
+        "high": 0.299
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m020",
+      "time": 4.4594,
+      "nearest_beat": 10.0,
+      "snap_error_ms": 5.0,
+      "strength": 0.5358,
+      "bands": {
+        "low": 0.223,
+        "mid": 0.285,
+        "high": 0.492
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p020",
+      "time": 4.4596,
+      "nearest_beat": 10.0,
+      "snap_error_ms": 5.2,
+      "strength": 0.5528,
+      "bands": {
+        "low": 0.223,
+        "mid": 0.285,
+        "high": 0.492
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m021",
+      "time": 4.6713,
+      "nearest_beat": 10.5,
+      "snap_error_ms": -0.6,
+      "strength": 0.6048,
+      "bands": {
+        "low": 0.23,
+        "mid": 0.46,
+        "high": 0.31
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p021",
+      "time": 4.6715,
+      "nearest_beat": 10.5,
+      "snap_error_ms": -0.4,
+      "strength": 0.6623,
+      "bands": {
+        "low": 0.23,
+        "mid": 0.46,
+        "high": 0.31
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "time": 4.7253,
+      "nearest_beat": 10.5,
+      "snap_error_ms": 53.4,
+      "strength": 0.4986,
+      "bands": {
+        "low": 0.567,
+        "mid": 0.206,
+        "high": 0.227
+      },
+      "source": "harmonic_sustain",
+      "sustain": true,
+      "sustain_beats": 1.76,
+      "id": "s002"
+    },
+    {
+      "id": "m022",
+      "time": 4.8928,
+      "nearest_beat": 11.0,
+      "snap_error_ms": 3.4,
+      "strength": 0.7837,
+      "bands": {
+        "low": 0.291,
+        "mid": 0.185,
+        "high": 0.524
+      },
+      "source": "mix_full",
+      "sustain": true,
+      "sustain_beats": 1.07
+    },
+    {
+      "id": "p022",
+      "time": 4.8971,
+      "nearest_beat": 11.0,
+      "snap_error_ms": 7.8,
+      "strength": 0.8096,
+      "bands": {
+        "low": 0.244,
+        "mid": 0.136,
+        "high": 0.62
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m023",
+      "time": 5.1178,
+      "nearest_beat": 11.5,
+      "snap_error_ms": 11.0,
+      "strength": 0.4505,
+      "bands": {
+        "low": 0.282,
+        "mid": 0.217,
+        "high": 0.501
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p023",
+      "time": 5.1197,
+      "nearest_beat": 11.5,
+      "snap_error_ms": 12.9,
+      "strength": 0.5784,
+      "bands": {
+        "low": 0.282,
+        "mid": 0.217,
+        "high": 0.501
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m024",
+      "time": 5.3272,
+      "nearest_beat": 12.0,
+      "snap_error_ms": 2.9,
+      "strength": 0.6841,
+      "bands": {
+        "low": 0.293,
+        "mid": 0.326,
+        "high": 0.381
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p024",
+      "time": 5.3281,
+      "nearest_beat": 12.0,
+      "snap_error_ms": 3.8,
+      "strength": 0.8288,
+      "bands": {
+        "low": 0.293,
+        "mid": 0.326,
+        "high": 0.381
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m025",
+      "time": 5.5518,
+      "nearest_beat": 12.5,
+      "snap_error_ms": 10.1,
+      "strength": 0.3013,
+      "bands": {
+        "low": 0.186,
+        "mid": 0.261,
+        "high": 0.552
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p025",
+      "time": 5.5521,
+      "nearest_beat": 12.5,
+      "snap_error_ms": 10.3,
+      "strength": 0.3397,
+      "bands": {
+        "low": 0.186,
+        "mid": 0.261,
+        "high": 0.552
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m026",
+      "time": 5.7612,
+      "nearest_beat": 13.0,
+      "snap_error_ms": 2.0,
+      "strength": 0.7235,
+      "bands": {
+        "low": 0.175,
+        "mid": 0.46,
+        "high": 0.366
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p026",
+      "time": 5.7616,
+      "nearest_beat": 13.0,
+      "snap_error_ms": 2.4,
+      "strength": 0.7965,
+      "bands": {
+        "low": 0.175,
+        "mid": 0.46,
+        "high": 0.366
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "time": 5.805,
+      "nearest_beat": 13.0,
+      "snap_error_ms": 45.8,
+      "strength": 0.3691,
+      "bands": {
+        "low": 0.452,
+        "mid": 0.268,
+        "high": 0.279
+      },
+      "source": "harmonic_sustain",
+      "sustain": true,
+      "sustain_beats": 1.55,
+      "id": "s003"
+    },
+    {
+      "id": "p027",
+      "time": 5.9827,
+      "nearest_beat": 13.5,
+      "snap_error_ms": 6.0,
+      "strength": 0.373,
+      "bands": {
+        "low": 0.196,
+        "mid": 0.442,
+        "high": 0.362
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m027",
+      "time": 5.983,
+      "nearest_beat": 13.5,
+      "snap_error_ms": 6.3,
+      "strength": 0.3538,
+      "bands": {
+        "low": 0.196,
+        "mid": 0.442,
+        "high": 0.362
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p028",
+      "time": 6.1988,
+      "nearest_beat": 14.0,
+      "snap_error_ms": 4.6,
+      "strength": 0.4901,
+      "bands": {
+        "low": 0.19,
+        "mid": 0.315,
+        "high": 0.495
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m028",
+      "time": 6.1991,
+      "nearest_beat": 14.0,
+      "snap_error_ms": 4.9,
+      "strength": 0.4868,
+      "bands": {
+        "low": 0.19,
+        "mid": 0.315,
+        "high": 0.495
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m029",
+      "time": 6.417,
+      "nearest_beat": 14.5,
+      "snap_error_ms": 5.4,
+      "strength": 0.4112,
+      "bands": {
+        "low": 0.164,
+        "mid": 0.392,
+        "high": 0.443
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p029",
+      "time": 6.4171,
+      "nearest_beat": 14.5,
+      "snap_error_ms": 5.5,
+      "strength": 0.4211,
+      "bands": {
+        "low": 0.164,
+        "mid": 0.392,
+        "high": 0.443
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m030",
+      "time": 6.6317,
+      "nearest_beat": 15.0,
+      "snap_error_ms": 2.6,
+      "strength": 1.0,
+      "bands": {
+        "low": 0.121,
+        "mid": 0.272,
+        "high": 0.607
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p030",
+      "time": 6.6339,
+      "nearest_beat": 15.0,
+      "snap_error_ms": 4.8,
+      "strength": 0.9054,
+      "bands": {
+        "low": 0.121,
+        "mid": 0.272,
+        "high": 0.607
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p031",
+      "time": 6.7103,
+      "nearest_beat": 15.25,
+      "snap_error_ms": -27.6,
+      "strength": 0.1024,
+      "bands": {
+        "low": 0.178,
+        "mid": 0.189,
+        "high": 0.633
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m031",
+      "time": 6.8608,
+      "nearest_beat": 15.5,
+      "snap_error_ms": 14.2,
+      "strength": 0.1935,
+      "bands": {
+        "low": 0.082,
+        "mid": 0.329,
+        "high": 0.589
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p032",
+      "time": 6.8622,
+      "nearest_beat": 15.5,
+      "snap_error_ms": 15.7,
+      "strength": 0.2355,
+      "bands": {
+        "low": 0.082,
+        "mid": 0.329,
+        "high": 0.589
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m032",
+      "time": 7.0697,
+      "nearest_beat": 16.0,
+      "snap_error_ms": 5.6,
+      "strength": 0.5346,
+      "bands": {
+        "low": 0.06,
+        "mid": 0.358,
+        "high": 0.582
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p033",
+      "time": 7.0699,
+      "nearest_beat": 16.0,
+      "snap_error_ms": 5.8,
+      "strength": 0.5813,
+      "bands": {
+        "low": 0.06,
+        "mid": 0.358,
+        "high": 0.582
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m033",
+      "time": 7.2821,
+      "nearest_beat": 16.5,
+      "snap_error_ms": 0.6,
+      "strength": 0.6164,
+      "bands": {
+        "low": 0.237,
+        "mid": 0.431,
+        "high": 0.332
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p034",
+      "time": 7.2823,
+      "nearest_beat": 16.5,
+      "snap_error_ms": 0.8,
+      "strength": 0.6936,
+      "bands": {
+        "low": 0.237,
+        "mid": 0.431,
+        "high": 0.332
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "time": 7.3375,
+      "nearest_beat": 16.75,
+      "snap_error_ms": -52.7,
+      "strength": 0.3565,
+      "bands": {
+        "low": 0.569,
+        "mid": 0.213,
+        "high": 0.219
+      },
+      "source": "harmonic_sustain",
+      "sustain": true,
+      "sustain_beats": 1.41,
+      "id": "s004"
+    },
+    {
+      "id": "p035",
+      "time": 7.5023,
+      "nearest_beat": 17.0,
+      "snap_error_ms": 3.3,
+      "strength": 0.6129,
+      "bands": {
+        "low": 0.167,
+        "mid": 0.287,
+        "high": 0.546
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m034",
+      "time": 7.5023,
+      "nearest_beat": 17.0,
+      "snap_error_ms": 3.3,
+      "strength": 0.5965,
+      "bands": {
+        "low": 0.167,
+        "mid": 0.287,
+        "high": 0.546
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m035",
+      "time": 7.7216,
+      "nearest_beat": 17.5,
+      "snap_error_ms": 5.1,
+      "strength": 0.3664,
+      "bands": {
+        "low": 0.243,
+        "mid": 0.355,
+        "high": 0.401
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p036",
+      "time": 7.7219,
+      "nearest_beat": 17.5,
+      "snap_error_ms": 5.5,
+      "strength": 0.3616,
+      "bands": {
+        "low": 0.243,
+        "mid": 0.355,
+        "high": 0.401
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p037",
+      "time": 7.9353,
+      "nearest_beat": 18.0,
+      "snap_error_ms": 1.4,
+      "strength": 0.4695,
+      "bands": {
+        "low": 0.156,
+        "mid": 0.402,
+        "high": 0.443
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m036",
+      "time": 7.9363,
+      "nearest_beat": 18.0,
+      "snap_error_ms": 2.3,
+      "strength": 0.4725,
+      "bands": {
+        "low": 0.09,
+        "mid": 0.269,
+        "high": 0.641
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m037",
+      "time": 8.1512,
+      "nearest_beat": 18.5,
+      "snap_error_ms": -0.2,
+      "strength": 0.6111,
+      "bands": {
+        "low": 0.245,
+        "mid": 0.434,
+        "high": 0.32
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p038",
+      "time": 8.152,
+      "nearest_beat": 18.5,
+      "snap_error_ms": 0.6,
+      "strength": 0.6716,
+      "bands": {
+        "low": 0.245,
+        "mid": 0.434,
+        "high": 0.32
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "time": 8.1966,
+      "nearest_beat": 18.5,
+      "snap_error_ms": 45.3,
+      "strength": 0.4085,
+      "bands": {
+        "low": 0.476,
+        "mid": 0.259,
+        "high": 0.265
+      },
+      "source": "harmonic_sustain",
+      "sustain": true,
+      "sustain_beats": 1.31,
+      "id": "s005"
+    },
+    {
+      "id": "m038",
+      "time": 8.3717,
+      "nearest_beat": 19.0,
+      "snap_error_ms": 2.8,
+      "strength": 0.9355,
+      "bands": {
+        "low": 0.198,
+        "mid": 0.165,
+        "high": 0.637
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p039",
+      "time": 8.3735,
+      "nearest_beat": 19.0,
+      "snap_error_ms": 4.7,
+      "strength": 0.9266,
+      "bands": {
+        "low": 0.198,
+        "mid": 0.165,
+        "high": 0.637
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m039",
+      "time": 8.5997,
+      "nearest_beat": 19.5,
+      "snap_error_ms": 13.4,
+      "strength": 0.2206,
+      "bands": {
+        "low": 0.2,
+        "mid": 0.267,
+        "high": 0.532
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p040",
+      "time": 8.6019,
+      "nearest_beat": 19.5,
+      "snap_error_ms": 15.6,
+      "strength": 0.3097,
+      "bands": {
+        "low": 0.2,
+        "mid": 0.267,
+        "high": 0.532
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p041",
+      "time": 8.8076,
+      "nearest_beat": 20.0,
+      "snap_error_ms": 3.8,
+      "strength": 0.5165,
+      "bands": {
+        "low": 0.106,
+        "mid": 0.293,
+        "high": 0.601
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m040",
+      "time": 8.8076,
+      "nearest_beat": 20.0,
+      "snap_error_ms": 3.8,
+      "strength": 0.4863,
+      "bands": {
+        "low": 0.106,
+        "mid": 0.293,
+        "high": 0.601
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m041",
+      "time": 9.0199,
+      "nearest_beat": 20.5,
+      "snap_error_ms": -1.4,
+      "strength": 0.6577,
+      "bands": {
+        "low": 0.217,
+        "mid": 0.462,
+        "high": 0.321
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p042",
+      "time": 9.0204,
+      "nearest_beat": 20.5,
+      "snap_error_ms": -0.9,
+      "strength": 0.7179,
+      "bands": {
+        "low": 0.217,
+        "mid": 0.462,
+        "high": 0.321
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m042",
+      "time": 9.239,
+      "nearest_beat": 21.0,
+      "snap_error_ms": 0.2,
+      "strength": 0.722,
+      "bands": {
+        "low": 0.233,
+        "mid": 0.393,
+        "high": 0.374
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p043",
+      "time": 9.2396,
+      "nearest_beat": 21.0,
+      "snap_error_ms": 0.8,
+      "strength": 0.8128,
+      "bands": {
+        "low": 0.233,
+        "mid": 0.393,
+        "high": 0.374
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m043",
+      "time": 9.4569,
+      "nearest_beat": 21.5,
+      "snap_error_ms": 0.7,
+      "strength": 0.5326,
+      "bands": {
+        "low": 0.275,
+        "mid": 0.388,
+        "high": 0.338
+      },
+      "source": "mix_full",
+      "sustain": true,
+      "sustain_beats": 1.44
+    },
+    {
+      "id": "p044",
+      "time": 9.4574,
+      "nearest_beat": 21.5,
+      "snap_error_ms": 1.2,
+      "strength": 0.6272,
+      "bands": {
+        "low": 0.275,
+        "mid": 0.388,
+        "high": 0.338
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "time": 9.497,
+      "nearest_beat": 21.5,
+      "snap_error_ms": 40.7,
+      "strength": 0.4231,
+      "bands": {
+        "low": 0.436,
+        "mid": 0.271,
+        "high": 0.294
+      },
+      "source": "harmonic_sustain",
+      "sustain": true,
+      "sustain_beats": 1.82,
+      "id": "s006"
+    },
+    {
+      "id": "p045",
+      "time": 9.6757,
+      "nearest_beat": 22.0,
+      "snap_error_ms": 2.0,
+      "strength": 0.412,
+      "bands": {
+        "low": 0.323,
+        "mid": 0.364,
+        "high": 0.313
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m044",
+      "time": 9.6764,
+      "nearest_beat": 22.0,
+      "snap_error_ms": 2.7,
+      "strength": 0.3729,
+      "bands": {
+        "low": 0.323,
+        "mid": 0.364,
+        "high": 0.313
+      },
+      "source": "mix_full",
+      "sustain": true,
+      "sustain_beats": 0.99
+    },
+    {
+      "id": "m045",
+      "time": 9.8947,
+      "nearest_beat": 22.5,
+      "snap_error_ms": 3.5,
+      "strength": 0.4352,
+      "bands": {
+        "low": 0.294,
+        "mid": 0.381,
+        "high": 0.325
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p046",
+      "time": 9.8948,
+      "nearest_beat": 22.5,
+      "snap_error_ms": 3.6,
+      "strength": 0.4539,
+      "bands": {
+        "low": 0.294,
+        "mid": 0.381,
+        "high": 0.325
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m046",
+      "time": 10.111,
+      "nearest_beat": 23.0,
+      "snap_error_ms": 2.4,
+      "strength": 0.9367,
+      "bands": {
+        "low": 0.183,
+        "mid": 0.171,
+        "high": 0.646
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p047",
+      "time": 10.1135,
+      "nearest_beat": 23.0,
+      "snap_error_ms": 4.9,
+      "strength": 0.9739,
+      "bands": {
+        "low": 0.183,
+        "mid": 0.171,
+        "high": 0.646
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m047",
+      "time": 10.3404,
+      "nearest_beat": 23.5,
+      "snap_error_ms": 14.3,
+      "strength": 0.1534,
+      "bands": {
+        "low": 0.109,
+        "mid": 0.298,
+        "high": 0.593
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p048",
+      "time": 10.3417,
+      "nearest_beat": 23.5,
+      "snap_error_ms": 15.6,
+      "strength": 0.2059,
+      "bands": {
+        "low": 0.109,
+        "mid": 0.298,
+        "high": 0.593
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p049",
+      "time": 10.5461,
+      "nearest_beat": 24.0,
+      "snap_error_ms": 2.5,
+      "strength": 0.5198,
+      "bands": {
+        "low": 0.08,
+        "mid": 0.364,
+        "high": 0.557
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m048",
+      "time": 10.5464,
+      "nearest_beat": 24.0,
+      "snap_error_ms": 2.9,
+      "strength": 0.471,
+      "bands": {
+        "low": 0.08,
+        "mid": 0.364,
+        "high": 0.557
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m049",
+      "time": 10.7596,
+      "nearest_beat": 24.5,
+      "snap_error_ms": -1.5,
+      "strength": 0.6313,
+      "bands": {
+        "low": 0.23,
+        "mid": 0.447,
+        "high": 0.323
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p050",
+      "time": 10.7598,
+      "nearest_beat": 24.5,
+      "snap_error_ms": -1.3,
+      "strength": 0.6996,
+      "bands": {
+        "low": 0.23,
+        "mid": 0.447,
+        "high": 0.323
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p051",
+      "time": 10.9798,
+      "nearest_beat": 25.0,
+      "snap_error_ms": 1.3,
+      "strength": 0.5082,
+      "bands": {
+        "low": 0.202,
+        "mid": 0.17,
+        "high": 0.628
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m050",
+      "time": 10.9804,
+      "nearest_beat": 25.0,
+      "snap_error_ms": 1.9,
+      "strength": 0.5156,
+      "bands": {
+        "low": 0.202,
+        "mid": 0.17,
+        "high": 0.628
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "time": 11.0411,
+      "nearest_beat": 25.25,
+      "snap_error_ms": -46.2,
+      "strength": 0.3358,
+      "bands": {
+        "low": 0.38,
+        "mid": 0.264,
+        "high": 0.355
+      },
+      "source": "harmonic_sustain",
+      "sustain": true,
+      "sustain_beats": 1.09,
+      "id": "s007"
+    },
+    {
+      "id": "p052",
+      "time": 11.1979,
+      "nearest_beat": 25.5,
+      "snap_error_ms": 1.9,
+      "strength": 0.3443,
+      "bands": {
+        "low": 0.278,
+        "mid": 0.324,
+        "high": 0.398
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m051",
+      "time": 11.1984,
+      "nearest_beat": 25.5,
+      "snap_error_ms": 2.4,
+      "strength": 0.3467,
+      "bands": {
+        "low": 0.278,
+        "mid": 0.324,
+        "high": 0.398
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p053",
+      "time": 11.4154,
+      "nearest_beat": 26.0,
+      "snap_error_ms": 1.9,
+      "strength": 0.6084,
+      "bands": {
+        "low": 0.184,
+        "mid": 0.26,
+        "high": 0.555
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m052",
+      "time": 11.4154,
+      "nearest_beat": 26.0,
+      "snap_error_ms": 2.0,
+      "strength": 0.6007,
+      "bands": {
+        "low": 0.184,
+        "mid": 0.26,
+        "high": 0.555
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m053",
+      "time": 11.6292,
+      "nearest_beat": 26.5,
+      "snap_error_ms": -1.7,
+      "strength": 0.6531,
+      "bands": {
+        "low": 0.225,
+        "mid": 0.428,
+        "high": 0.348
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p054",
+      "time": 11.6314,
+      "nearest_beat": 26.5,
+      "snap_error_ms": 0.5,
+      "strength": 0.698,
+      "bands": {
+        "low": 0.225,
+        "mid": 0.428,
+        "high": 0.348
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "time": 11.6796,
+      "nearest_beat": 26.5,
+      "snap_error_ms": 48.7,
+      "strength": 0.4121,
+      "bands": {
+        "low": 0.44,
+        "mid": 0.24,
+        "high": 0.32
+      },
+      "source": "harmonic_sustain",
+      "sustain": true,
+      "sustain_beats": 1.09,
+      "id": "s008"
+    },
+    {
+      "id": "m054",
+      "time": 11.8523,
+      "nearest_beat": 27.0,
+      "snap_error_ms": 3.9,
+      "strength": 0.8311,
+      "bands": {
+        "low": 0.192,
+        "mid": 0.144,
+        "high": 0.664
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p055",
+      "time": 11.8536,
+      "nearest_beat": 27.0,
+      "snap_error_ms": 5.2,
+      "strength": 0.9504,
+      "bands": {
+        "low": 0.192,
+        "mid": 0.144,
+        "high": 0.664
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m055",
+      "time": 12.0783,
+      "nearest_beat": 27.5,
+      "snap_error_ms": 12.4,
+      "strength": 0.2053,
+      "bands": {
+        "low": 0.187,
+        "mid": 0.278,
+        "high": 0.535
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p056",
+      "time": 12.0801,
+      "nearest_beat": 27.5,
+      "snap_error_ms": 14.3,
+      "strength": 0.231,
+      "bands": {
+        "low": 0.187,
+        "mid": 0.278,
+        "high": 0.535
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m056",
+      "time": 12.2813,
+      "nearest_beat": 28.0,
+      "snap_error_ms": -2.0,
+      "strength": 0.7075,
+      "bands": {
+        "low": 0.225,
+        "mid": 0.369,
+        "high": 0.406
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p057",
+      "time": 12.2819,
+      "nearest_beat": 28.0,
+      "snap_error_ms": -1.4,
+      "strength": 0.8082,
+      "bands": {
+        "low": 0.225,
+        "mid": 0.369,
+        "high": 0.406
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m057",
+      "time": 12.5051,
+      "nearest_beat": 28.5,
+      "snap_error_ms": 4.3,
+      "strength": 0.3696,
+      "bands": {
+        "low": 0.17,
+        "mid": 0.366,
+        "high": 0.464
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p058",
+      "time": 12.5055,
+      "nearest_beat": 28.5,
+      "snap_error_ms": 4.7,
+      "strength": 0.4117,
+      "bands": {
+        "low": 0.17,
+        "mid": 0.366,
+        "high": 0.464
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m058",
+      "time": 12.7163,
+      "nearest_beat": 29.0,
+      "snap_error_ms": -1.9,
+      "strength": 0.7263,
+      "bands": {
+        "low": 0.171,
+        "mid": 0.465,
+        "high": 0.364
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p059",
+      "time": 12.7168,
+      "nearest_beat": 29.0,
+      "snap_error_ms": -1.5,
+      "strength": 0.8001,
+      "bands": {
+        "low": 0.171,
+        "mid": 0.465,
+        "high": 0.364
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "time": 12.7594,
+      "nearest_beat": 29.0,
+      "snap_error_ms": 41.1,
+      "strength": 0.3754,
+      "bands": {
+        "low": 0.396,
+        "mid": 0.292,
+        "high": 0.313
+      },
+      "source": "harmonic_sustain",
+      "sustain": true,
+      "sustain_beats": 1.63,
+      "id": "s009"
+    },
+    {
+      "id": "p060",
+      "time": 12.9392,
+      "nearest_beat": 29.5,
+      "snap_error_ms": 3.5,
+      "strength": 0.32,
+      "bands": {
+        "low": 0.177,
+        "mid": 0.504,
+        "high": 0.319
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m059",
+      "time": 12.9399,
+      "nearest_beat": 29.5,
+      "snap_error_ms": 4.2,
+      "strength": 0.314,
+      "bands": {
+        "low": 0.145,
+        "mid": 0.417,
+        "high": 0.438
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p061",
+      "time": 13.1529,
+      "nearest_beat": 30.0,
+      "snap_error_ms": -0.3,
+      "strength": 0.4132,
+      "bands": {
+        "low": 0.184,
+        "mid": 0.295,
+        "high": 0.521
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m060",
+      "time": 13.1532,
+      "nearest_beat": 30.0,
+      "snap_error_ms": 0.0,
+      "strength": 0.4132,
+      "bands": {
+        "low": 0.184,
+        "mid": 0.295,
+        "high": 0.521
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p062",
+      "time": 13.3729,
+      "nearest_beat": 30.5,
+      "snap_error_ms": 2.2,
+      "strength": 0.4246,
+      "bands": {
+        "low": 0.201,
+        "mid": 0.37,
+        "high": 0.429
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m061",
+      "time": 13.3731,
+      "nearest_beat": 30.5,
+      "snap_error_ms": 2.5,
+      "strength": 0.4262,
+      "bands": {
+        "low": 0.201,
+        "mid": 0.37,
+        "high": 0.429
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m062",
+      "time": 13.5876,
+      "nearest_beat": 31.0,
+      "snap_error_ms": -0.5,
+      "strength": 0.8854,
+      "bands": {
+        "low": 0.113,
+        "mid": 0.309,
+        "high": 0.579
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p063",
+      "time": 13.5909,
+      "nearest_beat": 31.0,
+      "snap_error_ms": 2.8,
+      "strength": 0.8123,
+      "bands": {
+        "low": 0.165,
+        "mid": 0.199,
+        "high": 0.636
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p064",
+      "time": 13.6661,
+      "nearest_beat": 31.25,
+      "snap_error_ms": -30.8,
+      "strength": 0.1093,
+      "bands": {
+        "low": 0.201,
+        "mid": 0.184,
+        "high": 0.615
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m063",
+      "time": 13.8162,
+      "nearest_beat": 31.5,
+      "snap_error_ms": 10.6,
+      "strength": 0.1921,
+      "bands": {
+        "low": 0.08,
+        "mid": 0.337,
+        "high": 0.582
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p065",
+      "time": 13.8176,
+      "nearest_beat": 31.5,
+      "snap_error_ms": 12.0,
+      "strength": 0.2406,
+      "bands": {
+        "low": 0.08,
+        "mid": 0.337,
+        "high": 0.582
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p066",
+      "time": 14.0243,
+      "nearest_beat": 32.0,
+      "snap_error_ms": 1.2,
+      "strength": 0.5377,
+      "bands": {
+        "low": 0.076,
+        "mid": 0.323,
+        "high": 0.6
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m064",
+      "time": 14.0246,
+      "nearest_beat": 32.0,
+      "snap_error_ms": 1.5,
+      "strength": 0.5015,
+      "bands": {
+        "low": 0.076,
+        "mid": 0.323,
+        "high": 0.6
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m065",
+      "time": 14.2366,
+      "nearest_beat": 32.5,
+      "snap_error_ms": -4.0,
+      "strength": 0.6311,
+      "bands": {
+        "low": 0.204,
+        "mid": 0.484,
+        "high": 0.312
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p067",
+      "time": 14.2369,
+      "nearest_beat": 32.5,
+      "snap_error_ms": -3.6,
+      "strength": 0.6831,
+      "bands": {
+        "low": 0.204,
+        "mid": 0.484,
+        "high": 0.312
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "time": 14.2803,
+      "nearest_beat": 32.5,
+      "snap_error_ms": 39.7,
+      "strength": 0.4018,
+      "bands": {
+        "low": 0.467,
+        "mid": 0.261,
+        "high": 0.272
+      },
+      "source": "harmonic_sustain",
+      "sustain": true,
+      "sustain_beats": 1.49,
+      "id": "s010"
+    },
+    {
+      "id": "p068",
+      "time": 14.457,
+      "nearest_beat": 33.0,
+      "snap_error_ms": -1.1,
+      "strength": 0.6109,
+      "bands": {
+        "low": 0.172,
+        "mid": 0.298,
+        "high": 0.53
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m066",
+      "time": 14.457,
+      "nearest_beat": 33.0,
+      "snap_error_ms": -1.0,
+      "strength": 0.5971,
+      "bands": {
+        "low": 0.172,
+        "mid": 0.298,
+        "high": 0.53
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p069",
+      "time": 14.676,
+      "nearest_beat": 33.5,
+      "snap_error_ms": 0.5,
+      "strength": 0.3787,
+      "bands": {
+        "low": 0.22,
+        "mid": 0.373,
+        "high": 0.407
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m067",
+      "time": 14.676,
+      "nearest_beat": 33.5,
+      "snap_error_ms": 0.5,
+      "strength": 0.3754,
+      "bands": {
+        "low": 0.22,
+        "mid": 0.373,
+        "high": 0.407
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p070",
+      "time": 14.8922,
+      "nearest_beat": 34.0,
+      "snap_error_ms": -0.7,
+      "strength": 0.466,
+      "bands": {
+        "low": 0.141,
+        "mid": 0.238,
+        "high": 0.621
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m068",
+      "time": 14.8928,
+      "nearest_beat": 34.0,
+      "snap_error_ms": -0.2,
+      "strength": 0.4736,
+      "bands": {
+        "low": 0.141,
+        "mid": 0.238,
+        "high": 0.621
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m069",
+      "time": 15.1076,
+      "nearest_beat": 34.5,
+      "snap_error_ms": -2.8,
+      "strength": 0.6794,
+      "bands": {
+        "low": 0.198,
+        "mid": 0.474,
+        "high": 0.327
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p071",
+      "time": 15.108,
+      "nearest_beat": 34.5,
+      "snap_error_ms": -2.4,
+      "strength": 0.7409,
+      "bands": {
+        "low": 0.198,
+        "mid": 0.474,
+        "high": 0.327
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m070",
+      "time": 15.3276,
+      "nearest_beat": 35.0,
+      "snap_error_ms": -0.3,
+      "strength": 0.943,
+      "bands": {
+        "low": 0.177,
+        "mid": 0.201,
+        "high": 0.622
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p072",
+      "time": 15.3299,
+      "nearest_beat": 35.0,
+      "snap_error_ms": 2.0,
+      "strength": 0.8714,
+      "bands": {
+        "low": 0.177,
+        "mid": 0.201,
+        "high": 0.622
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m071",
+      "time": 15.5465,
+      "nearest_beat": 35.5,
+      "snap_error_ms": 1.1,
+      "strength": 0.4317,
+      "bands": {
+        "low": 0.241,
+        "mid": 0.372,
+        "high": 0.387
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p073",
+      "time": 15.5469,
+      "nearest_beat": 35.5,
+      "snap_error_ms": 1.6,
+      "strength": 0.5359,
+      "bands": {
+        "low": 0.241,
+        "mid": 0.372,
+        "high": 0.387
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m072",
+      "time": 15.7615,
+      "nearest_beat": 36.0,
+      "snap_error_ms": -1.3,
+      "strength": 0.4572,
+      "bands": {
+        "low": 0.131,
+        "mid": 0.222,
+        "high": 0.647
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p074",
+      "time": 15.7623,
+      "nearest_beat": 36.0,
+      "snap_error_ms": -0.6,
+      "strength": 0.5098,
+      "bands": {
+        "low": 0.131,
+        "mid": 0.222,
+        "high": 0.647
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m073",
+      "time": 15.9856,
+      "nearest_beat": 36.5,
+      "snap_error_ms": 5.3,
+      "strength": 0.1704,
+      "bands": {
+        "low": 0.176,
+        "mid": 0.356,
+        "high": 0.468
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p075",
+      "time": 15.987,
+      "nearest_beat": 36.5,
+      "snap_error_ms": 6.6,
+      "strength": 0.1891,
+      "bands": {
+        "low": 0.176,
+        "mid": 0.356,
+        "high": 0.468
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m074",
+      "time": 16.1953,
+      "nearest_beat": 37.0,
+      "snap_error_ms": -2.5,
+      "strength": 0.7226,
+      "bands": {
+        "low": 0.213,
+        "mid": 0.407,
+        "high": 0.381
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p076",
+      "time": 16.196,
+      "nearest_beat": 37.0,
+      "snap_error_ms": -1.8,
+      "strength": 0.8317,
+      "bands": {
+        "low": 0.213,
+        "mid": 0.407,
+        "high": 0.381
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "time": 16.2424,
+      "nearest_beat": 37.0,
+      "snap_error_ms": 44.6,
+      "strength": 0.457,
+      "bands": {
+        "low": 0.46,
+        "mid": 0.265,
+        "high": 0.274
+      },
+      "source": "harmonic_sustain",
+      "sustain": true,
+      "sustain_beats": 1.79,
+      "id": "s011"
+    },
+    {
+      "id": "m075",
+      "time": 16.4128,
+      "nearest_beat": 37.5,
+      "snap_error_ms": -2.4,
+      "strength": 0.521,
+      "bands": {
+        "low": 0.332,
+        "mid": 0.358,
+        "high": 0.31
+      },
+      "source": "mix_full",
+      "sustain": true,
+      "sustain_beats": 1.25
+    },
+    {
+      "id": "p077",
+      "time": 16.4129,
+      "nearest_beat": 37.5,
+      "snap_error_ms": -2.4,
+      "strength": 0.6367,
+      "bands": {
+        "low": 0.332,
+        "mid": 0.358,
+        "high": 0.31
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p078",
+      "time": 16.6314,
+      "nearest_beat": 38.0,
+      "snap_error_ms": -1.3,
+      "strength": 0.4046,
+      "bands": {
+        "low": 0.286,
+        "mid": 0.247,
+        "high": 0.468
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m076",
+      "time": 16.6328,
+      "nearest_beat": 38.0,
+      "snap_error_ms": 0.1,
+      "strength": 0.4027,
+      "bands": {
+        "low": 0.286,
+        "mid": 0.247,
+        "high": 0.468
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p079",
+      "time": 16.8509,
+      "nearest_beat": 38.5,
+      "snap_error_ms": 0.7,
+      "strength": 0.3977,
+      "bands": {
+        "low": 0.326,
+        "mid": 0.366,
+        "high": 0.308
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m077",
+      "time": 16.8512,
+      "nearest_beat": 38.5,
+      "snap_error_ms": 1.0,
+      "strength": 0.3646,
+      "bands": {
+        "low": 0.326,
+        "mid": 0.366,
+        "high": 0.308
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m078",
+      "time": 17.0677,
+      "nearest_beat": 39.0,
+      "snap_error_ms": -0.0,
+      "strength": 0.9884,
+      "bands": {
+        "low": 0.154,
+        "mid": 0.198,
+        "high": 0.649
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p080",
+      "time": 17.0693,
+      "nearest_beat": 39.0,
+      "snap_error_ms": 1.7,
+      "strength": 0.996,
+      "bands": {
+        "low": 0.154,
+        "mid": 0.198,
+        "high": 0.649
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m079",
+      "time": 17.2984,
+      "nearest_beat": 39.5,
+      "snap_error_ms": 13.3,
+      "strength": 0.1472,
+      "bands": {
+        "low": 0.104,
+        "mid": 0.249,
+        "high": 0.648
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p081",
+      "time": 17.2998,
+      "nearest_beat": 39.5,
+      "snap_error_ms": 14.6,
+      "strength": 0.2113,
+      "bands": {
+        "low": 0.104,
+        "mid": 0.249,
+        "high": 0.648
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p082",
+      "time": 17.5036,
+      "nearest_beat": 40.0,
+      "snap_error_ms": 1.0,
+      "strength": 0.4308,
+      "bands": {
+        "low": 0.086,
+        "mid": 0.265,
+        "high": 0.649
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m080",
+      "time": 17.5039,
+      "nearest_beat": 40.0,
+      "snap_error_ms": 1.3,
+      "strength": 0.4114,
+      "bands": {
+        "low": 0.086,
+        "mid": 0.265,
+        "high": 0.649
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m081",
+      "time": 17.7171,
+      "nearest_beat": 40.5,
+      "snap_error_ms": -3.0,
+      "strength": 0.6563,
+      "bands": {
+        "low": 0.226,
+        "mid": 0.457,
+        "high": 0.317
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p083",
+      "time": 17.7173,
+      "nearest_beat": 40.5,
+      "snap_error_ms": -2.8,
+      "strength": 0.7119,
+      "bands": {
+        "low": 0.226,
+        "mid": 0.457,
+        "high": 0.317
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "time": 17.7633,
+      "nearest_beat": 40.5,
+      "snap_error_ms": 43.2,
+      "strength": 0.4274,
+      "bands": {
+        "low": 0.525,
+        "mid": 0.204,
+        "high": 0.271
+      },
+      "source": "harmonic_sustain",
+      "sustain": true,
+      "sustain_beats": 1.25,
+      "id": "s012"
+    },
+    {
+      "id": "p084",
+      "time": 17.9349,
+      "nearest_beat": 41.0,
+      "snap_error_ms": -2.7,
+      "strength": 0.4817,
+      "bands": {
+        "low": 0.279,
+        "mid": 0.165,
+        "high": 0.556
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m082",
+      "time": 17.9354,
+      "nearest_beat": 41.0,
+      "snap_error_ms": -2.2,
+      "strength": 0.4802,
+      "bands": {
+        "low": 0.279,
+        "mid": 0.165,
+        "high": 0.556
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m083",
+      "time": 18.1454,
+      "nearest_beat": 41.5,
+      "snap_error_ms": -9.6,
+      "strength": 0.6031,
+      "bands": {
+        "low": 0.332,
+        "mid": 0.379,
+        "high": 0.289
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p085",
+      "time": 18.1463,
+      "nearest_beat": 41.5,
+      "snap_error_ms": -8.7,
+      "strength": 0.6656,
+      "bands": {
+        "low": 0.332,
+        "mid": 0.379,
+        "high": 0.289
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m084",
+      "time": 18.369,
+      "nearest_beat": 42.0,
+      "snap_error_ms": -3.5,
+      "strength": 0.5046,
+      "bands": {
+        "low": 0.147,
+        "mid": 0.155,
+        "high": 0.698
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p086",
+      "time": 18.3691,
+      "nearest_beat": 42.0,
+      "snap_error_ms": -3.4,
+      "strength": 0.524,
+      "bands": {
+        "low": 0.147,
+        "mid": 0.155,
+        "high": 0.698
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m085",
+      "time": 18.5851,
+      "nearest_beat": 42.5,
+      "snap_error_ms": -4.9,
+      "strength": 0.6487,
+      "bands": {
+        "low": 0.248,
+        "mid": 0.411,
+        "high": 0.34
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p087",
+      "time": 18.5857,
+      "nearest_beat": 42.5,
+      "snap_error_ms": -4.2,
+      "strength": 0.7066,
+      "bands": {
+        "low": 0.248,
+        "mid": 0.411,
+        "high": 0.34
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "time": 18.634,
+      "nearest_beat": 42.5,
+      "snap_error_ms": 44.1,
+      "strength": 0.4964,
+      "bands": {
+        "low": 0.559,
+        "mid": 0.197,
+        "high": 0.244
+      },
+      "source": "harmonic_sustain",
+      "sustain": true,
+      "sustain_beats": 1.74,
+      "id": "s013"
+    },
+    {
+      "id": "m086",
+      "time": 18.8076,
+      "nearest_beat": 43.0,
+      "snap_error_ms": 0.2,
+      "strength": 0.9365,
+      "bands": {
+        "low": 0.236,
+        "mid": 0.117,
+        "high": 0.646
+      },
+      "source": "mix_full",
+      "sustain": true,
+      "sustain_beats": 1.33
+    },
+    {
+      "id": "p088",
+      "time": 18.8093,
+      "nearest_beat": 43.0,
+      "snap_error_ms": 1.9,
+      "strength": 1.0,
+      "bands": {
+        "low": 0.236,
+        "mid": 0.117,
+        "high": 0.646
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m087",
+      "time": 19.0301,
+      "nearest_beat": 43.5,
+      "snap_error_ms": 5.2,
+      "strength": 0.4038,
+      "bands": {
+        "low": 0.266,
+        "mid": 0.189,
+        "high": 0.545
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p089",
+      "time": 19.0318,
+      "nearest_beat": 43.5,
+      "snap_error_ms": 6.9,
+      "strength": 0.5032,
+      "bands": {
+        "low": 0.266,
+        "mid": 0.189,
+        "high": 0.545
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m088",
+      "time": 19.2383,
+      "nearest_beat": 44.0,
+      "snap_error_ms": -4.1,
+      "strength": 0.6135,
+      "bands": {
+        "low": 0.336,
+        "mid": 0.255,
+        "high": 0.409
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p090",
+      "time": 19.2389,
+      "nearest_beat": 44.0,
+      "snap_error_ms": -3.5,
+      "strength": 0.732,
+      "bands": {
+        "low": 0.336,
+        "mid": 0.255,
+        "high": 0.409
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m089",
+      "time": 19.4642,
+      "nearest_beat": 44.5,
+      "snap_error_ms": 4.4,
+      "strength": 0.1653,
+      "bands": {
+        "low": 0.139,
+        "mid": 0.102,
+        "high": 0.758
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p091",
+      "time": 19.4656,
+      "nearest_beat": 44.5,
+      "snap_error_ms": 5.8,
+      "strength": 0.2109,
+      "bands": {
+        "low": 0.139,
+        "mid": 0.102,
+        "high": 0.758
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m090",
+      "time": 19.6728,
+      "nearest_beat": 45.0,
+      "snap_error_ms": -4.5,
+      "strength": 0.465,
+      "bands": {
+        "low": 0.129,
+        "mid": 0.357,
+        "high": 0.514
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p092",
+      "time": 19.6748,
+      "nearest_beat": 45.0,
+      "snap_error_ms": -2.5,
+      "strength": 0.5261,
+      "bands": {
+        "low": 0.207,
+        "mid": 0.378,
+        "high": 0.415
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "time": 19.7254,
+      "nearest_beat": 45.0,
+      "snap_error_ms": 48.0,
+      "strength": 0.3658,
+      "bands": {
+        "low": 0.453,
+        "mid": 0.249,
+        "high": 0.298
+      },
+      "source": "harmonic_sustain",
+      "sustain": true,
+      "sustain_beats": 1.44,
+      "id": "s014"
+    },
+    {
+      "id": "p093",
+      "time": 19.8999,
+      "nearest_beat": 45.5,
+      "snap_error_ms": 5.1,
+      "strength": 0.1551,
+      "bands": {
+        "low": 0.222,
+        "mid": 0.305,
+        "high": 0.473
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p094",
+      "time": 20.1128,
+      "nearest_beat": 46.0,
+      "snap_error_ms": 0.6,
+      "strength": 0.4356,
+      "bands": {
+        "low": 0.199,
+        "mid": 0.283,
+        "high": 0.519
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m091",
+      "time": 20.1133,
+      "nearest_beat": 46.0,
+      "snap_error_ms": 1.0,
+      "strength": 0.3636,
+      "bands": {
+        "low": 0.199,
+        "mid": 0.283,
+        "high": 0.519
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m092",
+      "time": 20.3322,
+      "nearest_beat": 46.5,
+      "snap_error_ms": 2.5,
+      "strength": 0.2291,
+      "bands": {
+        "low": 0.215,
+        "mid": 0.353,
+        "high": 0.432
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p095",
+      "time": 20.3331,
+      "nearest_beat": 46.5,
+      "snap_error_ms": 3.4,
+      "strength": 0.2494,
+      "bands": {
+        "low": 0.215,
+        "mid": 0.353,
+        "high": 0.432
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m093",
+      "time": 20.5471,
+      "nearest_beat": 47.0,
+      "snap_error_ms": -0.1,
+      "strength": 0.8519,
+      "bands": {
+        "low": 0.144,
+        "mid": 0.178,
+        "high": 0.678
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p096",
+      "time": 20.5491,
+      "nearest_beat": 47.0,
+      "snap_error_ms": 1.9,
+      "strength": 0.9351,
+      "bands": {
+        "low": 0.144,
+        "mid": 0.178,
+        "high": 0.678
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m094",
+      "time": 20.7752,
+      "nearest_beat": 47.5,
+      "snap_error_ms": 10.6,
+      "strength": 0.1441,
+      "bands": {
+        "low": 0.08,
+        "mid": 0.249,
+        "high": 0.672
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p097",
+      "time": 20.7773,
+      "nearest_beat": 47.5,
+      "snap_error_ms": 12.7,
+      "strength": 0.1906,
+      "bands": {
+        "low": 0.073,
+        "mid": 0.229,
+        "high": 0.698
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p098",
+      "time": 20.9818,
+      "nearest_beat": 48.0,
+      "snap_error_ms": -0.4,
+      "strength": 0.4434,
+      "bands": {
+        "low": 0.081,
+        "mid": 0.28,
+        "high": 0.639
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m095",
+      "time": 20.982,
+      "nearest_beat": 48.0,
+      "snap_error_ms": -0.1,
+      "strength": 0.389,
+      "bands": {
+        "low": 0.081,
+        "mid": 0.28,
+        "high": 0.639
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m096",
+      "time": 21.1938,
+      "nearest_beat": 48.5,
+      "snap_error_ms": -5.8,
+      "strength": 0.574,
+      "bands": {
+        "low": 0.196,
+        "mid": 0.477,
+        "high": 0.328
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p099",
+      "time": 21.1939,
+      "nearest_beat": 48.5,
+      "snap_error_ms": -5.7,
+      "strength": 0.6242,
+      "bands": {
+        "low": 0.196,
+        "mid": 0.477,
+        "high": 0.328
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p100",
+      "time": 21.4122,
+      "nearest_beat": 49.0,
+      "snap_error_ms": -4.9,
+      "strength": 0.5386,
+      "bands": {
+        "low": 0.251,
+        "mid": 0.191,
+        "high": 0.558
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m097",
+      "time": 21.4123,
+      "nearest_beat": 49.0,
+      "snap_error_ms": -4.8,
+      "strength": 0.4988,
+      "bands": {
+        "low": 0.251,
+        "mid": 0.191,
+        "high": 0.558
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p101",
+      "time": 21.6321,
+      "nearest_beat": 49.5,
+      "snap_error_ms": -2.4,
+      "strength": 0.3271,
+      "bands": {
+        "low": 0.373,
+        "mid": 0.199,
+        "high": 0.427
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m098",
+      "time": 21.6321,
+      "nearest_beat": 49.5,
+      "snap_error_ms": -2.4,
+      "strength": 0.3194,
+      "bands": {
+        "low": 0.373,
+        "mid": 0.199,
+        "high": 0.427
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p102",
+      "time": 21.8486,
+      "nearest_beat": 50.0,
+      "snap_error_ms": -3.5,
+      "strength": 0.5022,
+      "bands": {
+        "low": 0.241,
+        "mid": 0.128,
+        "high": 0.632
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m099",
+      "time": 21.8487,
+      "nearest_beat": 50.0,
+      "snap_error_ms": -3.3,
+      "strength": 0.4918,
+      "bands": {
+        "low": 0.241,
+        "mid": 0.128,
+        "high": 0.632
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m100",
+      "time": 22.0623,
+      "nearest_beat": 50.5,
+      "snap_error_ms": -7.2,
+      "strength": 0.6597,
+      "bands": {
+        "low": 0.206,
+        "mid": 0.454,
+        "high": 0.34
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p103",
+      "time": 22.0627,
+      "nearest_beat": 50.5,
+      "snap_error_ms": -6.8,
+      "strength": 0.6936,
+      "bands": {
+        "low": 0.206,
+        "mid": 0.454,
+        "high": 0.34
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m101",
+      "time": 22.2835,
+      "nearest_beat": 51.0,
+      "snap_error_ms": -3.5,
+      "strength": 0.9217,
+      "bands": {
+        "low": 0.201,
+        "mid": 0.132,
+        "high": 0.667
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p104",
+      "time": 22.2868,
+      "nearest_beat": 51.0,
+      "snap_error_ms": -0.2,
+      "strength": 0.8521,
+      "bands": {
+        "low": 0.204,
+        "mid": 0.109,
+        "high": 0.687
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m102",
+      "time": 22.5139,
+      "nearest_beat": 51.5,
+      "snap_error_ms": 9.5,
+      "strength": 0.1516,
+      "bands": {
+        "low": 0.204,
+        "mid": 0.141,
+        "high": 0.655
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p105",
+      "time": 22.5155,
+      "nearest_beat": 51.5,
+      "snap_error_ms": 11.0,
+      "strength": 0.1819,
+      "bands": {
+        "low": 0.204,
+        "mid": 0.141,
+        "high": 0.655
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m103",
+      "time": 22.7204,
+      "nearest_beat": 52.0,
+      "snap_error_ms": -1.4,
+      "strength": 0.5143,
+      "bands": {
+        "low": 0.184,
+        "mid": 0.097,
+        "high": 0.719
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p106",
+      "time": 22.7205,
+      "nearest_beat": 52.0,
+      "snap_error_ms": -1.4,
+      "strength": 0.5387,
+      "bands": {
+        "low": 0.184,
+        "mid": 0.097,
+        "high": 0.719
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m104",
+      "time": 22.9331,
+      "nearest_beat": 52.5,
+      "snap_error_ms": -6.3,
+      "strength": 0.681,
+      "bands": {
+        "low": 0.214,
+        "mid": 0.444,
+        "high": 0.342
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p107",
+      "time": 22.9333,
+      "nearest_beat": 52.5,
+      "snap_error_ms": -6.0,
+      "strength": 0.7177,
+      "bands": {
+        "low": 0.214,
+        "mid": 0.444,
+        "high": 0.342
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m105",
+      "time": 23.15,
+      "nearest_beat": 53.0,
+      "snap_error_ms": -6.9,
+      "strength": 0.7343,
+      "bands": {
+        "low": 0.238,
+        "mid": 0.403,
+        "high": 0.359
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p108",
+      "time": 23.1514,
+      "nearest_beat": 53.0,
+      "snap_error_ms": -5.5,
+      "strength": 0.8101,
+      "bands": {
+        "low": 0.238,
+        "mid": 0.403,
+        "high": 0.359
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m106",
+      "time": 23.3699,
+      "nearest_beat": 53.5,
+      "snap_error_ms": -4.4,
+      "strength": 0.602,
+      "bands": {
+        "low": 0.264,
+        "mid": 0.419,
+        "high": 0.318
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p109",
+      "time": 23.37,
+      "nearest_beat": 53.5,
+      "snap_error_ms": -4.3,
+      "strength": 0.6952,
+      "bands": {
+        "low": 0.264,
+        "mid": 0.419,
+        "high": 0.318
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p110",
+      "time": 23.5901,
+      "nearest_beat": 54.0,
+      "snap_error_ms": -1.7,
+      "strength": 0.4476,
+      "bands": {
+        "low": 0.224,
+        "mid": 0.246,
+        "high": 0.529
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m107",
+      "time": 23.5904,
+      "nearest_beat": 54.0,
+      "snap_error_ms": -1.4,
+      "strength": 0.4428,
+      "bands": {
+        "low": 0.224,
+        "mid": 0.246,
+        "high": 0.529
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p111",
+      "time": 23.8091,
+      "nearest_beat": 54.5,
+      "snap_error_ms": -0.1,
+      "strength": 0.3048,
+      "bands": {
+        "low": 0.192,
+        "mid": 0.328,
+        "high": 0.48
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m108",
+      "time": 23.8098,
+      "nearest_beat": 54.5,
+      "snap_error_ms": 0.5,
+      "strength": 0.3055,
+      "bands": {
+        "low": 0.192,
+        "mid": 0.328,
+        "high": 0.48
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m109",
+      "time": 24.0233,
+      "nearest_beat": 55.0,
+      "snap_error_ms": -3.4,
+      "strength": 0.9589,
+      "bands": {
+        "low": 0.141,
+        "mid": 0.161,
+        "high": 0.698
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p112",
+      "time": 24.0251,
+      "nearest_beat": 55.0,
+      "snap_error_ms": -1.6,
+      "strength": 0.8909,
+      "bands": {
+        "low": 0.141,
+        "mid": 0.161,
+        "high": 0.698
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m110",
+      "time": 24.254,
+      "nearest_beat": 55.5,
+      "snap_error_ms": 9.8,
+      "strength": 0.1553,
+      "bands": {
+        "low": 0.094,
+        "mid": 0.184,
+        "high": 0.722
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p113",
+      "time": 24.2555,
+      "nearest_beat": 55.5,
+      "snap_error_ms": 11.3,
+      "strength": 0.2051,
+      "bands": {
+        "low": 0.094,
+        "mid": 0.184,
+        "high": 0.722
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p114",
+      "time": 24.4595,
+      "nearest_beat": 56.0,
+      "snap_error_ms": -2.2,
+      "strength": 0.4431,
+      "bands": {
+        "low": 0.079,
+        "mid": 0.148,
+        "high": 0.773
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m111",
+      "time": 24.4597,
+      "nearest_beat": 56.0,
+      "snap_error_ms": -2.0,
+      "strength": 0.4202,
+      "bands": {
+        "low": 0.079,
+        "mid": 0.148,
+        "high": 0.773
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m112",
+      "time": 24.6733,
+      "nearest_beat": 56.5,
+      "snap_error_ms": -5.9,
+      "strength": 0.6716,
+      "bands": {
+        "low": 0.228,
+        "mid": 0.453,
+        "high": 0.319
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p115",
+      "time": 24.6735,
+      "nearest_beat": 56.5,
+      "snap_error_ms": -5.6,
+      "strength": 0.7353,
+      "bands": {
+        "low": 0.228,
+        "mid": 0.453,
+        "high": 0.319
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p116",
+      "time": 24.8919,
+      "nearest_beat": 57.0,
+      "snap_error_ms": -4.7,
+      "strength": 0.5404,
+      "bands": {
+        "low": 0.234,
+        "mid": 0.096,
+        "high": 0.67
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m113",
+      "time": 24.892,
+      "nearest_beat": 57.0,
+      "snap_error_ms": -4.6,
+      "strength": 0.539,
+      "bands": {
+        "low": 0.234,
+        "mid": 0.096,
+        "high": 0.67
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p117",
+      "time": 25.1131,
+      "nearest_beat": 57.5,
+      "snap_error_ms": -1.0,
+      "strength": 0.3433,
+      "bands": {
+        "low": 0.359,
+        "mid": 0.107,
+        "high": 0.534
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m114",
+      "time": 25.1131,
+      "nearest_beat": 57.5,
+      "snap_error_ms": -0.9,
+      "strength": 0.349,
+      "bands": {
+        "low": 0.359,
+        "mid": 0.107,
+        "high": 0.534
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p118",
+      "time": 25.3331,
+      "nearest_beat": 58.0,
+      "snap_error_ms": 1.6,
+      "strength": 0.4411,
+      "bands": {
+        "low": 0.251,
+        "mid": 0.112,
+        "high": 0.637
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m115",
+      "time": 25.3333,
+      "nearest_beat": 58.0,
+      "snap_error_ms": 1.7,
+      "strength": 0.4481,
+      "bands": {
+        "low": 0.251,
+        "mid": 0.112,
+        "high": 0.637
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m116",
+      "time": 25.5431,
+      "nearest_beat": 58.5,
+      "snap_error_ms": -5.9,
+      "strength": 0.6928,
+      "bands": {
+        "low": 0.243,
+        "mid": 0.432,
+        "high": 0.324
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p119",
+      "time": 25.5448,
+      "nearest_beat": 58.5,
+      "snap_error_ms": -4.2,
+      "strength": 0.6833,
+      "bands": {
+        "low": 0.243,
+        "mid": 0.432,
+        "high": 0.324
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m117",
+      "time": 25.7652,
+      "nearest_beat": 59.0,
+      "snap_error_ms": -1.3,
+      "strength": 0.9132,
+      "bands": {
+        "low": 0.184,
+        "mid": 0.115,
+        "high": 0.7
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p120",
+      "time": 25.7662,
+      "nearest_beat": 59.0,
+      "snap_error_ms": -0.3,
+      "strength": 0.9635,
+      "bands": {
+        "low": 0.184,
+        "mid": 0.115,
+        "high": 0.7
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m118",
+      "time": 25.9935,
+      "nearest_beat": 59.5,
+      "snap_error_ms": 9.5,
+      "strength": 0.2001,
+      "bands": {
+        "low": 0.218,
+        "mid": 0.099,
+        "high": 0.683
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p121",
+      "time": 25.9953,
+      "nearest_beat": 59.5,
+      "snap_error_ms": 11.3,
+      "strength": 0.2708,
+      "bands": {
+        "low": 0.218,
+        "mid": 0.099,
+        "high": 0.683
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m119",
+      "time": 26.1949,
+      "nearest_beat": 60.0,
+      "snap_error_ms": -6.5,
+      "strength": 0.7766,
+      "bands": {
+        "low": 0.218,
+        "mid": 0.378,
+        "high": 0.404
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p122",
+      "time": 26.1952,
+      "nearest_beat": 60.0,
+      "snap_error_ms": -6.2,
+      "strength": 0.8621,
+      "bands": {
+        "low": 0.218,
+        "mid": 0.378,
+        "high": 0.404
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m120",
+      "time": 26.4222,
+      "nearest_beat": 60.5,
+      "snap_error_ms": 3.3,
+      "strength": 0.3458,
+      "bands": {
+        "low": 0.217,
+        "mid": 0.096,
+        "high": 0.688
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p123",
+      "time": 26.4224,
+      "nearest_beat": 60.5,
+      "snap_error_ms": 3.6,
+      "strength": 0.3806,
+      "bands": {
+        "low": 0.217,
+        "mid": 0.096,
+        "high": 0.688
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m121",
+      "time": 26.6276,
+      "nearest_beat": 61.0,
+      "snap_error_ms": -8.7,
+      "strength": 0.6585,
+      "bands": {
+        "low": 0.223,
+        "mid": 0.403,
+        "high": 0.374
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p124",
+      "time": 26.63,
+      "nearest_beat": 61.0,
+      "snap_error_ms": -6.3,
+      "strength": 0.7208,
+      "bands": {
+        "low": 0.223,
+        "mid": 0.403,
+        "high": 0.374
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p125",
+      "time": 26.849,
+      "nearest_beat": 61.5,
+      "snap_error_ms": -4.8,
+      "strength": 0.3172,
+      "bands": {
+        "low": 0.203,
+        "mid": 0.288,
+        "high": 0.51
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m122",
+      "time": 26.8503,
+      "nearest_beat": 61.5,
+      "snap_error_ms": -3.6,
+      "strength": 0.3151,
+      "bands": {
+        "low": 0.203,
+        "mid": 0.288,
+        "high": 0.51
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p126",
+      "time": 27.0656,
+      "nearest_beat": 62.0,
+      "snap_error_ms": -5.7,
+      "strength": 0.5153,
+      "bands": {
+        "low": 0.167,
+        "mid": 0.286,
+        "high": 0.548
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m123",
+      "time": 27.0656,
+      "nearest_beat": 62.0,
+      "snap_error_ms": -5.7,
+      "strength": 0.5018,
+      "bands": {
+        "low": 0.167,
+        "mid": 0.286,
+        "high": 0.548
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m124",
+      "time": 27.2873,
+      "nearest_beat": 62.5,
+      "snap_error_ms": -1.5,
+      "strength": 0.2809,
+      "bands": {
+        "low": 0.242,
+        "mid": 0.39,
+        "high": 0.368
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p127",
+      "time": 27.2874,
+      "nearest_beat": 62.5,
+      "snap_error_ms": -1.4,
+      "strength": 0.2945,
+      "bands": {
+        "low": 0.242,
+        "mid": 0.39,
+        "high": 0.368
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m125",
+      "time": 27.5022,
+      "nearest_beat": 63.0,
+      "snap_error_ms": -4.0,
+      "strength": 0.9239,
+      "bands": {
+        "low": 0.152,
+        "mid": 0.194,
+        "high": 0.655
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p128",
+      "time": 27.5046,
+      "nearest_beat": 63.0,
+      "snap_error_ms": -1.6,
+      "strength": 0.9697,
+      "bands": {
+        "low": 0.152,
+        "mid": 0.194,
+        "high": 0.655
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m126",
+      "time": 27.7297,
+      "nearest_beat": 63.5,
+      "snap_error_ms": 6.0,
+      "strength": 0.1596,
+      "bands": {
+        "low": 0.094,
+        "mid": 0.205,
+        "high": 0.701
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p129",
+      "time": 27.7313,
+      "nearest_beat": 63.5,
+      "snap_error_ms": 7.6,
+      "strength": 0.2134,
+      "bands": {
+        "low": 0.092,
+        "mid": 0.184,
+        "high": 0.724
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p130",
+      "time": 27.9363,
+      "nearest_beat": 64.0,
+      "snap_error_ms": -4.9,
+      "strength": 0.5077,
+      "bands": {
+        "low": 0.115,
+        "mid": 0.213,
+        "high": 0.672
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m127",
+      "time": 27.9363,
+      "nearest_beat": 64.0,
+      "snap_error_ms": -4.8,
+      "strength": 0.4728,
+      "bands": {
+        "low": 0.115,
+        "mid": 0.213,
+        "high": 0.672
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m128",
+      "time": 28.1503,
+      "nearest_beat": 64.5,
+      "snap_error_ms": -8.3,
+      "strength": 0.6315,
+      "bands": {
+        "low": 0.231,
+        "mid": 0.43,
+        "high": 0.339
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p131",
+      "time": 28.1515,
+      "nearest_beat": 64.5,
+      "snap_error_ms": -7.1,
+      "strength": 0.713,
+      "bands": {
+        "low": 0.231,
+        "mid": 0.43,
+        "high": 0.339
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p132",
+      "time": 28.3677,
+      "nearest_beat": 65.0,
+      "snap_error_ms": -8.4,
+      "strength": 0.4822,
+      "bands": {
+        "low": 0.227,
+        "mid": 0.236,
+        "high": 0.537
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m129",
+      "time": 28.3685,
+      "nearest_beat": 65.0,
+      "snap_error_ms": -7.6,
+      "strength": 0.4421,
+      "bands": {
+        "low": 0.227,
+        "mid": 0.236,
+        "high": 0.537
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p133",
+      "time": 28.5874,
+      "nearest_beat": 65.5,
+      "snap_error_ms": -6.2,
+      "strength": 0.3388,
+      "bands": {
+        "low": 0.302,
+        "mid": 0.205,
+        "high": 0.493
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m130",
+      "time": 28.5877,
+      "nearest_beat": 65.5,
+      "snap_error_ms": -5.9,
+      "strength": 0.3284,
+      "bands": {
+        "low": 0.302,
+        "mid": 0.205,
+        "high": 0.493
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p134",
+      "time": 28.8039,
+      "nearest_beat": 66.0,
+      "snap_error_ms": -7.2,
+      "strength": 0.4929,
+      "bands": {
+        "low": 0.169,
+        "mid": 0.121,
+        "high": 0.71
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m131",
+      "time": 28.8042,
+      "nearest_beat": 66.0,
+      "snap_error_ms": -6.9,
+      "strength": 0.5064,
+      "bands": {
+        "low": 0.169,
+        "mid": 0.121,
+        "high": 0.71
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m132",
+      "time": 29.0189,
+      "nearest_beat": 66.5,
+      "snap_error_ms": -9.6,
+      "strength": 0.6132,
+      "bands": {
+        "low": 0.212,
+        "mid": 0.492,
+        "high": 0.296
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p135",
+      "time": 29.0205,
+      "nearest_beat": 66.5,
+      "snap_error_ms": -8.0,
+      "strength": 0.6559,
+      "bands": {
+        "low": 0.28,
+        "mid": 0.423,
+        "high": 0.297
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m133",
+      "time": 29.2405,
+      "nearest_beat": 67.0,
+      "snap_error_ms": -5.5,
+      "strength": 0.784,
+      "bands": {
+        "low": 0.201,
+        "mid": 0.104,
+        "high": 0.695
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p136",
+      "time": 29.2445,
+      "nearest_beat": 67.0,
+      "snap_error_ms": -1.5,
+      "strength": 0.8483,
+      "bands": {
+        "low": 0.201,
+        "mid": 0.104,
+        "high": 0.695
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m134",
+      "time": 29.4603,
+      "nearest_beat": 67.5,
+      "snap_error_ms": -3.2,
+      "strength": 0.3669,
+      "bands": {
+        "low": 0.221,
+        "mid": 0.316,
+        "high": 0.464
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p137",
+      "time": 29.4609,
+      "nearest_beat": 67.5,
+      "snap_error_ms": -2.5,
+      "strength": 0.4609,
+      "bands": {
+        "low": 0.273,
+        "mid": 0.331,
+        "high": 0.396
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m135",
+      "time": 29.6758,
+      "nearest_beat": 68.0,
+      "snap_error_ms": -5.1,
+      "strength": 0.479,
+      "bands": {
+        "low": 0.165,
+        "mid": 0.122,
+        "high": 0.713
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p138",
+      "time": 29.6766,
+      "nearest_beat": 68.0,
+      "snap_error_ms": -4.3,
+      "strength": 0.5141,
+      "bands": {
+        "low": 0.165,
+        "mid": 0.122,
+        "high": 0.713
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m136",
+      "time": 29.9002,
+      "nearest_beat": 68.5,
+      "snap_error_ms": 1.8,
+      "strength": 0.1714,
+      "bands": {
+        "low": 0.259,
+        "mid": 0.156,
+        "high": 0.585
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p139",
+      "time": 29.9015,
+      "nearest_beat": 68.5,
+      "snap_error_ms": 3.1,
+      "strength": 0.1833,
+      "bands": {
+        "low": 0.201,
+        "mid": 0.131,
+        "high": 0.668
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m137",
+      "time": 30.1069,
+      "nearest_beat": 69.0,
+      "snap_error_ms": -9.0,
+      "strength": 0.7341,
+      "bands": {
+        "low": 0.184,
+        "mid": 0.402,
+        "high": 0.413
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p140",
+      "time": 30.1077,
+      "nearest_beat": 69.0,
+      "snap_error_ms": -8.2,
+      "strength": 0.8064,
+      "bands": {
+        "low": 0.184,
+        "mid": 0.402,
+        "high": 0.413
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m138",
+      "time": 30.3244,
+      "nearest_beat": 69.5,
+      "snap_error_ms": -9.0,
+      "strength": 0.5925,
+      "bands": {
+        "low": 0.319,
+        "mid": 0.374,
+        "high": 0.306
+      },
+      "source": "mix_full",
+      "sustain": true,
+      "sustain_beats": 1.31
+    },
+    {
+      "id": "p141",
+      "time": 30.3245,
+      "nearest_beat": 69.5,
+      "snap_error_ms": -8.9,
+      "strength": 0.7172,
+      "bands": {
+        "low": 0.319,
+        "mid": 0.374,
+        "high": 0.306
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "time": 30.3717,
+      "nearest_beat": 69.5,
+      "snap_error_ms": 38.4,
+      "strength": 0.4226,
+      "bands": {
+        "low": 0.507,
+        "mid": 0.242,
+        "high": 0.251
+      },
+      "source": "harmonic_sustain",
+      "sustain": true,
+      "sustain_beats": 1.39,
+      "id": "s015"
+    },
+    {
+      "id": "p142",
+      "time": 30.5448,
+      "nearest_beat": 70.0,
+      "snap_error_ms": -6.0,
+      "strength": 0.4076,
+      "bands": {
+        "low": 0.334,
+        "mid": 0.233,
+        "high": 0.433
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m139",
+      "time": 30.545,
+      "nearest_beat": 70.0,
+      "snap_error_ms": -5.8,
+      "strength": 0.4117,
+      "bands": {
+        "low": 0.334,
+        "mid": 0.233,
+        "high": 0.433
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p143",
+      "time": 30.763,
+      "nearest_beat": 70.5,
+      "snap_error_ms": -5.3,
+      "strength": 0.2615,
+      "bands": {
+        "low": 0.347,
+        "mid": 0.288,
+        "high": 0.365
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m140",
+      "time": 30.7636,
+      "nearest_beat": 70.5,
+      "snap_error_ms": -4.7,
+      "strength": 0.2676,
+      "bands": {
+        "low": 0.347,
+        "mid": 0.288,
+        "high": 0.365
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m141",
+      "time": 30.9789,
+      "nearest_beat": 71.0,
+      "snap_error_ms": -6.9,
+      "strength": 0.9009,
+      "bands": {
+        "low": 0.203,
+        "mid": 0.175,
+        "high": 0.622
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p144",
+      "time": 30.9817,
+      "nearest_beat": 71.0,
+      "snap_error_ms": -4.0,
+      "strength": 0.8167,
+      "bands": {
+        "low": 0.195,
+        "mid": 0.137,
+        "high": 0.668
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m142",
+      "time": 31.2087,
+      "nearest_beat": 71.5,
+      "snap_error_ms": 5.5,
+      "strength": 0.1715,
+      "bands": {
+        "low": 0.099,
+        "mid": 0.223,
+        "high": 0.678
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p145",
+      "time": 31.2101,
+      "nearest_beat": 71.5,
+      "snap_error_ms": 6.9,
+      "strength": 0.2178,
+      "bands": {
+        "low": 0.099,
+        "mid": 0.223,
+        "high": 0.678
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p146",
+      "time": 31.4151,
+      "nearest_beat": 72.0,
+      "snap_error_ms": -5.6,
+      "strength": 0.4942,
+      "bands": {
+        "low": 0.089,
+        "mid": 0.198,
+        "high": 0.713
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m143",
+      "time": 31.4151,
+      "nearest_beat": 72.0,
+      "snap_error_ms": -5.6,
+      "strength": 0.4647,
+      "bands": {
+        "low": 0.089,
+        "mid": 0.198,
+        "high": 0.713
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p147",
+      "time": 31.629,
+      "nearest_beat": 72.5,
+      "snap_error_ms": -9.1,
+      "strength": 0.7274,
+      "bands": {
+        "low": 0.212,
+        "mid": 0.463,
+        "high": 0.325
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m144",
+      "time": 31.6291,
+      "nearest_beat": 72.5,
+      "snap_error_ms": -9.1,
+      "strength": 0.6594,
+      "bands": {
+        "low": 0.212,
+        "mid": 0.463,
+        "high": 0.325
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p148",
+      "time": 31.8484,
+      "nearest_beat": 73.0,
+      "snap_error_ms": -7.2,
+      "strength": 0.5057,
+      "bands": {
+        "low": 0.34,
+        "mid": 0.175,
+        "high": 0.485
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m145",
+      "time": 31.8486,
+      "nearest_beat": 73.0,
+      "snap_error_ms": -7.1,
+      "strength": 0.4686,
+      "bands": {
+        "low": 0.34,
+        "mid": 0.175,
+        "high": 0.485
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m146",
+      "time": 32.0611,
+      "nearest_beat": 73.5,
+      "snap_error_ms": -12.0,
+      "strength": 0.552,
+      "bands": {
+        "low": 0.348,
+        "mid": 0.377,
+        "high": 0.274
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p149",
+      "time": 32.0619,
+      "nearest_beat": 73.5,
+      "snap_error_ms": -11.2,
+      "strength": 0.5973,
+      "bands": {
+        "low": 0.348,
+        "mid": 0.377,
+        "high": 0.274
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p150",
+      "time": 32.2842,
+      "nearest_beat": 74.0,
+      "snap_error_ms": -6.4,
+      "strength": 0.4454,
+      "bands": {
+        "low": 0.273,
+        "mid": 0.104,
+        "high": 0.623
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m147",
+      "time": 32.285,
+      "nearest_beat": 74.0,
+      "snap_error_ms": -5.6,
+      "strength": 0.4501,
+      "bands": {
+        "low": 0.273,
+        "mid": 0.104,
+        "high": 0.623
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "m148",
+      "time": 32.4969,
+      "nearest_beat": 74.5,
+      "snap_error_ms": -11.1,
+      "strength": 0.6542,
+      "bands": {
+        "low": 0.26,
+        "mid": 0.419,
+        "high": 0.321
+      },
+      "source": "mix_full",
+      "sustain": false,
+      "sustain_beats": 0.0
+    },
+    {
+      "id": "p151",
+      "time": 32.4978,
+      "nearest_beat": 74.5,
+      "snap_error_ms": -10.3,
+      "strength": 0.6888,
+      "bands": {
+        "low": 0.26,
+        "mid": 0.419,
+        "high": 0.321
+      },
+      "source": "mix_perc",
+      "sustain": false,
+      "sustain_beats": 0.0
+    }
+  ],
+  "sustain_available": 25,
+  "sections": [
+    {
+      "name": "S0",
+      "start_bar": 0,
+      "end_bar": 2,
+      "energy_pct": 0.857,
+      "role_guess": "intro",
+      "heuristic": true
+    },
+    {
+      "name": "S1",
+      "start_bar": 2,
+      "end_bar": 3,
+      "energy_pct": 1.0,
+      "role_guess": "drop",
+      "heuristic": true
+    },
+    {
+      "name": "S2",
+      "start_bar": 3,
+      "end_bar": 11,
+      "energy_pct": 0.872,
+      "role_guess": "drop",
+      "heuristic": true
+    },
+    {
+      "name": "S3",
+      "start_bar": 11,
+      "end_bar": 18,
+      "energy_pct": 0.786,
+      "role_guess": "drop",
+      "heuristic": true
+    },
+    {
+      "name": "S4",
+      "start_bar": 18,
+      "end_bar": 19,
+      "energy_pct": 0.958,
+      "role_guess": "outro",
+      "heuristic": true
+    }
+  ],
+  "energy_curve": [
+    0.8653,
+    0.848,
+    1.0,
+    0.8218,
+    0.8347,
+    0.9297,
+    0.8526,
+    0.8288,
+    0.9137,
+    0.8424,
+    0.9553,
+    0.7417,
+    0.7932,
+    0.8113,
+    0.7806,
+    0.7302,
+    0.8459,
+    0.8011,
+    0.9584
+  ],
+  "energy_cv": 0.0834,
+  "cache_key": "a2a518857b969bae-local_dsp_v1",
+  "track_id": "neon",
+  "job_meta": {
+    "backend": "local",
+    "beat_backend": "local_dsp",
+    "stem_source": "none",
+    "wall_clock_s": 1.13,
+    "gpu": null,
+    "note": "LocalCpuBackend: numpy/scipy DSP, HPSS-only, no stems (reduced fidelity vs Colab Demucs+madmom path)."
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "track_id": "neon",
+  "difficulty": "standard",
+  "attempts": 1,
+  "metrics": {
+    "difficulty": "standard",
+    "event_count": 80,
+    "onset_events": 80,
+    "grid_events": 0,
+    "onset_alignment": 1.0,
+    "lane_share": {
+      "GAP": 0.3125,
+      "BAR": 0.375,
+      "NOTE": 0.3125
+    },
+    "hold_share": 0.0625,
+    "sustain_available": 25,
+    "peak_nps_4s": 3.75,
+    "peak_nps_window_s": [
+      11.41,
+      15.41
+    ],
+    "repaired": 0,
+    "repaired_fraction": 0.0,
+    "dropped": {
+      "window": 0,
+      "grid": 0,
+      "snap": 0
+    },
+    "per_bar_counts": [
+      0,
+      4,
+      5,
+      4,
+      4,
+      4,
+      5,
+      6,
+      7,
+      3,
+      4,
+      3,
+      6,
+      6,
+      4,
+      7,
+      4,
+      4,
+      0
+    ],
+    "density_energy": {
+      "spearman": -0.2086,
+      "peak_in_top_section": false,
+      "breathes": false
+    },
+    "usable_sustains": 25,
+    "flat_track_exempt": true,
+    "gates": {
+      "onset_alignment": true,
+      "lane_balance": true,
+      "hold_share": true,
+      "nps": true,
+      "repaired": true,
+      "density_spearman": true,
+      "density_peak": true,
+      "density_breathes": true
+    }
+  },
+  "critic": {
+    "score": 9,
+    "verdict": "An exceptionally well-polished, highly rhythmic, and musical chart that perfectly fits the synthwave style.",
+    "issues": [
+      {
+        "where": "bar 18 / 31.4s+",
+        "problem": "The defined outro section is completely empty, which can make the chart end anticlimactically instead of having a sustained fade-out note.",
+        "severity": "low"
+      },
+      {
+        "where": "bar 1 / 2.5s",
+        "problem": "Introducing a 2-beat hold on GAP (Left) with an independent tap on BAR (Center) at 3.15s is a slightly steep coordination requirement for early Standard difficulty.",
+        "severity": "low"
+      }
+    ]
+  },
+  "repairs": [],
+  "design_notes": "For Section S0 and S1, we introduce the track with a sparse, high-impact pattern that respects standard difficulty pacing, eliminating the dense 7-note zig-zag from the previous build. In Section S2, we completely revamped the beat 26-35 loop sequence into an expressive, non-repetitive flow mapping pitch contour and beat emphasis across all lanes. Section S3 received similar care: we restructured the beats 45-56 sequence to break out of its rigid loop, offering sweeping transitions that adapt to the changing chords. Finally, the beat 61-64 trill has been replaced with a smooth wave pattern that elegantly incorporates the center BAR lane, ensuring a natural, rewarding performance standard.",
+  "design_sections": [
+    {
+      "name": "S0",
+      "start_bar": 0,
+      "intent": "A light introduction to establish the synth beat and baseline pacing."
+    },
+    {
+      "name": "S1",
+      "start_bar": 2,
+      "intent": "A streamlined transition into the main energy section."
+    },
+    {
+      "name": "S2",
+      "start_bar": 3,
+      "intent": "The primary drop section, utilizing varied sweeping lanes to highlight melody lines."
+    },
+    {
+      "name": "S3",
+      "start_bar": 11,
+      "intent": "A highly active secondary phrase where the lane patterns breathe and shift logically."
+    },
+    {
+      "name": "S4",
+      "start_bar": 18,
+      "intent": "A clean final outro note to resolve the rhythm path."
+    }
+  ],
+  "previews": {
+    "click": "/Users/fterry/.foreman/worktrees/FRM-1041/build/analysis/neon_nights.standard.preview.ogg"
+  },
+  "map_path": "public/maps/neon_nights.standard.beatmap.json"
+}

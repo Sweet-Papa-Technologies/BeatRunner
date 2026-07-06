@@ -1,14 +1,23 @@
 import Phaser from "phaser";
 import { AudioEngine } from "../audio/AudioEngine";
 import { TRACKS } from "../game/tracks";
+import type { Difficulty } from "../game/tracks";
 import { VIEW } from "../game/config";
 import { ambientSparkles, spawnStreak, shockwave, sparkleBurst } from "../game/fx";
+
+const DIFFICULTIES: { key: Difficulty; label: string; color: number }[] = [
+  { key: "casual", label: "CASUAL", color: 0x2de2e6 },
+  { key: "standard", label: "STANDARD", color: 0xffd23c },
+  { key: "overdrive", label: "OVERDRIVE", color: 0xff2d95 },
+];
 
 /** Title + track picker. Selecting a card is the user gesture that unlocks audio. */
 export class TrackSelectScene extends Phaser.Scene {
   private selected = 0;
   private cards: Phaser.GameObjects.Container[] = [];
   private choosing = false;
+  private difficulty = 1; // index into DIFFICULTIES; default Standard
+  private diffChips: Phaser.GameObjects.Container[] = [];
 
   constructor() {
     super("TrackSelect");
@@ -41,7 +50,9 @@ export class TrackSelectScene extends Phaser.Scene {
       this.cards.push(card);
     });
 
-    this.add.text(VIEW.width / 2, 640, "◀ ▶ to choose   •   ENTER / tap to play", {
+    this.buildDifficultyPicker(596);
+
+    this.add.text(VIEW.width / 2, 664, "◀ ▶ choose track   •   1 / 2 / 3 or ▲ ▼ difficulty   •   ENTER / tap to play", {
       fontFamily: "system-ui, sans-serif", fontSize: "20px", color: "#ffffff",
     }).setOrigin(0.5).setAlpha(0.7);
 
@@ -49,8 +60,51 @@ export class TrackSelectScene extends Phaser.Scene {
 
     this.input.keyboard?.on("keydown-LEFT", () => this.move(-1));
     this.input.keyboard?.on("keydown-RIGHT", () => this.move(1));
+    this.input.keyboard?.on("keydown-UP", () => this.setDifficulty(this.difficulty - 1));
+    this.input.keyboard?.on("keydown-DOWN", () => this.setDifficulty(this.difficulty + 1));
+    this.input.keyboard?.on("keydown-ONE", () => this.setDifficulty(0));
+    this.input.keyboard?.on("keydown-TWO", () => this.setDifficulty(1));
+    this.input.keyboard?.on("keydown-THREE", () => this.setDifficulty(2));
     this.input.keyboard?.on("keydown-ENTER", () => this.choose(this.selected));
     this.input.keyboard?.on("keydown-SPACE", () => this.choose(this.selected));
+  }
+
+  private buildDifficultyPicker(y: number): void {
+    const chipW = 190, gap = 210;
+    const startX = VIEW.width / 2 - gap;
+    DIFFICULTIES.forEach((d, i) => {
+      const bg = this.add.graphics();
+      const draw = (active: boolean) => {
+        bg.clear();
+        bg.fillStyle(active ? d.color : 0x0c0824, active ? 0.28 : 0.85);
+        bg.fillRoundedRect(-chipW / 2, -20, chipW, 40, 12);
+        bg.lineStyle(active ? 3 : 2, d.color, active ? 1 : 0.55);
+        bg.strokeRoundedRect(-chipW / 2, -20, chipW, 40, 12);
+      };
+      draw(i === this.difficulty);
+      const label = this.add.text(0, 0, d.label, {
+        fontFamily: "system-ui, sans-serif", fontSize: "18px",
+        color: i === this.difficulty ? "#ffffff" : "#b9a9ff", fontStyle: "bold",
+      }).setOrigin(0.5);
+      const chip = this.add.container(startX + i * gap, y, [bg, label]);
+      chip.setSize(chipW, 40);
+      chip.setInteractive(new Phaser.Geom.Rectangle(-chipW / 2, -20, chipW, 40), Phaser.Geom.Rectangle.Contains);
+      chip.on("pointerdown", () => this.setDifficulty(i));
+      chip.setData("draw", draw);
+      chip.setData("label", label);
+      this.diffChips.push(chip);
+    });
+  }
+
+  private setDifficulty(idx: number): void {
+    this.difficulty = Phaser.Math.Wrap(idx, 0, DIFFICULTIES.length);
+    this.diffChips.forEach((chip, i) => {
+      const active = i === this.difficulty;
+      (chip.getData("draw") as (a: boolean) => void)(active);
+      (chip.getData("label") as Phaser.GameObjects.Text)
+        .setColor(active ? "#ffffff" : "#b9a9ff");
+      this.tweens.add({ targets: chip, scale: active ? 1.08 : 1, duration: 140, ease: "Back.out" });
+    });
   }
 
   private makeCard(
@@ -116,7 +170,7 @@ export class TrackSelectScene extends Phaser.Scene {
     this.cameras.main.flash(160, 40, 20, 60);
     this.cameras.main.fadeOut(260, 0, 0, 0);
     this.cameras.main.once("camerafadeoutcomplete", () => {
-      this.scene.start("Play", { trackId: track.id });
+      this.scene.start("Play", { trackId: track.id, difficulty: DIFFICULTIES[this.difficulty].key });
     });
   }
 }

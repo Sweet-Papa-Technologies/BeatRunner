@@ -1,0 +1,30 @@
+{
+  "track_id": "neon",
+  "bpm": 137.95,
+  "offset": 0.105,
+  "stem_source": "none",
+  "beat_backend": "local_dsp",
+  "charts": {
+    "casual": {
+      "events": 22,
+      "attempts": 2,
+      "critic_score": 9,
+      "gates_pass": true,
+      "map": "public/maps/neon_nights.casual.beatmap.json"
+    },
+    "standard": {
+      "events": 80,
+      "attempts": 1,
+      "critic_score": 9,
+      "gates_pass": true,
+      "map": "public/maps/neon_nights.standard.beatmap.json"
+    },
+    "overdrive": {
+      "events": 91,
+      "attempts": 1,
+      "critic_score": 6,
+      "gates_pass": true,
+      "map": "public/maps/neon_nights.overdrive.beatmap.json"
+    }
+  }
+}

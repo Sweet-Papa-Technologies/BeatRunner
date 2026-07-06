@@ -1,0 +1,63 @@
+{
+  "design_notes": "S0 introduces the core rhythm of the synthwave groove with a comfortable, sparse tapping pattern that alternates outer lanes to build initial player familiarity. S1 represents the track's climatic drop where we suddenly increase density to 1-beat intervals, mapping a driving sequence that flows smoothly into a 2-beat hold on the center lane. S2 winds down the experience during the outro, providing a satisfying resolution with alternating taps that let the energy breathe.",
+  "sections": [
+    {
+      "name": "S0",
+      "start_bar": 0,
+      "intent": "intro"
+    },
+    {
+      "name": "S1",
+      "start_bar": 15,
+      "intent": "drop"
+    },
+    {
+      "name": "S2",
+      "start_bar": 16,
+      "intent": "outro"
+    }
+  ],
+  "events": [
+    {
+      "ref": "p009",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p025",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p041",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p073",
+      "lane": "BAR"
+    },
+    {
+      "ref": "p105",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p121",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p123",
+      "lane": "GAP"
+    },
+    {
+      "ref": "m125",
+      "lane": "BAR",
+      "hold_beats": 2
+    },
+    {
+      "ref": "m129",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p136",
+      "lane": "GAP"
+    }
+  ]
+}

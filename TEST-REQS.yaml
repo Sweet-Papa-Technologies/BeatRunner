@@ -139,3 +139,79 @@ requirements:
       - "before track end tick() stays Playing"
       - "calling tick() again after end stays Results and does not re-fire"
       - "isEnded() true only after Results reached"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# BEATFORGE (IMPROVE.MD) — music-aware chart pipeline. Traced to pytest under
+# tools/beatforge/tests/ (all offline via InMemoryBackend + synthetic clips; no
+# Colab runtime is ever provisioned). Node parseBeatmap round-trip is the
+# cross-language schema contract (REQ-VAL-01).
+module: tools/beatforge
+requirements:
+  REQ-DSP-02:
+    title: Tempo octave/metre disambiguation
+    rule: "evaluate {T/2..2T}, score by grid alignment × perceptual prior; pick the true octave"
+    intents:
+      - "test_dsp.py::test_tempo_disambiguation_resolves_true_octave — 120-BPM click -> ~120 not 60/240"
+      - "test_dsp.py::test_tempo_disambiguation_offbeat_track — 90-BPM click stays in band"
+      - "score table emitted with exactly one chosen candidate"
+  REQ-DSP-03:
+    title: Onset snap / offset fit
+    rule: ">=85% of percussive onsets within ±35ms of a grid line; nearest_beat reproduces time"
+    intents:
+      - "test_dsp.py::test_onset_snap_within_tolerance"
+  REQ-DSP-04:
+    title: Onset inventory with IDs
+    intents:
+      - "test_dsp.py::test_onset_count_sanity"
+      - "test_dsp.py::test_analysis_is_deterministic — byte-identical re-run (REQ-COMPUTE-04)"
+  REQ-CHART-02:
+    title: No raw timestamps
+    rule: "designer references onset ids / grid only; any numeric time field is rejected"
+    intents:
+      - "test_resolve.py::test_rejects_raw_timestamp — {time:12.34} rejected with specific error"
+      - "test_resolve.py::test_rejects_all_time_aliases"
+      - "test_resolve.py::test_hold_on_non_sustain_rejected / test_hold_length_must_match_candidate"
+  REQ-VAL-01:
+    title: Schema parity with src/core/beatmap.ts
+    intents:
+      - "test_validate.py::test_parse_beatmap_sorts_and_dedupes / test_parse_beatmap_rejects_bad_fields"
+      - "check_maps_node.mjs — real parseBeatmap parses every emitted map"
+  REQ-VAL-02:
+    title: Grid & snap integrity
+    intents:
+      - "test_validate.py::test_drops_events_outside_playable_window"
+      - "test_validate.py::test_drops_illegal_subdivision / test_drops_bad_snap_onsets"
+  REQ-VAL-03:
+    title: Ergonomic lint + salience repair
+    rule: "enforce budget table; remove lowest-salience offenders; >15% repaired -> fail"
+    intents:
+      - "test_validate.py::test_chord_same_beat_dedupe_keeps_strongest"
+      - "test_validate.py::test_jack_limit_repaired / test_nps_burst_repaired"
+      - "test_validate.py::test_tap_during_hold_repaired / test_repair_exceeded_triggers_failure"
+      - "test_validate.py::test_hold_length_clamped_into_band"
+  REQ-QA-01:
+    title: Objective chart metrics
+    intents:
+      - "test_qa.py::test_metrics_basic_shape / test_onset_alignment_counts_only_onset_events"
+  REQ-QA-02:
+    title: Density follows the music (flat-track exempt)
+    intents:
+      - "test_qa.py::test_flat_track_exempts_density_shape_gates"
+      - "test_qa.py::test_structured_track_enforces_density"
+  REQ-QA-03:
+    title: Structured re-prompt loop
+    intents:
+      - "test_qa.py::test_violation_report_is_machine_readable"
+  REQ-COMPUTE-01:
+    title: Backend abstraction
+    intents:
+      - "test_compute.py::test_inmemory_backend_satisfies_protocol"
+  REQ-COMPUTE-03:
+    title: Teardown & cost hygiene
+    intents:
+      - "test_compute.py::test_colab_teardown_on_exception / test_colab_stop_is_idempotent"
+  REQ-COMPUTE-05:
+    title: Graceful degradation, never silent
+    intents:
+      - "test_compute.py::test_local_backend_stamps_degradation"
+      - "test_compute.py::test_missing_colab_cli_fails_loudly"
