@@ -76,7 +76,9 @@ export class PlayScene extends Phaser.Scene {
   private hero!: Phaser.GameObjects.Sprite;
   private heroAura!: Phaser.GameObjects.Image;
   private heroBaseY = 0;
-  private heroBusy = false;
+  /** Decaying 0..1 impulse: a subtle squash/hop reaction to a hit, driven
+   * procedurally each frame so it never fights the beat-synced bob. */
+  private heroPop = 0;
   private particles!: Phaser.GameObjects.Particles.ParticleEmitter;
   private gridPhase = 0;
   private lastBeatPulsed = -1;
@@ -106,7 +108,7 @@ export class PlayScene extends Phaser.Scene {
     this.paused = false;
     this.lastBeatPulsed = -1;
     this.gridPhase = 0;
-    this.heroBusy = false;
+    this.heroPop = 0;
     this.laneDown = [false, false, false];
     this.pads = [];
     this.padGlows = [];
@@ -213,7 +215,9 @@ export class PlayScene extends Phaser.Scene {
     this.hero = this.add.sprite(150, this.heroBaseY, this.textures.exists("hero_run1") ? "hero_run1" : "hero")
       .setOrigin(0.5, 1).setScale(0.62).setDepth(6);
     if (this.anims.exists("hero-run")) this.hero.play("hero-run");
-    this.tweens.add({ targets: this.hero, y: this.heroBaseY - 8, duration: 320, yoyo: true, repeat: -1, ease: "Sine.inOut" });
+    // NB: no persistent y-bob tween here — the hero is animated procedurally in
+    // updateHero() so beat-bob and hit-reactions never fight competing tweens
+    // (the old tween-on-tween clash was the "sporadic dancer").
 
     this.particles = this.add.particles(0, 0, "spark", {
       lifespan: 560, speed: { min: 90, max: 360 }, scale: { start: 0.8, end: 0 },
@@ -342,6 +346,7 @@ export class PlayScene extends Phaser.Scene {
     this.gridPhase += delta * 0.0011 * (this.beatmap.bpm / 100);
 
     this.updateBeatPulse(songTime);
+    this.updateHero(songTime, delta);
     this.drawGrid(0.85);
     this.updateNotes(songTime);
     this.updateHud(songTime);
@@ -359,10 +364,22 @@ export class PlayScene extends Phaser.Scene {
     this.sunGlow.setScale(accent ? 10.5 : 9.6).setAlpha(accent ? 0.7 : 0.55);
     this.tweens.add({ targets: this.sunGlow, scale: 9, alpha: 0.45, duration: 280, ease: "Quad.out" });
     this.heroAura.setTint(tierColor(this.score.combo));
-    // mascot bob accent
-    if (accent && !this.heroBusy) {
-      this.tweens.add({ targets: this.hero, scaleY: 0.66, duration: 90, yoyo: true, ease: "Quad.out" });
-    }
+  }
+
+  /**
+   * Procedural, beat-synced hero motion. A smooth sine bob locked to the song's
+   * beat phase (so the dancer moves WITH the music), plus a decaying `heroPop`
+   * impulse from recent hits for a subtle squash/hop. No tweens on the hero, so
+   * nothing fights — this replaces the old jittery tween-stack.
+   */
+  private updateHero(songTime: number, delta: number): void {
+    const beatLen = 60 / this.beatmap.bpm;
+    const phase = ((songTime - this.beatmap.offset) / beatLen) % 1; // 0..1 within a beat
+    const bob = Math.sin(phase * Math.PI * 2);        // -1..1 over each beat
+    this.heroPop = Math.max(0, this.heroPop - delta / 180); // decay ~180ms
+    const pop = this.heroPop * this.heroPop;
+    this.hero.y = this.heroBaseY - (bob * 0.5 + 0.5) * 7 - pop * 14; // gentle bob + hop
+    this.hero.setScale(0.62 + pop * 0.05, 0.62 - pop * 0.06);        // subtle squash
   }
 
   private updateNotes(songTime: number): void {
@@ -563,20 +580,11 @@ export class PlayScene extends Phaser.Scene {
     }
   }
 
-  private animateHit(lane: number): void {
-    // mascot reacts on every press
-    const poses = ["hero_jump", "hero_strike", "hero_duck"];
-    const pose = poses[lane];
-    if (!this.heroBusy && this.textures.exists(pose)) {
-      this.heroBusy = true;
-      this.hero.anims.stop();
-      this.hero.setTexture(pose);
-      this.tweens.add({ targets: this.hero, y: this.heroBaseY - 26, duration: 130, yoyo: true, ease: "Quad.out",
-        onComplete: () => {
-          this.heroBusy = false;
-          if (this.anims.exists("hero-run")) this.hero.play("hero-run");
-        } });
-    }
+  private animateHit(_lane: number): void {
+    // Subtle, non-interrupting reaction: fire the decaying pop impulse (consumed
+    // by updateHero). The run animation keeps playing — no texture swap per hit,
+    // which is what made the dancer flicker/jerk on dense charts.
+    this.heroPop = 1;
   }
 
   private flashPad(lane: number, strength: number): void {
@@ -649,6 +657,7 @@ export class PlayScene extends Phaser.Scene {
     const acc = accuracy(this.score);
     const result: RunResult = {
       trackId: this.track.id,
+      difficulty: this.difficulty,
       score: this.score.score,
       maxCombo: this.maxCombo,
       perfects: this.score.perfects,

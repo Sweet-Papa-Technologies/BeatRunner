@@ -117,6 +117,20 @@ def test_tap_during_hold_repaired():
     assert any(e.dur for e in out)
 
 
+def test_tap_on_held_lane_always_removed():
+    """A tap on the SAME lane as an active hold is unplayable and must be removed
+    at every difficulty, even overdrive which otherwise allows taps during holds."""
+    b = config.BUDGETS["overdrive"]  # allows 2 other-lane taps during a hold
+    repairs = []
+    hold = _ev(8.0, "BAR", dur=4.0)
+    same_lane = _ev(9.0, "BAR", sal=0.9)   # tap on the held lane
+    out = _repair_loop([hold, same_lane], b, 120.0, 0.1, repairs)
+    assert any(r["reason"] == "tap_on_held_lane" for r in repairs)
+    # the held lane has no tap inside the hold span anymore
+    inside = [e for e in out if not e.dur and e.type == "BAR" and 8.0 < e.beat < 12.0]
+    assert not inside
+
+
 def test_repair_exceeded_triggers_failure(make_analysis):
     a = make_analysis()
     # everything crammed at illegal subdivisions -> >15% repaired -> raise

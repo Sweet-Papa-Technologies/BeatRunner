@@ -1,218 +1,125 @@
 {
   "track": "sweetpapa_groove.ogg",
   "bpm": 88.002,
-  "offset": 0.649,
+  "offset": 0.122,
   "events": [
     {
       "beat": 4.0,
-      "type": "BAR"
-    },
-    {
-      "beat": 4.5,
-      "type": "GAP"
-    },
-    {
-      "beat": 5.0,
       "type": "NOTE"
-    },
-    {
-      "beat": 5.5,
-      "type": "BAR"
     },
     {
       "beat": 6.0,
       "type": "GAP"
     },
     {
-      "beat": 6.25,
-      "type": "BAR"
-    },
-    {
-      "beat": 6.5,
-      "type": "NOTE"
-    },
-    {
-      "beat": 7.0,
-      "type": "GAP"
-    },
-    {
-      "beat": 7.5,
-      "type": "BAR"
-    },
-    {
       "beat": 8.0,
-      "type": "BAR"
-    },
-    {
-      "beat": 8.5,
-      "type": "GAP"
+      "type": "BAR",
+      "dur": 1.0
     },
     {
       "beat": 9.0,
-      "type": "NOTE"
+      "type": "GAP"
     },
     {
       "beat": 9.5,
-      "type": "BAR"
-    },
-    {
-      "beat": 10.0,
-      "type": "GAP"
-    },
-    {
-      "beat": 10.5,
       "type": "NOTE"
     },
     {
-      "beat": 11.0,
+      "beat": 10.0,
+      "type": "NOTE"
+    },
+    {
+      "beat": 10.5,
       "type": "BAR"
     },
     {
-      "beat": 11.5,
+      "beat": 11.25,
       "type": "GAP"
+    },
+    {
+      "beat": 11.5,
+      "type": "NOTE"
     },
     {
       "beat": 12.0,
       "type": "BAR"
     },
     {
-      "beat": 12.5,
-      "type": "NOTE"
-    },
-    {
-      "beat": 13.0,
-      "type": "GAP"
-    },
-    {
-      "beat": 13.5,
-      "type": "BAR"
-    },
-    {
       "beat": 14.0,
-      "type": "NOTE"
-    },
-    {
-      "beat": 14.5,
-      "type": "GAP"
-    },
-    {
-      "beat": 15.0,
-      "type": "BAR"
-    },
-    {
-      "beat": 15.5,
       "type": "GAP"
     },
     {
       "beat": 16.0,
-      "type": "BAR"
-    },
-    {
-      "beat": 16.5,
-      "type": "NOTE"
+      "type": "BAR",
+      "dur": 1.0
     },
     {
       "beat": 17.0,
-      "type": "GAP"
+      "type": "NOTE"
     },
     {
       "beat": 17.5,
-      "type": "BAR"
+      "type": "GAP"
     },
     {
       "beat": 18.0,
-      "type": "NOTE"
+      "type": "BAR"
     },
     {
       "beat": 18.5,
-      "type": "GAP"
+      "type": "NOTE"
     },
     {
-      "beat": 19.0,
-      "type": "BAR"
+      "beat": 19.25,
+      "type": "GAP"
     },
     {
       "beat": 19.5,
-      "type": "NOTE"
+      "type": "BAR"
     },
     {
       "beat": 20.0,
-      "type": "BAR"
-    },
-    {
-      "beat": 20.5,
       "type": "GAP"
-    },
-    {
-      "beat": 21.0,
-      "type": "NOTE"
-    },
-    {
-      "beat": 21.5,
-      "type": "BAR"
     },
     {
       "beat": 22.0,
-      "type": "GAP"
-    },
-    {
-      "beat": 22.25,
-      "type": "BAR"
-    },
-    {
-      "beat": 22.5,
       "type": "NOTE"
-    },
-    {
-      "beat": 23.0,
-      "type": "GAP"
     },
     {
       "beat": 24.0,
-      "type": "BAR"
+      "type": "BAR",
+      "dur": 1.0
     },
     {
       "beat": 24.5,
-      "type": "NOTE"
+      "type": "GAP"
     },
     {
       "beat": 25.0,
-      "type": "GAP"
+      "type": "NOTE"
     },
     {
       "beat": 25.5,
-      "type": "BAR"
+      "type": "GAP"
     },
     {
       "beat": 26.0,
-      "type": "NOTE"
+      "type": "BAR"
     },
     {
       "beat": 26.5,
-      "type": "GAP"
+      "type": "NOTE"
     },
     {
-      "beat": 27.0,
-      "type": "BAR"
+      "beat": 27.25,
+      "type": "GAP"
     },
     {
       "beat": 27.5,
-      "type": "NOTE"
-    },
-    {
-      "beat": 28.0,
       "type": "BAR"
     },
     {
-      "beat": 28.5,
-      "type": "GAP"
-    },
-    {
-      "beat": 29.0,
-      "type": "NOTE"
-    },
-    {
-      "beat": 29.5,
+      "beat": 28.0,
       "type": "BAR"
     },
     {
@@ -220,111 +127,73 @@
       "type": "GAP"
     },
     {
-      "beat": 30.5,
-      "type": "NOTE"
-    },
-    {
-      "beat": 31.0,
-      "type": "BAR"
-    },
-    {
-      "beat": 31.5,
-      "type": "GAP"
-    },
-    {
       "beat": 32.0,
-      "type": "BAR"
-    },
-    {
-      "beat": 32.5,
-      "type": "NOTE"
+      "type": "BAR",
+      "dur": 1.0
     },
     {
       "beat": 33.0,
-      "type": "GAP"
+      "type": "NOTE"
     },
     {
       "beat": 33.5,
-      "type": "BAR"
+      "type": "GAP"
     },
     {
       "beat": 34.0,
-      "type": "NOTE"
+      "type": "BAR"
     },
     {
       "beat": 34.5,
-      "type": "GAP"
+      "type": "NOTE"
     },
     {
-      "beat": 35.0,
-      "type": "BAR"
+      "beat": 35.25,
+      "type": "GAP"
     },
     {
       "beat": 35.5,
-      "type": "NOTE"
+      "type": "BAR"
     },
     {
       "beat": 36.0,
-      "type": "BAR"
-    },
-    {
-      "beat": 36.5,
       "type": "GAP"
-    },
-    {
-      "beat": 37.0,
-      "type": "NOTE"
-    },
-    {
-      "beat": 37.5,
-      "type": "BAR"
     },
     {
       "beat": 38.0,
-      "type": "GAP"
-    },
-    {
-      "beat": 38.25,
-      "type": "BAR"
-    },
-    {
-      "beat": 38.5,
       "type": "NOTE"
     },
     {
       "beat": 39.0,
-      "type": "GAP"
-    },
-    {
-      "beat": 39.5,
       "type": "BAR"
     },
     {
       "beat": 40.0,
-      "type": "BAR"
-    },
-    {
-      "beat": 40.5,
-      "type": "NOTE"
+      "type": "BAR",
+      "dur": 1.0
     },
     {
       "beat": 41.0,
-      "type": "GAP"
-    },
-    {
-      "beat": 41.5,
-      "type": "BAR"
-    },
-    {
-      "beat": 42.0,
       "type": "NOTE"
     },
     {
-      "beat": 42.5,
+      "beat": 41.5,
       "type": "GAP"
     },
     {
+      "beat": 42.0,
+      "type": "BAR"
+    },
+    {
+      "beat": 42.5,
+      "type": "NOTE"
+    },
+    {
       "beat": 43.0,
+      "type": "GAP"
+    },
+    {
+      "beat": 43.25,
       "type": "BAR"
     },
     {
@@ -336,12 +205,8 @@
       "type": "BAR"
     },
     {
-      "beat": 44.5,
-      "type": "GAP"
-    },
-    {
       "beat": 45.0,
-      "type": "NOTE"
+      "type": "GAP"
     }
   ]
 }

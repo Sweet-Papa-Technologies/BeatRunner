@@ -1,26 +1,26 @@
 {
-  "design_notes": "S0 introduces the beat with sparse kicks on the BAR lane and snares on NOTE, building familiarity with the 88 BPM tempo using simple downbeats before a brief sweep leads into the drop. S1 increases density during the high-energy drop, utilizing a steady BAR-kick backbone interspersed with quick GAP/NOTE snare alternations on 0.5-beat subdivisions to emulate synthwave propulsion. S2 guides the player through the outro wind-down, maintaining the core kick-and-snare flow but gradually spacing out the offbeat hits to let the rhythm breathe as the track resolves.",
+  "design_notes": "The chart mimics the alternating energy landscape of the synthwave track. High-energy bars use density spikes with clean 1.0-beat holds on the center lane followed by rapid outer lane taps to capture the melodic synth. To resolve previous pacing issues, the low-energy bars are aggressively thinned out to just two sparsely-spaced taps per bar, allowing the chart to breathe naturally in perfect sync with the energy curve.",
   "sections": [
     {
-      "name": "S0",
+      "name": "Intro Peak",
       "start_bar": 0,
-      "intent": "intro"
+      "intent": "Introduce the standard speed onsets with a clean alternating layout."
     },
     {
-      "name": "S1",
-      "start_bar": 2,
-      "intent": "drop"
+      "name": "Main Wave",
+      "start_bar": 4,
+      "intent": "Densely mapped high energy bars contrasting with highly thinned low energy breathing spaces."
     },
     {
-      "name": "S2",
-      "start_bar": 6,
-      "intent": "outro"
+      "name": "Outro Wind Down",
+      "start_bar": 10,
+      "intent": "Gradually release intensity with sparse finishing taps."
     }
   ],
   "events": [
     {
-      "ref": "p010",
-      "lane": "BAR"
+      "ref": "p009",
+      "lane": "GAP"
     },
     {
       "ref": "p012",
@@ -35,63 +35,45 @@
       "lane": "GAP"
     },
     {
-      "ref": "p017",
-      "lane": "NOTE"
+      "ref": "m018",
+      "lane": "BAR",
+      "hold_beats": 1.0
     },
     {
-      "ref": "p019",
-      "lane": "BAR"
+      "ref": "p020",
+      "lane": "GAP"
     },
     {
       "ref": "p021",
-      "lane": "GAP"
+      "lane": "NOTE"
     },
     {
       "ref": "p023",
       "lane": "BAR"
     },
     {
-      "ref": "p024",
-      "lane": "NOTE"
-    },
-    {
-      "ref": "p025",
+      "ref": "p026",
       "lane": "GAP"
     },
     {
       "ref": "p027",
-      "lane": "BAR"
-    },
-    {
-      "ref": "p029",
       "lane": "NOTE"
-    },
-    {
-      "ref": "p031",
-      "lane": "BAR"
     },
     {
       "ref": "p032",
       "lane": "GAP"
     },
     {
-      "ref": "p033",
-      "lane": "NOTE"
+      "ref": "m036",
+      "lane": "BAR",
+      "hold_beats": 1.0
     },
     {
-      "ref": "p035",
-      "lane": "BAR"
-    },
-    {
-      "ref": "p037",
+      "ref": "p038",
       "lane": "GAP"
     },
     {
       "ref": "p039",
-      "lane": "BAR"
-    },
-    {
-      "ref": "p040",
       "lane": "NOTE"
     },
     {
@@ -99,7 +81,7 @@
       "lane": "GAP"
     },
     {
-      "ref": "p043",
+      "ref": "p044",
       "lane": "BAR"
     },
     {
@@ -107,43 +89,28 @@
       "lane": "NOTE"
     },
     {
-      "ref": "p047",
-      "lane": "GAP"
-    },
-    {
-      "ref": "p049",
-      "lane": "BAR"
-    },
-    {
       "ref": "p050",
-      "lane": "NOTE"
-    },
-    {
-      "ref": "p051",
-      "lane": "BAR"
-    },
-    {
-      "ref": "p053",
       "lane": "GAP"
     },
     {
-      "ref": "p055",
-      "lane": "BAR"
+      "ref": "m054",
+      "lane": "BAR",
+      "hold_beats": 1.0
     },
     {
       "ref": "p056",
-      "lane": "NOTE"
-    },
-    {
-      "ref": "p057",
       "lane": "GAP"
     },
     {
-      "ref": "p059",
-      "lane": "BAR"
+      "ref": "p057",
+      "lane": "NOTE"
     },
     {
-      "ref": "p061",
+      "ref": "m059",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p062",
       "lane": "NOTE"
     },
     {
@@ -151,55 +118,32 @@
       "lane": "BAR"
     },
     {
-      "ref": "p064",
+      "ref": "p068",
       "lane": "GAP"
     },
     {
-      "ref": "p065",
+      "ref": "m072",
+      "lane": "BAR",
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "p074",
       "lane": "NOTE"
-    },
-    {
-      "ref": "p067",
-      "lane": "BAR"
-    },
-    {
-      "ref": "p069",
-      "lane": "GAP"
-    },
-    {
-      "ref": "p071",
-      "lane": "BAR"
-    },
-    {
-      "ref": "p072",
-      "lane": "NOTE"
-    },
-    {
-      "ref": "p073",
-      "lane": "GAP"
     },
     {
       "ref": "p075",
-      "lane": "BAR"
+      "lane": "GAP"
     },
     {
       "ref": "p077",
       "lane": "NOTE"
     },
     {
-      "ref": "p079",
-      "lane": "BAR"
-    },
-    {
-      "ref": "p081",
+      "ref": "p080",
       "lane": "GAP"
     },
     {
-      "ref": "p082",
-      "lane": "NOTE"
-    },
-    {
-      "ref": "p084",
+      "ref": "m081",
       "lane": "BAR"
     },
     {
@@ -207,24 +151,33 @@
       "lane": "GAP"
     },
     {
-      "ref": "p088",
-      "lane": "BAR"
-    },
-    {
-      "ref": "p089",
-      "lane": "NOTE"
-    },
-    {
-      "ref": "p090",
-      "lane": "GAP"
+      "ref": "m090",
+      "lane": "BAR",
+      "hold_beats": 1.0
     },
     {
       "ref": "p092",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p093",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p095",
+      "lane": "GAP"
+    },
+    {
+      "ref": "p098",
+      "lane": "NOTE"
+    },
+    {
+      "ref": "p099",
       "lane": "BAR"
     },
     {
-      "ref": "p094",
-      "lane": "NOTE"
+      "ref": "p102",
+      "lane": "GAP"
     }
   ]
 }

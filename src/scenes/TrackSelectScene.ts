@@ -24,6 +24,17 @@ export class TrackSelectScene extends Phaser.Scene {
   }
 
   create(): void {
+    // Phaser reuses the scene instance across scene.start(), so instance fields
+    // keep their previous values. Returning from Results left `choosing===true`
+    // (all input dead — "menu gets stuck / buttons don't work") and grew the
+    // cards/chips arrays with destroyed objects. Reset everything on entry, and
+    // clear any keyboard handlers from a prior visit so keys don't double-fire.
+    this.cards = [];
+    this.diffChips = [];
+    this.choosing = false;
+    this.selected = Phaser.Math.Clamp(this.selected, 0, TRACKS.length - 1);
+    this.input.keyboard?.removeAllListeners();
+
     this.cameras.main.fadeIn(300, 0, 0, 0);
     this.add.image(VIEW.width / 2, VIEW.height / 2, "od_sky").setDisplaySize(VIEW.width, VIEW.height);
     this.add.image(VIEW.width / 2, VIEW.height - 150, "od_ridge").setDisplaySize(VIEW.width, 320).setAlpha(0.8);

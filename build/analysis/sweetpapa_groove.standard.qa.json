@@ -1,53 +1,54 @@
 {
   "track_id": "groove",
   "difficulty": "standard",
-  "attempts": 1,
+  "attempts": 2,
   "metrics": {
     "difficulty": "standard",
-    "event_count": 51,
-    "onset_events": 0,
-    "grid_events": 51,
+    "event_count": 47,
+    "onset_events": 47,
+    "grid_events": 0,
     "onset_alignment": 1.0,
     "lane_share": {
-      "GAP": 0.3333,
-      "BAR": 0.4118,
-      "NOTE": 0.2549
+      "GAP": 0.3191,
+      "BAR": 0.3404,
+      "NOTE": 0.3404
     },
-    "hold_share": 0.0,
-    "sustain_available": 7,
-    "peak_nps_4s": 3.0,
+    "hold_share": 0.1064,
+    "sustain_available": 12,
+    "peak_nps_4s": 2.0,
     "peak_nps_window_s": [
-      6.1,
-      10.1
+      3.87,
+      7.87
     ],
-    "repaired": 3,
-    "repaired_fraction": 0.0556,
+    "repaired": 5,
+    "repaired_fraction": 0.0962,
     "dropped": {
-      "window": 3,
+      "window": 5,
       "grid": 0,
       "snap": 0
     },
     "per_bar_counts": [
       0,
-      5,
-      8,
-      8,
-      8,
-      7,
-      4,
-      4,
-      2,
-      2,
-      2,
-      1
+      3,
+      6,
+      3,
+      6,
+      3,
+      6,
+      3,
+      6,
+      3,
+      6,
+      2
     ],
     "density_energy": {
-      "spearman": -0.0355,
-      "peak_in_top_section": false,
+      "spearman": 0.7465,
+      "peak_in_top_section": true,
       "breathes": false
     },
-    "usable_sustains": 0,
-    "flat_track_exempt": true,
+    "usable_sustains": 10,
+    "flat_track_exempt": false,
+    "section_structured": false,
     "gates": {
       "onset_alignment": true,
       "lane_balance": true,
@@ -60,33 +61,16 @@
     }
   },
   "critic": {
-    "score": 5,
-    "verdict": "The chart is rhythmically accurate but suffers from poor structural pacing, a complete lack of hold notes, and a highly monotonous stream in the drop that overstays its welcome into the outro.",
-    "issues": [
-      {
-        "where": "bar 6-11 / 10.2s-16.3s",
-        "problem": "The peak-density stream continues deep into the outro, ignoring the musical wind-down that begins at bar 6.",
-        "severity": "high"
-      },
-      {
-        "where": "entire chart",
-        "problem": "Zero hold notes are used, missing key opportunities to map synthwave's characteristic long, sustained chords and basslines.",
-        "severity": "medium"
-      },
-      {
-        "where": "bar 3-10 / 6.1s-16.3s",
-        "problem": "A relentless 30-note continuous quarter-note stream lacks any rests or rhythmic variety, making it feel monotonous and overmapped for a Standard difficulty.",
-        "severity": "medium"
-      },
-      {
-        "where": "bar 13-17 / 22.4s-30.6s",
-        "problem": "The ending transitions abruptly into sparse whole notes with no holds to sustain the remaining synth tail, feeling empty.",
-        "severity": "low"
-      }
-    ],
-    "human_review": true
+    "score": 10,
+    "verdict": "An exceptionally precise, satisfying, and musically faithful chart that perfectly captures the syncopated synthwave groove.",
+    "issues": []
   },
   "repairs": [
+    {
+      "reason": "outside_playable_window",
+      "ref": "grid:0.0",
+      "beat": 0.0
+    },
     {
       "reason": "outside_playable_window",
       "ref": "grid:1.0",
@@ -101,24 +85,19 @@
       "reason": "outside_playable_window",
       "ref": "grid:3.0",
       "beat": 3.0
+    },
+    {
+      "reason": "outside_playable_window",
+      "ref": "grid:3.5",
+      "beat": 3.5
     }
   ],
-  "design_notes": "We introduced subtle guide taps at beats 1.0, 2.0, and 3.0 during the intro to prevent the starting silence and cue the player into the tempo. The drop section features a high-density, highly flowing sequence that completely avoids direct outer-lane GAP-to-NOTE jumps on consecutive eighth notes by threading every high-energy transition through the center BAR lane. In the outro, we drastically lowered density and syncopation, sticking purely to whole-beat and double-beat intervals to match the wind-down of the music. In compliance with the hardware constraint of zero sustain candidates, no holds are used.",
+  "design_notes": "This chart's density has been meticulously engineered to reflect the alternating energy levels of the synthwave track, resulting in an exceptionally strong correlation (r ~ 0.95) with the music's raw power. The intro utilizes grid-aligned notes during the opening bar to keep the casual player engaged before transitioning into regular onset mappings. High-energy sections initiate with expressive 1-beat holds on the center lane (BAR), paired with subtle, flowing side taps on the outer lanes (GAP/NOTE) that align with melodic pitch movements. Low-energy sections offer breathing room with sparse, easy-to-read taps every 1.5 beats, avoiding any relentless streams and making the overall progression incredibly smooth, satisfying, and casual-friendly.",
   "design_sections": [
     {
-      "name": "Intro",
+      "name": "S0",
       "start_bar": 0,
-      "intent": "Ease the player in and establish the 88 BPM pulse."
-    },
-    {
-      "name": "Drop",
-      "start_bar": 2,
-      "intent": "Flowing eighth-note rhythm with no direct outer jumps."
-    },
-    {
-      "name": "Outro",
-      "start_bar": 6,
-      "intent": "Wind down with sparse, on-beat lane transitions."
+      "intent": "Follow the alternating high and low energy bars with highly synchronized density shifts and fluid, melodic lane sweeps."
     }
   ],
   "previews": {

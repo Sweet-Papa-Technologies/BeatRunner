@@ -4,21 +4,21 @@
   "attempts": 1,
   "metrics": {
     "difficulty": "casual",
-    "event_count": 10,
-    "onset_events": 10,
+    "event_count": 28,
+    "onset_events": 28,
     "grid_events": 0,
     "onset_alignment": 1.0,
     "lane_share": {
-      "GAP": 0.4,
-      "BAR": 0.3,
-      "NOTE": 0.3
+      "GAP": 0.3571,
+      "BAR": 0.3571,
+      "NOTE": 0.2857
     },
-    "hold_share": 0.1,
-    "sustain_available": 11,
+    "hold_share": 0.1071,
+    "sustain_available": 25,
     "peak_nps_4s": 1.25,
     "peak_nps_window_s": [
-      28.48,
-      32.48
+      4.38,
+      8.38
     ],
     "repaired": 0,
     "repaired_fraction": 0.0,
@@ -29,30 +29,30 @@
     },
     "per_bar_counts": [
       0,
-      1,
-      0,
-      1,
-      0,
-      1,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      1,
-      0,
-      3,
       2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      1,
+      2,
+      1,
+      1,
       0
     ],
     "density_energy": {
-      "spearman": 0.439,
+      "spearman": -0.0744,
       "peak_in_top_section": false,
-      "breathes": false
+      "breathes": true
     },
-    "usable_sustains": 9,
+    "usable_sustains": 3,
     "flat_track_exempt": true,
     "gates": {
       "onset_alignment": true,
@@ -66,44 +66,43 @@
     }
   },
   "critic": {
-    "score": 4,
-    "verdict": "A mechanically timed but severely under-mapped and structurally confusing chart that feels empty and unengaging.",
+    "score": 9,
+    "verdict": "A pristine casual chart with perfect grid alignment, smooth lane sweeping, and excellent physical playability.",
     "issues": [
       {
-        "where": "Intro (0.0s - 28.0s)",
-        "problem": "The density is extremely sparse, leaving gaps of up to 7.5 seconds (16 beats) between notes. Even for a casual chart, this feels inactive and boring.",
-        "severity": "high"
+        "where": "bar 7 / 9.0s",
+        "problem": "The 1-beat transition from GAP to BAR (9.03s to 9.495s) introduces a sudden rhythm speed-up compared to the surrounding 2-beat pacing, which might catch casual players off guard.",
+        "severity": "low"
       },
       {
-        "where": "Drop (28.4s - 30.3s)",
-        "problem": "The drop section is defined as only 1 bar long, which is structurally bizarre and results in a sudden, brief spike in note density that ends as quickly as it starts.",
-        "severity": "medium"
-      },
-      {
-        "where": "Entire Chart",
-        "problem": "Lane placement follows a rigid, repeating cycle (BAR -> GAP -> NOTE) instead of reflecting the actual synthwave percussion or melody contour.",
-        "severity": "medium"
+        "where": "bar 13 / 13.6s",
+        "problem": "The transition from the drop to the outro has an abrupt 3-beat gap (12.28s to 13.68s) that briefly disrupts the established steady physical pulse of the song.",
+        "severity": "low"
       }
-    ],
-    "human_review": true
+    ]
   },
   "repairs": [],
-  "design_notes": "S0 introduces the core rhythm of the synthwave groove with a comfortable, sparse tapping pattern that alternates outer lanes to build initial player familiarity. S1 represents the track's climatic drop where we suddenly increase density to 1-beat intervals, mapping a driving sequence that flows smoothly into a 2-beat hold on the center lane. S2 winds down the experience during the outro, providing a satisfying resolution with alternating taps that let the energy breathe.",
+  "design_notes": "For the intro, we establish a steady half-note pace, introducing the center-lane hold that represents the low-end drone. We resolve the momentum-killing gap right before the drop by keeping beats 15, 17, 19, and 20 active, creating a clean transition. In the drop, we fix the empty climax issue by keeping a rhythmic, engaging half-note groove with mirrored and answered phrases to avoid boring stairs or repetitive lane patterns. Finally, the outro eases off the tension, winding down into a sparse pattern.",
   "design_sections": [
     {
       "name": "S0",
       "start_bar": 0,
-      "intent": "intro"
+      "intent": "Establish the groove and build momentum up to the drop."
     },
     {
       "name": "S1",
-      "start_bar": 15,
-      "intent": "drop"
+      "start_bar": 5,
+      "intent": "Drive peak energy at the drop entry with clean transitions."
     },
     {
       "name": "S2",
-      "start_bar": 16,
-      "intent": "outro"
+      "start_bar": 7,
+      "intent": "Maintain the peak energy of the main drop with balanced lane-switching patterns."
+    },
+    {
+      "name": "S3",
+      "start_bar": 13,
+      "intent": "Wind down the chart, providing a satisfying breathing space."
     }
   ],
   "previews": {

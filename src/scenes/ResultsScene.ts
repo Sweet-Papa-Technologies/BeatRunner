@@ -20,6 +20,9 @@ export class ResultsScene extends Phaser.Scene {
   }
 
   create(): void {
+    // clear any handlers from a previous visit so ENTER/ESC don't stack and
+    // double-fire scene transitions (this scene instance is reused).
+    this.input.keyboard?.removeAllListeners();
     const r = this.result;
     const track = trackById(r.trackId);
     this.cameras.main.fadeIn(360, 0, 0, 0);
@@ -98,10 +101,11 @@ export class ResultsScene extends Phaser.Scene {
       }).setOrigin(0.5);
     }
 
-    this.button(VIEW.width / 2 - 130, 688, "RETRY", track.color, () => this.scene.start("Play", { trackId: r.trackId }));
+    const replay = () => this.scene.start("Play", { trackId: r.trackId, difficulty: r.difficulty });
+    this.button(VIEW.width / 2 - 130, 688, "RETRY", track.color, replay);
     this.button(VIEW.width / 2 + 130, 688, "TRACKS", 0x9b8cff, () => this.scene.start("TrackSelect"));
 
-    this.input.keyboard?.on("keydown-ENTER", () => this.scene.start("Play", { trackId: r.trackId }));
+    this.input.keyboard?.on("keydown-ENTER", replay);
     this.input.keyboard?.on("keydown-ESC", () => this.scene.start("TrackSelect"));
   }
 

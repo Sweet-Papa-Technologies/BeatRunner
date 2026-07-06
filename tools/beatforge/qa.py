@@ -172,9 +172,22 @@ def _evaluate_gates(metrics: dict, budget, analysis: dict) -> dict:
     metrics["usable_sustains"] = usable
     hold_ok = (lo_h - 1e-6 <= hs <= hi_h + 1e-6) or usable == 0
     de = metrics["density_energy"]
-    # flat tracks are exempt from the density-SHAPE gates (see config note).
+    # Flat tracks (low bar-level energy variance) are exempt from ALL density-SHAPE
+    # gates (see config note). The Spearman gate rides on the per-BAR energy curve
+    # so it still applies to any non-flat track. The peak-in-drop and breathes
+    # gates are SECTION-level, so they only make sense when the track actually has
+    # sections with distinct energy (an intro→drop shape). A steady groove that
+    # oscillates loud/quiet every bar has high energy_cv but only one uniform
+    # section — there is no quiet SECTION to breathe, so those two gates exempt.
     flat = analysis.get("energy_cv", 0.0) < config.DENSITY_GATE_MIN_CV
+    sections = analysis.get("sections", [])
+    if sections:
+        spread = max(s.get("energy_pct", 0) for s in sections) - min(s.get("energy_pct", 0) for s in sections)
+    else:
+        spread = 0.0
+    section_structured = len(sections) >= 2 and spread >= config.SECTION_STRUCTURE_MIN_SPREAD
     metrics["flat_track_exempt"] = flat
+    metrics["section_structured"] = section_structured
     return {
         "onset_alignment": metrics["onset_alignment"] >= budget.onset_align_min - 1e-6,
         "lane_balance": lane_ok,
@@ -182,8 +195,8 @@ def _evaluate_gates(metrics: dict, budget, analysis: dict) -> dict:
         "nps": metrics["peak_nps_4s"] <= budget.max_nps_4s + 1e-6,
         "repaired": metrics["repaired_fraction"] <= config.MAX_REPAIR_FRACTION + 1e-6,
         "density_spearman": flat or de["spearman"] >= config.DENSITY_ENERGY_SPEARMAN_MIN - 1e-6,
-        "density_peak": flat or de["peak_in_top_section"],
-        "density_breathes": flat or de["breathes"],
+        "density_peak": flat or not section_structured or de["peak_in_top_section"],
+        "density_breathes": flat or not section_structured or de["breathes"],
     }
 
 

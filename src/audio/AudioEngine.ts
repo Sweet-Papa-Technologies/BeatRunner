@@ -24,6 +24,21 @@ export class AudioEngine {
   private songStart = 0;
   private playing = false;
 
+  /**
+   * Audio output latency (seconds) between when a sample is *scheduled* on the
+   * AudioContext clock and when it is actually *heard* through the speakers.
+   * songTime() must subtract this, otherwise the note visuals and the judgment
+   * clock run this far AHEAD of the sound — so tapping exactly on the beat you
+   * hear reads as LATE by the same amount. This was the game-wide "feels off /
+   * out of sync" delay. Measured once at start() from the real device.
+   */
+  private outputLatencySec = 0;
+  /**
+   * Extra manual calibration (seconds, +ve = treat audio as more delayed). Small
+   * headroom on top of the measured latency; tune if a device still feels late.
+   */
+  private static readonly CALIBRATION_SEC = 0.0;
+
   // metronome scheduling
   private bpm = 90;
   private offset = 0;
@@ -73,10 +88,19 @@ export class AudioEngine {
     return this.ctx.currentTime;
   }
 
-  /** seconds since the song started (freezes while suspended). */
+  /**
+   * seconds since the song started AS HEARD (freezes while suspended). Subtracts
+   * the output latency so note visuals + judgment line up with the sound reaching
+   * the player's ears, not with when it was scheduled on the audio clock.
+   */
   songTime(): number {
     if (!this.playing) return 0;
-    return this.ctx.currentTime - this.songStart;
+    return this.ctx.currentTime - this.songStart - this.latencyComp;
+  }
+
+  /** Total latency to compensate: measured device latency + manual calibration. */
+  private get latencyComp(): number {
+    return this.outputLatencySec + AudioEngine.CALIBRATION_SEC;
   }
 
   isPlaying(): boolean {
@@ -88,6 +112,12 @@ export class AudioEngine {
     this.bpm = bpm;
     this.offset = offset;
     this.nextBeatIndex = 0;
+    // Measure device output latency now (values only settle once the context is
+    // running). Prefer outputLatency (hardware+buffer, what reaches the speaker);
+    // fall back to baseLatency (processing only) when a browser reports 0.
+    const out = (this.ctx as AudioContext & { outputLatency?: number }).outputLatency ?? 0;
+    const base = (this.ctx as AudioContext & { baseLatency?: number }).baseLatency ?? 0;
+    this.outputLatencySec = out > 0 ? out : base;
     const t0 = this.ctx.currentTime + 0.06; // tiny lead so scheduling is clean
     this.songStart = t0;
     if (this.buffer) {

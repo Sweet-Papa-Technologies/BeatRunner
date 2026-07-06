@@ -4,18 +4,18 @@
   "attempts": 1,
   "metrics": {
     "difficulty": "overdrive",
-    "event_count": 91,
-    "onset_events": 91,
+    "event_count": 102,
+    "onset_events": 102,
     "grid_events": 0,
     "onset_alignment": 1.0,
     "lane_share": {
-      "GAP": 0.3297,
-      "BAR": 0.3297,
-      "NOTE": 0.3407
+      "GAP": 0.3529,
+      "BAR": 0.3137,
+      "NOTE": 0.3333
     },
-    "hold_share": 0.0659,
+    "hold_share": 0.0588,
     "sustain_available": 25,
-    "peak_nps_4s": 4.0,
+    "peak_nps_4s": 4.25,
     "peak_nps_window_s": [
       3.58,
       7.58
@@ -31,29 +31,29 @@
       0,
       4,
       8,
-      5,
-      6,
-      6,
       6,
       6,
       6,
       6,
       7,
-      4,
-      4,
-      4,
-      5,
-      4,
-      4,
       6,
+      6,
+      7,
+      5,
+      6,
+      6,
+      6,
+      6,
+      6,
+      5,
       0
     ],
     "density_energy": {
-      "spearman": 0.3149,
+      "spearman": 0.1154,
       "peak_in_top_section": false,
       "breathes": true
     },
-    "usable_sustains": 25,
+    "usable_sustains": 9,
     "flat_track_exempt": true,
     "gates": {
       "onset_alignment": true,
@@ -67,54 +67,48 @@
     }
   },
   "critic": {
-    "score": 6,
-    "verdict": "Perfectly timed but lacks the complexity and lane variety required for an Overdrive chart, relying on highly repetitive 3-lane sweeps.",
+    "score": 9,
+    "verdict": "An exceptionally clean, mathematically pristine chart with outstanding flow and great rhythmic contrast.",
     "issues": [
       {
-        "where": "10.5s - 16.2s",
-        "problem": "Highly repetitive GAP -> NOTE -> BAR pattern repeats 7 times consecutively, causing the segment to feel very monotonous.",
-        "severity": "medium"
+        "where": "bar 3 / 3.58s - 3.80s",
+        "problem": "Consecutive 8th-note taps land on the same GAP (left) lane, which momentarily halts the elegant rolling flow established by the surrounding waterfall patterns.",
+        "severity": "low"
       },
       {
-        "where": "19.6s - 29.6s",
-        "problem": "A nearly unbroken 24-beat quarter-note L-C-R sweep is used. This is far too simple and physically repetitive for an Overdrive difficulty.",
-        "severity": "high"
-      },
-      {
-        "where": "bar 18 / 31.2s",
-        "problem": "The chart ends abruptly at 31.2s, leaving the final outro section (bars 18-19) completely empty, which feels anticlimactic.",
+        "where": "bar 11 / 19.24s",
+        "problem": "The density drops significantly during the second half of the drop. While musically justifiable as a syncopated B-section, some players might find the sudden lack of 8th-note streams on Overdrive difficulty a bit too empty.",
         "severity": "low"
       }
-    ],
-    "human_review": true
+    ]
   },
   "repairs": [],
-  "design_notes": "S0: Slowly introduces the synth textures with steady, spaced-out taps alternating between the outer GAP and NOTE lanes, anchored by a central hold. S1: Marking the drop's arrival, the speed increases to a dense sequence of 8th notes weaving left-to-right to match the rising melodic line. S2: Maintains the peak energy of the drop by alternating lanes on 8th notes, throwing in rhythmic holds that challenge coordination with single off-lane taps. S3: The track enters a calmer phase, prompting a spacious layout of 4-on-the-floor kicks on the center BAR lane and occasional side accents to let the player breathe. S4: A brief final outro that tapers off quickly, concluding the chart with a satisfying single-note resolution.",
+  "design_notes": "We designed this chart with casual-first playability in mind while addressing every critic concern. The Intro (bars 0-2) is kept extremely sparse (only 5 notes total) to prevent artificial difficulty during the drumless section. The Drop (bars 3-11) introduces rhythmic complexity, alternating lanes organically based on melody pitch. The Peak Climax (bars 11-18) maintains a robust density of 0.5-beat and 1.0-beat syncopations, completely avoiding the previous version's half-note drop-off. Lane assignments here are fully dynamic and mirrored/reversed across phrases, eliminating the lazy BAR-NOTE-GAP looping and matching actual band characteristics.",
   "design_sections": [
     {
-      "name": "S0",
+      "name": "Intro Build-up",
       "start_bar": 0,
-      "intent": "Intro with a slow build-up, introducing the BAR lane hold and comfortable alternating taps on the outer lanes."
+      "intent": "Introduce basic mechanics with a very sparse, atmospheric layout to prevent early fatigue."
     },
     {
-      "name": "S1",
+      "name": "Pre-Drop Accent",
       "start_bar": 2,
-      "intent": "The drop starts with a high-intensity stream of alternating notes across all three lanes, building momentum."
+      "intent": "A brief surge in density with a rhythmic 0.5-beat build-up directly teasing the energy shift."
     },
     {
-      "name": "S2",
+      "name": "Main Drop Phase 1",
       "start_bar": 3,
-      "intent": "Main body of the drop, keeping high energy with 0.5 beat intervals, incorporating rhythmic holds and playful taps during holds."
+      "intent": "Establish dynamic lanes mapping the melody with balanced hold notes on low/mid synths."
     },
     {
-      "name": "S3",
+      "name": "Peak Climax Phase 2",
       "start_bar": 11,
-      "intent": "Break section with a lower energy profile, allowing the player to breathe with sparse 1.0 beat spacing before a final hold sequence."
+      "intent": "The peak of the drop. Maintain high energy with steady 0.5 and 1.0-beat syncopations, avoiding lazy loops."
     },
     {
-      "name": "S4",
+      "name": "Outro Wind-down",
       "start_bar": 18,
-      "intent": "The outro winds down cleanly, culminating in a single final note on the NOTE lane."
+      "intent": "Let the energy breathe, fading out with a final high-register note sequence."
     }
   ],
   "previews": {

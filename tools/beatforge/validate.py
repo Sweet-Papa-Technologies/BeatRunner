@@ -282,8 +282,12 @@ def _find_nps(events, budget, bpm, offset):
 
 
 def _find_hold_tap(events, budget, bpm, offset):
-    """During a hold's span, taps in other lanes must not exceed the budget's
-    allowed count (0/1/2). Excess -> drop weakest offending tap."""
+    """Hold-span rules:
+      * a tap on the SAME lane as an active hold is UNPLAYABLE (you're already
+        holding that lane) -> always remove it, regardless of difficulty;
+      * taps in OTHER lanes during the hold must not exceed the budget's allowed
+        count (0/1/2) -> drop the weakest offender.
+    """
     holds = [(i, e) for i, e in enumerate(events) if e.dur]
     for hi, hold in holds:
         h0 = hold.beat
@@ -292,10 +296,12 @@ def _find_hold_tap(events, budget, bpm, offset):
         for k, e in enumerate(events):
             if k == hi or e.dur:
                 continue
-            if h0 - _EPS < e.beat < h1 - _EPS and e.type != hold.type:
-                overlap_lanes.setdefault(e.type, []).append(k)
+            if not (h0 - _EPS < e.beat < h1 - _EPS):
+                continue
+            if e.type == hold.type:
+                return k, "tap_on_held_lane"   # unplayable, remove immediately
+            overlap_lanes.setdefault(e.type, []).append(k)
         if len(overlap_lanes) > budget.taps_during_hold:
-            # drop the weakest tap among the extra lanes
             all_idx = [k for ks in overlap_lanes.values() for k in ks]
             weakest = min(all_idx, key=lambda k: events[k].salience)
             return weakest, "taps_during_hold"
