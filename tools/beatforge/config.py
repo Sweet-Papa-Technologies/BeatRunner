@@ -66,7 +66,16 @@ OPENAI_API_KEY = os.environ.get("BEATFORGE_OPENAI_API_KEY", "not-needed")
 # The tracks are .ogg — transcoded to this on the fly (wav is universally decoded;
 # set to "ogg" to send as-is if your server accepts it).
 OPENAI_AUDIO_FORMAT = os.environ.get("BEATFORGE_OPENAI_AUDIO_FORMAT", "wav")
-OPENAI_MAX_TOKENS = int(os.environ.get("BEATFORGE_OPENAI_MAX_TOKENS", "8192"))
+# A full chart JSON is ~2.5-4k tokens; 8192 let a slow/looping local model run
+# far past that and fill VRAM before timing out. 4096 fits any chart with margin
+# and caps runaway generation. Raise if a dense chart ever truncates.
+OPENAI_MAX_TOKENS = int(os.environ.get("BEATFORGE_OPENAI_MAX_TOKENS", "4096"))
+# Per-request read timeout (s). Local 12B models are much slower than Gemini on
+# the heavy designer call; raise for slow hardware, lower to fail fast.
+OPENAI_TIMEOUT = int(os.environ.get("BEATFORGE_OPENAI_TIMEOUT", "300"))
+# A little sampling temperature helps local models avoid the degenerate
+# repetition loops that greedy (temp=0) decoding can fall into on long JSON.
+OPENAI_TEMPERATURE = float(os.environ.get("BEATFORGE_OPENAI_TEMPERATURE", "0.7"))
 
 # Music generation (Workstream A) — unchanged from tools/generate_overdrive_assets.py.
 LYRIA_MODEL = os.environ.get("BEATFORGE_LYRIA_MODEL", "lyria-002")

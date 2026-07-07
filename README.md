@@ -147,5 +147,16 @@ by `tests/test_llm.py` against a local mock. NB: the server must be reachable fr
 wherever you run this — a box on a different LAN segment (e.g. `192.168.1.x` when
 you're on `192.168.3.x`) will not route.
 
+Local-model knobs (the designer call is far heavier than the probe — big audio +
+analysis in, a full chart JSON out — so a small local model can be slow or loop):
+- `BEATFORGE_OPENAI_MAX_TOKENS` (default 4096) — caps generation; a chart is
+  ~2.5-4k tokens, so this fits with margin and stops runaway output filling VRAM.
+- `BEATFORGE_OPENAI_TIMEOUT` (default 300s) — raise for slow hardware.
+- `BEATFORGE_OPENAI_TEMPERATURE` (default 0.7) — a little sampling avoids the
+  greedy-decode repetition loops that stall structured JSON on local models.
+A read timeout now surfaces as a clean per-model error (the comparison keeps its
+probe + Gemini results instead of crashing). Start with `compare --probe-only` —
+it's the light test that answers "does it hear the audio?" without the heavy design.
+
 The original generators (`make_overdrive_maps.py`, `make_beatmaps.py`,
 `generate_assets.py`) are kept for provenance; beatforge is the canonical path.

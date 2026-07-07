@@ -91,3 +91,30 @@ def test_unreachable_server_fails_loudly():
     c = OpenAICompatClient(base_url="http://127.0.0.1:1/v1", model="x")
     with pytest.raises(OpenAICompatError, match="cannot reach"):
         c.generate("hi")
+
+
+class _SlowHandler(BaseHTTPRequestHandler):
+    def log_message(self, *a):
+        pass
+
+    def do_POST(self):
+        import time
+        time.sleep(3)  # exceed the client timeout -> read timeout
+
+
+@pytest.fixture
+def slow_server():
+    srv = HTTPServer(("127.0.0.1", 0), _SlowHandler)
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    host, port = srv.server_address
+    yield f"http://{host}:{port}/v1"
+    srv.shutdown()
+
+
+def test_timeout_becomes_graceful_error(slow_server):
+    """A slow/looping model (read timeout after the request is accepted) must
+    surface as an OpenAICompatError, not a raw TimeoutError that crashes the run
+    — this is exactly what took down the operator's `compare` on Gemma."""
+    c = OpenAICompatClient(base_url=slow_server, model="gemma-4-12b", timeout=1)
+    with pytest.raises(OpenAICompatError, match="timed out"):
+        c.generate("analyze")
