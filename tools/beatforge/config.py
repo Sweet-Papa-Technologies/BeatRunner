@@ -47,6 +47,27 @@ GEMINI_MODEL = os.environ.get("BEATFORGE_GEMINI_MODEL", "gemini-3.5-flash")
 # request shape for the model family GEMINI_MODEL belongs to.
 THINKING_LEVEL = os.environ.get("BEATFORGE_THINKING_LEVEL", "high")
 
+# --------------------------------------------------------------------------- #
+# LLM backend selection — the designer/critic/A&R model is swappable so an
+# alternative audio-capable model (e.g. a self-hosted Gemma 4 12B on an
+# OpenAI-compatible server) can be dropped in and benchmarked against Gemini 3.5
+# Flash. Lyria (music generation) always stays on Vertex.
+#   BEATFORGE_LLM_BACKEND = "gemini" (Vertex, default) | "openai" (OpenAI-compatible)
+# --------------------------------------------------------------------------- #
+LLM_BACKEND = os.environ.get("BEATFORGE_LLM_BACKEND", "gemini")
+# OpenAI-compatible server (vLLM/llama.cpp/etc). Point at the local Gemma server:
+#   export BEATFORGE_LLM_BACKEND=openai
+#   export BEATFORGE_OPENAI_BASE_URL=http://192.168.1.99:8000/v1
+#   export BEATFORGE_OPENAI_MODEL=<model id from GET /v1/models>
+OPENAI_BASE_URL = os.environ.get("BEATFORGE_OPENAI_BASE_URL", "http://192.168.1.99:8000/v1")
+OPENAI_MODEL = os.environ.get("BEATFORGE_OPENAI_MODEL", "gemma-4-12b")
+OPENAI_API_KEY = os.environ.get("BEATFORGE_OPENAI_API_KEY", "not-needed")
+# Audio is sent as an OpenAI `input_audio` content part; base64 in this format.
+# The tracks are .ogg — transcoded to this on the fly (wav is universally decoded;
+# set to "ogg" to send as-is if your server accepts it).
+OPENAI_AUDIO_FORMAT = os.environ.get("BEATFORGE_OPENAI_AUDIO_FORMAT", "wav")
+OPENAI_MAX_TOKENS = int(os.environ.get("BEATFORGE_OPENAI_MAX_TOKENS", "8192"))
+
 # Music generation (Workstream A) — unchanged from tools/generate_overdrive_assets.py.
 LYRIA_MODEL = os.environ.get("BEATFORGE_LYRIA_MODEL", "lyria-002")
 

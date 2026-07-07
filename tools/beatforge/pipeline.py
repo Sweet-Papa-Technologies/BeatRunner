@@ -14,11 +14,11 @@ from . import config, qa
 from .analyze import analyze_track
 from .compute import ComputeBackend
 from .design import ChartResult, critic_pass, design_chart
-from .vertex import VertexClient
+from .llm import LLMClient, make_llm_client
 
 
 def chart_track(
-    track_id: str, opts: config.RunOptions, client: VertexClient,
+    track_id: str, opts: config.RunOptions, client: LLMClient,
     backend: ComputeBackend | None = None,
 ) -> dict:
     """Analyze one track and produce all requested difficulties + QA reports."""
@@ -70,7 +70,7 @@ def chart_track(
 
 
 def _critic_and_maybe_revise(
-    chart: ChartResult, analysis: dict, audio: str, client: VertexClient,
+    chart: ChartResult, analysis: dict, audio: str, client: LLMClient,
     opts: config.RunOptions,
 ) -> ChartResult:
     """REQ-QA-04: run the fresh-context critic. Below the ship threshold, take ONE

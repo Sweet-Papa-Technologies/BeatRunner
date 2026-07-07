@@ -14,9 +14,9 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from . import config, qa
+from .llm import LLMClient
 from .resolve import ResolveError, resolve_events
 from .validate import RepairExceeded, ValidationResult, validate_and_repair
-from .vertex import VertexClient
 
 
 @dataclass
@@ -123,7 +123,7 @@ def _designer_prompt(difficulty: str, analysis: dict, violations: str | None) ->
 
 def design_chart(
     track_id: str, difficulty: str, analysis: dict, audio_path: str,
-    client: VertexClient, opts: config.RunOptions,
+    client: LLMClient, opts: config.RunOptions,
     seed_violations: str | None = None,
 ) -> ChartResult:
     """Run the designer→validate→gate loop for one (track, difficulty).
@@ -171,7 +171,7 @@ def _beatmap(track_file: str, analysis: dict, vr: ValidationResult) -> dict:
 
 
 def critic_pass(
-    chart: ChartResult, analysis: dict, audio_path: str, client: VertexClient,
+    chart: ChartResult, analysis: dict, audio_path: str, client: LLMClient,
 ) -> dict:
     """Fresh-context Gemini critic (Author≠Judge, REQ-QA-04). Renders the chart
     as (time, lane, hold) so the model judges by ear against the audio."""
