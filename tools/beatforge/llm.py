@@ -19,6 +19,7 @@ import base64
 import json
 import os
 import shutil
+import socket
 import subprocess
 import tempfile
 import urllib.error
@@ -70,11 +71,14 @@ class OpenAICompatClient:
 
     name = "openai"
 
-    def __init__(self, base_url=None, model=None, api_key=None, audio_format=None):
+    def __init__(self, base_url=None, model=None, api_key=None, audio_format=None,
+                 timeout=None, temperature=None):
         self.base_url = (base_url or config.OPENAI_BASE_URL).rstrip("/")
         self.model = model or config.OPENAI_MODEL
         self.api_key = api_key or config.OPENAI_API_KEY
         self.audio_format = audio_format or config.OPENAI_AUDIO_FORMAT
+        self.timeout = timeout if timeout is not None else config.OPENAI_TIMEOUT
+        self.temperature = temperature if temperature is not None else config.OPENAI_TEMPERATURE
 
     def _post(self, body: dict, timeout: int) -> dict:
         data = json.dumps(body).encode()
@@ -88,9 +92,26 @@ class OpenAICompatClient:
         except urllib.error.HTTPError as e:
             detail = e.read().decode("utf-8", "replace")
             raise OpenAICompatError(f"HTTP {e.code} from {self.base_url}:\n{detail[:1500]}")
-        except urllib.error.URLError as e:
+        except (TimeoutError, socket.timeout) as e:
+            # A read timeout AFTER the request was accepted: the model is either
+            # too slow for this task on the local hardware or looping (KV cache /
+            # VRAM fills as it generates toward max_tokens). NOT caught by URLError.
             raise OpenAICompatError(
-                f"cannot reach OpenAI-compatible server at {self.base_url}: {e.reason}")
+                f"request to {self.base_url} timed out after {timeout}s ({e}). The "
+                f"model likely ran slow or looped generating up to max_tokens="
+                f"{config.OPENAI_MAX_TOKENS}. Try `compare --probe-only` first, lower "
+                f"BEATFORGE_OPENAI_MAX_TOKENS, or raise BEATFORGE_OPENAI_TIMEOUT / the "
+                f"server's --max-model-len.")
+        except urllib.error.URLError as e:
+            reason = getattr(e, "reason", e)
+            if isinstance(reason, (TimeoutError, socket.timeout)):
+                raise OpenAICompatError(
+                    f"request to {self.base_url} timed out after {timeout}s. See "
+                    f"`--probe-only` / BEATFORGE_OPENAI_TIMEOUT / max_tokens guidance.")
+            raise OpenAICompatError(
+                f"cannot reach OpenAI-compatible server at {self.base_url}: {reason}")
+        except OSError as e:
+            raise OpenAICompatError(f"network error talking to {self.base_url}: {e}")
 
     def list_models(self, timeout=15) -> list[str]:
         req = urllib.request.Request(
@@ -101,7 +122,7 @@ class OpenAICompatClient:
         return [m.get("id") for m in data.get("data", [])]
 
     def generate(self, prompt: str, *, audio_path=None, system=None, model=None,
-                 thinking_level=None, json_out=False, timeout=600) -> str:
+                 thinking_level=None, json_out=False, timeout=None) -> str:
         # thinking_level is Gemini-specific; ignored here (Gemma has no equivalent).
         content: list[dict] = []
         if audio_path is not None:
@@ -114,10 +135,11 @@ class OpenAICompatClient:
             messages.append({"role": "system", "content": system})
         messages.append({"role": "user", "content": content})
         body: dict = {"model": model or self.model, "messages": messages,
-                      "max_tokens": config.OPENAI_MAX_TOKENS}
+                      "max_tokens": config.OPENAI_MAX_TOKENS,
+                      "temperature": self.temperature}
         if json_out:
             body["response_format"] = {"type": "json_object"}
-        resp = self._post(body, timeout)
+        resp = self._post(body, timeout if timeout is not None else self.timeout)
         try:
             text = resp["choices"][0]["message"]["content"]
         except (KeyError, IndexError, TypeError):
