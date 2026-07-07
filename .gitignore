@@ -5,3 +5,4 @@ dist/
 .vite/
 coverage/
 .playwright-mcp/
+__pycache__/
