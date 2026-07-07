@@ -1,0 +1,18 @@
+{
+  "score": 8,
+  "verdict": "A well-structured and highly rhythmic Medium chart that captures the song's energy perfectly, held back only by a few harsh 16th-note spikes.",
+  "issues": [
+    {
+      "where": "69.690s",
+      "problem": "Landing a JUMP LR followed immediately by a 16th-note tap D at 69.812s is an extremely harsh physical transition for a Medium difficulty chart."
+    },
+    {
+      "where": "11.298s",
+      "problem": "The rapid 16th-note transition from D to U (11.298s to 11.419s) requires a vertical drag or very fast double-step that disrupts flow for intermediate players."
+    },
+    {
+      "where": "95.656s",
+      "problem": "Another vertical 16th-note transition from D to U (95.656s to 95.777s) introduces an unexpected difficulty spike during an otherwise smooth section."
+    }
+  ]
+}

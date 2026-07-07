@@ -1,0 +1,168 @@
+{
+  "track_id": "midnight",
+  "bpm": 129.07,
+  "offset": 0.198,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 58,
+      "meter": 3,
+      "jumps": 9,
+      "holds": 6,
+      "repaired": 2,
+      "repair_ok": true,
+      "critic": {
+        "score": 7,
+        "verdict": "A rhythmic and mostly comfortable chart that occasionally spikes in difficulty with advanced 8th-note patterns and awkward transitions unsuitable for an Easy rating.",
+        "issues": [
+          {
+            "where": "10.425 - 10.890",
+            "problem": "Complex 8th-note coordination involving a hold (L -> U Hold -> D Tap) which is too demanding for a beginner-level chart."
+          },
+          {
+            "where": "11.820 - 12.284",
+            "problem": "Fast 8th-note stream leading directly into a hold (D -> U -> L Hold) that can easily trip up players at this level."
+          },
+          {
+            "where": "25.766 - 26.230",
+            "problem": "Highly awkward 8th-note sequence (U -> R -> LR Jump) that forces either a very fast double-step on the right foot or an advanced crossover directly into an 8th-note jump entry."
+          },
+          {
+            "where": "26.695 - 27.160",
+            "problem": "An 8th-note stream (D -> U -> L) that spikes the physical and reading density unnecessarily for an Easy chart."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/midnight_run/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 58,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.284,
+          "D": 0.269,
+          "U": 0.224,
+          "R": 0.224
+        },
+        "hold_share": 0.1034,
+        "jump_share": 0.1552,
+        "flow_cost_max": 7.85,
+        "flow_cost_mean": 0.28,
+        "density_energy_spearman": 0.5744,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "medium": {
+      "notes": 130,
+      "meter": 6,
+      "jumps": 15,
+      "holds": 7,
+      "repaired": 7,
+      "repair_ok": true,
+      "critic": {
+        "score": 6,
+        "verdict": "A mostly solid Medium chart with good rhythm, but it is severely let down by an impossible note combination and some highly awkward hold-tap patterns.",
+        "issues": [
+          {
+            "where": "29.484",
+            "problem": "Requires tapping L while holding both U and D. Since players only have two feet, this is physically impossible to execute cleanly without brackets or hands, which is inappropriate for a Medium chart."
+          },
+          {
+            "where": "2.987",
+            "problem": "Holding D while tapping a sequence of U, R, L, U, R creates highly awkward crossovers and stretches for a Medium difficulty player."
+          },
+          {
+            "where": "10.657",
+            "problem": "Holding U while executing 16th-note taps on D and L forces uncomfortable double-steps or unnatural hip twists."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/midnight_run/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 130,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.29,
+          "D": 0.248,
+          "U": 0.234,
+          "R": 0.228
+        },
+        "hold_share": 0.0538,
+        "jump_share": 0.1154,
+        "flow_cost_max": 8.0,
+        "flow_cost_mean": 0.2,
+        "density_energy_spearman": 0.2077,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "hard": {
+      "notes": 97,
+      "meter": 8,
+      "jumps": 18,
+      "holds": 6,
+      "repaired": 2,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "An exceptionally well-crafted, rhythmic, and fluid hard chart that perfectly captures the energy progression of the song with highly satisfying patterns.",
+        "issues": [
+          {
+            "where": "2.987",
+            "problem": "The 8th-note taps (R, L, U) during the D hold require rapid one-foot streaming, which introduces a sudden technical spike compared to the rest of the relatively straightforward intro."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/midnight_run/hard.assist.ogg"
+      },
+      "metrics": {
+        "notes": 97,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.304,
+          "D": 0.235,
+          "U": 0.217,
+          "R": 0.243
+        },
+        "hold_share": 0.0619,
+        "jump_share": 0.1856,
+        "flow_cost_max": 8.0,
+        "flow_cost_mean": 0.16,
+        "density_energy_spearman": 0.7422,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/midnight_run/midnight_run.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/midnight_run/midnight_run.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/midnight_run/midnight_run.ogg"
+  },
+  "out": "build/stepmania/midnight_run",
+  "meter_monotonic": true
+}

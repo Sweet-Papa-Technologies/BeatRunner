@@ -1,0 +1,501 @@
+{
+  "design_notes": "A balanced Medium chart for a 120 BPM driving track. It features steady 8th-note runs (approx. 4.0 NPS) with selective 16th-note syncopations in the high-energy sections (Bars 7 and 10). Holds are placed on key downbeats to establish a clear rhythm, accounting for 6.5% of total steps, safely within the target budget. Crossover elements are kept light, and density matches the energy curve.",
+  "notes": [
+    {
+      "ref": "p013",
+      "kind": "tap"
+    },
+    {
+      "ref": "p014",
+      "kind": "tap"
+    },
+    {
+      "ref": "p016",
+      "kind": "tap"
+    },
+    {
+      "ref": "p017",
+      "kind": "tap"
+    },
+    {
+      "ref": "p019",
+      "kind": "tap"
+    },
+    {
+      "ref": "p020",
+      "kind": "tap"
+    },
+    {
+      "ref": "p022",
+      "kind": "tap"
+    },
+    {
+      "ref": "p023",
+      "kind": "tap"
+    },
+    {
+      "ref": "p025",
+      "kind": "hold",
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "p028",
+      "kind": "tap"
+    },
+    {
+      "ref": "p029",
+      "kind": "tap"
+    },
+    {
+      "ref": "p031",
+      "kind": "tap"
+    },
+    {
+      "ref": "p032",
+      "kind": "tap"
+    },
+    {
+      "ref": "p034",
+      "kind": "tap"
+    },
+    {
+      "ref": "p035",
+      "kind": "tap"
+    },
+    {
+      "ref": "p037",
+      "kind": "tap"
+    },
+    {
+      "ref": "p038",
+      "kind": "tap"
+    },
+    {
+      "ref": "p039",
+      "kind": "tap"
+    },
+    {
+      "ref": "p040",
+      "kind": "tap"
+    },
+    {
+      "ref": "p041",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "p046",
+      "kind": "tap"
+    },
+    {
+      "ref": "p047",
+      "kind": "tap"
+    },
+    {
+      "ref": "p049",
+      "kind": "tap"
+    },
+    {
+      "ref": "p050",
+      "kind": "tap"
+    },
+    {
+      "ref": "p052",
+      "kind": "tap"
+    },
+    {
+      "ref": "p053",
+      "kind": "tap"
+    },
+    {
+      "ref": "p055",
+      "kind": "tap"
+    },
+    {
+      "ref": "p056",
+      "kind": "tap"
+    },
+    {
+      "ref": "p058",
+      "kind": "tap"
+    },
+    {
+      "ref": "p059",
+      "kind": "tap"
+    },
+    {
+      "ref": "p061",
+      "kind": "hold",
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "p064",
+      "kind": "tap"
+    },
+    {
+      "ref": "p065",
+      "kind": "tap"
+    },
+    {
+      "ref": "p067",
+      "kind": "tap"
+    },
+    {
+      "ref": "p068",
+      "kind": "tap"
+    },
+    {
+      "ref": "p070",
+      "kind": "tap"
+    },
+    {
+      "ref": "p071",
+      "kind": "tap"
+    },
+    {
+      "ref": "p073",
+      "kind": "tap"
+    },
+    {
+      "ref": "p074",
+      "kind": "tap"
+    },
+    {
+      "ref": "p076",
+      "kind": "tap"
+    },
+    {
+      "ref": "p077",
+      "kind": "tap"
+    },
+    {
+      "ref": "p079",
+      "kind": "tap"
+    },
+    {
+      "ref": "p080",
+      "kind": "tap"
+    },
+    {
+      "ref": "p082",
+      "kind": "tap"
+    },
+    {
+      "ref": "p083",
+      "kind": "tap"
+    },
+    {
+      "ref": "p085",
+      "kind": "tap"
+    },
+    {
+      "ref": "p086",
+      "kind": "tap"
+    },
+    {
+      "ref": "p087",
+      "kind": "tap"
+    },
+    {
+      "ref": "p088",
+      "kind": "tap"
+    },
+    {
+      "ref": "p089",
+      "kind": "tap"
+    },
+    {
+      "ref": "p091",
+      "kind": "tap"
+    },
+    {
+      "ref": "p092",
+      "kind": "tap"
+    },
+    {
+      "ref": "p094",
+      "kind": "tap"
+    },
+    {
+      "ref": "p095",
+      "kind": "tap"
+    },
+    {
+      "ref": "p097",
+      "kind": "hold",
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "p100",
+      "kind": "tap"
+    },
+    {
+      "ref": "p101",
+      "kind": "tap"
+    },
+    {
+      "ref": "p103",
+      "kind": "tap"
+    },
+    {
+      "ref": "p104",
+      "kind": "tap"
+    },
+    {
+      "ref": "p106",
+      "kind": "tap"
+    },
+    {
+      "ref": "p107",
+      "kind": "tap"
+    },
+    {
+      "ref": "p109",
+      "kind": "tap"
+    },
+    {
+      "ref": "p110",
+      "kind": "tap"
+    },
+    {
+      "ref": "p112",
+      "kind": "tap"
+    },
+    {
+      "ref": "p113",
+      "kind": "tap"
+    },
+    {
+      "ref": "p115",
+      "kind": "tap"
+    },
+    {
+      "ref": "p116",
+      "kind": "tap"
+    },
+    {
+      "ref": "p118",
+      "kind": "tap"
+    },
+    {
+      "ref": "p119",
+      "kind": "tap"
+    },
+    {
+      "ref": "p121",
+      "kind": "tap"
+    },
+    {
+      "ref": "p122",
+      "kind": "tap"
+    },
+    {
+      "ref": "p124",
+      "kind": "tap"
+    },
+    {
+      "ref": "p125",
+      "kind": "tap"
+    },
+    {
+      "ref": "p127",
+      "kind": "tap"
+    },
+    {
+      "ref": "p128",
+      "kind": "tap"
+    },
+    {
+      "ref": "p129",
+      "kind": "tap"
+    },
+    {
+      "ref": "p131",
+      "kind": "tap"
+    },
+    {
+      "ref": "p133",
+      "kind": "hold",
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "p136",
+      "kind": "tap"
+    },
+    {
+      "ref": "p137",
+      "kind": "tap"
+    },
+    {
+      "ref": "p139",
+      "kind": "tap"
+    },
+    {
+      "ref": "p140",
+      "kind": "tap"
+    },
+    {
+      "ref": "p142",
+      "kind": "tap"
+    },
+    {
+      "ref": "p143",
+      "kind": "tap"
+    },
+    {
+      "ref": "p145",
+      "kind": "tap"
+    },
+    {
+      "ref": "p146",
+      "kind": "tap"
+    },
+    {
+      "ref": "p148",
+      "kind": "tap"
+    },
+    {
+      "ref": "p149",
+      "kind": "tap"
+    },
+    {
+      "ref": "p151",
+      "kind": "tap"
+    },
+    {
+      "ref": "p152",
+      "kind": "tap"
+    },
+    {
+      "ref": "p154",
+      "kind": "tap"
+    },
+    {
+      "ref": "p155",
+      "kind": "tap"
+    },
+    {
+      "ref": "p157",
+      "kind": "tap"
+    },
+    {
+      "ref": "p158",
+      "kind": "tap"
+    },
+    {
+      "ref": "p160",
+      "kind": "tap"
+    },
+    {
+      "ref": "p161",
+      "kind": "tap"
+    },
+    {
+      "ref": "p163",
+      "kind": "tap"
+    },
+    {
+      "ref": "p164",
+      "kind": "tap"
+    },
+    {
+      "ref": "p166",
+      "kind": "tap"
+    },
+    {
+      "ref": "p167",
+      "kind": "tap"
+    },
+    {
+      "ref": "p169",
+      "kind": "hold",
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "p172",
+      "kind": "tap"
+    },
+    {
+      "ref": "p173",
+      "kind": "tap"
+    },
+    {
+      "ref": "p175",
+      "kind": "tap"
+    },
+    {
+      "ref": "p176",
+      "kind": "tap"
+    },
+    {
+      "ref": "p178",
+      "kind": "tap"
+    },
+    {
+      "ref": "p179",
+      "kind": "tap"
+    },
+    {
+      "ref": "p181",
+      "kind": "tap"
+    },
+    {
+      "ref": "p182",
+      "kind": "tap"
+    },
+    {
+      "ref": "p183",
+      "kind": "tap"
+    },
+    {
+      "ref": "p184",
+      "kind": "tap"
+    },
+    {
+      "ref": "p185",
+      "kind": "tap"
+    },
+    {
+      "ref": "p187",
+      "kind": "tap"
+    }
+  ],
+  "phrases": [
+    {
+      "start_bar": 0,
+      "end_bar": 4,
+      "texture": "steps",
+      "movement": "zigzag",
+      "crossover": "none",
+      "jump_density": "none",
+      "intent": "gentle intro pacing to let the player find the beat"
+    },
+    {
+      "start_bar": 4,
+      "end_bar": 8,
+      "texture": "stream",
+      "movement": "drift_L_to_R",
+      "crossover": "light",
+      "jump_density": "accents",
+      "intent": "first drop sequence focusing on clean lateral movement"
+    },
+    {
+      "start_bar": 8,
+      "end_bar": 12,
+      "texture": "stream",
+      "movement": "drift_R_to_L",
+      "crossover": "light",
+      "jump_density": "accents",
+      "intent": "mirroring the flow with a transition to the left"
+    },
+    {
+      "start_bar": 12,
+      "end_bar": 17,
+      "texture": "stream",
+      "movement": "zigzag",
+      "crossover": "light",
+      "jump_density": "accents",
+      "intent": "climax section raising the pattern complexity to match peak energy"
+    }
+  ]
+}

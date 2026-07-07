@@ -1,0 +1,298 @@
+{
+  "design_notes": "An easy-level chart designed for beginners. Keeps density comfortably under 3.0 NPS with a peak 4-second density of 2.75 NPS on the drop. Most steps are simple quarter notes, with very sparse eighth notes used on strong accents to build tension and follow the music's energy. Exactly 12.5% of the notes are holds, aligning with the budget, and jumps are restricted to accents on downbeats.",
+  "notes": [
+    {
+      "ref": "p013",
+      "kind": "tap"
+    },
+    {
+      "ref": "p016",
+      "kind": "tap"
+    },
+    {
+      "ref": "p019",
+      "kind": "tap"
+    },
+    {
+      "ref": "p025",
+      "kind": "hold",
+      "hold_beats": 1
+    },
+    {
+      "ref": "p028",
+      "kind": "tap"
+    },
+    {
+      "ref": "p031",
+      "kind": "tap"
+    },
+    {
+      "ref": "p034",
+      "kind": "tap"
+    },
+    {
+      "ref": "p037",
+      "kind": "hold",
+      "hold_beats": 1
+    },
+    {
+      "ref": "p040",
+      "kind": "tap"
+    },
+    {
+      "ref": "p043",
+      "kind": "tap"
+    },
+    {
+      "ref": "p046",
+      "kind": "tap"
+    },
+    {
+      "ref": "p047",
+      "kind": "tap"
+    },
+    {
+      "ref": "p049",
+      "kind": "hold",
+      "hold_beats": 1
+    },
+    {
+      "ref": "p052",
+      "kind": "tap"
+    },
+    {
+      "ref": "p055",
+      "kind": "tap"
+    },
+    {
+      "ref": "p058",
+      "kind": "tap"
+    },
+    {
+      "ref": "p061",
+      "kind": "tap"
+    },
+    {
+      "ref": "p064",
+      "kind": "tap"
+    },
+    {
+      "ref": "p067",
+      "kind": "tap"
+    },
+    {
+      "ref": "p073",
+      "kind": "hold",
+      "hold_beats": 1
+    },
+    {
+      "ref": "p076",
+      "kind": "tap"
+    },
+    {
+      "ref": "p079",
+      "kind": "tap"
+    },
+    {
+      "ref": "p082",
+      "kind": "tap"
+    },
+    {
+      "ref": "p085",
+      "kind": "hold",
+      "hold_beats": 1
+    },
+    {
+      "ref": "p086",
+      "kind": "tap"
+    },
+    {
+      "ref": "p088",
+      "kind": "tap"
+    },
+    {
+      "ref": "p091",
+      "kind": "tap"
+    },
+    {
+      "ref": "p094",
+      "kind": "tap"
+    },
+    {
+      "ref": "p095",
+      "kind": "tap"
+    },
+    {
+      "ref": "p097",
+      "kind": "tap"
+    },
+    {
+      "ref": "p100",
+      "kind": "tap"
+    },
+    {
+      "ref": "p103",
+      "kind": "hold",
+      "hold_beats": 1
+    },
+    {
+      "ref": "p104",
+      "kind": "tap"
+    },
+    {
+      "ref": "p106",
+      "kind": "tap"
+    },
+    {
+      "ref": "p109",
+      "kind": "tap"
+    },
+    {
+      "ref": "p112",
+      "kind": "tap"
+    },
+    {
+      "ref": "p115",
+      "kind": "tap"
+    },
+    {
+      "ref": "p118",
+      "kind": "tap"
+    },
+    {
+      "ref": "p121",
+      "kind": "hold",
+      "hold_beats": 1
+    },
+    {
+      "ref": "p124",
+      "kind": "tap"
+    },
+    {
+      "ref": "p127",
+      "kind": "tap"
+    },
+    {
+      "ref": "p129",
+      "kind": "tap"
+    },
+    {
+      "ref": "p133",
+      "kind": "tap"
+    },
+    {
+      "ref": "p136",
+      "kind": "tap"
+    },
+    {
+      "ref": "p139",
+      "kind": "tap"
+    },
+    {
+      "ref": "p142",
+      "kind": "tap"
+    },
+    {
+      "ref": "p143",
+      "kind": "tap"
+    },
+    {
+      "ref": "p145",
+      "kind": "tap"
+    },
+    {
+      "ref": "p148",
+      "kind": "tap"
+    },
+    {
+      "ref": "p151",
+      "kind": "tap"
+    },
+    {
+      "ref": "p154",
+      "kind": "tap"
+    },
+    {
+      "ref": "p157",
+      "kind": "hold",
+      "hold_beats": 1
+    },
+    {
+      "ref": "p160",
+      "kind": "tap"
+    },
+    {
+      "ref": "p163",
+      "kind": "tap"
+    },
+    {
+      "ref": "p169",
+      "kind": "tap"
+    },
+    {
+      "ref": "p172",
+      "kind": "tap"
+    },
+    {
+      "ref": "p175",
+      "kind": "tap"
+    },
+    {
+      "ref": "p181",
+      "kind": "tap"
+    },
+    {
+      "ref": "p182",
+      "kind": "tap"
+    },
+    {
+      "ref": "p184",
+      "kind": "tap"
+    },
+    {
+      "ref": "p185",
+      "kind": "tap"
+    },
+    {
+      "ref": "p187",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:64.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:65.0",
+      "kind": "tap"
+    }
+  ],
+  "phrases": [
+    {
+      "start_bar": 0,
+      "end_bar": 1,
+      "texture": "stops_breather",
+      "movement": "static",
+      "crossover": "none",
+      "jump_density": "none",
+      "intent": "intro silence"
+    },
+    {
+      "start_bar": 1,
+      "end_bar": 7,
+      "texture": "steps",
+      "movement": "static",
+      "crossover": "none",
+      "jump_density": "none",
+      "intent": "intro beats to set up the basic rhythm"
+    },
+    {
+      "start_bar": 7,
+      "end_bar": 17,
+      "texture": "stream",
+      "movement": "zigzag",
+      "crossover": "none",
+      "jump_density": "accents",
+      "intent": "the main section with comfortable flow and clear downbeat accents"
+    }
+  ]
+}

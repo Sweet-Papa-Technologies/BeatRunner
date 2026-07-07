@@ -1,0 +1,8 @@
+Overdrive Pulse — Sweet Papa & the Tones
+bpm 119.945  offset 0.176
+
+  Beginner   meter  1  28 notes  0 holds  0 jumps
+  Easy       meter  3  45 notes  0 holds  0 jumps
+  Medium     meter  5  72 notes  0 holds  4 jumps
+  Hard       meter  8  175 notes  0 holds  17 jumps
+  Challenge  meter 11  175 notes  0 holds  28 jumps

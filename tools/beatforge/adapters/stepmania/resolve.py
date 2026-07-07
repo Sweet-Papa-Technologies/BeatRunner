@@ -1,0 +1,192 @@
+"""resolve.py — designer INTENT -> ResolvedNotes, and a deterministic intent
+generator for the no-LLM path (STEPFORGE §5-6).
+
+The designer emits WHICH onsets are notes (by id / grid ref), each note's KIND,
+and per-phrase INTENT from a CLOSED vocabulary. It never emits a time or a panel
+(rejected here). Panels come later from the realizer.
+"""
+from __future__ import annotations
+
+import re
+
+from ... import config
+from .grammar import BUDGETS, CROSSOVERS, KINDS, MOVEMENTS, TEXTURES
+from .realize import ResolvedNote
+
+_GRID_RE = re.compile(r"^grid:(\d+(?:\.\d+)?)$")
+_ONSET_RE = re.compile(r"^[pms]\d+$")
+_TIME_KEYS = {"time", "t", "row", "seconds", "sec", "ms", "beat", "at"}
+_PANEL_KEYS = {"panel", "panels", "col", "cols", "column", "columns", "lane"}
+
+
+class IntentError(ValueError):
+    pass
+
+
+def _playable(analysis: dict):
+    bpm, offset = analysis["bpm"], analysis["offset"]
+    last = (analysis["duration_s"] - config.PLAYABLE_TAIL_S - offset) * bpm / 60.0
+    return config.FIRST_PLAYABLE_BEAT, last
+
+
+def _phrase_for(beat: float, phrases: list, meter: int) -> dict:
+    bar = beat / meter
+    for ph in phrases:
+        if ph["start_bar"] - 1e-9 <= bar < ph["end_bar"] + 1e-9:
+            return ph
+    return {"movement": "static", "crossover": "light", "texture": "steps",
+            "jump_density": "accents"}
+
+
+def resolve_intent(design: dict, analysis: dict, difficulty: str) -> list[ResolvedNote]:
+    onsets = {o["id"]: o for o in analysis.get("onsets", [])}
+    meter = analysis.get("meter", 4)
+    lo_beat, hi_beat = _playable(analysis)
+    phrases = _validate_phrases(design.get("phrases", []))
+
+    notes_in = design.get("notes")
+    if not isinstance(notes_in, list):
+        raise IntentError("designer output has no `notes` array")
+    out: list[ResolvedNote] = []
+    for i, ev in enumerate(notes_in):
+        if not isinstance(ev, dict):
+            raise IntentError(f"note[{i}] must be an object")
+        keys = set(ev.keys())
+        if keys & _TIME_KEYS:
+            raise IntentError(f"note[{i}] carries a raw-time field {sorted(keys & _TIME_KEYS)}; "
+                              "reference onsets/grid only, never a time")
+        if keys & _PANEL_KEYS:
+            raise IntentError(f"note[{i}] specifies a panel {sorted(keys & _PANEL_KEYS)}; "
+                              "the realizer assigns panels, not the designer")
+        ref = ev.get("ref")
+        kind = ev.get("kind", "tap")
+        if kind not in KINDS:
+            raise IntentError(f"note[{i}].kind '{kind}' not in {list(KINDS)}")
+        if not isinstance(ref, str):
+            raise IntentError(f"note[{i}] missing string `ref`")
+        gm = _GRID_RE.match(ref)
+        if gm:
+            beat = float(gm.group(1))
+        elif _ONSET_RE.match(ref):
+            o = onsets.get(ref)
+            if o is None:
+                raise IntentError(f"note[{i}].ref '{ref}' not in onset inventory")
+            beat = float(o["nearest_beat"])
+        else:
+            raise IntentError(f"note[{i}].ref '{ref}' is neither an onset id nor grid:<beat>")
+        if beat < lo_beat - 1e-6 or beat > hi_beat + 1e-6:
+            continue
+        hold = ev.get("hold_beats")
+        if kind in ("hold", "roll"):
+            if not isinstance(hold, (int, float)) or hold <= 0:
+                raise IntentError(f"note[{i}] kind={kind} needs hold_beats > 0")
+        out.append(ResolvedNote(beat=beat, kind=kind,
+                               hold_beats=float(hold) if hold else None,
+                               phrase=_phrase_for(beat, phrases, meter)))
+    out.sort(key=lambda n: n.beat)
+    return out
+
+
+def fill_gaps(resolved: list[ResolvedNote], analysis: dict, difficulty: str,
+              max_gap_beats: float = 8.0) -> list[ResolvedNote]:
+    """Safety net: the designer sometimes leaves a whole quiet-labelled section
+    empty even when it's full of onsets (a 24s hole in the intro). Any stretch of
+    the PLAYABLE window longer than `max_gap_beats` with no note gets filled with
+    sparse taps on real on-grid onsets (or grid lines), so the chart never has a
+    dead pause. Only activates on pathological gaps — normal charts are untouched."""
+    b = BUDGETS[difficulty]
+    subdiv = b.finest_subdiv
+    bpm, offset = analysis["bpm"], analysis["offset"]
+    lo_beat, hi_beat = _playable(analysis)
+    meter = analysis.get("meter", 4)
+    cadence = 2.0 if difficulty in ("beginner", "easy") else 1.0
+
+    # on-grid onsets in the window, indexed by snapped beat, strongest first pick
+    grid_onsets: dict[float, dict] = {}
+    for o in analysis.get("onsets", []):
+        beat = o["nearest_beat"]
+        if beat < lo_beat or beat > hi_beat:
+            continue
+        if abs(beat - round(beat / subdiv) * subdiv) > 1e-3:
+            continue
+        if abs(o.get("snap_error_ms", 0)) > config.ONSET_SNAP_MAX_MS:
+            continue
+        k = round(beat, 3)
+        if k not in grid_onsets or o["strength"] > grid_onsets[k]["strength"]:
+            grid_onsets[k] = o
+
+    occupied = {round(n.beat, 3) for n in resolved}
+    boundaries = sorted([lo_beat] + [n.beat for n in resolved] + [hi_beat])
+    added: list[ResolvedNote] = []
+    for i in range(1, len(boundaries)):
+        g0, g1 = boundaries[i - 1], boundaries[i]
+        if g1 - g0 <= max_gap_beats:
+            continue
+        beat = g0 + cadence
+        while beat < g1 - cadence / 2:
+            tb = round(round(beat / subdiv) * subdiv, 3)
+            if tb in occupied:
+                beat += cadence
+                continue
+            # snap the fill to the nearest real onset within half a cadence, else grid
+            ref_beat = min((k for k in grid_onsets if abs(k - tb) <= cadence / 2 + 1e-6),
+                           key=lambda k: abs(k - tb), default=tb)
+            ph = _phrase_for(ref_beat, [], meter)
+            added.append(ResolvedNote(beat=ref_beat, kind="tap", phrase=ph))
+            occupied.add(round(ref_beat, 3))
+            beat += cadence
+    if added:
+        resolved = sorted(resolved + added, key=lambda n: n.beat)
+    return resolved
+
+
+def _validate_phrases(phrases: list) -> list:
+    for ph in phrases:
+        for field, vocab in (("texture", TEXTURES), ("movement", MOVEMENTS),
+                             ("crossover", CROSSOVERS)):
+            v = ph.get(field)
+            if v is not None and v not in vocab:
+                raise IntentError(f"phrase {field} '{v}' not in closed vocabulary {list(vocab)}")
+    return phrases
+
+
+# --------------------------------------------------------------------------- #
+# Deterministic intent (no LLM) — select on-grid onsets, phrases from sections
+# --------------------------------------------------------------------------- #
+def deterministic_intent(analysis: dict, difficulty: str) -> dict:
+    b = BUDGETS[difficulty]
+    subdiv = b.finest_subdiv
+    lo_beat, hi_beat = _playable(analysis)
+    min_gap = subdiv
+    notes, last = [], -99.0
+    for o in sorted(analysis.get("onsets", []), key=lambda o: o["nearest_beat"]):
+        beat = o["nearest_beat"]
+        if beat < lo_beat or beat > hi_beat:
+            continue
+        if abs(beat - round(beat / subdiv) * subdiv) > 1e-3:
+            continue
+        if abs(o.get("snap_error_ms", 0)) > config.ONSET_SNAP_MAX_MS:
+            continue
+        if beat - last < min_gap - 1e-6:
+            continue
+        kind = "tap"
+        hold = None
+        if o.get("sustain") and o.get("sustain_beats", 0) >= b.hold_len_beats[0] - 1.0:
+            kind = "hold"
+            hold = min(b.hold_len_beats[1], max(b.hold_len_beats[0], round(o["sustain_beats"])))
+        n = {"ref": o["id"], "kind": kind}
+        if hold:
+            n["hold_beats"] = hold
+        notes.append(n)
+        last = beat
+    # one phrase per section, movement drifting with energy
+    meter = analysis.get("meter", 4)
+    phrases = []
+    for s in analysis.get("sections", []):
+        energy = s.get("energy_pct", 0.5)
+        phrases.append({
+            "start_bar": s["start_bar"], "end_bar": s["end_bar"],
+            "texture": "stream" if energy > 0.7 else "steps",
+            "movement": "drift_L_to_R", "crossover": b.crossover,
+            "jump_density": b.jumps})
+    return {"design_notes": "deterministic", "notes": notes, "phrases": phrases}

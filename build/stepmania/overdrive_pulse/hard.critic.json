@@ -1,0 +1,10 @@
+{
+  "score": 8,
+  "verdict": "An exceptionally rhythmic and well-flowing hard dance chart with satisfying sixteenth-note gallops, marred only by one locked-hold pattern that forces an awkward single-foot run.",
+  "issues": [
+    {
+      "where": "30.190 - 30.690",
+      "problem": "While R is held, the chart introduces a sixteenth-note burst (30.440 U -> 30.565 D -> 30.690 L) forcing the left foot to execute a highly awkward three-direction sequence at sixteenth speed."
+    }
+  ]
+}

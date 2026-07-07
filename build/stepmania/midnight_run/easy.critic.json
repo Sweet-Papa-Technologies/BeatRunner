@@ -1,0 +1,22 @@
+{
+  "score": 7,
+  "verdict": "A rhythmic and mostly comfortable chart that occasionally spikes in difficulty with advanced 8th-note patterns and awkward transitions unsuitable for an Easy rating.",
+  "issues": [
+    {
+      "where": "10.425 - 10.890",
+      "problem": "Complex 8th-note coordination involving a hold (L -> U Hold -> D Tap) which is too demanding for a beginner-level chart."
+    },
+    {
+      "where": "11.820 - 12.284",
+      "problem": "Fast 8th-note stream leading directly into a hold (D -> U -> L Hold) that can easily trip up players at this level."
+    },
+    {
+      "where": "25.766 - 26.230",
+      "problem": "Highly awkward 8th-note sequence (U -> R -> LR Jump) that forces either a very fast double-step on the right foot or an advanced crossover directly into an 8th-note jump entry."
+    },
+    {
+      "where": "26.695 - 27.160",
+      "problem": "An 8th-note stream (D -> U -> L) that spikes the physical and reading density unnecessarily for an Easy chart."
+    }
+  ]
+}

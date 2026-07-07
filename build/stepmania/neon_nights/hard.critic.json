@@ -1,0 +1,23 @@
+{
+  "score": 4,
+  "verdict": "The chart suffers from technical duplicate exports, highly awkward 'Up-Down' jumps, and forced three-panel brackets that ruin the physical flow for a standard Hard difficulty.",
+  "issues": [
+    {
+      "where": "1.844, 3.584, 26.200",
+      "problem": "Duplicate JUMP LR events are written at the exact same timestamp, indicating a chart export or parsing bug."
+    },
+    {
+      "where": "7.281, 22.068",
+      "problem": "Awkward Up-Down (UD) jumps are used, which are highly uncomfortable and physically unsafe/unbalanced on a standard dance pad."
+    },
+    {
+      "where": "2.931, 30.550",
+      "problem": "Forced three-panel bracket steps (tapping U while holding D+R, and tapping D while holding L+R) are too advanced and cramped for a standard Hard chart."
+    },
+    {
+      "where": "8.368 - 8.803",
+      "problem": "Extremely uncomfortable 16th-note transition directly out of a JUMP DL (DL -> R -> U -> LR) forcing awkward double-steps or high-speed slides."
+    }
+  ],
+  "human_review": true
+}

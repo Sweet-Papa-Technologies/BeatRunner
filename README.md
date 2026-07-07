@@ -158,5 +158,36 @@ A read timeout now surfaces as a clean per-model error (the comparison keeps its
 probe + Gemini results instead of crashing). Start with `compare --probe-only` —
 it's the light test that answers "does it hear the audio?" without the heavy design.
 
+## STEPFORGE — StepMania export (`.ssc` / `.sm`)
+
+beatforge is a **toolkit**: the DSP core + Gemini designer/critic harness are
+game-agnostic, and a *target adapter* adds each game's output grammar. The first
+adapter, **STEPFORGE** (`tools/beatforge/adapters/stepmania/`), emits ITGmania
+**dance-single** (4-panel) simfiles. See [`STEPMANIA.SPEC.MD`](STEPMANIA.SPEC.MD).
+
+```bash
+PYTHONPATH=tools python3 -m beatforge stepforge                                  # Gemini, all tracks, easy/medium/hard
+PYTHONPATH=tools python3 -m beatforge stepforge --track overdrive --difficulties medium
+PYTHONPATH=tools python3 -m beatforge stepforge --deterministic                  # DSP-only foot-flow, no LLM / offline
+```
+
+The pipeline (§2 of the spec): DSP truth → **intent designer** (Gemini emits
+*which* onsets, each note's *kind*, and per-phrase *intent* from a closed
+texture/movement/crossover vocabulary — never panels or times) → **foot-flow DP
+realizer** (`realize.py` + `footflow.py`: a Viterbi lowest-discomfort panel
+assignment over a foot-state machine — this is what makes the steps feel good) →
+legality/ergonomic **validate+repair** → **serialize via `garcia/simfile`** (never
+hand-formatted). Output is a self-contained song folder in `build/stepmania/<song>/`
+(`<song>.ssc` + `<song>.sm` + audio + per-difficulty design/critic/QA + an
+**assist-tick `.ogg`** — play it to hear whether steps land on the music). Timing
+comes from measured `#BPMS`/`#OFFSET`; METER is a monotonic heuristic
+(`DIFFICULTY_CALC_NOTE.md` covers the external-calc evaluation, REQ-SM-10).
+
+**Editor handoff (REQ-SM-16):** STEPFORGE produces a *strong draft*, not a claimed
+final. Workflow: generate → refine in **GrooveAuthor** or **ArrowVortex** → test in
+**ITGmania**. The `.ssc` opens directly in those editors. Adapter + realizer +
+serializer covered offline by `tests/test_stepforge.py`; every emitted file
+round-trips through `simfile`.
+
 The original generators (`make_overdrive_maps.py`, `make_beatmaps.py`,
 `generate_assets.py`) are kept for provenance; beatforge is the canonical path.

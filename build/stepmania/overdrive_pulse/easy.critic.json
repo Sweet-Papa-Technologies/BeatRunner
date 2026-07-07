@@ -1,0 +1,18 @@
+{
+  "score": 9,
+  "verdict": "An exceptionally comfortable Easy chart with flawless foot flow and natural alternation, though it features a slightly high jump density and a couple of static jumps.",
+  "issues": [
+    {
+      "where": "12.182",
+      "problem": "The JUMP DR lands on panels that the player's feet are already occupying (L foot on D from 11.681, R foot on R from 11.181), resulting in a 'static' jump that requires no movement."
+    },
+    {
+      "where": "16.183",
+      "problem": "Like the jump at 12.182, this JUMP DR is static because the player's feet are already on D and R, which can feel unrewarding to play."
+    },
+    {
+      "where": "General",
+      "problem": "The jump density is quite high for an Easy chart (11 jumps in 30 seconds), which might overwhelm or tire out absolute beginners."
+    }
+  ]
+}

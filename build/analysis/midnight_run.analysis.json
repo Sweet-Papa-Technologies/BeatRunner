@@ -5025,13 +5025,13 @@
     0.8683
   ],
   "energy_cv": 0.0637,
-  "cache_key": "9dee5f3b8d28d736-local_dsp_v1",
+  "cache_key": "3ffa07556fe29898-local_dsp_v1",
   "track_id": "midnight",
   "job_meta": {
     "backend": "local",
     "beat_backend": "local_dsp",
     "stem_source": "none",
-    "wall_clock_s": 1.34,
+    "wall_clock_s": 1.28,
     "gpu": null,
     "note": "LocalCpuBackend: numpy/scipy DSP, HPSS-only, no stems (reduced fidelity vs Colab Demucs+madmom path)."
   }

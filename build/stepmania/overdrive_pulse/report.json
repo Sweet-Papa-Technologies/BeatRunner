@@ -1,0 +1,164 @@
+{
+  "track_id": "overdrive",
+  "bpm": 119.945,
+  "offset": 0.176,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 53,
+      "meter": 3,
+      "jumps": 11,
+      "holds": 6,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "An exceptionally comfortable Easy chart with flawless foot flow and natural alternation, though it features a slightly high jump density and a couple of static jumps.",
+        "issues": [
+          {
+            "where": "12.182",
+            "problem": "The JUMP DR lands on panels that the player's feet are already occupying (L foot on D from 11.681, R foot on R from 11.181), resulting in a 'static' jump that requires no movement."
+          },
+          {
+            "where": "16.183",
+            "problem": "Like the jump at 12.182, this JUMP DR is static because the player's feet are already on D and R, which can feel unrewarding to play."
+          },
+          {
+            "where": "General",
+            "problem": "The jump density is quite high for an Easy chart (11 jumps in 30 seconds), which might overwhelm or tire out absolute beginners."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/overdrive_pulse/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 53,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.234,
+          "D": 0.344,
+          "U": 0.203,
+          "R": 0.219
+        },
+        "hold_share": 0.1132,
+        "jump_share": 0.2075,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.08,
+        "density_energy_spearman": -0.2183,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "medium": {
+      "notes": 92,
+      "meter": 5,
+      "jumps": 18,
+      "holds": 7,
+      "repaired": 4,
+      "repair_ok": true,
+      "critic": {
+        "score": 3,
+        "verdict": "An incredibly repetitive and copy-pasted chart that suffers from highly awkward foot flow, forced double-stepping, and a complete lack of creative variety.",
+        "issues": [
+          {
+            "where": "Throughout the entire chart (e.g., 3.177, 5.178, 13.182, 17.184, 21.436)",
+            "problem": "The sequence 'JUMP LR -> tap U -> tap D -> tap L' is copy-pasted excessively. It makes up nearly the entire chart, offering zero structural variety or engagement for the player."
+          },
+          {
+            "where": "Repeated pattern transitions (e.g., 3.678 to 3.928, 5.679 to 5.929)",
+            "problem": "Going from 'tap D' to 'tap L' right after a Left-Right jump forces either an awkward double-step with the left foot or an uncomfortable crossover with the right foot. Repeating this mistake constantly is highly fatiguing and poor chart design."
+          },
+          {
+            "where": "11.181 to 12.182",
+            "problem": "The sequence 'JUMP LU -> tap D -> tap R -> tap U -> HOLD D' is highly unnatural. Landing a Left-Up jump and immediately transitioning into Down then Right forces heavy, un-intuitive double-steps that do not suit a Medium difficulty chart."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/overdrive_pulse/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 92,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.345,
+          "D": 0.227,
+          "U": 0.227,
+          "R": 0.2
+        },
+        "hold_share": 0.0761,
+        "jump_share": 0.1957,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": -0.1146,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "hard": {
+      "notes": 146,
+      "meter": 8,
+      "jumps": 15,
+      "holds": 8,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 8,
+        "verdict": "An exceptionally rhythmic and well-flowing hard dance chart with satisfying sixteenth-note gallops, marred only by one locked-hold pattern that forces an awkward single-foot run.",
+        "issues": [
+          {
+            "where": "30.190 - 30.690",
+            "problem": "While R is held, the chart introduces a sixteenth-note burst (30.440 U -> 30.565 D -> 30.690 L) forcing the left foot to execute a highly awkward three-direction sequence at sixteenth speed."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/overdrive_pulse/hard.assist.ogg"
+      },
+      "metrics": {
+        "notes": 146,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.273,
+          "D": 0.242,
+          "U": 0.267,
+          "R": 0.217
+        },
+        "hold_share": 0.0548,
+        "jump_share": 0.1027,
+        "flow_cost_max": 0.0,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.2821,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/overdrive_pulse/overdrive_pulse.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/overdrive_pulse/overdrive_pulse.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/overdrive_pulse/overdrive_pulse.ogg"
+  },
+  "out": "build/stepmania/overdrive_pulse",
+  "meter_monotonic": true
+}
