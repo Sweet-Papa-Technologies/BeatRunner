@@ -1,0 +1,19 @@
+{
+  "track": "overdrive",
+  "difficulty": "standard",
+  "measured_bpm": 119.94,
+  "probe": {
+    "gemini": {
+      "tempo_bpm": 120,
+      "has_kick": true,
+      "section_count": 4,
+      "one_line": "A driving synthwave track featuring an arpeggiated bassline, energetic four-on-the-floor kick, and retro lead synthesizer melodies.",
+      "_latency_s": 7.39,
+      "bpm_error": 0.06
+    },
+    "gemma": {
+      "error": "cannot reach OpenAI-compatible server at http://192.168.1.99:8000/v1: [Errno 65] No route to host"
+    }
+  },
+  "design": {}
+}

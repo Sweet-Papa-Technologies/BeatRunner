@@ -123,5 +123,29 @@ gate results), and `.preview.png` / `.preview.ogg` (a timeline image and a
 click-track — *listen to the click-track to verify notes land on the music*).
 Emitted maps land in `public/maps/<track>.<difficulty>.beatmap.json`.
 
+### Swapping the audio LLM (Gemini ⇄ a self-hosted model)
+
+The designer/critic model is behind one interface (`tools/beatforge/llm.py`), so an
+alternative audio-capable model on any **OpenAI-compatible** server (vLLM,
+llama.cpp, …) can be dropped in and benchmarked. Lyria (music gen) stays on Vertex.
+
+```bash
+# Point at your server and select the backend:
+export BEATFORGE_LLM_BACKEND=openai
+export BEATFORGE_OPENAI_BASE_URL=http://<host>:8000/v1
+export BEATFORGE_OPENAI_MODEL=$(curl -s http://<host>:8000/v1/models | python3 -c 'import sys,json;print(json.load(sys.stdin)["data"][0]["id"])')
+python3 -m beatforge chart --track overdrive --difficulty standard   # now uses your model
+
+# Head-to-head vs Gemini 3.5 Flash (audio-understanding probe + designer, one Gemini critic judges both):
+python3 -m beatforge compare --track overdrive --difficulty standard
+python3 -m beatforge compare --track overdrive --probe-only          # just the audio probe
+```
+
+Audio is sent as an OpenAI `input_audio` content part (`.ogg` transcoded to
+`BEATFORGE_OPENAI_AUDIO_FORMAT`, default `wav`). The client is covered end-to-end
+by `tests/test_llm.py` against a local mock. NB: the server must be reachable from
+wherever you run this — a box on a different LAN segment (e.g. `192.168.1.x` when
+you're on `192.168.3.x`) will not route.
+
 The original generators (`make_overdrive_maps.py`, `make_beatmaps.py`,
 `generate_assets.py`) are kept for provenance; beatforge is the canonical path.

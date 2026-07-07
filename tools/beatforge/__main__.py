@@ -43,9 +43,9 @@ def cmd_analyze(a):
 
 def cmd_chart(a):
     from .pipeline import chart_track
-    from .vertex import VertexClient
+    from .llm import make_llm_client
     opts = _opts(a)
-    client = VertexClient()
+    client = make_llm_client()
     backend = make_backend(opts, run_id="cli")
     try:
         for tid in opts.tracks:
@@ -105,15 +105,48 @@ def cmd_generate(a):
               f"rounds={res['rounds']} -> {res['audio']}")
 
 
+def cmd_compare(a):
+    """Benchmark the OpenAI-compatible model (e.g. local Gemma 4 12B) against
+    Gemini 3.5 Flash on the audio-understanding probe + designer/critic. With
+    --track it runs one track; without, it sweeps the whole catalogue."""
+    from .compare import compare_track, format_report
+    opts = _opts(a)
+    tracks = (a.track,) if a.track else tuple(config.TRACK_CATALOGUE)
+    diff = a.difficulty or "standard"
+    reachable = _openai_reachable()
+    if not reachable:
+        print("[compare] WARNING: OpenAI-compatible server "
+              f"{config.OPENAI_BASE_URL} is not reachable; the Gemma column will "
+              "show errors. Gemini baseline still runs.")
+    for tid in tracks:
+        report = compare_track(tid, diff, opts, probe_only=a.probe_only)
+        print(format_report(report))
+        out = config.BUILD_DIR / f"compare.{config.TRACK_CATALOGUE.get(tid, tid)}.{diff}.json"
+        out.write_text(json.dumps(report, indent=2))
+    print(f"\nreports -> {config.BUILD_DIR.relative_to(config.REPO_ROOT)}/compare.*.json")
+
+
+def _openai_reachable() -> bool:
+    from .llm import OpenAICompatClient
+    try:
+        OpenAICompatClient().list_models(timeout=6)
+        return True
+    except Exception:
+        return False
+
+
 def cmd_all(a):
     from .pipeline import chart_track
-    from .vertex import VertexClient
+    from .llm import make_llm_client
     opts = _opts(a)
-    client = VertexClient()
+    client = make_llm_client()          # charting: swappable (Gemini or Gemma)
     if not opts.skip_gen:
+        # Generation (Lyria + A&R) is Vertex-only, independent of the chart backend.
         from .gen import generate_track
+        from .vertex import VertexClient
+        gen_client = VertexClient()
         for tid in opts.tracks:
-            generate_track(tid, opts, client)
+            generate_track(tid, opts, gen_client)
     # ONE backend/session for the whole batch (REQ-COMPUTE-03)
     backend = make_backend(opts, run_id="batch")
     try:
@@ -154,8 +187,14 @@ def build_parser():
     av.add_argument("--with-gen", action="store_false", dest="skip_gen",
                     help="run the generation loop first")
 
+    cmp = sub.add_parser("compare", help="benchmark OpenAI-compatible model vs Gemini 3.5 Flash")
+    common(cmp)
+    cmp.add_argument("--probe-only", action="store_true", dest="probe_only",
+                     help="only run the audio-understanding probe (skip full chart design)")
+
     for name, fn in {"analyze": cmd_analyze, "chart": cmd_chart, "validate": cmd_validate,
-                     "qa": cmd_qa, "generate": cmd_generate, "all": cmd_all}.items():
+                     "qa": cmd_qa, "generate": cmd_generate, "all": cmd_all,
+                     "compare": cmd_compare}.items():
         sub.choices[name].set_defaults(fn=fn)
     return p
 
