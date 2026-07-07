@@ -215,3 +215,54 @@ requirements:
     intents:
       - "test_compute.py::test_local_backend_stamps_degradation"
       - "test_compute.py::test_missing_colab_cli_fails_loudly"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# STEPFORGE (STEPMANIA.SPEC.MD / ORIGINAL DOC) — StepMania TargetAdapter. Traced
+# to tools/beatforge/tests/test_stepforge.py (offline: no Vertex/Colab/StepMania
+# runtime; every emitted file round-trips through garcia/simfile).
+module: tools/beatforge/adapters/stepmania
+requirements:
+  REQ-ARCH-01:
+    title: Adapter isolation (Protocol)
+    intents:
+      - "test_stepforge.py::test_null_and_stepmania_satisfy_protocol — NullAdapter + StepManiaAdapter satisfy TargetAdapter"
+      - "git diff shows zero edits under src/core"
+  REQ-SM-01:
+    title: Beat->row quantization
+    intents:
+      - "test_stepforge.py::test_snap_to_subdivision"
+      - "test_stepforge.py::test_triplet_and_16th_render_to_right_resolution (triplet->12ths, 16th->16ths)"
+  REQ-SM-02:
+    title: Timing from measured truth
+    intents:
+      - "test_stepforge.py::test_serialize_round_trips_through_simfile (#OFFSET=-offset, #BPMS from analysis)"
+  REQ-SM-03:
+    title: Foot-flow DP realizer
+    intents:
+      - "test_stepforge.py::test_eighth_stream_strict_alternation_zero_double_steps"
+      - "test_stepforge.py::test_no_crossover_budget_forbids_crossed_feet"
+  REQ-SM-04:
+    title: Foot-flow validator + repair
+    intents:
+      - "test_stepforge.py::test_nps_thinning_keeps_whole_chart (thins uniformly, not front-march)"
+      - "test_stepforge.py::test_clean_chart_zero_repairs"
+  REQ-SM-05:
+    title: Designer intent (no timestamps)
+    intents:
+      - "test_stepforge.py::test_reject_raw_time / test_reject_panel_in_intent"
+  REQ-SM-06:
+    title: Closed texture vocabulary
+    intents:
+      - "test_stepforge.py::test_reject_freestyle_texture"
+  REQ-SM-07:
+    title: Serialize via garcia/simfile
+    intents:
+      - "test_stepforge.py::test_serialize_round_trips_through_simfile (simfile.load re-opens byte-stable)"
+  REQ-SM-09:
+    title: METER monotonic
+    intents:
+      - "test_stepforge.py::test_meter_monotonic_by_construction (easy<=medium<=hard)"
+  REQ-SM-11:
+    title: Schema + legality gate
+    intents:
+      - "serialize.write_song_folder asserts simfile re-open; every shipped .ssc round-trips"

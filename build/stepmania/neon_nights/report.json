@@ -1,0 +1,164 @@
+{
+  "track_id": "neon",
+  "bpm": 137.95,
+  "offset": 0.104,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 46,
+      "meter": 3,
+      "jumps": 0,
+      "holds": 5,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "An excellent Easy chart that features natural foot flow, comfortable alternation, and great physical representation of the music's structure.",
+        "issues": [
+          {
+            "where": "9.238",
+            "problem": "An isolated 8th note transition into a hold might be slightly abrupt for an Easy difficulty, though it fits the melody well."
+          },
+          {
+            "where": "15.762 - 17.067",
+            "problem": "The syncopated rhythm (dotted quarter notes) is a bit complex for beginner players, but matches the syncopation in the music."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/neon_nights/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 46,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.217,
+          "D": 0.283,
+          "U": 0.283,
+          "R": 0.217
+        },
+        "hold_share": 0.1087,
+        "jump_share": 0.0,
+        "flow_cost_max": 0.0,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.5461,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "medium": {
+      "notes": 99,
+      "meter": 5,
+      "jumps": 14,
+      "holds": 5,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "An exceptionally clean, rhythmic, and well-structured Medium chart with an infectious hook in the drop, let down only by one slightly awkward rotational pattern in the first half.",
+        "issues": [
+          {
+            "where": "7.498 - 8.368",
+            "problem": "The 8th-note stream pattern (R -> U -> D -> L -> U -> D -> R) forces a full 360-degree body spin or awkward double-stepping, which is slightly too complex for a standard Medium difficulty level."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/neon_nights/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 99,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.248,
+          "D": 0.265,
+          "U": 0.257,
+          "R": 0.23
+        },
+        "hold_share": 0.0505,
+        "jump_share": 0.1414,
+        "flow_cost_max": 0.0,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.2397,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "hard": {
+      "notes": 160,
+      "meter": 8,
+      "jumps": 24,
+      "holds": 8,
+      "repaired": 3,
+      "repair_ok": true,
+      "critic": {
+        "score": 4,
+        "verdict": "The chart suffers from technical duplicate exports, highly awkward 'Up-Down' jumps, and forced three-panel brackets that ruin the physical flow for a standard Hard difficulty.",
+        "issues": [
+          {
+            "where": "1.844, 3.584, 26.200",
+            "problem": "Duplicate JUMP LR events are written at the exact same timestamp, indicating a chart export or parsing bug."
+          },
+          {
+            "where": "7.281, 22.068",
+            "problem": "Awkward Up-Down (UD) jumps are used, which are highly uncomfortable and physically unsafe/unbalanced on a standard dance pad."
+          },
+          {
+            "where": "2.931, 30.550",
+            "problem": "Forced three-panel bracket steps (tapping U while holding D+R, and tapping D while holding L+R) are too advanced and cramped for a standard Hard chart."
+          },
+          {
+            "where": "8.368 - 8.803",
+            "problem": "Extremely uncomfortable 16th-note transition directly out of a JUMP DL (DL -> R -> U -> LR) forcing awkward double-steps or high-speed slides."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/neon_nights/hard.assist.ogg"
+      },
+      "metrics": {
+        "notes": 160,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.277,
+          "D": 0.239,
+          "U": 0.283,
+          "R": 0.201
+        },
+        "hold_share": 0.05,
+        "jump_share": 0.15,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.12,
+        "density_energy_spearman": -0.3548,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/neon_nights/neon_nights.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/neon_nights/neon_nights.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/neon_nights/neon_nights.ogg"
+  },
+  "out": "build/stepmania/neon_nights",
+  "meter_monotonic": true
+}

@@ -135,6 +135,28 @@ def _openai_reachable() -> bool:
         return False
 
 
+def cmd_stepforge(a):
+    """STEPFORGE: export tracks as StepMania song folders (.ssc/.sm) via the
+    TargetAdapter — DSP truth -> intent designer -> foot-flow realizer ->
+    validate -> simfile. Default uses the Gemini designer; --deterministic is
+    DSP-only (offline)."""
+    from .adapters.stepmania.adapter import build_song
+    from .adapters.stepmania.grammar import DIFFICULTIES
+    opts = _opts(a)
+    tracks = (a.track,) if a.track else tuple(config.TRACK_CATALOGUE)
+    diffs = tuple(a.difficulties.split(",")) if a.difficulties else DIFFICULTIES
+    deterministic = a.deterministic
+    client = None
+    if not deterministic:
+        from .llm import make_llm_client
+        client = make_llm_client()
+    for tid in tracks:
+        r = build_song(tid, opts, difficulties=diffs, deterministic=deterministic, client=client)
+        cs = " ".join(f"{s}:{i['notes']}n/m{i['meter']}/gates{all(i['metrics']['gates'].values())}"
+                      for s, i in r["charts"].items())
+        print(f"[stepforge] {tid} ({r['mode']}, mono={r['meter_monotonic']}) -> {r['out']}  [{cs}]")
+
+
 def cmd_all(a):
     from .pipeline import chart_track
     from .llm import make_llm_client
@@ -192,9 +214,20 @@ def build_parser():
     cmp.add_argument("--probe-only", action="store_true", dest="probe_only",
                      help="only run the audio-understanding probe (skip full chart design)")
 
+    sf = sub.add_parser("stepforge", help="export ITGmania .ssc/.sm song folders (StepMania adapter)")
+    sf.add_argument("--track", help="single track id (default: all)")
+    sf.add_argument("--difficulties", help="comma list e.g. easy,medium,hard (default: easy,medium,hard)")
+    sf.add_argument("--deterministic", action="store_true",
+                    help="DSP-only foot-flow placement, no LLM (offline)")
+    sf.add_argument("--backend", choices=["local", "colab"], default=config.DEFAULT_BACKEND)
+    sf.add_argument("--gpu", default=config.COLAB_GPU)
+    sf.add_argument("--force", action="store_true")
+    sf.add_argument("--allow-local-fallback", action="store_true", dest="allow_local_fallback")
+    sf.add_argument("--offline", action="store_true")
+
     for name, fn in {"analyze": cmd_analyze, "chart": cmd_chart, "validate": cmd_validate,
                      "qa": cmd_qa, "generate": cmd_generate, "all": cmd_all,
-                     "compare": cmd_compare}.items():
+                     "compare": cmd_compare, "stepforge": cmd_stepforge}.items():
         sub.choices[name].set_defaults(fn=fn)
     return p
 

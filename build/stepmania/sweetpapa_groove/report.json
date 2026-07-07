@@ -1,0 +1,141 @@
+{
+  "track_id": "groove",
+  "bpm": 88.002,
+  "offset": 0.122,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 52,
+      "meter": 3,
+      "jumps": 2,
+      "holds": 9,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 10,
+        "verdict": "An exceptionally well-crafted Easy chart that provides a fluid, natural flow perfectly synced to the synth-pop rhythm, making it highly satisfying for beginners.",
+        "issues": []
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/sweetpapa_groove/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 52,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.185,
+          "D": 0.296,
+          "U": 0.315,
+          "R": 0.204
+        },
+        "hold_share": 0.1731,
+        "jump_share": 0.0385,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.7465,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "medium": {
+      "notes": 55,
+      "meter": 5,
+      "jumps": 9,
+      "holds": 7,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 10,
+        "verdict": "An exceptionally well-crafted Medium chart with flawless foot flow, natural physical transitions, and perfect rhythmic synchronization.",
+        "issues": []
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/sweetpapa_groove/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 55,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.281,
+          "D": 0.25,
+          "U": 0.281,
+          "R": 0.188
+        },
+        "hold_share": 0.1273,
+        "jump_share": 0.1636,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.02,
+        "density_energy_spearman": 0.7064,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "hard": {
+      "notes": 70,
+      "meter": 8,
+      "jumps": 7,
+      "holds": 6,
+      "repaired": 1,
+      "repair_ok": true,
+      "critic": {
+        "score": 8,
+        "verdict": "A well-synced, energetic chart that captures the track's drive, let down only by an awkward one-sided eighth-note run during a hold.",
+        "issues": [
+          {
+            "where": "29.440 - 30.121",
+            "problem": "Holding L while executing an 8th-note run (R -> U -> D) forces the player to perform an uncomfortable, fast one-foot movement entirely with the right foot."
+          },
+          {
+            "where": "12.394",
+            "problem": "Transitioning from a LD jump directly into a U tap can feel slightly jarring and cause minor double-stepping."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/sweetpapa_groove/hard.assist.ogg"
+      },
+      "metrics": {
+        "notes": 70,
+        "onset_alignment": 0.9857,
+        "grid_notes": 1,
+        "panel_balance": {
+          "L": 0.234,
+          "D": 0.286,
+          "U": 0.286,
+          "R": 0.195
+        },
+        "hold_share": 0.0857,
+        "jump_share": 0.1,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.02,
+        "density_energy_spearman": 0.8175,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/sweetpapa_groove/sweetpapa_groove.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/sweetpapa_groove/sweetpapa_groove.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/sweetpapa_groove/sweetpapa_groove.ogg"
+  },
+  "out": "build/stepmania/sweetpapa_groove",
+  "meter_monotonic": true
+}

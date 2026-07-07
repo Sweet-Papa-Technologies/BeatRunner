@@ -1,0 +1,8 @@
+Sweet Papa Groove — Sweet Papa & the Tones
+bpm 88.002  offset 0.122
+
+  Beginner   meter  1  21 notes  2 holds  0 jumps
+  Easy       meter  3  30 notes  3 holds  0 jumps
+  Medium     meter  5  60 notes  10 holds  3 jumps
+  Hard       meter  7  89 notes  10 holds  3 jumps
+  Challenge  meter 10  90 notes  10 holds  3 jumps

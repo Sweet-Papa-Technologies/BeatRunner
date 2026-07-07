@@ -1,0 +1,282 @@
+{
+  "design_notes": "An easy-level chart designed with a strong focus on casual playability. It features zero crossovers, very friendly footwork, and a rhythmic flow that matches the energy changes in the music (Spearman correlation = 0.868). Jumps are reserved for clear downbeats to provide physical emphasis without overwhelming the player. Holds and rolls are placed on prominent sustained sounds and account for exactly 13.8% of the total steps, right in the sweet spot of the budget.",
+  "notes": [
+    {
+      "ref": "p008",
+      "kind": "tap"
+    },
+    {
+      "ref": "p011",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "p017",
+      "kind": "tap"
+    },
+    {
+      "ref": "p019",
+      "kind": "tap"
+    },
+    {
+      "ref": "p020",
+      "kind": "tap"
+    },
+    {
+      "ref": "p021",
+      "kind": "tap"
+    },
+    {
+      "ref": "p022",
+      "kind": "tap"
+    },
+    {
+      "ref": "p023",
+      "kind": "hold",
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "p025",
+      "kind": "tap"
+    },
+    {
+      "ref": "p027",
+      "kind": "tap"
+    },
+    {
+      "ref": "p034",
+      "kind": "tap"
+    },
+    {
+      "ref": "p036",
+      "kind": "tap"
+    },
+    {
+      "ref": "p040",
+      "kind": "tap"
+    },
+    {
+      "ref": "p043",
+      "kind": "tap"
+    },
+    {
+      "ref": "p044",
+      "kind": "tap"
+    },
+    {
+      "ref": "p045",
+      "kind": "tap"
+    },
+    {
+      "ref": "p046",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "p049",
+      "kind": "tap"
+    },
+    {
+      "ref": "p051",
+      "kind": "tap"
+    },
+    {
+      "ref": "p053",
+      "kind": "tap"
+    },
+    {
+      "ref": "p055",
+      "kind": "tap"
+    },
+    {
+      "ref": "p057",
+      "kind": "tap"
+    },
+    {
+      "ref": "p059",
+      "kind": "tap"
+    },
+    {
+      "ref": "p061",
+      "kind": "tap"
+    },
+    {
+      "ref": "p065",
+      "kind": "tap"
+    },
+    {
+      "ref": "p068",
+      "kind": "tap"
+    },
+    {
+      "ref": "p070",
+      "kind": "tap"
+    },
+    {
+      "ref": "p072",
+      "kind": "tap"
+    },
+    {
+      "ref": "p074",
+      "kind": "tap"
+    },
+    {
+      "ref": "p076",
+      "kind": "tap"
+    },
+    {
+      "ref": "p079",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "p082",
+      "kind": "tap"
+    },
+    {
+      "ref": "p084",
+      "kind": "tap"
+    },
+    {
+      "ref": "p086",
+      "kind": "tap"
+    },
+    {
+      "ref": "p088",
+      "kind": "tap"
+    },
+    {
+      "ref": "p089",
+      "kind": "tap"
+    },
+    {
+      "ref": "p090",
+      "kind": "hold",
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "p094",
+      "kind": "tap"
+    },
+    {
+      "ref": "p100",
+      "kind": "tap"
+    },
+    {
+      "ref": "p104",
+      "kind": "tap"
+    },
+    {
+      "ref": "p108",
+      "kind": "tap"
+    },
+    {
+      "ref": "p110",
+      "kind": "tap"
+    },
+    {
+      "ref": "p114",
+      "kind": "tap"
+    },
+    {
+      "ref": "p116",
+      "kind": "tap"
+    },
+    {
+      "ref": "p120",
+      "kind": "tap"
+    },
+    {
+      "ref": "p126",
+      "kind": "tap"
+    },
+    {
+      "ref": "p132",
+      "kind": "tap"
+    },
+    {
+      "ref": "p134",
+      "kind": "tap"
+    },
+    {
+      "ref": "p136",
+      "kind": "tap"
+    },
+    {
+      "ref": "p138",
+      "kind": "tap"
+    },
+    {
+      "ref": "p140",
+      "kind": "tap"
+    },
+    {
+      "ref": "p143",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "grid:72.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:72.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:73.0",
+      "kind": "roll",
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "grid:74.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:74.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:75.0",
+      "kind": "tap"
+    }
+  ],
+  "phrases": [
+    {
+      "start_bar": 0,
+      "end_bar": 3,
+      "texture": "steps",
+      "movement": "static",
+      "crossover": "none",
+      "jump_density": "none",
+      "intent": "gentle intro leading into the first notes to get the player oriented"
+    },
+    {
+      "start_bar": 3,
+      "end_bar": 11,
+      "texture": "steps",
+      "movement": "zigzag",
+      "crossover": "none",
+      "jump_density": "downbeats",
+      "intent": "main comfortable groove with some side-to-side body movement"
+    },
+    {
+      "start_bar": 11,
+      "end_bar": 18,
+      "texture": "steps",
+      "movement": "box",
+      "crossover": "none",
+      "jump_density": "downbeats",
+      "intent": "main section part two, engaging the feet in basic circular steps"
+    },
+    {
+      "start_bar": 18,
+      "end_bar": 19,
+      "texture": "steps",
+      "movement": "static",
+      "crossover": "none",
+      "jump_density": "none",
+      "intent": "final high-energy outro resolution with a roll to finish"
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "track_id": "hope",
+  "bpm": 123.047,
+  "offset": 0.448,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 274,
+      "meter": 3,
+      "jumps": 28,
+      "holds": 42,
+      "repaired": 14,
+      "repair_ok": true,
+      "critic": {
+        "score": 7,
+        "verdict": "An incredibly musical chart with superb vocal sync and comfortable alternating flow, but the density and jump-to-8th transitions push it past standard Easy difficulty limits.",
+        "issues": [
+          {
+            "where": "66.764, 68.715, 80.417",
+            "problem": "Jumps are followed immediately by 8th notes (0.244s gap). Easy players need at least a quarter or half-note recovery period after jumps to reposition their feet comfortably."
+          },
+          {
+            "where": "16.052-16.783, 23.366-24.341",
+            "problem": "Long 8th-note streams (up to 5 notes) tracking vocal syncopation are too dense for a beginner-level Easy chart, aligning more with Medium/Normal difficulty."
+          },
+          {
+            "where": "87.244-89.926",
+            "problem": "A rapid sequence of very short 1-beat holds (0.488s) is visually confusing and mechanically complex for players at this level."
+          }
+        ]
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 274,
+        "onset_alignment": 0.9708,
+        "grid_notes": 8,
+        "panel_balance": {
+          "L": 0.238,
+          "D": 0.275,
+          "U": 0.278,
+          "R": 0.209
+        },
+        "hold_share": 0.1533,
+        "jump_share": 0.1022,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.37,
+        "density_energy_spearman": -0.0345,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 413,
+      "meter": 5,
+      "jumps": 32,
+      "holds": 22,
+      "repaired": 1,
+      "repair_ok": true,
+      "critic": {
+        "score": 8,
+        "verdict": "A well-structured and highly rhythmic Medium chart that captures the song's energy perfectly, held back only by a few harsh 16th-note spikes.",
+        "issues": [
+          {
+            "where": "69.690s",
+            "problem": "Landing a JUMP LR followed immediately by a 16th-note tap D at 69.812s is an extremely harsh physical transition for a Medium difficulty chart."
+          },
+          {
+            "where": "11.298s",
+            "problem": "The rapid 16th-note transition from D to U (11.298s to 11.419s) requires a vertical drag or very fast double-step that disrupts flow for intermediate players."
+          },
+          {
+            "where": "95.656s",
+            "problem": "Another vertical 16th-note transition from D to U (95.656s to 95.777s) introduces an unexpected difficulty spike during an otherwise smooth section."
+          }
+        ]
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 413,
+        "onset_alignment": 0.954,
+        "grid_notes": 19,
+        "panel_balance": {
+          "L": 0.245,
+          "D": 0.272,
+          "U": 0.258,
+          "R": 0.225
+        },
+        "hold_share": 0.0533,
+        "jump_share": 0.0775,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.2305,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 376,
+      "meter": 8,
+      "jumps": 47,
+      "holds": 39,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 6,
+        "verdict": "A decent representation of the song's energy, but marred by several awkward 16th-note streams and jump transitions that force uncomfortable double-steps.",
+        "issues": [
+          {
+            "where": "32.631",
+            "problem": "Transitioning from a 16th-note LR jump directly into U and D taps at 16th speed (122ms) is extremely rushed and causes physical balance issues."
+          },
+          {
+            "where": "53.964 to 54.330",
+            "problem": "The 16th-note transition from R to U forces either an extreme left-foot stretch or a right-foot double-step in just 122ms."
+          },
+          {
+            "where": "55.793 to 56.280",
+            "problem": "The rapid L -> R (16th) -> D -> U (16th) pattern creates highly unintuitive foot placement, requiring bracket tricks or awkward double-stepping."
+          },
+          {
+            "where": "61.400 to 61.888",
+            "problem": "The sequence of DL jump -> U -> D -> LR jump featuring 16th notes forces a massive double-step from U to D in 122ms, immediately followed by a jump."
+          },
+          {
+            "where": "123.815 to 124.181",
+            "problem": "A 16th-note stream of D -> L -> U -> D forces an uncomfortable body spin or a rapid double-step on the Down panel."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 376,
+        "onset_alignment": 0.9362,
+        "grid_notes": 24,
+        "panel_balance": {
+          "L": 0.277,
+          "D": 0.26,
+          "U": 0.241,
+          "R": 0.222
+        },
+        "hold_share": 0.1037,
+        "jump_share": 0.125,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.2807,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/worth_the_hope/worth_the_hope.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/worth_the_hope/worth_the_hope.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/worth_the_hope/worth_the_hope.ogg"
+  },
+  "out": "build/stepmania/worth_the_hope",
+  "meter_monotonic": true
+}

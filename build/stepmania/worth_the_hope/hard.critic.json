@@ -1,0 +1,27 @@
+{
+  "score": 6,
+  "verdict": "A decent representation of the song's energy, but marred by several awkward 16th-note streams and jump transitions that force uncomfortable double-steps.",
+  "issues": [
+    {
+      "where": "32.631",
+      "problem": "Transitioning from a 16th-note LR jump directly into U and D taps at 16th speed (122ms) is extremely rushed and causes physical balance issues."
+    },
+    {
+      "where": "53.964 to 54.330",
+      "problem": "The 16th-note transition from R to U forces either an extreme left-foot stretch or a right-foot double-step in just 122ms."
+    },
+    {
+      "where": "55.793 to 56.280",
+      "problem": "The rapid L -> R (16th) -> D -> U (16th) pattern creates highly unintuitive foot placement, requiring bracket tricks or awkward double-stepping."
+    },
+    {
+      "where": "61.400 to 61.888",
+      "problem": "The sequence of DL jump -> U -> D -> LR jump featuring 16th notes forces a massive double-step from U to D in 122ms, immediately followed by a jump."
+    },
+    {
+      "where": "123.815 to 124.181",
+      "problem": "A 16th-note stream of D -> L -> U -> D forces an uncomfortable body spin or a rapid double-step on the Down panel."
+    }
+  ],
+  "human_review": true
+}

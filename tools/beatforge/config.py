@@ -18,6 +18,7 @@ TRACKS_SRC = REPO_ROOT / "assets" / "tracks"
 TRACKS_PUB = REPO_ROOT / "public" / "assets" / "tracks"
 MAPS_PUB = REPO_ROOT / "public" / "maps"
 BUILD_DIR = REPO_ROOT / "build" / "analysis"
+STEPMANIA_DIR = REPO_ROOT / "build" / "stepmania"
 PROMPTS_DIR = Path(__file__).resolve().parent / "prompts"
 SCHEMAS_DIR = Path(__file__).resolve().parent / "schemas"
 JOBS_DIR = Path(__file__).resolve().parent / "jobs"
@@ -228,6 +229,16 @@ TRACK_CATALOGUE = {
     "midnight": "midnight_run",
     "neon": "neon_nights",
     "groove": "sweetpapa_groove",
+    "hope": "worth_the_hope",
+}
+
+# Song metadata for StepMania export (title/artist), mirrors src/game/tracks.ts.
+TRACK_META = {
+    "overdrive": ("Overdrive Pulse", "Sweet Papa & the Tones"),
+    "midnight": ("Midnight Run", "Sweet Papa & the Tones"),
+    "neon": ("Neon Nights", "Sweet Papa & the Tones"),
+    "groove": ("Sweet Papa Groove", "Sweet Papa & the Tones"),
+    "hope": ("Worth the Hope", "Sweet Papa Technologies"),
 }
 
 
