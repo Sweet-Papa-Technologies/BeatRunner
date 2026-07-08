@@ -1,0 +1,174 @@
+{
+  "track_id": "pizza_party_for_two_don_t_wanna_be_wrong",
+  "bpm": 194.962,
+  "offset": 0.233,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 214,
+      "meter": 3,
+      "jumps": 6,
+      "holds": 24,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 7,
+        "verdict": "A solid Easy chart with great rhythmic connection, but suffers from steep difficulty spikes with fast 8th notes and excessive jumps for the difficulty level.",
+        "issues": [
+          {
+            "where": "122.103 to 129.489",
+            "problem": "Too many jumps (DR, LR, LU, LR, LU) in quick succession. For an Easy chart at 195 BPM, this density of jumps is too exhausting and complex for beginners."
+          },
+          {
+            "where": "18.698, 111.947, 126.719",
+            "problem": "8th-note steps at ~195 BPM (154ms interval) are too fast for an Easy chart. These should be simplified to quarter notes to maintain accessibility."
+          },
+          {
+            "where": "21.160 to 22.853",
+            "problem": "An awkward flow sequence where a Hold L is immediately followed by D, U, and R taps, forcing either a turn or a double-step right after the hold release."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/pizza_party_for_two_don_t_wanna_be_wrong/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 214,
+        "onset_alignment": 0.9813,
+        "grid_notes": 4,
+        "panel_balance": {
+          "L": 0.232,
+          "D": 0.277,
+          "U": 0.268,
+          "R": 0.223
+        },
+        "hold_share": 0.1121,
+        "jump_share": 0.028,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.4428,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 279,
+      "meter": 6,
+      "jumps": 80,
+      "holds": 2,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 3,
+        "verdict": "This chart is severely undermined by terrible quantization, erratic rhythmic shifts, and awkward physical transitions that feel like an unpolished auto-map rather than a curated Medium chart.",
+        "issues": [
+          {
+            "where": "127.566 - 127.642 and 137.183 - 137.260",
+            "problem": "Accidental 32nd-note step gaps (76-77ms) exist in the chart, creating extremely jarring, off-grid rhythmic spikes that point to poor manual syncing or quantization errors."
+          },
+          {
+            "where": "3.311 - 4.542 and 139.337 - 142.415",
+            "problem": "The intro and outro force continuous quarter-note triplet patterns (JUMP LR -> tap D) that completely disregard the song's actual driving 4/4 pop tempo, resulting in a highly unintuitive play feel."
+          },
+          {
+            "where": "29.623 - 29.777 and 44.549 - 44.703",
+            "problem": "Extremely tight 16th-note transitions directly into or out of dual-panel jumps are physically demanding and completely out of place for a standard Medium-difficulty chart."
+          },
+          {
+            "where": "111.332 - 111.947",
+            "problem": "Hitting JUMP LU and instantly requiring a tap on D creates an awkward, unguided foot recovery that breaks natural flow and forces a double-step."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/pizza_party_for_two_don_t_wanna_be_wrong/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 279,
+        "onset_alignment": 0.9642,
+        "grid_notes": 10,
+        "panel_balance": {
+          "L": 0.312,
+          "D": 0.223,
+          "U": 0.217,
+          "R": 0.248
+        },
+        "hold_share": 0.0072,
+        "jump_share": 0.2867,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.2744,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 308,
+      "meter": 8,
+      "jumps": 5,
+      "holds": 27,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 8,
+        "verdict": "A highly rhythmic rock chart with excellent body-pivoting flow and a satisfying climax, held back only by a few jarring vertical transitions and an isolated 16th-note anomaly.",
+        "issues": [
+          {
+            "where": "17.082 - 17.159",
+            "problem": "An isolated 16th-note transition (R to L in 77ms) stands out as a sudden rhythmic anomaly, likely a slight step-misplacement or a ghost tap."
+          },
+          {
+            "where": "113.332 - 113.486",
+            "problem": "Rapid 8th-note vertical transition (U to D in 154ms) forces a very sudden double-step or tight body-twist at 195 BPM."
+          },
+          {
+            "where": "13.774 - 13.928",
+            "problem": "Another rapid vertical transition (D to U) that momentarily disrupts the otherwise comfortable lateral flow of the verse."
+          }
+        ]
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 308,
+        "onset_alignment": 0.9675,
+        "grid_notes": 10,
+        "panel_balance": {
+          "L": 0.23,
+          "D": 0.278,
+          "U": 0.262,
+          "R": 0.23
+        },
+        "hold_share": 0.0877,
+        "jump_share": 0.0162,
+        "flow_cost_max": 0.0,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.1325,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/pizza_party_for_two_don_t_wanna_be_wrong/pizza_party_for_two_don_t_wanna_be_wrong.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/pizza_party_for_two_don_t_wanna_be_wrong/pizza_party_for_two_don_t_wanna_be_wrong.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/pizza_party_for_two_don_t_wanna_be_wrong/pizza_party_for_two_don_t_wanna_be_wrong.ogg"
+  },
+  "out": "build/stepmania/pizza_party_for_two_don_t_wanna_be_wrong",
+  "meter_monotonic": true
+}

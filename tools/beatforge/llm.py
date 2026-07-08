@@ -49,7 +49,10 @@ def _encode_audio(path: str | Path, fmt: str) -> str:
     by audio-in serving stacks."""
     path = str(path)
     src_ext = os.path.splitext(path)[1].lower().lstrip(".")
-    if src_ext == fmt:
+    sr, mono = config.OPENAI_AUDIO_SR, config.OPENAI_AUDIO_MONO
+    # When no resample/downmix is requested and the source already matches, pass
+    # the bytes straight through. Otherwise transcode (and shrink) via ffmpeg.
+    if src_ext == fmt and sr <= 0 and not mono:
         data = Path(path).read_bytes()
     else:
         if not shutil.which("ffmpeg"):
@@ -59,8 +62,13 @@ def _encode_audio(path: str | Path, fmt: str) -> str:
             out = Path(td) / f"a.{fmt}"
             codec = {"wav": "pcm_s16le", "mp3": "libmp3lame", "flac": "flac",
                      "ogg": "libvorbis"}.get(fmt, "pcm_s16le")
-            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", path,
-                            "-c:a", codec, str(out)], check=True, capture_output=True)
+            cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", path, "-c:a", codec]
+            if sr > 0:                       # downsample: fewer audio tokens -> less VRAM
+                cmd += ["-ar", str(sr)]
+            if mono:                         # downmix to 1 channel: half the payload
+                cmd += ["-ac", "1"]
+            cmd.append(str(out))
+            subprocess.run(cmd, check=True, capture_output=True)
             data = out.read_bytes()
     return base64.b64encode(data).decode()
 

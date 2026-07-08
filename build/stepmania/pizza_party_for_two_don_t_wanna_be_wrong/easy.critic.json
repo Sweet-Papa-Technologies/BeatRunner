@@ -1,0 +1,18 @@
+{
+  "score": 7,
+  "verdict": "A solid Easy chart with great rhythmic connection, but suffers from steep difficulty spikes with fast 8th notes and excessive jumps for the difficulty level.",
+  "issues": [
+    {
+      "where": "122.103 to 129.489",
+      "problem": "Too many jumps (DR, LR, LU, LR, LU) in quick succession. For an Easy chart at 195 BPM, this density of jumps is too exhausting and complex for beginners."
+    },
+    {
+      "where": "18.698, 111.947, 126.719",
+      "problem": "8th-note steps at ~195 BPM (154ms interval) are too fast for an Easy chart. These should be simplified to quarter notes to maintain accessibility."
+    },
+    {
+      "where": "21.160 to 22.853",
+      "problem": "An awkward flow sequence where a Hold L is immediately followed by D, U, and R taps, forcing either a turn or a double-step right after the hold release."
+    }
+  ]
+}

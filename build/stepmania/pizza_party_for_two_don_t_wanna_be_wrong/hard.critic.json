@@ -1,0 +1,18 @@
+{
+  "score": 8,
+  "verdict": "A highly rhythmic rock chart with excellent body-pivoting flow and a satisfying climax, held back only by a few jarring vertical transitions and an isolated 16th-note anomaly.",
+  "issues": [
+    {
+      "where": "17.082 - 17.159",
+      "problem": "An isolated 16th-note transition (R to L in 77ms) stands out as a sudden rhythmic anomaly, likely a slight step-misplacement or a ghost tap."
+    },
+    {
+      "where": "113.332 - 113.486",
+      "problem": "Rapid 8th-note vertical transition (U to D in 154ms) forces a very sudden double-step or tight body-twist at 195 BPM."
+    },
+    {
+      "where": "13.774 - 13.928",
+      "problem": "Another rapid vertical transition (D to U) that momentarily disrupts the otherwise comfortable lateral flow of the verse."
+    }
+  ]
+}

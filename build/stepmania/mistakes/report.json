@@ -5,92 +5,67 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 112,
+      "notes": 165,
       "meter": 3,
-      "jumps": 4,
-      "holds": 17,
+      "jumps": 0,
+      "holds": 22,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 6,
-        "verdict": "A decent Easy chart with creative hold patterns, but marred by awkward crossovers, forced double-steps, and overly complex syncopations for beginners.",
+        "score": 10,
+        "verdict": "An exceptionally well-crafted Easy chart with perfect alternating flow, pristine rhythm, and excellent density scaling.",
         "issues": [
           {
-            "where": "2.816",
-            "problem": "This note is placed on an off-beat (3.5 beats into the intro), which creates an unintuitive rhythm for an Easy chart."
-          },
-          {
-            "where": "55.139 - 56.264",
-            "problem": "The pattern D -> U -> L -> D forces either a spin/crossover or awkward double-stepping at 160 BPM, which is too complex for an Easy player."
-          },
-          {
-            "where": "57.577",
-            "problem": "A syncopated off-beat note (dotted quarter rhythm) right before the drop disrupts the player's momentum and feel of the beat."
-          },
-          {
-            "where": "77.081",
-            "problem": "A sudden eighth-note pickup (gallop) at 160 BPM is highly unexpected and difficult for players at this difficulty level."
-          },
-          {
-            "where": "77.268 - 78.769",
-            "problem": "The sequence D -> L -> R -> U -> D has poor flow, requiring unnatural foot transitions and crossovers."
+            "where": "18.569",
+            "problem": "The off-beat 8th note pair here is a minor spike in difficulty for absolute beginners, though it fits the vocal rhythm perfectly."
           }
-        ],
-        "human_review": true
+        ]
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/mistakes/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 112,
-        "onset_alignment": 0.9732,
-        "grid_notes": 3,
+        "notes": 165,
+        "onset_alignment": 0.9697,
+        "grid_notes": 5,
         "panel_balance": {
-          "L": 0.207,
-          "D": 0.31,
-          "U": 0.284,
-          "R": 0.198
+          "L": 0.182,
+          "D": 0.321,
+          "U": 0.309,
+          "R": 0.188
         },
-        "hold_share": 0.1518,
-        "jump_share": 0.0357,
+        "hold_share": 0.1333,
+        "jump_share": 0.0,
         "flow_cost_max": 0.0,
         "flow_cost_mean": 0.0,
-        "density_energy_spearman": 0.1252,
+        "density_energy_spearman": 0.854,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
           "hold_share": true,
           "flow_ceiling": true,
-          "density_energy": false
+          "density_energy": true
         }
       }
     },
     "medium": {
-      "notes": 256,
+      "notes": 283,
       "meter": 6,
-      "jumps": 75,
-      "holds": 25,
-      "repaired": 11,
+      "jumps": 19,
+      "holds": 18,
+      "repaired": 1,
       "repair_ok": true,
       "critic": {
-        "score": 7,
-        "verdict": "A well-synced, energetic chart that matches the robotic vibe of the track, but suffers from repetitive patterning and a few awkward high-speed transitions.",
+        "score": 9,
+        "verdict": "An outstanding Medium chart with flawless syncopation, highly satisfying circular streams, and excellent physical pacing.",
         "issues": [
           {
-            "where": "11.255 to 30.009",
-            "problem": "The constant repetition of JUMP LR -> tap U -> tap D -> tap L feels highly rigid and gets physically repetitive to play, missing opportunities for more varied choreography."
+            "where": "1.785 - 2.816",
+            "problem": "The first two notes in the intro feel slightly off-grid, drifting away from the perfect 160 BPM structure established when the main beat drops."
           },
           {
-            "where": "37.042 - 37.135",
-            "problem": "A 16th-note gallop from U to D at 160 BPM is extremely uncomfortable, requiring a fast double-step or slide across opposite panels which is too punishing for a Medium-level chart."
-          },
-          {
-            "where": "20.070 to 20.257",
-            "problem": "Tapping U and immediately transitioning into a JUMP LU creates an awkward double-tap on U during a jump, causing a hitch in player momentum."
-          },
-          {
-            "where": "31.791 to 31.884",
-            "problem": "Releasing HOLD U while hitting tap D at 31.791, followed by a 16th-note tap R at 31.884, requires a highly technical foot-swap/weight transfer that exceeds the expected difficulty."
+            "where": "64.141 - 64.422",
+            "problem": "The 16th transition from U to R immediately following a D tap forces a slight slide or double-tap on the right foot, disrupting the otherwise flawless alternating flow."
           }
         ]
       },
@@ -98,20 +73,20 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/mistakes/medium.assist.ogg"
       },
       "metrics": {
-        "notes": 256,
-        "onset_alignment": 0.9531,
-        "grid_notes": 12,
+        "notes": 283,
+        "onset_alignment": 0.9753,
+        "grid_notes": 7,
         "panel_balance": {
-          "L": 0.308,
-          "D": 0.218,
-          "U": 0.221,
-          "R": 0.254
+          "L": 0.215,
+          "D": 0.281,
+          "U": 0.278,
+          "R": 0.225
         },
-        "hold_share": 0.0977,
-        "jump_share": 0.293,
+        "hold_share": 0.0636,
+        "jump_share": 0.0671,
         "flow_cost_max": 8.0,
-        "flow_cost_mean": 0.05,
-        "density_energy_spearman": 0.602,
+        "flow_cost_mean": 0.04,
+        "density_energy_spearman": 0.5898,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -122,57 +97,56 @@
       }
     },
     "hard": {
-      "notes": 447,
+      "notes": 525,
       "meter": 9,
-      "jumps": 49,
-      "holds": 36,
-      "repaired": 20,
+      "jumps": 3,
+      "holds": 42,
+      "repaired": 53,
       "repair_ok": true,
       "critic": {
-        "score": 4,
-        "verdict": "Rhythmically accurate and well-synced to the hard dance beats, but contains physically impossible 3-way holds and unplayable one-foot 16th streams on pad.",
+        "score": 8,
+        "verdict": "An outstanding tech-stream chart with flawless rhythm, let down only by thematic but physically awkward multi-panel hold overlaps.",
         "issues": [
           {
-            "where": "42.199, 46.700, 58.702, 64.703",
-            "problem": "3-panel overlapping holds (e.g. D+R+U, D+L+U) are present, which are impossible to hold on pad without hands or extreme bracket play, which doesn't fit a standard hard dance single chart."
+            "where": "36.198",
+            "problem": "Tap U occurs while HOLD L and HOLD R are both active, forcing an awkward hand plant or hold drop."
           },
           {
-            "where": "49.700 - 50.169",
-            "problem": "While U is held, the chart requires a 16th-note stream (L -> R -> D) to be played. Since one foot is locking U, the other foot has to tap 16th notes across opposite panels (L to R to D) at 160 BPM, which is physically unplayable."
+            "where": "41.918 - 42.199",
+            "problem": "Overlapping holds on D, L, and U create an unannounced 3-panel hold (triple)."
           },
           {
-            "where": "8.911 - 9.474",
-            "problem": "The stream pattern (D -> R -> L -> U -> D -> L) results in extremely awkward double-steps or forced 180-degree spins that disrupt the high-energy flow of the section."
+            "where": "46.512 - 46.700",
+            "problem": "Simultaneous holds on D, L, R, and U create a 4-panel quad hold, which is unplayable with feet alone."
           },
           {
-            "where": "71.549 - 71.642",
-            "problem": "While D is held, there is a 16th-note transition from U to R with the free foot, which is too fast for a single-foot slide at this tempo."
+            "where": "58.515 - 58.702",
+            "problem": "Another 3-panel hold overlap involving D, R, and U."
           }
-        ],
-        "human_review": true
+        ]
       },
       "previews": {},
       "metrics": {
-        "notes": 447,
-        "onset_alignment": 0.9843,
-        "grid_notes": 7,
+        "notes": 525,
+        "onset_alignment": 0.9943,
+        "grid_notes": 3,
         "panel_balance": {
-          "L": 0.262,
-          "D": 0.258,
-          "U": 0.254,
-          "R": 0.226
+          "L": 0.214,
+          "D": 0.29,
+          "U": 0.277,
+          "R": 0.22
         },
-        "hold_share": 0.0805,
-        "jump_share": 0.1096,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.29,
-        "density_energy_spearman": 0.5588,
+        "hold_share": 0.08,
+        "jump_share": 0.0057,
+        "flow_cost_max": 13.85,
+        "flow_cost_mean": 0.43,
+        "density_energy_spearman": 0.4509,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
           "hold_share": true,
           "flow_ceiling": true,
-          "density_energy": true
+          "density_energy": false
         }
       }
     }

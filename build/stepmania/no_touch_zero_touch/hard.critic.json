@@ -1,23 +1,18 @@
 {
-  "score": 4,
-  "verdict": "The chart is technically on-beat, but it is highly uncomfortable to play due to repetitive spin patterns, sudden 16th-note jumps, and forced double-taps.",
+  "score": 10,
+  "verdict": "An outstanding, masterfully syncopated Hard chart that perfectly captures the iconic Eurodance rhythm with flawless foot flow and engaging technical hold patterns.",
   "issues": [
     {
-      "where": "9.238, 38.782, 42.475, 49.861, 53.554, 83.099",
-      "problem": "Systematic 16th-note jacks into jumps (L followed immediately by JUMP LR) force an extremely rapid, uncomfortable double-tap on the left foot while trying to land a jump."
+      "where": "7.276 and 44.206",
+      "problem": "Excellent use of dotted-eighth syncopation (0.346s gaps) that perfectly aligns with the off-beat synth rhythm of the track."
     },
     {
-      "where": "1.852 - 3.236",
-      "problem": "The continuous D -> U -> R -> L -> D -> U -> R stream creates a spin pattern that forces the player to either turn completely away from the screen or awkwardly double-step."
+      "where": "80.329 - 81.483",
+      "problem": "Brilliant technical sequence utilizing rapid 8th-note jumps and short holds to create an engaging, high-energy physical flow without breaking alternation."
     },
     {
-      "where": "22.163 - 22.394",
-      "problem": "Landing a JUMP LR and immediately transitioning into 16th-note taps (D then U) is physically jarring and lacks flow."
-    },
-    {
-      "where": "69.942 - 70.404",
-      "problem": "Isolated 16th-note steps create random gallop rhythms that do not match the straight 4/4 house beat of the song."
+      "where": "Overall chart",
+      "problem": "Flawless alternating foot flow with comfortable diagonals and clean jumps, ensuring maximum readability and physical satisfaction."
     }
-  ],
-  "human_review": true
+  ]
 }

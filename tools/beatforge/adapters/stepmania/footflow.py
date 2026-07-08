@@ -71,15 +71,24 @@ def step(state, foot: int, new_panel: int, budget, movement: str, progress: floa
     return cost, (new_l, new_r, foot)
 
 
-def jump_cost(state, pl: int, pr: int, budget):
+# Jump-shape variety: rotating preferred bracket by beat so jumps aren't all the
+# same wide L+R. Order mixes horizontal (LR), vertical (DU) and diagonal brackets.
+_JUMP_SHAPES = [(0, 3), (0, 2), (1, 3), (0, 1), (2, 3), (1, 2)]  # LR LU DR LD UR DU
+
+
+def jump_cost(state, pl: int, pr: int, budget, beat: float = 0.0):
     """Cost of a two-panel jump landing left foot on `pl`, right foot on `pr`."""
     if pl == pr:
         return FORBIDDEN, state
     cost = 0.0
     if _x(pl) > _x(pr) + 1e-9:          # crossed jump — physically a twist
         cost += FORBIDDEN if budget.crossover == "none" else CROSSOVER * 3
-    # prefer feet on their natural sides
-    cost += 0.5 * (abs(_x(pl) - (-1)) + abs(_x(pr) - 1))
+    # gently prefer feet on their natural sides (weak, so shape variety can win)
+    cost += 0.2 * (abs(_x(pl) - (-1)) + abs(_x(pr) - 1))
+    # reward the beat's rotating preferred bracket so consecutive jumps differ
+    pref = _JUMP_SHAPES[int(round(beat)) % len(_JUMP_SHAPES)]
+    if tuple(sorted((pl, pr))) == pref:
+        cost -= 1.5
     return cost, (pl, pr, RIGHT)
 
 

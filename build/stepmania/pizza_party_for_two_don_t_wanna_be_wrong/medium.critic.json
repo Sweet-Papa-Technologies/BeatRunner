@@ -1,0 +1,23 @@
+{
+  "score": 3,
+  "verdict": "This chart is severely undermined by terrible quantization, erratic rhythmic shifts, and awkward physical transitions that feel like an unpolished auto-map rather than a curated Medium chart.",
+  "issues": [
+    {
+      "where": "127.566 - 127.642 and 137.183 - 137.260",
+      "problem": "Accidental 32nd-note step gaps (76-77ms) exist in the chart, creating extremely jarring, off-grid rhythmic spikes that point to poor manual syncing or quantization errors."
+    },
+    {
+      "where": "3.311 - 4.542 and 139.337 - 142.415",
+      "problem": "The intro and outro force continuous quarter-note triplet patterns (JUMP LR -> tap D) that completely disregard the song's actual driving 4/4 pop tempo, resulting in a highly unintuitive play feel."
+    },
+    {
+      "where": "29.623 - 29.777 and 44.549 - 44.703",
+      "problem": "Extremely tight 16th-note transitions directly into or out of dual-panel jumps are physically demanding and completely out of place for a standard Medium-difficulty chart."
+    },
+    {
+      "where": "111.332 - 111.947",
+      "problem": "Hitting JUMP LU and instantly requiring a tap on D creates an awkward, unguided foot recovery that breaks natural flow and forces a double-step."
+    }
+  ],
+  "human_review": true
+}
