@@ -1,0 +1,23 @@
+{
+  "score": 4,
+  "verdict": "Rhythmically accurate and well-synced to the hard dance beats, but contains physically impossible 3-way holds and unplayable one-foot 16th streams on pad.",
+  "issues": [
+    {
+      "where": "42.199, 46.700, 58.702, 64.703",
+      "problem": "3-panel overlapping holds (e.g. D+R+U, D+L+U) are present, which are impossible to hold on pad without hands or extreme bracket play, which doesn't fit a standard hard dance single chart."
+    },
+    {
+      "where": "49.700 - 50.169",
+      "problem": "While U is held, the chart requires a 16th-note stream (L -> R -> D) to be played. Since one foot is locking U, the other foot has to tap 16th notes across opposite panels (L to R to D) at 160 BPM, which is physically unplayable."
+    },
+    {
+      "where": "8.911 - 9.474",
+      "problem": "The stream pattern (D -> R -> L -> U -> D -> L) results in extremely awkward double-steps or forced 180-degree spins that disrupt the high-energy flow of the section."
+    },
+    {
+      "where": "71.549 - 71.642",
+      "problem": "While D is held, there is a 16th-note transition from U to R with the free foot, which is too fast for a single-foot slide at this tempo."
+    }
+  ],
+  "human_review": true
+}

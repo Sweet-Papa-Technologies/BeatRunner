@@ -1,0 +1,27 @@
+{
+  "score": 4,
+  "verdict": "Unplayable hold overlaps (triples and quads) ruin an otherwise decent medium chart.",
+  "issues": [
+    {
+      "where": "52.582s - 53.043s",
+      "problem": "Four concurrent holds (D, U, L, R) create an impossible quad hold that cannot be executed on a standard dance pad."
+    },
+    {
+      "where": "70.460s - 70.690s",
+      "problem": "Triple hold (U, D, R) requires pressing three panels simultaneously, which is inappropriate for a Medium single chart."
+    },
+    {
+      "where": "77.265s - 77.495s",
+      "problem": "Triple hold (U, D, L) forces a three-panel hold."
+    },
+    {
+      "where": "78.764s - 78.995s",
+      "problem": "Triple hold (D, R, L) forces another three-panel hold."
+    },
+    {
+      "where": "30.321s - 30.667s",
+      "problem": "While holding D and L, a tap R is required, which requires three feet or awkward bracketing."
+    }
+  ],
+  "human_review": true
+}

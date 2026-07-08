@@ -1,0 +1,19 @@
+{
+  "score": 4,
+  "verdict": "Playable with decent rhythmic syncopation, but ruined by lazy charting that uses Left-Right jumps exclusively.",
+  "issues": [
+    {
+      "where": "Throughout the entire chart",
+      "problem": "Every single jump in the chart is 'JUMP LR' (Left + Right). There is zero jump variety (no UD, LU, LD, RU, or RD jumps), which makes the physical movement feel extremely repetitive and uncreative."
+    },
+    {
+      "where": "20.343 - 21.542",
+      "problem": "The rapid transition from U -> JUMP LR -> HOLD U -> JUMP LR in eighth notes (0.24s intervals) is highly asymmetric and awkward, forcing the right foot to execute rapid, jerky movements between R and U while the left foot remains relatively static on L."
+    },
+    {
+      "where": "35.458 - 36.897",
+      "problem": "The dense eighth-note jump pattern (D -> U -> JUMP LR -> U -> D -> JUMP LR) feels very jerky and cluttered due to the constant forcing of the player back into the wide LR stance immediately after vertical steps."
+    }
+  ],
+  "human_review": true
+}

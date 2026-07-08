@@ -1,0 +1,10 @@
+{
+  "score": 8,
+  "verdict": "An exceptionally well-flowing, high-energy hard dance chart held back only by a single impossible three-panel overlap during a hold.",
+  "issues": [
+    {
+      "where": "53.738s",
+      "problem": "A JUMP LR is charted while HOLD U is still active (until 54.034s), creating an awkward three-panel input constraint that is impossible to execute naturally on a single pad."
+    }
+  ]
+}

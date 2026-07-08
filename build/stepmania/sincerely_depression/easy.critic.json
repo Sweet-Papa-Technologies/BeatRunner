@@ -1,0 +1,14 @@
+{
+  "score": 9,
+  "verdict": "An exceptionally well-crafted Easy chart with superb vocal-following rhythms and natural flow, though a couple of patterns might stretch the physical reading limits of a beginner.",
+  "issues": [
+    {
+      "where": "63.814 to 64.087",
+      "problem": "The transition from JUMP LR to HOLD U is an 8th-note (0.273s) gap, requiring the player to immediately shift a foot from the outer panels to the top panel right after landing a jump, which can be challenging for Easy players."
+    },
+    {
+      "where": "73.909 to 74.728",
+      "problem": "Staggered overlapping holds (HOLD U starting at 73.909, HOLD R starting at 74.182) introduce multi-tasking coordination that is slightly advanced for an Easy rating."
+    }
+  ]
+}

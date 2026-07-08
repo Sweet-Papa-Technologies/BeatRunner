@@ -1,0 +1,2505 @@
+{
+  "design_notes": "Hard chart designed to align notes with energy peaks. Taps are mapped primarily on 8th beats with occasional 16th subdivisions, and holds are placed carefully to match sustain peaks of synths and vocals, keeping holds at around 8% of the total notes to stay within the strict budget. No long dead pauses are present; the entirety of the song is covered, leading to a smooth transition towards the outro.",
+  "notes": [
+    {
+      "ref": "grid:4.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:5.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:6.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:6.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:7.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:8.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:8.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:9.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:10.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:10.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:11.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:12.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:12.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:13.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:14.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:14.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:15.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:16.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:16.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:17.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:18.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:19.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:20.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:21.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:22.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:22.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:23.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:24.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:24.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:25.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:26.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:27.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:28.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:28.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:29.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:30.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:30.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:31.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:32.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:33.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:33.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:33.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:34.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:34.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:35.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:36.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:36.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:36.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:37.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:38.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:38.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:39.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:40.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:40.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:41.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:42.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:42.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:43.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:44.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:44.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:45.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:46.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:46.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:46.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:48.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:49.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:49.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:49.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:50.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:50.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:51.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:52.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:52.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:53.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:54.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:54.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:55.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:56.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:56.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:57.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:58.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:59.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:60.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:60.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:61.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:62.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:62.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:63.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:64.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:64.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:65.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:66.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:66.5",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "grid:68.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:68.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:69.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:69.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:69.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:70.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:70.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:71.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:72.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:72.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:73.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:74.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:74.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:75.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:76.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:76.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:77.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:78.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:78.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:79.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:80.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:80.5",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "grid:82.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:82.5",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "grid:84.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:84.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:85.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:85.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:85.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:86.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:86.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:87.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:88.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:88.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:89.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:90.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:90.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:90.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:91.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:92.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:92.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:92.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:93.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:93.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:94.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:94.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:94.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:95.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:96.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:96.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:97.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:97.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:98.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:98.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:98.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:99.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:100.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:100.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:101.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:101.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:102.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:102.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:103.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:104.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:104.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:104.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:105.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:106.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:106.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:106.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:107.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:108.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:108.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:109.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:110.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:110.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:110.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:111.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:111.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:112.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:112.75",
+      "kind": "hold",
+      "hold_beats": 2.0
+    },
+    {
+      "ref": "grid:115.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:115.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:116.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:116.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:117.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:117.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:118.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:118.75",
+      "kind": "hold",
+      "hold_beats": 2.5
+    },
+    {
+      "ref": "grid:121.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:122.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:122.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:123.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:124.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:124.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:124.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:124.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:125.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:125.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:125.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:125.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:126.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:126.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:126.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:127.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:127.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:128.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:129.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:129.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:129.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:130.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:130.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:131.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:131.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:132.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:132.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:133.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:133.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:134.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:134.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:135.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:136.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:136.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:137.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:138.0",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "grid:139.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:140.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:140.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:140.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:140.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:141.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:141.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:141.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:142.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:142.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:143.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:143.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:143.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:144.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:144.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:145.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:145.75",
+      "kind": "hold",
+      "hold_beats": 1.25
+    },
+    {
+      "ref": "grid:147.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:147.5",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "grid:149.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:149.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:149.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:150.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:150.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:151.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:151.75",
+      "kind": "hold",
+      "hold_beats": 1.25
+    },
+    {
+      "ref": "grid:153.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:153.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:154.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:155.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:155.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:156.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:156.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:156.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:156.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:157.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:157.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:157.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:158.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:158.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:158.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:159.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:159.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:159.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:159.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:160.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:161.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:161.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:161.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:162.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:162.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:163.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:163.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:163.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:165.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:165.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:166.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:166.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:167.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:168.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:169.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:169.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:169.75",
+      "kind": "hold",
+      "hold_beats": 2.0
+    },
+    {
+      "ref": "grid:172.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:172.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:172.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:172.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:173.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:173.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:173.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:174.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:174.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:175.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:175.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:176.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:176.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:176.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:177.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:177.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:177.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:178.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:178.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:179.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:180.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:180.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:180.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:181.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:181.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:182.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:182.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:183.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:183.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:184.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:184.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:185.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:186.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:186.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:186.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:186.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:187.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:188.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:188.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:189.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:190.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:190.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:190.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:191.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:191.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:191.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:192.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:192.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:192.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:193.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:193.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:194.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:194.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:195.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:196.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:196.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:197.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:198.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:198.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:199.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:199.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:200.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:200.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:201.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:201.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:202.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:202.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:202.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:203.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:204.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:204.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:205.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:205.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:206.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:206.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:206.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:207.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:207.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:208.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:208.75",
+      "kind": "hold",
+      "hold_beats": 1.25
+    },
+    {
+      "ref": "grid:210.0",
+      "kind": "hold",
+      "hold_beats": 2.0
+    },
+    {
+      "ref": "grid:212.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:212.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:213.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:213.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:214.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:214.5",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "grid:216.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:216.25",
+      "kind": "hold",
+      "hold_beats": 1.75
+    },
+    {
+      "ref": "grid:218.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:218.75",
+      "kind": "hold",
+      "hold_beats": 1.75
+    },
+    {
+      "ref": "grid:220.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:221.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:221.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:222.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:222.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:222.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:223.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:223.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:224.0",
+      "kind": "hold",
+      "hold_beats": 4.0
+    },
+    {
+      "ref": "grid:228.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:229.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:229.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:230.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:230.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:231.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:232.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:232.25",
+      "kind": "hold",
+      "hold_beats": 1.75
+    },
+    {
+      "ref": "grid:234.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:234.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:235.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:235.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:236.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:236.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:236.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:236.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:237.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:237.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:237.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:238.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:238.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:239.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:240.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:240.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:242.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:242.5",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "grid:244.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:244.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:244.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:245.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:245.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:245.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:245.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:246.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:246.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:246.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:247.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:247.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:248.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:248.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:249.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:249.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:249.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:250.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:250.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:251.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:251.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:252.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:252.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:253.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:253.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:254.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:254.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:254.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:255.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:256.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:256.5",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "grid:258.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:258.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:259.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:260.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:260.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:260.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:261.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:261.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:261.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:261.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:262.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:262.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:263.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:263.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:264.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:264.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:265.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:265.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:266.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:266.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:266.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:266.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:267.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:267.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:268.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:268.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:269.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:269.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:269.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:270.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:270.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:271.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:271.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:272.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:272.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:272.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:273.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:273.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:273.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:274.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:274.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:274.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:275.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:276.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:277.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:278.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:279.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:279.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:280.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:280.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:281.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:281.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:282.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:282.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:283.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:283.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:284.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:284.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:284.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:285.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:286.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:286.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:286.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:287.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:287.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:288.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:288.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:288.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:289.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:291.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:291.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:292.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:293.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:294.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:294.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:295.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:296.0",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "grid:297.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:298.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:298.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:299.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:300.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:300.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:300.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:301.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:301.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:302.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:303.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:304.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:304.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:307.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:307.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:308.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:309.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:310.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:310.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:311.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:312.25",
+      "kind": "hold",
+      "hold_beats": 1.25
+    },
+    {
+      "ref": "grid:313.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:314.0",
+      "kind": "hold",
+      "hold_beats": 1.75
+    },
+    {
+      "ref": "grid:315.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:316.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:316.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:317.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:317.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:318.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:320.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:320.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:324.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:325.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:326.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:326.75",
+      "kind": "hold",
+      "hold_beats": 2.75
+    },
+    {
+      "ref": "grid:329.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:330.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:330.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:331.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:332.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:333.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:333.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:334.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:336.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:336.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:339.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:340.25",
+      "kind": "hold",
+      "hold_beats": 1.25
+    },
+    {
+      "ref": "grid:341.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:342.75",
+      "kind": "hold",
+      "hold_beats": 1.25
+    },
+    {
+      "ref": "grid:343.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:345.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:346.25",
+      "kind": "hold",
+      "hold_beats": 1.75
+    },
+    {
+      "ref": "grid:348.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:349.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:349.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:351.25",
+      "kind": "hold",
+      "hold_beats": 1.75
+    },
+    {
+      "ref": "grid:353.5",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "grid:354.25",
+      "kind": "hold",
+      "hold_beats": 3.25
+    },
+    {
+      "ref": "grid:359.0",
+      "kind": "hold",
+      "hold_beats": 4.0
+    },
+    {
+      "ref": "grid:361.5",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "grid:363.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:365.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:367.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:367.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:368.75",
+      "kind": "hold",
+      "hold_beats": 2.25
+    },
+    {
+      "ref": "grid:369.75",
+      "kind": "hold",
+      "hold_beats": 1.25
+    },
+    {
+      "ref": "grid:372.25",
+      "kind": "hold",
+      "hold_beats": 4.25
+    },
+    {
+      "ref": "grid:375.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:377.5",
+      "kind": "hold",
+      "hold_beats": 3.0
+    },
+    {
+      "ref": "grid:388.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:390.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:391.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:392.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:393.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:395.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:397.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:400.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:404.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:405.25",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:407.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:408.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:409.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:411.5",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:412.75",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:413.5",
+      "kind": "tap"
+    }
+  ],
+  "phrases": [
+    {
+      "start_bar": 1,
+      "end_bar": 20,
+      "texture": "steps",
+      "movement": "zigzag",
+      "crossover": "none",
+      "jump_density": "accents",
+      "intent": "intro \u2014 keep steps clean and dynamic"
+    },
+    {
+      "start_bar": 20,
+      "end_bar": 36,
+      "texture": "stream",
+      "movement": "drift_L_to_R",
+      "crossover": "light",
+      "jump_density": "none",
+      "intent": "drop part 1 \u2014 build consistent flow"
+    },
+    {
+      "start_bar": 36,
+      "end_bar": 52,
+      "texture": "stream",
+      "movement": "zigzag",
+      "crossover": "light",
+      "jump_density": "none",
+      "intent": "drop part 1 continuation \u2014 maintain lateral shifts"
+    },
+    {
+      "start_bar": 52,
+      "end_bar": 64,
+      "texture": "jumpstream",
+      "movement": "drift_R_to_L",
+      "crossover": "light",
+      "jump_density": "accents",
+      "intent": "transitional buildup \u2014 introduce jumpstream"
+    },
+    {
+      "start_bar": 64,
+      "end_bar": 80,
+      "texture": "jumpstream",
+      "movement": "zigzag",
+      "crossover": "light",
+      "jump_density": "accents",
+      "intent": "main drop section S2 \u2014 intensify visual patterns"
+    },
+    {
+      "start_bar": 80,
+      "end_bar": 95,
+      "texture": "jumpstream",
+      "movement": "box",
+      "crossover": "moderate",
+      "jump_density": "accents",
+      "intent": "peak energy climax \u2014 moderate crossover patterns"
+    },
+    {
+      "start_bar": 95,
+      "end_bar": 104,
+      "texture": "steps",
+      "movement": "static",
+      "crossover": "light",
+      "jump_density": "none",
+      "intent": "outro transition \u2014 cool down but keep charting active"
+    }
+  ]
+}

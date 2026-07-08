@@ -1,0 +1,175 @@
+{
+  "track_id": "super_quick",
+  "bpm": 125.027,
+  "offset": 0.368,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 241,
+      "meter": 3,
+      "jumps": 8,
+      "holds": 36,
+      "repaired": 5,
+      "repair_ok": true,
+      "critic": {
+        "score": 7.5,
+        "verdict": "A well-synced and structurally sound chart with good flow, but contains overly complex hold patterns and a stretch jump that are inappropriate for an Easy difficulty.",
+        "issues": [
+          {
+            "where": "96.587 to 97.787",
+            "problem": "A rapid succession of extremely short (eighth-note and quarter-note) holds is highly frustrating and mechanically complex for an Easy chart, often leading to accidental hold drops."
+          },
+          {
+            "where": "104.266 to 105.465",
+            "problem": "Another sequence of rapid, consecutive short holds that functions as a gimmick, which is too technical for beginner players."
+          },
+          {
+            "where": "106.185 to 106.905",
+            "problem": "Overlapping holds (HOLD L starting during HOLD D, followed by an immediate transition to HOLD U) require multi-tasking feet pressure that is too complex for an Easy difficulty level."
+          },
+          {
+            "where": "102.106",
+            "problem": "An Up-Down (UD) jump requires a sideways body orientation, which is generally discouraged in Easy-rated charts due to the physical reading strain on beginners."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/super_quick/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 241,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.217,
+          "D": 0.285,
+          "U": 0.289,
+          "R": 0.209
+        },
+        "hold_share": 0.1494,
+        "jump_share": 0.0332,
+        "flow_cost_max": 1.0,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.4805,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 308,
+      "meter": 6,
+      "jumps": 63,
+      "holds": 34,
+      "repaired": 1,
+      "repair_ok": true,
+      "critic": {
+        "score": 8,
+        "verdict": "A well-structured and rhythmic chart with excellent pacing, though it relies a bit too heavily on repetitive loop patterns in the chorus.",
+        "issues": [
+          {
+            "where": "39.720 - 48.358",
+            "problem": "Highly repetitive use of the 'JUMP LR -> U -> D -> L -> JUMP LR' pattern. While accurate to the rhythm, playing the exact same physical loop five times in a short window feels monotonous."
+          },
+          {
+            "where": "40.919 - 41.399",
+            "problem": "The transition from U -> D -> L after a JUMP LR forces either an awkward double-step on the left foot (D -> L) or a heavy crossover. This layout repeats frequently during the chorus."
+          },
+          {
+            "where": "109.304 - 110.984",
+            "problem": "The outro sequence repeats the exact same 'D -> U -> L -> R' flow verbatim, missing an opportunity for a mirrored variation to make the finish more engaging."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/super_quick/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 308,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.286,
+          "D": 0.237,
+          "U": 0.251,
+          "R": 0.226
+        },
+        "hold_share": 0.1104,
+        "jump_share": 0.2045,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.04,
+        "density_energy_spearman": 0.1105,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 338,
+      "meter": 8,
+      "jumps": 86,
+      "holds": 17,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 7,
+        "verdict": "A well-timed, energetic chart with a satisfying outro stream, but held back by excessive pattern repetition in the first half and a few awkward jump transitions.",
+        "issues": [
+          {
+            "where": "53.157 - 53.397",
+            "problem": "Awkward foot flow. Landing a DR jump and immediately tapping L requires a very fast, uncomfortable left-foot transition from Down to Left."
+          },
+          {
+            "where": "69.233 - 69.473",
+            "problem": "Uncomfortable jump transition. Tapping L and immediately executing an LD jump forces an awkward double-tap on the Left panel during the jump."
+          },
+          {
+            "where": "2.288 - 50.000",
+            "problem": "Severe repetitiveness. The 'LR Jump -> U -> D' motif is overused extensively throughout the first half, leading to a monotonous gameplay experience."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/super_quick/hard.assist.ogg"
+      },
+      "metrics": {
+        "notes": 338,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.302,
+          "D": 0.238,
+          "U": 0.226,
+          "R": 0.233
+        },
+        "hold_share": 0.0503,
+        "jump_share": 0.2544,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.5767,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/super_quick/super_quick.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/super_quick/super_quick.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/super_quick/super_quick.ogg"
+  },
+  "out": "build/stepmania/super_quick",
+  "meter_monotonic": true
+}

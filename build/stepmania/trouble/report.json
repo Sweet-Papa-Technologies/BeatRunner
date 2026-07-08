@@ -1,0 +1,169 @@
+{
+  "track_id": "trouble",
+  "bpm": 109.957,
+  "offset": 0.192,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 150,
+      "meter": 3,
+      "jumps": 11,
+      "holds": 15,
+      "repaired": 2,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "An exceptionally well-crafted Easy chart with flawless density progression and comfortable, highly intuitive foot flow.",
+        "issues": [
+          {
+            "where": "80.405",
+            "problem": "The isolated 8th note transition (L to U) represents a minor physical and reading difficulty spike for an Easy-level player."
+          },
+          {
+            "where": "88.590",
+            "problem": "An isolated 8th note directly leading into a JUMP LR (D to L to JUMP) can be disorienting for beginners at this skill level."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/trouble/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 150,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.267,
+          "D": 0.28,
+          "U": 0.267,
+          "R": 0.186
+        },
+        "hold_share": 0.1,
+        "jump_share": 0.0733,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.11,
+        "density_energy_spearman": 0.8104,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "medium": {
+      "notes": 336,
+      "meter": 6,
+      "jumps": 22,
+      "holds": 51,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 5,
+        "verdict": "While the chart accurately syncs to the track's dreamy bridge, the drop suffers from extreme repetition and several highly awkward transitions that spike the difficulty past a Medium level.",
+        "issues": [
+          {
+            "where": "54.759 - 64.581",
+            "problem": "The chorus repeatedly loops the exact same 'LR Jump -> U -> D -> L' 8th-note pattern. This is highly monotonous, tiring, and fails to capture the glitchy, dynamic details of the song's production."
+          },
+          {
+            "where": "68.946",
+            "problem": "Awkward transition from a single tap on L (68.673) directly into a LD jump (68.946), forcing an uncomfortable 'one-foot' jump since the L panel is shared."
+          },
+          {
+            "where": "86.408",
+            "problem": "Similarly to 68.946, transitioning from a tap on L (86.135) directly into a LD jump (86.408) disrupts natural foot flow."
+          },
+          {
+            "where": "22.019 - 23.383",
+            "problem": "Dense 16th-note streams containing rapid direction changes (like D->L->U->D and R->L->D->U) introduce crossovers and double-steps that are too physically complex for a standard Medium chart."
+          },
+          {
+            "where": "75.358",
+            "problem": "A rapid 16th-note transition from a single D tap (75.358) to a LR jump (75.494) creates a sudden, awkward physical spike."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 336,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.254,
+          "D": 0.271,
+          "U": 0.268,
+          "R": 0.207
+        },
+        "hold_share": 0.1518,
+        "jump_share": 0.0655,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": -0.2463,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 389,
+      "meter": 8,
+      "jumps": 54,
+      "holds": 21,
+      "repaired": 4,
+      "repair_ok": true,
+      "critic": {
+        "score": 6,
+        "verdict": "A fundamentally well-timed chart with good structure, but severely dragged down by an excessively repetitive chorus section and a few awkward transitions after jumps.",
+        "issues": [
+          {
+            "where": "52.576 to 70.856",
+            "problem": "The exact same four-note sequence (JUMP LR -> tap U -> tap D -> tap L) repeats 14 times consecutively. This creates a monotonous gameplay loop that lacks creative expression and physical variety."
+          },
+          {
+            "where": "85.316 and 90.773",
+            "problem": "The transition from an asymmetric LD jump directly into a fast 16th stream starting on U forces either an awkward body spin or an unnatural double-step."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 389,
+        "onset_alignment": 0.9974,
+        "grid_notes": 1,
+        "panel_balance": {
+          "L": 0.291,
+          "D": 0.237,
+          "U": 0.253,
+          "R": 0.219
+        },
+        "hold_share": 0.054,
+        "jump_share": 0.1388,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": -0.0599,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/trouble/trouble.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/trouble/trouble.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/trouble/trouble.ogg"
+  },
+  "out": "build/stepmania/trouble",
+  "meter_monotonic": true
+}

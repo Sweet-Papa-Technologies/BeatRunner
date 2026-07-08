@@ -1,0 +1,15 @@
+{
+  "score": 4,
+  "verdict": "The chart is well-synced to the beat, but it is severely let down by extreme pattern repetition and uncomfortable forced spins during the stream sections.",
+  "issues": [
+    {
+      "where": "41.250 - 64.793",
+      "problem": "The 8th-note streams frequently feature forced 360-degree spins (such as U -> D -> L -> R -> U -> D -> L). At 130 BPM, this forces the player into highly awkward double-steps or disorienting physical spins, severely disrupting the foot flow."
+    },
+    {
+      "where": "12.398 - 38.250",
+      "problem": "The pattern 'JUMP LR -> U -> D -> L' is repeated almost continuously for over 25 seconds with virtually no variation, making the first half of the chart feel incredibly monotonous and lazy."
+    }
+  ],
+  "human_review": true
+}

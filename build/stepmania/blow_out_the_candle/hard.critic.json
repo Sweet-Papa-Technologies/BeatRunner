@@ -1,0 +1,19 @@
+{
+  "score": 5,
+  "verdict": "The chart captures the energy and rhythm of the song well, but is severely held back by technical charting errors like unplayable overlapping holds and awkward 16th-note flows.",
+  "issues": [
+    {
+      "where": "77.139",
+      "problem": "Active overlapping holds on Down, Up, and Left panels create an impossible triple-hold that cannot be naturally executed on a standard pad."
+    },
+    {
+      "where": "28.783",
+      "problem": "The 16th-note stream pattern (U -> R -> L -> D -> U) creates poor foot flow, forcing uncomfortable double-steps or extreme spins."
+    },
+    {
+      "where": "50.249",
+      "problem": "Using a 3-panel hand (JUMP LR while holding D) right at the drop is highly jarring and excessively difficult for a standard Hard chart."
+    }
+  ],
+  "human_review": true
+}

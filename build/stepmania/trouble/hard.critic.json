@@ -1,0 +1,15 @@
+{
+  "score": 6,
+  "verdict": "A fundamentally well-timed chart with good structure, but severely dragged down by an excessively repetitive chorus section and a few awkward transitions after jumps.",
+  "issues": [
+    {
+      "where": "52.576 to 70.856",
+      "problem": "The exact same four-note sequence (JUMP LR -> tap U -> tap D -> tap L) repeats 14 times consecutively. This creates a monotonous gameplay loop that lacks creative expression and physical variety."
+    },
+    {
+      "where": "85.316 and 90.773",
+      "problem": "The transition from an asymmetric LD jump directly into a fast 16th stream starting on U forces either an awkward body spin or an unnatural double-step."
+    }
+  ],
+  "human_review": true
+}

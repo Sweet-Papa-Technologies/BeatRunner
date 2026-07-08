@@ -1,0 +1,165 @@
+{
+  "track_id": "intro_phonk_1",
+  "bpm": 151.999,
+  "offset": 0.053,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 82,
+      "meter": 3,
+      "jumps": 0,
+      "holds": 13,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 4,
+        "verdict": "The chart has good physical flow and structural ideas, but the excessive use of off-beat syncopation and tight hold releases makes it far too complex and punishing for an Easy difficulty.",
+        "issues": [
+          {
+            "where": "Throughout the chart (e.g., 21.566, 32.224, 41.698, 48.014)",
+            "problem": "Frequent use of off-beat (8th-note syncopated) steps. Easy charts should strictly adhere to the main quarter-note beats to remain readable for beginners."
+          },
+          {
+            "where": "42.093 to 42.882 and 45.251 to 45.843",
+            "problem": "Tight hold-to-tap transitions. The hold ends only half a beat (0.19s) before the next tap, which doesn't give beginner players enough time to release and reposition."
+          },
+          {
+            "where": "59.461 to 60.053",
+            "problem": "An 8th-note burst (L -> R -> D) at 152 BPM near the end. This is a sudden difficulty spike that is inappropriate for an Easy difficulty level."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/intro_phonk_1/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 82,
+        "onset_alignment": 0.9024,
+        "grid_notes": 8,
+        "panel_balance": {
+          "L": 0.207,
+          "D": 0.293,
+          "U": 0.28,
+          "R": 0.22
+        },
+        "hold_share": 0.1585,
+        "jump_share": 0.0,
+        "flow_cost_max": 0.0,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.7055,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "medium": {
+      "notes": 220,
+      "meter": 6,
+      "jumps": 45,
+      "holds": 18,
+      "repaired": 12,
+      "repair_ok": true,
+      "critic": {
+        "score": 4,
+        "verdict": "Though rhythmically engaging, the chart is severely held back by unintended three-panel hands and awkward one-foot 16th-note maneuvers during holds.",
+        "issues": [
+          {
+            "where": "44.264 and 53.738",
+            "problem": "Placing JUMP LR while HOLD U is active creates an unintended 3-panel 'Hand' that cannot be cleanly played with feet alone on a standard single-dance pad."
+          },
+          {
+            "where": "19.198, 28.672, and 41.303",
+            "problem": "Forces 16th-note transitions between two panels with one foot (e.g., U to L) while the other foot is anchoring a hold. This is extremely awkward and difficult to execute cleanly at 152 BPM."
+          },
+          {
+            "where": "17.520, 19.099, 22.257, 23.836, and 25.415",
+            "problem": "Very tight 16th-note transitions from a double-panel jump to a single-panel hold, which breaks the physical flow of the choreography."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/intro_phonk_1/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 220,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.294,
+          "D": 0.238,
+          "U": 0.249,
+          "R": 0.219
+        },
+        "hold_share": 0.0818,
+        "jump_share": 0.2045,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.28,
+        "density_energy_spearman": 0.7366,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "hard": {
+      "notes": 294,
+      "meter": 9,
+      "jumps": 42,
+      "holds": 16,
+      "repaired": 9,
+      "repair_ok": true,
+      "critic": {
+        "score": 8,
+        "verdict": "An exceptionally well-flowing, high-energy hard dance chart held back only by a single impossible three-panel overlap during a hold.",
+        "issues": [
+          {
+            "where": "53.738s",
+            "problem": "A JUMP LR is charted while HOLD U is still active (until 54.034s), creating an awkward three-panel input constraint that is impossible to execute naturally on a single pad."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/intro_phonk_1/hard.assist.ogg"
+      },
+      "metrics": {
+        "notes": 294,
+        "onset_alignment": 0.9966,
+        "grid_notes": 1,
+        "panel_balance": {
+          "L": 0.304,
+          "D": 0.226,
+          "U": 0.28,
+          "R": 0.19
+        },
+        "hold_share": 0.0544,
+        "jump_share": 0.1429,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.18,
+        "density_energy_spearman": 0.3886,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/intro_phonk_1/intro_phonk_1.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/intro_phonk_1/intro_phonk_1.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/intro_phonk_1/intro_phonk_1.ogg"
+  },
+  "out": "build/stepmania/intro_phonk_1",
+  "meter_monotonic": true
+}

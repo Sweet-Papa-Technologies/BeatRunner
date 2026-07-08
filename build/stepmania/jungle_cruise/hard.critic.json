@@ -1,0 +1,23 @@
+{
+  "score": 2,
+  "verdict": "An incredibly lazy and repetitive chart plagued by duplicate note bugs, lack of pattern variety, and an illegal 3-panel chord.",
+  "issues": [
+    {
+      "where": "47.020 - 95.722",
+      "problem": "Extremely repetitive mapping where almost the entire main chorus consists of alternating JUMP LR and tap U, resulting in a tedious 'jackhammer' effect."
+    },
+    {
+      "where": "41.019",
+      "problem": "An illegal 3-panel chord (JUMP LR and HOLD D occurring simultaneously) which is unplayable under standard 4-panel single rules."
+    },
+    {
+      "where": "44.712, 45.173, 52.098, 55.791, 104.262",
+      "problem": "Dozens of duplicate note events (JUMP LR mapped twice at the exact same millisecond), pointing to a technical generation error."
+    },
+    {
+      "where": "Throughout the chart",
+      "problem": "Severe lack of jump variety; JUMP LR is used almost exclusively, ignoring comfortable alternatives like UD, LD, or RD, which creates poor foot flow."
+    }
+  ],
+  "human_review": true
+}

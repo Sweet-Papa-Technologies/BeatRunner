@@ -1,0 +1,15 @@
+{
+  "score": 6,
+  "verdict": "The chart features flawless foot alternation and perfect timing, but it is far too dense and complex for an Easy difficulty, featuring long continuous streams and tricky syncopated eighth notes.",
+  "issues": [
+    {
+      "where": "25.924, 29.498, 31.484",
+      "problem": "Syncopated eighth-note steps (placed on offbeats) at 151 BPM are too rhythmically complex and fast for beginners on an Easy chart."
+    },
+    {
+      "where": "34.463 to 60.275",
+      "problem": "There is a continuous quarter-note stream lasting nearly 26 seconds (over 60 steps) with no breaks, which is exhausting and mentally overwhelming for an Easy difficulty level."
+    }
+  ],
+  "human_review": true
+}

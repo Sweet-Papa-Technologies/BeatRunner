@@ -1,0 +1,23 @@
+{
+  "score": 6,
+  "verdict": "The chart features excellent flowing spin-sections and solid rhythm tracking, but is held back by a 3-panel lock and several highly uncomfortable 16th-note transitions.",
+  "issues": [
+    {
+      "where": "14.744",
+      "problem": "3-panel lock: Tapping R while both U and D are being held creates an impossible 3-panel step (hand note) for standard feet-only play."
+    },
+    {
+      "where": "3.989-4.489",
+      "problem": "Holding U while tapping L and R as 16th notes forces the single free foot to slide from L to R in just 125ms, which is physically extremely awkward."
+    },
+    {
+      "where": "18.370-18.495",
+      "problem": "Tapping R then immediately jumping to LR as a 16th note creates an uncomfortable single-foot double-tap (jack) directly into a jump. This issue also occurs at 22.372 and 64.391."
+    },
+    {
+      "where": "27.374-27.499",
+      "problem": "Hitting D then immediately jumping to LR as a 16th note forces a highly rushed 125ms foot transition from D to R."
+    }
+  ],
+  "human_review": true
+}

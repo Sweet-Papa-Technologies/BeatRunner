@@ -1,0 +1,18 @@
+{
+  "score": 7,
+  "verdict": "A rhythmically accurate and dynamic chart that captures the song's energy well, but contains several physical demands and a 3-panel bracket that are too difficult for a Medium rating.",
+  "issues": [
+    {
+      "where": "37.737 to 38.009",
+      "problem": "Holding U while executing a JUMP LR requires a 3-panel bracket (or hand), which is an illegal/unintended technique for a standard Medium chart."
+    },
+    {
+      "where": "55.100 to 61.000",
+      "problem": "The rapid 16th-note tap-to-jump and jump-to-tap sequences (e.g., L to JUMP LR to U) are extremely physically demanding and far exceed the expected difficulty of a Medium chart."
+    },
+    {
+      "where": "42.078 to 42.892",
+      "problem": "Tapping D and U with the left foot while holding R, followed immediately by tapping L, forces either a highly awkward crossover or an intense double-step, which is too complex for this level."
+    }
+  ]
+}

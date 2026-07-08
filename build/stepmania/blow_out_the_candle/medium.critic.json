@@ -1,0 +1,19 @@
+{
+  "score": 5,
+  "verdict": "The chart has good rhythmic alignment and generally comfortable streams, but it is severely undermined by multiple physically impossible 3-panel jumps during holds.",
+  "issues": [
+    {
+      "where": "63.175",
+      "problem": "JUMP LR occurs while HOLD U is still active (62.944 to 63.406), requiring 3 panels to be pressed simultaneously, which is impossible/unintended for standard Medium single play."
+    },
+    {
+      "where": "75.177",
+      "problem": "JUMP LR occurs while HOLD D is active (74.254 to 75.639), creating another physical 3-panel conflict."
+    },
+    {
+      "where": "79.793",
+      "problem": "JUMP LR overlaps with HOLD U (79.563 to 80.024), forcing an uncomfortable 3-panel press."
+    }
+  ],
+  "human_review": true
+}

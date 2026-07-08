@@ -1,0 +1,19 @@
+{
+  "score": 6,
+  "verdict": "Great rhythmic mapping and standard streams, but severely marred by physically impossible 16th-note runs and jumps during active holds.",
+  "issues": [
+    {
+      "where": "42.078 - 42.620",
+      "problem": "Holding U while playing a rapid 16th-note run (D, R, L) forces the player to perform an impossible one-foot stream on a dance pad."
+    },
+    {
+      "where": "74.768 - 74.904",
+      "problem": "The JUMP DR at 74.904 occurs while the L panel is held, creating an unintentional 3-panel 'hand' or forcing a highly awkward bracket release."
+    },
+    {
+      "where": "85.620 - 86.434",
+      "problem": "Holding L while executing a 16th-note stream of U, D, R, U requires the right foot to move at impossible speeds to hit all three remaining panels."
+    }
+  ],
+  "human_review": true
+}

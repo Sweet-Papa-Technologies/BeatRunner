@@ -1,0 +1,183 @@
+{
+  "track_id": "crystal_clear",
+  "bpm": 126.048,
+  "offset": 0.355,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 163,
+      "meter": 3,
+      "jumps": 0,
+      "holds": 16,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 6,
+        "verdict": "A mostly solid Easy chart let down by awkward, rapid vertical eighth-note transitions that disrupt the natural foot flow for beginners.",
+        "issues": [
+          {
+            "where": "34.390",
+            "problem": "Rapid eighth-note transition from Up to Down (34.390 to 34.628) is uncomfortable for an Easy chart, forcing an awkward double-step or hip twist."
+          },
+          {
+            "where": "52.478",
+            "problem": "Eighth-note Up to Down transition creates a rapid vertical movement that is too fast and demanding for beginner players."
+          },
+          {
+            "where": "56.762",
+            "problem": "Repeated use of the rapid Up to Down vertical transition (238ms) which repeatedly disrupts the player's physical flow."
+          },
+          {
+            "where": "99.603",
+            "problem": "The chart ends abruptly on an awkward, sudden Up-to-Down eighth note pair instead of a satisfying final beat."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/crystal_clear/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 163,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.196,
+          "D": 0.301,
+          "U": 0.301,
+          "R": 0.202
+        },
+        "hold_share": 0.0982,
+        "jump_share": 0.0,
+        "flow_cost_max": 0.0,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.6203,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "medium": {
+      "notes": 378,
+      "meter": 6,
+      "jumps": 57,
+      "holds": 35,
+      "repaired": 71,
+      "repair_ok": false,
+      "critic": {
+        "score": 5,
+        "verdict": "Great rhythmic accuracy and step flow, but severely undermined by several physically impossible multi-panel holds and taps.",
+        "issues": [
+          {
+            "where": "36.294",
+            "problem": "Requires tapping L while holding both U and D, which is physically impossible to execute since U and D cannot be bracketed with a single foot."
+          },
+          {
+            "where": "47.004 - 47.480",
+            "problem": "Overlapping holds on U, L, and D require holding down three panels simultaneously."
+          },
+          {
+            "where": "51.169 - 51.288",
+            "problem": "Overlapping holds on U, R, and D require holding down three panels simultaneously."
+          },
+          {
+            "where": "86.870 - 86.989",
+            "problem": "Overlapping holds on D, L, and R require holding down three panels simultaneously."
+          },
+          {
+            "where": "88.774 - 88.893",
+            "problem": "Overlapping holds on U, L, and D require holding down three panels simultaneously."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/crystal_clear/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 378,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.297,
+          "D": 0.221,
+          "U": 0.257,
+          "R": 0.225
+        },
+        "hold_share": 0.0926,
+        "jump_share": 0.1508,
+        "flow_cost_max": 39.15,
+        "flow_cost_mean": 0.72,
+        "density_energy_spearman": 0.6754,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": false,
+          "density_energy": true
+        }
+      }
+    },
+    "hard": {
+      "notes": 531,
+      "meter": 9,
+      "jumps": 50,
+      "holds": 42,
+      "repaired": 15,
+      "repair_ok": true,
+      "critic": {
+        "score": 7,
+        "verdict": "Flawless rhythm alignment and an energetic drop, but severely hampered by awkward 16th-note runs forced on a single foot during holds in the verse.",
+        "issues": [
+          {
+            "where": "14.635 - 15.111",
+            "problem": "Holding R forces the player to perform a rapid 16th-note run (D -> U -> L) entirely on the left foot, which is extremely awkward and physically strenuous."
+          },
+          {
+            "where": "16.658 - 17.134",
+            "problem": "Holding D forces a one-foot 16th-note run (U -> L -> R) on the left foot, creating an unnatural movement bottleneck."
+          },
+          {
+            "where": "20.585 - 21.061",
+            "problem": "Holding U forces the right foot to execute a fast L -> R -> D 16th-note sequence, causing severe balance and flow issues."
+          }
+        ]
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 531,
+        "onset_alignment": 0.9962,
+        "grid_notes": 2,
+        "panel_balance": {
+          "L": 0.265,
+          "D": 0.26,
+          "U": 0.255,
+          "R": 0.22
+        },
+        "hold_share": 0.0791,
+        "jump_share": 0.0942,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.23,
+        "density_energy_spearman": 0.4873,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/crystal_clear/crystal_clear.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/crystal_clear/crystal_clear.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/crystal_clear/crystal_clear.ogg"
+  },
+  "out": "build/stepmania/crystal_clear",
+  "meter_monotonic": true
+}

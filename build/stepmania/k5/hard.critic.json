@@ -1,0 +1,15 @@
+{
+  "score": 6,
+  "verdict": "Good rhythmic syncopation and energy scaling are severely undermined by a highly repetitive spin loop and an extreme over-reliance on LR jumps.",
+  "issues": [
+    {
+      "where": "46.043 - 53.539",
+      "problem": "Features a continuous, repeating 4-note loop (D-U-L-R) for over 7 seconds of eighth notes. This forces either highly repetitive 360-degree spins or awkward double-stepping, creating physical strain without satisfying flow."
+    },
+    {
+      "where": "66.032 - 98.015",
+      "problem": "The drop heavily overuses 'JUMP LR' (Left + Right), featuring it almost exclusively for every jump in this segment. This makes the physical movement feel flat, lazy, and visually monotonous, neglecting other jump configurations like LD, LU, RD, or RU."
+    }
+  ],
+  "human_review": true
+}

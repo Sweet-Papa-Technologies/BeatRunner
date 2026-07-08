@@ -1,0 +1,171 @@
+{
+  "track_id": "tired",
+  "bpm": 110.583,
+  "offset": 0.028,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 141,
+      "meter": 3,
+      "jumps": 17,
+      "holds": 12,
+      "repaired": 1,
+      "repair_ok": true,
+      "critic": {
+        "score": 5,
+        "verdict": "The chart is timed correctly to the beat, but contains sequences that are far too complex and physically demanding for an Easy difficulty.",
+        "issues": [
+          {
+            "where": "22.816 to 29.870",
+            "problem": "A long, continuous quarter-note stream of 14 steps with no rest is too dense for an Easy chart, and the repetitive 'D -> U -> R -> D -> U -> L' pattern forces unnatural double-stepping or complex crossovers."
+          },
+          {
+            "where": "6.810 - 7.082 and 16.305 - 16.577",
+            "problem": "Isolated eighth-note transitions between vertical opposites (U to D, and D to U) are disorienting and difficult for beginners to execute smoothly."
+          },
+          {
+            "where": "34.753 - 39.094",
+            "problem": "The chorus introduces too many consecutive JUMP LR notes spaced closely together, which spikes the physical difficulty too high for an Easy chart."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/tired/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 141,
+        "onset_alignment": 0.9645,
+        "grid_notes": 5,
+        "panel_balance": {
+          "L": 0.266,
+          "D": 0.266,
+          "U": 0.253,
+          "R": 0.215
+        },
+        "hold_share": 0.0851,
+        "jump_share": 0.1206,
+        "flow_cost_max": 8.0,
+        "flow_cost_mean": 0.06,
+        "density_energy_spearman": 0.2561,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 225,
+      "meter": 5,
+      "jumps": 30,
+      "holds": 19,
+      "repaired": 3,
+      "repair_ok": true,
+      "critic": {
+        "score": 7,
+        "verdict": "A rhythmically accurate and dynamic chart that captures the song's energy well, but contains several physical demands and a 3-panel bracket that are too difficult for a Medium rating.",
+        "issues": [
+          {
+            "where": "37.737 to 38.009",
+            "problem": "Holding U while executing a JUMP LR requires a 3-panel bracket (or hand), which is an illegal/unintended technique for a standard Medium chart."
+          },
+          {
+            "where": "55.100 to 61.000",
+            "problem": "The rapid 16th-note tap-to-jump and jump-to-tap sequences (e.g., L to JUMP LR to U) are extremely physically demanding and far exceed the expected difficulty of a Medium chart."
+          },
+          {
+            "where": "42.078 to 42.892",
+            "problem": "Tapping D and U with the left foot while holding R, followed immediately by tapping L, forces either a highly awkward crossover or an intense double-step, which is too complex for this level."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/tired/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 225,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.251,
+          "D": 0.278,
+          "U": 0.247,
+          "R": 0.224
+        },
+        "hold_share": 0.0844,
+        "jump_share": 0.1333,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.05,
+        "density_energy_spearman": 0.3392,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 399,
+      "meter": 8,
+      "jumps": 32,
+      "holds": 19,
+      "repaired": 7,
+      "repair_ok": true,
+      "critic": {
+        "score": 6,
+        "verdict": "Great rhythmic mapping and standard streams, but severely marred by physically impossible 16th-note runs and jumps during active holds.",
+        "issues": [
+          {
+            "where": "42.078 - 42.620",
+            "problem": "Holding U while playing a rapid 16th-note run (D, R, L) forces the player to perform an impossible one-foot stream on a dance pad."
+          },
+          {
+            "where": "74.768 - 74.904",
+            "problem": "The JUMP DR at 74.904 occurs while the L panel is held, creating an unintentional 3-panel 'hand' or forcing a highly awkward bracket release."
+          },
+          {
+            "where": "85.620 - 86.434",
+            "problem": "Holding L while executing a 16th-note stream of U, D, R, U requires the right foot to move at impossible speeds to hit all three remaining panels."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 399,
+        "onset_alignment": 0.9925,
+        "grid_notes": 3,
+        "panel_balance": {
+          "L": 0.251,
+          "D": 0.276,
+          "U": 0.26,
+          "R": 0.213
+        },
+        "hold_share": 0.0476,
+        "jump_share": 0.0802,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.12,
+        "density_energy_spearman": 0.4204,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/tired/tired.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/tired/tired.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/tired/tired.ogg"
+  },
+  "out": "build/stepmania/tired",
+  "meter_monotonic": true
+}

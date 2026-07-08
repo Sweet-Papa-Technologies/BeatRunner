@@ -1,0 +1,14 @@
+{
+  "score": 8,
+  "verdict": "An exceptionally energetic and well-timed chart with a fantastic drop, though marred by a few highly awkward cross-over streams in the first half.",
+  "issues": [
+    {
+      "where": "18.694 - 20.456",
+      "problem": "The repeating 'D -> R -> L -> U' pattern forces uncomfortable double cross-overs (Left foot on R, Right foot on L), causing awkward body twists."
+    },
+    {
+      "where": "28.005 - 30.773",
+      "problem": "Transitions like 'R -> L -> D' require extreme leg crossing that breaks the flow of the stream and is difficult to execute comfortably."
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "track_id": "no_compile",
+  "bpm": 136.985,
+  "offset": 0.416,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 184,
+      "meter": 3,
+      "jumps": 5,
+      "holds": 23,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 10,
+        "verdict": "An absolute masterclass in Easy chart design, featuring flawless rhythm sync, extremely comfortable cradle-flow streams, and smart, structured difficulty progression.",
+        "issues": [
+          {
+            "where": "45.092 - 56.481",
+            "problem": "Continuous 26-note stream of 1/4 notes is technically long for an Easy chart, though the low BPM (137) and repeating, highly comfortable 'cradle' pattern (R-U-D, L-U-D) make it exceptionally accessible and fun to play."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/no_compile/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 184,
+        "onset_alignment": 0.9891,
+        "grid_notes": 2,
+        "panel_balance": {
+          "L": 0.19,
+          "D": 0.323,
+          "U": 0.312,
+          "R": 0.175
+        },
+        "hold_share": 0.125,
+        "jump_share": 0.0272,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.642,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "medium": {
+      "notes": 249,
+      "meter": 6,
+      "jumps": 49,
+      "holds": 12,
+      "repaired": 11,
+      "repair_ok": true,
+      "critic": {
+        "score": 4,
+        "verdict": "Great rhythm and flow are completely undermined by a repeating error where jumps are placed during holds, forcing illegal 3-panel 'hands' on a Medium single chart.",
+        "issues": [
+          {
+            "where": "38.413",
+            "problem": "While holding L (38.084 to 38.960), the player has to hit a D -> U 16th-note transition with the right foot, which is an extremely awkward vertical slide for this difficulty."
+          },
+          {
+            "where": "57.357",
+            "problem": "JUMP DR is placed during an active HOLD L (56.809 to 57.685), forcing an illegal 3-panel 'hand' (L, D, R)."
+          },
+          {
+            "where": "62.613",
+            "problem": "JUMP LR is placed during an active HOLD D (62.175 to 63.051), forcing an illegal 3-panel 'hand' (D, L, R)."
+          },
+          {
+            "where": "85.389",
+            "problem": "JUMP LU is placed during an active HOLD D (84.951 to 85.827), forcing an illegal 3-panel 'hand' (D, L, U)."
+          },
+          {
+            "where": "87.141",
+            "problem": "JUMP LR is placed during an active HOLD D (86.703 to 87.579), forcing an illegal 3-panel 'hand' (D, L, R)."
+          },
+          {
+            "where": "90.645",
+            "problem": "JUMP LU is placed during an active HOLD D (90.207 to 91.083), forcing an illegal 3-panel 'hand' (D, L, U)."
+          },
+          {
+            "where": "95.901",
+            "problem": "JUMP LR is placed during an active HOLD D (95.463 to 97.215), forcing an illegal 3-panel 'hand' (D, L, R)."
+          },
+          {
+            "where": "96.777",
+            "problem": "JUMP LR is placed during an active HOLD D (95.463 to 97.215), forcing an illegal 3-panel 'hand' (D, L, R)."
+          },
+          {
+            "where": "99.405",
+            "problem": "JUMP LR is placed during an active HOLD D (98.967 to 99.843), forcing an illegal 3-panel 'hand' (D, L, R)."
+          },
+          {
+            "where": "102.909",
+            "problem": "JUMP LR is placed during an active HOLD U (102.361 to 103.237), forcing an illegal 3-panel 'hand' (U, L, R)."
+          },
+          {
+            "where": "104.661",
+            "problem": "JUMP LR is placed during an active HOLD D (104.223 to 105.099), forcing an illegal 3-panel 'hand' (D, L, R)."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/no_compile/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 249,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.262,
+          "D": 0.299,
+          "U": 0.185,
+          "R": 0.255
+        },
+        "hold_share": 0.0482,
+        "jump_share": 0.1968,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.15,
+        "density_energy_spearman": 0.3847,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 265,
+      "meter": 8,
+      "jumps": 63,
+      "holds": 16,
+      "repaired": 6,
+      "repair_ok": true,
+      "critic": {
+        "score": 3,
+        "verdict": "The chart is extremely repetitive, lazily mapped, and contains a major mechanical error requiring three feet to play during a hold.",
+        "issues": [
+          {
+            "where": "95.353 - 97.105",
+            "problem": "While HOLD D is active, the chart features JUMP LR at 95.901 and 96.777. Holding D while jumping on L and R simultaneously is physically impossible on a standard pad without using hands or brackets, which is a major design oversight."
+          },
+          {
+            "where": "41.588 - 63.927",
+            "problem": "The entire chorus is mapped to an extremely repetitive alternating pattern of JUMP LR and tap D on almost every beat. This completely ignores the syncopated vocal melody and feels incredibly tedious to play."
+          },
+          {
+            "where": "75.753 - 105.537",
+            "problem": "The second chorus repeats the exact same lazy pattern of LR/LU/DR jumps and D taps, showing a lack of creative mapping and ignoring the musical structure."
+          },
+          {
+            "where": "84.513 - 85.389",
+            "problem": "The transition from JUMP LU -> tap D -> 16th tap R -> JUMP LU requires an extremely awkward and rushed foot transfer on a 16th note, leading to poor physical flow."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/no_compile/hard.assist.ogg"
+      },
+      "metrics": {
+        "notes": 265,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.274,
+          "D": 0.299,
+          "U": 0.168,
+          "R": 0.259
+        },
+        "hold_share": 0.0604,
+        "jump_share": 0.2377,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.14,
+        "density_energy_spearman": 0.5218,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/no_compile/no_compile.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/no_compile/no_compile.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/no_compile/no_compile.ogg"
+  },
+  "out": "build/stepmania/no_compile",
+  "meter_monotonic": true
+}

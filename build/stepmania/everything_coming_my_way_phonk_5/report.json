@@ -1,0 +1,152 @@
+{
+  "track_id": "everything_coming_my_way_phonk_5",
+  "bpm": 151.087,
+  "offset": 0.31,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 147,
+      "meter": 3,
+      "jumps": 0,
+      "holds": 15,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 6,
+        "verdict": "The chart features flawless foot alternation and perfect timing, but it is far too dense and complex for an Easy difficulty, featuring long continuous streams and tricky syncopated eighth notes.",
+        "issues": [
+          {
+            "where": "25.924, 29.498, 31.484",
+            "problem": "Syncopated eighth-note steps (placed on offbeats) at 151 BPM are too rhythmically complex and fast for beginners on an Easy chart."
+          },
+          {
+            "where": "34.463 to 60.275",
+            "problem": "There is a continuous quarter-note stream lasting nearly 26 seconds (over 60 steps) with no breaks, which is exhausting and mentally overwhelming for an Easy difficulty level."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/everything_coming_my_way_phonk_5/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 147,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.197,
+          "D": 0.306,
+          "U": 0.299,
+          "R": 0.197
+        },
+        "hold_share": 0.102,
+        "jump_share": 0.0,
+        "flow_cost_max": 0.0,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.4889,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 252,
+      "meter": 6,
+      "jumps": 35,
+      "holds": 28,
+      "repaired": 3,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "An exceptionally well-crafted medium chart with stellar rhythmic synchronization, outstanding foot flow, and a highly creative cascading hold sequence.",
+        "issues": [
+          {
+            "where": "54.319 - 54.517",
+            "problem": "The transition from the LD jump immediately into a U hold is slightly abrupt for a medium chart, though still well within playable limits."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/everything_coming_my_way_phonk_5/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 252,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.265,
+          "D": 0.258,
+          "U": 0.254,
+          "R": 0.223
+        },
+        "hold_share": 0.1111,
+        "jump_share": 0.1389,
+        "flow_cost_max": 7.85,
+        "flow_cost_mean": 0.04,
+        "density_energy_spearman": 0.3629,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 344,
+      "meter": 9,
+      "jumps": 47,
+      "holds": 29,
+      "repaired": 7,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "An outstanding, highly energetic chart with perfect synchronization, creative technical elements like rolling holds, and excellent density progression.",
+        "issues": [
+          {
+            "where": "41.909, 48.263, 49.057",
+            "problem": "Tapping a 16th note (D or L) while holding other arrows requires bracketing or very tight footwork, which can easily lead to accidental hold drops."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/everything_coming_my_way_phonk_5/hard.assist.ogg"
+      },
+      "metrics": {
+        "notes": 344,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.302,
+          "D": 0.251,
+          "U": 0.217,
+          "R": 0.23
+        },
+        "hold_share": 0.0843,
+        "jump_share": 0.1366,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.05,
+        "density_energy_spearman": -0.3474,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/everything_coming_my_way_phonk_5/everything_coming_my_way_phonk_5.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/everything_coming_my_way_phonk_5/everything_coming_my_way_phonk_5.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/everything_coming_my_way_phonk_5/everything_coming_my_way_phonk_5.ogg"
+  },
+  "out": "build/stepmania/everything_coming_my_way_phonk_5",
+  "meter_monotonic": true
+}

@@ -1,0 +1,153 @@
+{
+  "track_id": "the_pools",
+  "bpm": 126.048,
+  "offset": 0.459,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 194,
+      "meter": 3,
+      "jumps": 16,
+      "holds": 16,
+      "repaired": 1,
+      "repair_ok": true,
+      "critic": {
+        "score": 7,
+        "verdict": "A comfortable and well-paced Easy chart that matches the song's energy perfectly, marred only by a couple of overly demanding eighth-note jump transitions.",
+        "issues": [
+          {
+            "where": "69.004",
+            "problem": "Jarring 8th-note transition from JUMP LR to HOLD U at 69.242, which is too physically demanding for an Easy chart."
+          },
+          {
+            "where": "76.382",
+            "problem": "An 8th-note transition from tap U to JUMP LR at 76.620 creates a sudden difficulty spike for beginner players."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/the_pools/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 194,
+        "onset_alignment": 0.8763,
+        "grid_notes": 24,
+        "panel_balance": {
+          "L": 0.233,
+          "D": 0.305,
+          "U": 0.233,
+          "R": 0.229
+        },
+        "hold_share": 0.0825,
+        "jump_share": 0.0825,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": -0.1375,
+        "gates": {
+          "onset_alignment": false,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 313,
+      "meter": 6,
+      "jumps": 71,
+      "holds": 14,
+      "repaired": 16,
+      "repair_ok": true,
+      "critic": {
+        "score": 3,
+        "verdict": "The chart is heavily dragged down by extreme repetitiveness, lazy copy-pasted patterns, and highly awkward foot flow in key sections.",
+        "issues": [
+          {
+            "where": "54.724 - 60.198",
+            "problem": "A 24-note loop of 'L, D, U, R' is repeated continuously, forcing the player into constant spinning or frustrating double-stepping."
+          },
+          {
+            "where": "84.237 - 93.519",
+            "problem": "The four-note pattern 'JUMP LR -> U -> D -> L' is copy-pasted 10 times in a row, which is incredibly lazy and results in a jarring left-foot double-step (D -> L)."
+          },
+          {
+            "where": "113.273 - 128.505",
+            "problem": "The entire outro is mapped as a brain-dead alternating repetition of 'D' and 'JUMP LR' on every single quarter-note beat, completely ignoring the actual structure of the music."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/the_pools/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 313,
+        "onset_alignment": 0.7764,
+        "grid_notes": 70,
+        "panel_balance": {
+          "L": 0.305,
+          "D": 0.266,
+          "U": 0.193,
+          "R": 0.237
+        },
+        "hold_share": 0.0447,
+        "jump_share": 0.2268,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": -0.0096,
+        "gates": {
+          "onset_alignment": false,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 353,
+      "meter": 8,
+      "jumps": 55,
+      "holds": 23,
+      "repaired": 1,
+      "repair_ok": true,
+      "critic": {
+        "score": 9.5,
+        "verdict": "An exceptionally well-structured chart with outstanding flow, highly creative circular patterns, and flawless rhythmic synchronization.",
+        "issues": []
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 353,
+        "onset_alignment": 0.9518,
+        "grid_notes": 17,
+        "panel_balance": {
+          "L": 0.294,
+          "D": 0.243,
+          "U": 0.233,
+          "R": 0.23
+        },
+        "hold_share": 0.0652,
+        "jump_share": 0.1558,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": -0.2739,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/the_pools/the_pools.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/the_pools/the_pools.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/the_pools/the_pools.ogg"
+  },
+  "out": "build/stepmania/the_pools",
+  "meter_monotonic": true
+}

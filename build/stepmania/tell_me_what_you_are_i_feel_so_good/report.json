@@ -1,0 +1,160 @@
+{
+  "track_id": "tell_me_what_you_are_i_feel_so_good",
+  "bpm": 119.945,
+  "offset": 0.395,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 275,
+      "meter": 3,
+      "jumps": 53,
+      "holds": 46,
+      "repaired": 37,
+      "repair_ok": true,
+      "critic": {
+        "score": 7,
+        "verdict": "A clean, well-synced Easy chart with comfortable foot flow, held back by a highly repetitive outro pattern.",
+        "issues": [
+          {
+            "where": "128.454 - 152.465",
+            "problem": "The chart repeats the exact same 'JUMP LR' to 'tap D' pattern 13 times in a row, which becomes very monotonous and lazy."
+          },
+          {
+            "where": "95.188 - 95.939",
+            "problem": "A 4-note 8th note stream (L -> R -> U -> D) followed by a jump might be a bit too dense/fast for a typical Easy difficulty player."
+          }
+        ]
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 275,
+        "onset_alignment": 0.88,
+        "grid_notes": 33,
+        "panel_balance": {
+          "L": 0.271,
+          "D": 0.299,
+          "U": 0.189,
+          "R": 0.241
+        },
+        "hold_share": 0.1673,
+        "jump_share": 0.1927,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.82,
+        "density_energy_spearman": 0.7307,
+        "gates": {
+          "onset_alignment": false,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "medium": {
+      "notes": 385,
+      "meter": 6,
+      "jumps": 87,
+      "holds": 85,
+      "repaired": 12,
+      "repair_ok": true,
+      "critic": {
+        "score": 7,
+        "verdict": "An exceptionally well-timed and structurally accurate chart that is unfortunately marred by unplayable three-panel hold configurations for a standard single-pad layout.",
+        "issues": [
+          {
+            "where": "47.166",
+            "problem": "Three-panel hold (U, D, L are all held simultaneously from 47.166 to 47.667). This is physically unplayable using feet alone without brackets and should be avoided on standard single charts."
+          },
+          {
+            "where": "56.921",
+            "problem": "Three-panel hold overlap (U, L, D are held simultaneously until 57.046), creating an awkward physical constraint."
+          },
+          {
+            "where": "74.429",
+            "problem": "Duplicate jump event listed twice on the exact same timestamp, indicating a minor charting/exporting data error."
+          },
+          {
+            "where": "79.931",
+            "problem": "A jump (D + U) is incorrectly formatted as two individual tap events on the same timestamp instead of a unified JUMP instruction."
+          },
+          {
+            "where": "100.941",
+            "problem": "Three-panel hold (D, L, R are all held simultaneously until 101.441), forcing an unexpected 'hand' note requirement."
+          },
+          {
+            "where": "111.196",
+            "problem": "Another illegal three-panel hold combination (L, D, U are all held simultaneously until 111.746)."
+          }
+        ]
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 385,
+        "onset_alignment": 0.9299,
+        "grid_notes": 27,
+        "panel_balance": {
+          "L": 0.311,
+          "D": 0.273,
+          "U": 0.172,
+          "R": 0.244
+        },
+        "hold_share": 0.2208,
+        "jump_share": 0.226,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.21,
+        "density_energy_spearman": 0.6703,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "hard": {
+      "notes": 563,
+      "meter": 8,
+      "jumps": 66,
+      "holds": 20,
+      "repaired": 4,
+      "repair_ok": true,
+      "critic": {
+        "score": 10,
+        "verdict": "An exceptionally well-crafted chart with perfect BPM synchronization, incredibly smooth foot flow, and outstanding rhythmic representation of the music.",
+        "issues": []
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 563,
+        "onset_alignment": 0.952,
+        "grid_notes": 27,
+        "panel_balance": {
+          "L": 0.3,
+          "D": 0.243,
+          "U": 0.229,
+          "R": 0.227
+        },
+        "hold_share": 0.0355,
+        "jump_share": 0.1172,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.03,
+        "density_energy_spearman": 0.7538,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/tell_me_what_you_are_i_feel_so_good/tell_me_what_you_are_i_feel_so_good.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/tell_me_what_you_are_i_feel_so_good/tell_me_what_you_are_i_feel_so_good.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/tell_me_what_you_are_i_feel_so_good/tell_me_what_you_are_i_feel_so_good.ogg"
+  },
+  "out": "build/stepmania/tell_me_what_you_are_i_feel_so_good",
+  "meter_monotonic": true
+}

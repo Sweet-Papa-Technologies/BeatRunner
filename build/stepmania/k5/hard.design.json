@@ -1,0 +1,1597 @@
+{
+  "design_notes": "A punchy hard chart. The steps flow naturally at 120 BPM, emphasizing syncopations with 16th streams and rhythmic holds that follow the bass and synth lines. Section-by-section difficulty climbs with light crossovers and a climax of jumpstreams before a final winding hold series.",
+  "notes": [
+    {
+      "ref": "p009",
+      "kind": "tap"
+    },
+    {
+      "ref": "p011",
+      "kind": "tap"
+    },
+    {
+      "ref": "p013",
+      "kind": "tap"
+    },
+    {
+      "ref": "p015",
+      "kind": "tap"
+    },
+    {
+      "ref": "p016",
+      "kind": "tap"
+    },
+    {
+      "ref": "p017",
+      "kind": "tap"
+    },
+    {
+      "ref": "p019",
+      "kind": "tap"
+    },
+    {
+      "ref": "p020",
+      "kind": "tap"
+    },
+    {
+      "ref": "p022",
+      "kind": "tap"
+    },
+    {
+      "ref": "p023",
+      "kind": "tap"
+    },
+    {
+      "ref": "p024",
+      "kind": "tap"
+    },
+    {
+      "ref": "p025",
+      "kind": "tap"
+    },
+    {
+      "ref": "p026",
+      "kind": "hold",
+      "hold_beats": 2.0
+    },
+    {
+      "ref": "p027",
+      "kind": "tap"
+    },
+    {
+      "ref": "p028",
+      "kind": "tap"
+    },
+    {
+      "ref": "p029",
+      "kind": "tap"
+    },
+    {
+      "ref": "p030",
+      "kind": "tap"
+    },
+    {
+      "ref": "p031",
+      "kind": "tap"
+    },
+    {
+      "ref": "p032",
+      "kind": "tap"
+    },
+    {
+      "ref": "p033",
+      "kind": "tap"
+    },
+    {
+      "ref": "p034",
+      "kind": "tap"
+    },
+    {
+      "ref": "p035",
+      "kind": "tap"
+    },
+    {
+      "ref": "p036",
+      "kind": "tap"
+    },
+    {
+      "ref": "p037",
+      "kind": "tap"
+    },
+    {
+      "ref": "p039",
+      "kind": "tap"
+    },
+    {
+      "ref": "p041",
+      "kind": "tap"
+    },
+    {
+      "ref": "p042",
+      "kind": "hold",
+      "hold_beats": 2.0
+    },
+    {
+      "ref": "p045",
+      "kind": "tap"
+    },
+    {
+      "ref": "p046",
+      "kind": "tap"
+    },
+    {
+      "ref": "p048",
+      "kind": "tap"
+    },
+    {
+      "ref": "p049",
+      "kind": "tap"
+    },
+    {
+      "ref": "p050",
+      "kind": "tap"
+    },
+    {
+      "ref": "p052",
+      "kind": "tap"
+    },
+    {
+      "ref": "p054",
+      "kind": "tap"
+    },
+    {
+      "ref": "p056",
+      "kind": "tap"
+    },
+    {
+      "ref": "p058",
+      "kind": "tap"
+    },
+    {
+      "ref": "p059",
+      "kind": "tap"
+    },
+    {
+      "ref": "p061",
+      "kind": "tap"
+    },
+    {
+      "ref": "p064",
+      "kind": "tap"
+    },
+    {
+      "ref": "p066",
+      "kind": "hold",
+      "hold_beats": 4.0
+    },
+    {
+      "ref": "p068",
+      "kind": "tap"
+    },
+    {
+      "ref": "p069",
+      "kind": "tap"
+    },
+    {
+      "ref": "p071",
+      "kind": "tap"
+    },
+    {
+      "ref": "p073",
+      "kind": "tap"
+    },
+    {
+      "ref": "p074",
+      "kind": "tap"
+    },
+    {
+      "ref": "p078",
+      "kind": "tap"
+    },
+    {
+      "ref": "p080",
+      "kind": "tap"
+    },
+    {
+      "ref": "p082",
+      "kind": "tap"
+    },
+    {
+      "ref": "p083",
+      "kind": "tap"
+    },
+    {
+      "ref": "p084",
+      "kind": "tap"
+    },
+    {
+      "ref": "p086",
+      "kind": "tap"
+    },
+    {
+      "ref": "p088",
+      "kind": "tap"
+    },
+    {
+      "ref": "p089",
+      "kind": "tap"
+    },
+    {
+      "ref": "p091",
+      "kind": "tap"
+    },
+    {
+      "ref": "p092",
+      "kind": "tap"
+    },
+    {
+      "ref": "p093",
+      "kind": "tap"
+    },
+    {
+      "ref": "p094",
+      "kind": "tap"
+    },
+    {
+      "ref": "p096",
+      "kind": "tap"
+    },
+    {
+      "ref": "p097",
+      "kind": "tap"
+    },
+    {
+      "ref": "p099",
+      "kind": "tap"
+    },
+    {
+      "ref": "p100",
+      "kind": "tap"
+    },
+    {
+      "ref": "p101",
+      "kind": "tap"
+    },
+    {
+      "ref": "p102",
+      "kind": "tap"
+    },
+    {
+      "ref": "p105",
+      "kind": "tap"
+    },
+    {
+      "ref": "p107",
+      "kind": "hold",
+      "hold_beats": 2.0
+    },
+    {
+      "ref": "p109",
+      "kind": "tap"
+    },
+    {
+      "ref": "p110",
+      "kind": "tap"
+    },
+    {
+      "ref": "p111",
+      "kind": "tap"
+    },
+    {
+      "ref": "p112",
+      "kind": "tap"
+    },
+    {
+      "ref": "p113",
+      "kind": "tap"
+    },
+    {
+      "ref": "p115",
+      "kind": "tap"
+    },
+    {
+      "ref": "p117",
+      "kind": "tap"
+    },
+    {
+      "ref": "p118",
+      "kind": "tap"
+    },
+    {
+      "ref": "p121",
+      "kind": "hold",
+      "hold_beats": 2.0
+    },
+    {
+      "ref": "p122",
+      "kind": "tap"
+    },
+    {
+      "ref": "p123",
+      "kind": "tap"
+    },
+    {
+      "ref": "p125",
+      "kind": "tap"
+    },
+    {
+      "ref": "p126",
+      "kind": "tap"
+    },
+    {
+      "ref": "p128",
+      "kind": "tap"
+    },
+    {
+      "ref": "p129",
+      "kind": "tap"
+    },
+    {
+      "ref": "p130",
+      "kind": "tap"
+    },
+    {
+      "ref": "p131",
+      "kind": "tap"
+    },
+    {
+      "ref": "p133",
+      "kind": "tap"
+    },
+    {
+      "ref": "p134",
+      "kind": "tap"
+    },
+    {
+      "ref": "p135",
+      "kind": "tap"
+    },
+    {
+      "ref": "p137",
+      "kind": "tap"
+    },
+    {
+      "ref": "p138",
+      "kind": "tap"
+    },
+    {
+      "ref": "p140",
+      "kind": "tap"
+    },
+    {
+      "ref": "p142",
+      "kind": "tap"
+    },
+    {
+      "ref": "p143",
+      "kind": "tap"
+    },
+    {
+      "ref": "p146",
+      "kind": "hold",
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "p147",
+      "kind": "tap"
+    },
+    {
+      "ref": "p148",
+      "kind": "tap"
+    },
+    {
+      "ref": "p150",
+      "kind": "tap"
+    },
+    {
+      "ref": "p151",
+      "kind": "tap"
+    },
+    {
+      "ref": "p152",
+      "kind": "tap"
+    },
+    {
+      "ref": "p153",
+      "kind": "tap"
+    },
+    {
+      "ref": "p154",
+      "kind": "tap"
+    },
+    {
+      "ref": "p155",
+      "kind": "tap"
+    },
+    {
+      "ref": "p157",
+      "kind": "tap"
+    },
+    {
+      "ref": "p158",
+      "kind": "tap"
+    },
+    {
+      "ref": "p159",
+      "kind": "tap"
+    },
+    {
+      "ref": "p160",
+      "kind": "hold",
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "p162",
+      "kind": "tap"
+    },
+    {
+      "ref": "p163",
+      "kind": "tap"
+    },
+    {
+      "ref": "p164",
+      "kind": "tap"
+    },
+    {
+      "ref": "p166",
+      "kind": "tap"
+    },
+    {
+      "ref": "p167",
+      "kind": "tap"
+    },
+    {
+      "ref": "p168",
+      "kind": "tap"
+    },
+    {
+      "ref": "p169",
+      "kind": "tap"
+    },
+    {
+      "ref": "p171",
+      "kind": "tap"
+    },
+    {
+      "ref": "p173",
+      "kind": "tap"
+    },
+    {
+      "ref": "p174",
+      "kind": "hold",
+      "hold_beats": 3.0
+    },
+    {
+      "ref": "p175",
+      "kind": "tap"
+    },
+    {
+      "ref": "p177",
+      "kind": "tap"
+    },
+    {
+      "ref": "p178",
+      "kind": "tap"
+    },
+    {
+      "ref": "p181",
+      "kind": "tap"
+    },
+    {
+      "ref": "p182",
+      "kind": "tap"
+    },
+    {
+      "ref": "p184",
+      "kind": "tap"
+    },
+    {
+      "ref": "p186",
+      "kind": "tap"
+    },
+    {
+      "ref": "p188",
+      "kind": "tap"
+    },
+    {
+      "ref": "p189",
+      "kind": "hold",
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "p190",
+      "kind": "tap"
+    },
+    {
+      "ref": "p191",
+      "kind": "tap"
+    },
+    {
+      "ref": "p192",
+      "kind": "tap"
+    },
+    {
+      "ref": "p194",
+      "kind": "tap"
+    },
+    {
+      "ref": "p195",
+      "kind": "tap"
+    },
+    {
+      "ref": "p196",
+      "kind": "tap"
+    },
+    {
+      "ref": "p197",
+      "kind": "tap"
+    },
+    {
+      "ref": "p199",
+      "kind": "tap"
+    },
+    {
+      "ref": "p201",
+      "kind": "tap"
+    },
+    {
+      "ref": "p202",
+      "kind": "tap"
+    },
+    {
+      "ref": "p203",
+      "kind": "tap"
+    },
+    {
+      "ref": "p204",
+      "kind": "tap"
+    },
+    {
+      "ref": "p206",
+      "kind": "tap"
+    },
+    {
+      "ref": "p207",
+      "kind": "tap"
+    },
+    {
+      "ref": "p213",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "p214",
+      "kind": "tap"
+    },
+    {
+      "ref": "p216",
+      "kind": "tap"
+    },
+    {
+      "ref": "p217",
+      "kind": "tap"
+    },
+    {
+      "ref": "p219",
+      "kind": "tap"
+    },
+    {
+      "ref": "p220",
+      "kind": "tap"
+    },
+    {
+      "ref": "p221",
+      "kind": "tap"
+    },
+    {
+      "ref": "p224",
+      "kind": "tap"
+    },
+    {
+      "ref": "p226",
+      "kind": "tap"
+    },
+    {
+      "ref": "p227",
+      "kind": "tap"
+    },
+    {
+      "ref": "p228",
+      "kind": "tap"
+    },
+    {
+      "ref": "p230",
+      "kind": "tap"
+    },
+    {
+      "ref": "p231",
+      "kind": "tap"
+    },
+    {
+      "ref": "p232",
+      "kind": "tap"
+    },
+    {
+      "ref": "p233",
+      "kind": "tap"
+    },
+    {
+      "ref": "p235",
+      "kind": "hold",
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "p236",
+      "kind": "tap"
+    },
+    {
+      "ref": "p237",
+      "kind": "tap"
+    },
+    {
+      "ref": "p239",
+      "kind": "tap"
+    },
+    {
+      "ref": "p240",
+      "kind": "tap"
+    },
+    {
+      "ref": "p242",
+      "kind": "tap"
+    },
+    {
+      "ref": "p244",
+      "kind": "tap"
+    },
+    {
+      "ref": "p246",
+      "kind": "tap"
+    },
+    {
+      "ref": "p247",
+      "kind": "tap"
+    },
+    {
+      "ref": "p248",
+      "kind": "tap"
+    },
+    {
+      "ref": "p249",
+      "kind": "tap"
+    },
+    {
+      "ref": "p251",
+      "kind": "tap"
+    },
+    {
+      "ref": "p252",
+      "kind": "tap"
+    },
+    {
+      "ref": "p253",
+      "kind": "tap"
+    },
+    {
+      "ref": "p255",
+      "kind": "tap"
+    },
+    {
+      "ref": "p256",
+      "kind": "tap"
+    },
+    {
+      "ref": "p257",
+      "kind": "tap"
+    },
+    {
+      "ref": "p258",
+      "kind": "tap"
+    },
+    {
+      "ref": "p260",
+      "kind": "tap"
+    },
+    {
+      "ref": "p264",
+      "kind": "tap"
+    },
+    {
+      "ref": "p265",
+      "kind": "tap"
+    },
+    {
+      "ref": "p266",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "p268",
+      "kind": "tap"
+    },
+    {
+      "ref": "p271",
+      "kind": "tap"
+    },
+    {
+      "ref": "p273",
+      "kind": "tap"
+    },
+    {
+      "ref": "p274",
+      "kind": "tap"
+    },
+    {
+      "ref": "p276",
+      "kind": "tap"
+    },
+    {
+      "ref": "p277",
+      "kind": "tap"
+    },
+    {
+      "ref": "p279",
+      "kind": "tap"
+    },
+    {
+      "ref": "p281",
+      "kind": "tap"
+    },
+    {
+      "ref": "p282",
+      "kind": "tap"
+    },
+    {
+      "ref": "p284",
+      "kind": "tap"
+    },
+    {
+      "ref": "p285",
+      "kind": "tap"
+    },
+    {
+      "ref": "p288",
+      "kind": "tap"
+    },
+    {
+      "ref": "p293",
+      "kind": "tap"
+    },
+    {
+      "ref": "p295",
+      "kind": "tap"
+    },
+    {
+      "ref": "p297",
+      "kind": "tap"
+    },
+    {
+      "ref": "p299",
+      "kind": "tap"
+    },
+    {
+      "ref": "p302",
+      "kind": "tap"
+    },
+    {
+      "ref": "p304",
+      "kind": "tap"
+    },
+    {
+      "ref": "p305",
+      "kind": "tap"
+    },
+    {
+      "ref": "p306",
+      "kind": "tap"
+    },
+    {
+      "ref": "p308",
+      "kind": "tap"
+    },
+    {
+      "ref": "p310",
+      "kind": "tap"
+    },
+    {
+      "ref": "p312",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "p313",
+      "kind": "tap"
+    },
+    {
+      "ref": "p315",
+      "kind": "tap"
+    },
+    {
+      "ref": "p317",
+      "kind": "tap"
+    },
+    {
+      "ref": "p320",
+      "kind": "tap"
+    },
+    {
+      "ref": "p322",
+      "kind": "tap"
+    },
+    {
+      "ref": "p324",
+      "kind": "tap"
+    },
+    {
+      "ref": "p326",
+      "kind": "tap"
+    },
+    {
+      "ref": "p328",
+      "kind": "tap"
+    },
+    {
+      "ref": "p330",
+      "kind": "tap"
+    },
+    {
+      "ref": "p332",
+      "kind": "tap"
+    },
+    {
+      "ref": "p334",
+      "kind": "tap"
+    },
+    {
+      "ref": "p336",
+      "kind": "tap"
+    },
+    {
+      "ref": "p337",
+      "kind": "tap"
+    },
+    {
+      "ref": "p340",
+      "kind": "tap"
+    },
+    {
+      "ref": "p342",
+      "kind": "tap"
+    },
+    {
+      "ref": "p344",
+      "kind": "tap"
+    },
+    {
+      "ref": "p346",
+      "kind": "tap"
+    },
+    {
+      "ref": "p348",
+      "kind": "tap"
+    },
+    {
+      "ref": "p350",
+      "kind": "tap"
+    },
+    {
+      "ref": "p352",
+      "kind": "tap"
+    },
+    {
+      "ref": "p355",
+      "kind": "tap"
+    },
+    {
+      "ref": "p357",
+      "kind": "tap"
+    },
+    {
+      "ref": "p359",
+      "kind": "tap"
+    },
+    {
+      "ref": "p361",
+      "kind": "tap"
+    },
+    {
+      "ref": "p364",
+      "kind": "tap"
+    },
+    {
+      "ref": "p366",
+      "kind": "tap"
+    },
+    {
+      "ref": "p369",
+      "kind": "tap"
+    },
+    {
+      "ref": "p372",
+      "kind": "tap"
+    },
+    {
+      "ref": "p374",
+      "kind": "tap"
+    },
+    {
+      "ref": "p376",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "p378",
+      "kind": "tap"
+    },
+    {
+      "ref": "p380",
+      "kind": "tap"
+    },
+    {
+      "ref": "p382",
+      "kind": "tap"
+    },
+    {
+      "ref": "p385",
+      "kind": "tap"
+    },
+    {
+      "ref": "p387",
+      "kind": "tap"
+    },
+    {
+      "ref": "p389",
+      "kind": "tap"
+    },
+    {
+      "ref": "p391",
+      "kind": "tap"
+    },
+    {
+      "ref": "p394",
+      "kind": "tap"
+    },
+    {
+      "ref": "p397",
+      "kind": "tap"
+    },
+    {
+      "ref": "p398",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "p399",
+      "kind": "tap"
+    },
+    {
+      "ref": "p401",
+      "kind": "tap"
+    },
+    {
+      "ref": "p404",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "p406",
+      "kind": "tap"
+    },
+    {
+      "ref": "p408",
+      "kind": "tap"
+    },
+    {
+      "ref": "p413",
+      "kind": "tap"
+    },
+    {
+      "ref": "p417",
+      "kind": "tap"
+    },
+    {
+      "ref": "p421",
+      "kind": "tap"
+    },
+    {
+      "ref": "p426",
+      "kind": "tap"
+    },
+    {
+      "ref": "p429",
+      "kind": "tap"
+    },
+    {
+      "ref": "p431",
+      "kind": "tap"
+    },
+    {
+      "ref": "p432",
+      "kind": "hold",
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "p434",
+      "kind": "hold",
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "p437",
+      "kind": "tap"
+    },
+    {
+      "ref": "p446",
+      "kind": "tap"
+    },
+    {
+      "ref": "p450",
+      "kind": "tap"
+    },
+    {
+      "ref": "p454",
+      "kind": "tap"
+    },
+    {
+      "ref": "p458",
+      "kind": "tap"
+    },
+    {
+      "ref": "p462",
+      "kind": "tap"
+    },
+    {
+      "ref": "p463",
+      "kind": "hold",
+      "hold_beats": 3.5
+    },
+    {
+      "ref": "p466",
+      "kind": "tap"
+    },
+    {
+      "ref": "p467",
+      "kind": "tap"
+    },
+    {
+      "ref": "p469",
+      "kind": "tap"
+    },
+    {
+      "ref": "p472",
+      "kind": "tap"
+    },
+    {
+      "ref": "p474",
+      "kind": "tap"
+    },
+    {
+      "ref": "p476",
+      "kind": "tap"
+    },
+    {
+      "ref": "p478",
+      "kind": "tap"
+    },
+    {
+      "ref": "p480",
+      "kind": "tap"
+    },
+    {
+      "ref": "p481",
+      "kind": "tap"
+    },
+    {
+      "ref": "p485",
+      "kind": "tap"
+    },
+    {
+      "ref": "p490",
+      "kind": "tap"
+    },
+    {
+      "ref": "p493",
+      "kind": "tap"
+    },
+    {
+      "ref": "p498",
+      "kind": "hold",
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "p503",
+      "kind": "tap"
+    },
+    {
+      "ref": "p506",
+      "kind": "tap"
+    },
+    {
+      "ref": "p508",
+      "kind": "tap"
+    },
+    {
+      "ref": "p513",
+      "kind": "tap"
+    },
+    {
+      "ref": "p515",
+      "kind": "tap"
+    },
+    {
+      "ref": "p516",
+      "kind": "tap"
+    },
+    {
+      "ref": "p518",
+      "kind": "tap"
+    },
+    {
+      "ref": "p523",
+      "kind": "tap"
+    },
+    {
+      "ref": "p528",
+      "kind": "tap"
+    },
+    {
+      "ref": "p530",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "p531",
+      "kind": "tap"
+    },
+    {
+      "ref": "p532",
+      "kind": "tap"
+    },
+    {
+      "ref": "p534",
+      "kind": "tap"
+    },
+    {
+      "ref": "p536",
+      "kind": "tap"
+    },
+    {
+      "ref": "p538",
+      "kind": "tap"
+    },
+    {
+      "ref": "p540",
+      "kind": "tap"
+    },
+    {
+      "ref": "p542",
+      "kind": "tap"
+    },
+    {
+      "ref": "p544",
+      "kind": "tap"
+    },
+    {
+      "ref": "p547",
+      "kind": "tap"
+    },
+    {
+      "ref": "p549",
+      "kind": "tap"
+    },
+    {
+      "ref": "p551",
+      "kind": "tap"
+    },
+    {
+      "ref": "p554",
+      "kind": "tap"
+    },
+    {
+      "ref": "p556",
+      "kind": "tap"
+    },
+    {
+      "ref": "p559",
+      "kind": "tap"
+    },
+    {
+      "ref": "p561",
+      "kind": "tap"
+    },
+    {
+      "ref": "p563",
+      "kind": "tap"
+    },
+    {
+      "ref": "p568",
+      "kind": "tap"
+    },
+    {
+      "ref": "p570",
+      "kind": "tap"
+    },
+    {
+      "ref": "p572",
+      "kind": "tap"
+    },
+    {
+      "ref": "p574",
+      "kind": "tap"
+    },
+    {
+      "ref": "p576",
+      "kind": "tap"
+    },
+    {
+      "ref": "p580",
+      "kind": "tap"
+    },
+    {
+      "ref": "p582",
+      "kind": "tap"
+    },
+    {
+      "ref": "p584",
+      "kind": "tap"
+    },
+    {
+      "ref": "p587",
+      "kind": "tap"
+    },
+    {
+      "ref": "p589",
+      "kind": "tap"
+    },
+    {
+      "ref": "p591",
+      "kind": "tap"
+    },
+    {
+      "ref": "p594",
+      "kind": "tap"
+    },
+    {
+      "ref": "p597",
+      "kind": "tap"
+    },
+    {
+      "ref": "p601",
+      "kind": "tap"
+    },
+    {
+      "ref": "p603",
+      "kind": "tap"
+    },
+    {
+      "ref": "p606",
+      "kind": "tap"
+    },
+    {
+      "ref": "p611",
+      "kind": "tap"
+    },
+    {
+      "ref": "p616",
+      "kind": "tap"
+    },
+    {
+      "ref": "p620",
+      "kind": "tap"
+    },
+    {
+      "ref": "p624",
+      "kind": "tap"
+    },
+    {
+      "ref": "p629",
+      "kind": "tap"
+    },
+    {
+      "ref": "p633",
+      "kind": "tap"
+    },
+    {
+      "ref": "p639",
+      "kind": "tap"
+    },
+    {
+      "ref": "p642",
+      "kind": "tap"
+    },
+    {
+      "ref": "p644",
+      "kind": "tap"
+    },
+    {
+      "ref": "p646",
+      "kind": "tap"
+    },
+    {
+      "ref": "p651",
+      "kind": "tap"
+    },
+    {
+      "ref": "p654",
+      "kind": "tap"
+    },
+    {
+      "ref": "p657",
+      "kind": "tap"
+    },
+    {
+      "ref": "p661",
+      "kind": "tap"
+    },
+    {
+      "ref": "p664",
+      "kind": "tap"
+    },
+    {
+      "ref": "p667",
+      "kind": "tap"
+    },
+    {
+      "ref": "p676",
+      "kind": "tap"
+    },
+    {
+      "ref": "p677",
+      "kind": "tap"
+    },
+    {
+      "ref": "p679",
+      "kind": "tap"
+    },
+    {
+      "ref": "p681",
+      "kind": "tap"
+    },
+    {
+      "ref": "p683",
+      "kind": "tap"
+    },
+    {
+      "ref": "p686",
+      "kind": "tap"
+    },
+    {
+      "ref": "p688",
+      "kind": "tap"
+    },
+    {
+      "ref": "p691",
+      "kind": "tap"
+    },
+    {
+      "ref": "p694",
+      "kind": "tap"
+    },
+    {
+      "ref": "p696",
+      "kind": "tap"
+    },
+    {
+      "ref": "p699",
+      "kind": "tap"
+    },
+    {
+      "ref": "p706",
+      "kind": "tap"
+    },
+    {
+      "ref": "p707",
+      "kind": "tap"
+    },
+    {
+      "ref": "p708",
+      "kind": "tap"
+    },
+    {
+      "ref": "p711",
+      "kind": "tap"
+    },
+    {
+      "ref": "p714",
+      "kind": "tap"
+    },
+    {
+      "ref": "p720",
+      "kind": "tap"
+    },
+    {
+      "ref": "p728",
+      "kind": "tap"
+    },
+    {
+      "ref": "p732",
+      "kind": "tap"
+    },
+    {
+      "ref": "p739",
+      "kind": "tap"
+    },
+    {
+      "ref": "p744",
+      "kind": "tap"
+    },
+    {
+      "ref": "p751",
+      "kind": "tap"
+    },
+    {
+      "ref": "p756",
+      "kind": "tap"
+    },
+    {
+      "ref": "p758",
+      "kind": "tap"
+    },
+    {
+      "ref": "p762",
+      "kind": "hold",
+      "hold_beats": 2.0
+    },
+    {
+      "ref": "p764",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "p766",
+      "kind": "tap"
+    },
+    {
+      "ref": "p769",
+      "kind": "tap"
+    },
+    {
+      "ref": "p771",
+      "kind": "tap"
+    },
+    {
+      "ref": "p773",
+      "kind": "tap"
+    },
+    {
+      "ref": "p776",
+      "kind": "tap"
+    },
+    {
+      "ref": "p781",
+      "kind": "tap"
+    },
+    {
+      "ref": "p786",
+      "kind": "tap"
+    },
+    {
+      "ref": "p790",
+      "kind": "tap"
+    },
+    {
+      "ref": "p794",
+      "kind": "tap"
+    },
+    {
+      "ref": "p800",
+      "kind": "tap"
+    },
+    {
+      "ref": "p804",
+      "kind": "tap"
+    },
+    {
+      "ref": "p810",
+      "kind": "hold",
+      "hold_beats": 5.0
+    },
+    {
+      "ref": "p812",
+      "kind": "hold",
+      "hold_beats": 2.0
+    },
+    {
+      "ref": "p815",
+      "kind": "tap"
+    },
+    {
+      "ref": "p818",
+      "kind": "tap"
+    },
+    {
+      "ref": "p827",
+      "kind": "tap"
+    },
+    {
+      "ref": "p829",
+      "kind": "tap"
+    },
+    {
+      "ref": "p831",
+      "kind": "tap"
+    }
+  ],
+  "phrases": [
+    {
+      "start_bar": 0,
+      "end_bar": 2,
+      "texture": "stops_breather",
+      "movement": "static",
+      "crossover": "none",
+      "jump_density": "none",
+      "intent": "ambient intro spacing out single notes"
+    },
+    {
+      "start_bar": 2,
+      "end_bar": 10,
+      "texture": "steps",
+      "movement": "zigzag",
+      "crossover": "light",
+      "jump_density": "none",
+      "intent": "introducing basic syncopations and step structure"
+    },
+    {
+      "start_bar": 10,
+      "end_bar": 18,
+      "texture": "stream",
+      "movement": "drift_L_to_R",
+      "crossover": "light",
+      "jump_density": "none",
+      "intent": "flowing movement leading into the drop's full drive"
+    },
+    {
+      "start_bar": 18,
+      "end_bar": 26,
+      "texture": "stream",
+      "movement": "zigzag",
+      "crossover": "moderate",
+      "jump_density": "none",
+      "intent": "continuous 8th/16th patterns requiring core balance"
+    },
+    {
+      "start_bar": 26,
+      "end_bar": 34,
+      "texture": "runningman",
+      "movement": "box",
+      "crossover": "light",
+      "jump_density": "none",
+      "intent": "driving repetition patterns emphasizing off-beats"
+    },
+    {
+      "start_bar": 34,
+      "end_bar": 42,
+      "texture": "stream",
+      "movement": "box",
+      "crossover": "moderate",
+      "jump_density": "none",
+      "intent": "dense lateral flows sweeping across all four panels"
+    },
+    {
+      "start_bar": 42,
+      "end_bar": 50,
+      "texture": "jumpstream",
+      "movement": "drift_R_to_L",
+      "crossover": "light",
+      "jump_density": "accents",
+      "intent": "peak energy climax, combining jumps and heavy beats"
+    },
+    {
+      "start_bar": 50,
+      "end_bar": 54,
+      "texture": "steps",
+      "movement": "zigzag",
+      "crossover": "none",
+      "jump_density": "none",
+      "intent": "ending holds cascading together to close out the rhythm"
+    },
+    {
+      "start_bar": 54,
+      "end_bar": 60,
+      "texture": "stops_breather",
+      "movement": "static",
+      "crossover": "none",
+      "jump_density": "none",
+      "intent": "quiet fadeout matching the silent trail"
+    }
+  ]
+}

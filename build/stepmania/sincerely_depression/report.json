@@ -1,0 +1,173 @@
+{
+  "track_id": "sincerely_depression",
+  "bpm": 109.957,
+  "offset": 0.517,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 158,
+      "meter": 3,
+      "jumps": 15,
+      "holds": 25,
+      "repaired": 1,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "An exceptionally well-crafted Easy chart with superb vocal-following rhythms and natural flow, though a couple of patterns might stretch the physical reading limits of a beginner.",
+        "issues": [
+          {
+            "where": "63.814 to 64.087",
+            "problem": "The transition from JUMP LR to HOLD U is an 8th-note (0.273s) gap, requiring the player to immediately shift a foot from the outer panels to the top panel right after landing a jump, which can be challenging for Easy players."
+          },
+          {
+            "where": "73.909 to 74.728",
+            "problem": "Staggered overlapping holds (HOLD U starting at 73.909, HOLD R starting at 74.182) introduce multi-tasking coordination that is slightly advanced for an Easy rating."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/sincerely_depression/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 158,
+        "onset_alignment": 0.9367,
+        "grid_notes": 10,
+        "panel_balance": {
+          "L": 0.26,
+          "D": 0.289,
+          "U": 0.231,
+          "R": 0.22
+        },
+        "hold_share": 0.1582,
+        "jump_share": 0.0949,
+        "flow_cost_max": 7.85,
+        "flow_cost_mean": 0.05,
+        "density_energy_spearman": -0.0649,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 180,
+      "meter": 5,
+      "jumps": 32,
+      "holds": 16,
+      "repaired": 1,
+      "repair_ok": true,
+      "critic": {
+        "score": 4,
+        "verdict": "The chart captures the song's structure and energy well, but violates standard single-play design conventions with an illegal 3-panel hold and excessive difficulty spikes for a Medium rating.",
+        "issues": [
+          {
+            "where": "71.999 - 73.636",
+            "problem": "Illegal 3-panel hold (D, U, and L held simultaneously) which requires hands or complex bracket-pressing, violating single-play pad guidelines, especially on Medium."
+          },
+          {
+            "where": "39.259 - 49.081",
+            "problem": "A continuous 10-second eighth-note stream featuring frequent jumps is too physically demanding and complex for a 'Medium' difficulty, causing a severe pacing and difficulty spike."
+          },
+          {
+            "where": "17.842 - 17.978",
+            "problem": "An awkward sixteenth-note tap leading directly into an eighth-note jump (JUMP LR) which is mechanically jarring and too advanced for this difficulty tier."
+          },
+          {
+            "where": "52.219 - 52.355",
+            "problem": "Rhythmically complex sixteenth-note tap occurring during an active hold, ending with a simultaneous release/tap, which is highly unintuitive for Medium-level players."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/sincerely_depression/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 180,
+        "onset_alignment": 0.9944,
+        "grid_notes": 1,
+        "panel_balance": {
+          "L": 0.288,
+          "D": 0.264,
+          "U": 0.226,
+          "R": 0.222
+        },
+        "hold_share": 0.0889,
+        "jump_share": 0.1778,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.06,
+        "density_energy_spearman": 0.165,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 195,
+      "meter": 8,
+      "jumps": 37,
+      "holds": 12,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 6,
+        "verdict": "A rhythmic and well-aligned chart that is highly playable but suffers from severe pattern repetition in the climax and a couple of awkward transitions.",
+        "issues": [
+          {
+            "where": "40.896 to 49.081",
+            "problem": "The 4-note pattern 'JUMP LR -> U -> D -> L' is repeated 8 times consecutively. While it matches the synth loop, repeating the exact same physical movement so many times feels lazy, monotonous, and causes undue fatigue on the right foot."
+          },
+          {
+            "where": "25.891 to 26.163",
+            "problem": "Tapping U -> D -> L at 16th-note speed (0.136s intervals) right after a jump creates an uncomfortable transition, forcing either an awkward crossover or a very rapid, double-step on the left foot from D to L."
+          },
+          {
+            "where": "68.180 to 68.862",
+            "problem": "Tapping U at 68.725 while holding D until 68.862 is an awkward timing window. Releasing the hold a mere 16th-note after tapping with the other foot feels clunky and often leads to premature release errors."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/sincerely_depression/hard.assist.ogg"
+      },
+      "metrics": {
+        "notes": 195,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.284,
+          "D": 0.267,
+          "U": 0.207,
+          "R": 0.241
+        },
+        "hold_share": 0.0615,
+        "jump_share": 0.1897,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.02,
+        "density_energy_spearman": 0.0915,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/sincerely_depression/sincerely_depression.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/sincerely_depression/sincerely_depression.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/sincerely_depression/sincerely_depression.ogg"
+  },
+  "out": "build/stepmania/sincerely_depression",
+  "meter_monotonic": true
+}

@@ -1,0 +1,19 @@
+{
+  "score": 4,
+  "verdict": "A perfectly timed but incredibly monotonous chart that relies on an exhausting 30-second loop of the exact same four-note pattern.",
+  "issues": [
+    {
+      "where": "35.503 to 66.517",
+      "problem": "Extreme repetition. The chart repeats the exact same sequence (U -> D -> L -> JUMP LR) dozens of times in a row without any variation, which becomes incredibly boring and physically fatiguing on the left foot."
+    },
+    {
+      "where": "25.498",
+      "problem": "Awkward transition. The JUMP DR is immediately followed by a tap L at 25.749, forcing a sudden and uncomfortable weight shift."
+    },
+    {
+      "where": "77.522 to 85.776",
+      "problem": "Uninspired step sequence. This section repeats a simple 'R, U, D, L' circle drill over and over, ignoring the syncopation and nuance of the synth melody."
+    }
+  ],
+  "human_review": true
+}

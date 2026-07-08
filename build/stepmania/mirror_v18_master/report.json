@@ -1,0 +1,158 @@
+{
+  "track_id": "mirror_v18_master",
+  "bpm": 121.964,
+  "offset": 0.438,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 187,
+      "meter": 3,
+      "jumps": 10,
+      "holds": 20,
+      "repaired": 2,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "An exceptionally well-crafted Easy chart with accurate rhythms, comfortable alternating foot flow, and great physical representation of the music's energy.",
+        "issues": [
+          {
+            "where": "69.065 - 69.311",
+            "problem": "An eighth-note transition (0.246s) directly into a JUMP LR can be a bit of a sudden physical spike for an Easy chart."
+          },
+          {
+            "where": "77.182",
+            "problem": "Starting HOLD D while HOLD R is already active (overlapping holds) can be slightly complex for absolute beginners on an Easy difficulty."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/mirror_v18_master/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 187,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.213,
+          "D": 0.305,
+          "U": 0.279,
+          "R": 0.203
+        },
+        "hold_share": 0.107,
+        "jump_share": 0.0535,
+        "flow_cost_max": 7.85,
+        "flow_cost_mean": 0.04,
+        "density_energy_spearman": -0.2162,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 255,
+      "meter": 5,
+      "jumps": 47,
+      "holds": 23,
+      "repaired": 3,
+      "repair_ok": true,
+      "critic": {
+        "score": 6,
+        "verdict": "A decent Medium chart with natural foot flow, held back by a few technical errors including an illegal 3-panel jump (hand) and stray 16th notes.",
+        "issues": [
+          {
+            "where": "33.890",
+            "problem": "Requires a 3-panel press (JUMP LR while HOLD D is active), creating an illegal 'hand' alignment for a Medium difficulty chart."
+          },
+          {
+            "where": "57.135",
+            "problem": "Stray 16th-note step immediately after 57.012 creates an unintended gallop/rhythm error."
+          },
+          {
+            "where": "132.034 - 132.280",
+            "problem": "A fast 16th-note stream (U-R-L) right at the end of the song represents an inconsistent difficulty spike."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/mirror_v18_master/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 255,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.278,
+          "D": 0.245,
+          "U": 0.232,
+          "R": 0.245
+        },
+        "hold_share": 0.0902,
+        "jump_share": 0.1843,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": -0.0375,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 335,
+      "meter": 8,
+      "jumps": 36,
+      "holds": 28,
+      "repaired": 2,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "An exceptionally well-crafted chart with superb vocal syncopation and natural foot flow, minorly held back by a single 3-panel hold conflict.",
+        "issues": [
+          {
+            "where": "81.118",
+            "problem": "JUMP LR overlaps with HOLD D (which ends at 81.241), requiring a 3-panel input or causing a dropped hold."
+          }
+        ]
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 335,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.253,
+          "D": 0.256,
+          "U": 0.253,
+          "R": 0.237
+        },
+        "hold_share": 0.0836,
+        "jump_share": 0.1075,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.03,
+        "density_energy_spearman": -0.0017,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/mirror_v18_master/mirror_v18_master.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/mirror_v18_master/mirror_v18_master.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/mirror_v18_master/mirror_v18_master.ogg"
+  },
+  "out": "build/stepmania/mirror_v18_master",
+  "meter_monotonic": true
+}

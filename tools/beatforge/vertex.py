@@ -36,6 +36,30 @@ class VertexError(RuntimeError):
     pass
 
 
+# --------------------------------------------------------------------------- #
+# Global rate-limit pacing gate — enforces a minimum wall-clock interval between
+# consecutive model calls across ALL clients in the process. One audio call is
+# ~5s (so sequential is already ~12 RPM); BEATFORGE_LLM_MIN_INTERVAL adds extra
+# headroom for batch runs. Default 0 = off (single interactive calls unaffected).
+# --------------------------------------------------------------------------- #
+import threading
+import time as _time
+
+_PACE_LOCK = threading.Lock()
+_LAST_CALL = [0.0]
+_MIN_INTERVAL = float(os.environ.get("BEATFORGE_LLM_MIN_INTERVAL", "0") or 0)
+
+
+def _pace() -> None:
+    if _MIN_INTERVAL <= 0:
+        return
+    with _PACE_LOCK:
+        wait = _MIN_INTERVAL - (_time.monotonic() - _LAST_CALL[0])
+        if wait > 0:
+            _time.sleep(wait)
+        _LAST_CALL[0] = _time.monotonic()
+
+
 def _guess_mime(path: str | Path) -> str:
     ext = os.path.splitext(str(path))[1].lower().lstrip(".")
     return _MIME.get(ext, "application/octet-stream")
@@ -53,24 +77,27 @@ class VertexClient:
         self.project = config.VERTEX_PROJECT
         self.location = config.VERTEX_LOCATION
         self.key_file = config.ASSETFORGE_KEY
-        self._token: str | None = None
+        self._creds = None
 
     # ---- auth / endpoint (mirrors assetforge) ---------------------------- #
-    def _get_token(self) -> str:
-        if self._token:
-            return self._token
-        scopes = ["https://www.googleapis.com/auth/cloud-platform"]
-        import google.auth
+    def _get_token(self, force: bool = False) -> str:
+        """Return a valid bearer token, refreshing when it's expired (OAuth
+        access tokens live ~1h; a multi-hour batch MUST re-mint or every call
+        past the first hour 401s). `force=True` re-mints regardless (used after
+        a 401)."""
         from google.auth.transport.requests import Request
-        if self.key_file and os.path.isfile(self.key_file):
-            from google.oauth2 import service_account
-            creds = service_account.Credentials.from_service_account_file(
-                self.key_file, scopes=scopes)
-        else:
-            creds, _ = google.auth.default(scopes=scopes)
-        creds.refresh(Request())
-        self._token = creds.token
-        return self._token
+        if self._creds is None:
+            scopes = ["https://www.googleapis.com/auth/cloud-platform"]
+            if self.key_file and os.path.isfile(self.key_file):
+                from google.oauth2 import service_account
+                self._creds = service_account.Credentials.from_service_account_file(
+                    self.key_file, scopes=scopes)
+            else:
+                import google.auth
+                self._creds, _ = google.auth.default(scopes=scopes)
+        if force or not self._creds.valid:      # .valid = has token AND not expired
+            self._creds.refresh(Request())
+        return self._creds.token
 
     def _endpoint(self, model: str) -> tuple[str, str]:
         api, loc = "v1", self.location
@@ -91,16 +118,35 @@ class VertexClient:
 
     def _post(self, url: str, body: dict, timeout: int = 600) -> dict:
         data = json.dumps(body).encode()
-        req = urllib.request.Request(url, data=data, method="POST", headers={
-            "Authorization": f"Bearer {self._get_token()}",
-            "Content-Type": "application/json",
-        })
-        try:
-            with urllib.request.urlopen(req, timeout=timeout) as r:
-                return json.loads(r.read())
-        except urllib.error.HTTPError as e:
-            detail = e.read().decode("utf-8", "replace")
-            raise VertexError(f"HTTP {e.code} from Vertex:\n{detail[:1500]}")
+        # Retry on rate-limit (429) and transient server errors (500/503) with
+        # exponential backoff, so a momentary quota spike doesn't kill a chart.
+        backoffs = [5, 15, 40, 90]
+        for attempt in range(len(backoffs) + 1):
+            _pace()                                # rate-limit pacing (batch runs)
+            req = urllib.request.Request(url, data=data, method="POST", headers={
+                "Authorization": f"Bearer {self._get_token()}",
+                "Content-Type": "application/json",
+            })
+            try:
+                with urllib.request.urlopen(req, timeout=timeout) as r:
+                    return json.loads(r.read())
+            except urllib.error.HTTPError as e:
+                detail = e.read().decode("utf-8", "replace")
+                # 401: the cached token expired mid-batch — force a re-mint and
+                # retry immediately (don't burn a backoff slot on a stale token).
+                if e.code == 401 and attempt < len(backoffs):
+                    print(f"[vertex] HTTP 401 (token expired); refreshing credentials "
+                          f"(retry {attempt + 1}/{len(backoffs)})")
+                    self._get_token(force=True)
+                    continue
+                if e.code in (429, 500, 502, 503, 504) and attempt < len(backoffs):
+                    wait = backoffs[attempt]
+                    print(f"[vertex] HTTP {e.code} (rate/transient); backing off {wait}s "
+                          f"(retry {attempt + 1}/{len(backoffs)})")
+                    _time.sleep(wait)
+                    continue
+                raise VertexError(f"HTTP {e.code} from Vertex:\n{detail[:1200]}")
+        raise VertexError("exhausted retries")
 
     # ---- thinking config (spec §3: full thinking power) ------------------ #
     def _thinking_config(self, model: str, level: str) -> dict:

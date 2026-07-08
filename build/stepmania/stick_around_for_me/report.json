@@ -1,0 +1,155 @@
+{
+  "track_id": "stick_around_for_me",
+  "bpm": 164.062,
+  "offset": 0.186,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 170,
+      "meter": 3,
+      "jumps": 0,
+      "holds": 22,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "A wonderfully fluid and beautifully synced Easy chart that captures the energetic tempo of the remix perfectly with highly comfortable foot-flow.",
+        "issues": [
+          {
+            "where": "19.752",
+            "problem": "Staggered overlapping holds (D starting at 19.752 and U starting at 19.935) might be slightly too complex for an Easy chart's coordination level, though they are rhythmically accurate."
+          },
+          {
+            "where": "17.740",
+            "problem": "Multiple very short 1-beat holds (0.366s) throughout the chart act almost like normal taps, though they do help highlight the quick vocal stabs."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/stick_around_for_me/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 170,
+        "onset_alignment": 0.9882,
+        "grid_notes": 2,
+        "panel_balance": {
+          "L": 0.194,
+          "D": 0.312,
+          "U": 0.306,
+          "R": 0.188
+        },
+        "hold_share": 0.1294,
+        "jump_share": 0.0,
+        "flow_cost_max": 0.0,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.5291,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 382,
+      "meter": 6,
+      "jumps": 52,
+      "holds": 18,
+      "repaired": 10,
+      "repair_ok": true,
+      "critic": {
+        "score": 6,
+        "verdict": "A highly energetic chart with strong rhythmic sync that unfortunately suffers from awkward 16th-note transitions and a physical 3-panel hold conflict.",
+        "issues": [
+          {
+            "where": "113.192 - 113.558",
+            "problem": "HOLD D is active until 113.923, but a JUMP LR occurs at 113.558. This creates an illegal 3-panel requirement (D, L, R) forcing a player to drop the hold or use hands on a standard pad."
+          },
+          {
+            "where": "85.032 - 85.123",
+            "problem": "JUMP DR followed immediately by a 16th-note tap on L (91ms gap) forces an extremely awkward, jarring shift for the left foot."
+          },
+          {
+            "where": "85.763 - 85.855",
+            "problem": "JUMP DR followed immediately by a 16th-note tap on L creates another uncomfortable double-step transition similar to the one at 85.032."
+          },
+          {
+            "where": "86.495 - 86.586",
+            "problem": "JUMP LR followed immediately by a 16th-note tap on U is highly uncomfortable to execute cleanly at this speed."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 382,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.265,
+          "D": 0.281,
+          "U": 0.224,
+          "R": 0.23
+        },
+        "hold_share": 0.0471,
+        "jump_share": 0.1361,
+        "flow_cost_max": 39.15,
+        "flow_cost_mean": 0.19,
+        "density_energy_spearman": 0.2962,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": false,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 359,
+      "meter": 8,
+      "jumps": 49,
+      "holds": 14,
+      "repaired": 1,
+      "repair_ok": true,
+      "critic": {
+        "score": 10,
+        "verdict": "An absolute masterpiece of StepMania chart design, featuring flawless 164 BPM quantization, outstanding technical flow, and incredibly satisfying jump-stream patterns.",
+        "issues": []
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 359,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.26,
+          "D": 0.284,
+          "U": 0.213,
+          "R": 0.243
+        },
+        "hold_share": 0.039,
+        "jump_share": 0.1365,
+        "flow_cost_max": 7.85,
+        "flow_cost_mean": 0.02,
+        "density_energy_spearman": 0.322,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/stick_around_for_me/stick_around_for_me.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/stick_around_for_me/stick_around_for_me.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/stick_around_for_me/stick_around_for_me.ogg"
+  },
+  "out": "build/stepmania/stick_around_for_me",
+  "meter_monotonic": true
+}

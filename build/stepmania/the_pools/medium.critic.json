@@ -1,0 +1,19 @@
+{
+  "score": 3,
+  "verdict": "The chart is heavily dragged down by extreme repetitiveness, lazy copy-pasted patterns, and highly awkward foot flow in key sections.",
+  "issues": [
+    {
+      "where": "54.724 - 60.198",
+      "problem": "A 24-note loop of 'L, D, U, R' is repeated continuously, forcing the player into constant spinning or frustrating double-stepping."
+    },
+    {
+      "where": "84.237 - 93.519",
+      "problem": "The four-note pattern 'JUMP LR -> U -> D -> L' is copy-pasted 10 times in a row, which is incredibly lazy and results in a jarring left-foot double-step (D -> L)."
+    },
+    {
+      "where": "113.273 - 128.505",
+      "problem": "The entire outro is mapped as a brain-dead alternating repetition of 'D' and 'JUMP LR' on every single quarter-note beat, completely ignoring the actual structure of the music."
+    }
+  ],
+  "human_review": true
+}

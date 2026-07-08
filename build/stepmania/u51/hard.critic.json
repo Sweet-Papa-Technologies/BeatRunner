@@ -1,0 +1,15 @@
+{
+  "score": 5,
+  "verdict": "A playable and well-timed chart that is severely held back by extreme pattern repetition and copy-pasting in the second half.",
+  "issues": [
+    {
+      "where": "24.386 to 40.463",
+      "problem": "The 4-step sequence (JUMP LR -> U -> D -> L) is heavily copy-pasted and repeated over 10 times. This makes the climax of the chart feel monotonous and uninspired."
+    },
+    {
+      "where": "25.029 to 25.243",
+      "problem": "The sequence 'D -> L -> JUMP LR' at 140 BPM eighth notes forces an awkward double-step on the left foot, which feels uncomfortable when repeated constantly."
+    }
+  ],
+  "human_review": true
+}

@@ -1,0 +1,14 @@
+{
+  "score": 9,
+  "verdict": "An exceptionally well-crafted Easy chart with accurate rhythms, comfortable alternating foot flow, and great physical representation of the music's energy.",
+  "issues": [
+    {
+      "where": "69.065 - 69.311",
+      "problem": "An eighth-note transition (0.246s) directly into a JUMP LR can be a bit of a sudden physical spike for an Easy chart."
+    },
+    {
+      "where": "77.182",
+      "problem": "Starting HOLD D while HOLD R is already active (overlapping holds) can be slightly complex for absolute beginners on an Easy difficulty."
+    }
+  ]
+}
