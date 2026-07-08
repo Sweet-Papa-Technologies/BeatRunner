@@ -1,10 +1,14 @@
 {
-  "score": 9,
-  "verdict": "An exceptionally well-crafted chart with superb vocal syncopation and natural foot flow, minorly held back by a single 3-panel hold conflict.",
+  "score": 8,
+  "verdict": "A well-rhythmed and energetic chart with great syncopated steps, let down by a rogue 3-panel hold and a minor late-game flow issue.",
   "issues": [
     {
-      "where": "81.118",
-      "problem": "JUMP LR overlaps with HOLD D (which ends at 81.241), requiring a 3-panel input or causing a dropped hold."
+      "where": "77.182",
+      "problem": "R, U, and D are held simultaneously (R from 76.198 to 77.674, U from 76.444 to 77.428, and D from 77.182 to 77.674). This creates a 3-panel hold ('hand' or bracket) which is overly complex and out of place for this difficulty level."
+    },
+    {
+      "where": "132.034",
+      "problem": "The rapid 16th-note sequence U -> R -> L forces an uncomfortable double-step on the left foot or an awkward spin right at the transition to the final D tap."
     }
   ]
 }

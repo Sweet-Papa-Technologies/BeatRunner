@@ -1,18 +1,14 @@
 {
   "score": 8,
-  "verdict": "An incredibly rhythmic and catchy chart that captures the bounce of the track perfectly, though marred by a single invalid 3-panel jump.",
+  "verdict": "Excellent vocal rhythm mapping that is highly engaging, though a few hold-active patterns spike the difficulty beyond a typical Medium chart.",
   "issues": [
     {
-      "where": "23.532",
-      "problem": "The JUMP LR at 23.532 occurs while the D panel is held (HOLD D until 23.878), creating an unintentional 3-panel 'hand' requirement that breaks single-play pad conventions."
+      "where": "89.083 - 90.006",
+      "problem": "Holding D while tapping U, L, and R in quick succession (16th notes) forces either an extremely awkward crossover or a bracket, which is too technically demanding for a Medium chart."
     },
     {
-      "where": "42.805 - 42.920",
-      "problem": "The 16th-note transition from tap D (42.805) directly into JUMP LR (42.920) forces an awkward foot recovery or double-step on the right foot."
-    },
-    {
-      "where": "21.108 - 21.223",
-      "problem": "Isolated 16th doublets feel slightly disconnected from the surrounding rhythmic density and can catch players off-guard."
+      "where": "19.146 - 19.377",
+      "problem": "The fast 16th-note transition from U to R to D creates a potential double-step or an awkward crossover sequence for this difficulty level."
     }
   ]
 }

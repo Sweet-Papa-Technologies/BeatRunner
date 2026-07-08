@@ -5,164 +5,150 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 151,
+      "notes": 127,
       "meter": 3,
-      "jumps": 4,
+      "jumps": 3,
       "holds": 13,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 7,
-        "verdict": "A well-structured chart with great rhythmic representation, but some hold-tap combinations and 8th-note syncopations push the physical demands slightly past a standard Easy difficulty.",
-        "issues": [
-          {
-            "where": "6.452",
-            "problem": "Tapping an 8th-note L at 6.625 while holding U is highly complex for an Easy chart, requiring advanced independent foot coordination at 173 BPM."
-          },
-          {
-            "where": "11.992",
-            "problem": "Simultaneous HOLD L and tap U acts as a hold-jump, which is typically introduced in Medium charts rather than Easy."
-          },
-          {
-            "where": "23.244",
-            "problem": "An isolated 8th-note step (D to R in 0.173s) followed by a 4th-note (U) creates an off-beat syncopation that can easily trip up beginners."
-          },
-          {
-            "where": "57.693",
-            "problem": "Rapidly alternating holds with overlapping 8th-note taps (HOLD R with tap D, followed immediately by HOLD U with tap L) is far too physically demanding for this difficulty level."
-          }
-        ]
+        "score": 10,
+        "verdict": "An outstandingly well-crafted Easy chart that perfectly respects beginner limitations while providing an incredibly rhythmic and engaging experience.",
+        "issues": []
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/all_my_clothes/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 151,
-        "onset_alignment": 0.9603,
-        "grid_notes": 6,
+        "notes": 127,
+        "onset_alignment": 0.8898,
+        "grid_notes": 14,
         "panel_balance": {
-          "L": 0.213,
-          "D": 0.303,
-          "U": 0.284,
-          "R": 0.2
+          "L": 0.192,
+          "D": 0.323,
+          "U": 0.292,
+          "R": 0.192
         },
-        "hold_share": 0.0861,
-        "jump_share": 0.0265,
-        "flow_cost_max": 0.5,
-        "flow_cost_mean": 0.01,
-        "density_energy_spearman": 0.3137,
+        "hold_share": 0.1024,
+        "jump_share": 0.0236,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.5358,
         "gates": {
-          "onset_alignment": true,
+          "onset_alignment": false,
           "panel_balance": true,
-          "hold_share": false,
+          "hold_share": true,
           "flow_ceiling": true,
           "density_energy": false
         }
       }
     },
     "medium": {
-      "notes": 367,
-      "meter": 6,
-      "jumps": 26,
-      "holds": 26,
-      "repaired": 17,
+      "notes": 207,
+      "meter": 5,
+      "jumps": 14,
+      "holds": 12,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 6,
-        "verdict": "The chart features a fantastic representation of the song's syncopated Tresillo rhythm, but is held back by technical mapping errors and frustratingly tight jump-to-tap transitions.",
+        "score": 8,
+        "verdict": "A highly energetic and incredibly well-synced chart that captures the disco-house rhythm perfectly, with only minor recovery flow issues after jumps.",
         "issues": [
           {
-            "where": "12.944 to 13.290",
-            "problem": "A HOLD D is active during a JUMP LR at 13.203. This requires three panels to be pressed simultaneously on a single-dance chart, creating an impossible or highly uncomfortable physical conflict."
+            "where": "67.906 to 68.599",
+            "problem": "Landing the UR jump forces an awkward double-step or uncomfortable weight shifting to hit the subsequent D and U taps."
           },
           {
-            "where": "68.599 to 68.685",
-            "problem": "A 16th-note transition directly out of a JUMP LR into a tap D (86ms gap) at 173 BPM is extremely jarring to execute and highly prone to pad-misses or double-stepping."
+            "where": "69.984 to 70.676",
+            "problem": "Repeats the same awkward flow issue where a UR jump is immediately followed by a vertical D -> U sequence."
           },
           {
-            "where": "71.368 to 71.455",
-            "problem": "Another extremely tight 16th-note transition immediately following a JUMP LR to a tap D, disrupting the flow of the song's drop."
-          },
-          {
-            "where": "38.131",
-            "problem": "A JUMP LR is placed exactly a 16th-note after tap U at 38.045, making the entry into the jump feel rushed and physically awkward at this tempo."
+            "where": "92.228",
+            "problem": "A slight 16th-note off-beat tap feels rhythmically disjointed compared to the clean quarter/eighth-note structure elsewhere."
           }
-        ],
-        "human_review": true
+        ]
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/all_my_clothes/medium.assist.ogg"
       },
       "metrics": {
-        "notes": 367,
-        "onset_alignment": 0.9918,
-        "grid_notes": 3,
+        "notes": 207,
+        "onset_alignment": 0.942,
+        "grid_notes": 12,
         "panel_balance": {
-          "L": 0.234,
-          "D": 0.298,
-          "U": 0.265,
-          "R": 0.204
+          "L": 0.208,
+          "D": 0.303,
+          "U": 0.267,
+          "R": 0.222
         },
-        "hold_share": 0.0708,
-        "jump_share": 0.0708,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.18,
-        "density_energy_spearman": 0.606,
+        "hold_share": 0.058,
+        "jump_share": 0.0676,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.1695,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
           "hold_share": true,
           "flow_ceiling": true,
-          "density_energy": true
+          "density_energy": false
         }
       }
     },
     "hard": {
-      "notes": 513,
+      "notes": 509,
       "meter": 9,
-      "jumps": 31,
-      "holds": 36,
-      "repaired": 4,
+      "jumps": 3,
+      "holds": 19,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 4,
-        "verdict": "Rhythmically accurate to the vocals but severely held back by extremely awkward physical flow, including numerous 16th-note jumps and spin-inducing runs.",
+        "score": 6,
+        "verdict": "An exceptionally synchronized chart with great stream flow, severely held back by physically unplayable hold-tap configurations.",
         "issues": [
           {
-            "where": "2.730, 4.115, 15.887, 18.656, 19.349, 20.734, 21.426, 63.665, 69.205, 70.589, 74.744, 80.284",
-            "problem": "Frequent 16th-note jumps (a jump occurring just ~86ms after a tap). This forces players to jump with one foot already in motion, causing severe balance issues and forcing bracket-steps/slides at 173 BPM."
+            "where": "6.452",
+            "problem": "Holding U while tapping D -> R -> L in rapid 16th notes is physically unplayable for a single free foot at 173 BPM."
           },
           {
-            "where": "22.724 - 23.503",
-            "problem": "Awkward 16th-note patterns (L-R-U-D and R-D-U-L) that force rapid spins or highly uncomfortable double-stepping at high speeds."
+            "where": "12.078",
+            "problem": "Holding D while tapping L -> R in 16th notes requires an extremely awkward, rapid one-foot transition."
           },
           {
-            "where": "Entire chart",
-            "problem": "Over-prioritizing literal vocal syncopation at the cost of playability, leading to a stuttery chart that feels very unintuitive on pad."
+            "where": "28.610",
+            "problem": "Holding U while tapping L -> R in 16th notes forces an impossible one-foot double tap across opposite panels."
+          },
+          {
+            "where": "35.102",
+            "problem": "Holding R while tapping U -> D in 16th notes creates a severe physical bottleneck for the free foot."
+          },
+          {
+            "where": "22.724",
+            "problem": "The U -> D -> R sixteenth-note run forces an awkward double-step or a highly jarring spin transition."
           }
         ],
         "human_review": true
       },
       "previews": {},
       "metrics": {
-        "notes": 513,
-        "onset_alignment": 0.9766,
+        "notes": 509,
+        "onset_alignment": 0.9764,
         "grid_notes": 12,
         "panel_balance": {
-          "L": 0.232,
-          "D": 0.298,
-          "U": 0.265,
-          "R": 0.206
+          "L": 0.193,
+          "D": 0.309,
+          "U": 0.303,
+          "R": 0.195
         },
-        "hold_share": 0.0702,
-        "jump_share": 0.0604,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.04,
-        "density_energy_spearman": 0.4649,
+        "hold_share": 0.0373,
+        "jump_share": 0.0059,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.4692,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": true,
+          "hold_share": false,
           "flow_ceiling": true,
           "density_energy": false
         }

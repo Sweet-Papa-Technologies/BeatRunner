@@ -5,23 +5,19 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 167,
+      "notes": 188,
       "meter": 3,
-      "jumps": 6,
-      "holds": 19,
+      "jumps": 5,
+      "holds": 26,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 8,
-        "verdict": "A well-synced and highly playable Easy chart with great flow, though it has some minor density inconsistency and a slight difficulty spike at the end.",
+        "score": 9,
+        "verdict": "An exceptionally clean and well-structured Easy chart with excellent rhythm alignment, natural foot flow, and perfect density scaling.",
         "issues": [
           {
-            "where": "90.883",
-            "problem": "The second chorus is significantly less dense (using 1/2 notes) than the first chorus at 38.950 (which used 1/4 notes), leading to inconsistent energy representation."
-          },
-          {
-            "where": "126.197",
-            "problem": "The rapid succession of 6 jumps at the outro creates a sudden difficulty spike that might overwhelm beginners playing on Easy."
+            "where": "1.558",
+            "problem": "Starting the chart directly with a JUMP UR can be slightly sudden for absolute beginners, though the 1.5-second lead-in mitigates this."
           }
         ]
       },
@@ -29,22 +25,22 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/to_me/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 167,
-        "onset_alignment": 0.8443,
-        "grid_notes": 26,
+        "notes": 188,
+        "onset_alignment": 0.9043,
+        "grid_notes": 18,
         "panel_balance": {
-          "L": 0.231,
-          "D": 0.289,
-          "U": 0.254,
-          "R": 0.225
+          "L": 0.192,
+          "D": 0.316,
+          "U": 0.29,
+          "R": 0.202
         },
-        "hold_share": 0.1138,
-        "jump_share": 0.0359,
-        "flow_cost_max": 0.0,
+        "hold_share": 0.1383,
+        "jump_share": 0.0266,
+        "flow_cost_max": 0.2,
         "flow_cost_mean": 0.0,
-        "density_energy_spearman": -0.0148,
+        "density_energy_spearman": 0.3568,
         "gates": {
-          "onset_alignment": false,
+          "onset_alignment": true,
           "panel_balance": true,
           "hold_share": true,
           "flow_ceiling": true,
@@ -53,110 +49,114 @@
       }
     },
     "medium": {
-      "notes": 520,
+      "notes": 429,
       "meter": 6,
-      "jumps": 106,
-      "holds": 23,
-      "repaired": 47,
+      "jumps": 30,
+      "holds": 42,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
         "score": 3,
-        "verdict": "An unpolished chart marred by physically impossible 3-panel hold-jumps, awkward sixteenth-note jump placements, lazy repetitive structures, and messy event formatting.",
+        "verdict": "The chart suffers from severe rhythm quantization errors resulting in awkward 16th-note gallops and unplayable rapid vertical/horizontal transitions for a Medium difficulty.",
         "issues": [
           {
-            "where": "13.329, 48.644, 55.568, 106.116, 115.118, 122.735",
-            "problem": "Unplayable 3-panel configurations where a jump is required while a hold on a third, non-bracketable panel is active (e.g., holding D and jumping LR, or holding U and jumping LR)."
+            "where": "Throughout the chart (e.g., 5.280, 7.703, 9.088)",
+            "problem": "Bad quantization creates uneven 16th-note 'gallops' (86ms / 259ms split) instead of standard, clean 8th-note streams."
           },
           {
-            "where": "Entire chart (e.g., 2.250, 2.943, 5.713, 7.790, 9.175, 10.560, 11.944)",
-            "problem": "Awkward sixteenth-note jumps at the end of gallop rhythms. At 173 BPM, landing jumps on sixteenth notes is highly exhausting and feels off-beat compared to standard eighth or quarter downbeats."
+            "where": "5.626, 7.703, 9.434",
+            "problem": "Extremely fast opposing-panel transitions (U to D in 86ms) require awkward double-stepping or brackets, which is highly inappropriate for a Medium chart."
           },
           {
-            "where": "92.268 to 95.730",
-            "problem": "Inconsistent charting format where simultaneous taps (jumps) are written as separate tap events on the same millisecond instead of single JUMP events, causing visual and scoring engine bugs."
+            "where": "5.280, 8.050, 9.088",
+            "problem": "Fast lateral transitions (L to R / R to L in 86ms) disrupt physical flow and force double-steps."
           },
           {
             "where": "125.851 to 132.170",
-            "problem": "Extremely repetitive and uninspired outro consisting of nothing but alternating JUMP LR and tap D on quarter notes for almost 10 seconds, ignoring the natural musical resolution."
+            "problem": "The outro sequence becomes highly repetitive and physically tiring, relying on a monotonous pattern of quarter-note jumps and taps."
           }
         ],
         "human_review": true
       },
       "previews": {},
       "metrics": {
-        "notes": 520,
-        "onset_alignment": 0.9654,
-        "grid_notes": 18,
+        "notes": 429,
+        "onset_alignment": 0.9557,
+        "grid_notes": 19,
         "panel_balance": {
-          "L": 0.252,
-          "D": 0.3,
-          "U": 0.219,
-          "R": 0.228
+          "L": 0.2,
+          "D": 0.301,
+          "U": 0.283,
+          "R": 0.216
         },
-        "hold_share": 0.0442,
-        "jump_share": 0.2038,
-        "flow_cost_max": 39.85,
-        "flow_cost_mean": 0.65,
-        "density_energy_spearman": 0.1494,
+        "hold_share": 0.0979,
+        "jump_share": 0.0699,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": -0.2036,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": false,
-          "flow_ceiling": false,
+          "hold_share": true,
+          "flow_ceiling": true,
           "density_energy": false
         }
       }
     },
     "hard": {
-      "notes": 459,
+      "notes": 457,
       "meter": 8,
-      "jumps": 116,
-      "holds": 48,
+      "jumps": 53,
+      "holds": 20,
       "repaired": 12,
       "repair_ok": true,
       "critic": {
-        "score": 3,
-        "verdict": "A rhythmically standard chart severely dragged down by unintentional three-panel 'hand' brackets and extremely tight, unplayable hold-release-to-tap transitions.",
+        "score": 4,
+        "verdict": "The chart has decent rhythmic ideas but is marred by physically impossible three-panel hold-jumps and extremely harsh 16th-note jump transitions.",
         "issues": [
           {
-            "where": "6.665 - 7.097",
-            "problem": "Holding D while executing a JUMP LR requires a 3-panel 'hand' input, which is awkward and unexpected for a standard dance-single chart."
+            "where": "44.489",
+            "problem": "Physically impossible 3-panel combination: a DR jump is placed while the U hold is active."
           },
           {
-            "where": "3.895 - 3.981",
-            "problem": "Left foot is holding L until 3.971, leaving only 10ms to transition to tap D at 3.981, causing an unavoidable double-step or combo break."
+            "where": "55.568",
+            "problem": "Physically impossible 3-panel combination: a UR jump is placed while the D hold is active."
           },
           {
-            "where": "112.781 - 114.426",
-            "problem": "Overlapping holds (L, D, and U held simultaneously) create a messy, confusing triple-hold pattern that limits foot movement too severely."
+            "where": "106.895",
+            "problem": "Extremely fast single-foot transition (86ms) from L to D while the other foot is locked holding U."
           },
           {
-            "where": "44.832 - 44.835",
-            "problem": "A 3ms gap between releasing hold U and tapping L is physically impossible to time distinctly, resulting in forced timing penalties."
+            "where": "121.350",
+            "problem": "Jarring 16th-note jump transition (U -> DL -> U at 173 BPM) which is nearly unplayable and disrupts flow."
+          },
+          {
+            "where": "125.938 to 132.170",
+            "problem": "Repetitive spin pattern (L, U, D, R) looped 6 times sequentially, making the ending stream feel uninspired."
           }
         ],
         "human_review": true
       },
       "previews": {},
       "metrics": {
-        "notes": 459,
-        "onset_alignment": 0.9913,
-        "grid_notes": 4,
+        "notes": 457,
+        "onset_alignment": 0.9606,
+        "grid_notes": 18,
         "panel_balance": {
-          "L": 0.299,
-          "D": 0.277,
-          "U": 0.195,
-          "R": 0.23
+          "L": 0.224,
+          "D": 0.29,
+          "U": 0.257,
+          "R": 0.229
         },
-        "hold_share": 0.1046,
-        "jump_share": 0.2527,
+        "hold_share": 0.0438,
+        "jump_share": 0.116,
         "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.1,
-        "density_energy_spearman": -0.0742,
+        "flow_cost_mean": 0.17,
+        "density_energy_spearman": 0.2777,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": true,
+          "hold_share": false,
           "flow_ceiling": true,
           "density_energy": false
         }

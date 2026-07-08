@@ -1,0 +1,14 @@
+{
+  "score": 9,
+  "verdict": "An outstanding Easy chart with perfect sync, comfortable circular flow, and excellent management of physical movement.",
+  "issues": [
+    {
+      "where": "66.222",
+      "problem": "The hold release is on a 16th-note off-beat, which is slightly inconsistent with the rest of the chart's 4th and 8th-note grid rhythm."
+    },
+    {
+      "where": "26.408",
+      "problem": "An 8th-note jump immediately following an 8th-note tap (at 26.158) is a bit of a sudden difficulty spike for an Easy chart."
+    }
+  ]
+}

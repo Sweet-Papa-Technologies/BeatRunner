@@ -1,14 +1,10 @@
 {
-  "score": 8,
-  "verdict": "A solid, well-timed Medium chart with good rhythmic progression, held back by a couple of highly awkward eighth-note transitions.",
+  "score": 7,
+  "verdict": "A mostly solid and rhythmic chart that captures the electronic beat well, but is marred by an awkward triple-panel (hand/bracket) pattern during a hold near the end.",
   "issues": [
     {
-      "where": "27.816 - 28.673",
-      "problem": "The sequence 'JUMP LR -> U -> D -> L -> JUMP LR' at eighth-note speed is extremely awkward. It forces either a rapid double-tap with the left foot from Down to Left, or an intense, uncomfortable crossover with the right foot over to Left."
-    },
-    {
-      "where": "39.820 - 40.677",
-      "problem": "Repetition of the awkward 'JUMP LR -> U -> D -> L -> JUMP LR' eighth-note pattern, which disrupts the otherwise smooth flow of the drop section."
+      "where": "37.676 to 38.533",
+      "problem": "While holding D, the player is asked to tap U, jump UR, and tap L. This creates a triple-panel requirement (holding D + jumping UR) which is highly awkward, acts as an unexpected 'hand' note, and is inappropriate for a Medium difficulty chart."
     }
   ]
 }

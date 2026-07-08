@@ -1,0 +1,23 @@
+{
+  "score": 4,
+  "verdict": "The chart is poorly paced with over-dense, awkward 16th streams during the verse and uncomfortable vertical transitions (Up/Down) throughout.",
+  "issues": [
+    {
+      "where": "16.423 - 30.402",
+      "problem": "The verse of the song is over-charted with continuous, complex 16th-note streams, which creates an inverted difficulty curve as it feels more demanding than the chorus."
+    },
+    {
+      "where": "21.665 - 22.165",
+      "problem": "Features a 'U -> D -> R -> L -> U' 16th-note sequence. The direct 16th-note transition between Up and Down (0.125s) is extremely awkward to play, requiring either double-stepping or an uncomfortable physical stretch."
+    },
+    {
+      "where": "41.759 - 42.259",
+      "problem": "The chorus contains repeated direct U -> D 16th-note transitions (e.g., 41.759 to 41.884 and 42.134 to 42.259) which break the flow and cause balance issues."
+    },
+    {
+      "where": "47.750 - 47.875",
+      "problem": "A rapid 16th-note D -> U transition right after a jump makes recovery and maintaining proper foot flow highly erratic."
+    }
+  ],
+  "human_review": true
+}

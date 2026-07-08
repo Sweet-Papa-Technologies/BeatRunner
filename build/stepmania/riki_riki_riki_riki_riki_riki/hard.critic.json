@@ -1,0 +1,19 @@
+{
+  "score": 6,
+  "verdict": "A highly accurate and fun 120 BPM chart that is unfortunately dragged down by three physically impossible or awkward 3-panel jumps during holds.",
+  "issues": [
+    {
+      "where": "17.469",
+      "problem": "The JUMP UR during a L hold creates a 3-panel chord that is extremely awkward to play on pad."
+    },
+    {
+      "where": "36.459",
+      "problem": "The JUMP LR during a D hold is physically impossible to hit with feet only without dropping the hold."
+    },
+    {
+      "where": "42.455",
+      "problem": "The JUMP LR during a D hold is physically impossible to hit with feet only without dropping the hold."
+    }
+  ],
+  "human_review": true
+}

@@ -1,22 +1,22 @@
 {
   "score": 3,
-  "verdict": "This chart is severely undermined by terrible quantization, erratic rhythmic shifts, and awkward physical transitions that feel like an unpolished auto-map rather than a curated Medium chart.",
+  "verdict": "A promising layout that is unfortunately ruined by a complete lack of quantization, leading to dozens of jarring 32nd-note micro-gaps and off-beat rhythms.",
   "issues": [
     {
-      "where": "127.566 - 127.642 and 137.183 - 137.260",
-      "problem": "Accidental 32nd-note step gaps (76-77ms) exist in the chart, creating extremely jarring, off-grid rhythmic spikes that point to poor manual syncing or quantization errors."
+      "where": "Throughout the chart",
+      "problem": "Severe quantization errors resulting in dozens of 77ms (32nd note) micro-gaps (e.g. 5.003s to 5.080s, 9.619s to 9.696s). These do not exist in the song and make accurate play impossible."
     },
     {
-      "where": "3.311 - 4.542 and 139.337 - 142.415",
-      "problem": "The intro and outro force continuous quarter-note triplet patterns (JUMP LR -> tap D) that completely disregard the song's actual driving 4/4 pop tempo, resulting in a highly unintuitive play feel."
+      "where": "Rhythm selection",
+      "problem": "Incorrect use of 12th-note triplets (154ms/308ms intervals) for standard 4/4 house rhythms, causing steps to feel completely unsynced from the actual 8th and 16th-note beats."
     },
     {
-      "where": "29.623 - 29.777 and 44.549 - 44.703",
-      "problem": "Extremely tight 16th-note transitions directly into or out of dual-panel jumps are physically demanding and completely out of place for a standard Medium-difficulty chart."
+      "where": "33.7s - 34.1s",
+      "problem": "Awkward step placement forcing double-steps or unnatural spins due to rapid, off-grid transitions like R -> U in 77ms."
     },
     {
-      "where": "111.332 - 111.947",
-      "problem": "Hitting JUMP LU and instantly requiring a tap on D creates an awkward, unguided foot recovery that breaks natural flow and forces a double-step."
+      "where": "44.7s - 47.1s",
+      "problem": "A highly chaotic section where holds are preceded by 77ms micro-taps, which is physically exhausting and completely disrupts flow on a Medium difficulty."
     }
   ],
   "human_review": true

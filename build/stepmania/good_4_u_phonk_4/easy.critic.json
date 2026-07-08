@@ -1,0 +1,19 @@
+{
+  "score": 6,
+  "verdict": "The chart has good music synchronization and structure, but the first chorus contains 4th-note streams that are too long, complex, and physically awkward (forcing double-steps/spins) for an Easy difficulty.",
+  "issues": [
+    {
+      "where": "28.183 - 32.115",
+      "problem": "An 11-note 4th-note stream at 152 BPM is very long for an Easy chart. Furthermore, the pattern (R -> U -> D -> L -> U -> D -> R...) forces highly awkward double-stepping or extreme body turns/spins."
+    },
+    {
+      "where": "39.585 - 42.730",
+      "problem": "Similar to the first stream, this 4th-note run features uncomfortable transitions (like D -> R -> U -> D -> L) that are too twisty for an Easy player to navigate comfortably."
+    },
+    {
+      "where": "75.756",
+      "problem": "Inconsistent jump formatting. Unlike other jumps written as 'JUMP DR', this jump is split into two separate tap events ('tap U' and 'tap R') at the exact same timestamp, which can cause reading/parsing inconsistencies."
+    }
+  ],
+  "human_review": true
+}

@@ -1,5 +1,5 @@
 {
-  "design_notes": "S0: Sparse taps to set the tempo of the intro. S1: Introduce 1/8 syncopations during the vocal build-up. S2: First drop with steady streams and well-placed vocal holds. S3: Breather section with clean 1/4 and 1/2 beat transitions. S4: Energetic movement following the main synth rhythms. S5: Core high-energy drop featuring long vocal holds and denser stream combinations. S6 & S7: Gradual deceleration down to the final beat.",
+  "design_notes": "The chart is designed for a medium difficulty with safe NPS and comfortable movement. It follows the energy of the track closely: introducing basic rhythm steps during the quiet intro, progressing to a clean 8th-note stream and accent jumps in the main drops, and easing out with relaxed holds and slow taps in the break and outro.",
   "notes": [
     {
       "ref": "p011",
@@ -18,11 +18,7 @@
       "kind": "tap"
     },
     {
-      "ref": "p019",
-      "kind": "tap"
-    },
-    {
-      "ref": "p022",
+      "ref": "p021",
       "kind": "tap"
     },
     {
@@ -30,15 +26,11 @@
       "kind": "tap"
     },
     {
-      "ref": "p024",
-      "kind": "tap"
-    },
-    {
       "ref": "p026",
       "kind": "tap"
     },
     {
-      "ref": "p027",
+      "ref": "p028",
       "kind": "tap"
     },
     {
@@ -46,7 +38,7 @@
       "kind": "tap"
     },
     {
-      "ref": "p033",
+      "ref": "p032",
       "kind": "tap"
     },
     {
@@ -98,10 +90,6 @@
       "kind": "tap"
     },
     {
-      "ref": "p052",
-      "kind": "tap"
-    },
-    {
       "ref": "p053",
       "kind": "tap"
     },
@@ -127,6 +115,26 @@
     },
     {
       "ref": "p062",
+      "kind": "tap"
+    },
+    {
+      "ref": "p063",
+      "kind": "tap"
+    },
+    {
+      "ref": "p066",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:27.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:28.0",
+      "kind": "tap"
+    },
+    {
+      "ref": "grid:29.0",
       "kind": "tap"
     },
     {
@@ -170,16 +178,16 @@
       "kind": "tap"
     },
     {
-      "ref": "p084",
-      "kind": "tap"
-    },
-    {
-      "ref": "m073",
+      "ref": "p086",
       "kind": "hold",
-      "hold_beats": 1.02
+      "hold_beats": 1.0
     },
     {
       "ref": "p088",
+      "kind": "tap"
+    },
+    {
+      "ref": "p090",
       "kind": "tap"
     },
     {
@@ -247,13 +255,14 @@
       "kind": "tap"
     },
     {
-      "ref": "m094",
+      "ref": "p115",
       "kind": "hold",
-      "hold_beats": 1.02
+      "hold_beats": 1.0
     },
     {
       "ref": "p118",
-      "kind": "tap"
+      "kind": "hold",
+      "hold_beats": 1.0
     },
     {
       "ref": "p120",
@@ -280,9 +289,9 @@
       "kind": "tap"
     },
     {
-      "ref": "m103",
+      "ref": "p132",
       "kind": "hold",
-      "hold_beats": 0.98
+      "hold_beats": 1.0
     },
     {
       "ref": "p133",
@@ -294,10 +303,15 @@
     },
     {
       "ref": "p136",
-      "kind": "tap"
+      "kind": "hold",
+      "hold_beats": 1.0
     },
     {
       "ref": "p138",
+      "kind": "tap"
+    },
+    {
+      "ref": "p139",
       "kind": "tap"
     },
     {
@@ -469,6 +483,10 @@
       "kind": "tap"
     },
     {
+      "ref": "p202",
+      "kind": "tap"
+    },
+    {
       "ref": "p203",
       "kind": "tap"
     },
@@ -477,9 +495,12 @@
       "kind": "tap"
     },
     {
+      "ref": "p210",
+      "kind": "tap"
+    },
+    {
       "ref": "s005",
-      "kind": "hold",
-      "hold_beats": 1.19
+      "kind": "tap"
     },
     {
       "ref": "p214",
@@ -487,10 +508,6 @@
     },
     {
       "ref": "p215",
-      "kind": "tap"
-    },
-    {
-      "ref": "p216",
       "kind": "tap"
     },
     {
@@ -502,6 +519,10 @@
       "kind": "tap"
     },
     {
+      "ref": "p220",
+      "kind": "tap"
+    },
+    {
       "ref": "p222",
       "kind": "tap"
     },
@@ -510,9 +531,9 @@
       "kind": "tap"
     },
     {
-      "ref": "m175",
+      "ref": "p226",
       "kind": "hold",
-      "hold_beats": 1.02
+      "hold_beats": 1.0
     },
     {
       "ref": "p228",
@@ -531,21 +552,17 @@
       "kind": "tap"
     },
     {
-      "ref": "p235",
-      "kind": "tap"
-    },
-    {
       "ref": "p236",
-      "kind": "tap"
+      "kind": "hold",
+      "hold_beats": 1.0
     },
     {
       "ref": "p237",
       "kind": "tap"
     },
     {
-      "ref": "m184",
-      "kind": "hold",
-      "hold_beats": 1.51
+      "ref": "p240",
+      "kind": "tap"
     },
     {
       "ref": "p242",
@@ -553,18 +570,11 @@
     },
     {
       "ref": "p243",
-      "kind": "tap"
+      "kind": "hold",
+      "hold_beats": 1.5
     },
     {
       "ref": "p246",
-      "kind": "tap"
-    },
-    {
-      "ref": "p248",
-      "kind": "tap"
-    },
-    {
-      "ref": "p249",
       "kind": "tap"
     },
     {
@@ -576,17 +586,13 @@
       "kind": "tap"
     },
     {
-      "ref": "p254",
-      "kind": "tap"
-    },
-    {
-      "ref": "p256",
+      "ref": "p255",
       "kind": "tap"
     },
     {
       "ref": "s012",
       "kind": "hold",
-      "hold_beats": 1.91
+      "hold_beats": 2.0
     },
     {
       "ref": "p258",
@@ -594,10 +600,6 @@
     },
     {
       "ref": "p261",
-      "kind": "tap"
-    },
-    {
-      "ref": "p263",
       "kind": "tap"
     },
     {
@@ -617,9 +619,8 @@
       "kind": "tap"
     },
     {
-      "ref": "m195",
-      "kind": "hold",
-      "hold_beats": 1.28
+      "ref": "p272",
+      "kind": "tap"
     },
     {
       "ref": "p273",
@@ -627,7 +628,8 @@
     },
     {
       "ref": "p275",
-      "kind": "tap"
+      "kind": "hold",
+      "hold_beats": 1.5
     },
     {
       "ref": "p279",
@@ -647,12 +649,13 @@
     },
     {
       "ref": "p286",
-      "kind": "tap"
+      "kind": "hold",
+      "hold_beats": 1.5
     },
     {
-      "ref": "m203",
+      "ref": "p289",
       "kind": "hold",
-      "hold_beats": 3.04
+      "hold_beats": 3.0
     },
     {
       "ref": "p291",
@@ -684,6 +687,11 @@
     },
     {
       "ref": "p307",
+      "kind": "hold",
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "p309",
       "kind": "tap"
     },
     {
@@ -715,18 +723,17 @@
       "kind": "tap"
     },
     {
-      "ref": "s019",
+      "ref": "p322",
       "kind": "hold",
-      "hold_beats": 2.43
+      "hold_beats": 2.0
     },
     {
       "ref": "p323",
       "kind": "tap"
     },
     {
-      "ref": "s020",
-      "kind": "hold",
-      "hold_beats": 4.96
+      "ref": "p327",
+      "kind": "tap"
     },
     {
       "ref": "p331",
@@ -741,10 +748,6 @@
       "kind": "tap"
     },
     {
-      "ref": "grid:155.5",
-      "kind": "tap"
-    },
-    {
       "ref": "p338",
       "kind": "tap"
     },
@@ -753,9 +756,8 @@
       "kind": "tap"
     },
     {
-      "ref": "s023",
-      "kind": "hold",
-      "hold_beats": 1.47
+      "ref": "p341",
+      "kind": "tap"
     },
     {
       "ref": "p344",
@@ -788,14 +790,6 @@
     {
       "ref": "p358",
       "kind": "tap"
-    },
-    {
-      "ref": "grid:176.0",
-      "kind": "tap"
-    },
-    {
-      "ref": "grid:178.0",
-      "kind": "tap"
     }
   ],
   "phrases": [
@@ -806,34 +800,34 @@
       "movement": "static",
       "crossover": "none",
       "jump_density": "none",
-      "intent": "minimal hits to establish the intro rhythm"
+      "intent": "Intro: very quiet, simple beats"
     },
     {
       "start_bar": 4,
       "end_bar": 8,
       "texture": "steps",
-      "movement": "zigzag",
+      "movement": "drift_L_to_R",
       "crossover": "none",
       "jump_density": "none",
-      "intent": "steady builds utilizing vocal cues"
+      "intent": "Build: introducing movement and standard taps"
     },
     {
       "start_bar": 8,
       "end_bar": 16,
       "texture": "stream",
-      "movement": "drift_L_to_R",
+      "movement": "zigzag",
       "crossover": "light",
       "jump_density": "accents",
-      "intent": "first main drop with standard stream pattern and vocal holds"
+      "intent": "First Drop: continuous flow with vocal and synth accents"
     },
     {
       "start_bar": 16,
       "end_bar": 18,
-      "texture": "stops_breather",
-      "movement": "static",
+      "texture": "steps",
+      "movement": "drift_R_to_L",
       "crossover": "none",
       "jump_density": "none",
-      "intent": "mini recovery build"
+      "intent": "Brief bridge: slowing down after the main section"
     },
     {
       "start_bar": 18,
@@ -842,43 +836,34 @@
       "movement": "zigzag",
       "crossover": "light",
       "jump_density": "accents",
-      "intent": "re-engaging drop with snappy 1/8 syncopations"
+      "intent": "Re-entry of the beat: moderate stream pacing"
     },
     {
       "start_bar": 22,
-      "end_bar": 30,
+      "end_bar": 32,
       "texture": "stream",
       "movement": "box",
       "crossover": "light",
       "jump_density": "accents",
-      "intent": "continuing S5 drop with active footwork paths"
+      "intent": "Sustained chorus drop: rhythmic holds and solid steps"
     },
     {
-      "start_bar": 30,
+      "start_bar": 32,
       "end_bar": 40,
-      "texture": "jumpstream",
-      "movement": "drift_R_to_L",
+      "texture": "stream",
+      "movement": "drift_L_to_R",
       "crossover": "light",
       "jump_density": "accents",
-      "intent": "climax of core drop with more dense patterns and holds"
+      "intent": "Closing energy of chorus drop: dense holds and light crossovers"
     },
     {
       "start_bar": 40,
-      "end_bar": 44,
-      "texture": "stops_breather",
-      "movement": "static",
-      "crossover": "none",
-      "jump_density": "none",
-      "intent": "calm downbeat steps following synth break"
-    },
-    {
-      "start_bar": 44,
       "end_bar": 45,
       "texture": "stops_breather",
       "movement": "static",
       "crossover": "none",
       "jump_density": "none",
-      "intent": "fadeout steps on the beat to wrap up"
+      "intent": "Outro: gentle cool down matching fading audio"
     }
   ]
 }

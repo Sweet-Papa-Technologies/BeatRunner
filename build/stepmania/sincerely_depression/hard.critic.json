@@ -1,19 +1,18 @@
 {
-  "score": 6,
-  "verdict": "A rhythmic and well-aligned chart that is highly playable but suffers from severe pattern repetition in the climax and a couple of awkward transitions.",
+  "score": 7,
+  "verdict": "A rhythmically accurate and well-paced chart with great energy tracking, marred by highly awkward hold-shielded patterns that force impossible one-foot runs and brackets.",
   "issues": [
     {
-      "where": "40.896 to 49.081",
-      "problem": "The 4-note pattern 'JUMP LR -> U -> D -> L' is repeated 8 times consecutively. While it matches the synth loop, repeating the exact same physical movement so many times feels lazy, monotonous, and causes undue fatigue on the right foot."
+      "where": "73.091 - 73.500",
+      "problem": "Holding R while tapping L then D on 16th notes forces the player to perform an extremely fast and uncomfortable one-foot transition (L to D) in under 140ms."
     },
     {
-      "where": "25.891 to 26.163",
-      "problem": "Tapping U -> D -> L at 16th-note speed (0.136s intervals) right after a jump creates an uncomfortable transition, forcing either an awkward crossover or a very rapid, double-step on the left foot from D to L."
+      "where": "83.459",
+      "problem": "A JUMP DR is placed while holding U, resulting in an unexpected 3-panel hand or bracket requirement that feels out of place on a Hard difficulty chart."
     },
     {
-      "where": "68.180 to 68.862",
-      "problem": "Tapping U at 68.725 while holding D until 68.862 is an awkward timing window. Releasing the hold a mere 16th-note after tapping with the other foot feels clunky and often leads to premature release errors."
+      "where": "84.277 - 84.550",
+      "problem": "While holding U, the chart features a 16th-note stream of L -> R -> D, forcing the player's single free foot to clumsily rush across three distinct panels in 270ms."
     }
-  ],
-  "human_review": true
+  ]
 }

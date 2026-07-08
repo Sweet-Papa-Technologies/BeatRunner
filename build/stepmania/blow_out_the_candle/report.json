@@ -5,49 +5,35 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 143,
+      "notes": 203,
       "meter": 3,
-      "jumps": 14,
-      "holds": 28,
+      "jumps": 6,
+      "holds": 25,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 4,
-        "verdict": "The chart has good rhythmic synchronization but introduces patterns and density spikes that are far too difficult and awkward for an Easy difficulty rating.",
-        "issues": [
-          {
-            "where": "59.251 - 59.482",
-            "problem": "An 8th-note transition into a jump (tap D to JUMP LD) is extremely difficult and physically awkward for beginner players."
-          },
-          {
-            "where": "96.412 - 96.874",
-            "problem": "An 8th-note sequence containing a jump followed immediately by a tap and a hold is far too complex for an Easy chart."
-          },
-          {
-            "where": "100.105 - 113.493",
-            "problem": "The dense, consecutive chain of holds in the outro is tedious and confusing for the target difficulty level."
-          }
-        ],
-        "human_review": true
+        "score": 10,
+        "verdict": "An absolute masterclass in Easy-level chart design, featuring flawless vocal sync, wonderfully natural alternating foot flow, and an incredibly creative hold-walking sequence in the bridge.",
+        "issues": []
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/blow_out_the_candle/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 143,
+        "notes": 203,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.255,
-          "D": 0.293,
-          "U": 0.236,
-          "R": 0.217
+          "L": 0.215,
+          "D": 0.306,
+          "U": 0.268,
+          "R": 0.211
         },
-        "hold_share": 0.1958,
-        "jump_share": 0.0979,
-        "flow_cost_max": 0.5,
-        "flow_cost_mean": 0.01,
-        "density_energy_spearman": 0.1883,
+        "hold_share": 0.1232,
+        "jump_share": 0.0296,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.1777,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -58,27 +44,23 @@
       }
     },
     "medium": {
-      "notes": 299,
+      "notes": 286,
       "meter": 6,
-      "jumps": 38,
-      "holds": 18,
-      "repaired": 9,
+      "jumps": 19,
+      "holds": 29,
+      "repaired": 1,
       "repair_ok": true,
       "critic": {
         "score": 5,
-        "verdict": "The chart has good rhythmic alignment and generally comfortable streams, but it is severely undermined by multiple physically impossible 3-panel jumps during holds.",
+        "verdict": "Good sync and rhythmic density, but severely held back by forced 360-degree spins and awkward stream flow unsuitable for a Medium chart.",
         "issues": [
           {
-            "where": "63.175",
-            "problem": "JUMP LR occurs while HOLD U is still active (62.944 to 63.406), requiring 3 panels to be pressed simultaneously, which is impossible/unintended for standard Medium single play."
+            "where": "11.934 to 14.934",
+            "problem": "Forcibly loops a 360-degree spin pattern (L-U-D-R) on consecutive 8th notes, which is highly disorienting and overly technical for a Medium difficulty."
           },
           {
-            "where": "75.177",
-            "problem": "JUMP LR occurs while HOLD D is active (74.254 to 75.639), creating another physical 3-panel conflict."
-          },
-          {
-            "where": "79.793",
-            "problem": "JUMP LR overlaps with HOLD U (79.563 to 80.024), forcing an uncomfortable 3-panel press."
+            "where": "62.713 to 65.021",
+            "problem": "The stream pattern (L -> U -> D -> R -> U -> D -> L) breaks natural alternation, forcing awkward double-steps or abrupt body rotations."
           }
         ],
         "human_review": true
@@ -87,20 +69,20 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/blow_out_the_candle/medium.assist.ogg"
       },
       "metrics": {
-        "notes": 299,
+        "notes": 286,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.267,
-          "D": 0.261,
-          "U": 0.234,
-          "R": 0.237
+          "L": 0.223,
+          "D": 0.289,
+          "U": 0.266,
+          "R": 0.223
         },
-        "hold_share": 0.0602,
-        "jump_share": 0.1271,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.14,
-        "density_energy_spearman": 0.3532,
+        "hold_share": 0.1014,
+        "jump_share": 0.0664,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.1294,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -111,27 +93,23 @@
       }
     },
     "hard": {
-      "notes": 303,
+      "notes": 224,
       "meter": 8,
-      "jumps": 41,
-      "holds": 21,
-      "repaired": 7,
+      "jumps": 21,
+      "holds": 17,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 5,
-        "verdict": "The chart captures the energy and rhythm of the song well, but is severely held back by technical charting errors like unplayable overlapping holds and awkward 16th-note flows.",
+        "score": 6,
+        "verdict": "Excellent timing and rhythmic representation, but severely marred by a disorienting spin stream and an unplayable 16th-note crossover.",
         "issues": [
           {
-            "where": "77.139",
-            "problem": "Active overlapping holds on Down, Up, and Left panels create an impossible triple-hold that cannot be naturally executed on a standard pad."
+            "where": "66.868 - 69.407",
+            "problem": "The stream pattern repeats 'D, U, R, L' three times consecutively, forcing a highly disorienting 360-degree spin on the pad or requiring awkward double-tapping to face forward."
           },
           {
-            "where": "28.783",
-            "problem": "The 16th-note stream pattern (U -> R -> L -> D -> U) creates poor foot flow, forcing uncomfortable double-steps or extreme spins."
-          },
-          {
-            "where": "50.249",
-            "problem": "Using a 3-panel hand (JUMP LR while holding D) right at the drop is highly jarring and excessively difficult for a standard Hard chart."
+            "where": "92.027 - 92.488",
+            "problem": "The 16th-note run 'D -> L -> R -> D -> U' contains an extremely awkward double crossover (stepping L with the Right foot, then R with the Left foot) at 130 BPM, which is highly prone to causing trips."
           }
         ],
         "human_review": true
@@ -140,25 +118,25 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/blow_out_the_candle/hard.assist.ogg"
       },
       "metrics": {
-        "notes": 303,
+        "notes": 224,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.273,
-          "D": 0.256,
-          "U": 0.247,
-          "R": 0.224
+          "L": 0.192,
+          "D": 0.286,
+          "U": 0.29,
+          "R": 0.233
         },
-        "hold_share": 0.0693,
-        "jump_share": 0.1353,
-        "flow_cost_max": 14.15,
-        "flow_cost_mean": 0.21,
-        "density_energy_spearman": 0.1565,
+        "hold_share": 0.0759,
+        "jump_share": 0.0938,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.1286,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
           "hold_share": true,
-          "flow_ceiling": false,
+          "flow_ceiling": true,
           "density_energy": false
         }
       }

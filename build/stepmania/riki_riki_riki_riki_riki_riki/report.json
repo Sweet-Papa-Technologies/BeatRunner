@@ -1,0 +1,160 @@
+{
+  "track_id": "riki_riki_riki_riki_riki_riki",
+  "bpm": 120.065,
+  "offset": 0.478,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 93,
+      "meter": 3,
+      "jumps": 2,
+      "holds": 10,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "An outstandingly well-timed Easy chart that perfectly captures the vocal syncopation and structures the physical density to match the song's energy.",
+        "issues": [
+          {
+            "where": "0:12",
+            "problem": "Tapping D at 12.472 while holding R introduces a hold-active step. This is a minor difficulty spike for an Easy chart, though it is executed cleanly."
+          },
+          {
+            "where": "0:04",
+            "problem": "The isolated eighth note at 4.226 might catch absolute beginners off guard so early in the song, though it accurately matches the 'knows' lyric."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/riki_riki_riki_riki_riki_riki/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 93,
+        "onset_alignment": 0.6989,
+        "grid_notes": 28,
+        "panel_balance": {
+          "L": 0.221,
+          "D": 0.295,
+          "U": 0.274,
+          "R": 0.211
+        },
+        "hold_share": 0.1075,
+        "jump_share": 0.0215,
+        "flow_cost_max": 0.0,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.3852,
+        "gates": {
+          "onset_alignment": false,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 212,
+      "meter": 6,
+      "jumps": 14,
+      "holds": 9,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "An exceptionally well-flowing Medium chart with outstanding representation of vocal rhythms, marred only by a very minor timing drift.",
+        "issues": [
+          {
+            "where": "Throughout the chart",
+            "problem": "There is a slight timing drift of about 46ms from the start (onbeat at .476s) to the end (onbeat at .430s). The track's actual tempo is closer to 120.06 BPM rather than a flat 120.00 BPM, causing the sync to feel slightly tight by the outro."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/riki_riki_riki_riki_riki_riki/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 212,
+        "onset_alignment": 0.7783,
+        "grid_notes": 47,
+        "panel_balance": {
+          "L": 0.204,
+          "D": 0.296,
+          "U": 0.274,
+          "R": 0.226
+        },
+        "hold_share": 0.0425,
+        "jump_share": 0.066,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.5692,
+        "gates": {
+          "onset_alignment": false,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "hard": {
+      "notes": 199,
+      "meter": 8,
+      "jumps": 21,
+      "holds": 12,
+      "repaired": 11,
+      "repair_ok": true,
+      "critic": {
+        "score": 6,
+        "verdict": "A highly accurate and fun 120 BPM chart that is unfortunately dragged down by three physically impossible or awkward 3-panel jumps during holds.",
+        "issues": [
+          {
+            "where": "17.469",
+            "problem": "The JUMP UR during a L hold creates a 3-panel chord that is extremely awkward to play on pad."
+          },
+          {
+            "where": "36.459",
+            "problem": "The JUMP LR during a D hold is physically impossible to hit with feet only without dropping the hold."
+          },
+          {
+            "where": "42.455",
+            "problem": "The JUMP LR during a D hold is physically impossible to hit with feet only without dropping the hold."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/riki_riki_riki_riki_riki_riki/hard.assist.ogg"
+      },
+      "metrics": {
+        "notes": 199,
+        "onset_alignment": 0.8442,
+        "grid_notes": 31,
+        "panel_balance": {
+          "L": 0.218,
+          "D": 0.273,
+          "U": 0.277,
+          "R": 0.232
+        },
+        "hold_share": 0.0603,
+        "jump_share": 0.1055,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.26,
+        "density_energy_spearman": 0.2643,
+        "gates": {
+          "onset_alignment": false,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/riki_riki_riki_riki_riki_riki/riki_riki_riki_riki_riki_riki.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/riki_riki_riki_riki_riki_riki/riki_riki_riki_riki_riki_riki.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/riki_riki_riki_riki_riki_riki/riki_riki_riki_riki_riki_riki.ogg"
+  },
+  "out": "build/stepmania/riki_riki_riki_riki_riki_riki",
+  "meter_monotonic": true
+}

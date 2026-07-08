@@ -5,19 +5,31 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 92,
+      "notes": 102,
       "meter": 3,
-      "jumps": 0,
-      "holds": 9,
+      "jumps": 3,
+      "holds": 12,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 9,
-        "verdict": "An excellently crafted Easy chart with highly intuitive rhythm mapping and a very comfortable, flowing layout.",
+        "score": 8,
+        "verdict": "An exceptionally well-timed chart with great physical flow, though a couple of patterns are slightly too complex/fast for a typical Easy difficulty.",
         "issues": [
           {
-            "where": "2.093 - 2.950",
-            "problem": "The U -> D -> R sequence can occasionally feel slightly turn-y or force a minor double-step for absolute beginners, though it is very manageable at 140 BPM."
+            "where": "28.673",
+            "problem": "An 8th-note jump (JUMP LR immediately following 28.459 tap U) is too physically demanding for an Easy chart."
+          },
+          {
+            "where": "32.103",
+            "problem": "JUMP DR occurs immediately after an 8th-note transition (31.674 tap D -> 31.888 tap U), which is too complex for players at the Easy level."
+          },
+          {
+            "where": "2.736",
+            "problem": "The 8th-note tap at 2.950 during HOLD L requires advanced foot independence (co-holding) for an Easy chart."
+          },
+          {
+            "where": "37.676",
+            "problem": "Holding D while tapping U (37.890) and L (38.319) is a Medium-level pattern that may confuse beginners."
           }
         ]
       },
@@ -25,47 +37,43 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/u51/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 92,
-        "onset_alignment": 0.9674,
+        "notes": 102,
+        "onset_alignment": 0.9706,
         "grid_notes": 3,
         "panel_balance": {
-          "L": 0.217,
-          "D": 0.272,
-          "U": 0.283,
-          "R": 0.228
+          "L": 0.219,
+          "D": 0.286,
+          "U": 0.295,
+          "R": 0.2
         },
-        "hold_share": 0.0978,
-        "jump_share": 0.0,
-        "flow_cost_max": 0.0,
+        "hold_share": 0.1176,
+        "jump_share": 0.0294,
+        "flow_cost_max": 0.2,
         "flow_cost_mean": 0.0,
-        "density_energy_spearman": 0.2469,
+        "density_energy_spearman": 0.4829,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": false,
+          "hold_share": true,
           "flow_ceiling": true,
           "density_energy": false
         }
       }
     },
     "medium": {
-      "notes": 108,
+      "notes": 119,
       "meter": 5,
-      "jumps": 26,
-      "holds": 9,
-      "repaired": 0,
+      "jumps": 4,
+      "holds": 10,
+      "repaired": 2,
       "repair_ok": true,
       "critic": {
-        "score": 8,
-        "verdict": "A solid, well-timed Medium chart with good rhythmic progression, held back by a couple of highly awkward eighth-note transitions.",
+        "score": 7,
+        "verdict": "A mostly solid and rhythmic chart that captures the electronic beat well, but is marred by an awkward triple-panel (hand/bracket) pattern during a hold near the end.",
         "issues": [
           {
-            "where": "27.816 - 28.673",
-            "problem": "The sequence 'JUMP LR -> U -> D -> L -> JUMP LR' at eighth-note speed is extremely awkward. It forces either a rapid double-tap with the left foot from Down to Left, or an intense, uncomfortable crossover with the right foot over to Left."
-          },
-          {
-            "where": "39.820 - 40.677",
-            "problem": "Repetition of the awkward 'JUMP LR -> U -> D -> L -> JUMP LR' eighth-note pattern, which disrupts the otherwise smooth flow of the drop section."
+            "where": "37.676 to 38.533",
+            "problem": "While holding D, the player is asked to tap U, jump UR, and tap L. This creates a triple-panel requirement (holding D + jumping UR) which is highly awkward, acts as an unexpected 'hand' note, and is inappropriate for a Medium difficulty chart."
           }
         ]
       },
@@ -73,20 +81,20 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/u51/medium.assist.ogg"
       },
       "metrics": {
-        "notes": 108,
-        "onset_alignment": 0.9259,
-        "grid_notes": 8,
+        "notes": 119,
+        "onset_alignment": 0.9832,
+        "grid_notes": 2,
         "panel_balance": {
-          "L": 0.306,
-          "D": 0.254,
-          "U": 0.179,
-          "R": 0.261
+          "L": 0.236,
+          "D": 0.268,
+          "U": 0.276,
+          "R": 0.22
         },
-        "hold_share": 0.0833,
-        "jump_share": 0.2407,
-        "flow_cost_max": 0.5,
-        "flow_cost_mean": 0.0,
-        "density_energy_spearman": 0.2118,
+        "hold_share": 0.084,
+        "jump_share": 0.0336,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.07,
+        "density_energy_spearman": 0.5443,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -97,45 +105,40 @@
       }
     },
     "hard": {
-      "notes": 174,
+      "notes": 168,
       "meter": 8,
-      "jumps": 29,
-      "holds": 9,
+      "jumps": 14,
+      "holds": 10,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 5,
-        "verdict": "A playable and well-timed chart that is severely held back by extreme pattern repetition and copy-pasting in the second half.",
+        "score": 9,
+        "verdict": "An exceptionally well-polished chart with highly intuitive foot flow, excellent rhythm representation, and a very satisfying jump-stream section that perfectly captures the energy of the music.",
         "issues": [
           {
-            "where": "24.386 to 40.463",
-            "problem": "The 4-step sequence (JUMP LR -> U -> D -> L) is heavily copy-pasted and repeated over 10 times. This makes the climax of the chart feel monotonous and uninspired."
-          },
-          {
-            "where": "25.029 to 25.243",
-            "problem": "The sequence 'D -> L -> JUMP LR' at 140 BPM eighth notes forces an awkward double-step on the left foot, which feels uncomfortable when repeated constantly."
+            "where": "3.808 to 4.236",
+            "problem": "A circular stream pattern (D -> U -> R -> L -> U -> D) forces either a slight double-step or a somewhat awkward crossover for players trying to fully alternate."
           }
-        ],
-        "human_review": true
+        ]
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/u51/hard.assist.ogg"
       },
       "metrics": {
-        "notes": 174,
-        "onset_alignment": 0.954,
+        "notes": 168,
+        "onset_alignment": 0.9524,
         "grid_notes": 8,
         "panel_balance": {
-          "L": 0.291,
-          "D": 0.236,
-          "U": 0.261,
-          "R": 0.212
+          "L": 0.225,
+          "D": 0.264,
+          "U": 0.275,
+          "R": 0.236
         },
-        "hold_share": 0.0517,
-        "jump_share": 0.1667,
-        "flow_cost_max": 0.5,
+        "hold_share": 0.0595,
+        "jump_share": 0.0833,
+        "flow_cost_max": 0.2,
         "flow_cost_mean": 0.01,
-        "density_energy_spearman": 0.2779,
+        "density_energy_spearman": 0.299,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,

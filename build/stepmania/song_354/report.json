@@ -5,42 +5,80 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 308,
-      "meter": 3,
-      "jumps": 47,
-      "holds": 27,
-      "repaired": 4,
+      "notes": 289,
+      "meter": 2,
+      "jumps": 8,
+      "holds": 40,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 7,
-        "verdict": "A solid Easy chart with good rhythmic structure, severely held back by a physically impossible three-panel jump-and-hold combination at 127.78 seconds.",
+        "score": 9.5,
+        "verdict": "An exceptionally polished and comfortable Easy chart with superb rhythmic accuracy, natural foot flow, and excellent structure.",
         "issues": [
           {
-            "where": "127.784",
-            "problem": "The chart requires a JUMP LR while HOLD U is still active (which doesn't end until 128.014). This requires three feet and is physically impossible to perform on a standard dance pad."
-          },
-          {
-            "where": "81.186 - 96.411",
-            "problem": "The step sequence (JUMP LR -> D -> U -> L) repeats identically four times in a row, which feels uninspired and overly repetitive even for an Easy chart."
+            "where": "130.552",
+            "problem": "The JUMP LR followed immediately by a tap D at 131.013 requires a quick recovery and re-centering that might slightly challenge absolute beginners on an Easy difficulty, though it is still physically very safe."
           }
         ]
       },
       "previews": {},
       "metrics": {
-        "notes": 308,
-        "onset_alignment": 0.974,
-        "grid_notes": 8,
+        "notes": 289,
+        "onset_alignment": 0.6851,
+        "grid_notes": 91,
         "panel_balance": {
-          "L": 0.273,
-          "D": 0.282,
-          "U": 0.254,
-          "R": 0.192
+          "L": 0.192,
+          "D": 0.313,
+          "U": 0.293,
+          "R": 0.202
         },
-        "hold_share": 0.0877,
-        "jump_share": 0.1526,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.13,
-        "density_energy_spearman": 0.0635,
+        "hold_share": 0.1384,
+        "jump_share": 0.0277,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.3948,
+        "gates": {
+          "onset_alignment": false,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 502,
+      "meter": 5,
+      "jumps": 35,
+      "holds": 14,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 7,
+        "verdict": "A highly creative and musically accurate chart that perfectly captures the syncopated vocal chops, held back by a single physically impossible 3-panel overlap.",
+        "issues": [
+          {
+            "where": "99.410 - 100.102",
+            "problem": "Physically impossible step: 'tap U' at 99.871 is placed while both 'HOLD L' (99.410 - 100.102) and 'HOLD D' (99.641 - 100.102) are active, requiring three feet to execute."
+          }
+        ]
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 502,
+        "onset_alignment": 0.99,
+        "grid_notes": 5,
+        "panel_balance": {
+          "L": 0.209,
+          "D": 0.287,
+          "U": 0.281,
+          "R": 0.223
+        },
+        "hold_share": 0.0279,
+        "jump_share": 0.0697,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.0413,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -50,98 +88,47 @@
         }
       }
     },
-    "medium": {
-      "notes": 672,
-      "meter": 6,
-      "jumps": 112,
-      "holds": 48,
-      "repaired": 201,
-      "repair_ok": false,
-      "critic": {
-        "score": 4,
-        "verdict": "Unplayable hold overlaps (triples and quads) ruin an otherwise decent medium chart.",
-        "issues": [
-          {
-            "where": "52.582s - 53.043s",
-            "problem": "Four concurrent holds (D, U, L, R) create an impossible quad hold that cannot be executed on a standard dance pad."
-          },
-          {
-            "where": "70.460s - 70.690s",
-            "problem": "Triple hold (U, D, R) requires pressing three panels simultaneously, which is inappropriate for a Medium single chart."
-          },
-          {
-            "where": "77.265s - 77.495s",
-            "problem": "Triple hold (U, D, L) forces a three-panel hold."
-          },
-          {
-            "where": "78.764s - 78.995s",
-            "problem": "Triple hold (D, R, L) forces another three-panel hold."
-          },
-          {
-            "where": "30.321s - 30.667s",
-            "problem": "While holding D and L, a tap R is required, which requires three feet or awkward bracketing."
-          }
-        ],
-        "human_review": true
-      },
-      "previews": {},
-      "metrics": {
-        "notes": 672,
-        "onset_alignment": 0.9539,
-        "grid_notes": 31,
-        "panel_balance": {
-          "L": 0.286,
-          "D": 0.232,
-          "U": 0.235,
-          "R": 0.247
-        },
-        "hold_share": 0.0714,
-        "jump_share": 0.1667,
-        "flow_cost_max": 39.15,
-        "flow_cost_mean": 0.75,
-        "density_energy_spearman": -0.0877,
-        "gates": {
-          "onset_alignment": true,
-          "panel_balance": true,
-          "hold_share": true,
-          "flow_ceiling": false,
-          "density_energy": false
-        }
-      }
-    },
     "hard": {
-      "notes": 628,
-      "meter": 8,
-      "jumps": 77,
+      "notes": 625,
+      "meter": 9,
+      "jumps": 16,
       "holds": 35,
-      "repaired": 0,
+      "repaired": 2,
       "repair_ok": true,
       "critic": {
-        "score": 9.5,
-        "verdict": "An exceptionally well-crafted chart with smooth crossovers, natural physical flow, and excellent tracking of the music's structural shifts.",
+        "score": 7,
+        "verdict": "A solid, energetic chart with great rhythm and natural alternation, held back by minor quantization errors, an awkward vertical jump, and a locked-foot double-step.",
         "issues": [
           {
-            "where": "140.932 - 142.086",
-            "problem": "A sudden 1.15-second gap in steps occurs here, which feels slightly abrupt and drops the physical momentum compared to the preceding rhythmic section."
+            "where": "118.556 to 119.018",
+            "problem": "While the left foot is locked holding D, the player must tap U (118.787) and then R (118.902) at 16th-note speed. This forces a fast, awkward double-step on the right foot."
+          },
+          {
+            "where": "99.987 to 100.102",
+            "problem": "A fast 16th-note transition from a DR jump into a UD (Up-Down) jump. UD jumps are vertically aligned and highly uncomfortable to execute at high speeds."
+          },
+          {
+            "where": "151.198, 157.426, 171.036",
+            "problem": "Minor quantization errors where the hold releases (at 152.490, 158.017, and 171.627) are slightly off-grid relative to the 130 BPM tempo. Snapping them to the 16th-note grid would perfect the timing."
           }
         ]
       },
       "previews": {},
       "metrics": {
-        "notes": 628,
-        "onset_alignment": 0.9538,
-        "grid_notes": 29,
+        "notes": 625,
+        "onset_alignment": 0.992,
+        "grid_notes": 5,
         "panel_balance": {
-          "L": 0.25,
-          "D": 0.261,
-          "U": 0.26,
-          "R": 0.23
+          "L": 0.211,
+          "D": 0.29,
+          "U": 0.285,
+          "R": 0.214
         },
-        "hold_share": 0.0557,
-        "jump_share": 0.1226,
-        "flow_cost_max": 0.5,
-        "flow_cost_mean": 0.01,
-        "density_energy_spearman": -0.2019,
+        "hold_share": 0.056,
+        "jump_share": 0.0256,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.03,
+        "density_energy_spearman": 0.1974,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,

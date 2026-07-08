@@ -5,27 +5,23 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 214,
-      "meter": 3,
-      "jumps": 6,
-      "holds": 24,
-      "repaired": 0,
+      "notes": 201,
+      "meter": 2,
+      "jumps": 5,
+      "holds": 38,
+      "repaired": 1,
       "repair_ok": true,
       "critic": {
-        "score": 7,
-        "verdict": "A solid Easy chart with great rhythmic connection, but suffers from steep difficulty spikes with fast 8th notes and excessive jumps for the difficulty level.",
+        "score": 9,
+        "verdict": "An exceptionally well-crafted Easy chart with perfect rhythmic alignment, natural alternating foot flow, and excellent song density tracking.",
         "issues": [
           {
-            "where": "122.103 to 129.489",
-            "problem": "Too many jumps (DR, LR, LU, LR, LU) in quick succession. For an Easy chart at 195 BPM, this density of jumps is too exhausting and complex for beginners."
+            "where": "60.552",
+            "problem": "The adjacent UR jump can be slightly tricky for absolute beginners to execute compared to standard wide jumps, though it fits the rhythmic transition well."
           },
           {
-            "where": "18.698, 111.947, 126.719",
-            "problem": "8th-note steps at ~195 BPM (154ms interval) are too fast for an Easy chart. These should be simplified to quarter notes to maintain accessibility."
-          },
-          {
-            "where": "21.160 to 22.853",
-            "problem": "An awkward flow sequence where a Hold L is immediately followed by D, U, and R taps, forcing either a turn or a double-step right after the hold release."
+            "where": "113.486",
+            "problem": "The DR jump followed immediately by U and D taps requires a bit of foot-shuffling, but the slow tempo makes it highly manageable."
           }
         ]
       },
@@ -33,22 +29,22 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/pizza_party_for_two_don_t_wanna_be_wrong/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 214,
-        "onset_alignment": 0.9813,
-        "grid_notes": 4,
+        "notes": 201,
+        "onset_alignment": 0.4179,
+        "grid_notes": 117,
         "panel_balance": {
-          "L": 0.232,
-          "D": 0.277,
-          "U": 0.268,
-          "R": 0.223
+          "L": 0.194,
+          "D": 0.316,
+          "U": 0.301,
+          "R": 0.189
         },
-        "hold_share": 0.1121,
-        "jump_share": 0.028,
-        "flow_cost_max": 0.5,
-        "flow_cost_mean": 0.01,
-        "density_energy_spearman": 0.4428,
+        "hold_share": 0.1891,
+        "jump_share": 0.0249,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.04,
+        "density_energy_spearman": 0.4656,
         "gates": {
-          "onset_alignment": true,
+          "onset_alignment": false,
           "panel_balance": true,
           "hold_share": true,
           "flow_ceiling": true,
@@ -57,107 +53,92 @@
       }
     },
     "medium": {
-      "notes": 279,
+      "notes": 434,
       "meter": 6,
-      "jumps": 80,
-      "holds": 2,
-      "repaired": 0,
+      "jumps": 28,
+      "holds": 31,
+      "repaired": 6,
       "repair_ok": true,
       "critic": {
         "score": 3,
-        "verdict": "This chart is severely undermined by terrible quantization, erratic rhythmic shifts, and awkward physical transitions that feel like an unpolished auto-map rather than a curated Medium chart.",
+        "verdict": "A promising layout that is unfortunately ruined by a complete lack of quantization, leading to dozens of jarring 32nd-note micro-gaps and off-beat rhythms.",
         "issues": [
           {
-            "where": "127.566 - 127.642 and 137.183 - 137.260",
-            "problem": "Accidental 32nd-note step gaps (76-77ms) exist in the chart, creating extremely jarring, off-grid rhythmic spikes that point to poor manual syncing or quantization errors."
+            "where": "Throughout the chart",
+            "problem": "Severe quantization errors resulting in dozens of 77ms (32nd note) micro-gaps (e.g. 5.003s to 5.080s, 9.619s to 9.696s). These do not exist in the song and make accurate play impossible."
           },
           {
-            "where": "3.311 - 4.542 and 139.337 - 142.415",
-            "problem": "The intro and outro force continuous quarter-note triplet patterns (JUMP LR -> tap D) that completely disregard the song's actual driving 4/4 pop tempo, resulting in a highly unintuitive play feel."
+            "where": "Rhythm selection",
+            "problem": "Incorrect use of 12th-note triplets (154ms/308ms intervals) for standard 4/4 house rhythms, causing steps to feel completely unsynced from the actual 8th and 16th-note beats."
           },
           {
-            "where": "29.623 - 29.777 and 44.549 - 44.703",
-            "problem": "Extremely tight 16th-note transitions directly into or out of dual-panel jumps are physically demanding and completely out of place for a standard Medium-difficulty chart."
+            "where": "33.7s - 34.1s",
+            "problem": "Awkward step placement forcing double-steps or unnatural spins due to rapid, off-grid transitions like R -> U in 77ms."
           },
           {
-            "where": "111.332 - 111.947",
-            "problem": "Hitting JUMP LU and instantly requiring a tap on D creates an awkward, unguided foot recovery that breaks natural flow and forces a double-step."
+            "where": "44.7s - 47.1s",
+            "problem": "A highly chaotic section where holds are preceded by 77ms micro-taps, which is physically exhausting and completely disrupts flow on a Medium difficulty."
           }
         ],
         "human_review": true
       },
-      "previews": {
-        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/pizza_party_for_two_don_t_wanna_be_wrong/medium.assist.ogg"
-      },
+      "previews": {},
       "metrics": {
-        "notes": 279,
-        "onset_alignment": 0.9642,
-        "grid_notes": 10,
+        "notes": 434,
+        "onset_alignment": 0.9793,
+        "grid_notes": 9,
         "panel_balance": {
-          "L": 0.312,
-          "D": 0.223,
-          "U": 0.217,
-          "R": 0.248
+          "L": 0.208,
+          "D": 0.305,
+          "U": 0.266,
+          "R": 0.221
         },
-        "hold_share": 0.0072,
-        "jump_share": 0.2867,
-        "flow_cost_max": 0.5,
-        "flow_cost_mean": 0.01,
-        "density_energy_spearman": 0.2744,
+        "hold_share": 0.0714,
+        "jump_share": 0.0645,
+        "flow_cost_max": 39.15,
+        "flow_cost_mean": 0.18,
+        "density_energy_spearman": 0.3314,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": false,
-          "flow_ceiling": true,
+          "hold_share": true,
+          "flow_ceiling": false,
           "density_energy": false
         }
       }
     },
     "hard": {
-      "notes": 308,
+      "notes": 501,
       "meter": 8,
-      "jumps": 5,
-      "holds": 27,
+      "jumps": 60,
+      "holds": 16,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 8,
-        "verdict": "A highly rhythmic rock chart with excellent body-pivoting flow and a satisfying climax, held back only by a few jarring vertical transitions and an isolated 16th-note anomaly.",
-        "issues": [
-          {
-            "where": "17.082 - 17.159",
-            "problem": "An isolated 16th-note transition (R to L in 77ms) stands out as a sudden rhythmic anomaly, likely a slight step-misplacement or a ghost tap."
-          },
-          {
-            "where": "113.332 - 113.486",
-            "problem": "Rapid 8th-note vertical transition (U to D in 154ms) forces a very sudden double-step or tight body-twist at 195 BPM."
-          },
-          {
-            "where": "13.774 - 13.928",
-            "problem": "Another rapid vertical transition (D to U) that momentarily disrupts the otherwise comfortable lateral flow of the verse."
-          }
-        ]
+        "score": 10,
+        "verdict": "An exceptionally well-crafted chart that perfectly captures the syncopated vocal rhythms and drives the energetic house beat with fluid, comfortable patterns.",
+        "issues": []
       },
       "previews": {},
       "metrics": {
-        "notes": 308,
-        "onset_alignment": 0.9675,
-        "grid_notes": 10,
+        "notes": 501,
+        "onset_alignment": 0.8204,
+        "grid_notes": 90,
         "panel_balance": {
-          "L": 0.23,
-          "D": 0.278,
-          "U": 0.262,
-          "R": 0.23
+          "L": 0.207,
+          "D": 0.319,
+          "U": 0.226,
+          "R": 0.248
         },
-        "hold_share": 0.0877,
-        "jump_share": 0.0162,
-        "flow_cost_max": 0.0,
-        "flow_cost_mean": 0.0,
-        "density_energy_spearman": 0.1325,
+        "hold_share": 0.0319,
+        "jump_share": 0.1198,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.02,
+        "density_energy_spearman": 0.1553,
         "gates": {
-          "onset_alignment": true,
+          "onset_alignment": false,
           "panel_balance": true,
-          "hold_share": true,
+          "hold_share": false,
           "flow_ceiling": true,
           "density_energy": false
         }

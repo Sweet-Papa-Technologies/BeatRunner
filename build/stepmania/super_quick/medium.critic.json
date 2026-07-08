@@ -1,18 +1,18 @@
 {
-  "score": 8,
-  "verdict": "A well-structured and rhythmic chart with excellent pacing, though it relies a bit too heavily on repetitive loop patterns in the chorus.",
+  "score": 7,
+  "verdict": "An exceptionally rhythmic and flowing chart that is unfortunately marred by several illegal three-panel 'hand' holds that are inappropriate for a Medium difficulty.",
   "issues": [
     {
-      "where": "39.720 - 48.358",
-      "problem": "Highly repetitive use of the 'JUMP LR -> U -> D -> L -> JUMP LR' pattern. While accurate to the rhythm, playing the exact same physical loop five times in a short window feels monotonous."
+      "where": "93.708",
+      "problem": "Tapping L while holding U and D creates an unintended 3-panel 'hand' pattern, which is too difficult for a Medium chart."
     },
     {
-      "where": "40.919 - 41.399",
-      "problem": "The transition from U -> D -> L after a JUMP LR forces either an awkward double-step on the left foot (D -> L) or a heavy crossover. This layout repeats frequently during the chorus."
+      "where": "99.467",
+      "problem": "Tapping R while holding D and U creates a 3-panel 'hand' pattern, requiring players to use hands or advanced bracketing."
     },
     {
-      "where": "109.304 - 110.984",
-      "problem": "The outro sequence repeats the exact same 'D -> U -> L -> R' flow verbatim, missing an opportunity for a mirrored variation to make the finish more engaging."
+      "where": "101.146",
+      "problem": "Jumping to LR while holding U creates a 3-panel 'hand' jump, which is unfair for players at this difficulty level."
     }
   ]
 }

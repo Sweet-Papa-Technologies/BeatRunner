@@ -1,0 +1,172 @@
+{
+  "track_id": "no_downtime_for_the_marvinator",
+  "bpm": 139.954,
+  "offset": 0.4,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 187,
+      "meter": 3,
+      "jumps": 5,
+      "holds": 19,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 7,
+        "verdict": "Well-synced and fun, but features excessive stream density and complex 8th-note patterns that exceed standard Easy difficulty expectations.",
+        "issues": [
+          {
+            "where": "93.859 - 94.717",
+            "problem": "A 5-note consecutive eighth-note run with direction changes (D-U-L-R-U) is too fast and complex for beginner players on Easy."
+          },
+          {
+            "where": "41.128 - 58.705",
+            "problem": "An uninterrupted 17-second stream of quarter notes lacks physical breaks, making it overly exhausting for an Easy chart."
+          },
+          {
+            "where": "20.121",
+            "problem": "Transitioning from a tap to an eighth-note hold start (at 20.335) is mechanically complex and confusing for Easy-level players."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/no_downtime_for_the_marvinator/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 187,
+        "onset_alignment": 0.7005,
+        "grid_notes": 56,
+        "panel_balance": {
+          "L": 0.203,
+          "D": 0.302,
+          "U": 0.292,
+          "R": 0.203
+        },
+        "hold_share": 0.1016,
+        "jump_share": 0.0267,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": -0.0758,
+        "gates": {
+          "onset_alignment": false,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 225,
+      "meter": 5,
+      "jumps": 15,
+      "holds": 12,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 8,
+        "verdict": "A well-synced, energetic Medium chart with great pacing, held back only by a few awkward jump transitions that disrupt the physical flow.",
+        "issues": [
+          {
+            "where": "29.552 to 29.981",
+            "problem": "The rapid transition from a DR jump directly into U -> D eighth notes requires an awkward weight shift that can easily trip up players at this difficulty level."
+          },
+          {
+            "where": "34.268 to 34.697",
+            "problem": "The eighth-note run U -> L leading immediately into a DR jump forces a sudden, uncomfortable full-body shift."
+          },
+          {
+            "where": "48.416 to 48.844",
+            "problem": "Transitioning from a UR jump directly into L -> D eighth notes is extremely abrupt and causes balance issues."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/no_downtime_for_the_marvinator/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 225,
+        "onset_alignment": 0.6444,
+        "grid_notes": 80,
+        "panel_balance": {
+          "L": 0.179,
+          "D": 0.321,
+          "U": 0.296,
+          "R": 0.204
+        },
+        "hold_share": 0.0533,
+        "jump_share": 0.0667,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": -0.1194,
+        "gates": {
+          "onset_alignment": false,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 319,
+      "meter": 8,
+      "jumps": 22,
+      "holds": 13,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 5,
+        "verdict": "The rhythm is perfectly synchronized to the 140 BPM tempo, but the physical flow is severely compromised by frequent vertical 16th-note jumps and awkward spins.",
+        "issues": [
+          {
+            "where": "15.298, 38.770, 40.485, 54.739, 55.275, 56.561, 72.638, 77.140, 79.176, 83.249, 95.788",
+            "problem": "Frequent 16th-note transitions between Down and Up (or vice versa) force extremely awkward vertical double-steps or rapid hip twists."
+          },
+          {
+            "where": "69.423",
+            "problem": "The 16th-note sequence D -> R -> U -> D forms a full spin at 140 BPM, which is highly disorienting and physically awkward to play."
+          },
+          {
+            "where": "82.070",
+            "problem": "The 16th-note run U -> L -> R -> D -> U creates a highly complex, uncomfortable sequence of double-crossovers."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/no_downtime_for_the_marvinator/hard.assist.ogg"
+      },
+      "metrics": {
+        "notes": 319,
+        "onset_alignment": 0.9498,
+        "grid_notes": 16,
+        "panel_balance": {
+          "L": 0.223,
+          "D": 0.273,
+          "U": 0.276,
+          "R": 0.229
+        },
+        "hold_share": 0.0408,
+        "jump_share": 0.069,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.2485,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/no_downtime_for_the_marvinator/no_downtime_for_the_marvinator.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/no_downtime_for_the_marvinator/no_downtime_for_the_marvinator.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/no_downtime_for_the_marvinator/no_downtime_for_the_marvinator.ogg"
+  },
+  "out": "build/stepmania/no_downtime_for_the_marvinator",
+  "meter_monotonic": true
+}

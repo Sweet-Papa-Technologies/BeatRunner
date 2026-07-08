@@ -5,40 +5,35 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 165,
+      "notes": 171,
       "meter": 3,
-      "jumps": 0,
-      "holds": 22,
+      "jumps": 5,
+      "holds": 19,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
         "score": 10,
-        "verdict": "An exceptionally well-crafted Easy chart with perfect alternating flow, pristine rhythm, and excellent density scaling.",
-        "issues": [
-          {
-            "where": "18.569",
-            "problem": "The off-beat 8th note pair here is a minor spike in difficulty for absolute beginners, though it fits the vocal rhythm perfectly."
-          }
-        ]
+        "verdict": "An exceptionally well-polished Easy chart that perfectly captures the vocal and instrumental rhythms, showcases highly intuitive foot flow, and respects beginner-friendly physical limitations.",
+        "issues": []
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/mistakes/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 165,
-        "onset_alignment": 0.9697,
-        "grid_notes": 5,
+        "notes": 171,
+        "onset_alignment": 0.9942,
+        "grid_notes": 1,
         "panel_balance": {
-          "L": 0.182,
-          "D": 0.321,
-          "U": 0.309,
-          "R": 0.188
+          "L": 0.21,
+          "D": 0.307,
+          "U": 0.278,
+          "R": 0.205
         },
-        "hold_share": 0.1333,
-        "jump_share": 0.0,
-        "flow_cost_max": 0.0,
+        "hold_share": 0.1111,
+        "jump_share": 0.0292,
+        "flow_cost_max": 0.2,
         "flow_cost_mean": 0.0,
-        "density_energy_spearman": 0.854,
+        "density_energy_spearman": 0.6555,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -49,23 +44,23 @@
       }
     },
     "medium": {
-      "notes": 283,
+      "notes": 318,
       "meter": 6,
-      "jumps": 19,
-      "holds": 18,
-      "repaired": 1,
+      "jumps": 22,
+      "holds": 26,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
         "score": 9,
-        "verdict": "An outstanding Medium chart with flawless syncopation, highly satisfying circular streams, and excellent physical pacing.",
+        "verdict": "An exceptionally clean, professional ITG-style technical chart with comfortable turns, clever shield-holds, and rhythmically precise syncopations.",
         "issues": [
           {
-            "where": "1.785 - 2.816",
-            "problem": "The first two notes in the intro feel slightly off-grid, drifting away from the perfect 160 BPM structure established when the main beat drops."
+            "where": "11.537",
+            "problem": "Isolated 16th-note transition (D to U) creates a sudden burst of speed within an otherwise steady 8th-note section."
           },
           {
-            "where": "64.141 - 64.422",
-            "problem": "The 16th transition from U to R immediately following a D tap forces a slight slide or double-tap on the right foot, disrupting the otherwise flawless alternating flow."
+            "where": "48.294",
+            "problem": "The syncopated 16th tap on D while holding L requires a rapid weight shift right before the hold release at 48.388."
           }
         ]
       },
@@ -73,20 +68,20 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/mistakes/medium.assist.ogg"
       },
       "metrics": {
-        "notes": 283,
-        "onset_alignment": 0.9753,
-        "grid_notes": 7,
+        "notes": 318,
+        "onset_alignment": 0.9906,
+        "grid_notes": 3,
         "panel_balance": {
-          "L": 0.215,
-          "D": 0.281,
-          "U": 0.278,
-          "R": 0.225
+          "L": 0.221,
+          "D": 0.265,
+          "U": 0.285,
+          "R": 0.229
         },
-        "hold_share": 0.0636,
-        "jump_share": 0.0671,
-        "flow_cost_max": 8.0,
-        "flow_cost_mean": 0.04,
-        "density_energy_spearman": 0.5898,
+        "hold_share": 0.0818,
+        "jump_share": 0.0692,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.5557,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -97,50 +92,35 @@
       }
     },
     "hard": {
-      "notes": 525,
-      "meter": 9,
-      "jumps": 3,
-      "holds": 42,
-      "repaired": 53,
+      "notes": 359,
+      "meter": 8,
+      "jumps": 43,
+      "holds": 22,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 8,
-        "verdict": "An outstanding tech-stream chart with flawless rhythm, let down only by thematic but physically awkward multi-panel hold overlaps.",
-        "issues": [
-          {
-            "where": "36.198",
-            "problem": "Tap U occurs while HOLD L and HOLD R are both active, forcing an awkward hand plant or hold drop."
-          },
-          {
-            "where": "41.918 - 42.199",
-            "problem": "Overlapping holds on D, L, and U create an unannounced 3-panel hold (triple)."
-          },
-          {
-            "where": "46.512 - 46.700",
-            "problem": "Simultaneous holds on D, L, R, and U create a 4-panel quad hold, which is unplayable with feet alone."
-          },
-          {
-            "where": "58.515 - 58.702",
-            "problem": "Another 3-panel hold overlap involving D, R, and U."
-          }
-        ]
+        "score": 10,
+        "verdict": "An exceptionally well-polished, highly expressive, and perfectly flowing chart that captures the energy of the track with master-class flow and musicality.",
+        "issues": []
       },
-      "previews": {},
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/mistakes/hard.assist.ogg"
+      },
       "metrics": {
-        "notes": 525,
-        "onset_alignment": 0.9943,
-        "grid_notes": 3,
+        "notes": 359,
+        "onset_alignment": 0.9805,
+        "grid_notes": 7,
         "panel_balance": {
           "L": 0.214,
-          "D": 0.29,
-          "U": 0.277,
-          "R": 0.22
+          "D": 0.276,
+          "U": 0.269,
+          "R": 0.241
         },
-        "hold_share": 0.08,
-        "jump_share": 0.0057,
-        "flow_cost_max": 13.85,
-        "flow_cost_mean": 0.43,
-        "density_energy_spearman": 0.4509,
+        "hold_share": 0.0613,
+        "jump_share": 0.1198,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.02,
+        "density_energy_spearman": 0.4707,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,

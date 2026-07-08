@@ -1,18 +1,23 @@
 {
-  "score": 7,
-  "verdict": "A rhythmically accurate and dynamic chart that captures the song's energy well, but contains several physical demands and a 3-panel bracket that are too difficult for a Medium rating.",
+  "score": 4,
+  "verdict": "The chart has decent rhythmic sync, but the difficulty is severely misjudged for a Medium chart, featuring long 16th streams and highly advanced hold/bracket tech.",
   "issues": [
     {
-      "where": "37.737 to 38.009",
-      "problem": "Holding U while executing a JUMP LR requires a 3-panel bracket (or hand), which is an illegal/unintended technique for a standard Medium chart."
+      "where": "24.173",
+      "problem": "A continuous 9-note 16th stream at 110 BPM is too long and intense for a Medium chart, and the pattern forces awkward double-steps."
     },
     {
-      "where": "55.100 to 61.000",
-      "problem": "The rapid 16th-note tap-to-jump and jump-to-tap sequences (e.g., L to JUMP LR to U) are extremely physically demanding and far exceed the expected difficulty of a Medium chart."
+      "where": "42.214",
+      "problem": "Holding D while playing a 16th stream (R -> L -> U) requires advanced one-foot technical play (jacks/slides) that does not belong on a Medium chart."
     },
     {
-      "where": "42.078 to 42.892",
-      "problem": "Tapping D and U with the left foot while holding R, followed immediately by tapping L, forces either a highly awkward crossover or an intense double-step, which is too complex for this level."
+      "where": "85.620",
+      "problem": "Holding D while hitting jumps (UR at 86.841, LR at 87.926) forces complex bracketing, making it nearly impossible for a Medium-level player to maintain the hold."
+    },
+    {
+      "where": "10.337",
+      "problem": "Tapping L at 10.473 while both U and D are held requires an uncomfortable bracket or drop, which is too technical for this difficulty."
     }
-  ]
+  ],
+  "human_review": true
 }

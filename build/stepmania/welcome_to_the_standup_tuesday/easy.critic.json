@@ -1,5 +1,10 @@
 {
-  "score": 10,
-  "verdict": "An exceptionally well-crafted Easy chart that perfectly captures the rhythm and energy of the song with natural foot flow and flawless timing.",
-  "issues": []
+  "score": 8,
+  "verdict": "An exceptionally well-rhythmed Easy chart that matches the vocals beautifully, but is marred by one overly complex and awkward hold sequence near the end.",
+  "issues": [
+    {
+      "where": "73.655 to 75.774",
+      "problem": "Holding U while tapping L and then holding R creates a highly awkward, crossover double-hold stance (U and R held simultaneously) that is far too difficult for an Easy chart."
+    }
+  ]
 }

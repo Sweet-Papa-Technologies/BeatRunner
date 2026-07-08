@@ -1,19 +1,14 @@
 {
-  "score": 4,
-  "verdict": "Though rhythmically engaging, the chart is severely held back by unintended three-panel hands and awkward one-foot 16th-note maneuvers during holds.",
+  "score": 8,
+  "verdict": "An incredibly well-timed and rhythmic chart that captures the syncopation of the music beautifully, held back only by a highly repetitive jump pattern.",
   "issues": [
     {
-      "where": "44.264 and 53.738",
-      "problem": "Placing JUMP LR while HOLD U is active creates an unintended 3-panel 'Hand' that cannot be cleanly played with feet alone on a standard single-dance pad."
+      "where": "18.211 to 39.527",
+      "problem": "The chart uses 'JUMP UR' ten times consecutively for every major beat accent. This extreme repetition creates a heavy right-side bias; alternating with JUMP UL or other jump variations would improve physical balance and engagement."
     },
     {
-      "where": "19.198, 28.672, and 41.303",
-      "problem": "Forces 16th-note transitions between two panels with one foot (e.g., U to L) while the other foot is anchoring a hold. This is extremely awkward and difficult to execute cleanly at 152 BPM."
-    },
-    {
-      "where": "17.520, 19.099, 22.257, 23.836, and 25.415",
-      "problem": "Very tight 16th-note transitions from a double-panel jump to a single-panel hold, which breaks the physical flow of the choreography."
+      "where": "15.349 to 15.448",
+      "problem": "A 16th-note transition between opposite outer panels (L to R) at 152 BPM (99ms gap) is extremely wide and physically awkward for a Medium difficulty chart."
     }
-  ],
-  "human_review": true
+  ]
 }

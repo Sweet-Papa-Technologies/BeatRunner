@@ -1,18 +1,18 @@
 {
-  "score": 7,
-  "verdict": "Flawless rhythm alignment and an energetic drop, but severely hampered by awkward 16th-note runs forced on a single foot during holds in the verse.",
+  "score": 8,
+  "verdict": "An energetic and rhythmically stellar chart with excellent drop pacing, held back only by a few awkward crossover flows in the streams and holds.",
   "issues": [
     {
-      "where": "14.635 - 15.111",
-      "problem": "Holding R forces the player to perform a rapid 16th-note run (D -> U -> L) entirely on the left foot, which is extremely awkward and physically strenuous."
+      "where": "11.422 - 12.255",
+      "problem": "The 16th-note stream sequence (D -> U -> R -> L -> D -> U -> R -> D) forces uncomfortable double-stepping or an extreme, unplayable body twist."
     },
     {
-      "where": "16.658 - 17.134",
-      "problem": "Holding D forces a one-foot 16th-note run (U -> L -> R) on the left foot, creating an unnatural movement bottleneck."
+      "where": "51.050 - 51.407",
+      "problem": "Tapping L -> R -> D while holding U forces a highly awkward crossover/under-crossover on the free foot."
     },
     {
-      "where": "20.585 - 21.061",
-      "problem": "Holding U forces the right foot to execute a fast L -> R -> D 16th-note sequence, causing severe balance and flow issues."
+      "where": "54.620",
+      "problem": "A JUMP LR is placed during a HOLD U, forcing an unexpected 3-panel bracket/chord that is a bit too technical for a standard Hard rating."
     }
   ]
 }

@@ -1,0 +1,151 @@
+{
+  "track_id": "good_4_u_phonk_4",
+  "bpm": 152.607,
+  "offset": 0.268,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 151,
+      "meter": 3,
+      "jumps": 4,
+      "holds": 13,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 6,
+        "verdict": "The chart has good music synchronization and structure, but the first chorus contains 4th-note streams that are too long, complex, and physically awkward (forcing double-steps/spins) for an Easy difficulty.",
+        "issues": [
+          {
+            "where": "28.183 - 32.115",
+            "problem": "An 11-note 4th-note stream at 152 BPM is very long for an Easy chart. Furthermore, the pattern (R -> U -> D -> L -> U -> D -> R...) forces highly awkward double-stepping or extreme body turns/spins."
+          },
+          {
+            "where": "39.585 - 42.730",
+            "problem": "Similar to the first stream, this 4th-note run features uncomfortable transitions (like D -> R -> U -> D -> L) that are too twisty for an Easy player to navigate comfortably."
+          },
+          {
+            "where": "75.756",
+            "problem": "Inconsistent jump formatting. Unlike other jumps written as 'JUMP DR', this jump is split into two separate tap events ('tap U' and 'tap R') at the exact same timestamp, which can cause reading/parsing inconsistencies."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/good_4_u_phonk_4/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 151,
+        "onset_alignment": 0.8013,
+        "grid_notes": 30,
+        "panel_balance": {
+          "L": 0.2,
+          "D": 0.31,
+          "U": 0.284,
+          "R": 0.206
+        },
+        "hold_share": 0.0861,
+        "jump_share": 0.0265,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.4478,
+        "gates": {
+          "onset_alignment": false,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 249,
+      "meter": 6,
+      "jumps": 17,
+      "holds": 12,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 10,
+        "verdict": "An exceptionally well-crafted chart with perfect syncopation, fluid foot flow, and outstanding representation of the song's energy.",
+        "issues": []
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/good_4_u_phonk_4/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 249,
+        "onset_alignment": 0.9317,
+        "grid_notes": 17,
+        "panel_balance": {
+          "L": 0.203,
+          "D": 0.301,
+          "U": 0.271,
+          "R": 0.226
+        },
+        "hold_share": 0.0482,
+        "jump_share": 0.0683,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.3031,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 359,
+      "meter": 8,
+      "jumps": 18,
+      "holds": 26,
+      "repaired": 1,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "An exceptionally well-crafted chart that perfectly captures the rhythm and energy of the track with natural foot flow and highly creative hold patterns.",
+        "issues": [
+          {
+            "where": "77.427 - 78.410",
+            "problem": "The rapid alternation of D -> U -> L -> D -> U -> R creates a highly technical movement pattern (front-to-back weight shifting) that might feel slightly too intense or twisty for a standard Hard-difficulty player, though it fits the energetic climax of the song."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/good_4_u_phonk_4/hard.assist.ogg"
+      },
+      "metrics": {
+        "notes": 359,
+        "onset_alignment": 0.9721,
+        "grid_notes": 10,
+        "panel_balance": {
+          "L": 0.218,
+          "D": 0.284,
+          "U": 0.276,
+          "R": 0.223
+        },
+        "hold_share": 0.0724,
+        "jump_share": 0.0501,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.03,
+        "density_energy_spearman": 0.3828,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/good_4_u_phonk_4/good_4_u_phonk_4.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/good_4_u_phonk_4/good_4_u_phonk_4.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/good_4_u_phonk_4/good_4_u_phonk_4.ogg"
+  },
+  "out": "build/stepmania/good_4_u_phonk_4",
+  "meter_monotonic": true
+}

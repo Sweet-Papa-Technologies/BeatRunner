@@ -1,0 +1,172 @@
+{
+  "track_id": "tragic",
+  "bpm": 120.185,
+  "offset": 0.448,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 161,
+      "meter": 3,
+      "jumps": 4,
+      "holds": 19,
+      "repaired": 79,
+      "repair_ok": false,
+      "critic": {
+        "score": 9,
+        "verdict": "An outstanding Easy chart with perfect sync, comfortable circular flow, and excellent management of physical movement.",
+        "issues": [
+          {
+            "where": "66.222",
+            "problem": "The hold release is on a 16th-note off-beat, which is slightly inconsistent with the rest of the chart's 4th and 8th-note grid rhythm."
+          },
+          {
+            "where": "26.408",
+            "problem": "An 8th-note jump immediately following an 8th-note tap (at 26.158) is a bit of a sudden difficulty spike for an Easy chart."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/tragic/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 161,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.242,
+          "D": 0.236,
+          "U": 0.261,
+          "R": 0.261
+        },
+        "hold_share": 0.118,
+        "jump_share": 0.0248,
+        "flow_cost_max": 14.15,
+        "flow_cost_mean": 1.25,
+        "density_energy_spearman": 0.412,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": false,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 185,
+      "meter": 6,
+      "jumps": 13,
+      "holds": 10,
+      "repaired": 1,
+      "repair_ok": true,
+      "critic": {
+        "score": 7,
+        "verdict": "A rhythmically precise and well-structured Medium chart with great energy tracking, let down by some overly complex 16th-note crossovers and spin patterns that exceed typical Medium difficulty standards.",
+        "issues": [
+          {
+            "where": "41.884 - 43.007",
+            "problem": "The lengthy 16th-note stream (L -> D -> U -> R -> D -> U -> L -> R) forces a highly disorienting double-crossover/half-spin at 120 BPM, which is too mechanically demanding for a standard Medium chart."
+          },
+          {
+            "where": "44.630 - 44.880",
+            "problem": "The pattern U -> R -> D (hold) requires a fast 16th-note crossover directly into a hold, making it very awkward to maintain balance while freezing on the Down panel."
+          },
+          {
+            "where": "19.169 and 23.163",
+            "problem": "These short 3-note 16th bursts (L -> R -> D and U -> D -> R) introduce sharp crossovers that feel unnecessarily abrupt and complex for this difficulty level."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/tragic/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 185,
+        "onset_alignment": 0.9892,
+        "grid_notes": 2,
+        "panel_balance": {
+          "L": 0.212,
+          "D": 0.268,
+          "U": 0.283,
+          "R": 0.237
+        },
+        "hold_share": 0.0541,
+        "jump_share": 0.0703,
+        "flow_cost_max": 7.85,
+        "flow_cost_mean": 0.05,
+        "density_energy_spearman": 0.6355,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "hard": {
+      "notes": 249,
+      "meter": 8,
+      "jumps": 26,
+      "holds": 20,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 4,
+        "verdict": "The chart is poorly paced with over-dense, awkward 16th streams during the verse and uncomfortable vertical transitions (Up/Down) throughout.",
+        "issues": [
+          {
+            "where": "16.423 - 30.402",
+            "problem": "The verse of the song is over-charted with continuous, complex 16th-note streams, which creates an inverted difficulty curve as it feels more demanding than the chorus."
+          },
+          {
+            "where": "21.665 - 22.165",
+            "problem": "Features a 'U -> D -> R -> L -> U' 16th-note sequence. The direct 16th-note transition between Up and Down (0.125s) is extremely awkward to play, requiring either double-stepping or an uncomfortable physical stretch."
+          },
+          {
+            "where": "41.759 - 42.259",
+            "problem": "The chorus contains repeated direct U -> D 16th-note transitions (e.g., 41.759 to 41.884 and 42.134 to 42.259) which break the flow and cause balance issues."
+          },
+          {
+            "where": "47.750 - 47.875",
+            "problem": "A rapid 16th-note D -> U transition right after a jump makes recovery and maintaining proper foot flow highly erratic."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/tragic/hard.assist.ogg"
+      },
+      "metrics": {
+        "notes": 249,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.229,
+          "D": 0.258,
+          "U": 0.298,
+          "R": 0.215
+        },
+        "hold_share": 0.0803,
+        "jump_share": 0.1044,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.7257,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/tragic/tragic.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/tragic/tragic.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/tragic/tragic.ogg"
+  },
+  "out": "build/stepmania/tragic",
+  "meter_monotonic": true
+}

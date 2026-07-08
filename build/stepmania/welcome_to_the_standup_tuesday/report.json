@@ -5,35 +5,40 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 87,
+      "notes": 99,
       "meter": 2,
-      "jumps": 17,
-      "holds": 10,
-      "repaired": 1,
+      "jumps": 2,
+      "holds": 15,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 10,
-        "verdict": "An exceptionally well-crafted Easy chart that perfectly captures the rhythm and energy of the song with natural foot flow and flawless timing.",
-        "issues": []
+        "score": 8,
+        "verdict": "An exceptionally well-rhythmed Easy chart that matches the vocals beautifully, but is marred by one overly complex and awkward hold sequence near the end.",
+        "issues": [
+          {
+            "where": "73.655 to 75.774",
+            "problem": "Holding U while tapping L and then holding R creates a highly awkward, crossover double-hold stance (U and R held simultaneously) that is far too difficult for an Easy chart."
+          }
+        ]
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/welcome_to_the_standup_tuesday/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 87,
-        "onset_alignment": 0.9655,
-        "grid_notes": 3,
+        "notes": 99,
+        "onset_alignment": 0.9394,
+        "grid_notes": 6,
         "panel_balance": {
-          "L": 0.288,
-          "D": 0.26,
-          "U": 0.221,
-          "R": 0.231
+          "L": 0.228,
+          "D": 0.287,
+          "U": 0.277,
+          "R": 0.208
         },
-        "hold_share": 0.1149,
-        "jump_share": 0.1954,
-        "flow_cost_max": 7.85,
-        "flow_cost_mean": 0.09,
-        "density_energy_spearman": 0.4476,
+        "hold_share": 0.1515,
+        "jump_share": 0.0202,
+        "flow_cost_max": 0.0,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.5106,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -44,44 +49,35 @@
       }
     },
     "medium": {
-      "notes": 130,
+      "notes": 133,
       "meter": 5,
-      "jumps": 28,
-      "holds": 14,
-      "repaired": 5,
+      "jumps": 9,
+      "holds": 7,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 7,
-        "verdict": "A fun, well-paced chart that matches the upbeat energy of the song, but holds back its quality with a physically impossible three-panel overlap near the end.",
-        "issues": [
-          {
-            "where": "77.539",
-            "problem": "Requires tapping L while both R (held 76.480 to 77.892) and D (held 77.186 to 77.892) are actively held, forcing an impossible 3-panel overlap for a Medium singles chart."
-          },
-          {
-            "where": "41.528 - 41.881",
-            "problem": "The rapid eighth-note sequence (U -> R -> D) at 170 BPM is a sudden spike in difficulty compared to the rest of the chart's comfortable quarter-note stream."
-          }
-        ]
+        "score": 10,
+        "verdict": "An exceptionally well-flowing Medium chart that perfectly captures the syncopated vocal rhythm and elevates chorus energy with comfortable jump-stream patterns.",
+        "issues": []
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/welcome_to_the_standup_tuesday/medium.assist.ogg"
       },
       "metrics": {
-        "notes": 130,
-        "onset_alignment": 0.9769,
-        "grid_notes": 3,
+        "notes": 133,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
         "panel_balance": {
-          "L": 0.278,
-          "D": 0.228,
-          "U": 0.253,
-          "R": 0.241
+          "L": 0.211,
+          "D": 0.296,
+          "U": 0.275,
+          "R": 0.218
         },
-        "hold_share": 0.1077,
-        "jump_share": 0.2154,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.2,
-        "density_energy_spearman": 0.6645,
+        "hold_share": 0.0526,
+        "jump_share": 0.0677,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.6056,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -92,19 +88,27 @@
       }
     },
     "hard": {
-      "notes": 174,
+      "notes": 187,
       "meter": 8,
-      "jumps": 8,
-      "holds": 13,
-      "repaired": 3,
+      "jumps": 16,
+      "holds": 15,
+      "repaired": 4,
       "repair_ok": true,
       "critic": {
-        "score": 9,
-        "verdict": "An exceptionally fun, well-quantized, and expressive chart that perfectly captures the energetic rhythm of the daily stand-up theme.",
+        "score": 7,
+        "verdict": "An incredibly fun, vocal-synced chart with great energy, held back by a few physically impossible 3-panel hold oversights.",
         "issues": [
           {
-            "where": "72.243 - 72.949",
-            "problem": "The transition from the LD jump to tap U, tap R, and an immediate HOLD D requires a fast, slightly awkward weight transfer or a double-tap on the right foot."
+            "where": "40.293",
+            "problem": "Tapping D while both L and R are held (HOLD R from 39.763 to 40.469, HOLD L from 40.116 to 41.528) requires three feet, which is physically impossible on a standard pad without using hands or awkward bracketing."
+          },
+          {
+            "where": "75.421",
+            "problem": "Tapping R (and U at 75.597) while both D and L are held (HOLD D from 73.655 to 75.774, HOLD L from 75.068 to 75.774) creates another physically impossible 3-panel situation."
+          },
+          {
+            "where": "33.938",
+            "problem": "The rapid R -> D -> U sequence at 170 BPM forces either a very fast, uncomfortable double-step or a full 360-degree spin, which is highly demanding for a standard Hard chart."
           }
         ]
       },
@@ -112,20 +116,20 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/welcome_to_the_standup_tuesday/hard.assist.ogg"
       },
       "metrics": {
-        "notes": 174,
-        "onset_alignment": 0.977,
+        "notes": 187,
+        "onset_alignment": 0.9786,
         "grid_notes": 4,
         "panel_balance": {
-          "L": 0.242,
-          "D": 0.269,
-          "U": 0.291,
-          "R": 0.198
+          "L": 0.222,
+          "D": 0.271,
+          "U": 0.281,
+          "R": 0.227
         },
-        "hold_share": 0.0747,
-        "jump_share": 0.046,
+        "hold_share": 0.0802,
+        "jump_share": 0.0856,
         "flow_cost_max": 8.15,
         "flow_cost_mean": 0.14,
-        "density_energy_spearman": 0.2723,
+        "density_energy_spearman": 0.4763,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,

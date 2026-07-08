@@ -1,0 +1,19 @@
+{
+  "score": 5,
+  "verdict": "The rhythm is perfectly synchronized to the 140 BPM tempo, but the physical flow is severely compromised by frequent vertical 16th-note jumps and awkward spins.",
+  "issues": [
+    {
+      "where": "15.298, 38.770, 40.485, 54.739, 55.275, 56.561, 72.638, 77.140, 79.176, 83.249, 95.788",
+      "problem": "Frequent 16th-note transitions between Down and Up (or vice versa) force extremely awkward vertical double-steps or rapid hip twists."
+    },
+    {
+      "where": "69.423",
+      "problem": "The 16th-note sequence D -> R -> U -> D forms a full spin at 140 BPM, which is highly disorienting and physically awkward to play."
+    },
+    {
+      "where": "82.070",
+      "problem": "The 16th-note run U -> L -> R -> D -> U creates a highly complex, uncomfortable sequence of double-crossovers."
+    }
+  ],
+  "human_review": true
+}

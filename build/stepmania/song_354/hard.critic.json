@@ -1,10 +1,18 @@
 {
-  "score": 9.5,
-  "verdict": "An exceptionally well-crafted chart with smooth crossovers, natural physical flow, and excellent tracking of the music's structural shifts.",
+  "score": 7,
+  "verdict": "A solid, energetic chart with great rhythm and natural alternation, held back by minor quantization errors, an awkward vertical jump, and a locked-foot double-step.",
   "issues": [
     {
-      "where": "140.932 - 142.086",
-      "problem": "A sudden 1.15-second gap in steps occurs here, which feels slightly abrupt and drops the physical momentum compared to the preceding rhythmic section."
+      "where": "118.556 to 119.018",
+      "problem": "While the left foot is locked holding D, the player must tap U (118.787) and then R (118.902) at 16th-note speed. This forces a fast, awkward double-step on the right foot."
+    },
+    {
+      "where": "99.987 to 100.102",
+      "problem": "A fast 16th-note transition from a DR jump into a UD (Up-Down) jump. UD jumps are vertically aligned and highly uncomfortable to execute at high speeds."
+    },
+    {
+      "where": "151.198, 157.426, 171.036",
+      "problem": "Minor quantization errors where the hold releases (at 152.490, 158.017, and 171.627) are slightly off-grid relative to the 130 BPM tempo. Snapping them to the 16th-note grid would perfect the timing."
     }
   ]
 }

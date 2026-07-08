@@ -1,14 +1,19 @@
 {
-  "score": 9,
-  "verdict": "A wonderfully fluid and beautifully synced Easy chart that captures the energetic tempo of the remix perfectly with highly comfortable foot-flow.",
+  "score": 5,
+  "verdict": "Mostly playable but features inappropriately short holds and overly complex syncopations for an Easy chart.",
   "issues": [
     {
-      "where": "19.752",
-      "problem": "Staggered overlapping holds (D starting at 19.752 and U starting at 19.935) might be slightly too complex for an Easy chart's coordination level, though they are rhythmically accurate."
+      "where": "115.752, 119.409, 120.506, 120.872",
+      "problem": "Holds of 183ms (8th-note duration) are extremely short and will easily drop or feel like glitchy taps rather than holds, which is highly frustrating, especially on an Easy chart."
     },
     {
-      "where": "17.740",
-      "problem": "Multiple very short 1-beat holds (0.366s) throughout the chart act almost like normal taps, though they do help highlight the quick vocal stabs."
+      "where": "125.261 - 127.455",
+      "problem": "A series of consecutive half-note jumps (LR, DR, UR, LR) creates an abrupt and inappropriate difficulty spike at the very end of an Easy chart."
+    },
+    {
+      "where": "Throughout",
+      "problem": "Frequent syncopated rhythms (dotted quarters and off-beat eighth notes) make the physical reading and step-coordination too complex for a standard Easy difficulty."
     }
-  ]
+  ],
+  "human_review": true
 }

@@ -5,101 +5,40 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 141,
+      "notes": 121,
       "meter": 3,
-      "jumps": 17,
-      "holds": 12,
-      "repaired": 1,
+      "jumps": 0,
+      "holds": 23,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 5,
-        "verdict": "The chart is timed correctly to the beat, but contains sequences that are far too complex and physically demanding for an Easy difficulty.",
+        "score": 9,
+        "verdict": "A beautifully crafted Easy chart that perfectly captures the vocal rhythms with comfortable flow and smart hold placements.",
         "issues": [
           {
-            "where": "22.816 to 29.870",
-            "problem": "A long, continuous quarter-note stream of 14 steps with no rest is too dense for an Easy chart, and the repetitive 'D -> U -> R -> D -> U -> L' pattern forces unnatural double-stepping or complex crossovers."
-          },
-          {
-            "where": "6.810 - 7.082 and 16.305 - 16.577",
-            "problem": "Isolated eighth-note transitions between vertical opposites (U to D, and D to U) are disorienting and difficult for beginners to execute smoothly."
-          },
-          {
-            "where": "34.753 - 39.094",
-            "problem": "The chorus introduces too many consecutive JUMP LR notes spaced closely together, which spikes the physical difficulty too high for an Easy chart."
+            "where": "37.737",
+            "problem": "Eighth-note transition to HOLD U after tap D at 37.466 may be slightly quick for a beginner Easy chart, though it fits the vocal syncopation well."
           }
-        ],
-        "human_review": true
+        ]
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/tired/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 141,
-        "onset_alignment": 0.9645,
-        "grid_notes": 5,
+        "notes": 121,
+        "onset_alignment": 0.9504,
+        "grid_notes": 6,
         "panel_balance": {
-          "L": 0.266,
-          "D": 0.266,
-          "U": 0.253,
+          "L": 0.198,
+          "D": 0.289,
+          "U": 0.298,
           "R": 0.215
         },
-        "hold_share": 0.0851,
-        "jump_share": 0.1206,
-        "flow_cost_max": 8.0,
-        "flow_cost_mean": 0.06,
-        "density_energy_spearman": 0.2561,
-        "gates": {
-          "onset_alignment": true,
-          "panel_balance": true,
-          "hold_share": false,
-          "flow_ceiling": true,
-          "density_energy": false
-        }
-      }
-    },
-    "medium": {
-      "notes": 225,
-      "meter": 5,
-      "jumps": 30,
-      "holds": 19,
-      "repaired": 3,
-      "repair_ok": true,
-      "critic": {
-        "score": 7,
-        "verdict": "A rhythmically accurate and dynamic chart that captures the song's energy well, but contains several physical demands and a 3-panel bracket that are too difficult for a Medium rating.",
-        "issues": [
-          {
-            "where": "37.737 to 38.009",
-            "problem": "Holding U while executing a JUMP LR requires a 3-panel bracket (or hand), which is an illegal/unintended technique for a standard Medium chart."
-          },
-          {
-            "where": "55.100 to 61.000",
-            "problem": "The rapid 16th-note tap-to-jump and jump-to-tap sequences (e.g., L to JUMP LR to U) are extremely physically demanding and far exceed the expected difficulty of a Medium chart."
-          },
-          {
-            "where": "42.078 to 42.892",
-            "problem": "Tapping D and U with the left foot while holding R, followed immediately by tapping L, forces either a highly awkward crossover or an intense double-step, which is too complex for this level."
-          }
-        ]
-      },
-      "previews": {
-        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/tired/medium.assist.ogg"
-      },
-      "metrics": {
-        "notes": 225,
-        "onset_alignment": 1.0,
-        "grid_notes": 0,
-        "panel_balance": {
-          "L": 0.251,
-          "D": 0.278,
-          "U": 0.247,
-          "R": 0.224
-        },
-        "hold_share": 0.0844,
-        "jump_share": 0.1333,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.05,
-        "density_energy_spearman": 0.3392,
+        "hold_share": 0.1901,
+        "jump_share": 0.0,
+        "flow_cost_max": 0.0,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.4026,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -109,48 +48,89 @@
         }
       }
     },
-    "hard": {
-      "notes": 399,
-      "meter": 8,
-      "jumps": 32,
-      "holds": 19,
-      "repaired": 7,
+    "medium": {
+      "notes": 350,
+      "meter": 6,
+      "jumps": 17,
+      "holds": 21,
+      "repaired": 22,
       "repair_ok": true,
       "critic": {
-        "score": 6,
-        "verdict": "Great rhythmic mapping and standard streams, but severely marred by physically impossible 16th-note runs and jumps during active holds.",
+        "score": 4,
+        "verdict": "The chart has decent rhythmic sync, but the difficulty is severely misjudged for a Medium chart, featuring long 16th streams and highly advanced hold/bracket tech.",
         "issues": [
           {
-            "where": "42.078 - 42.620",
-            "problem": "Holding U while playing a rapid 16th-note run (D, R, L) forces the player to perform an impossible one-foot stream on a dance pad."
+            "where": "24.173",
+            "problem": "A continuous 9-note 16th stream at 110 BPM is too long and intense for a Medium chart, and the pattern forces awkward double-steps."
           },
           {
-            "where": "74.768 - 74.904",
-            "problem": "The JUMP DR at 74.904 occurs while the L panel is held, creating an unintentional 3-panel 'hand' or forcing a highly awkward bracket release."
+            "where": "42.214",
+            "problem": "Holding D while playing a 16th stream (R -> L -> U) requires advanced one-foot technical play (jacks/slides) that does not belong on a Medium chart."
           },
           {
-            "where": "85.620 - 86.434",
-            "problem": "Holding L while executing a 16th-note stream of U, D, R, U requires the right foot to move at impossible speeds to hit all three remaining panels."
+            "where": "85.620",
+            "problem": "Holding D while hitting jumps (UR at 86.841, LR at 87.926) forces complex bracketing, making it nearly impossible for a Medium-level player to maintain the hold."
+          },
+          {
+            "where": "10.337",
+            "problem": "Tapping L at 10.473 while both U and D are held requires an uncomfortable bracket or drop, which is too technical for this difficulty."
           }
         ],
         "human_review": true
       },
       "previews": {},
       "metrics": {
-        "notes": 399,
-        "onset_alignment": 0.9925,
-        "grid_notes": 3,
+        "notes": 350,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
         "panel_balance": {
-          "L": 0.251,
-          "D": 0.276,
-          "U": 0.26,
-          "R": 0.213
+          "L": 0.223,
+          "D": 0.275,
+          "U": 0.272,
+          "R": 0.229
         },
-        "hold_share": 0.0476,
-        "jump_share": 0.0802,
+        "hold_share": 0.06,
+        "jump_share": 0.0486,
+        "flow_cost_max": 39.15,
+        "flow_cost_mean": 0.32,
+        "density_energy_spearman": 0.3504,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": false,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 396,
+      "meter": 8,
+      "jumps": 16,
+      "holds": 15,
+      "repaired": 7,
+      "repair_ok": true,
+      "critic": {
+        "score": 10,
+        "verdict": "An exceptionally clean, highly polished, and professional chart with flawless foot flow, perfect sync, and highly engaging rhythm mapping.",
+        "issues": []
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 396,
+        "onset_alignment": 0.9848,
+        "grid_notes": 6,
+        "panel_balance": {
+          "L": 0.221,
+          "D": 0.279,
+          "U": 0.277,
+          "R": 0.223
+        },
+        "hold_share": 0.0379,
+        "jump_share": 0.0404,
         "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.12,
-        "density_energy_spearman": 0.4204,
+        "flow_cost_mean": 0.09,
+        "density_energy_spearman": 0.3807,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,

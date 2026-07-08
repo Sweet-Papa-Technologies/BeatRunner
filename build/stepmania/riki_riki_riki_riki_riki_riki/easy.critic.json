@@ -1,0 +1,14 @@
+{
+  "score": 9,
+  "verdict": "An outstandingly well-timed Easy chart that perfectly captures the vocal syncopation and structures the physical density to match the song's energy.",
+  "issues": [
+    {
+      "where": "0:12",
+      "problem": "Tapping D at 12.472 while holding R introduces a hold-active step. This is a minor difficulty spike for an Easy chart, though it is executed cleanly."
+    },
+    {
+      "where": "0:04",
+      "problem": "The isolated eighth note at 4.226 might catch absolute beginners off guard so early in the song, though it accurately matches the 'knows' lyric."
+    }
+  ]
+}

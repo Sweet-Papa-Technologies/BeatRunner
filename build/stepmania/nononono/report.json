@@ -5,52 +5,38 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 147,
+      "notes": 223,
       "meter": 3,
-      "jumps": 55,
-      "holds": 18,
-      "repaired": 18,
+      "jumps": 6,
+      "holds": 27,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 5,
-        "verdict": "A mostly standard Easy chart that is severely held back by excessive repetition and uncomfortable, high-difficulty spikes including Up-Down jumps.",
-        "issues": [
-          {
-            "where": "98.427 and 101.153",
-            "problem": "The use of JUMP UD (Up/Down) is highly discouraged for Easy charts, as it requires unsafe/awkward body twisting for beginners."
-          },
-          {
-            "where": "Throughout the chart (e.g., 5.050, 11.184, 23.453, 32.995, 71.164, 110.695)",
-            "problem": "The sequence 'JUMP LR -> tap D -> JUMP LR -> tap D' is copy-pasted excessively, leading to an extremely repetitive and boring gameplay flow."
-          },
-          {
-            "where": "98.427 - 102.516",
-            "problem": "Transitioning directly from a JUMP UD into dense quarter-note steps (L -> R -> D) ending in another jump at 176 BPM represents a massive, unfair spike in difficulty for an Easy chart."
-          }
-        ],
-        "human_review": true
+        "score": 10,
+        "verdict": "An absolutely flawless Easy chart that perfectly captures the rhythm and structure of the song with superb flow and appropriate density.",
+        "issues": []
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/nononono/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 147,
-        "onset_alignment": 0.898,
-        "grid_notes": 15,
+        "notes": 223,
+        "onset_alignment": 0.9013,
+        "grid_notes": 22,
         "panel_balance": {
-          "L": 0.317,
-          "D": 0.297,
-          "U": 0.114,
-          "R": 0.272
+          "L": 0.179,
+          "D": 0.319,
+          "U": 0.314,
+          "R": 0.188
         },
-        "hold_share": 0.1224,
-        "jump_share": 0.3741,
-        "flow_cost_max": 1.0,
-        "flow_cost_mean": 0.04,
-        "density_energy_spearman": 0.4121,
+        "hold_share": 0.1211,
+        "jump_share": 0.0269,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.31,
         "gates": {
-          "onset_alignment": false,
-          "panel_balance": false,
+          "onset_alignment": true,
+          "panel_balance": true,
           "hold_share": true,
           "flow_ceiling": true,
           "density_energy": false
@@ -58,27 +44,27 @@
       }
     },
     "medium": {
-      "notes": 274,
+      "notes": 252,
       "meter": 5,
-      "jumps": 95,
-      "holds": 25,
-      "repaired": 9,
+      "jumps": 9,
+      "holds": 17,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 4,
-        "verdict": "A highly repetitive chart that matches the rhythm of the music but suffers from severe monotony and lazy patterning.",
+        "score": 6,
+        "verdict": "A mechanically sound chart with great natural foot flow, but suffers from extreme monotony in its long quarter-note streams and sudden intense tap-jump spikes.",
         "issues": [
           {
-            "where": "34.699 - 49.353",
-            "problem": "Extreme repetition of the 'JUMP LR -> tap D' sequence. Repeating the exact same physical movement 44 times in a row is incredibly monotonous and exhausting."
+            "where": "60.258 - 90.589",
+            "problem": "Extremely long, uninterrupted quarter-note stream lasting over 30 seconds without any rest steps, which feels overly monotonous and exhausting for a Medium chart."
           },
           {
-            "where": "Entire chart",
-            "problem": "Severe lack of jump variety. Almost all jumps are 'JUMP LR', which makes the layout feel one-dimensional and fails to utilize the full pad."
+            "where": "98.086 - 100.812",
+            "problem": "Intense tap-jump-tap-jump stream at 176 BPM creates a severe difficulty spike that is physically exhausting and overly complex for a Medium difficulty level."
           },
           {
-            "where": "6.413 - 16.637",
-            "problem": "Awkward foot flow. Repeatedly jumping on L+R and immediately tapping D forces the player into repetitive double-stepping or straining bracket-steps."
+            "where": "121.260 - 124.668",
+            "problem": "Another rapid tap-jump-tap sequence that requires very fast foot transitions, breaking the expected pacing of a Standard/Medium chart."
           }
         ],
         "human_review": true
@@ -87,23 +73,23 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/nononono/medium.assist.ogg"
       },
       "metrics": {
-        "notes": 274,
-        "onset_alignment": 0.9161,
-        "grid_notes": 23,
+        "notes": 252,
+        "onset_alignment": 0.9325,
+        "grid_notes": 17,
         "panel_balance": {
-          "L": 0.298,
-          "D": 0.298,
-          "U": 0.122,
-          "R": 0.282
+          "L": 0.195,
+          "D": 0.314,
+          "U": 0.287,
+          "R": 0.203
         },
-        "hold_share": 0.0912,
-        "jump_share": 0.3467,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.08,
-        "density_energy_spearman": 0.1901,
+        "hold_share": 0.0675,
+        "jump_share": 0.0357,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.4618,
         "gates": {
           "onset_alignment": true,
-          "panel_balance": false,
+          "panel_balance": true,
           "hold_share": true,
           "flow_ceiling": true,
           "density_energy": false
@@ -111,59 +97,37 @@
       }
     },
     "hard": {
-      "notes": 587,
-      "meter": 9,
-      "jumps": 51,
-      "holds": 27,
-      "repaired": 25,
+      "notes": 484,
+      "meter": 8,
+      "jumps": 52,
+      "holds": 34,
+      "repaired": 7,
       "repair_ok": true,
       "critic": {
-        "score": 3,
-        "verdict": "The chart is heavily marred by physically impossible three-panel holds (unintentional hands) and extreme, lazy pattern repetition.",
-        "issues": [
-          {
-            "where": "9.821",
-            "problem": "Requires pressing Left and Right simultaneously while holding Down (from 9.736), creating an impossible three-panel note for pad play without using hands."
-          },
-          {
-            "where": "15.870",
-            "problem": "Requires tapping Down while both Up (15.444) and Right (15.700) are being held, forcing an awkward three-panel press."
-          },
-          {
-            "where": "38.959 - 49.353",
-            "problem": "Extremely repetitive looping of the exact same 'L -> R -> U -> D' pattern for over 10 seconds, which feels lazy and monotonous."
-          },
-          {
-            "where": "104.050 - 114.785",
-            "problem": "Another lengthy, repetitive 'U -> D -> L -> R' pattern loop lasting over 10 seconds during a major section of the song."
-          },
-          {
-            "where": "13.996",
-            "problem": "Holding Down while performing rapid taps on Up, Left, and Right forces highly awkward, unbalanced crossovers."
-          }
-        ],
-        "human_review": true
+        "score": 10,
+        "verdict": "An absolute masterclass in StepMania charting that perfectly captures the frantic energy of the track with flawless step flow and immaculate rhythm.",
+        "issues": []
       },
       "previews": {},
       "metrics": {
-        "notes": 587,
-        "onset_alignment": 0.983,
+        "notes": 484,
+        "onset_alignment": 0.9793,
         "grid_notes": 10,
         "panel_balance": {
-          "L": 0.29,
-          "D": 0.245,
-          "U": 0.237,
-          "R": 0.229
+          "L": 0.226,
+          "D": 0.284,
+          "U": 0.28,
+          "R": 0.211
         },
-        "hold_share": 0.046,
-        "jump_share": 0.0869,
+        "hold_share": 0.0702,
+        "jump_share": 0.1074,
         "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.26,
-        "density_energy_spearman": 0.7057,
+        "flow_cost_mean": 0.13,
+        "density_energy_spearman": 0.6017,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": false,
+          "hold_share": true,
           "flow_ceiling": true,
           "density_energy": true
         }

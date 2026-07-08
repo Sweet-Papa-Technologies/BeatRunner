@@ -1,18 +1,27 @@
 {
-  "score": 8,
-  "verdict": "A highly rhythmic and engaging chart with excellent clap-sync, let down slightly by a few awkward same-foot 16th sequences during holds.",
+  "score": 6,
+  "verdict": "A decently timed chart that suffers from inconsistent vocal rhythm quantization and several flow-breaking double steps.",
   "issues": [
     {
-      "where": "26.763",
-      "problem": "Forced 16th-note same-foot transition (D -> L) in 115ms while holding U, which is highly awkward and disrupts natural alternate flow."
+      "where": "4.489 to 5.528",
+      "problem": "Inconsistent rhythm mapping for the same vocal phrase. The first 'jiggle' uses a 0.346s (dotted eighth) gap, while the second uses a 0.231s (eighth note) gap, making the repetition feel off-sync and unintuitive."
     },
     {
-      "where": "89.429",
-      "problem": "Repeats the forced 16th same-foot slide/jack (D -> L) during a U hold, causing physical discomfort or requiring advanced bracket techniques."
+      "where": "18.223 to 19.377",
+      "problem": "The sequence 'U -> D -> L -> R -> U -> D' forces either rapid double-stepping on the same foot or highly awkward crossovers, breaking the natural dance flow."
     },
     {
-      "where": "51.229",
-      "problem": "The transition from a 16th-note tap R to JUMP LD is very sudden and feels slightly jerky to perform."
+      "where": "22.031 to 22.724",
+      "problem": "A sudden 16th-note transition (L to R in 116ms) followed by a hold feels jarringly out of place compared to the surrounding slow tempo."
+    },
+    {
+      "where": "25.263 to 25.378",
+      "problem": "An awkward 16th-note transition from L to D forces an uncomfortable double-step with the left foot immediately before an 8th-note stream."
+    },
+    {
+      "where": "69.118 to 70.387",
+      "problem": "Cluttered hold and tap overlaps where a D tap is placed shortly after releasing a D hold, while simultaneously holding R. This creates a messy and physically awkward sequence."
     }
-  ]
+  ],
+  "human_review": true
 }

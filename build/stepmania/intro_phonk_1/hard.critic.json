@@ -1,10 +1,14 @@
 {
-  "score": 8,
-  "verdict": "An exceptionally well-flowing, high-energy hard dance chart held back only by a single impossible three-panel overlap during a hold.",
+  "score": 7,
+  "verdict": "A highly energetic and rhythmically accurate chart that is unfortunately marred by an unplayable triple-hold sequence and an awkward high-speed spin.",
   "issues": [
     {
-      "where": "53.738s",
-      "problem": "A JUMP LR is charted while HOLD U is still active (until 54.034s), creating an awkward three-panel input constraint that is impossible to execute naturally on a single pad."
+      "where": "28.080 - 28.869",
+      "problem": "This section features overlapping holds that require holding three panels at once (L, U, D followed by U, D, R). Triple holds are generally considered illegal/unplayable in standard single-panel play as they require bracketing."
+    },
+    {
+      "where": "50.777 - 51.172",
+      "problem": "A 16th-note spin pattern (L -> R -> U -> D -> L) at 152 BPM forces a full 360-degree body rotation or heavy double-stepping, severely disrupting the physical flow of the stream."
     }
   ]
 }
