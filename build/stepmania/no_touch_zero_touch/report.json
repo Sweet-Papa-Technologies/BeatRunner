@@ -5,19 +5,19 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 186,
+      "notes": 178,
       "meter": 3,
-      "jumps": 25,
+      "jumps": 5,
       "holds": 16,
-      "repaired": 0,
+      "repaired": 1,
       "repair_ok": true,
       "critic": {
-        "score": 9,
-        "verdict": "A well-crafted Easy chart with excellent rhythm synchronization and comfortable foot flow, featuring engaging but accessible hold transitions.",
+        "score": 7,
+        "verdict": "Excellent vocal syncopation and rhythmic variety, but severely flawed by a mandatory 3-panel hold (hand) at 59.094, which is inappropriate for an Easy chart.",
         "issues": [
           {
-            "where": "80.560",
-            "problem": "The successive eighth-note hold transitions (HOLD L to HOLD U to tap D) might be slightly challenging for an absolute beginner on an Easy chart, though it fits the rhythm well."
+            "where": "58.401 - 59.325",
+            "problem": "Overlapping hold notes on U, R, and D create a 3-panel hold starting at 59.094. This requires a hand/knee to execute without dropping a hold, which is a major charting error for an Easy difficulty."
           }
         ]
       },
@@ -25,47 +25,43 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/no_touch_zero_touch/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 186,
+        "notes": 178,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.265,
-          "D": 0.284,
-          "U": 0.237,
-          "R": 0.213
+          "L": 0.208,
+          "D": 0.301,
+          "U": 0.284,
+          "R": 0.208
         },
-        "hold_share": 0.086,
-        "jump_share": 0.1344,
-        "flow_cost_max": 0.5,
-        "flow_cost_mean": 0.01,
-        "density_energy_spearman": 0.6389,
+        "hold_share": 0.0899,
+        "jump_share": 0.0281,
+        "flow_cost_max": 8.0,
+        "flow_cost_mean": 0.05,
+        "density_energy_spearman": 0.2879,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
           "hold_share": false,
           "flow_ceiling": true,
-          "density_energy": true
+          "density_energy": false
         }
       }
     },
     "medium": {
-      "notes": 365,
+      "notes": 319,
       "meter": 6,
-      "jumps": 72,
-      "holds": 17,
-      "repaired": 1,
+      "jumps": 22,
+      "holds": 14,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 7,
-        "verdict": "Excellent rhythmic translation and syncopation matching the music perfectly, but marred by two highly awkward, hand-requiring 3-panel hold sequences inappropriate for a Medium chart.",
+        "score": 8,
+        "verdict": "An exceptionally well-flowing, rhythmically creative chart that perfectly captures the syncopations of the music, marred only by a single technical 3-panel hold conflict.",
         "issues": [
           {
-            "where": "58.401 - 59.094",
-            "problem": "Creates an awkward 3-panel hold ('hand') on single play by requiring the player to hold U and D while pressing L, which is a massive difficulty spike and inappropriate for a Medium chart."
-          },
-          {
-            "where": "88.523 - 88.869",
-            "problem": "Another 3-panel 'hand' sequence (holding L and R while tapping U), causing unnecessary physical strain and breaking the flow of a single-play Medium chart."
+            "where": "25.856",
+            "problem": "A JUMP DR is charted while HOLD L is active (from 25.626 to 26.087), creating an impossible/awkward 3-panel single-play step (holding L while jumping on D and R)."
           }
         ]
       },
@@ -73,20 +69,20 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/no_touch_zero_touch/medium.assist.ogg"
       },
       "metrics": {
-        "notes": 365,
+        "notes": 319,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.307,
-          "D": 0.245,
-          "U": 0.231,
-          "R": 0.217
+          "L": 0.217,
+          "D": 0.273,
+          "U": 0.27,
+          "R": 0.24
         },
-        "hold_share": 0.0466,
-        "jump_share": 0.1973,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.04,
-        "density_energy_spearman": 0.4848,
+        "hold_share": 0.0439,
+        "jump_share": 0.069,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.5036,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -97,57 +93,52 @@
       }
     },
     "hard": {
-      "notes": 363,
+      "notes": 216,
       "meter": 8,
-      "jumps": 66,
-      "holds": 13,
+      "jumps": 25,
+      "holds": 12,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 4,
-        "verdict": "The chart is technically on-beat, but it is highly uncomfortable to play due to repetitive spin patterns, sudden 16th-note jumps, and forced double-taps.",
+        "score": 10,
+        "verdict": "An outstanding, masterfully syncopated Hard chart that perfectly captures the iconic Eurodance rhythm with flawless foot flow and engaging technical hold patterns.",
         "issues": [
           {
-            "where": "9.238, 38.782, 42.475, 49.861, 53.554, 83.099",
-            "problem": "Systematic 16th-note jacks into jumps (L followed immediately by JUMP LR) force an extremely rapid, uncomfortable double-tap on the left foot while trying to land a jump."
+            "where": "7.276 and 44.206",
+            "problem": "Excellent use of dotted-eighth syncopation (0.346s gaps) that perfectly aligns with the off-beat synth rhythm of the track."
           },
           {
-            "where": "1.852 - 3.236",
-            "problem": "The continuous D -> U -> R -> L -> D -> U -> R stream creates a spin pattern that forces the player to either turn completely away from the screen or awkwardly double-step."
+            "where": "80.329 - 81.483",
+            "problem": "Brilliant technical sequence utilizing rapid 8th-note jumps and short holds to create an engaging, high-energy physical flow without breaking alternation."
           },
           {
-            "where": "22.163 - 22.394",
-            "problem": "Landing a JUMP LR and immediately transitioning into 16th-note taps (D then U) is physically jarring and lacks flow."
-          },
-          {
-            "where": "69.942 - 70.404",
-            "problem": "Isolated 16th-note steps create random gallop rhythms that do not match the straight 4/4 house beat of the song."
+            "where": "Overall chart",
+            "problem": "Flawless alternating foot flow with comfortable diagonals and clean jumps, ensuring maximum readability and physical satisfaction."
           }
-        ],
-        "human_review": true
+        ]
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/no_touch_zero_touch/hard.assist.ogg"
       },
       "metrics": {
-        "notes": 363,
+        "notes": 216,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.31,
-          "D": 0.238,
-          "U": 0.233,
-          "R": 0.219
+          "L": 0.22,
+          "D": 0.295,
+          "U": 0.266,
+          "R": 0.22
         },
-        "hold_share": 0.0358,
-        "jump_share": 0.1818,
-        "flow_cost_max": 0.5,
+        "hold_share": 0.0556,
+        "jump_share": 0.1157,
+        "flow_cost_max": 0.2,
         "flow_cost_mean": 0.01,
-        "density_energy_spearman": 0.3031,
+        "density_energy_spearman": 0.4531,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": false,
+          "hold_share": true,
           "flow_ceiling": true,
           "density_energy": false
         }

@@ -67,6 +67,12 @@ OPENAI_API_KEY = os.environ.get("BEATFORGE_OPENAI_API_KEY", "not-needed")
 # The tracks are .ogg — transcoded to this on the fly (wav is universally decoded;
 # set to "ogg" to send as-is if your server accepts it).
 OPENAI_AUDIO_FORMAT = os.environ.get("BEATFORGE_OPENAI_AUDIO_FORMAT", "wav")
+# Downsample the audio sent to a local model to keep the audio-token count (and
+# thus KV-cache / VRAM) small. Full 44.1kHz stereo of a 2.5min song is ~25MB and
+# balloons the context; 16kHz mono (~5MB) is plenty for tempo/onset perception
+# and cut the RAM spill that makes a VRAM-starved 12B model crawl. 0 = leave as-is.
+OPENAI_AUDIO_SR = int(os.environ.get("BEATFORGE_OPENAI_AUDIO_SR", "16000"))
+OPENAI_AUDIO_MONO = os.environ.get("BEATFORGE_OPENAI_AUDIO_MONO", "1") not in ("0", "", "false")
 # A full chart JSON is ~2.5-4k tokens; 8192 let a slow/looping local model run
 # far past that and fill VRAM before timing out. 4096 fits any chart with margin
 # and caps runaway generation. Raise if a dense chart ever truncates.
