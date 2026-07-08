@@ -5,31 +5,19 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 163,
-      "meter": 3,
+      "notes": 138,
+      "meter": 2,
       "jumps": 0,
       "holds": 16,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
         "score": 6,
-        "verdict": "A mostly solid Easy chart let down by awkward, rapid vertical eighth-note transitions that disrupt the natural foot flow for beginners.",
+        "verdict": "A highly comfortable and rhythmically accurate Easy chart that suffers from extreme, boring copy-paste repetition in the second half.",
         "issues": [
           {
-            "where": "34.390",
-            "problem": "Rapid eighth-note transition from Up to Down (34.390 to 34.628) is uncomfortable for an Easy chart, forcing an awkward double-step or hip twist."
-          },
-          {
-            "where": "52.478",
-            "problem": "Eighth-note Up to Down transition creates a rapid vertical movement that is too fast and demanding for beginner players."
-          },
-          {
-            "where": "56.762",
-            "problem": "Repeated use of the rapid Up to Down vertical transition (238ms) which repeatedly disrupts the player's physical flow."
-          },
-          {
-            "where": "99.603",
-            "problem": "The chart ends abruptly on an awkward, sudden Up-to-Down eighth note pair instead of a satisfying final beat."
+            "where": "46.052 to 98.413",
+            "problem": "The exact same 6-step pattern (L -> D -> U, R -> D -> HOLD U) is copy-pasted 13 times consecutively. While safe for beginners, this extreme level of repetition fails to reflect any progression or variation in the music's melody and becomes highly monotonous."
           }
         ],
         "human_review": true
@@ -38,59 +26,55 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/crystal_clear/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 163,
-        "onset_alignment": 1.0,
-        "grid_notes": 0,
+        "notes": 138,
+        "onset_alignment": 0.942,
+        "grid_notes": 8,
         "panel_balance": {
-          "L": 0.196,
-          "D": 0.301,
-          "U": 0.301,
-          "R": 0.202
+          "L": 0.181,
+          "D": 0.326,
+          "U": 0.319,
+          "R": 0.174
         },
-        "hold_share": 0.0982,
+        "hold_share": 0.1159,
         "jump_share": 0.0,
         "flow_cost_max": 0.0,
         "flow_cost_mean": 0.0,
-        "density_energy_spearman": 0.6203,
+        "density_energy_spearman": 0.8164,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": false,
+          "hold_share": true,
           "flow_ceiling": true,
           "density_energy": true
         }
       }
     },
     "medium": {
-      "notes": 378,
-      "meter": 6,
-      "jumps": 57,
-      "holds": 35,
-      "repaired": 71,
-      "repair_ok": false,
+      "notes": 347,
+      "meter": 5,
+      "jumps": 24,
+      "holds": 17,
+      "repaired": 0,
+      "repair_ok": true,
       "critic": {
-        "score": 5,
-        "verdict": "Great rhythmic accuracy and step flow, but severely undermined by several physically impossible multi-panel holds and taps.",
+        "score": 4,
+        "verdict": "Rhythmically precise and physically comfortable, but severely crippled by extreme, copy-pasted pattern repetition that saps any sense of choreography.",
         "issues": [
           {
-            "where": "36.294",
-            "problem": "Requires tapping L while holding both U and D, which is physically impossible to execute since U and D cannot be bracketed with a single foot."
+            "where": "9.875 to 22.251",
+            "problem": "The identical 'L D U R' circular loop is repeated over 12 times consecutively. While playable, it makes the section incredibly monotonous."
           },
           {
-            "where": "47.004 - 47.480",
-            "problem": "Overlapping holds on U, L, and D require holding down three panels simultaneously."
+            "where": "24.393 to 26.774",
+            "problem": "The 'U D L R' pattern forces an awkward, repetitive wide-stance body position (stretching Up/Down then Left/Right) with zero variation."
           },
           {
-            "where": "51.169 - 51.288",
-            "problem": "Overlapping holds on U, R, and D require holding down three panels simultaneously."
+            "where": "75.802 to 81.039",
+            "problem": "The climax of the song lazily copy-pastes the exact same 'U D L R' 8th-note streams twice, completely ignoring potential visual or melodic variations in the audio."
           },
           {
-            "where": "86.870 - 86.989",
-            "problem": "Overlapping holds on D, L, and R require holding down three panels simultaneously."
-          },
-          {
-            "where": "88.774 - 88.893",
-            "problem": "Overlapping holds on U, L, and D require holding down three panels simultaneously."
+            "where": "93.891 to 99.841",
+            "problem": "The outro block defaults back to the same 'L D U R' repetition, concluding the chart with no creative resolution or thematic evolution."
           }
         ],
         "human_review": true
@@ -99,70 +83,70 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/crystal_clear/medium.assist.ogg"
       },
       "metrics": {
-        "notes": 378,
+        "notes": 347,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.297,
-          "D": 0.221,
-          "U": 0.257,
-          "R": 0.225
+          "L": 0.226,
+          "D": 0.256,
+          "U": 0.275,
+          "R": 0.243
         },
-        "hold_share": 0.0926,
-        "jump_share": 0.1508,
-        "flow_cost_max": 39.15,
-        "flow_cost_mean": 0.72,
-        "density_energy_spearman": 0.6754,
+        "hold_share": 0.049,
+        "jump_share": 0.0692,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.3911,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": true,
-          "flow_ceiling": false,
-          "density_energy": true
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": false
         }
       }
     },
     "hard": {
-      "notes": 531,
+      "notes": 400,
       "meter": 9,
-      "jumps": 50,
-      "holds": 42,
-      "repaired": 15,
+      "jumps": 48,
+      "holds": 21,
+      "repaired": 6,
       "repair_ok": true,
       "critic": {
-        "score": 7,
-        "verdict": "Flawless rhythm alignment and an energetic drop, but severely hampered by awkward 16th-note runs forced on a single foot during holds in the verse.",
+        "score": 8,
+        "verdict": "An energetic and rhythmically stellar chart with excellent drop pacing, held back only by a few awkward crossover flows in the streams and holds.",
         "issues": [
           {
-            "where": "14.635 - 15.111",
-            "problem": "Holding R forces the player to perform a rapid 16th-note run (D -> U -> L) entirely on the left foot, which is extremely awkward and physically strenuous."
+            "where": "11.422 - 12.255",
+            "problem": "The 16th-note stream sequence (D -> U -> R -> L -> D -> U -> R -> D) forces uncomfortable double-stepping or an extreme, unplayable body twist."
           },
           {
-            "where": "16.658 - 17.134",
-            "problem": "Holding D forces a one-foot 16th-note run (U -> L -> R) on the left foot, creating an unnatural movement bottleneck."
+            "where": "51.050 - 51.407",
+            "problem": "Tapping L -> R -> D while holding U forces a highly awkward crossover/under-crossover on the free foot."
           },
           {
-            "where": "20.585 - 21.061",
-            "problem": "Holding U forces the right foot to execute a fast L -> R -> D 16th-note sequence, causing severe balance and flow issues."
+            "where": "54.620",
+            "problem": "A JUMP LR is placed during a HOLD U, forcing an unexpected 3-panel bracket/chord that is a bit too technical for a standard Hard rating."
           }
         ]
       },
       "previews": {},
       "metrics": {
-        "notes": 531,
-        "onset_alignment": 0.9962,
-        "grid_notes": 2,
+        "notes": 400,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
         "panel_balance": {
-          "L": 0.265,
-          "D": 0.26,
-          "U": 0.255,
-          "R": 0.22
+          "L": 0.225,
+          "D": 0.283,
+          "U": 0.275,
+          "R": 0.217
         },
-        "hold_share": 0.0791,
-        "jump_share": 0.0942,
+        "hold_share": 0.0525,
+        "jump_share": 0.12,
         "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.23,
-        "density_energy_spearman": 0.4873,
+        "flow_cost_mean": 0.12,
+        "density_energy_spearman": 0.468,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,

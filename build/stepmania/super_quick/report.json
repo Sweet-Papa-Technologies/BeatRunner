@@ -5,52 +5,57 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 241,
+      "notes": 195,
       "meter": 3,
-      "jumps": 8,
-      "holds": 36,
-      "repaired": 5,
+      "jumps": 0,
+      "holds": 20,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 7.5,
-        "verdict": "A well-synced and structurally sound chart with good flow, but contains overly complex hold patterns and a stretch jump that are inappropriate for an Easy difficulty.",
+        "score": 4,
+        "verdict": "The chart has decent rhythmic sync with the vocals, but it is far too complex for an Easy difficulty, forcing either highly advanced crossovers or extremely awkward same-foot 8th-note double-steps.",
         "issues": [
           {
-            "where": "96.587 to 97.787",
-            "problem": "A rapid succession of extremely short (eighth-note and quarter-note) holds is highly frustrating and mechanically complex for an Easy chart, often leading to accidental hold drops."
+            "where": "Entire chart (specifically 16.445, 17.404, 21.243, etc.)",
+            "problem": "High density of 8th notes on syncopated vocal offbeats, which is highly confusing and too difficult for an Easy-level player."
           },
           {
-            "where": "104.266 to 105.465",
-            "problem": "Another sequence of rapid, consecutive short holds that functions as a gimmick, which is too technical for beginner players."
+            "where": "27.002 to 30.122",
+            "problem": "Forces either extreme, unnatural crossovers (Left foot on R, Right foot on L) or excessive double-stepping that breaks the natural movement flow."
           },
           {
-            "where": "106.185 to 106.905",
-            "problem": "Overlapping holds (HOLD L starting during HOLD D, followed by an immediate transition to HOLD U) require multi-tasking feet pressure that is too complex for an Easy difficulty level."
+            "where": "75.952 to 76.192",
+            "problem": "Forces either a crossover (Left foot on R) or a very fast same-foot 8th note (U to R in 0.24s with the Right foot), creating a physical bottleneck."
           },
           {
-            "where": "102.106",
-            "problem": "An Up-Down (UD) jump requires a sideways body orientation, which is generally discouraged in Easy-rated charts due to the physical reading strain on beginners."
+            "where": "93.468 to 93.708",
+            "problem": "Forces a same-foot 8th-note jump (R to U in 0.24s with the Right foot) or an awkward crossover, which is highly inappropriate for an Easy chart."
+          },
+          {
+            "where": "104.745 to 104.985",
+            "problem": "Forces a same-foot 8th-note transition from L to HOLD D with the Left foot, causing an unavoidable physical bottleneck or an advanced crossover."
           }
-        ]
+        ],
+        "human_review": true
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/super_quick/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 241,
+        "notes": 195,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.217,
-          "D": 0.285,
-          "U": 0.289,
-          "R": 0.209
+          "L": 0.226,
+          "D": 0.277,
+          "U": 0.272,
+          "R": 0.226
         },
-        "hold_share": 0.1494,
-        "jump_share": 0.0332,
-        "flow_cost_max": 1.0,
-        "flow_cost_mean": 0.01,
-        "density_energy_spearman": 0.4805,
+        "hold_share": 0.1026,
+        "jump_share": 0.0,
+        "flow_cost_max": 0.0,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.3228,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -61,48 +66,46 @@
       }
     },
     "medium": {
-      "notes": 308,
+      "notes": 389,
       "meter": 6,
-      "jumps": 63,
-      "holds": 34,
-      "repaired": 1,
+      "jumps": 27,
+      "holds": 28,
+      "repaired": 2,
       "repair_ok": true,
       "critic": {
-        "score": 8,
-        "verdict": "A well-structured and rhythmic chart with excellent pacing, though it relies a bit too heavily on repetitive loop patterns in the chorus.",
+        "score": 7,
+        "verdict": "An exceptionally rhythmic and flowing chart that is unfortunately marred by several illegal three-panel 'hand' holds that are inappropriate for a Medium difficulty.",
         "issues": [
           {
-            "where": "39.720 - 48.358",
-            "problem": "Highly repetitive use of the 'JUMP LR -> U -> D -> L -> JUMP LR' pattern. While accurate to the rhythm, playing the exact same physical loop five times in a short window feels monotonous."
+            "where": "93.708",
+            "problem": "Tapping L while holding U and D creates an unintended 3-panel 'hand' pattern, which is too difficult for a Medium chart."
           },
           {
-            "where": "40.919 - 41.399",
-            "problem": "The transition from U -> D -> L after a JUMP LR forces either an awkward double-step on the left foot (D -> L) or a heavy crossover. This layout repeats frequently during the chorus."
+            "where": "99.467",
+            "problem": "Tapping R while holding D and U creates a 3-panel 'hand' pattern, requiring players to use hands or advanced bracketing."
           },
           {
-            "where": "109.304 - 110.984",
-            "problem": "The outro sequence repeats the exact same 'D -> U -> L -> R' flow verbatim, missing an opportunity for a mirrored variation to make the finish more engaging."
+            "where": "101.146",
+            "problem": "Jumping to LR while holding U creates a 3-panel 'hand' jump, which is unfair for players at this difficulty level."
           }
         ]
       },
-      "previews": {
-        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/super_quick/medium.assist.ogg"
-      },
+      "previews": {},
       "metrics": {
-        "notes": 308,
+        "notes": 389,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.286,
-          "D": 0.237,
-          "U": 0.251,
-          "R": 0.226
+          "L": 0.212,
+          "D": 0.264,
+          "U": 0.293,
+          "R": 0.231
         },
-        "hold_share": 0.1104,
-        "jump_share": 0.2045,
+        "hold_share": 0.072,
+        "jump_share": 0.0694,
         "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.04,
-        "density_energy_spearman": 0.1105,
+        "flow_cost_mean": 0.05,
+        "density_energy_spearman": 0.1467,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -113,54 +116,61 @@
       }
     },
     "hard": {
-      "notes": 338,
+      "notes": 450,
       "meter": 8,
-      "jumps": 86,
-      "holds": 17,
-      "repaired": 0,
+      "jumps": 36,
+      "holds": 24,
+      "repaired": 5,
       "repair_ok": true,
       "critic": {
-        "score": 7,
-        "verdict": "A well-timed, energetic chart with a satisfying outro stream, but held back by excessive pattern repetition in the first half and a few awkward jump transitions.",
+        "score": 4,
+        "verdict": "The chart follows the basic rhythm of the song well, but it contains severe chart-writing errors including impossible 3-panel jumps during holds and extremely awkward single-foot 16th runs.",
         "issues": [
           {
-            "where": "53.157 - 53.397",
-            "problem": "Awkward foot flow. Landing a DR jump and immediately tapping L requires a very fast, uncomfortable left-foot transition from Down to Left."
+            "where": "101.146",
+            "problem": "Requires the player to hit JUMP LR while HOLD U is active, creating an unplayable 3-panel press on a standard Single pad."
           },
           {
-            "where": "69.233 - 69.473",
-            "problem": "Uncomfortable jump transition. Tapping L and immediately executing an LD jump forces an awkward double-tap on the Left panel during the jump."
+            "where": "106.905",
+            "problem": "Forces a JUMP LR while HOLD D is active, resulting in another physical conflict (3 panels pressed at once)."
           },
           {
-            "where": "2.288 - 50.000",
-            "problem": "Severe repetitiveness. The 'LR Jump -> U -> D' motif is overused extensively throughout the first half, leading to a monotonous gameplay experience."
+            "where": "52.437",
+            "problem": "While holding R, the player must execute a 16th-note L -> D -> U run entirely with the left foot, creating an incredibly unbalanced and difficult one-foot jack."
+          },
+          {
+            "where": "68.273",
+            "problem": "While holding D, the player is forced to hit U then R as 16th notes, forcing an extremely fast and awkward double-step on the right foot."
+          },
+          {
+            "where": "23.643",
+            "problem": "The rapid 16th-note sequence U -> D -> L causes highly uncomfortable hip twisting and poor natural foot flow."
           }
-        ]
+        ],
+        "human_review": true
       },
-      "previews": {
-        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/super_quick/hard.assist.ogg"
-      },
+      "previews": {},
       "metrics": {
-        "notes": 338,
+        "notes": 450,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.302,
-          "D": 0.238,
-          "U": 0.226,
-          "R": 0.233
+          "L": 0.235,
+          "D": 0.267,
+          "U": 0.282,
+          "R": 0.216
         },
-        "hold_share": 0.0503,
-        "jump_share": 0.2544,
-        "flow_cost_max": 0.5,
-        "flow_cost_mean": 0.01,
-        "density_energy_spearman": 0.5767,
+        "hold_share": 0.0533,
+        "jump_share": 0.08,
+        "flow_cost_max": 14.0,
+        "flow_cost_mean": 0.11,
+        "density_energy_spearman": 0.4067,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
           "hold_share": true,
           "flow_ceiling": true,
-          "density_energy": true
+          "density_energy": false
         }
       }
     }

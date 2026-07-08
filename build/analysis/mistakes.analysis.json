@@ -17223,7 +17223,7 @@
     "backend": "local",
     "beat_backend": "local_dsp",
     "stem_source": "none",
-    "wall_clock_s": 3.28,
+    "wall_clock_s": 3.49,
     "gpu": null,
     "note": "LocalCpuBackend: numpy/scipy DSP, HPSS-only, no stems (reduced fidelity vs Colab Demucs+madmom path)."
   },

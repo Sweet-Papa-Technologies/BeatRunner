@@ -5,35 +5,35 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 203,
-      "meter": 3,
-      "jumps": 0,
-      "holds": 29,
+      "notes": 130,
+      "meter": 2,
+      "jumps": 3,
+      "holds": 14,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
         "score": 10,
-        "verdict": "An exceptionally well-crafted Easy chart that perfectly demonstrates great flow, flawless sync, and excellent beginner-friendly design.",
+        "verdict": "An exceptionally well-crafted Easy chart with flawless progression, natural foot alternation, and perfectly timed rhythms.",
         "issues": []
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/our_dream/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 203,
-        "onset_alignment": 0.9409,
-        "grid_notes": 12,
+        "notes": 130,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
         "panel_balance": {
-          "L": 0.246,
-          "D": 0.256,
-          "U": 0.251,
-          "R": 0.246
+          "L": 0.211,
+          "D": 0.293,
+          "U": 0.286,
+          "R": 0.211
         },
-        "hold_share": 0.1429,
-        "jump_share": 0.0,
-        "flow_cost_max": 0.0,
+        "hold_share": 0.1077,
+        "jump_share": 0.0231,
+        "flow_cost_max": 0.2,
         "flow_cost_mean": 0.0,
-        "density_energy_spearman": 0.3323,
+        "density_energy_spearman": 0.252,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -44,97 +44,96 @@
       }
     },
     "medium": {
-      "notes": 410,
+      "notes": 292,
       "meter": 6,
-      "jumps": 93,
-      "holds": 17,
-      "repaired": 3,
+      "jumps": 20,
+      "holds": 19,
+      "repaired": 2,
       "repair_ok": true,
       "critic": {
-        "score": 4,
-        "verdict": "The chart has decent rhythmic synchronization but suffers from excessive jump repetition and jarring difficulty spikes unsuitable for a Medium difficulty.",
+        "score": 8,
+        "verdict": "A highly engaging and rhythmically precise chart with great density progression, let down only by a slightly awkward tech transition during a hold near the climax.",
         "issues": [
           {
-            "where": "Chorus sections (26.0s - 46.0s and 68.0s - 92.0s)",
-            "problem": "Incredibly repetitive use of JUMP LR. Almost every jump in these sections is Left-Right, which lacks physical variety and makes the gameplay feel monotonous."
+            "where": "96.596 - 96.917",
+            "problem": "Awkward 16th-note sequence (D then R) while holding U forces a very tight one-foot slide or uncomfortable physical stretch."
           },
           {
-            "where": "18.142s - 25.215s",
-            "problem": "Jarring difficulty spikes with 8th-note jumps embedded directly into 8th-note streams (e.g., U -> JUMP LR -> U). This requires high-level bracket/double-tap speed that is inappropriate for a Medium chart."
-          },
-          {
-            "where": "92.309s - 92.523s",
-            "problem": "A sudden 16th-note burst (U -> D -> L) at 140 BPM that introduces an awkward double-step or slide movement, disrupting the flow of the song's climax."
+            "where": "63.156 - 64.014",
+            "problem": "The rapid overlapping rolling holds (L -> R -> U -> D) create a sudden spike in technical difficulty compared to the rest of the chart."
           }
-        ],
-        "human_review": true
+        ]
       },
-      "previews": {},
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/our_dream/medium.assist.ogg"
+      },
       "metrics": {
-        "notes": 410,
+        "notes": 292,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.338,
-          "D": 0.223,
-          "U": 0.225,
-          "R": 0.215
+          "L": 0.218,
+          "D": 0.276,
+          "U": 0.279,
+          "R": 0.228
         },
-        "hold_share": 0.0415,
-        "jump_share": 0.2268,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.07,
-        "density_energy_spearman": 0.3636,
+        "hold_share": 0.0651,
+        "jump_share": 0.0685,
+        "flow_cost_max": 8.0,
+        "flow_cost_mean": 0.06,
+        "density_energy_spearman": 0.3305,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": false,
+          "hold_share": true,
           "flow_ceiling": true,
           "density_energy": false
         }
       }
     },
     "hard": {
-      "notes": 535,
-      "meter": 9,
-      "jumps": 60,
-      "holds": 18,
-      "repaired": 4,
+      "notes": 348,
+      "meter": 8,
+      "jumps": 40,
+      "holds": 22,
+      "repaired": 3,
       "repair_ok": true,
       "critic": {
-        "score": 7,
-        "verdict": "An exceptionally rhythmic and well-paced chart with comfortable flow, slightly marred by a couple of physical 3-panel overlap conflicts during holds.",
+        "score": 8,
+        "verdict": "A highly energetic and rhythmic chart with great syncopation, let down slightly by a highly unbalanced hold-active sequence and a repetitive eighth-note stream.",
         "issues": [
           {
-            "where": "93.809",
-            "problem": "JUMP LR occurs while HOLD D is active (ends at 93.916), creating an illegal 3-panel conflict that requires a hand or bracket tap."
+            "where": "59.941 - 60.584",
+            "problem": "Holding the L panel while forcing the right foot to execute a rapid R -> D -> U eighth-note sequence creates awkward hold entrapment and highly unbalanced physical strain."
           },
           {
-            "where": "96.382",
-            "problem": "JUMP LR occurs while HOLD U is active (ends at 96.810), forcing an awkward 3-panel hand/bracket interaction."
+            "where": "7.209 - 10.639",
+            "problem": "Looping the exact same R -> L -> D -> U stream pattern four times consecutively feels repetitive and uninspired."
           }
         ]
       },
-      "previews": {},
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/our_dream/hard.assist.ogg"
+      },
       "metrics": {
-        "notes": 535,
+        "notes": 348,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.279,
-          "D": 0.25,
-          "U": 0.261,
-          "R": 0.21
+          "L": 0.214,
+          "D": 0.26,
+          "U": 0.294,
+          "R": 0.232
         },
-        "hold_share": 0.0336,
-        "jump_share": 0.1121,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.06,
-        "density_energy_spearman": 0.3639,
+        "hold_share": 0.0632,
+        "jump_share": 0.1149,
+        "flow_cost_max": 8.0,
+        "flow_cost_mean": 0.09,
+        "density_energy_spearman": 0.1351,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": false,
+          "hold_share": true,
           "flow_ceiling": true,
           "density_energy": false
         }

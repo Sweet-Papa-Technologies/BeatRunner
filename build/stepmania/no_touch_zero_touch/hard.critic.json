@@ -1,18 +1,22 @@
 {
-  "score": 10,
-  "verdict": "An outstanding, masterfully syncopated Hard chart that perfectly captures the iconic Eurodance rhythm with flawless foot flow and engaging technical hold patterns.",
+  "score": 7,
+  "verdict": "An incredibly well-synced and rhythmic chart that captures the song's energy perfectly, but is slightly held back by awkward three-panel 'hand' holds and taps.",
   "issues": [
     {
-      "where": "7.276 and 44.206",
-      "problem": "Excellent use of dotted-eighth syncopation (0.346s gaps) that perfectly aligns with the off-beat synth rhythm of the track."
+      "where": "44.206 - 44.552",
+      "problem": "Requires holding Down and Right while tapping Up, forcing an awkward bracket or hand hit."
     },
     {
-      "where": "80.329 - 81.483",
-      "problem": "Brilliant technical sequence utilizing rapid 8th-note jumps and short holds to create an engaging, high-energy physical flow without breaking alternation."
+      "where": "58.401 - 59.094",
+      "problem": "Creates a triple-active hold (Up, Right, Down) which requires a hand on the pad, disrupting feet-only play."
     },
     {
-      "where": "Overall chart",
-      "problem": "Flawless alternating foot flow with comfortable diagonals and clean jumps, ensuring maximum readability and physical satisfaction."
+      "where": "7.276 - 7.622",
+      "problem": "Tapping Right then Left while holding Up forces a highly uncomfortable crossover or double-step."
+    },
+    {
+      "where": "88.523 - 88.869",
+      "problem": "Requires tapping Up while holding Left and Right, creating another awkward three-panel interaction."
     }
   ]
 }

@@ -5,49 +5,35 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 150,
-      "meter": 3,
-      "jumps": 0,
-      "holds": 19,
+      "notes": 81,
+      "meter": 2,
+      "jumps": 2,
+      "holds": 10,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 6,
-        "verdict": "Great rhythmic accuracy and song representation, but features overly complex stream flows and hold coordination for an Easy chart.",
-        "issues": [
-          {
-            "where": "46.254 and 50.573",
-            "problem": "Features active holds where the player must perform an 8th-note tap (46.494 tap R, 50.813 tap L) while holding another panel. This coordination is too advanced for an Easy difficulty."
-          },
-          {
-            "where": "71.206 - 72.406",
-            "problem": "A 6-note 8th-note stream (U-D-R-L-U-D) that forces awkward double-stepping or complex crossovers, which are highly uncomfortable and inappropriate for beginner players."
-          },
-          {
-            "where": "80.563 - 82.003",
-            "problem": "A 7-note 8th-note stream (D-U-R-L-D-U-R) that has very poor foot flow, requiring heavy double-stepping or double crossovers to execute."
-          }
-        ],
-        "human_review": true
+        "score": 10,
+        "verdict": "A flawless Easy chart that perfectly captures the rhythm and silliness of the song with extremely natural foot flow and comfortable pacing.",
+        "issues": []
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/somuchstuff/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 150,
-        "onset_alignment": 0.92,
-        "grid_notes": 12,
+        "notes": 81,
+        "onset_alignment": 0.963,
+        "grid_notes": 3,
         "panel_balance": {
-          "L": 0.207,
-          "D": 0.293,
-          "U": 0.293,
-          "R": 0.207
+          "L": 0.217,
+          "D": 0.277,
+          "U": 0.277,
+          "R": 0.229
         },
-        "hold_share": 0.1267,
-        "jump_share": 0.0,
-        "flow_cost_max": 0.0,
+        "hold_share": 0.1235,
+        "jump_share": 0.0247,
+        "flow_cost_max": 0.2,
         "flow_cost_mean": 0.0,
-        "density_energy_spearman": 0.3776,
+        "density_energy_spearman": 0.154,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -58,49 +44,33 @@
       }
     },
     "medium": {
-      "notes": 185,
+      "notes": 157,
       "meter": 5,
-      "jumps": 46,
-      "holds": 12,
+      "jumps": 10,
+      "holds": 15,
       "repaired": 1,
       "repair_ok": true,
       "critic": {
-        "score": 4,
-        "verdict": "Playable with decent rhythmic syncopation, but ruined by lazy charting that uses Left-Right jumps exclusively.",
-        "issues": [
-          {
-            "where": "Throughout the entire chart",
-            "problem": "Every single jump in the chart is 'JUMP LR' (Left + Right). There is zero jump variety (no UD, LU, LD, RU, or RD jumps), which makes the physical movement feel extremely repetitive and uncreative."
-          },
-          {
-            "where": "20.343 - 21.542",
-            "problem": "The rapid transition from U -> JUMP LR -> HOLD U -> JUMP LR in eighth notes (0.24s intervals) is highly asymmetric and awkward, forcing the right foot to execute rapid, jerky movements between R and U while the left foot remains relatively static on L."
-          },
-          {
-            "where": "35.458 - 36.897",
-            "problem": "The dense eighth-note jump pattern (D -> U -> JUMP LR -> U -> D -> JUMP LR) feels very jerky and cluttered due to the constant forcing of the player back into the wide LR stance immediately after vertical steps."
-          }
-        ],
-        "human_review": true
+        "score": 10,
+        "verdict": "An exceptionally well-crafted chart with flawless sync, outstanding physical flow, and incredibly creative vocal rhythm mapping.",
+        "issues": []
       },
-      "previews": {
-        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/somuchstuff/medium.assist.ogg"
-      },
+      "previews": {},
       "metrics": {
-        "notes": 185,
-        "onset_alignment": 0.9459,
-        "grid_notes": 10,
+        "notes": 157,
+        "onset_alignment": 0.9873,
+        "grid_notes": 2,
         "panel_balance": {
-          "L": 0.299,
-          "D": 0.225,
-          "U": 0.221,
-          "R": 0.255
+          "L": 0.192,
+          "D": 0.299,
+          "U": 0.299,
+          "R": 0.21
         },
-        "hold_share": 0.0649,
-        "jump_share": 0.2486,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.04,
-        "density_energy_spearman": 0.0885,
+        "hold_share": 0.0955,
+        "jump_share": 0.0637,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.2196,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -111,53 +81,38 @@
       }
     },
     "hard": {
-      "notes": 304,
-      "meter": 9,
-      "jumps": 50,
-      "holds": 22,
+      "notes": 237,
+      "meter": 8,
+      "jumps": 24,
+      "holds": 21,
       "repaired": 5,
       "repair_ok": true,
       "critic": {
-        "score": 6,
-        "verdict": "An energetic chart that matches the song's chaotic humor, but suffers from physically impossible hold patterns and excessive 16th-note jump streams for a Hard rating.",
+        "score": 9,
+        "verdict": "An incredibly fun, high-energy chart that perfectly captures the chaotic tempo of the song, let down only slightly by an untelegraphed 3-panel hold near the end.",
         "issues": [
           {
-            "where": "46.494",
-            "problem": "Physically impossible jump. While holding R (from 46.254 to 46.734), the player is forced to jump LD at 46.494. This requires a highly advanced bracket on one side while holding the other, which is inappropriate for a Hard chart."
-          },
-          {
-            "where": "50.813",
-            "problem": "Unplayable step. The player is holding R (until 50.933) and U (until 51.053) simultaneously, but is prompted to tap D at 50.813, which is physically impossible with only two feet."
-          },
-          {
-            "where": "15.544",
-            "problem": "Awkward rapid lateral flow. Tapping L (15.544) then R (15.664) as a 16th-note transition is highly uncomfortable and forces a double-step or an intense hip twist."
-          },
-          {
-            "where": "69.407",
-            "problem": "Overly dense stream. The continuous 16th-note stream from 69.407 to 70.607 containing mid-stream jumps (LR at 69.527 and DR at 70.487) spikes the difficulty too high for this level."
+            "where": "82.963 - 83.562",
+            "problem": "This sequence forces a 3-panel hold (U, L, and R simultaneously), requiring a 'hand' or bracket step. On a 'Hard' difficulty chart, this is an unexpected spike in physical demand without prior warning."
           }
-        ],
-        "human_review": true
+        ]
       },
-      "previews": {
-        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/somuchstuff/hard.assist.ogg"
-      },
+      "previews": {},
       "metrics": {
-        "notes": 304,
-        "onset_alignment": 0.9803,
-        "grid_notes": 6,
+        "notes": 237,
+        "onset_alignment": 0.9705,
+        "grid_notes": 7,
         "panel_balance": {
-          "L": 0.274,
-          "D": 0.266,
-          "U": 0.243,
-          "R": 0.218
+          "L": 0.241,
+          "D": 0.257,
+          "U": 0.272,
+          "R": 0.23
         },
-        "hold_share": 0.0724,
-        "jump_share": 0.1645,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.15,
-        "density_energy_spearman": 0.4226,
+        "hold_share": 0.0886,
+        "jump_share": 0.1013,
+        "flow_cost_max": 14.0,
+        "flow_cost_mean": 0.17,
+        "density_energy_spearman": 0.2926,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,

@@ -1,0 +1,153 @@
+{
+  "track_id": "phonk_2",
+  "bpm": 155.039,
+  "offset": 0.331,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 115,
+      "meter": 3,
+      "jumps": 3,
+      "holds": 18,
+      "repaired": 3,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "An exceptionally well-flowing Easy chart that captures the syncopated rhythms of the track beautifully, featuring only one minor difficulty spike in a jump recovery.",
+        "issues": [
+          {
+            "where": "56.059",
+            "problem": "The LR jump is immediately followed by an 8th-note tap at 56.252. This extremely quick recovery window is a bit demanding for an Easy difficulty level."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/phonk_2/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 115,
+        "onset_alignment": 0.8957,
+        "grid_notes": 12,
+        "panel_balance": {
+          "L": 0.212,
+          "D": 0.28,
+          "U": 0.28,
+          "R": 0.229
+        },
+        "hold_share": 0.1565,
+        "jump_share": 0.0261,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.8215,
+        "gates": {
+          "onset_alignment": false,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "medium": {
+      "notes": 229,
+      "meter": 6,
+      "jumps": 15,
+      "holds": 28,
+      "repaired": 4,
+      "repair_ok": true,
+      "critic": {
+        "score": 10,
+        "verdict": "An exceptionally well-crafted, highly expressive chart with flawless foot flow, perfect rhythm matching, and an outstanding, creative hold-walk climax.",
+        "issues": []
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/phonk_2/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 229,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.205,
+          "D": 0.291,
+          "U": 0.291,
+          "R": 0.213
+        },
+        "hold_share": 0.1223,
+        "jump_share": 0.0655,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.15,
+        "density_energy_spearman": 0.0528,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 339,
+      "meter": 9,
+      "jumps": 23,
+      "holds": 19,
+      "repaired": 6,
+      "repair_ok": true,
+      "critic": {
+        "score": 5,
+        "verdict": "A high-energy chart with great rhythmic representation that is unfortunately held back by physical playability issues, including illegal three-panel 'hands' and awkward 16th-note transitions immediately following jumps.",
+        "issues": [
+          {
+            "where": "17.649 and 59.929",
+            "problem": "These sections require hitting 3 panels simultaneously (holding R and U while tapping D at 17.649; holding L while jumping UR at 59.929), which are 'hands' and violate standard pad playability for single charts."
+          },
+          {
+            "where": "26.647 to 27.034 (and repeated chorus patterns)",
+            "problem": "Transitioning from a JUMP DR directly into a rapid 16th burst (U-D-L) creates terrible foot-flow, forcing awkward double-steps and hard-to-execute slides on pad."
+          },
+          {
+            "where": "34.580 to 34.774",
+            "problem": "A 16th-note L-D-L triplet forces a rapid double-tap (jack) on the Left arrow right after a jump, which is highly uncomfortable and disruptive to the stream flow."
+          },
+          {
+            "where": "22.874 to 23.357",
+            "problem": "Tapping U, L, and R in quick succession while holding down the D panel is physically awkward and completely disrupts body balance."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 339,
+        "onset_alignment": 0.9705,
+        "grid_notes": 10,
+        "panel_balance": {
+          "L": 0.227,
+          "D": 0.271,
+          "U": 0.287,
+          "R": 0.215
+        },
+        "hold_share": 0.056,
+        "jump_share": 0.0678,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.13,
+        "density_energy_spearman": 0.3509,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/phonk_2/phonk_2.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/phonk_2/phonk_2.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/phonk_2/phonk_2.ogg"
+  },
+  "out": "build/stepmania/phonk_2",
+  "meter_monotonic": true
+}

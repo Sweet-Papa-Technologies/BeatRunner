@@ -5,44 +5,35 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 112,
-      "meter": 3,
-      "jumps": 12,
-      "holds": 16,
+      "notes": 111,
+      "meter": 2,
+      "jumps": 0,
+      "holds": 14,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 9,
-        "verdict": "An exceptionally well-flowing Easy chart that perfectly captures the vocal rhythms and has flawless physical flow.",
-        "issues": [
-          {
-            "where": "32.282 - 34.044",
-            "problem": "Hold-to-hold transitions on off-beats (half-beats) might be slightly challenging for true beginners on an Easy chart, though they fit the synth swells well."
-          },
-          {
-            "where": "46.122 - 48.386",
-            "problem": "A continuous stream of off-beat quarter notes followed by an eighth-note transition can be tricky for the target difficulty, but it matches the vocal syncopation perfectly."
-          }
-        ]
+        "score": 10,
+        "verdict": "An exceptionally well-crafted Easy chart that perfectly captures the song's structure with comfortable, fully-alternating foot flow and excellent density scaling.",
+        "issues": []
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/heart_of_it_all/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 112,
-        "onset_alignment": 0.8304,
-        "grid_notes": 19,
+        "notes": 111,
+        "onset_alignment": 0.8468,
+        "grid_notes": 17,
         "panel_balance": {
-          "L": 0.274,
-          "D": 0.282,
-          "U": 0.234,
-          "R": 0.21
+          "L": 0.198,
+          "D": 0.306,
+          "U": 0.288,
+          "R": 0.207
         },
-        "hold_share": 0.1429,
-        "jump_share": 0.1071,
-        "flow_cost_max": 0.5,
-        "flow_cost_mean": 0.02,
-        "density_energy_spearman": 0.2517,
+        "hold_share": 0.1261,
+        "jump_share": 0.0,
+        "flow_cost_max": 0.0,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.5059,
         "gates": {
           "onset_alignment": false,
           "panel_balance": true,
@@ -53,76 +44,63 @@
       }
     },
     "medium": {
-      "notes": 217,
+      "notes": 184,
       "meter": 5,
-      "jumps": 30,
-      "holds": 10,
+      "jumps": 12,
+      "holds": 12,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 4,
-        "verdict": "The chart suffers from extreme repetition, relying almost exclusively on Left-Right jumps (JUMP LR) for every single jump sequence, resulting in awkward footwork and a lack of creative pattern variety.",
+        "score": 10,
+        "verdict": "An absolutely flawless medium-difficulty chart featuring exemplary foot flow, perfect sync, and rhythmic patterns that elegantly mirror the song's structure.",
         "issues": [
           {
-            "where": "45.36s to 76.56s",
-            "problem": "Extreme overuse of 'JUMP LR'. Virtually every jump in the chorus is a Left-Right jump, completely ignoring other jump variations (like UD, LD, RD, etc.), making the chart feel incredibly one-dimensional and repetitive."
-          },
-          {
-            "where": "47.128s, 49.141s, 53.167s",
-            "problem": "The transition 'tap L' followed immediately by 'JUMP LR' 0.25 seconds later creates an uncomfortable double-tap on the left foot while trying to execute a jump, which is too jerky for a Medium difficulty chart."
-          },
-          {
-            "where": "46.37s to 50.39s",
-            "problem": "The repetitive loop of JUMP LR -> tap U -> tap D -> tap L -> JUMP LR forces highly repetitive and awkward foot placement, lacking natural alternating flow."
+            "where": "80.595 - 86.130",
+            "problem": "The continuous repeating L-U-D-R loop is highly comfortable, though some players might find the repetitive pattern a bit hypnotic."
           }
-        ],
-        "human_review": true
+        ]
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/heart_of_it_all/medium.assist.ogg"
       },
       "metrics": {
-        "notes": 217,
-        "onset_alignment": 1.0,
-        "grid_notes": 0,
+        "notes": 184,
+        "onset_alignment": 0.8478,
+        "grid_notes": 28,
         "panel_balance": {
-          "L": 0.283,
-          "D": 0.255,
-          "U": 0.227,
-          "R": 0.235
+          "L": 0.209,
+          "D": 0.306,
+          "U": 0.27,
+          "R": 0.214
         },
-        "hold_share": 0.0461,
-        "jump_share": 0.1382,
-        "flow_cost_max": 0.0,
-        "flow_cost_mean": 0.0,
-        "density_energy_spearman": 0.1866,
+        "hold_share": 0.0652,
+        "jump_share": 0.0652,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": -0.2979,
         "gates": {
-          "onset_alignment": true,
+          "onset_alignment": false,
           "panel_balance": true,
-          "hold_share": false,
+          "hold_share": true,
           "flow_ceiling": true,
           "density_energy": false
         }
       }
     },
     "hard": {
-      "notes": 216,
+      "notes": 167,
       "meter": 8,
-      "jumps": 27,
-      "holds": 15,
+      "jumps": 0,
+      "holds": 9,
       "repaired": 1,
       "repair_ok": true,
       "critic": {
-        "score": 8,
-        "verdict": "An exceptionally energetic and well-timed chart with a fantastic drop, though marred by a few highly awkward cross-over streams in the first half.",
+        "score": 9,
+        "verdict": "An exceptionally polished and rhythmically accurate chart with creative pattern motifs and excellent density tracking, held back only by one tight stretch-jack.",
         "issues": [
           {
-            "where": "18.694 - 20.456",
-            "problem": "The repeating 'D -> R -> L -> U' pattern forces uncomfortable double cross-overs (Left foot on R, Right foot on L), causing awkward body twists."
-          },
-          {
-            "where": "28.005 - 30.773",
-            "problem": "Transitions like 'R -> L -> D' require extreme leg crossing that breaks the flow of the stream and is difficult to execute comfortably."
+            "where": "36.308 to 36.560",
+            "problem": "Holding R forces the left foot to make a rapid D to U jump-stretch in an eighth note (250ms), which is somewhat awkward and physically stressful for a Hard chart."
           }
         ]
       },
@@ -130,20 +108,20 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/heart_of_it_all/hard.assist.ogg"
       },
       "metrics": {
-        "notes": 216,
+        "notes": 167,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.276,
-          "D": 0.255,
-          "U": 0.235,
-          "R": 0.235
+          "L": 0.21,
+          "D": 0.299,
+          "U": 0.287,
+          "R": 0.204
         },
-        "hold_share": 0.0694,
-        "jump_share": 0.125,
+        "hold_share": 0.0539,
+        "jump_share": 0.0,
         "flow_cost_max": 7.85,
-        "flow_cost_mean": 0.04,
-        "density_energy_spearman": -0.2203,
+        "flow_cost_mean": 0.05,
+        "density_energy_spearman": 0.224,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,

@@ -1,23 +1,22 @@
 {
-  "score": 3,
-  "verdict": "The chart is extremely repetitive, lazily mapped, and contains a major mechanical error requiring three feet to play during a hold.",
+  "score": 7,
+  "verdict": "An exceptionally rhythmic and expressive chart with great flow, held back by several severe 16th-note footlocks during hold steps.",
   "issues": [
     {
-      "where": "95.353 - 97.105",
-      "problem": "While HOLD D is active, the chart features JUMP LR at 95.901 and 96.777. Holding D while jumping on L and R simultaneously is physically impossible on a standard pad without using hands or brackets, which is a major design oversight."
+      "where": "84.951 - 85.389",
+      "problem": "Holding D requires the player to use a single free foot to hit L and then R just a 16th note later (110ms), creating an extremely awkward footlock."
     },
     {
-      "where": "41.588 - 63.927",
-      "problem": "The entire chorus is mapped to an extremely repetitive alternating pattern of JUMP LR and tap D on almost every beat. This completely ignores the syncopated vocal melody and feels incredibly tedious to play."
+      "where": "86.703 - 87.141",
+      "problem": "Holding U forces the free foot to perform a 16th-note transition from D to R, which is physically too fast for a single foot."
     },
     {
-      "where": "75.753 - 105.537",
-      "problem": "The second chorus repeats the exact same lazy pattern of LR/LU/DR jumps and D taps, showing a lack of creative mapping and ignoring the musical structure."
+      "where": "88.455 - 88.893",
+      "problem": "Holding L forces the free foot to execute a rapid 16th-note transition from U to D."
     },
     {
-      "where": "84.513 - 85.389",
-      "problem": "The transition from JUMP LU -> tap D -> 16th tap R -> JUMP LU requires an extremely awkward and rushed foot transfer on a 16th note, leading to poor physical flow."
+      "where": "90.207 - 90.645",
+      "problem": "Holding D forces the free foot to execute a rapid 16th-note transition from L to R."
     }
-  ],
-  "human_review": true
+  ]
 }

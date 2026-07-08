@@ -5,45 +5,48 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 147,
+      "notes": 177,
       "meter": 3,
-      "jumps": 0,
-      "holds": 15,
+      "jumps": 5,
+      "holds": 19,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 6,
-        "verdict": "The chart features flawless foot alternation and perfect timing, but it is far too dense and complex for an Easy difficulty, featuring long continuous streams and tricky syncopated eighth notes.",
+        "score": 7,
+        "verdict": "Well-synced and rhythmically accurate, but includes syncopations and hold-tap patterns that are too difficult for an Easy chart.",
         "issues": [
           {
-            "where": "25.924, 29.498, 31.484",
-            "problem": "Syncopated eighth-note steps (placed on offbeats) at 151 BPM are too rhythmically complex and fast for beginners on an Easy chart."
+            "where": "71.196",
+            "problem": "Tapping D at 71.395 during the U hold requires an 8th-note independent foot release/tap, which is way too complex for beginners on an Easy chart."
           },
           {
-            "where": "34.463 to 60.275",
-            "problem": "There is a continuous quarter-note stream lasting nearly 26 seconds (over 60 steps) with no breaks, which is exhausting and mentally overwhelming for an Easy difficulty level."
+            "where": "73.182",
+            "problem": "Tapping U at 73.380 while holding L presents another difficult 8th-note hold-tap coordination issue."
+          },
+          {
+            "where": "25.924",
+            "problem": "The syncopated 8th notes following the vocal rhythm (e.g., at 25.924, 31.683, 32.874) are too difficult to read and play for an Easy chart at 151 BPM; these should be simplified to on-beat quarter notes."
           }
-        ],
-        "human_review": true
+        ]
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/everything_coming_my_way_phonk_5/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 147,
+        "notes": 177,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.197,
-          "D": 0.306,
-          "U": 0.299,
-          "R": 0.197
+          "L": 0.203,
+          "D": 0.302,
+          "U": 0.28,
+          "R": 0.214
         },
-        "hold_share": 0.102,
-        "jump_share": 0.0,
-        "flow_cost_max": 0.0,
-        "flow_cost_mean": 0.0,
-        "density_energy_spearman": 0.4889,
+        "hold_share": 0.1073,
+        "jump_share": 0.0282,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.3793,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -54,40 +57,35 @@
       }
     },
     "medium": {
-      "notes": 252,
+      "notes": 243,
       "meter": 6,
-      "jumps": 35,
-      "holds": 28,
-      "repaired": 3,
+      "jumps": 18,
+      "holds": 18,
+      "repaired": 15,
       "repair_ok": true,
       "critic": {
-        "score": 9,
-        "verdict": "An exceptionally well-crafted medium chart with stellar rhythmic synchronization, outstanding foot flow, and a highly creative cascading hold sequence.",
-        "issues": [
-          {
-            "where": "54.319 - 54.517",
-            "problem": "The transition from the LD jump immediately into a U hold is slightly abrupt for a medium chart, though still well within playable limits."
-          }
-        ]
+        "score": 10,
+        "verdict": "An absolute masterclass in house charting with flawless rhythmic precision, clever syncopation, and highly satisfying turn-based flow.",
+        "issues": []
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/everything_coming_my_way_phonk_5/medium.assist.ogg"
       },
       "metrics": {
-        "notes": 252,
+        "notes": 243,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.265,
-          "D": 0.258,
-          "U": 0.254,
-          "R": 0.223
+          "L": 0.195,
+          "D": 0.295,
+          "U": 0.291,
+          "R": 0.218
         },
-        "hold_share": 0.1111,
-        "jump_share": 0.1389,
-        "flow_cost_max": 7.85,
-        "flow_cost_mean": 0.04,
-        "density_energy_spearman": 0.3629,
+        "hold_share": 0.0741,
+        "jump_share": 0.0741,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.34,
+        "density_energy_spearman": -0.1019,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -98,40 +96,35 @@
       }
     },
     "hard": {
-      "notes": 344,
+      "notes": 389,
       "meter": 9,
-      "jumps": 47,
-      "holds": 29,
-      "repaired": 7,
+      "jumps": 15,
+      "holds": 26,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 9,
-        "verdict": "An outstanding, highly energetic chart with perfect synchronization, creative technical elements like rolling holds, and excellent density progression.",
-        "issues": [
-          {
-            "where": "41.909, 48.263, 49.057",
-            "problem": "Tapping a 16th note (D or L) while holding other arrows requires bracketing or very tight footwork, which can easily lead to accidental hold drops."
-          }
-        ]
+        "score": 10,
+        "verdict": "An exceptional, professional-tier technical chart featuring flawless flow, superb physical intuition, and creative hold-tech patterns that perfectly capture the syncopation of the music.",
+        "issues": []
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/everything_coming_my_way_phonk_5/hard.assist.ogg"
       },
       "metrics": {
-        "notes": 344,
+        "notes": 389,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.302,
-          "D": 0.251,
-          "U": 0.217,
-          "R": 0.23
+          "L": 0.23,
+          "D": 0.267,
+          "U": 0.275,
+          "R": 0.228
         },
-        "hold_share": 0.0843,
-        "jump_share": 0.1366,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.05,
-        "density_energy_spearman": -0.3474,
+        "hold_share": 0.0668,
+        "jump_share": 0.0386,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.2003,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,

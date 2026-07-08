@@ -1,23 +1,18 @@
 {
-  "score": 6,
-  "verdict": "The chart features a fantastic representation of the song's syncopated Tresillo rhythm, but is held back by technical mapping errors and frustratingly tight jump-to-tap transitions.",
+  "score": 8,
+  "verdict": "A highly energetic and incredibly well-synced chart that captures the disco-house rhythm perfectly, with only minor recovery flow issues after jumps.",
   "issues": [
     {
-      "where": "12.944 to 13.290",
-      "problem": "A HOLD D is active during a JUMP LR at 13.203. This requires three panels to be pressed simultaneously on a single-dance chart, creating an impossible or highly uncomfortable physical conflict."
+      "where": "67.906 to 68.599",
+      "problem": "Landing the UR jump forces an awkward double-step or uncomfortable weight shifting to hit the subsequent D and U taps."
     },
     {
-      "where": "68.599 to 68.685",
-      "problem": "A 16th-note transition directly out of a JUMP LR into a tap D (86ms gap) at 173 BPM is extremely jarring to execute and highly prone to pad-misses or double-stepping."
+      "where": "69.984 to 70.676",
+      "problem": "Repeats the same awkward flow issue where a UR jump is immediately followed by a vertical D -> U sequence."
     },
     {
-      "where": "71.368 to 71.455",
-      "problem": "Another extremely tight 16th-note transition immediately following a JUMP LR to a tap D, disrupting the flow of the song's drop."
-    },
-    {
-      "where": "38.131",
-      "problem": "A JUMP LR is placed exactly a 16th-note after tap U at 38.045, making the entry into the jump feel rushed and physically awkward at this tempo."
+      "where": "92.228",
+      "problem": "A slight 16th-note off-beat tap feels rhythmically disjointed compared to the clean quarter/eighth-note structure elsewhere."
     }
-  ],
-  "human_review": true
+  ]
 }

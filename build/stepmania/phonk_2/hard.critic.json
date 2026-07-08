@@ -1,0 +1,23 @@
+{
+  "score": 5,
+  "verdict": "A high-energy chart with great rhythmic representation that is unfortunately held back by physical playability issues, including illegal three-panel 'hands' and awkward 16th-note transitions immediately following jumps.",
+  "issues": [
+    {
+      "where": "17.649 and 59.929",
+      "problem": "These sections require hitting 3 panels simultaneously (holding R and U while tapping D at 17.649; holding L while jumping UR at 59.929), which are 'hands' and violate standard pad playability for single charts."
+    },
+    {
+      "where": "26.647 to 27.034 (and repeated chorus patterns)",
+      "problem": "Transitioning from a JUMP DR directly into a rapid 16th burst (U-D-L) creates terrible foot-flow, forcing awkward double-steps and hard-to-execute slides on pad."
+    },
+    {
+      "where": "34.580 to 34.774",
+      "problem": "A 16th-note L-D-L triplet forces a rapid double-tap (jack) on the Left arrow right after a jump, which is highly uncomfortable and disruptive to the stream flow."
+    },
+    {
+      "where": "22.874 to 23.357",
+      "problem": "Tapping U, L, and R in quick succession while holding down the D panel is physically awkward and completely disrupts body balance."
+    }
+  ],
+  "human_review": true
+}

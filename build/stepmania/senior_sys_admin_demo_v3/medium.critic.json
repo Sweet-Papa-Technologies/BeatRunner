@@ -1,18 +1,22 @@
 {
-  "score": 4,
-  "verdict": "The chart suffers from extreme, repetitive copy-pasting in the main chorus and an awkward, physically unbalanced repeating pattern, alongside isolated 3-panel brackets and abrupt 16th-note spikes.",
+  "score": 6,
+  "verdict": "Great rhythmic flow and synchronization, but ruined by several unplayable or overly complex 3-panel hold-and-tap patterns inappropriate for a Medium chart.",
   "issues": [
     {
-      "where": "41.250 - 55.099",
-      "problem": "The exact same 4-note sequence (U, D, L, LR) is repeated 15 times consecutively. This is highly repetitive and lazy charting, causing severe physical imbalance where the left foot is forced to do rapid 8th-note lateral movements while the right foot remains mostly static."
+      "where": "25.786",
+      "problem": "Simultaneous R and U holds with a D tap at 26.247 creates an awkward 3-panel bracket setup, which is too complex for a Medium chart."
     },
     {
-      "where": "7.782",
-      "problem": "A JUMP LR is placed while a HOLD D is active. This forces a 3-panel bracket step (L+D+R), which is an unexpected and unfair difficulty spike for a medium-style chart."
+      "where": "29.479",
+      "problem": "Holding D and R while tapping L at 29.940 requires holding two arrows and tapping a third, forcing an unnatural heel-toe or hand press."
     },
     {
-      "where": "12.745, 16.438, 60.870, 66.871",
-      "problem": "Isolated 16th-note doublets (such as the D -> U at 12.745) are introduced abruptly without clear musical justification, disrupting the established 8th-note rhythm."
+      "where": "33.172",
+      "problem": "Another 3-panel hold-and-tap (holding R+U, tapping D) that violates standard play conventions for this difficulty level."
+    },
+    {
+      "where": "71.487",
+      "problem": "A UR jump occurs while the D hold is still active, creating an unplayable 3-panel combination on a standard pad."
     }
   ],
   "human_review": true

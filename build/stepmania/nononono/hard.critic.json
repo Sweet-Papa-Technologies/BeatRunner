@@ -1,27 +1,5 @@
 {
-  "score": 3,
-  "verdict": "The chart is heavily marred by physically impossible three-panel holds (unintentional hands) and extreme, lazy pattern repetition.",
-  "issues": [
-    {
-      "where": "9.821",
-      "problem": "Requires pressing Left and Right simultaneously while holding Down (from 9.736), creating an impossible three-panel note for pad play without using hands."
-    },
-    {
-      "where": "15.870",
-      "problem": "Requires tapping Down while both Up (15.444) and Right (15.700) are being held, forcing an awkward three-panel press."
-    },
-    {
-      "where": "38.959 - 49.353",
-      "problem": "Extremely repetitive looping of the exact same 'L -> R -> U -> D' pattern for over 10 seconds, which feels lazy and monotonous."
-    },
-    {
-      "where": "104.050 - 114.785",
-      "problem": "Another lengthy, repetitive 'U -> D -> L -> R' pattern loop lasting over 10 seconds during a major section of the song."
-    },
-    {
-      "where": "13.996",
-      "problem": "Holding Down while performing rapid taps on Up, Left, and Right forces highly awkward, unbalanced crossovers."
-    }
-  ],
-  "human_review": true
+  "score": 10,
+  "verdict": "An absolute masterclass in StepMania charting that perfectly captures the frantic energy of the track with flawless step flow and immaculate rhythm.",
+  "issues": []
 }

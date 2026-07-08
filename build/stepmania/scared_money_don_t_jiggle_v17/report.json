@@ -5,53 +5,35 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 158,
+      "notes": 207,
       "meter": 3,
-      "jumps": 19,
-      "holds": 26,
-      "repaired": 1,
+      "jumps": 6,
+      "holds": 27,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 5,
-        "verdict": "The chart has good structure and song mapping, but contains major difficulty spikes (8th notes directly connected to jumps) and highly syncopated rhythms that are inappropriate for an Easy chart.",
-        "issues": [
-          {
-            "where": "41.074",
-            "problem": "An 8th note tap on U immediately following a JUMP LR is a massive difficulty spike that is too physically demanding for an Easy chart."
-          },
-          {
-            "where": "75.927",
-            "problem": "Extended syncopated sequence using dotted-quarter rhythms (off-beats) is highly confusing for beginners and should be simplified to steady quarter notes."
-          },
-          {
-            "where": "107.548",
-            "problem": "An 8th note transition from a tap U directly into a JUMP LR is too fast and mechanically complex for players at this level."
-          },
-          {
-            "where": "114.011",
-            "problem": "An isolated 8th note tap here creates an unnecessary difficulty spike during the outro."
-          }
-        ],
-        "human_review": true
+        "score": 10,
+        "verdict": "An exceptionally well-crafted Easy chart that perfectly captures the syncopated vocal rhythms while maintaining flawless, fully-alternating foot flow.",
+        "issues": []
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/scared_money_don_t_jiggle_v17/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 158,
-        "onset_alignment": 0.9684,
-        "grid_notes": 5,
+        "notes": 207,
+        "onset_alignment": 0.9807,
+        "grid_notes": 4,
         "panel_balance": {
-          "L": 0.26,
-          "D": 0.299,
-          "U": 0.237,
-          "R": 0.203
+          "L": 0.188,
+          "D": 0.315,
+          "U": 0.291,
+          "R": 0.207
         },
-        "hold_share": 0.1646,
-        "jump_share": 0.1203,
-        "flow_cost_max": 7.85,
-        "flow_cost_mean": 0.05,
-        "density_energy_spearman": 0.1691,
+        "hold_share": 0.1304,
+        "jump_share": 0.029,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.2905,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -62,46 +44,44 @@
       }
     },
     "medium": {
-      "notes": 394,
+      "notes": 315,
       "meter": 6,
-      "jumps": 104,
+      "jumps": 20,
       "holds": 20,
-      "repaired": 9,
+      "repaired": 13,
       "repair_ok": true,
       "critic": {
         "score": 8,
-        "verdict": "An incredibly rhythmic and catchy chart that captures the bounce of the track perfectly, though marred by a single invalid 3-panel jump.",
+        "verdict": "Excellent vocal rhythm mapping that is highly engaging, though a few hold-active patterns spike the difficulty beyond a typical Medium chart.",
         "issues": [
           {
-            "where": "23.532",
-            "problem": "The JUMP LR at 23.532 occurs while the D panel is held (HOLD D until 23.878), creating an unintentional 3-panel 'hand' requirement that breaks single-play pad conventions."
+            "where": "89.083 - 90.006",
+            "problem": "Holding D while tapping U, L, and R in quick succession (16th notes) forces either an extremely awkward crossover or a bracket, which is too technically demanding for a Medium chart."
           },
           {
-            "where": "42.805 - 42.920",
-            "problem": "The 16th-note transition from tap D (42.805) directly into JUMP LR (42.920) forces an awkward foot recovery or double-step on the right foot."
-          },
-          {
-            "where": "21.108 - 21.223",
-            "problem": "Isolated 16th doublets feel slightly disconnected from the surrounding rhythmic density and can catch players off-guard."
+            "where": "19.146 - 19.377",
+            "problem": "The fast 16th-note transition from U to R to D creates a potential double-step or an awkward crossover sequence for this difficulty level."
           }
         ]
       },
-      "previews": {},
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/scared_money_don_t_jiggle_v17/medium.assist.ogg"
+      },
       "metrics": {
-        "notes": 394,
-        "onset_alignment": 0.9695,
-        "grid_notes": 12,
+        "notes": 315,
+        "onset_alignment": 0.9905,
+        "grid_notes": 3,
         "panel_balance": {
-          "L": 0.307,
-          "D": 0.243,
-          "U": 0.209,
-          "R": 0.241
+          "L": 0.209,
+          "D": 0.287,
+          "U": 0.29,
+          "R": 0.215
         },
-        "hold_share": 0.0508,
-        "jump_share": 0.264,
-        "flow_cost_max": 13.85,
-        "flow_cost_mean": 0.11,
-        "density_energy_spearman": 0.2384,
+        "hold_share": 0.0635,
+        "jump_share": 0.0635,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.14,
+        "density_energy_spearman": -0.021,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -112,50 +92,61 @@
       }
     },
     "hard": {
-      "notes": 358,
+      "notes": 325,
       "meter": 8,
-      "jumps": 56,
-      "holds": 15,
-      "repaired": 2,
+      "jumps": 34,
+      "holds": 20,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 8,
-        "verdict": "A highly rhythmic and engaging chart with excellent clap-sync, let down slightly by a few awkward same-foot 16th sequences during holds.",
+        "score": 6,
+        "verdict": "A decently timed chart that suffers from inconsistent vocal rhythm quantization and several flow-breaking double steps.",
         "issues": [
           {
-            "where": "26.763",
-            "problem": "Forced 16th-note same-foot transition (D -> L) in 115ms while holding U, which is highly awkward and disrupts natural alternate flow."
+            "where": "4.489 to 5.528",
+            "problem": "Inconsistent rhythm mapping for the same vocal phrase. The first 'jiggle' uses a 0.346s (dotted eighth) gap, while the second uses a 0.231s (eighth note) gap, making the repetition feel off-sync and unintuitive."
           },
           {
-            "where": "89.429",
-            "problem": "Repeats the forced 16th same-foot slide/jack (D -> L) during a U hold, causing physical discomfort or requiring advanced bracket techniques."
+            "where": "18.223 to 19.377",
+            "problem": "The sequence 'U -> D -> L -> R -> U -> D' forces either rapid double-stepping on the same foot or highly awkward crossovers, breaking the natural dance flow."
           },
           {
-            "where": "51.229",
-            "problem": "The transition from a 16th-note tap R to JUMP LD is very sudden and feels slightly jerky to perform."
+            "where": "22.031 to 22.724",
+            "problem": "A sudden 16th-note transition (L to R in 116ms) followed by a hold feels jarringly out of place compared to the surrounding slow tempo."
+          },
+          {
+            "where": "25.263 to 25.378",
+            "problem": "An awkward 16th-note transition from L to D forces an uncomfortable double-step with the left foot immediately before an 8th-note stream."
+          },
+          {
+            "where": "69.118 to 70.387",
+            "problem": "Cluttered hold and tap overlaps where a D tap is placed shortly after releasing a D hold, while simultaneously holding R. This creates a messy and physically awkward sequence."
           }
-        ]
+        ],
+        "human_review": true
       },
-      "previews": {},
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/scared_money_don_t_jiggle_v17/hard.assist.ogg"
+      },
       "metrics": {
-        "notes": 358,
-        "onset_alignment": 0.9665,
+        "notes": 325,
+        "onset_alignment": 0.9631,
         "grid_notes": 12,
         "panel_balance": {
-          "L": 0.266,
-          "D": 0.256,
-          "U": 0.239,
-          "R": 0.239
+          "L": 0.217,
+          "D": 0.281,
+          "U": 0.265,
+          "R": 0.237
         },
-        "hold_share": 0.0419,
-        "jump_share": 0.1564,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.05,
-        "density_energy_spearman": 0.1179,
+        "hold_share": 0.0615,
+        "jump_share": 0.1046,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": -0.0285,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": false,
+          "hold_share": true,
           "flow_ceiling": true,
           "density_energy": false
         }

@@ -1,22 +1,27 @@
 {
-  "score": 7.5,
-  "verdict": "A well-synced and structurally sound chart with good flow, but contains overly complex hold patterns and a stretch jump that are inappropriate for an Easy difficulty.",
+  "score": 4,
+  "verdict": "The chart has decent rhythmic sync with the vocals, but it is far too complex for an Easy difficulty, forcing either highly advanced crossovers or extremely awkward same-foot 8th-note double-steps.",
   "issues": [
     {
-      "where": "96.587 to 97.787",
-      "problem": "A rapid succession of extremely short (eighth-note and quarter-note) holds is highly frustrating and mechanically complex for an Easy chart, often leading to accidental hold drops."
+      "where": "Entire chart (specifically 16.445, 17.404, 21.243, etc.)",
+      "problem": "High density of 8th notes on syncopated vocal offbeats, which is highly confusing and too difficult for an Easy-level player."
     },
     {
-      "where": "104.266 to 105.465",
-      "problem": "Another sequence of rapid, consecutive short holds that functions as a gimmick, which is too technical for beginner players."
+      "where": "27.002 to 30.122",
+      "problem": "Forces either extreme, unnatural crossovers (Left foot on R, Right foot on L) or excessive double-stepping that breaks the natural movement flow."
     },
     {
-      "where": "106.185 to 106.905",
-      "problem": "Overlapping holds (HOLD L starting during HOLD D, followed by an immediate transition to HOLD U) require multi-tasking feet pressure that is too complex for an Easy difficulty level."
+      "where": "75.952 to 76.192",
+      "problem": "Forces either a crossover (Left foot on R) or a very fast same-foot 8th note (U to R in 0.24s with the Right foot), creating a physical bottleneck."
     },
     {
-      "where": "102.106",
-      "problem": "An Up-Down (UD) jump requires a sideways body orientation, which is generally discouraged in Easy-rated charts due to the physical reading strain on beginners."
+      "where": "93.468 to 93.708",
+      "problem": "Forces a same-foot 8th-note jump (R to U in 0.24s with the Right foot) or an awkward crossover, which is highly inappropriate for an Easy chart."
+    },
+    {
+      "where": "104.745 to 104.985",
+      "problem": "Forces a same-foot 8th-note transition from L to HOLD D with the Left foot, causing an unavoidable physical bottleneck or an advanced crossover."
     }
-  ]
+  ],
+  "human_review": true
 }

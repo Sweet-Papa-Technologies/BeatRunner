@@ -5,44 +5,49 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 170,
+      "notes": 192,
       "meter": 3,
-      "jumps": 0,
-      "holds": 22,
+      "jumps": 4,
+      "holds": 35,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 9,
-        "verdict": "A wonderfully fluid and beautifully synced Easy chart that captures the energetic tempo of the remix perfectly with highly comfortable foot-flow.",
+        "score": 5,
+        "verdict": "Mostly playable but features inappropriately short holds and overly complex syncopations for an Easy chart.",
         "issues": [
           {
-            "where": "19.752",
-            "problem": "Staggered overlapping holds (D starting at 19.752 and U starting at 19.935) might be slightly too complex for an Easy chart's coordination level, though they are rhythmically accurate."
+            "where": "115.752, 119.409, 120.506, 120.872",
+            "problem": "Holds of 183ms (8th-note duration) are extremely short and will easily drop or feel like glitchy taps rather than holds, which is highly frustrating, especially on an Easy chart."
           },
           {
-            "where": "17.740",
-            "problem": "Multiple very short 1-beat holds (0.366s) throughout the chart act almost like normal taps, though they do help highlight the quick vocal stabs."
+            "where": "125.261 - 127.455",
+            "problem": "A series of consecutive half-note jumps (LR, DR, UR, LR) creates an abrupt and inappropriate difficulty spike at the very end of an Easy chart."
+          },
+          {
+            "where": "Throughout",
+            "problem": "Frequent syncopated rhythms (dotted quarters and off-beat eighth notes) make the physical reading and step-coordination too complex for a standard Easy difficulty."
           }
-        ]
+        ],
+        "human_review": true
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/stick_around_for_me/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 170,
-        "onset_alignment": 0.9882,
-        "grid_notes": 2,
+        "notes": 192,
+        "onset_alignment": 0.9792,
+        "grid_notes": 4,
         "panel_balance": {
-          "L": 0.194,
-          "D": 0.312,
-          "U": 0.306,
-          "R": 0.188
+          "L": 0.214,
+          "D": 0.286,
+          "U": 0.281,
+          "R": 0.219
         },
-        "hold_share": 0.1294,
-        "jump_share": 0.0,
-        "flow_cost_max": 0.0,
+        "hold_share": 0.1823,
+        "jump_share": 0.0208,
+        "flow_cost_max": 0.2,
         "flow_cost_mean": 0.0,
-        "density_energy_spearman": 0.5291,
+        "density_energy_spearman": 0.394,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -53,88 +58,77 @@
       }
     },
     "medium": {
-      "notes": 382,
-      "meter": 6,
-      "jumps": 52,
-      "holds": 18,
-      "repaired": 10,
+      "notes": 292,
+      "meter": 5,
+      "jumps": 20,
+      "holds": 40,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 6,
-        "verdict": "A highly energetic chart with strong rhythmic sync that unfortunately suffers from awkward 16th-note transitions and a physical 3-panel hold conflict.",
+        "score": 8,
+        "verdict": "Excellent flow and rhythmic accuracy, but the middle section (75s-95s) suffers from extreme repetition and physical asymmetry due to anchoring.",
         "issues": [
           {
-            "where": "113.192 - 113.558",
-            "problem": "HOLD D is active until 113.923, but a JUMP LR occurs at 113.558. This creates an illegal 3-panel requirement (D, L, R) forcing a player to drop the hold or use hands on a standard pad."
-          },
-          {
-            "where": "85.032 - 85.123",
-            "problem": "JUMP DR followed immediately by a 16th-note tap on L (91ms gap) forces an extremely awkward, jarring shift for the left foot."
-          },
-          {
-            "where": "85.763 - 85.855",
-            "problem": "JUMP DR followed immediately by a 16th-note tap on L creates another uncomfortable double-step transition similar to the one at 85.032."
-          },
-          {
-            "where": "86.495 - 86.586",
-            "problem": "JUMP LR followed immediately by a 16th-note tap on U is highly uncomfortable to execute cleanly at this speed."
+            "where": "75.158 to 94.723",
+            "problem": "The exact same 3-measure pattern (L-U-Hold D, R-U-Hold D, Jump LR-U-Hold D) repeats 5 times in a row. This lack of variation is monotonous and heavily anchors one foot to the Down panel, creating physical fatigue."
           }
-        ],
-        "human_review": true
+        ]
       },
-      "previews": {},
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/stick_around_for_me/medium.assist.ogg"
+      },
       "metrics": {
-        "notes": 382,
-        "onset_alignment": 1.0,
-        "grid_notes": 0,
+        "notes": 292,
+        "onset_alignment": 0.5342,
+        "grid_notes": 136,
         "panel_balance": {
-          "L": 0.265,
-          "D": 0.281,
-          "U": 0.224,
-          "R": 0.23
+          "L": 0.221,
+          "D": 0.279,
+          "U": 0.276,
+          "R": 0.224
         },
-        "hold_share": 0.0471,
-        "jump_share": 0.1361,
-        "flow_cost_max": 39.15,
-        "flow_cost_mean": 0.19,
-        "density_energy_spearman": 0.2962,
+        "hold_share": 0.137,
+        "jump_share": 0.0685,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.6512,
         "gates": {
-          "onset_alignment": true,
+          "onset_alignment": false,
           "panel_balance": true,
-          "hold_share": false,
-          "flow_ceiling": false,
-          "density_energy": false
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
         }
       }
     },
     "hard": {
-      "notes": 359,
+      "notes": 524,
       "meter": 8,
-      "jumps": 49,
-      "holds": 14,
-      "repaired": 1,
+      "jumps": 30,
+      "holds": 13,
+      "repaired": 6,
       "repair_ok": true,
       "critic": {
         "score": 10,
-        "verdict": "An absolute masterpiece of StepMania chart design, featuring flawless 164 BPM quantization, outstanding technical flow, and incredibly satisfying jump-stream patterns.",
+        "verdict": "An absolute masterpiece of a chart featuring incredibly precise vocal syncopation, flawless foot flow, and an immensely satisfying, rhythmic climax.",
         "issues": []
       },
       "previews": {},
       "metrics": {
-        "notes": 359,
+        "notes": 524,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.26,
-          "D": 0.284,
-          "U": 0.213,
-          "R": 0.243
+          "L": 0.213,
+          "D": 0.287,
+          "U": 0.282,
+          "R": 0.218
         },
-        "hold_share": 0.039,
-        "jump_share": 0.1365,
-        "flow_cost_max": 7.85,
-        "flow_cost_mean": 0.02,
-        "density_energy_spearman": 0.322,
+        "hold_share": 0.0248,
+        "jump_share": 0.0573,
+        "flow_cost_max": 13.85,
+        "flow_cost_mean": 0.12,
+        "density_energy_spearman": 0.3899,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,

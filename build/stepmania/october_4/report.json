@@ -1,0 +1,155 @@
+{
+  "track_id": "october_4",
+  "bpm": 175.27,
+  "offset": 0.199,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 171,
+      "meter": 2,
+      "jumps": 4,
+      "holds": 18,
+      "repaired": 1,
+      "repair_ok": true,
+      "critic": {
+        "score": 10,
+        "verdict": "An exceptionally well-crafted Easy chart with flawless foot flow, perfect synchronization, and highly appropriate density scaling.",
+        "issues": []
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/october_4/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 171,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.206,
+          "D": 0.303,
+          "U": 0.28,
+          "R": 0.211
+        },
+        "hold_share": 0.1053,
+        "jump_share": 0.0234,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.0194,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 334,
+      "meter": 5,
+      "jumps": 23,
+      "holds": 37,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "An exceptionally well-crafted chart with natural alternating foot flow, precise timing, and great rhythmic cohesion.",
+        "issues": [
+          {
+            "where": "78.935",
+            "problem": "The DR jump lands on panels the player's feet are already occupying (L foot on D from previous tap, R foot on R from previous hold), resulting in a redundant in-place jump."
+          },
+          {
+            "where": "133.707",
+            "problem": "The LR jump lands on panels already occupied by the feet, making the jump feel slightly redundant and halting movement flow."
+          }
+        ]
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 334,
+        "onset_alignment": 0.6228,
+        "grid_notes": 126,
+        "panel_balance": {
+          "L": 0.199,
+          "D": 0.322,
+          "U": 0.263,
+          "R": 0.216
+        },
+        "hold_share": 0.1108,
+        "jump_share": 0.0689,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.2093,
+        "gates": {
+          "onset_alignment": false,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 531,
+      "meter": 8,
+      "jumps": 53,
+      "holds": 30,
+      "repaired": 7,
+      "repair_ok": true,
+      "critic": {
+        "score": 2,
+        "verdict": "A highly repetitive, formulaic chart marred by uncomfortable Up/Down jumps and excessive copy-pasting of simple loops.",
+        "issues": [
+          {
+            "where": "5.676, 35.801, 67.638, 69.692",
+            "problem": "Uncomfortable Up/Down (UD) jumps are used multiple times, which forces awkward inline physical footing on standard dance pads."
+          },
+          {
+            "where": "72.430 to 83.727",
+            "problem": "The three-note pattern [D -> U -> LR] is repeated endlessly 18 times in a row, leading to severe monotony."
+          },
+          {
+            "where": "96.393 to 110.429",
+            "problem": "The loop [DR -> L -> U] is copy-pasted for over 14 seconds straight, completely ignoring the melodic and vocal progression of the music."
+          },
+          {
+            "where": "126.176 to 138.500",
+            "problem": "The final section consists of lazy, sparse jumps occurring strictly on the first beat of every measure, draining the chart of any remaining energy."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 531,
+        "onset_alignment": 0.5556,
+        "grid_notes": 236,
+        "panel_balance": {
+          "L": 0.24,
+          "D": 0.253,
+          "U": 0.26,
+          "R": 0.247
+        },
+        "hold_share": 0.0565,
+        "jump_share": 0.0998,
+        "flow_cost_max": 8.0,
+        "flow_cost_mean": 0.06,
+        "density_energy_spearman": -0.2774,
+        "gates": {
+          "onset_alignment": false,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/october_4/october_4.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/october_4/october_4.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/october_4/october_4.ogg"
+  },
+  "out": "build/stepmania/october_4",
+  "meter_monotonic": true
+}

@@ -5,23 +5,27 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 194,
+      "notes": 185,
       "meter": 3,
-      "jumps": 16,
-      "holds": 16,
-      "repaired": 1,
+      "jumps": 5,
+      "holds": 18,
+      "repaired": 3,
       "repair_ok": true,
       "critic": {
-        "score": 7,
-        "verdict": "A comfortable and well-paced Easy chart that matches the song's energy perfectly, marred only by a couple of overly demanding eighth-note jump transitions.",
+        "score": 9,
+        "verdict": "An exceptionally fluid and well-structured Easy chart with natural foot flow, though it contains a couple of slightly advanced patterns for beginners.",
         "issues": [
           {
-            "where": "69.004",
-            "problem": "Jarring 8th-note transition from JUMP LR to HOLD U at 69.242, which is too physically demanding for an Easy chart."
+            "where": "44.728",
+            "problem": "Overlapping holds (HOLD L starting at 44.728 and HOLD U starting at 44.966) create a co-hold, which is generally too complex for an Easy chart."
           },
           {
-            "where": "76.382",
-            "problem": "An 8th-note transition from tap U to JUMP LR at 76.620 creates a sudden difficulty spike for beginner players."
+            "where": "63.292",
+            "problem": "The 7-note eighth-note stream (R-U-D-L-R-U-D) has perfect physical alternation but represents a minor difficulty spike for Easy players."
+          },
+          {
+            "where": "48.298",
+            "problem": "A tap note (R at 48.536) occurs while another pad (U) is held, which can be mechanically confusing for beginners."
           }
         ]
       },
@@ -29,22 +33,22 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/the_pools/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 194,
-        "onset_alignment": 0.8763,
-        "grid_notes": 24,
+        "notes": 185,
+        "onset_alignment": 0.9568,
+        "grid_notes": 8,
         "panel_balance": {
-          "L": 0.233,
-          "D": 0.305,
-          "U": 0.233,
-          "R": 0.229
+          "L": 0.211,
+          "D": 0.289,
+          "U": 0.268,
+          "R": 0.232
         },
-        "hold_share": 0.0825,
-        "jump_share": 0.0825,
-        "flow_cost_max": 0.5,
-        "flow_cost_mean": 0.01,
-        "density_energy_spearman": -0.1375,
+        "hold_share": 0.0973,
+        "jump_share": 0.027,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.14,
+        "density_energy_spearman": -0.1664,
         "gates": {
-          "onset_alignment": false,
+          "onset_alignment": true,
           "panel_balance": true,
           "hold_share": false,
           "flow_ceiling": true,
@@ -53,90 +57,96 @@
       }
     },
     "medium": {
-      "notes": 313,
+      "notes": 318,
       "meter": 6,
-      "jumps": 71,
-      "holds": 14,
-      "repaired": 16,
+      "jumps": 21,
+      "holds": 18,
+      "repaired": 1,
       "repair_ok": true,
       "critic": {
-        "score": 3,
-        "verdict": "The chart is heavily dragged down by extreme repetitiveness, lazy copy-pasted patterns, and highly awkward foot flow in key sections.",
+        "score": 9,
+        "verdict": "An exceptionally well-timed and rhythmic chart that beautifully captures the song's tempo shifts and syncopation, held back only by a single unplayable triple-press sequence.",
         "issues": [
           {
-            "where": "54.724 - 60.198",
-            "problem": "A 24-note loop of 'L, D, U, R' is repeated continuously, forcing the player into constant spinning or frustrating double-stepping."
-          },
-          {
-            "where": "84.237 - 93.519",
-            "problem": "The four-note pattern 'JUMP LR -> U -> D -> L' is copy-pasted 10 times in a row, which is incredibly lazy and results in a jarring left-foot double-step (D -> L)."
-          },
-          {
-            "where": "113.273 - 128.505",
-            "problem": "The entire outro is mapped as a brain-dead alternating repetition of 'D' and 'JUMP LR' on every single quarter-note beat, completely ignoring the actual structure of the music."
+            "where": "33.780 to 34.732",
+            "problem": "While holding both U and D (which occupies both feet), there is a tap on R at 34.494. This creates an unplayable three-panel pattern (a 'hand') without a third foot, forcing an awkward bracket or resulting in a dropped hold."
           }
-        ],
-        "human_review": true
+        ]
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/the_pools/medium.assist.ogg"
       },
       "metrics": {
-        "notes": 313,
-        "onset_alignment": 0.7764,
-        "grid_notes": 70,
+        "notes": 318,
+        "onset_alignment": 0.8962,
+        "grid_notes": 33,
         "panel_balance": {
-          "L": 0.305,
-          "D": 0.266,
-          "U": 0.193,
-          "R": 0.237
+          "L": 0.215,
+          "D": 0.265,
+          "U": 0.277,
+          "R": 0.242
         },
-        "hold_share": 0.0447,
-        "jump_share": 0.2268,
-        "flow_cost_max": 0.5,
-        "flow_cost_mean": 0.01,
-        "density_energy_spearman": -0.0096,
+        "hold_share": 0.0566,
+        "jump_share": 0.066,
+        "flow_cost_max": 7.85,
+        "flow_cost_mean": 0.03,
+        "density_energy_spearman": -0.0862,
         "gates": {
           "onset_alignment": false,
           "panel_balance": true,
-          "hold_share": false,
+          "hold_share": true,
           "flow_ceiling": true,
           "density_energy": false
         }
       }
     },
     "hard": {
-      "notes": 353,
+      "notes": 263,
       "meter": 8,
-      "jumps": 55,
-      "holds": 23,
+      "jumps": 30,
+      "holds": 11,
       "repaired": 1,
       "repair_ok": true,
       "critic": {
-        "score": 9.5,
-        "verdict": "An exceptionally well-structured chart with outstanding flow, highly creative circular patterns, and flawless rhythmic synchronization.",
-        "issues": []
+        "score": 9,
+        "verdict": "An outstanding Hard chart that captures the syncopated rhythm and energy of the song perfectly, with only minor 16th-note flow hitches.",
+        "issues": [
+          {
+            "where": "60.793",
+            "problem": "Awkward 16th-note double-step on the left foot (D -> L)."
+          },
+          {
+            "where": "68.409",
+            "problem": "A rapid 16th-note transition from D to L requires a same-foot double tap, disrupting the flow slightly."
+          },
+          {
+            "where": "71.503",
+            "problem": "Awkward 16th-note double-step from U to R."
+          }
+        ]
       },
-      "previews": {},
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/the_pools/hard.assist.ogg"
+      },
       "metrics": {
-        "notes": 353,
-        "onset_alignment": 0.9518,
-        "grid_notes": 17,
+        "notes": 263,
+        "onset_alignment": 0.9392,
+        "grid_notes": 16,
         "panel_balance": {
-          "L": 0.294,
-          "D": 0.243,
-          "U": 0.233,
-          "R": 0.23
+          "L": 0.222,
+          "D": 0.294,
+          "U": 0.256,
+          "R": 0.229
         },
-        "hold_share": 0.0652,
-        "jump_share": 0.1558,
-        "flow_cost_max": 0.5,
-        "flow_cost_mean": 0.01,
-        "density_energy_spearman": -0.2739,
+        "hold_share": 0.0418,
+        "jump_share": 0.1141,
+        "flow_cost_max": 8.0,
+        "flow_cost_mean": 0.04,
+        "density_energy_spearman": 0.0237,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": true,
+          "hold_share": false,
           "flow_ceiling": true,
           "density_energy": false
         }

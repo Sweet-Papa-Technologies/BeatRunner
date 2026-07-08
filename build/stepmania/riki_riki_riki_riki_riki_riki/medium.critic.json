@@ -1,0 +1,10 @@
+{
+  "score": 9,
+  "verdict": "An exceptionally well-flowing Medium chart with outstanding representation of vocal rhythms, marred only by a very minor timing drift.",
+  "issues": [
+    {
+      "where": "Throughout the chart",
+      "problem": "There is a slight timing drift of about 46ms from the start (onbeat at .476s) to the end (onbeat at .430s). The track's actual tempo is closer to 120.06 BPM rather than a flat 120.00 BPM, causing the sync to feel slightly tight by the outro."
+    }
+  ]
+}

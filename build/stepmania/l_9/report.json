@@ -5,86 +5,88 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 215,
+      "notes": 226,
       "meter": 3,
-      "jumps": 2,
-      "holds": 38,
-      "repaired": 0,
+      "jumps": 6,
+      "holds": 20,
+      "repaired": 2,
       "repair_ok": true,
       "critic": {
-        "score": 10,
-        "verdict": "An exceptionally well-crafted Easy chart with outstanding flow, highly accurate rhythm, and great physical comfort.",
-        "issues": []
+        "score": 7,
+        "verdict": "A clean and well-paced Easy chart with natural foot flow, though the intro contains an accidental 3-panel hold that is physically awkward.",
+        "issues": [
+          {
+            "where": "6.740 - 6.990",
+            "problem": "Overlapping hold notes create an accidental 3-panel hold (R, L, and U active simultaneously), which is physically impossible to play on a standard single-pad layout without bracket-stepping or using hands, making it highly inappropriate for an Easy chart."
+          },
+          {
+            "where": "97.281 and 103.034",
+            "problem": "Slightly off-beat step placements during the sparse outro section break the consistent 120 BPM grid alignment established throughout the rest of the chart."
+          }
+        ]
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/l_9/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 215,
-        "onset_alignment": 0.9674,
-        "grid_notes": 7,
+        "notes": 226,
+        "onset_alignment": 0.9823,
+        "grid_notes": 4,
         "panel_balance": {
-          "L": 0.203,
-          "D": 0.309,
-          "U": 0.29,
-          "R": 0.198
+          "L": 0.211,
+          "D": 0.293,
+          "U": 0.28,
+          "R": 0.216
         },
-        "hold_share": 0.1767,
-        "jump_share": 0.0093,
-        "flow_cost_max": 0.0,
-        "flow_cost_mean": 0.0,
-        "density_energy_spearman": 0.8403,
+        "hold_share": 0.0885,
+        "jump_share": 0.0265,
+        "flow_cost_max": 8.0,
+        "flow_cost_mean": 0.07,
+        "density_energy_spearman": 0.8261,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": true,
+          "hold_share": false,
           "flow_ceiling": true,
           "density_energy": true
         }
       }
     },
     "medium": {
-      "notes": 404,
-      "meter": 6,
-      "jumps": 69,
-      "holds": 11,
-      "repaired": 2,
+      "notes": 233,
+      "meter": 5,
+      "jumps": 16,
+      "holds": 8,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 4,
-        "verdict": "A perfectly timed but incredibly monotonous chart that relies on an exhausting 30-second loop of the exact same four-note pattern.",
+        "score": 9,
+        "verdict": "An incredibly solid, comfortable, and well-phrased Medium chart that perfectly captures the classic ITG rhythm game feel.",
         "issues": [
           {
-            "where": "35.503 to 66.517",
-            "problem": "Extreme repetition. The chart repeats the exact same sequence (U -> D -> L -> JUMP LR) dozens of times in a row without any variation, which becomes incredibly boring and physically fatiguing on the left foot."
-          },
-          {
-            "where": "25.498",
-            "problem": "Awkward transition. The JUMP DR is immediately followed by a tap L at 25.749, forcing a sudden and uncomfortable weight shift."
-          },
-          {
-            "where": "77.522 to 85.776",
-            "problem": "Uninspired step sequence. This section repeats a simple 'R, U, D, L' circle drill over and over, ignoring the syncopation and nuance of the synth melody."
+            "where": "98.907",
+            "problem": "This hold note is stepped slightly off-grid (roughly 124ms early compared to the established .03/.53 beat sync), causing a minor hitch in rhythm before returning to the grid at 99.532."
           }
-        ],
-        "human_review": true
+        ]
       },
-      "previews": {},
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/l_9/medium.assist.ogg"
+      },
       "metrics": {
-        "notes": 404,
-        "onset_alignment": 0.9678,
-        "grid_notes": 13,
+        "notes": 233,
+        "onset_alignment": 0.9871,
+        "grid_notes": 3,
         "panel_balance": {
-          "L": 0.328,
-          "D": 0.241,
-          "U": 0.222,
+          "L": 0.213,
+          "D": 0.313,
+          "U": 0.265,
           "R": 0.209
         },
-        "hold_share": 0.0272,
-        "jump_share": 0.1708,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.05,
-        "density_energy_spearman": 0.7997,
+        "hold_share": 0.0343,
+        "jump_share": 0.0687,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.5776,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -96,33 +98,15 @@
     },
     "hard": {
       "notes": 418,
-      "meter": 8,
-      "jumps": 82,
-      "holds": 17,
-      "repaired": 2,
+      "meter": 9,
+      "jumps": 22,
+      "holds": 23,
+      "repaired": 1,
       "repair_ok": true,
       "critic": {
-        "score": 6,
-        "verdict": "The chart features excellent flowing spin-sections and solid rhythm tracking, but is held back by a 3-panel lock and several highly uncomfortable 16th-note transitions.",
-        "issues": [
-          {
-            "where": "14.744",
-            "problem": "3-panel lock: Tapping R while both U and D are being held creates an impossible 3-panel step (hand note) for standard feet-only play."
-          },
-          {
-            "where": "3.989-4.489",
-            "problem": "Holding U while tapping L and R as 16th notes forces the single free foot to slide from L to R in just 125ms, which is physically extremely awkward."
-          },
-          {
-            "where": "18.370-18.495",
-            "problem": "Tapping R then immediately jumping to LR as a 16th note creates an uncomfortable single-foot double-tap (jack) directly into a jump. This issue also occurs at 22.372 and 64.391."
-          },
-          {
-            "where": "27.374-27.499",
-            "problem": "Hitting D then immediately jumping to LR as a 16th note forces a highly rushed 125ms foot transition from D to R."
-          }
-        ],
-        "human_review": true
+        "score": 10,
+        "verdict": "An exceptionally well-polished chart featuring precise syncopated rhythms, excellent physical flow, and flawless circular stream patterning.",
+        "issues": []
       },
       "previews": {},
       "metrics": {
@@ -130,22 +114,22 @@
         "onset_alignment": 0.9689,
         "grid_notes": 13,
         "panel_balance": {
-          "L": 0.328,
-          "D": 0.242,
-          "U": 0.212,
-          "R": 0.218
+          "L": 0.225,
+          "D": 0.286,
+          "U": 0.266,
+          "R": 0.223
         },
-        "hold_share": 0.0407,
-        "jump_share": 0.1962,
+        "hold_share": 0.055,
+        "jump_share": 0.0526,
         "flow_cost_max": 7.85,
-        "flow_cost_mean": 0.02,
-        "density_energy_spearman": 0.621,
+        "flow_cost_mean": 0.03,
+        "density_energy_spearman": 0.4247,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": false,
+          "hold_share": true,
           "flow_ceiling": true,
-          "density_energy": true
+          "density_energy": false
         }
       }
     }

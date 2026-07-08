@@ -5,156 +5,140 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 289,
+      "notes": 204,
       "meter": 3,
-      "jumps": 13,
-      "holds": 53,
+      "jumps": 0,
+      "holds": 17,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 8,
-        "verdict": "An exceptionally fluent and well-synced chart that tracks song energy perfectly, though its intense eighth-note-to-jump transitions push the difficulty slightly too high for a standard Easy rating.",
-        "issues": [
-          {
-            "where": "71.477",
-            "problem": "An eighth-note stream of 5 notes directly ending on a JUMP (LD) is a highly advanced technique that exceeds the expected physical coordination of a standard Easy chart."
-          },
-          {
-            "where": "18.762",
-            "problem": "Releasing a hold on one foot at the exact same millisecond as tapping a new note on another foot (e.g., D release to L tap) occurs frequently throughout the chart and can be disorienting for beginners."
-          },
-          {
-            "where": "121.582",
-            "problem": "The eighth-note run into a JUMP LR at the end of the chorus introduces a sudden spike in physical difficulty right before the final hold."
-          }
-        ]
+        "score": 10,
+        "verdict": "An exceptionally well-crafted Easy chart that perfectly balances physical comfort, rhythmic accuracy, and developmental patterns for beginners.",
+        "issues": []
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/15/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 289,
-        "onset_alignment": 0.9931,
-        "grid_notes": 2,
+        "notes": 204,
+        "onset_alignment": 0.9951,
+        "grid_notes": 1,
         "panel_balance": {
-          "L": 0.219,
-          "D": 0.285,
-          "U": 0.291,
-          "R": 0.205
+          "L": 0.201,
+          "D": 0.299,
+          "U": 0.299,
+          "R": 0.201
         },
-        "hold_share": 0.1834,
-        "jump_share": 0.045,
-        "flow_cost_max": 0.5,
-        "flow_cost_mean": 0.01,
-        "density_energy_spearman": 0.9107,
+        "hold_share": 0.0833,
+        "jump_share": 0.0,
+        "flow_cost_max": 0.0,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.5522,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": true,
+          "hold_share": false,
           "flow_ceiling": true,
           "density_energy": true
         }
       }
     },
     "medium": {
-      "notes": 437,
+      "notes": 207,
       "meter": 5,
-      "jumps": 56,
-      "holds": 15,
-      "repaired": 2,
+      "jumps": 11,
+      "holds": 12,
+      "repaired": 3,
       "repair_ok": true,
       "critic": {
-        "score": 3,
-        "verdict": "Highly repetitive and copy-pasted stream patterns that ignore physical flow, creating awkward continuous spins/crossovers inappropriate for a Medium chart.",
+        "score": 8,
+        "verdict": "A highly competent Medium chart with excellent physical flow and great pacing, marred only by a couple of abrupt transitions.",
         "issues": [
           {
-            "where": "15.892 to 33.376",
-            "problem": "Repeating L-R-U-D pattern for 17 seconds creates continuous 8th-note spins/crossovers, which is extremely exhausting and inappropriate for a Medium difficulty chart."
+            "where": "27.635 - 27.896",
+            "problem": "Awkward 8th-note transition from JUMP UR directly into HOLD L requires an abrupt, wide weight shift."
           },
           {
-            "where": "34.942 to 72.260",
-            "problem": "Extreme repetition of the exact same 'Jump LR -> U -> D -> L' sequence for nearly 40 seconds, making the gameplay feel very lazy and monotonous."
-          },
-          {
-            "where": "88.178 to 101.488",
-            "problem": "Repetitive 'D-U-L-R' stream doesn't follow any melodic variation and feels heavily copy-pasted."
+            "where": "32.593 - 32.854",
+            "problem": "Fast 8th-note transition from releasing HOLD L into JUMP DR feels a bit rushed and tight for a Medium difficulty."
           }
-        ],
-        "human_review": true
+        ]
       },
-      "previews": {},
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/15/medium.assist.ogg"
+      },
       "metrics": {
-        "notes": 437,
-        "onset_alignment": 1.0,
-        "grid_notes": 0,
+        "notes": 207,
+        "onset_alignment": 0.9903,
+        "grid_notes": 2,
         "panel_balance": {
-          "L": 0.327,
-          "D": 0.225,
-          "U": 0.229,
-          "R": 0.219
+          "L": 0.22,
+          "D": 0.294,
+          "U": 0.271,
+          "R": 0.216
         },
-        "hold_share": 0.0343,
-        "jump_share": 0.1281,
-        "flow_cost_max": 8.0,
+        "hold_share": 0.058,
+        "jump_share": 0.0531,
+        "flow_cost_max": 7.85,
         "flow_cost_mean": 0.04,
-        "density_energy_spearman": 0.4815,
+        "density_energy_spearman": 0.2632,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": false,
+          "hold_share": true,
           "flow_ceiling": true,
           "density_energy": false
         }
       }
     },
     "hard": {
-      "notes": 333,
+      "notes": 372,
       "meter": 8,
-      "jumps": 163,
-      "holds": 26,
-      "repaired": 57,
+      "jumps": 41,
+      "holds": 22,
+      "repaired": 4,
       "repair_ok": true,
       "critic": {
-        "score": 2,
-        "verdict": "An incredibly monotonous and repetitive chart filled with awkward triple-panel jumps (hands) and severe panel bias.",
+        "score": 3,
+        "verdict": "Highly repetitive chart featuring copy-pasted patterns, lazy structuring, and uncomfortable spin-based stream segments.",
         "issues": [
           {
-            "where": "Throughout the entire chart (e.g., 15.892-19.284, 22.416-27.374, 53.992-59.212)",
-            "problem": "Extreme repetition of the JUMP LR -> tap U eighth-note loop. This creates an exhausting, highly monotonous pattern that completely ignores the actual rhythm and variation of the music."
+            "where": "15.892 - 27.896",
+            "problem": "Extreme repetition of the exact four-note pattern (L-R-U-D) in an 8th-note stream for 12 continuous seconds, forcing uncomfortable physical spins or constant double-stepping."
           },
           {
-            "where": "36.508, 38.596, 44.337, 65.475, 73.565, 81.915",
-            "problem": "Simultaneous JUMP LR and HOLD D events require hitting three panels at once (Left, Down, Right), forcing awkward bracket stomps or 'hands' without proper progression or telegraphing."
+            "where": "21.894 - 22.416",
+            "problem": "Awkward flow break where a D hold is placed during an active 8th-note stream, forcing the player to hold D, tap L, and immediately transition the holding foot to tap R on an 8th note."
           },
           {
-            "where": "Entire chart",
-            "problem": "Severe panel imbalance. Left and Right are utilized almost exclusively for jumps, while Up is used for nearly all single taps, leaving Down practically unused. This neglects natural foot-flow and rotation."
+            "where": "88.178 - 110.621",
+            "problem": "Highly monotonous 4th-note section consisting of repeating U-D-R/U-D-L and D-U-L/D-U-R loops, making the chart feel uninspired and lazy."
           }
         ],
         "human_review": true
       },
       "previews": {},
       "metrics": {
-        "notes": 333,
-        "onset_alignment": 1.0,
-        "grid_notes": 0,
+        "notes": 372,
+        "onset_alignment": 0.9892,
+        "grid_notes": 4,
         "panel_balance": {
-          "L": 0.347,
-          "D": 0.042,
-          "U": 0.28,
-          "R": 0.331
+          "L": 0.245,
+          "D": 0.269,
+          "U": 0.281,
+          "R": 0.206
         },
-        "hold_share": 0.0781,
-        "jump_share": 0.4895,
-        "flow_cost_max": 8.0,
-        "flow_cost_mean": 0.03,
-        "density_energy_spearman": 0.501,
+        "hold_share": 0.0591,
+        "jump_share": 0.1102,
+        "flow_cost_max": 14.0,
+        "flow_cost_mean": 0.1,
+        "density_energy_spearman": 0.5958,
         "gates": {
           "onset_alignment": true,
-          "panel_balance": false,
+          "panel_balance": true,
           "hold_share": true,
           "flow_ceiling": true,
-          "density_energy": false
+          "density_energy": true
         }
       }
     }

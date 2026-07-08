@@ -1,0 +1,23 @@
+{
+  "score": 2,
+  "verdict": "A highly repetitive, formulaic chart marred by uncomfortable Up/Down jumps and excessive copy-pasting of simple loops.",
+  "issues": [
+    {
+      "where": "5.676, 35.801, 67.638, 69.692",
+      "problem": "Uncomfortable Up/Down (UD) jumps are used multiple times, which forces awkward inline physical footing on standard dance pads."
+    },
+    {
+      "where": "72.430 to 83.727",
+      "problem": "The three-note pattern [D -> U -> LR] is repeated endlessly 18 times in a row, leading to severe monotony."
+    },
+    {
+      "where": "96.393 to 110.429",
+      "problem": "The loop [DR -> L -> U] is copy-pasted for over 14 seconds straight, completely ignoring the melodic and vocal progression of the music."
+    },
+    {
+      "where": "126.176 to 138.500",
+      "problem": "The final section consists of lazy, sparse jumps occurring strictly on the first beat of every measure, draining the chart of any remaining energy."
+    }
+  ],
+  "human_review": true
+}

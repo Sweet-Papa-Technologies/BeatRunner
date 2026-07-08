@@ -5,92 +5,88 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 227,
+      "notes": 193,
       "meter": 3,
-      "jumps": 47,
-      "holds": 26,
-      "repaired": 42,
-      "repair_ok": false,
+      "jumps": 5,
+      "holds": 19,
+      "repaired": 0,
+      "repair_ok": true,
       "critic": {
-        "score": 3,
-        "verdict": "A repetitive and over-complicated Easy chart marred by illegal three-panel inputs and tedious jump patterns.",
+        "score": 8,
+        "verdict": "An incredibly fun and well-flowing Easy chart that masterfully follows the vocal rhythms, though it contains a couple of tight eighth-note transitions involving jumps that are slightly too demanding for beginners.",
         "issues": [
           {
-            "where": "12.062",
-            "problem": "Illegal three-panel input: The player is required to execute a JUMP LR while holding U from 11.812."
+            "where": "68.031",
+            "problem": "The JUMP UR is followed by an eighth-note HOLD D at 68.281. Transitioning from a jump to a hold in just 250ms requires a very rapid weight transfer that is too difficult for an Easy chart."
           },
           {
-            "where": "13.061",
-            "problem": "Illegal three-panel input: Tapping L is required while both U and D are held active."
-          },
-          {
-            "where": "Throughout the chart",
-            "problem": "Severe over-reliance on JUMP LR (used nearly 40 times on identical beats), leading to an extremely repetitive and boring play experience."
-          },
-          {
-            "where": "60.785 - 61.785",
-            "problem": "Too advanced for an Easy difficulty: Tapping three notes (L, R, D) while holding U requires complex single-foot manipulation."
+            "where": "74.778",
+            "problem": "There is a tap on L followed immediately by a JUMP LR at 75.027 (250ms gap). Executing a jump immediately after an eighth note is too physically demanding for players at this level."
           }
-        ],
-        "human_review": true
+        ]
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/k5/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 227,
-        "onset_alignment": 0.9956,
-        "grid_notes": 1,
+        "notes": 193,
+        "onset_alignment": 0.9689,
+        "grid_notes": 6,
         "panel_balance": {
-          "L": 0.307,
-          "D": 0.252,
-          "U": 0.208,
-          "R": 0.234
+          "L": 0.192,
+          "D": 0.308,
+          "U": 0.293,
+          "R": 0.207
         },
-        "hold_share": 0.1145,
-        "jump_share": 0.207,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.69,
-        "density_energy_spearman": 0.3202,
+        "hold_share": 0.0984,
+        "jump_share": 0.0259,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.2953,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": true,
+          "hold_share": false,
           "flow_ceiling": true,
           "density_energy": false
         }
       }
     },
     "medium": {
-      "notes": 321,
-      "meter": 6,
-      "jumps": 29,
-      "holds": 19,
-      "repaired": 1,
+      "notes": 252,
+      "meter": 5,
+      "jumps": 18,
+      "holds": 13,
+      "repaired": 7,
       "repair_ok": true,
       "critic": {
-        "score": 10,
-        "verdict": "An absolute masterclass in intermediate chart design, boasting perfect syncopation, highly comfortable flow, and brilliant thematic density.",
-        "issues": []
+        "score": 8,
+        "verdict": "An incredibly rhythmic and well-synced chart with great physical flow, held back only by a single physically impossible hold-jump combination.",
+        "issues": [
+          {
+            "where": "17.059",
+            "problem": "The JUMP UR occurs while the HOLD L (from 16.184 to 17.184) is still active. This requires holding L while hitting U and R simultaneously, creating an impossible 3-panel execution for standard play."
+          }
+        ]
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/k5/medium.assist.ogg"
       },
       "metrics": {
-        "notes": 321,
-        "onset_alignment": 0.9813,
-        "grid_notes": 6,
+        "notes": 252,
+        "onset_alignment": 0.9802,
+        "grid_notes": 5,
         "panel_balance": {
-          "L": 0.269,
-          "D": 0.251,
-          "U": 0.26,
-          "R": 0.22
+          "L": 0.215,
+          "D": 0.293,
+          "U": 0.27,
+          "R": 0.222
         },
-        "hold_share": 0.0592,
-        "jump_share": 0.0903,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.03,
-        "density_energy_spearman": -0.0166,
+        "hold_share": 0.0516,
+        "jump_share": 0.0714,
+        "flow_cost_max": 8.0,
+        "flow_cost_mean": 0.23,
+        "density_energy_spearman": 0.3768,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -101,49 +97,46 @@
       }
     },
     "hard": {
-      "notes": 259,
+      "notes": 354,
       "meter": 8,
-      "jumps": 31,
-      "holds": 15,
-      "repaired": 1,
+      "jumps": 30,
+      "holds": 14,
+      "repaired": 13,
       "repair_ok": true,
       "critic": {
-        "score": 6,
-        "verdict": "Good rhythmic syncopation and energy scaling are severely undermined by a highly repetitive spin loop and an extreme over-reliance on LR jumps.",
+        "score": 7,
+        "verdict": "A highly energetic and rhythmically accurate chart that fits the comedic tone perfectly, but is held back by several awkward vertical 16th transitions.",
         "issues": [
           {
-            "where": "46.043 - 53.539",
-            "problem": "Features a continuous, repeating 4-note loop (D-U-L-R) for over 7 seconds of eighth notes. This forces either highly repetitive 360-degree spins or awkward double-stepping, creating physical strain without satisfying flow."
+            "where": "34.050, 53.539, 77.026",
+            "problem": "Awkward 16th-note vertical transitions from U to D, forcing uncomfortable double-steps or unbalanced physical shifts."
           },
           {
-            "where": "66.032 - 98.015",
-            "problem": "The drop heavily overuses 'JUMP LR' (Left + Right), featuring it almost exclusively for every jump in this segment. This makes the physical movement feel flat, lazy, and visually monotonous, neglecting other jump configurations like LD, LU, RD, or RU."
+            "where": "74.153, 95.641, 99.014",
+            "problem": "16th-note vertical transitions from D to U that break step flow and disrupt the player's momentum during dense sections."
           }
-        ],
-        "human_review": true
+        ]
       },
-      "previews": {
-        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/k5/hard.assist.ogg"
-      },
+      "previews": {},
       "metrics": {
-        "notes": 259,
-        "onset_alignment": 0.9807,
+        "notes": 354,
+        "onset_alignment": 0.9859,
         "grid_notes": 5,
         "panel_balance": {
-          "L": 0.255,
-          "D": 0.272,
-          "U": 0.224,
-          "R": 0.248
+          "L": 0.227,
+          "D": 0.271,
+          "U": 0.276,
+          "R": 0.227
         },
-        "hold_share": 0.0579,
-        "jump_share": 0.1197,
+        "hold_share": 0.0395,
+        "jump_share": 0.0847,
         "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.04,
-        "density_energy_spearman": 0.3439,
+        "flow_cost_mean": 0.22,
+        "density_energy_spearman": 0.142,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": true,
+          "hold_share": false,
           "flow_ceiling": true,
           "density_energy": false
         }

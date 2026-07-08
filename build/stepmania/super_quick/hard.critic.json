@@ -1,18 +1,27 @@
 {
-  "score": 7,
-  "verdict": "A well-timed, energetic chart with a satisfying outro stream, but held back by excessive pattern repetition in the first half and a few awkward jump transitions.",
+  "score": 4,
+  "verdict": "The chart follows the basic rhythm of the song well, but it contains severe chart-writing errors including impossible 3-panel jumps during holds and extremely awkward single-foot 16th runs.",
   "issues": [
     {
-      "where": "53.157 - 53.397",
-      "problem": "Awkward foot flow. Landing a DR jump and immediately tapping L requires a very fast, uncomfortable left-foot transition from Down to Left."
+      "where": "101.146",
+      "problem": "Requires the player to hit JUMP LR while HOLD U is active, creating an unplayable 3-panel press on a standard Single pad."
     },
     {
-      "where": "69.233 - 69.473",
-      "problem": "Uncomfortable jump transition. Tapping L and immediately executing an LD jump forces an awkward double-tap on the Left panel during the jump."
+      "where": "106.905",
+      "problem": "Forces a JUMP LR while HOLD D is active, resulting in another physical conflict (3 panels pressed at once)."
     },
     {
-      "where": "2.288 - 50.000",
-      "problem": "Severe repetitiveness. The 'LR Jump -> U -> D' motif is overused extensively throughout the first half, leading to a monotonous gameplay experience."
+      "where": "52.437",
+      "problem": "While holding R, the player must execute a 16th-note L -> D -> U run entirely with the left foot, creating an incredibly unbalanced and difficult one-foot jack."
+    },
+    {
+      "where": "68.273",
+      "problem": "While holding D, the player is forced to hit U then R as 16th notes, forcing an extremely fast and awkward double-step on the right foot."
+    },
+    {
+      "where": "23.643",
+      "problem": "The rapid 16th-note sequence U -> D -> L causes highly uncomfortable hip twisting and poor natural foot flow."
     }
-  ]
+  ],
+  "human_review": true
 }

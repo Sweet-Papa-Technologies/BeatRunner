@@ -1,5 +1,18 @@
 {
-  "score": 9.5,
-  "verdict": "An exceptionally well-structured chart with outstanding flow, highly creative circular patterns, and flawless rhythmic synchronization.",
-  "issues": []
+  "score": 9,
+  "verdict": "An outstanding Hard chart that captures the syncopated rhythm and energy of the song perfectly, with only minor 16th-note flow hitches.",
+  "issues": [
+    {
+      "where": "60.793",
+      "problem": "Awkward 16th-note double-step on the left foot (D -> L)."
+    },
+    {
+      "where": "68.409",
+      "problem": "A rapid 16th-note transition from D to L requires a same-foot double tap, disrupting the flow slightly."
+    },
+    {
+      "where": "71.503",
+      "problem": "Awkward 16th-note double-step from U to R."
+    }
+  ]
 }

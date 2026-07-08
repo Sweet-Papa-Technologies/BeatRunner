@@ -5,27 +5,27 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 114,
-      "meter": 3,
-      "jumps": 14,
-      "holds": 13,
+      "notes": 68,
+      "meter": 2,
+      "jumps": 2,
+      "holds": 8,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 8,
-        "verdict": "A well-structured Easy chart with comfortable flow and good density tracking, though it suffers from a highly repetitive chorus and minor off-beat syncopations.",
+        "score": 7,
+        "verdict": "A comfortable and mostly well-flowing Easy chart, but it suffers from a few awkward offbeat placements and an overly sparse outro that will trip up beginners.",
         "issues": [
           {
-            "where": "27.712",
-            "problem": "The hold starts on an off-beat (8th note) at 27.712, which breaks the established quarter-note rhythm and may confuse beginner players."
+            "where": "31.714",
+            "problem": "The hold starts on an offbeat eighth note (Beat 58.5) with no immediate anchor step beforehand, making it very difficult for an Easy-level player to time correctly."
           },
           {
-            "where": "38.718",
-            "problem": "An isolated 8th-note step occurs here, transitioning immediately into a hold at 38.968, which is slightly too complex for an Easy difficulty."
+            "where": "75.735",
+            "problem": "An isolated offbeat eighth note is placed in the middle of a very slow, sparse outro. This is highly counter-intuitive for beginners who rely on strong downbeats."
           },
           {
-            "where": "50.473 - 64.479",
-            "problem": "The 4-beat pattern (Jump LR -> D -> U -> L) is repeated almost 7 times consecutively without any variation, making the main chorus feel overly repetitive and mechanical."
+            "where": "64.980 to 81.487",
+            "problem": "The chart's density drops too drastically here, leaving massive 3-second gaps between steps which makes the ending feel disengaging."
           }
         ]
       },
@@ -33,77 +33,59 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/site_assigner_bg_music_1/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 114,
-        "onset_alignment": 0.8596,
-        "grid_notes": 16,
+        "notes": 68,
+        "onset_alignment": 0.9412,
+        "grid_notes": 4,
         "panel_balance": {
-          "L": 0.266,
-          "D": 0.281,
-          "U": 0.234,
-          "R": 0.219
+          "L": 0.2,
+          "D": 0.3,
+          "U": 0.286,
+          "R": 0.214
         },
-        "hold_share": 0.114,
-        "jump_share": 0.1228,
-        "flow_cost_max": 0.5,
+        "hold_share": 0.1176,
+        "jump_share": 0.0294,
+        "flow_cost_max": 0.2,
         "flow_cost_mean": 0.01,
-        "density_energy_spearman": 0.2472,
+        "density_energy_spearman": 0.6217,
         "gates": {
-          "onset_alignment": false,
+          "onset_alignment": true,
           "panel_balance": true,
           "hold_share": true,
           "flow_ceiling": true,
-          "density_energy": false
+          "density_energy": true
         }
       }
     },
     "medium": {
-      "notes": 210,
+      "notes": 183,
       "meter": 6,
-      "jumps": 34,
-      "holds": 23,
-      "repaired": 5,
+      "jumps": 12,
+      "holds": 12,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 4,
-        "verdict": "The chart is highly repetitive, copy-pasting a single asymmetric pattern for almost the entire main section, leading to a tedious and unbalanced gameplay experience.",
-        "issues": [
-          {
-            "where": "25.461 to 61.478",
-            "problem": "Extreme repetitiveness. The 'U -> D -> L -> JUMP LR' loop is repeated continuously for over 35 seconds with almost no variation, making the main chorus incredibly boring and lazy."
-          },
-          {
-            "where": "25.461 to 61.478",
-            "problem": "Asymmetric and awkward foot flow. The repeated pattern forces either an awkward double-step into the jump, or an unbalanced stance where the left foot does most of the lateral movement while the right foot remains static."
-          },
-          {
-            "where": "63.354 and 63.854",
-            "problem": "Isolated 16th notes. Tapping D at 63.354 right before a JUMP LR at 63.479 creates an abrupt, uncomfy one-footed jump transition that is not introduced anywhere else in the chart."
-          },
-          {
-            "where": "64.980 to 80.487",
-            "problem": "The density collapses completely in the outro, leaving very sparse, disconnected notes that drag on without satisfyingly matching the fading energy of the track."
-          }
-        ],
-        "human_review": true
+        "score": 10,
+        "verdict": "An absolute masterpiece of a chart with flawless foot flow, exceptionally clever rhythm design, and perfect density progression.",
+        "issues": []
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/site_assigner_bg_music_1/medium.assist.ogg"
       },
       "metrics": {
-        "notes": 210,
-        "onset_alignment": 0.9857,
-        "grid_notes": 3,
+        "notes": 183,
+        "onset_alignment": 0.9727,
+        "grid_notes": 5,
         "panel_balance": {
-          "L": 0.332,
-          "D": 0.23,
-          "U": 0.234,
-          "R": 0.205
+          "L": 0.226,
+          "D": 0.272,
+          "U": 0.267,
+          "R": 0.236
         },
-        "hold_share": 0.1095,
-        "jump_share": 0.1619,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.19,
-        "density_energy_spearman": 0.3644,
+        "hold_share": 0.0656,
+        "jump_share": 0.0656,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.2797,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -114,55 +96,50 @@
       }
     },
     "hard": {
-      "notes": 233,
-      "meter": 8,
-      "jumps": 15,
-      "holds": 12,
-      "repaired": 7,
+      "notes": 287,
+      "meter": 9,
+      "jumps": 29,
+      "holds": 15,
+      "repaired": 1,
       "repair_ok": true,
       "critic": {
-        "score": 3,
-        "verdict": "A highly repetitive chart with severe flow issues, dominated by a looping pattern that forces awkward double-steps and an uncreative copy-pasted jump section.",
+        "score": 7,
+        "verdict": "An exceptionally fluid and well-structured chart with outstanding stream flow, held back by a repetitive intro and a physically impossible hold-jump combination.",
         "issues": [
           {
-            "where": "2.451 to 47.972",
-            "problem": "The stream is heavily dominated by a looping 'D -> U -> R -> L' pattern (and its rotations). This forces either continuous double-stepping or constant spinning, which violates natural foot-alternation and is extremely exhausting and repetitive."
+            "where": "43.970 - 44.470",
+            "problem": "Holding the D panel while executing a UR JUMP requires pressing three panels simultaneously (D, U, and R), which is physically impossible to execute with feet alone without awkward bracketing."
           },
           {
-            "where": "54.975 to 63.479",
-            "problem": "The chart repeats the exact same 'D -> JUMP LR' pattern nine times consecutively. This lacks pattern variety and feels very uninspired."
-          },
-          {
-            "where": "64.980 to 81.487",
-            "problem": "The density suddenly drops off a cliff. The remaining steps land on awkward, highly syncopated 16th-note offsets (e.g., 70.607, 72.108) that feel rhythmically disconnected and jar players accustomed to the previous beat grid."
+            "where": "2.451 - 8.204",
+            "problem": "The intro stream repeats the exact same D-U-L-R rotation six times in a row, making the opening feel lazy and repetitive."
           }
-        ],
-        "human_review": true
+        ]
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/site_assigner_bg_music_1/hard.assist.ogg"
       },
       "metrics": {
-        "notes": 233,
-        "onset_alignment": 0.9442,
-        "grid_notes": 13,
+        "notes": 287,
+        "onset_alignment": 0.8955,
+        "grid_notes": 30,
         "panel_balance": {
-          "L": 0.262,
-          "D": 0.274,
-          "U": 0.214,
-          "R": 0.25
+          "L": 0.228,
+          "D": 0.282,
+          "U": 0.282,
+          "R": 0.209
         },
-        "hold_share": 0.0515,
-        "jump_share": 0.0644,
-        "flow_cost_max": 8.0,
-        "flow_cost_mean": 0.24,
-        "density_energy_spearman": 0.8575,
+        "hold_share": 0.0523,
+        "jump_share": 0.101,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.04,
+        "density_energy_spearman": 0.1049,
         "gates": {
-          "onset_alignment": true,
+          "onset_alignment": false,
           "panel_balance": true,
           "hold_share": true,
           "flow_ceiling": true,
-          "density_energy": true
+          "density_energy": false
         }
       }
     }

@@ -1,10 +1,22 @@
 {
-  "score": 9,
-  "verdict": "An excellently crafted Easy chart with highly intuitive rhythm mapping and a very comfortable, flowing layout.",
+  "score": 8,
+  "verdict": "An exceptionally well-timed chart with great physical flow, though a couple of patterns are slightly too complex/fast for a typical Easy difficulty.",
   "issues": [
     {
-      "where": "2.093 - 2.950",
-      "problem": "The U -> D -> R sequence can occasionally feel slightly turn-y or force a minor double-step for absolute beginners, though it is very manageable at 140 BPM."
+      "where": "28.673",
+      "problem": "An 8th-note jump (JUMP LR immediately following 28.459 tap U) is too physically demanding for an Easy chart."
+    },
+    {
+      "where": "32.103",
+      "problem": "JUMP DR occurs immediately after an 8th-note transition (31.674 tap D -> 31.888 tap U), which is too complex for players at the Easy level."
+    },
+    {
+      "where": "2.736",
+      "problem": "The 8th-note tap at 2.950 during HOLD L requires advanced foot independence (co-holding) for an Easy chart."
+    },
+    {
+      "where": "37.676",
+      "problem": "Holding D while tapping U (37.890) and L (38.319) is a Medium-level pattern that may confuse beginners."
     }
   ]
 }
