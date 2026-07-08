@@ -1,0 +1,14 @@
+{
+  "score": 9,
+  "verdict": "A wonderfully fluid and beautifully synced Easy chart that captures the energetic tempo of the remix perfectly with highly comfortable foot-flow.",
+  "issues": [
+    {
+      "where": "19.752",
+      "problem": "Staggered overlapping holds (D starting at 19.752 and U starting at 19.935) might be slightly too complex for an Easy chart's coordination level, though they are rhythmically accurate."
+    },
+    {
+      "where": "17.740",
+      "problem": "Multiple very short 1-beat holds (0.366s) throughout the chart act almost like normal taps, though they do help highlight the quick vocal stabs."
+    }
+  ]
+}

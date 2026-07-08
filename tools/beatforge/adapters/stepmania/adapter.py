@@ -106,13 +106,28 @@ def build_song(track_id: str, opts: config.RunOptions, difficulties=DIFFICULTIES
 
 
 def _design_once(adapter, track_id, diff, analysis, deterministic, client, seed_feedback):
-    if deterministic or client is None:
-        design = deterministic_intent(analysis, diff)
-    else:
-        from .design import design_intent
-        design = design_intent(track_id, diff, analysis, _audio_path(track_id), client,
-                              seed_feedback=seed_feedback)
-    placements = adapter.realize(design, analysis, diff)
+    from .resolve import IntentError
+    attempts = 1 if (deterministic or client is None) else 3
+    feedback = seed_feedback
+    design, placements, last_err = {}, None, None
+    for attempt in range(attempts):
+        if deterministic or client is None:
+            design = deterministic_intent(analysis, diff)
+        else:
+            from .design import design_intent
+            design = design_intent(track_id, diff, analysis, _audio_path(track_id), client,
+                                  seed_feedback=feedback)
+        try:
+            placements = adapter.realize(design, analysis, diff)   # resolve inside
+            break
+        except IntentError as e:                # bad designer output -> re-prompt
+            last_err = e
+            feedback = (f"Your previous output was rejected: {e}. Reference onsets by "
+                        f"their EXACT id from the inventory, kind must be tap/hold/roll/"
+                        f"mine, and never include a panel. Fix and resubmit.")
+            placements = None
+    if placements is None:
+        raise last_err or RuntimeError("design failed")
     placements, meter, vinfo = adapter.validate_repair(placements, analysis, diff)
     metrics = adapter.qa_metrics(placements, analysis, diff)
     return {"design": design, "placements": placements, "meter": meter,

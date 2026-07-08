@@ -38,8 +38,22 @@ def _phrase_for(beat: float, phrases: list, meter: int) -> dict:
             "jump_density": "accents"}
 
 
+def _onset_lookup(analysis: dict) -> dict:
+    """Onset id -> onset, tolerant of the model dropping zero-padding
+    (p16 -> p016) or casing (P016 -> p016)."""
+    lut = {}
+    for o in analysis.get("onsets", []):
+        oid = o["id"]
+        lut[oid] = o
+        lut[oid.lower()] = o
+        m = re.match(r"^([pms])0*(\d+)$", oid)   # also index un-padded form
+        if m:
+            lut[f"{m.group(1)}{int(m.group(2))}"] = o
+    return lut
+
+
 def resolve_intent(design: dict, analysis: dict, difficulty: str) -> list[ResolvedNote]:
-    onsets = {o["id"]: o for o in analysis.get("onsets", [])}
+    onsets = _onset_lookup(analysis)
     meter = analysis.get("meter", 4)
     lo_beat, hi_beat = _playable(analysis)
     phrases = _validate_phrases(design.get("phrases", []))
@@ -60,15 +74,18 @@ def resolve_intent(design: dict, analysis: dict, difficulty: str) -> list[Resolv
                               "the realizer assigns panels, not the designer")
         ref = ev.get("ref")
         kind = ev.get("kind", "tap")
+        # "jump" isn't a note KIND (jumps are the realizer's job from jump_density);
+        # the model sometimes emits it anyway. Treat any non-kind as a plain tap
+        # rather than failing the whole chart.
         if kind not in KINDS:
-            raise IntentError(f"note[{i}].kind '{kind}' not in {list(KINDS)}")
+            kind = "tap"
         if not isinstance(ref, str):
             raise IntentError(f"note[{i}] missing string `ref`")
         gm = _GRID_RE.match(ref)
         if gm:
             beat = float(gm.group(1))
         elif _ONSET_RE.match(ref):
-            o = onsets.get(ref)
+            o = onsets.get(ref) or onsets.get(ref.lower())
             if o is None:
                 raise IntentError(f"note[{i}].ref '{ref}' not in onset inventory")
             beat = float(o["nearest_beat"])

@@ -1,0 +1,146 @@
+{
+  "track_id": "welcome_to_the_standup_tuesday",
+  "bpm": 84.975,
+  "offset": 0.222,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 87,
+      "meter": 2,
+      "jumps": 17,
+      "holds": 10,
+      "repaired": 1,
+      "repair_ok": true,
+      "critic": {
+        "score": 10,
+        "verdict": "An exceptionally well-crafted Easy chart that perfectly captures the rhythm and energy of the song with natural foot flow and flawless timing.",
+        "issues": []
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/welcome_to_the_standup_tuesday/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 87,
+        "onset_alignment": 0.9655,
+        "grid_notes": 3,
+        "panel_balance": {
+          "L": 0.288,
+          "D": 0.26,
+          "U": 0.221,
+          "R": 0.231
+        },
+        "hold_share": 0.1149,
+        "jump_share": 0.1954,
+        "flow_cost_max": 7.85,
+        "flow_cost_mean": 0.09,
+        "density_energy_spearman": 0.4476,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 130,
+      "meter": 5,
+      "jumps": 28,
+      "holds": 14,
+      "repaired": 5,
+      "repair_ok": true,
+      "critic": {
+        "score": 7,
+        "verdict": "A fun, well-paced chart that matches the upbeat energy of the song, but holds back its quality with a physically impossible three-panel overlap near the end.",
+        "issues": [
+          {
+            "where": "77.539",
+            "problem": "Requires tapping L while both R (held 76.480 to 77.892) and D (held 77.186 to 77.892) are actively held, forcing an impossible 3-panel overlap for a Medium singles chart."
+          },
+          {
+            "where": "41.528 - 41.881",
+            "problem": "The rapid eighth-note sequence (U -> R -> D) at 170 BPM is a sudden spike in difficulty compared to the rest of the chart's comfortable quarter-note stream."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/welcome_to_the_standup_tuesday/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 130,
+        "onset_alignment": 0.9769,
+        "grid_notes": 3,
+        "panel_balance": {
+          "L": 0.278,
+          "D": 0.228,
+          "U": 0.253,
+          "R": 0.241
+        },
+        "hold_share": 0.1077,
+        "jump_share": 0.2154,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.2,
+        "density_energy_spearman": 0.6645,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "hard": {
+      "notes": 174,
+      "meter": 8,
+      "jumps": 8,
+      "holds": 13,
+      "repaired": 3,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "An exceptionally fun, well-quantized, and expressive chart that perfectly captures the energetic rhythm of the daily stand-up theme.",
+        "issues": [
+          {
+            "where": "72.243 - 72.949",
+            "problem": "The transition from the LD jump to tap U, tap R, and an immediate HOLD D requires a fast, slightly awkward weight transfer or a double-tap on the right foot."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/welcome_to_the_standup_tuesday/hard.assist.ogg"
+      },
+      "metrics": {
+        "notes": 174,
+        "onset_alignment": 0.977,
+        "grid_notes": 4,
+        "panel_balance": {
+          "L": 0.242,
+          "D": 0.269,
+          "U": 0.291,
+          "R": 0.198
+        },
+        "hold_share": 0.0747,
+        "jump_share": 0.046,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.14,
+        "density_energy_spearman": 0.2723,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/welcome_to_the_standup_tuesday/welcome_to_the_standup_tuesday.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/welcome_to_the_standup_tuesday/welcome_to_the_standup_tuesday.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/welcome_to_the_standup_tuesday/welcome_to_the_standup_tuesday.ogg"
+  },
+  "out": "build/stepmania/welcome_to_the_standup_tuesday",
+  "meter_monotonic": true
+}

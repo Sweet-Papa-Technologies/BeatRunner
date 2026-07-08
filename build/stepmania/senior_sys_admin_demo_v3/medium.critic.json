@@ -1,0 +1,19 @@
+{
+  "score": 4,
+  "verdict": "The chart suffers from extreme, repetitive copy-pasting in the main chorus and an awkward, physically unbalanced repeating pattern, alongside isolated 3-panel brackets and abrupt 16th-note spikes.",
+  "issues": [
+    {
+      "where": "41.250 - 55.099",
+      "problem": "The exact same 4-note sequence (U, D, L, LR) is repeated 15 times consecutively. This is highly repetitive and lazy charting, causing severe physical imbalance where the left foot is forced to do rapid 8th-note lateral movements while the right foot remains mostly static."
+    },
+    {
+      "where": "7.782",
+      "problem": "A JUMP LR is placed while a HOLD D is active. This forces a 3-panel bracket step (L+D+R), which is an unexpected and unfair difficulty spike for a medium-style chart."
+    },
+    {
+      "where": "12.745, 16.438, 60.870, 66.871",
+      "problem": "Isolated 16th-note doublets (such as the D -> U at 12.745) are introduced abruptly without clear musical justification, disrupting the established 8th-note rhythm."
+    }
+  ],
+  "human_review": true
+}

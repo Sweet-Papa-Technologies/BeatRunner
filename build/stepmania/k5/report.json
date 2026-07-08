@@ -1,0 +1,160 @@
+{
+  "track_id": "k5",
+  "bpm": 120.065,
+  "offset": 0.068,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 227,
+      "meter": 3,
+      "jumps": 47,
+      "holds": 26,
+      "repaired": 42,
+      "repair_ok": false,
+      "critic": {
+        "score": 3,
+        "verdict": "A repetitive and over-complicated Easy chart marred by illegal three-panel inputs and tedious jump patterns.",
+        "issues": [
+          {
+            "where": "12.062",
+            "problem": "Illegal three-panel input: The player is required to execute a JUMP LR while holding U from 11.812."
+          },
+          {
+            "where": "13.061",
+            "problem": "Illegal three-panel input: Tapping L is required while both U and D are held active."
+          },
+          {
+            "where": "Throughout the chart",
+            "problem": "Severe over-reliance on JUMP LR (used nearly 40 times on identical beats), leading to an extremely repetitive and boring play experience."
+          },
+          {
+            "where": "60.785 - 61.785",
+            "problem": "Too advanced for an Easy difficulty: Tapping three notes (L, R, D) while holding U requires complex single-foot manipulation."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/k5/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 227,
+        "onset_alignment": 0.9956,
+        "grid_notes": 1,
+        "panel_balance": {
+          "L": 0.307,
+          "D": 0.252,
+          "U": 0.208,
+          "R": 0.234
+        },
+        "hold_share": 0.1145,
+        "jump_share": 0.207,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.69,
+        "density_energy_spearman": 0.3202,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 321,
+      "meter": 6,
+      "jumps": 29,
+      "holds": 19,
+      "repaired": 1,
+      "repair_ok": true,
+      "critic": {
+        "score": 10,
+        "verdict": "An absolute masterclass in intermediate chart design, boasting perfect syncopation, highly comfortable flow, and brilliant thematic density.",
+        "issues": []
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/k5/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 321,
+        "onset_alignment": 0.9813,
+        "grid_notes": 6,
+        "panel_balance": {
+          "L": 0.269,
+          "D": 0.251,
+          "U": 0.26,
+          "R": 0.22
+        },
+        "hold_share": 0.0592,
+        "jump_share": 0.0903,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.03,
+        "density_energy_spearman": -0.0166,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 259,
+      "meter": 8,
+      "jumps": 31,
+      "holds": 15,
+      "repaired": 1,
+      "repair_ok": true,
+      "critic": {
+        "score": 6,
+        "verdict": "Good rhythmic syncopation and energy scaling are severely undermined by a highly repetitive spin loop and an extreme over-reliance on LR jumps.",
+        "issues": [
+          {
+            "where": "46.043 - 53.539",
+            "problem": "Features a continuous, repeating 4-note loop (D-U-L-R) for over 7 seconds of eighth notes. This forces either highly repetitive 360-degree spins or awkward double-stepping, creating physical strain without satisfying flow."
+          },
+          {
+            "where": "66.032 - 98.015",
+            "problem": "The drop heavily overuses 'JUMP LR' (Left + Right), featuring it almost exclusively for every jump in this segment. This makes the physical movement feel flat, lazy, and visually monotonous, neglecting other jump configurations like LD, LU, RD, or RU."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/k5/hard.assist.ogg"
+      },
+      "metrics": {
+        "notes": 259,
+        "onset_alignment": 0.9807,
+        "grid_notes": 5,
+        "panel_balance": {
+          "L": 0.255,
+          "D": 0.272,
+          "U": 0.224,
+          "R": 0.248
+        },
+        "hold_share": 0.0579,
+        "jump_share": 0.1197,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.04,
+        "density_energy_spearman": 0.3439,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/k5/k5.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/k5/k5.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/k5/k5.ogg"
+  },
+  "out": "build/stepmania/k5",
+  "meter_monotonic": true
+}

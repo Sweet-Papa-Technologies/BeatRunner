@@ -1,0 +1,162 @@
+{
+  "track_id": "song_354",
+  "bpm": 130.05,
+  "offset": 0.448,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 308,
+      "meter": 3,
+      "jumps": 47,
+      "holds": 27,
+      "repaired": 4,
+      "repair_ok": true,
+      "critic": {
+        "score": 7,
+        "verdict": "A solid Easy chart with good rhythmic structure, severely held back by a physically impossible three-panel jump-and-hold combination at 127.78 seconds.",
+        "issues": [
+          {
+            "where": "127.784",
+            "problem": "The chart requires a JUMP LR while HOLD U is still active (which doesn't end until 128.014). This requires three feet and is physically impossible to perform on a standard dance pad."
+          },
+          {
+            "where": "81.186 - 96.411",
+            "problem": "The step sequence (JUMP LR -> D -> U -> L) repeats identically four times in a row, which feels uninspired and overly repetitive even for an Easy chart."
+          }
+        ]
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 308,
+        "onset_alignment": 0.974,
+        "grid_notes": 8,
+        "panel_balance": {
+          "L": 0.273,
+          "D": 0.282,
+          "U": 0.254,
+          "R": 0.192
+        },
+        "hold_share": 0.0877,
+        "jump_share": 0.1526,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.13,
+        "density_energy_spearman": 0.0635,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 672,
+      "meter": 6,
+      "jumps": 112,
+      "holds": 48,
+      "repaired": 201,
+      "repair_ok": false,
+      "critic": {
+        "score": 4,
+        "verdict": "Unplayable hold overlaps (triples and quads) ruin an otherwise decent medium chart.",
+        "issues": [
+          {
+            "where": "52.582s - 53.043s",
+            "problem": "Four concurrent holds (D, U, L, R) create an impossible quad hold that cannot be executed on a standard dance pad."
+          },
+          {
+            "where": "70.460s - 70.690s",
+            "problem": "Triple hold (U, D, R) requires pressing three panels simultaneously, which is inappropriate for a Medium single chart."
+          },
+          {
+            "where": "77.265s - 77.495s",
+            "problem": "Triple hold (U, D, L) forces a three-panel hold."
+          },
+          {
+            "where": "78.764s - 78.995s",
+            "problem": "Triple hold (D, R, L) forces another three-panel hold."
+          },
+          {
+            "where": "30.321s - 30.667s",
+            "problem": "While holding D and L, a tap R is required, which requires three feet or awkward bracketing."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 672,
+        "onset_alignment": 0.9539,
+        "grid_notes": 31,
+        "panel_balance": {
+          "L": 0.286,
+          "D": 0.232,
+          "U": 0.235,
+          "R": 0.247
+        },
+        "hold_share": 0.0714,
+        "jump_share": 0.1667,
+        "flow_cost_max": 39.15,
+        "flow_cost_mean": 0.75,
+        "density_energy_spearman": -0.0877,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": false,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 628,
+      "meter": 8,
+      "jumps": 77,
+      "holds": 35,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 9.5,
+        "verdict": "An exceptionally well-crafted chart with smooth crossovers, natural physical flow, and excellent tracking of the music's structural shifts.",
+        "issues": [
+          {
+            "where": "140.932 - 142.086",
+            "problem": "A sudden 1.15-second gap in steps occurs here, which feels slightly abrupt and drops the physical momentum compared to the preceding rhythmic section."
+          }
+        ]
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 628,
+        "onset_alignment": 0.9538,
+        "grid_notes": 29,
+        "panel_balance": {
+          "L": 0.25,
+          "D": 0.261,
+          "U": 0.26,
+          "R": 0.23
+        },
+        "hold_share": 0.0557,
+        "jump_share": 0.1226,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": -0.2019,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/song_354/song_354.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/song_354/song_354.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/song_354/song_354.ogg"
+  },
+  "out": "build/stepmania/song_354",
+  "meter_monotonic": true
+}

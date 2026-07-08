@@ -1,0 +1,51 @@
+{
+  "score": 4,
+  "verdict": "Great rhythm and flow are completely undermined by a repeating error where jumps are placed during holds, forcing illegal 3-panel 'hands' on a Medium single chart.",
+  "issues": [
+    {
+      "where": "38.413",
+      "problem": "While holding L (38.084 to 38.960), the player has to hit a D -> U 16th-note transition with the right foot, which is an extremely awkward vertical slide for this difficulty."
+    },
+    {
+      "where": "57.357",
+      "problem": "JUMP DR is placed during an active HOLD L (56.809 to 57.685), forcing an illegal 3-panel 'hand' (L, D, R)."
+    },
+    {
+      "where": "62.613",
+      "problem": "JUMP LR is placed during an active HOLD D (62.175 to 63.051), forcing an illegal 3-panel 'hand' (D, L, R)."
+    },
+    {
+      "where": "85.389",
+      "problem": "JUMP LU is placed during an active HOLD D (84.951 to 85.827), forcing an illegal 3-panel 'hand' (D, L, U)."
+    },
+    {
+      "where": "87.141",
+      "problem": "JUMP LR is placed during an active HOLD D (86.703 to 87.579), forcing an illegal 3-panel 'hand' (D, L, R)."
+    },
+    {
+      "where": "90.645",
+      "problem": "JUMP LU is placed during an active HOLD D (90.207 to 91.083), forcing an illegal 3-panel 'hand' (D, L, U)."
+    },
+    {
+      "where": "95.901",
+      "problem": "JUMP LR is placed during an active HOLD D (95.463 to 97.215), forcing an illegal 3-panel 'hand' (D, L, R)."
+    },
+    {
+      "where": "96.777",
+      "problem": "JUMP LR is placed during an active HOLD D (95.463 to 97.215), forcing an illegal 3-panel 'hand' (D, L, R)."
+    },
+    {
+      "where": "99.405",
+      "problem": "JUMP LR is placed during an active HOLD D (98.967 to 99.843), forcing an illegal 3-panel 'hand' (D, L, R)."
+    },
+    {
+      "where": "102.909",
+      "problem": "JUMP LR is placed during an active HOLD U (102.361 to 103.237), forcing an illegal 3-panel 'hand' (U, L, R)."
+    },
+    {
+      "where": "104.661",
+      "problem": "JUMP LR is placed during an active HOLD D (104.223 to 105.099), forcing an illegal 3-panel 'hand' (D, L, R)."
+    }
+  ],
+  "human_review": true
+}

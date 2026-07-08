@@ -1,0 +1,10 @@
+{
+  "score": 9,
+  "verdict": "An exceptionally well-crafted chart with superb vocal syncopation and natural foot flow, minorly held back by a single 3-panel hold conflict.",
+  "issues": [
+    {
+      "where": "81.118",
+      "problem": "JUMP LR overlaps with HOLD D (which ends at 81.241), requiring a 3-panel input or causing a dropped hold."
+    }
+  ]
+}

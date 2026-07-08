@@ -1,0 +1,18 @@
+{
+  "score": 7,
+  "verdict": "Flawless rhythm alignment and an energetic drop, but severely hampered by awkward 16th-note runs forced on a single foot during holds in the verse.",
+  "issues": [
+    {
+      "where": "14.635 - 15.111",
+      "problem": "Holding R forces the player to perform a rapid 16th-note run (D -> U -> L) entirely on the left foot, which is extremely awkward and physically strenuous."
+    },
+    {
+      "where": "16.658 - 17.134",
+      "problem": "Holding D forces a one-foot 16th-note run (U -> L -> R) on the left foot, creating an unnatural movement bottleneck."
+    },
+    {
+      "where": "20.585 - 21.061",
+      "problem": "Holding U forces the right foot to execute a fast L -> R -> D 16th-note sequence, causing severe balance and flow issues."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "score": 8,
+  "verdict": "An exceptionally fluent and well-synced chart that tracks song energy perfectly, though its intense eighth-note-to-jump transitions push the difficulty slightly too high for a standard Easy rating.",
+  "issues": [
+    {
+      "where": "71.477",
+      "problem": "An eighth-note stream of 5 notes directly ending on a JUMP (LD) is a highly advanced technique that exceeds the expected physical coordination of a standard Easy chart."
+    },
+    {
+      "where": "18.762",
+      "problem": "Releasing a hold on one foot at the exact same millisecond as tapping a new note on another foot (e.g., D release to L tap) occurs frequently throughout the chart and can be disorienting for beginners."
+    },
+    {
+      "where": "121.582",
+      "problem": "The eighth-note run into a JUMP LR at the end of the chorus introduces a sudden spike in physical difficulty right before the final hold."
+    }
+  ]
+}

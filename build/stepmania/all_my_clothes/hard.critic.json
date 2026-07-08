@@ -1,0 +1,19 @@
+{
+  "score": 4,
+  "verdict": "Rhythmically accurate to the vocals but severely held back by extremely awkward physical flow, including numerous 16th-note jumps and spin-inducing runs.",
+  "issues": [
+    {
+      "where": "2.730, 4.115, 15.887, 18.656, 19.349, 20.734, 21.426, 63.665, 69.205, 70.589, 74.744, 80.284",
+      "problem": "Frequent 16th-note jumps (a jump occurring just ~86ms after a tap). This forces players to jump with one foot already in motion, causing severe balance issues and forcing bracket-steps/slides at 173 BPM."
+    },
+    {
+      "where": "22.724 - 23.503",
+      "problem": "Awkward 16th-note patterns (L-R-U-D and R-D-U-L) that force rapid spins or highly uncomfortable double-stepping at high speeds."
+    },
+    {
+      "where": "Entire chart",
+      "problem": "Over-prioritizing literal vocal syncopation at the cost of playability, leading to a stuttery chart that feels very unintuitive on pad."
+    }
+  ],
+  "human_review": true
+}

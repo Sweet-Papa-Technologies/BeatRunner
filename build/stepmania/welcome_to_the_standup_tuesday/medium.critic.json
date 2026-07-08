@@ -1,0 +1,14 @@
+{
+  "score": 7,
+  "verdict": "A fun, well-paced chart that matches the upbeat energy of the song, but holds back its quality with a physically impossible three-panel overlap near the end.",
+  "issues": [
+    {
+      "where": "77.539",
+      "problem": "Requires tapping L while both R (held 76.480 to 77.892) and D (held 77.186 to 77.892) are actively held, forcing an impossible 3-panel overlap for a Medium singles chart."
+    },
+    {
+      "where": "41.528 - 41.881",
+      "problem": "The rapid eighth-note sequence (U -> R -> D) at 170 BPM is a sudden spike in difficulty compared to the rest of the chart's comfortable quarter-note stream."
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "track_id": "site_assigner_bg_music_1",
+  "bpm": 119.945,
+  "offset": 0.45,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 114,
+      "meter": 3,
+      "jumps": 14,
+      "holds": 13,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 8,
+        "verdict": "A well-structured Easy chart with comfortable flow and good density tracking, though it suffers from a highly repetitive chorus and minor off-beat syncopations.",
+        "issues": [
+          {
+            "where": "27.712",
+            "problem": "The hold starts on an off-beat (8th note) at 27.712, which breaks the established quarter-note rhythm and may confuse beginner players."
+          },
+          {
+            "where": "38.718",
+            "problem": "An isolated 8th-note step occurs here, transitioning immediately into a hold at 38.968, which is slightly too complex for an Easy difficulty."
+          },
+          {
+            "where": "50.473 - 64.479",
+            "problem": "The 4-beat pattern (Jump LR -> D -> U -> L) is repeated almost 7 times consecutively without any variation, making the main chorus feel overly repetitive and mechanical."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/site_assigner_bg_music_1/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 114,
+        "onset_alignment": 0.8596,
+        "grid_notes": 16,
+        "panel_balance": {
+          "L": 0.266,
+          "D": 0.281,
+          "U": 0.234,
+          "R": 0.219
+        },
+        "hold_share": 0.114,
+        "jump_share": 0.1228,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.2472,
+        "gates": {
+          "onset_alignment": false,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 210,
+      "meter": 6,
+      "jumps": 34,
+      "holds": 23,
+      "repaired": 5,
+      "repair_ok": true,
+      "critic": {
+        "score": 4,
+        "verdict": "The chart is highly repetitive, copy-pasting a single asymmetric pattern for almost the entire main section, leading to a tedious and unbalanced gameplay experience.",
+        "issues": [
+          {
+            "where": "25.461 to 61.478",
+            "problem": "Extreme repetitiveness. The 'U -> D -> L -> JUMP LR' loop is repeated continuously for over 35 seconds with almost no variation, making the main chorus incredibly boring and lazy."
+          },
+          {
+            "where": "25.461 to 61.478",
+            "problem": "Asymmetric and awkward foot flow. The repeated pattern forces either an awkward double-step into the jump, or an unbalanced stance where the left foot does most of the lateral movement while the right foot remains static."
+          },
+          {
+            "where": "63.354 and 63.854",
+            "problem": "Isolated 16th notes. Tapping D at 63.354 right before a JUMP LR at 63.479 creates an abrupt, uncomfy one-footed jump transition that is not introduced anywhere else in the chart."
+          },
+          {
+            "where": "64.980 to 80.487",
+            "problem": "The density collapses completely in the outro, leaving very sparse, disconnected notes that drag on without satisfyingly matching the fading energy of the track."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/site_assigner_bg_music_1/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 210,
+        "onset_alignment": 0.9857,
+        "grid_notes": 3,
+        "panel_balance": {
+          "L": 0.332,
+          "D": 0.23,
+          "U": 0.234,
+          "R": 0.205
+        },
+        "hold_share": 0.1095,
+        "jump_share": 0.1619,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.19,
+        "density_energy_spearman": 0.3644,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 233,
+      "meter": 8,
+      "jumps": 15,
+      "holds": 12,
+      "repaired": 7,
+      "repair_ok": true,
+      "critic": {
+        "score": 3,
+        "verdict": "A highly repetitive chart with severe flow issues, dominated by a looping pattern that forces awkward double-steps and an uncreative copy-pasted jump section.",
+        "issues": [
+          {
+            "where": "2.451 to 47.972",
+            "problem": "The stream is heavily dominated by a looping 'D -> U -> R -> L' pattern (and its rotations). This forces either continuous double-stepping or constant spinning, which violates natural foot-alternation and is extremely exhausting and repetitive."
+          },
+          {
+            "where": "54.975 to 63.479",
+            "problem": "The chart repeats the exact same 'D -> JUMP LR' pattern nine times consecutively. This lacks pattern variety and feels very uninspired."
+          },
+          {
+            "where": "64.980 to 81.487",
+            "problem": "The density suddenly drops off a cliff. The remaining steps land on awkward, highly syncopated 16th-note offsets (e.g., 70.607, 72.108) that feel rhythmically disconnected and jar players accustomed to the previous beat grid."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/site_assigner_bg_music_1/hard.assist.ogg"
+      },
+      "metrics": {
+        "notes": 233,
+        "onset_alignment": 0.9442,
+        "grid_notes": 13,
+        "panel_balance": {
+          "L": 0.262,
+          "D": 0.274,
+          "U": 0.214,
+          "R": 0.25
+        },
+        "hold_share": 0.0515,
+        "jump_share": 0.0644,
+        "flow_cost_max": 8.0,
+        "flow_cost_mean": 0.24,
+        "density_energy_spearman": 0.8575,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/site_assigner_bg_music_1/site_assigner_bg_music_1.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/site_assigner_bg_music_1/site_assigner_bg_music_1.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/site_assigner_bg_music_1/site_assigner_bg_music_1.ogg"
+  },
+  "out": "build/stepmania/site_assigner_bg_music_1",
+  "meter_monotonic": true
+}

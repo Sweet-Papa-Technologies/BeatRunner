@@ -1,0 +1,19 @@
+{
+  "score": 5,
+  "verdict": "The chart is timed correctly to the beat, but contains sequences that are far too complex and physically demanding for an Easy difficulty.",
+  "issues": [
+    {
+      "where": "22.816 to 29.870",
+      "problem": "A long, continuous quarter-note stream of 14 steps with no rest is too dense for an Easy chart, and the repetitive 'D -> U -> R -> D -> U -> L' pattern forces unnatural double-stepping or complex crossovers."
+    },
+    {
+      "where": "6.810 - 7.082 and 16.305 - 16.577",
+      "problem": "Isolated eighth-note transitions between vertical opposites (U to D, and D to U) are disorienting and difficult for beginners to execute smoothly."
+    },
+    {
+      "where": "34.753 - 39.094",
+      "problem": "The chorus introduces too many consecutive JUMP LR notes spaced closely together, which spikes the physical difficulty too high for an Easy chart."
+    }
+  ],
+  "human_review": true
+}

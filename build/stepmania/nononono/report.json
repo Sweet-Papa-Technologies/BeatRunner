@@ -1,0 +1,180 @@
+{
+  "track_id": "nononono",
+  "bpm": 176.061,
+  "offset": 0.279,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 147,
+      "meter": 3,
+      "jumps": 55,
+      "holds": 18,
+      "repaired": 18,
+      "repair_ok": true,
+      "critic": {
+        "score": 5,
+        "verdict": "A mostly standard Easy chart that is severely held back by excessive repetition and uncomfortable, high-difficulty spikes including Up-Down jumps.",
+        "issues": [
+          {
+            "where": "98.427 and 101.153",
+            "problem": "The use of JUMP UD (Up/Down) is highly discouraged for Easy charts, as it requires unsafe/awkward body twisting for beginners."
+          },
+          {
+            "where": "Throughout the chart (e.g., 5.050, 11.184, 23.453, 32.995, 71.164, 110.695)",
+            "problem": "The sequence 'JUMP LR -> tap D -> JUMP LR -> tap D' is copy-pasted excessively, leading to an extremely repetitive and boring gameplay flow."
+          },
+          {
+            "where": "98.427 - 102.516",
+            "problem": "Transitioning directly from a JUMP UD into dense quarter-note steps (L -> R -> D) ending in another jump at 176 BPM represents a massive, unfair spike in difficulty for an Easy chart."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/nononono/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 147,
+        "onset_alignment": 0.898,
+        "grid_notes": 15,
+        "panel_balance": {
+          "L": 0.317,
+          "D": 0.297,
+          "U": 0.114,
+          "R": 0.272
+        },
+        "hold_share": 0.1224,
+        "jump_share": 0.3741,
+        "flow_cost_max": 1.0,
+        "flow_cost_mean": 0.04,
+        "density_energy_spearman": 0.4121,
+        "gates": {
+          "onset_alignment": false,
+          "panel_balance": false,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 274,
+      "meter": 5,
+      "jumps": 95,
+      "holds": 25,
+      "repaired": 9,
+      "repair_ok": true,
+      "critic": {
+        "score": 4,
+        "verdict": "A highly repetitive chart that matches the rhythm of the music but suffers from severe monotony and lazy patterning.",
+        "issues": [
+          {
+            "where": "34.699 - 49.353",
+            "problem": "Extreme repetition of the 'JUMP LR -> tap D' sequence. Repeating the exact same physical movement 44 times in a row is incredibly monotonous and exhausting."
+          },
+          {
+            "where": "Entire chart",
+            "problem": "Severe lack of jump variety. Almost all jumps are 'JUMP LR', which makes the layout feel one-dimensional and fails to utilize the full pad."
+          },
+          {
+            "where": "6.413 - 16.637",
+            "problem": "Awkward foot flow. Repeatedly jumping on L+R and immediately tapping D forces the player into repetitive double-stepping or straining bracket-steps."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/nononono/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 274,
+        "onset_alignment": 0.9161,
+        "grid_notes": 23,
+        "panel_balance": {
+          "L": 0.298,
+          "D": 0.298,
+          "U": 0.122,
+          "R": 0.282
+        },
+        "hold_share": 0.0912,
+        "jump_share": 0.3467,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.08,
+        "density_energy_spearman": 0.1901,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": false,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 587,
+      "meter": 9,
+      "jumps": 51,
+      "holds": 27,
+      "repaired": 25,
+      "repair_ok": true,
+      "critic": {
+        "score": 3,
+        "verdict": "The chart is heavily marred by physically impossible three-panel holds (unintentional hands) and extreme, lazy pattern repetition.",
+        "issues": [
+          {
+            "where": "9.821",
+            "problem": "Requires pressing Left and Right simultaneously while holding Down (from 9.736), creating an impossible three-panel note for pad play without using hands."
+          },
+          {
+            "where": "15.870",
+            "problem": "Requires tapping Down while both Up (15.444) and Right (15.700) are being held, forcing an awkward three-panel press."
+          },
+          {
+            "where": "38.959 - 49.353",
+            "problem": "Extremely repetitive looping of the exact same 'L -> R -> U -> D' pattern for over 10 seconds, which feels lazy and monotonous."
+          },
+          {
+            "where": "104.050 - 114.785",
+            "problem": "Another lengthy, repetitive 'U -> D -> L -> R' pattern loop lasting over 10 seconds during a major section of the song."
+          },
+          {
+            "where": "13.996",
+            "problem": "Holding Down while performing rapid taps on Up, Left, and Right forces highly awkward, unbalanced crossovers."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 587,
+        "onset_alignment": 0.983,
+        "grid_notes": 10,
+        "panel_balance": {
+          "L": 0.29,
+          "D": 0.245,
+          "U": 0.237,
+          "R": 0.229
+        },
+        "hold_share": 0.046,
+        "jump_share": 0.0869,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.26,
+        "density_energy_spearman": 0.7057,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/nononono/nononono.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/nononono/nononono.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/nononono/nononono.ogg"
+  },
+  "out": "build/stepmania/nononono",
+  "meter_monotonic": true
+}

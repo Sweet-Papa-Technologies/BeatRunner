@@ -1,0 +1,23 @@
+{
+  "score": 5,
+  "verdict": "The chart has good structure and song mapping, but contains major difficulty spikes (8th notes directly connected to jumps) and highly syncopated rhythms that are inappropriate for an Easy chart.",
+  "issues": [
+    {
+      "where": "41.074",
+      "problem": "An 8th note tap on U immediately following a JUMP LR is a massive difficulty spike that is too physically demanding for an Easy chart."
+    },
+    {
+      "where": "75.927",
+      "problem": "Extended syncopated sequence using dotted-quarter rhythms (off-beats) is highly confusing for beginners and should be simplified to steady quarter notes."
+    },
+    {
+      "where": "107.548",
+      "problem": "An 8th note transition from a tap U directly into a JUMP LR is too fast and mechanically complex for players at this level."
+    },
+    {
+      "where": "114.011",
+      "problem": "An isolated 8th note tap here creates an unnecessary difficulty spike during the outro."
+    }
+  ],
+  "human_review": true
+}

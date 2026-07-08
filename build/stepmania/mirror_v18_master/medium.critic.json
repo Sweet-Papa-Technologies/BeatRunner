@@ -1,0 +1,19 @@
+{
+  "score": 6,
+  "verdict": "A decent Medium chart with natural foot flow, held back by a few technical errors including an illegal 3-panel jump (hand) and stray 16th notes.",
+  "issues": [
+    {
+      "where": "33.890",
+      "problem": "Requires a 3-panel press (JUMP LR while HOLD D is active), creating an illegal 'hand' alignment for a Medium difficulty chart."
+    },
+    {
+      "where": "57.135",
+      "problem": "Stray 16th-note step immediately after 57.012 creates an unintended gallop/rhythm error."
+    },
+    {
+      "where": "132.034 - 132.280",
+      "problem": "A fast 16th-note stream (U-R-L) right at the end of the song represents an inconsistent difficulty spike."
+    }
+  ],
+  "human_review": true
+}

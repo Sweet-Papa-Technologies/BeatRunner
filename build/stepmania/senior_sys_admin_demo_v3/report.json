@@ -1,0 +1,156 @@
+{
+  "track_id": "senior_sys_admin_demo_v3",
+  "bpm": 129.974,
+  "offset": 0.396,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 161,
+      "meter": 3,
+      "jumps": 38,
+      "holds": 21,
+      "repaired": 10,
+      "repair_ok": true,
+      "critic": {
+        "score": 10,
+        "verdict": "An exceptionally well-crafted Easy chart that perfectly captures the syncopated vocal rhythms with flawless physical flow.",
+        "issues": []
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/senior_sys_admin_demo_v3/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 161,
+        "onset_alignment": 0.9876,
+        "grid_notes": 2,
+        "panel_balance": {
+          "L": 0.296,
+          "D": 0.291,
+          "U": 0.201,
+          "R": 0.211
+        },
+        "hold_share": 0.1304,
+        "jump_share": 0.236,
+        "flow_cost_max": 7.85,
+        "flow_cost_mean": 0.33,
+        "density_energy_spearman": 0.5779,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "medium": {
+      "notes": 238,
+      "meter": 6,
+      "jumps": 71,
+      "holds": 25,
+      "repaired": 4,
+      "repair_ok": true,
+      "critic": {
+        "score": 4,
+        "verdict": "The chart suffers from extreme, repetitive copy-pasting in the main chorus and an awkward, physically unbalanced repeating pattern, alongside isolated 3-panel brackets and abrupt 16th-note spikes.",
+        "issues": [
+          {
+            "where": "41.250 - 55.099",
+            "problem": "The exact same 4-note sequence (U, D, L, LR) is repeated 15 times consecutively. This is highly repetitive and lazy charting, causing severe physical imbalance where the left foot is forced to do rapid 8th-note lateral movements while the right foot remains mostly static."
+          },
+          {
+            "where": "7.782",
+            "problem": "A JUMP LR is placed while a HOLD D is active. This forces a 3-panel bracket step (L+D+R), which is an unexpected and unfair difficulty spike for a medium-style chart."
+          },
+          {
+            "where": "12.745, 16.438, 60.870, 66.871",
+            "problem": "Isolated 16th-note doublets (such as the D -> U at 12.745) are introduced abruptly without clear musical justification, disrupting the established 8th-note rhythm."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/senior_sys_admin_demo_v3/medium.assist.ogg"
+      },
+      "metrics": {
+        "notes": 238,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.327,
+          "D": 0.243,
+          "U": 0.188,
+          "R": 0.243
+        },
+        "hold_share": 0.105,
+        "jump_share": 0.2983,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.1,
+        "density_energy_spearman": 0.5107,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 311,
+      "meter": 8,
+      "jumps": 44,
+      "holds": 21,
+      "repaired": 2,
+      "repair_ok": true,
+      "critic": {
+        "score": 4,
+        "verdict": "The chart is well-synced to the beat, but it is severely let down by extreme pattern repetition and uncomfortable forced spins during the stream sections.",
+        "issues": [
+          {
+            "where": "41.250 - 64.793",
+            "problem": "The 8th-note streams frequently feature forced 360-degree spins (such as U -> D -> L -> R -> U -> D -> L). At 130 BPM, this forces the player into highly awkward double-steps or disorienting physical spins, severely disrupting the foot flow."
+          },
+          {
+            "where": "12.398 - 38.250",
+            "problem": "The pattern 'JUMP LR -> U -> D -> L' is repeated almost continuously for over 25 seconds with virtually no variation, making the first half of the chart feel incredibly monotonous and lazy."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/senior_sys_admin_demo_v3/hard.assist.ogg"
+      },
+      "metrics": {
+        "notes": 311,
+        "onset_alignment": 0.7685,
+        "grid_notes": 72,
+        "panel_balance": {
+          "L": 0.315,
+          "D": 0.214,
+          "U": 0.242,
+          "R": 0.228
+        },
+        "hold_share": 0.0675,
+        "jump_share": 0.1415,
+        "flow_cost_max": 0.5,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.6385,
+        "gates": {
+          "onset_alignment": false,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/senior_sys_admin_demo_v3/senior_sys_admin_demo_v3.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/senior_sys_admin_demo_v3/senior_sys_admin_demo_v3.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/senior_sys_admin_demo_v3/senior_sys_admin_demo_v3.ogg"
+  },
+  "out": "build/stepmania/senior_sys_admin_demo_v3",
+  "meter_monotonic": true
+}

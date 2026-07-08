@@ -1,0 +1,172 @@
+{
+  "track_id": "scared_money_don_t_jiggle_v17",
+  "bpm": 129.974,
+  "offset": 0.45,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 158,
+      "meter": 3,
+      "jumps": 19,
+      "holds": 26,
+      "repaired": 1,
+      "repair_ok": true,
+      "critic": {
+        "score": 5,
+        "verdict": "The chart has good structure and song mapping, but contains major difficulty spikes (8th notes directly connected to jumps) and highly syncopated rhythms that are inappropriate for an Easy chart.",
+        "issues": [
+          {
+            "where": "41.074",
+            "problem": "An 8th note tap on U immediately following a JUMP LR is a massive difficulty spike that is too physically demanding for an Easy chart."
+          },
+          {
+            "where": "75.927",
+            "problem": "Extended syncopated sequence using dotted-quarter rhythms (off-beats) is highly confusing for beginners and should be simplified to steady quarter notes."
+          },
+          {
+            "where": "107.548",
+            "problem": "An 8th note transition from a tap U directly into a JUMP LR is too fast and mechanically complex for players at this level."
+          },
+          {
+            "where": "114.011",
+            "problem": "An isolated 8th note tap here creates an unnecessary difficulty spike during the outro."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/scared_money_don_t_jiggle_v17/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 158,
+        "onset_alignment": 0.9684,
+        "grid_notes": 5,
+        "panel_balance": {
+          "L": 0.26,
+          "D": 0.299,
+          "U": 0.237,
+          "R": 0.203
+        },
+        "hold_share": 0.1646,
+        "jump_share": 0.1203,
+        "flow_cost_max": 7.85,
+        "flow_cost_mean": 0.05,
+        "density_energy_spearman": 0.1691,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "medium": {
+      "notes": 394,
+      "meter": 6,
+      "jumps": 104,
+      "holds": 20,
+      "repaired": 9,
+      "repair_ok": true,
+      "critic": {
+        "score": 8,
+        "verdict": "An incredibly rhythmic and catchy chart that captures the bounce of the track perfectly, though marred by a single invalid 3-panel jump.",
+        "issues": [
+          {
+            "where": "23.532",
+            "problem": "The JUMP LR at 23.532 occurs while the D panel is held (HOLD D until 23.878), creating an unintentional 3-panel 'hand' requirement that breaks single-play pad conventions."
+          },
+          {
+            "where": "42.805 - 42.920",
+            "problem": "The 16th-note transition from tap D (42.805) directly into JUMP LR (42.920) forces an awkward foot recovery or double-step on the right foot."
+          },
+          {
+            "where": "21.108 - 21.223",
+            "problem": "Isolated 16th doublets feel slightly disconnected from the surrounding rhythmic density and can catch players off-guard."
+          }
+        ]
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 394,
+        "onset_alignment": 0.9695,
+        "grid_notes": 12,
+        "panel_balance": {
+          "L": 0.307,
+          "D": 0.243,
+          "U": 0.209,
+          "R": 0.241
+        },
+        "hold_share": 0.0508,
+        "jump_share": 0.264,
+        "flow_cost_max": 13.85,
+        "flow_cost_mean": 0.11,
+        "density_energy_spearman": 0.2384,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 358,
+      "meter": 8,
+      "jumps": 56,
+      "holds": 15,
+      "repaired": 2,
+      "repair_ok": true,
+      "critic": {
+        "score": 8,
+        "verdict": "A highly rhythmic and engaging chart with excellent clap-sync, let down slightly by a few awkward same-foot 16th sequences during holds.",
+        "issues": [
+          {
+            "where": "26.763",
+            "problem": "Forced 16th-note same-foot transition (D -> L) in 115ms while holding U, which is highly awkward and disrupts natural alternate flow."
+          },
+          {
+            "where": "89.429",
+            "problem": "Repeats the forced 16th same-foot slide/jack (D -> L) during a U hold, causing physical discomfort or requiring advanced bracket techniques."
+          },
+          {
+            "where": "51.229",
+            "problem": "The transition from a 16th-note tap R to JUMP LD is very sudden and feels slightly jerky to perform."
+          }
+        ]
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 358,
+        "onset_alignment": 0.9665,
+        "grid_notes": 12,
+        "panel_balance": {
+          "L": 0.266,
+          "D": 0.256,
+          "U": 0.239,
+          "R": 0.239
+        },
+        "hold_share": 0.0419,
+        "jump_share": 0.1564,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.05,
+        "density_energy_spearman": 0.1179,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/scared_money_don_t_jiggle_v17/scared_money_don_t_jiggle_v17.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/scared_money_don_t_jiggle_v17/scared_money_don_t_jiggle_v17.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/scared_money_don_t_jiggle_v17/scared_money_don_t_jiggle_v17.ogg"
+  },
+  "out": "build/stepmania/scared_money_don_t_jiggle_v17",
+  "meter_monotonic": true
+}

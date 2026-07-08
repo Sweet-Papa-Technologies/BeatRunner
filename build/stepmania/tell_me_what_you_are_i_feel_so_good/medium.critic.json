@@ -1,0 +1,30 @@
+{
+  "score": 7,
+  "verdict": "An exceptionally well-timed and structurally accurate chart that is unfortunately marred by unplayable three-panel hold configurations for a standard single-pad layout.",
+  "issues": [
+    {
+      "where": "47.166",
+      "problem": "Three-panel hold (U, D, L are all held simultaneously from 47.166 to 47.667). This is physically unplayable using feet alone without brackets and should be avoided on standard single charts."
+    },
+    {
+      "where": "56.921",
+      "problem": "Three-panel hold overlap (U, L, D are held simultaneously until 57.046), creating an awkward physical constraint."
+    },
+    {
+      "where": "74.429",
+      "problem": "Duplicate jump event listed twice on the exact same timestamp, indicating a minor charting/exporting data error."
+    },
+    {
+      "where": "79.931",
+      "problem": "A jump (D + U) is incorrectly formatted as two individual tap events on the same timestamp instead of a unified JUMP instruction."
+    },
+    {
+      "where": "100.941",
+      "problem": "Three-panel hold (D, L, R are all held simultaneously until 101.441), forcing an unexpected 'hand' note requirement."
+    },
+    {
+      "where": "111.196",
+      "problem": "Another illegal three-panel hold combination (L, D, U are all held simultaneously until 111.746)."
+    }
+  ]
+}

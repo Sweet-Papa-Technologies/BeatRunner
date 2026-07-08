@@ -1,0 +1,14 @@
+{
+  "score": 7,
+  "verdict": "An exceptionally rhythmic and well-paced chart with comfortable flow, slightly marred by a couple of physical 3-panel overlap conflicts during holds.",
+  "issues": [
+    {
+      "where": "93.809",
+      "problem": "JUMP LR occurs while HOLD D is active (ends at 93.916), creating an illegal 3-panel conflict that requires a hand or bracket tap."
+    },
+    {
+      "where": "96.382",
+      "problem": "JUMP LR occurs while HOLD U is active (ends at 96.810), forcing an awkward 3-panel hand/bracket interaction."
+    }
+  ]
+}

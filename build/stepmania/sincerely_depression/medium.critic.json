@@ -1,0 +1,23 @@
+{
+  "score": 4,
+  "verdict": "The chart captures the song's structure and energy well, but violates standard single-play design conventions with an illegal 3-panel hold and excessive difficulty spikes for a Medium rating.",
+  "issues": [
+    {
+      "where": "71.999 - 73.636",
+      "problem": "Illegal 3-panel hold (D, U, and L held simultaneously) which requires hands or complex bracket-pressing, violating single-play pad guidelines, especially on Medium."
+    },
+    {
+      "where": "39.259 - 49.081",
+      "problem": "A continuous 10-second eighth-note stream featuring frequent jumps is too physically demanding and complex for a 'Medium' difficulty, causing a severe pacing and difficulty spike."
+    },
+    {
+      "where": "17.842 - 17.978",
+      "problem": "An awkward sixteenth-note tap leading directly into an eighth-note jump (JUMP LR) which is mechanically jarring and too advanced for this difficulty tier."
+    },
+    {
+      "where": "52.219 - 52.355",
+      "problem": "Rhythmically complex sixteenth-note tap occurring during an active hold, ending with a simultaneous release/tap, which is highly unintuitive for Medium-level players."
+    }
+  ],
+  "human_review": true
+}
