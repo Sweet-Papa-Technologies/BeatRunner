@@ -1,5 +1,5 @@
 {
-  "design_notes": "Medium chart designed for a smooth but engaging physical experience. Density scales up with the song's energy. We avoid long streams of 8th notes to keep the sustained NPS under 5.0, utilizing short syncopated bursts instead. Holds are strategically placed to represent vocal sustains and main synth lines, matching exact audio onset sustain lengths.",
+  "design_notes": "The chart leverages a solid syncopated rhythm throughout, matching the quick 184 BPM tempo of the track. To stay within the medium difficulty limits (especially the max sustained 5.0 NPS), the density transitions from simple 4th-note-centric movements in the intro and builds into syncopated 8th-note triplets and short streams in the main drop. Jumps are reserved strictly for key musical accents, and holds are woven into the synth-heavy phrases to create a satisfying physical flow that matches the energy curve.",
   "notes": [
     {
       "ref": "p011",
@@ -58,15 +58,7 @@
       "kind": "tap"
     },
     {
-      "ref": "p044",
-      "kind": "tap"
-    },
-    {
       "ref": "p046",
-      "kind": "tap"
-    },
-    {
-      "ref": "p048",
       "kind": "tap"
     },
     {
@@ -74,15 +66,7 @@
       "kind": "tap"
     },
     {
-      "ref": "p050",
-      "kind": "tap"
-    },
-    {
       "ref": "p052",
-      "kind": "tap"
-    },
-    {
-      "ref": "p053",
       "kind": "tap"
     },
     {
@@ -90,15 +74,7 @@
       "kind": "tap"
     },
     {
-      "ref": "p055",
-      "kind": "tap"
-    },
-    {
-      "ref": "p058",
-      "kind": "tap"
-    },
-    {
-      "ref": "p059",
+      "ref": "p057",
       "kind": "tap"
     },
     {
@@ -119,6 +95,10 @@
     },
     {
       "ref": "p065",
+      "kind": "tap"
+    },
+    {
+      "ref": "p067",
       "kind": "tap"
     },
     {
@@ -218,6 +198,10 @@
       "kind": "tap"
     },
     {
+      "ref": "p138",
+      "kind": "tap"
+    },
+    {
       "ref": "p140",
       "kind": "tap"
     },
@@ -266,6 +250,10 @@
       "kind": "tap"
     },
     {
+      "ref": "p157",
+      "kind": "tap"
+    },
+    {
       "ref": "p158",
       "kind": "tap"
     },
@@ -302,34 +290,6 @@
       "kind": "tap"
     },
     {
-      "ref": "p169",
-      "kind": "tap"
-    },
-    {
-      "ref": "p171",
-      "kind": "tap"
-    },
-    {
-      "ref": "p172",
-      "kind": "tap"
-    },
-    {
-      "ref": "p173",
-      "kind": "tap"
-    },
-    {
-      "ref": "p174",
-      "kind": "tap"
-    },
-    {
-      "ref": "p175",
-      "kind": "tap"
-    },
-    {
-      "ref": "p176",
-      "kind": "tap"
-    },
-    {
       "ref": "p178",
       "kind": "tap"
     },
@@ -342,10 +302,6 @@
       "kind": "tap"
     },
     {
-      "ref": "p184",
-      "kind": "tap"
-    },
-    {
       "ref": "p186",
       "kind": "tap"
     },
@@ -354,19 +310,7 @@
       "kind": "tap"
     },
     {
-      "ref": "p190",
-      "kind": "tap"
-    },
-    {
-      "ref": "p192",
-      "kind": "tap"
-    },
-    {
       "ref": "p194",
-      "kind": "tap"
-    },
-    {
-      "ref": "p196",
       "kind": "tap"
     },
     {
@@ -402,10 +346,6 @@
       "kind": "tap"
     },
     {
-      "ref": "p211",
-      "kind": "tap"
-    },
-    {
       "ref": "p212",
       "kind": "tap"
     },
@@ -418,10 +358,6 @@
       "kind": "tap"
     },
     {
-      "ref": "p215",
-      "kind": "tap"
-    },
-    {
       "ref": "p216",
       "kind": "tap"
     },
@@ -431,10 +367,6 @@
     },
     {
       "ref": "p218",
-      "kind": "tap"
-    },
-    {
-      "ref": "p220",
       "kind": "tap"
     },
     {
@@ -496,7 +428,7 @@
     {
       "ref": "p240",
       "kind": "hold",
-      "hold_beats": 2.5
+      "hold_beats": 2.0
     },
     {
       "ref": "p244",
@@ -504,10 +436,6 @@
     },
     {
       "ref": "p246",
-      "kind": "tap"
-    },
-    {
-      "ref": "p247",
       "kind": "tap"
     },
     {
@@ -531,10 +459,6 @@
       "kind": "tap"
     },
     {
-      "ref": "p254",
-      "kind": "tap"
-    },
-    {
       "ref": "p255",
       "kind": "tap"
     },
@@ -547,14 +471,6 @@
       "kind": "tap"
     },
     {
-      "ref": "p258",
-      "kind": "tap"
-    },
-    {
-      "ref": "p260",
-      "kind": "tap"
-    },
-    {
       "ref": "p261",
       "kind": "tap"
     },
@@ -563,23 +479,11 @@
       "kind": "tap"
     },
     {
-      "ref": "p263",
-      "kind": "tap"
-    },
-    {
-      "ref": "p264",
-      "kind": "tap"
-    },
-    {
       "ref": "p265",
       "kind": "tap"
     },
     {
       "ref": "p266",
-      "kind": "tap"
-    },
-    {
-      "ref": "p267",
       "kind": "tap"
     },
     {
@@ -610,6 +514,10 @@
       "ref": "p274",
       "kind": "hold",
       "hold_beats": 1.0
+    },
+    {
+      "ref": "p275",
+      "kind": "tap"
     },
     {
       "ref": "p276",
@@ -737,15 +645,7 @@
       "kind": "tap"
     },
     {
-      "ref": "p322",
-      "kind": "tap"
-    },
-    {
       "ref": "p324",
-      "kind": "tap"
-    },
-    {
-      "ref": "p325",
       "kind": "tap"
     },
     {
@@ -806,10 +706,6 @@
     },
     {
       "ref": "p352",
-      "kind": "tap"
-    },
-    {
-      "ref": "p353",
       "kind": "tap"
     },
     {
@@ -885,10 +781,6 @@
       "kind": "tap"
     },
     {
-      "ref": "p376",
-      "kind": "tap"
-    },
-    {
       "ref": "p378",
       "kind": "tap"
     },
@@ -946,10 +838,6 @@
     },
     {
       "ref": "p394",
-      "kind": "tap"
-    },
-    {
-      "ref": "p395",
       "kind": "tap"
     },
     {
@@ -1152,8 +1040,11 @@
     },
     {
       "ref": "p458",
-      "kind": "hold",
-      "hold_beats": 1.0
+      "kind": "tap"
+    },
+    {
+      "ref": "p459",
+      "kind": "tap"
     },
     {
       "ref": "p460",
@@ -1535,11 +1426,6 @@
       "kind": "tap"
     },
     {
-      "ref": "p567",
-      "kind": "hold",
-      "hold_beats": 1.0
-    },
-    {
       "ref": "p568",
       "kind": "tap"
     },
@@ -1550,8 +1436,7 @@
     },
     {
       "ref": "p572",
-      "kind": "hold",
-      "hold_beats": 1.0
+      "kind": "tap"
     },
     {
       "ref": "p573",
@@ -1564,12 +1449,12 @@
     },
     {
       "ref": "p577",
-      "kind": "hold",
-      "hold_beats": 1.0
+      "kind": "tap"
     },
     {
-      "ref": "p579",
-      "kind": "tap"
+      "ref": "p578",
+      "kind": "hold",
+      "hold_beats": 1.0
     },
     {
       "ref": "p580",
@@ -1607,6 +1492,14 @@
       "kind": "tap"
     },
     {
+      "ref": "p596",
+      "kind": "tap"
+    },
+    {
+      "ref": "p597",
+      "kind": "tap"
+    },
+    {
       "ref": "p599",
       "kind": "tap"
     },
@@ -1614,6 +1507,10 @@
       "ref": "p600",
       "kind": "hold",
       "hold_beats": 1.0
+    },
+    {
+      "ref": "p601",
+      "kind": "tap"
     },
     {
       "ref": "p602",
@@ -1649,7 +1546,11 @@
     {
       "ref": "p612",
       "kind": "hold",
-      "hold_beats": 2.5
+      "hold_beats": 2.0
+    },
+    {
+      "ref": "p616",
+      "kind": "tap"
     },
     {
       "ref": "p617",
@@ -1730,14 +1631,9 @@
       "hold_beats": 2.5
     },
     {
-      "ref": "p654",
+      "ref": "p655",
       "kind": "hold",
-      "hold_beats": 1.0
-    },
-    {
-      "ref": "p656",
-      "kind": "hold",
-      "hold_beats": 1.0
+      "hold_beats": 1.5
     },
     {
       "ref": "p658",
@@ -1755,7 +1651,15 @@
       "hold_beats": 1.0
     },
     {
+      "ref": "p664",
+      "kind": "tap"
+    },
+    {
       "ref": "p665",
+      "kind": "tap"
+    },
+    {
+      "ref": "p666",
       "kind": "tap"
     },
     {
@@ -1771,7 +1675,15 @@
       "kind": "tap"
     },
     {
+      "ref": "p670",
+      "kind": "tap"
+    },
+    {
       "ref": "p672",
+      "kind": "tap"
+    },
+    {
+      "ref": "p673",
       "kind": "tap"
     },
     {
@@ -1787,7 +1699,23 @@
       "kind": "tap"
     },
     {
+      "ref": "p678",
+      "kind": "tap"
+    },
+    {
+      "ref": "p679",
+      "kind": "tap"
+    },
+    {
+      "ref": "p680",
+      "kind": "tap"
+    },
+    {
       "ref": "p682",
+      "kind": "tap"
+    },
+    {
+      "ref": "p683",
       "kind": "tap"
     },
     {
@@ -1803,7 +1731,15 @@
       "kind": "tap"
     },
     {
+      "ref": "p688",
+      "kind": "tap"
+    },
+    {
       "ref": "p689",
+      "kind": "tap"
+    },
+    {
+      "ref": "p690",
       "kind": "tap"
     },
     {
@@ -1819,7 +1755,15 @@
       "kind": "tap"
     },
     {
+      "ref": "p696",
+      "kind": "tap"
+    },
+    {
       "ref": "p698",
+      "kind": "tap"
+    },
+    {
+      "ref": "p699",
       "kind": "tap"
     },
     {
@@ -1831,7 +1775,15 @@
       "kind": "tap"
     },
     {
+      "ref": "p703",
+      "kind": "tap"
+    },
+    {
       "ref": "p704",
+      "kind": "tap"
+    },
+    {
+      "ref": "p705",
       "kind": "tap"
     },
     {
@@ -1844,10 +1796,6 @@
       "hold_beats": 1.5
     },
     {
-      "ref": "p711",
-      "kind": "tap"
-    },
-    {
       "ref": "p712",
       "kind": "hold",
       "hold_beats": 1.5
@@ -1855,10 +1803,19 @@
     {
       "ref": "p715",
       "kind": "hold",
-      "hold_beats": 1.5
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "p717",
+      "kind": "hold",
+      "hold_beats": 1.0
     },
     {
       "ref": "p719",
+      "kind": "tap"
+    },
+    {
+      "ref": "p720",
       "kind": "tap"
     },
     {
@@ -1872,6 +1829,11 @@
     },
     {
       "ref": "p724",
+      "kind": "hold",
+      "hold_beats": 1.0
+    },
+    {
+      "ref": "p725",
       "kind": "hold",
       "hold_beats": 1.0
     },
@@ -1901,11 +1863,23 @@
       "kind": "tap"
     },
     {
+      "ref": "p736",
+      "kind": "tap"
+    },
+    {
       "ref": "p737",
       "kind": "tap"
     },
     {
+      "ref": "p738",
+      "kind": "tap"
+    },
+    {
       "ref": "p739",
+      "kind": "tap"
+    },
+    {
+      "ref": "p740",
       "kind": "tap"
     },
     {
@@ -1920,6 +1894,10 @@
     },
     {
       "ref": "p747",
+      "kind": "tap"
+    },
+    {
+      "ref": "p748",
       "kind": "tap"
     },
     {
@@ -1945,15 +1923,24 @@
       "hold_beats": 1.0
     },
     {
-      "ref": "p758",
-      "kind": "tap"
+      "ref": "p757",
+      "kind": "hold",
+      "hold_beats": 1.0
     },
     {
       "ref": "p759",
       "kind": "tap"
     },
     {
+      "ref": "p760",
+      "kind": "tap"
+    },
+    {
       "ref": "p762",
+      "kind": "tap"
+    },
+    {
+      "ref": "p763",
       "kind": "tap"
     },
     {
@@ -1969,11 +1956,23 @@
       "kind": "tap"
     },
     {
+      "ref": "p767",
+      "kind": "tap"
+    },
+    {
       "ref": "p768",
       "kind": "tap"
     },
     {
+      "ref": "p769",
+      "kind": "tap"
+    },
+    {
       "ref": "p770",
+      "kind": "tap"
+    },
+    {
+      "ref": "p771",
       "kind": "tap"
     },
     {
@@ -1986,8 +1985,9 @@
       "hold_beats": 2.0
     },
     {
-      "ref": "p777",
-      "kind": "tap"
+      "ref": "p776",
+      "kind": "hold",
+      "hold_beats": 1.0
     },
     {
       "ref": "p778",
@@ -1995,28 +1995,34 @@
       "hold_beats": 1.5
     },
     {
+      "ref": "p780",
+      "kind": "hold",
+      "hold_beats": 1.0
+    },
+    {
       "ref": "p781",
       "kind": "hold",
       "hold_beats": 2.0
     },
     {
-      "ref": "p786",
+      "ref": "p785",
       "kind": "hold",
       "hold_beats": 1.0
     },
     {
-      "ref": "p788",
+      "ref": "p787",
       "kind": "hold",
-      "hold_beats": 3.5
+      "hold_beats": 4.0
     },
     {
-      "ref": "p798",
+      "ref": "p797",
+      "kind": "hold",
+      "hold_beats": 1.5
+    },
+    {
+      "ref": "p799",
       "kind": "hold",
       "hold_beats": 1.0
-    },
-    {
-      "ref": "p800",
-      "kind": "tap"
     },
     {
       "ref": "p801",
@@ -2049,9 +2055,13 @@
       "hold_beats": 1.0
     },
     {
-      "ref": "p817",
+      "ref": "p816",
       "kind": "hold",
       "hold_beats": 1.0
+    },
+    {
+      "ref": "p818",
+      "kind": "tap"
     },
     {
       "ref": "p819",
@@ -2092,9 +2102,9 @@
       "kind": "tap"
     },
     {
-      "ref": "p834",
+      "ref": "p833",
       "kind": "hold",
-      "hold_beats": 1.0
+      "hold_beats": 1.25
     },
     {
       "ref": "p838",
@@ -2118,7 +2128,7 @@
       "kind": "tap"
     },
     {
-      "ref": "p847",
+      "ref": "p846",
       "kind": "tap"
     },
     {
@@ -2127,10 +2137,6 @@
     },
     {
       "ref": "p850",
-      "kind": "tap"
-    },
-    {
-      "ref": "p851",
       "kind": "tap"
     },
     {
@@ -2143,10 +2149,6 @@
     },
     {
       "ref": "p856",
-      "kind": "tap"
-    },
-    {
-      "ref": "p857",
       "kind": "tap"
     },
     {
@@ -2215,7 +2217,7 @@
       "hold_beats": 6.5
     },
     {
-      "ref": "p911",
+      "ref": "p910",
       "kind": "tap"
     }
   ],
@@ -2227,7 +2229,7 @@
       "movement": "static",
       "crossover": "none",
       "jump_density": "none",
-      "intent": "Intro - chill slow steps"
+      "intent": "Gentle intro setup matching basic bass pulses"
     },
     {
       "start_bar": 12,
@@ -2236,7 +2238,7 @@
       "movement": "zigzag",
       "crossover": "light",
       "jump_density": "none",
-      "intent": "First verse buildup"
+      "intent": "Build up dynamics with light diagonal motion"
     },
     {
       "start_bar": 24,
@@ -2245,70 +2247,61 @@
       "movement": "drift_L_to_R",
       "crossover": "light",
       "jump_density": "none",
-      "intent": "Buildup continues with side movement"
+      "intent": "Introduce lateral transitions during vocal rises"
     },
     {
       "start_bar": 36,
       "end_bar": 48,
-      "texture": "jacks_sparse",
-      "movement": "drift_R_to_L",
+      "texture": "steps",
+      "movement": "zigzag",
       "crossover": "light",
       "jump_density": "none",
-      "intent": "Buildup intensifies with sparse jacks"
+      "intent": "Increasing note density slightly before the main drop"
     },
     {
       "start_bar": 48,
       "end_bar": 60,
-      "texture": "jacks_sparse",
-      "movement": "zigzag",
+      "texture": "stream",
+      "movement": "box",
       "crossover": "light",
-      "jump_density": "none",
-      "intent": "Pre-drop suspense"
+      "jump_density": "accents",
+      "intent": "Intense pre-drop stream, testing player stamina in box configurations"
     },
     {
       "start_bar": 60,
       "end_bar": 76,
       "texture": "stream",
-      "movement": "box",
+      "movement": "zigzag",
       "crossover": "light",
       "jump_density": "accents",
-      "intent": "Drop part 1 - clean flowing box movements"
+      "intent": "First half of drop; dynamic runs on offbeats"
     },
     {
       "start_bar": 76,
       "end_bar": 92,
       "texture": "stream",
-      "movement": "zigzag",
+      "movement": "drift_R_to_L",
       "crossover": "light",
       "jump_density": "accents",
-      "intent": "Drop part 2 - zigzag stream variations"
+      "intent": "Second half of drop; mirror flow pattern transitioning leftward"
     },
     {
       "start_bar": 92,
-      "end_bar": 98,
-      "texture": "stream",
-      "movement": "drift_L_to_R",
-      "crossover": "light",
-      "jump_density": "accents",
-      "intent": "Drop climax transition"
-    },
-    {
-      "start_bar": 98,
-      "end_bar": 101,
+      "end_bar": 100,
       "texture": "stream",
       "movement": "box",
       "crossover": "light",
       "jump_density": "accents",
-      "intent": "Climax peak - drive the energy to the max"
+      "intent": "Final high-energy drop segment with box pattern drills"
     },
     {
-      "start_bar": 101,
+      "start_bar": 100,
       "end_bar": 103,
       "texture": "stops_breather",
       "movement": "static",
       "crossover": "none",
       "jump_density": "none",
-      "intent": "Outro - cool down"
+      "intent": "Outro phase ending on an extended, satisfying hold"
     }
   ]
 }

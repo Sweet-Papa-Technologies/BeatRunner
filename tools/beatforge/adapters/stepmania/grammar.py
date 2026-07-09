@@ -35,20 +35,25 @@ class DiffBudget:
     hold_share: tuple           # (lo, hi)
     hold_len_beats: tuple
     meter_range: tuple          # (lo, hi) clamp for METER
+    max_run: int = 8            # longest allowed stream (consecutive fast notes)
+    fine_frac: float = 0.6      # max share of notes off the quarter grid (8ths+)
 
 
 # Spec §5 budget table (Easy/Medium/Hard are v1; Beginner/Challenge frame them).
+# finest_subdiv + max_run encode the DIFFICULTY-as-rhythmic-complexity gradient
+# learned from authored DDR (e.g. LOVE SHINE): easy is ~quarters with no streams,
+# each tier adds a rhythmic layer, only the top tiers get 16ths and long streams.
 BUDGETS = {
     "beginner": DiffBudget("beginner", "Beginner", 1.0, 2.0, "none", False, 0,
-                           "downbeats", (0.10, 0.20), (2.0, 8.0), (1, 2)),
+                           "downbeats", (0.10, 0.20), (2.0, 8.0), (1, 2), max_run=1, fine_frac=0.0),
     "easy": DiffBudget("easy", "Easy", 0.5, 3.0, "none", False, 0,
-                       "downbeats", (0.10, 0.20), (2.0, 8.0), (2, 4)),
-    "medium": DiffBudget("medium", "Medium", 0.25, 5.0, "light", False, 2,
-                         "accents", (0.05, 0.15), (1.0, 8.0), (5, 6)),
+                       "downbeats", (0.10, 0.20), (2.0, 8.0), (2, 4), max_run=2, fine_frac=0.15),
+    "medium": DiffBudget("medium", "Medium", 0.5, 5.0, "light", False, 2,
+                         "accents", (0.05, 0.15), (1.0, 8.0), (5, 6), max_run=4, fine_frac=0.30),
     "hard": DiffBudget("hard", "Hard", 0.25, 8.0, "moderate", True, 4,
-                       "free", (0.05, 0.12), (1.0, 8.0), (7, 9)),
+                       "free", (0.05, 0.12), (1.0, 8.0), (7, 9), max_run=8, fine_frac=0.55),
     "challenge": DiffBudget("challenge", "Challenge", 0.25, 10.0, "moderate", True, 5,
-                            "free", (0.05, 0.12), (1.0, 8.0), (10, 12)),
+                            "free", (0.05, 0.12), (1.0, 8.0), (10, 12), max_run=16, fine_frac=0.70),
 }
 DIFFICULTIES = ("easy", "medium", "hard")   # spec default set (§13)
 ALL_DIFFICULTIES = ("beginner", "easy", "medium", "hard", "challenge")

@@ -139,6 +139,17 @@ class VertexClient:
                           f"(retry {attempt + 1}/{len(backoffs)})")
                     self._get_token(force=True)
                     continue
+                # 403 "dunning" is a BILLING state, not a real permission error —
+                # after a billing fix it clears but propagates unevenly across
+                # Google's systems, so some calls still deny for a few minutes.
+                # Retry those (unlike a genuine 403) so a batch rides out the lag.
+                if (e.code == 403 and "dunning" in detail.lower()
+                        and attempt < len(backoffs)):
+                    wait = backoffs[attempt]
+                    print(f"[vertex] HTTP 403 billing-dunning (propagating); backing off "
+                          f"{wait}s (retry {attempt + 1}/{len(backoffs)})")
+                    _time.sleep(wait)
+                    continue
                 if e.code in (429, 500, 502, 503, 504) and attempt < len(backoffs):
                     wait = backoffs[attempt]
                     print(f"[vertex] HTTP {e.code} (rate/transient); backing off {wait}s "

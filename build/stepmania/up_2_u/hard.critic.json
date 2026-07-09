@@ -1,10 +1,10 @@
 {
-  "score": 10,
-  "verdict": "An exceptional, highly creative ITG chart that perfectly blends technical design with thematic lyric-representation, boasting flawless foot flow and excellent density scaling.",
+  "score": 8,
+  "verdict": "An incredibly fun, high-energy chart with fantastic flow and rhythm, marred only by a sudden, overly technical bracket section.",
   "issues": [
     {
-      "where": "81.355 - 81.843",
-      "problem": "The dense 3-panel hold sequence (holding D, R, and U simultaneously) requires advanced bracketing or hand play, which may briefly spike the difficulty for sightreaders, though it fits the tech-heavy outro perfectly."
+      "where": "41.980 to 42.631",
+      "problem": "Requires holding L and U simultaneously while tapping D and R. This double-bracket hold-tap sequence is a massive tech spike that clashes with the accessible, flow-centric nature of the rest of the chart."
     }
   ]
 }

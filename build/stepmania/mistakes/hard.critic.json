@@ -1,5 +1,27 @@
 {
-  "score": 10,
-  "verdict": "An exceptionally well-polished, highly expressive, and perfectly flowing chart that captures the energy of the track with master-class flow and musicality.",
-  "issues": []
+  "score": 6,
+  "verdict": "A decent attempt at mapping a high-energy electronic track, but severely held back by highly awkward vertical 16th-note transitions and occasional rhythmic jitter in the intro.",
+  "issues": [
+    {
+      "where": "20.538 - 20.632",
+      "problem": "Awkward 16th-note vertical transition (D to U). At 160 BPM, this requires a jarring double-step or slide that completely disrupts physical flow."
+    },
+    {
+      "where": "21.101 - 21.195",
+      "problem": "Repeated fast vertical transition (D to U) on 16th-note timing, forcing another uncomfortable double-step."
+    },
+    {
+      "where": "4.410 - 4.785",
+      "problem": "The intro vocal phrasing is mapped with highly uneven 16th/8th note spacing (94ms / 187ms) which feels jittery to play compared to the actual spoken rhythm."
+    },
+    {
+      "where": "50.927 - 51.013",
+      "problem": "Extremely tight 16th-note window (86ms) between releasing the D hold and hitting the JUMP UR, leading to potential premature hold drops or miss flags."
+    },
+    {
+      "where": "56.077 - 56.546",
+      "problem": "Multiple rapid U->D and U->D vertical 16th transitions in close succession, which is highly physically exhausting and awkward on a pad."
+    }
+  ],
+  "human_review": true
 }

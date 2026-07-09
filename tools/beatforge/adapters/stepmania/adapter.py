@@ -13,7 +13,7 @@ from . import qa as sm_qa
 from .difficulty import compute_meter
 from .grammar import BUDGETS, DIFFICULTIES, grammar_description
 from .realize import decide_jumps, realize
-from .resolve import deterministic_intent, fill_gaps, resolve_intent
+from .resolve import deterministic_intent, fill_gaps, resolve_intent, thin_for_difficulty
 from .serialize import write_song_folder
 from .validate import validate_repair
 
@@ -31,6 +31,7 @@ class StepManiaAdapter:
     def realize(self, design: dict, analysis: dict, difficulty: str) -> list:
         resolved = resolve_intent(design, analysis, difficulty)
         resolved = fill_gaps(resolved, analysis, difficulty)   # no dead pauses
+        resolved = thin_for_difficulty(resolved, analysis, difficulty)  # tier envelope
         decide_jumps(resolved, BUDGETS[difficulty], analysis.get("meter", 4))
         return realize(resolved, BUDGETS[difficulty], analysis.get("meter", 4))
 

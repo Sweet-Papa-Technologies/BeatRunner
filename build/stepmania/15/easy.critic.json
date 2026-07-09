@@ -1,5 +1,5 @@
 {
-  "score": 10,
-  "verdict": "An exceptionally well-crafted Easy chart that perfectly balances physical comfort, rhythmic accuracy, and developmental patterns for beginners.",
-  "issues": []
+  "error": "HTTP 403 from Vertex:\n{\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Lightning dunning decision is deny for project: projects/423882863112\",\n    \"status\": \"PERMISSION_DENIED\"\n  }\n}\n",
+  "score": 0,
+  "human_review": true
 }
