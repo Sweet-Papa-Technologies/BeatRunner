@@ -157,6 +157,78 @@ def fill_gaps(resolved: list[ResolvedNote], analysis: dict, difficulty: str,
     return resolved
 
 
+def thin_for_difficulty(resolved: list[ResolvedNote], analysis: dict,
+                        difficulty: str) -> list[ResolvedNote]:
+    """Enforce the tier's rhythmic-complexity envelope (STEPFORGE difficulty
+    accuracy). Difficulty = how many rhythmic LAYERS are included: lower tiers
+    keep a faithful subset on coarser subdivisions with short streams; higher
+    tiers admit 16ths and long streams. Learned from authored DDR (LOVE SHINE:
+    easy≈quarters/no-stream → challenge≈16th streams). Two deterministic rules:
+
+      1. drop taps finer than the tier's finest subdivision (keeps every remaining
+         note on a real, tier-appropriate onset — holds/rolls are always kept),
+      2. cap the SHARE of off-quarter notes to fine_frac, keeping lower tiers
+         quarter-dominant (an easy chart is mostly on-beat, not a wall of 8ths),
+         preferring to keep 8ths over 16ths and spreading the kept ones evenly,
+      3. break any run of consecutive fast (≤8th-spaced) notes longer than the
+         tier's max_run, so a 'medium' never sustains an expert 16-note stream.
+    """
+    b = BUDGETS[difficulty]
+    if not resolved:
+        return resolved
+    notes = sorted(resolved, key=lambda n: n.beat)
+    finest = b.finest_subdiv
+
+    def on_grid(beat: float) -> bool:
+        return abs(beat / finest - round(beat / finest)) < 1e-3
+
+    def is_quarter(beat: float) -> bool:
+        return abs(beat - round(beat)) < 1e-3
+
+    def is_eighth(beat: float) -> bool:      # on the 0.5 grid but not a quarter
+        return abs(beat * 2 - round(beat * 2)) < 1e-3 and not is_quarter(beat)
+
+    def even_subset(lst, k):                 # keep k items spread evenly across lst
+        if k >= len(lst):
+            return lst
+        if k <= 0:
+            return []
+        return [lst[int(x * len(lst) / k)] for x in range(k)]
+
+    notes = [n for n in notes if n.kind in ("hold", "roll") or on_grid(n.beat)]
+
+    # --- cap the off-quarter share to the tier's fine_frac ---
+    fine_frac = getattr(b, "fine_frac", 0.6)
+    protected = [n for n in notes if is_quarter(n.beat) or n.kind in ("hold", "roll")]
+    fine = [n for n in notes if not is_quarter(n.beat) and n.kind not in ("hold", "roll")]
+    # target counts fine notes RELATIVE to the kept total: keep_fine/(prot+keep_fine)
+    # = fine_frac  ->  keep_fine = fine_frac/(1-fine_frac) * prot.
+    target = (len(fine) if fine_frac >= 0.999
+              else int(round(fine_frac / (1 - fine_frac) * len(protected))))
+    if len(fine) > target:
+        eighths = [n for n in fine if is_eighth(n.beat)]
+        finer = [n for n in fine if not is_eighth(n.beat)]
+        keep_e = even_subset(eighths, target)                  # 8ths first
+        keep_f = even_subset(finer, max(0, target - len(keep_e)))
+        kept = set(id(n) for n in keep_e + keep_f)
+        notes = sorted(protected + [n for n in fine if id(n) in kept],
+                       key=lambda n: n.beat)
+
+    max_run = getattr(b, "max_run", 8)
+    keep = [True] * len(notes)
+    i = 0
+    while i < len(notes):
+        j = i
+        while j + 1 < len(notes) and (notes[j + 1].beat - notes[j].beat) <= 0.5 + 1e-6:
+            j += 1
+        if j - i + 1 > max_run:                    # too-long stream -> segment it
+            for k in range(i, j + 1):
+                if (k - i) % (max_run + 1) == max_run:
+                    keep[k] = False
+        i = j + 1
+    return [n for n, k in zip(notes, keep) if k]
+
+
 def _validate_phrases(phrases: list) -> list:
     for ph in phrases:
         for field, vocab in (("texture", TEXTURES), ("movement", MOVEMENTS),

@@ -5,62 +5,58 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 207,
-      "meter": 3,
-      "jumps": 6,
-      "holds": 27,
+      "notes": 133,
+      "meter": 2,
+      "jumps": 0,
+      "holds": 12,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
         "score": 10,
-        "verdict": "An exceptionally well-crafted Easy chart that perfectly captures the syncopated vocal rhythms while maintaining flawless, fully-alternating foot flow.",
+        "verdict": "An exceptional Easy chart that perfectly captures the bouncy rhythm of the rap vocal with flawless foot flow and highly appropriate density.",
         "issues": []
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/scared_money_don_t_jiggle_v17/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 207,
-        "onset_alignment": 0.9807,
-        "grid_notes": 4,
+        "notes": 133,
+        "onset_alignment": 0.8346,
+        "grid_notes": 22,
         "panel_balance": {
-          "L": 0.188,
-          "D": 0.315,
-          "U": 0.291,
-          "R": 0.207
+          "L": 0.195,
+          "D": 0.308,
+          "U": 0.301,
+          "R": 0.195
         },
-        "hold_share": 0.1304,
-        "jump_share": 0.029,
-        "flow_cost_max": 0.2,
-        "flow_cost_mean": 0.01,
-        "density_energy_spearman": 0.2905,
+        "hold_share": 0.0902,
+        "jump_share": 0.0,
+        "flow_cost_max": 0.0,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.3598,
         "gates": {
-          "onset_alignment": true,
+          "onset_alignment": false,
           "panel_balance": true,
-          "hold_share": true,
+          "hold_share": false,
           "flow_ceiling": true,
           "density_energy": false
         }
       }
     },
     "medium": {
-      "notes": 315,
-      "meter": 6,
-      "jumps": 20,
+      "notes": 244,
+      "meter": 5,
+      "jumps": 17,
       "holds": 20,
-      "repaired": 13,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 8,
-        "verdict": "Excellent vocal rhythm mapping that is highly engaging, though a few hold-active patterns spike the difficulty beyond a typical Medium chart.",
+        "score": 9,
+        "verdict": "A well-flowing, highly rhythmic medium chart that captures the quirky vocal syncopations of the track perfectly.",
         "issues": [
           {
-            "where": "89.083 - 90.006",
-            "problem": "Holding D while tapping U, L, and R in quick succession (16th notes) forces either an extremely awkward crossover or a bracket, which is too technically demanding for a Medium chart."
-          },
-          {
-            "where": "19.146 - 19.377",
-            "problem": "The fast 16th-note transition from U to R to D creates a potential double-step or an awkward crossover sequence for this difficulty level."
+            "where": "74.080 - 74.311",
+            "problem": "Releasing the D hold and immediately tapping L on the same frame can feel slightly awkward or tight for a medium difficulty player."
           }
         ]
       },
@@ -68,20 +64,20 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/scared_money_don_t_jiggle_v17/medium.assist.ogg"
       },
       "metrics": {
-        "notes": 315,
-        "onset_alignment": 0.9905,
-        "grid_notes": 3,
+        "notes": 244,
+        "onset_alignment": 0.9508,
+        "grid_notes": 12,
         "panel_balance": {
-          "L": 0.209,
+          "L": 0.203,
           "D": 0.287,
-          "U": 0.29,
-          "R": 0.215
+          "U": 0.284,
+          "R": 0.226
         },
-        "hold_share": 0.0635,
-        "jump_share": 0.0635,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.14,
-        "density_energy_spearman": -0.021,
+        "hold_share": 0.082,
+        "jump_share": 0.0697,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.1006,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -92,57 +88,35 @@
       }
     },
     "hard": {
-      "notes": 325,
+      "notes": 284,
       "meter": 8,
       "jumps": 34,
       "holds": 20,
-      "repaired": 0,
+      "repaired": 1,
       "repair_ok": true,
       "critic": {
-        "score": 6,
-        "verdict": "A decently timed chart that suffers from inconsistent vocal rhythm quantization and several flow-breaking double steps.",
-        "issues": [
-          {
-            "where": "4.489 to 5.528",
-            "problem": "Inconsistent rhythm mapping for the same vocal phrase. The first 'jiggle' uses a 0.346s (dotted eighth) gap, while the second uses a 0.231s (eighth note) gap, making the repetition feel off-sync and unintuitive."
-          },
-          {
-            "where": "18.223 to 19.377",
-            "problem": "The sequence 'U -> D -> L -> R -> U -> D' forces either rapid double-stepping on the same foot or highly awkward crossovers, breaking the natural dance flow."
-          },
-          {
-            "where": "22.031 to 22.724",
-            "problem": "A sudden 16th-note transition (L to R in 116ms) followed by a hold feels jarringly out of place compared to the surrounding slow tempo."
-          },
-          {
-            "where": "25.263 to 25.378",
-            "problem": "An awkward 16th-note transition from L to D forces an uncomfortable double-step with the left foot immediately before an 8th-note stream."
-          },
-          {
-            "where": "69.118 to 70.387",
-            "problem": "Cluttered hold and tap overlaps where a D tap is placed shortly after releasing a D hold, while simultaneously holding R. This creates a messy and physically awkward sequence."
-          }
-        ],
-        "human_review": true
+        "score": 10,
+        "verdict": "An exceptionally clean, rhythmic, and expressive chart that perfectly captures the bouncy hip-hop groove of the track with natural foot flow and creative hold patterns.",
+        "issues": []
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/scared_money_don_t_jiggle_v17/hard.assist.ogg"
       },
       "metrics": {
-        "notes": 325,
-        "onset_alignment": 0.9631,
+        "notes": 284,
+        "onset_alignment": 0.9577,
         "grid_notes": 12,
         "panel_balance": {
           "L": 0.217,
-          "D": 0.281,
-          "U": 0.265,
-          "R": 0.237
+          "D": 0.286,
+          "U": 0.258,
+          "R": 0.239
         },
-        "hold_share": 0.0615,
-        "jump_share": 0.1046,
-        "flow_cost_max": 0.2,
-        "flow_cost_mean": 0.01,
-        "density_energy_spearman": -0.0285,
+        "hold_share": 0.0704,
+        "jump_share": 0.1197,
+        "flow_cost_max": 8.0,
+        "flow_cost_mean": 0.04,
+        "density_energy_spearman": -0.0338,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,

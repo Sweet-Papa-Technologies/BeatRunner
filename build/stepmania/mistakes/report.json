@@ -5,62 +5,67 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 171,
+      "notes": 191,
       "meter": 3,
-      "jumps": 5,
-      "holds": 19,
-      "repaired": 0,
+      "jumps": 0,
+      "holds": 23,
+      "repaired": 1,
       "repair_ok": true,
       "critic": {
-        "score": 10,
-        "verdict": "An exceptionally well-polished Easy chart that perfectly captures the vocal and instrumental rhythms, showcases highly intuitive foot flow, and respects beginner-friendly physical limitations.",
-        "issues": []
+        "score": 9,
+        "verdict": "An incredibly expressive and rhythmically accurate Easy chart that uses short staggered holds and light eighth-note runs to perfectly capture the high-energy electro-vocal rhythms.",
+        "issues": [
+          {
+            "where": "58.515 and 61.515",
+            "problem": "Staggered D and U holds spaced by an eighth note might be slightly complex for beginners on an Easy chart, though they fit the rhythm beautifully."
+          }
+        ]
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/mistakes/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 171,
-        "onset_alignment": 0.9942,
-        "grid_notes": 1,
+        "notes": 191,
+        "onset_alignment": 0.9738,
+        "grid_notes": 5,
         "panel_balance": {
-          "L": 0.21,
-          "D": 0.307,
-          "U": 0.278,
-          "R": 0.205
+          "L": 0.22,
+          "D": 0.277,
+          "U": 0.272,
+          "R": 0.23
         },
-        "hold_share": 0.1111,
-        "jump_share": 0.0292,
-        "flow_cost_max": 0.2,
-        "flow_cost_mean": 0.0,
-        "density_energy_spearman": 0.6555,
+        "hold_share": 0.1204,
+        "jump_share": 0.0,
+        "flow_cost_max": 8.0,
+        "flow_cost_mean": 0.04,
+        "density_energy_spearman": 0.4681,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
           "hold_share": true,
           "flow_ceiling": true,
-          "density_energy": true
+          "density_energy": false
         }
       }
     },
     "medium": {
-      "notes": 318,
-      "meter": 6,
-      "jumps": 22,
-      "holds": 26,
-      "repaired": 0,
+      "notes": 206,
+      "meter": 5,
+      "jumps": 13,
+      "holds": 18,
+      "repaired": 1,
       "repair_ok": true,
       "critic": {
-        "score": 9,
-        "verdict": "An exceptionally clean, professional ITG-style technical chart with comfortable turns, clever shield-holds, and rhythmically precise syncopations.",
+        "score": 8,
+        "verdict": "An incredibly rhythmic and accurate chart that captures the meme track's beat perfectly, though it features a couple of overly technical patterns for a Medium difficulty.",
         "issues": [
           {
-            "where": "11.537",
-            "problem": "Isolated 16th-note transition (D to U) creates a sudden burst of speed within an otherwise steady 8th-note section."
+            "where": "26.071 and 29.821",
+            "problem": "Transitioning from a single tap to a jump on the same panel (U -> JUMP UR, and D -> JUMP DR) within an eighth note (187ms) creates an awkward 'pogo' effect that is too jarring for a Medium chart."
           },
           {
-            "where": "48.294",
-            "problem": "The syncopated 16th tap on D while holding L requires a rapid weight shift right before the hold release at 48.388."
+            "where": "58.515",
+            "problem": "The HOLD D active during tap L (58.702) and tap R (58.890) forces an extremely uncomfortable lateral stretch/slide or a harsh crossover for one foot while the other is anchored."
           }
         ]
       },
@@ -68,20 +73,20 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/mistakes/medium.assist.ogg"
       },
       "metrics": {
-        "notes": 318,
-        "onset_alignment": 0.9906,
-        "grid_notes": 3,
+        "notes": 206,
+        "onset_alignment": 0.9757,
+        "grid_notes": 5,
         "panel_balance": {
-          "L": 0.221,
-          "D": 0.265,
-          "U": 0.285,
-          "R": 0.229
+          "L": 0.21,
+          "D": 0.297,
+          "U": 0.274,
+          "R": 0.219
         },
-        "hold_share": 0.0818,
-        "jump_share": 0.0692,
+        "hold_share": 0.0874,
+        "jump_share": 0.0631,
         "flow_cost_max": 0.2,
         "flow_cost_mean": 0.01,
-        "density_energy_spearman": 0.5557,
+        "density_energy_spearman": 0.7009,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -92,35 +97,57 @@
       }
     },
     "hard": {
-      "notes": 359,
-      "meter": 8,
-      "jumps": 43,
-      "holds": 22,
-      "repaired": 0,
+      "notes": 375,
+      "meter": 9,
+      "jumps": 40,
+      "holds": 24,
+      "repaired": 1,
       "repair_ok": true,
       "critic": {
-        "score": 10,
-        "verdict": "An exceptionally well-polished, highly expressive, and perfectly flowing chart that captures the energy of the track with master-class flow and musicality.",
-        "issues": []
+        "score": 6,
+        "verdict": "A decent attempt at mapping a high-energy electronic track, but severely held back by highly awkward vertical 16th-note transitions and occasional rhythmic jitter in the intro.",
+        "issues": [
+          {
+            "where": "20.538 - 20.632",
+            "problem": "Awkward 16th-note vertical transition (D to U). At 160 BPM, this requires a jarring double-step or slide that completely disrupts physical flow."
+          },
+          {
+            "where": "21.101 - 21.195",
+            "problem": "Repeated fast vertical transition (D to U) on 16th-note timing, forcing another uncomfortable double-step."
+          },
+          {
+            "where": "4.410 - 4.785",
+            "problem": "The intro vocal phrasing is mapped with highly uneven 16th/8th note spacing (94ms / 187ms) which feels jittery to play compared to the actual spoken rhythm."
+          },
+          {
+            "where": "50.927 - 51.013",
+            "problem": "Extremely tight 16th-note window (86ms) between releasing the D hold and hitting the JUMP UR, leading to potential premature hold drops or miss flags."
+          },
+          {
+            "where": "56.077 - 56.546",
+            "problem": "Multiple rapid U->D and U->D vertical 16th transitions in close succession, which is highly physically exhausting and awkward on a pad."
+          }
+        ],
+        "human_review": true
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/mistakes/hard.assist.ogg"
       },
       "metrics": {
-        "notes": 359,
-        "onset_alignment": 0.9805,
+        "notes": 375,
+        "onset_alignment": 0.9813,
         "grid_notes": 7,
         "panel_balance": {
-          "L": 0.214,
-          "D": 0.276,
-          "U": 0.269,
-          "R": 0.241
+          "L": 0.217,
+          "D": 0.277,
+          "U": 0.275,
+          "R": 0.231
         },
-        "hold_share": 0.0613,
-        "jump_share": 0.1198,
-        "flow_cost_max": 0.2,
-        "flow_cost_mean": 0.02,
-        "density_energy_spearman": 0.4707,
+        "hold_share": 0.064,
+        "jump_share": 0.1067,
+        "flow_cost_max": 8.0,
+        "flow_cost_mean": 0.04,
+        "density_energy_spearman": 0.3179,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,

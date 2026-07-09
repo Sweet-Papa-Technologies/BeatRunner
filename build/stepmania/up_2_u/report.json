@@ -1,0 +1,143 @@
+{
+  "track_id": "up_2_u",
+  "bpm": 184.385,
+  "offset": 0.003,
+  "mode": "gemini",
+  "charts": {
+    "easy": {
+      "notes": 222,
+      "meter": 3,
+      "jumps": 6,
+      "holds": 21,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "A brilliantly choreographed, highly thematic Easy chart that literalizes the lyrics with circular body flow, held back only by a single sudden eighth-note spike near the end.",
+        "issues": [
+          {
+            "where": "127.562 - 127.725",
+            "problem": "An isolated eighth-note transition (0.163s) at 184 BPM. This creates an abrupt difficulty spike for an Easy chart that can easily trip up beginner players."
+          }
+        ]
+      },
+      "previews": {
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/up_2_u/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 222,
+        "onset_alignment": 0.9234,
+        "grid_notes": 17,
+        "panel_balance": {
+          "L": 0.193,
+          "D": 0.307,
+          "U": 0.303,
+          "R": 0.197
+        },
+        "hold_share": 0.0946,
+        "jump_share": 0.027,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.6797,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": true
+        }
+      }
+    },
+    "medium": {
+      "notes": 479,
+      "meter": 6,
+      "jumps": 36,
+      "holds": 59,
+      "repaired": 61,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "An exceptionally well-crafted Medium chart with outstanding rhythm alignment, creative hold-walks, and great physical flow.",
+        "issues": [
+          {
+            "where": "35.798 - 36.611",
+            "problem": "This brief segment introduces a rapid succession of 16th-note transitions and crossovers (L -> D -> U -> R -> D -> U) that feels slightly too technical compared to the rest of the Medium difficulty."
+          }
+        ]
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 479,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
+        "panel_balance": {
+          "L": 0.221,
+          "D": 0.264,
+          "U": 0.28,
+          "R": 0.235
+        },
+        "hold_share": 0.1232,
+        "jump_share": 0.0752,
+        "flow_cost_max": 39.15,
+        "flow_cost_mean": 0.54,
+        "density_energy_spearman": 0.0012,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": false,
+          "density_energy": false
+        }
+      }
+    },
+    "hard": {
+      "notes": 822,
+      "meter": 9,
+      "jumps": 78,
+      "holds": 4,
+      "repaired": 24,
+      "repair_ok": true,
+      "critic": {
+        "score": 8,
+        "verdict": "An incredibly fun, high-energy chart with fantastic flow and rhythm, marred only by a sudden, overly technical bracket section.",
+        "issues": [
+          {
+            "where": "41.980 to 42.631",
+            "problem": "Requires holding L and U simultaneously while tapping D and R. This double-bracket hold-tap sequence is a massive tech spike that clashes with the accessible, flow-centric nature of the rest of the chart."
+          }
+        ]
+      },
+      "previews": {},
+      "metrics": {
+        "notes": 822,
+        "onset_alignment": 0.9988,
+        "grid_notes": 1,
+        "panel_balance": {
+          "L": 0.231,
+          "D": 0.263,
+          "U": 0.277,
+          "R": 0.229
+        },
+        "hold_share": 0.0049,
+        "jump_share": 0.0949,
+        "flow_cost_max": 14.15,
+        "flow_cost_mean": 0.19,
+        "density_energy_spearman": 0.1037,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": false,
+          "density_energy": false
+        }
+      }
+    }
+  },
+  "files": {
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/up_2_u/up_2_u.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/up_2_u/up_2_u.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/up_2_u/up_2_u.ogg"
+  },
+  "out": "build/stepmania/up_2_u",
+  "meter_monotonic": true
+}

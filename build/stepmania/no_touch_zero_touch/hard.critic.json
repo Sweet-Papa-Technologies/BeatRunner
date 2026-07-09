@@ -1,22 +1,18 @@
 {
   "score": 7,
-  "verdict": "An incredibly well-synced and rhythmic chart that captures the song's energy perfectly, but is slightly held back by awkward three-panel 'hand' holds and taps.",
+  "verdict": "An energetic and rhythmically accurate chart that maps beautifully to the vocal hooks, let down by a couple of physically awkward hold-tap combinations.",
   "issues": [
     {
-      "where": "44.206 - 44.552",
-      "problem": "Requires holding Down and Right while tapping Up, forcing an awkward bracket or hand hit."
+      "where": "58.401s - 59.329s",
+      "problem": "Creates a 3-panel hold (U, D, and L active simultaneously from 59.094s to 59.329s) on a singles chart, forcing an awkward hand/knee drop or bracket that doesn't fit the standard flow of the chart."
     },
     {
-      "where": "58.401 - 59.094",
-      "problem": "Creates a triple-active hold (Up, Right, Down) which requires a hand on the pad, disrupting feet-only play."
+      "where": "80.560s - 81.252s",
+      "problem": "While holding U, the player must tap L at 81.137s and R at 81.252s. This requires a 16th-note one-foot slide/switch between L and R at 130 BPM, which is extremely difficult and uncomfortable to execute physically."
     },
     {
-      "where": "7.276 - 7.622",
-      "problem": "Tapping Right then Left while holding Up forces a highly uncomfortable crossover or double-step."
-    },
-    {
-      "where": "88.523 - 88.869",
-      "problem": "Requires tapping Up while holding Left and Right, creating another awkward three-panel interaction."
+      "where": "22.048s - 22.394s",
+      "problem": "The 16th-note run U -> R -> D -> U forces either a rapid body spin or a highly awkward double-step on the Up panel, disrupting the otherwise smooth flow of the section."
     }
   ]
 }

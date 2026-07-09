@@ -105,7 +105,8 @@ def clone_to_pack(base: str, title: str, src_dir: Path, pack_dir: Path) -> Path:
     return dest
 
 
-def run(src: str, pack: str, dest: str, difficulties, limit: int | None):
+def run(src: str, pack: str, dest: str, difficulties, limit: int | None,
+        deterministic: bool = False):
     src_dir = Path(src).expanduser()
     pack_dir = Path(dest).expanduser() / pack
     pack_dir.mkdir(parents=True, exist_ok=True)
@@ -132,10 +133,11 @@ def run(src: str, pack: str, dest: str, difficulties, limit: int | None):
             config.TRACK_META[base] = (title, "FoFo")
             out_dir = config.STEPMANIA_DIR / base
             out_dir.mkdir(parents=True, exist_ok=True)
-            make_art(title, base, out_dir)                       # art before serialize
+            if not deterministic:
+                make_art(title, base, out_dir)                   # art before serialize
             report = build_song(base, config.RunOptions(force=True),
-                                difficulties=difficulties, deterministic=False,
-                                client=_client())
+                                difficulties=difficulties, deterministic=deterministic,
+                                client=None if deterministic else _client())
             clone_to_pack(base, title, out_dir, pack_dir)
             charts = {d: (c.get("notes"), c.get("meter"),
                           (c.get("critic") or {}).get("score")) for d, c in report["charts"].items()}
@@ -166,8 +168,10 @@ def main(argv=None):
     p.add_argument("--dest", default="~/Library/Application Support/ITGmania/Songs")
     p.add_argument("--difficulties", default="easy,medium,hard")
     p.add_argument("--limit", type=int)
+    p.add_argument("--deterministic", action="store_true",
+                   help="DSP-only note placement, no Vertex/Gemini (offline)")
     a = p.parse_args(argv)
-    run(a.src, a.pack, a.dest, tuple(a.difficulties.split(",")), a.limit)
+    run(a.src, a.pack, a.dest, tuple(a.difficulties.split(",")), a.limit, a.deterministic)
 
 
 if __name__ == "__main__":

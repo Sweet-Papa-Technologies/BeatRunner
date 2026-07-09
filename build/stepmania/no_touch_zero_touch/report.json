@@ -5,19 +5,19 @@
   "mode": "gemini",
   "charts": {
     "easy": {
-      "notes": 114,
-      "meter": 2,
-      "jumps": 0,
-      "holds": 10,
+      "notes": 205,
+      "meter": 3,
+      "jumps": 6,
+      "holds": 23,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 9.5,
-        "verdict": "An exceptionally well-crafted Easy chart that boasts perfect foot alternation, outstanding rhythmic accuracy, and highly comfortable flow.",
+        "score": 9,
+        "verdict": "An exceptionally fluid and satisfying Easy chart with perfect foot alternation and excellent vocal synchronization, marred only by a brief timing and quantization glitch around the 81-second mark.",
         "issues": [
           {
-            "where": "25.626",
-            "problem": "The hold starts on an off-beat (8th note) which can be slightly tricky for absolute beginners on an Easy chart, though it aligns well with the syncopated vocal."
+            "where": "80.560 - 82.037",
+            "problem": "The HOLD L ending at 81.391 and the HOLD U starting at 81.483 and ending at 82.037 are off-grid and unquantized. This creates a very tight, awkward 92ms gap between the holds and results in off-beat releases that are difficult for beginners to judge."
           }
         ]
       },
@@ -25,59 +25,68 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/no_touch_zero_touch/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 114,
+        "notes": 205,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.184,
-          "D": 0.325,
-          "U": 0.316,
-          "R": 0.175
+          "L": 0.209,
+          "D": 0.299,
+          "U": 0.28,
+          "R": 0.213
         },
-        "hold_share": 0.0877,
-        "jump_share": 0.0,
-        "flow_cost_max": 0.0,
+        "hold_share": 0.1122,
+        "jump_share": 0.0293,
+        "flow_cost_max": 0.2,
         "flow_cost_mean": 0.0,
-        "density_energy_spearman": 0.3601,
+        "density_energy_spearman": 0.5598,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
-          "hold_share": false,
+          "hold_share": true,
           "flow_ceiling": true,
-          "density_energy": false
+          "density_energy": true
         }
       }
     },
     "medium": {
-      "notes": 319,
+      "notes": 273,
       "meter": 5,
-      "jumps": 22,
+      "jumps": 19,
       "holds": 13,
       "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 10,
-        "verdict": "An exceptionally clean, professionally synced, and expressive chart that perfectly captures the bouncy energy of the track.",
-        "issues": []
+        "score": 9,
+        "verdict": "An exceptionally fluid and rhythmically engaging chart that captures the house track's syncopated energy with great physical flow.",
+        "issues": [
+          {
+            "where": "41.552",
+            "problem": "The transition from JUMP LR directly into an eighth-note tap U (41.783) is quite fast and can feel slightly spikey in difficulty for a medium-tier chart."
+          },
+          {
+            "where": "43.398",
+            "problem": "A rapid eighth-note transition from JUMP UR to tap L (43.629) requires very quick foot recovery, slightly exceeding the standard physical pacing of the rest of the layout."
+          }
+        ]
       },
       "previews": {
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/no_touch_zero_touch/medium.assist.ogg"
       },
       "metrics": {
-        "notes": 319,
+        "notes": 273,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.226,
-          "D": 0.27,
-          "U": 0.279,
-          "R": 0.226
+          "L": 0.202,
+          "D": 0.298,
+          "U": 0.291,
+          "R": 0.209
         },
-        "hold_share": 0.0408,
-        "jump_share": 0.069,
+        "hold_share": 0.0476,
+        "jump_share": 0.0696,
         "flow_cost_max": 0.2,
         "flow_cost_mean": 0.01,
-        "density_energy_spearman": 0.5561,
+        "density_energy_spearman": 0.5731,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -88,56 +97,52 @@
       }
     },
     "hard": {
-      "notes": 396,
+      "notes": 391,
       "meter": 8,
-      "jumps": 48,
-      "holds": 18,
-      "repaired": 4,
+      "jumps": 47,
+      "holds": 15,
+      "repaired": 3,
       "repair_ok": true,
       "critic": {
         "score": 7,
-        "verdict": "An incredibly well-synced and rhythmic chart that captures the song's energy perfectly, but is slightly held back by awkward three-panel 'hand' holds and taps.",
+        "verdict": "An energetic and rhythmically accurate chart that maps beautifully to the vocal hooks, let down by a couple of physically awkward hold-tap combinations.",
         "issues": [
           {
-            "where": "44.206 - 44.552",
-            "problem": "Requires holding Down and Right while tapping Up, forcing an awkward bracket or hand hit."
+            "where": "58.401s - 59.329s",
+            "problem": "Creates a 3-panel hold (U, D, and L active simultaneously from 59.094s to 59.329s) on a singles chart, forcing an awkward hand/knee drop or bracket that doesn't fit the standard flow of the chart."
           },
           {
-            "where": "58.401 - 59.094",
-            "problem": "Creates a triple-active hold (Up, Right, Down) which requires a hand on the pad, disrupting feet-only play."
+            "where": "80.560s - 81.252s",
+            "problem": "While holding U, the player must tap L at 81.137s and R at 81.252s. This requires a 16th-note one-foot slide/switch between L and R at 130 BPM, which is extremely difficult and uncomfortable to execute physically."
           },
           {
-            "where": "7.276 - 7.622",
-            "problem": "Tapping Right then Left while holding Up forces a highly uncomfortable crossover or double-step."
-          },
-          {
-            "where": "88.523 - 88.869",
-            "problem": "Requires tapping Up while holding Left and Right, creating another awkward three-panel interaction."
+            "where": "22.048s - 22.394s",
+            "problem": "The 16th-note run U -> R -> D -> U forces either a rapid body spin or a highly awkward double-step on the Up panel, disrupting the otherwise smooth flow of the section."
           }
         ]
       },
       "previews": {},
       "metrics": {
-        "notes": 396,
+        "notes": 391,
         "onset_alignment": 1.0,
         "grid_notes": 0,
         "panel_balance": {
-          "L": 0.23,
-          "D": 0.264,
-          "U": 0.288,
-          "R": 0.218
+          "L": 0.233,
+          "D": 0.263,
+          "U": 0.272,
+          "R": 0.233
         },
-        "hold_share": 0.0455,
-        "jump_share": 0.1212,
-        "flow_cost_max": 8.0,
-        "flow_cost_mean": 0.09,
-        "density_energy_spearman": 0.5309,
+        "hold_share": 0.0384,
+        "jump_share": 0.1202,
+        "flow_cost_max": 7.85,
+        "flow_cost_mean": 0.04,
+        "density_energy_spearman": 0.5905,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
           "hold_share": false,
           "flow_ceiling": true,
-          "density_energy": false
+          "density_energy": true
         }
       }
     }

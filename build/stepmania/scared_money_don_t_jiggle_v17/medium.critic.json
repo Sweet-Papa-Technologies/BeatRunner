@@ -1,14 +1,10 @@
 {
-  "score": 8,
-  "verdict": "Excellent vocal rhythm mapping that is highly engaging, though a few hold-active patterns spike the difficulty beyond a typical Medium chart.",
+  "score": 9,
+  "verdict": "A well-flowing, highly rhythmic medium chart that captures the quirky vocal syncopations of the track perfectly.",
   "issues": [
     {
-      "where": "89.083 - 90.006",
-      "problem": "Holding D while tapping U, L, and R in quick succession (16th notes) forces either an extremely awkward crossover or a bracket, which is too technically demanding for a Medium chart."
-    },
-    {
-      "where": "19.146 - 19.377",
-      "problem": "The fast 16th-note transition from U to R to D creates a potential double-step or an awkward crossover sequence for this difficulty level."
+      "where": "74.080 - 74.311",
+      "problem": "Releasing the D hold and immediately tapping L on the same frame can feel slightly awkward or tight for a medium difficulty player."
     }
   ]
 }

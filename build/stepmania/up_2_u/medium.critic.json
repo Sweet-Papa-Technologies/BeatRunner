@@ -1,5 +1,10 @@
 {
-  "score": 10,
-  "verdict": "An exceptionally polished Medium chart with immaculate sync, flawless foot flow, and creative rhythm matching that perfectly captures the energy of the track.",
-  "issues": []
+  "score": 9,
+  "verdict": "An exceptionally well-crafted Medium chart with outstanding rhythm alignment, creative hold-walks, and great physical flow.",
+  "issues": [
+    {
+      "where": "35.798 - 36.611",
+      "problem": "This brief segment introduces a rapid succession of 16th-note transitions and crossovers (L -> D -> U -> R -> D -> U) that feels slightly too technical compared to the rest of the Medium difficulty."
+    }
+  ]
 }

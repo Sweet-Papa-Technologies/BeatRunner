@@ -1,5 +1,14 @@
 {
-  "score": 10,
-  "verdict": "An exceptionally clean, professionally synced, and expressive chart that perfectly captures the bouncy energy of the track.",
-  "issues": []
+  "score": 9,
+  "verdict": "An exceptionally fluid and rhythmically engaging chart that captures the house track's syncopated energy with great physical flow.",
+  "issues": [
+    {
+      "where": "41.552",
+      "problem": "The transition from JUMP LR directly into an eighth-note tap U (41.783) is quite fast and can feel slightly spikey in difficulty for a medium-tier chart."
+    },
+    {
+      "where": "43.398",
+      "problem": "A rapid eighth-note transition from JUMP UR to tap L (43.629) requires very quick foot recovery, slightly exceeding the standard physical pacing of the rest of the layout."
+    }
+  ]
 }

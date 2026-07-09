@@ -84,41 +84,56 @@ def realize(notes: list[ResolvedNote], budget, meter: int = 4) -> list[Placement
     if not notes:
         return []
     notes = sorted(notes, key=lambda n: n.beat)
-    # dp: state -> (total_cost, path). path is a list of chosen panel tuples.
-    dp: dict[tuple, tuple[float, list]] = {ff.REST_STATE: (0.0, [])}
+    # Viterbi with BACKPOINTERS (not full-path copies): dp maps state->cost, and
+    # per step we record how each surviving state was reached. This is O(N) memory
+    # instead of O(N^2) list-copying, so pathologically dense charts (1000s of
+    # notes) no longer blow up RAM / OOM-kill the process.
+    dp: dict[tuple, float] = {ff.REST_STATE: 0.0}
+    back: list[dict] = []                 # per note: state -> (prev_state, choice)
 
     for n in notes:
         mv = n.phrase.get("movement", "static")
         prog = _progress(n, meter)
-        ndp: dict[tuple, tuple[float, list]] = {}
+        ndp: dict[tuple, float] = {}
+        bp: dict[tuple, tuple] = {}
 
-        def relax(state, cost, choice):
-            cur = ndp.get(state)
-            if cur is None or cost < cur[0]:
-                ndp[state] = (cost, choice)
+        def relax(state, cost, prev, choice):
+            if state not in ndp or cost < ndp[state]:
+                ndp[state] = cost
+                bp[state] = (prev, choice)
 
         if n.is_jump:
-            for st, (c0, path) in dp.items():
+            for st, c0 in dp.items():
                 for pl in range(4):
                     for pr in range(4):
                         dc, ns = ff.jump_cost(st, pl, pr, budget, n.beat)
                         if dc >= ff.FORBIDDEN:
                             continue
-                        relax(ns, c0 + dc, path + [((pl, pr), "J")])
+                        relax(ns, c0 + dc, st, ((pl, pr), "J"))
         else:
-            for st, (c0, path) in dp.items():
+            for st, c0 in dp.items():
                 for foot in (ff.LEFT, ff.RIGHT):
                     for panel in range(4):
                         dc, ns = ff.step(st, foot, panel, budget, mv, prog, n.beat)
                         if dc >= ff.FORBIDDEN:
                             continue
-                        relax(ns, c0 + dc, path + [((panel,), foot)])
+                        relax(ns, c0 + dc, st, ((panel,), foot))
         # keep the best-N states to bound growth (all 32 fit, but be safe)
-        dp = dict(sorted(ndp.items(), key=lambda kv: kv[1][0])[:64])
+        keep = dict(sorted(ndp.items(), key=lambda kv: kv[1])[:64])
+        back.append({s: bp[s] for s in keep})
+        dp = keep
 
-    best = min(dp.values(), key=lambda v: v[0])
+    # reconstruct the lowest-cost path via backpointers
+    state = min(dp, key=lambda s: dp[s])
+    choices = []
+    for step in reversed(back):
+        prev, choice = step[state]
+        choices.append(choice)
+        state = prev
+    choices.reverse()
+
     out = []
-    for n, (panels, foot) in zip(notes, best[1]):
+    for n, (panels, foot) in zip(notes, choices):
         out.append(Placement(beat=n.beat, panels=tuple(panels), kind=n.kind,
                              hold_beats=n.hold_beats,
                              meta={"texture": n.phrase.get("texture", ""), "foot": foot}))
