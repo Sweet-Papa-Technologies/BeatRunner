@@ -191,3 +191,63 @@ round-trips through `simfile`.
 
 The original generators (`make_overdrive_maps.py`, `make_beatmaps.py`,
 `generate_assets.py`) are kept for provenance; beatforge is the canonical path.
+
+### SABERFORGE — Beat Saber adapter (TargetAdapter #2)
+
+The second adapter, **SABERFORGE** (`tools/beatforge/adapters/beatsaber/`), emits
+**Beat Saber Standard-mode** song folders (v3 `.dat` beatmaps + `Info.dat`) from
+the same analysis core. See [`BEATSABER.SPEC.MD`](BEATSABER.SPEC.MD).
+
+```bash
+PYTHONPATH=tools python3 -m beatforge saberforge --deterministic                 # DSP-only parity, no LLM / offline
+PYTHONPATH=tools python3 -m beatforge saberforge --track overdrive --difficulties expert,hard
+PYTHONPATH=tools python3 -m beatforge saberforge --i-have-rights --track mysong  # ack rights on non-original audio
+```
+
+The pipeline (§2 of the spec): DSP truth → **intent designer** (Gemini emits
+*which* onsets, each note's *kind* (note/arc/chain/bomb_reset) and *hand*, and
+per-phrase *feel* from a closed density/movement/tech vocabulary — **never** grid
+coordinates, cut directions, or parity) → **swing-parity DP realizer**
+(`realize.py` + `parity.py`: a lowest-cost cut assignment over a per-hand
+forehand/backhand state machine — this is what makes the swings flow) →
+ScoreSaber-criteria **validate+repair** → **in-core swing simulator**
+(`simulate.py`, beatable-by-construction: zero forced resets) → **serialize v3 via
+BeatSaber-JSMap** (`bsmap`, never hand-formatted; byte-stable round-trip) → QA +
+external referees. Output lands in `build/saberforge/<song>/` (`Info.dat` +
+`<Difficulty>Standard.dat` + audio + per-difficulty design/critic/QA + a
+**grid-over-time PNG** and an **assist-tick `.ogg`**). NJS/offset are per-difficulty
+and locked; difficulties are monotonic Easy→Expert+.
+
+**Positioning (spec §0 — a design constraint, not marketing):** SABERFORGE is a
+**mapper's drafting assistant + personal-play generator**, never a BeatSaver upload
+farm. Every output is (a) a *refinable draft* handed to **ChroMapper**, not a
+claimed-final map; (b) labelled **AI-assisted** in its metadata (`credit =
+"SABERFORGE (AI-assisted draft)"`); (c) defaulted to **your own** (paid-plan Suno /
+original) music — mapping third-party audio requires the explicit `--i-have-rights`
+flag, which prints the copyright caveat; (d) has **no** automated BeatSaver
+publishing anywhere in the package.
+
+**Lighting is a refinement step (REQ-BS-07):** v1 emits *basic, templated*
+beat-synced lighting (on-downbeat flashes, section-coloured washes, intensity
+riding the energy curve) as a starting point — finish the lightshow by hand in
+ChroMapper.
+
+**External-checker prerequisites (REQ-BS-09):** the community's own tools are the
+final legality authority. Point SABERFORGE at them to enable the third referee:
+`export SABERFORGE_PARITY_CHECKER_CMD=<GalaxyMaster Parity Checker>` and
+`export SABERFORGE_MAPCHECK_CMD=<Kival Evan Map Check>`. If unset, the build runs
+the two in-core referees (validator + swing simulator) and marks the map
+**"unverified"** by the external checkers rather than failing.
+
+**Editor handoff / workflow:** generate → refine in **ChroMapper** (primary) or
+**Mediocre Map Assistant 2** → playtest in-headset from `CustomLevels`. Maps are
+emitted clean-sorted and precision-snapped (1/64) so ChroMapper loads them with no
+float-snap errors.
+
+**Eval (REQ-BS-14):** the intended A/B methodology compares SABERFORGE
+onset-alignment/parity against a Beat Sage map and a >70%-rated human map on the
+same song (BeatSaver corpus, used as ground truth only — never as training
+uploads); recorded runs land under `build/saberforge/`. Adapter + realizer +
+simulator + serializer are covered offline by `tests/test_saberforge.py` (model,
+Colab and external checkers behind fixtures); every emitted `.dat` round-trips
+through JSMap.

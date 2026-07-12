@@ -266,3 +266,60 @@ requirements:
     title: Schema + legality gate
     intents:
       - "serialize.write_song_folder asserts simfile re-open; every shipped .ssc round-trips"
+
+module: adapters/beatsaber (SABERFORGE — BEATSABER.SPEC.MD)
+requirements:
+  REQ-ARCH-01:
+    title: BeatSaberAdapter implements the shared TargetAdapter; nothing leaks to core
+    intents:
+      - "test_saberforge.py::test_null_and_beatsaber_satisfy_protocol"
+  REQ-BS-01:
+    title: Grammar module — grid, cut-direction swing vectors, colours, object types
+    intents:
+      - "test_saberforge.py::test_swing_vectors_and_angles (each d -> correct swing vector)"
+      - "test_saberforge.py::test_grid_bounds_enforced_by_realizer"
+  REQ-BS-02:
+    title: Parity realizer (DP over swing state) — alternation, two-hand, bomb reset
+    intents:
+      - "test_saberforge.py::test_single_hand_stream_strict_alternation_zero_resets"
+      - "test_saberforge.py::test_two_hand_no_opposite_swing_path_violation"
+      - "test_saberforge.py::test_bomb_reset_inserts_a_bomb_with_lead_time"
+  REQ-BS-03:
+    title: Parity/legality validator + repair (per §5.2 rule detection + minimal repair)
+    intents:
+      - "test_saberforge.py::test_detect_and_repair_forced_reset"
+      - "test_saberforge.py::test_detect_parallel_same_color"
+      - "test_saberforge.py::test_detect_bomb_spacing_under_20ms"
+      - "test_saberforge.py::test_detect_over_angle_at_high_bpm"
+  REQ-BS-04:
+    title: In-core swing simulator (beatable-by-construction; zero forced resets)
+    intents:
+      - "test_saberforge.py::test_simulator_clean_on_realized_map_and_flags_bad_fixture"
+  REQ-BS-05:
+    title: Designer intent — reject coordinates/cutdirs/bad vocab/unresolvable ref
+    intents:
+      - "test_saberforge.py::test_reject_coordinate_field / test_reject_cutdir_field"
+      - "test_saberforge.py::test_reject_raw_time_field / test_reject_unknown_vocab"
+      - "test_saberforge.py::test_reject_unresolvable_ref"
+  REQ-BS-06:
+    title: Emit v3 via JSMap — required collections present, byte-stable round-trip
+    intents:
+      - "test_saberforge.py::test_serialize_round_trips_through_jsmap (colorNotes/bombNotes/obstacles present; verified round-trip)"
+  REQ-BS-08:
+    title: NJS constant per difficulty + monotonic difficulty
+    intents:
+      - "test_saberforge.py::test_njs_constant_and_monotonic"
+  REQ-BS-10:
+    title: Objective QA metrics — alignment, hand balance, resets, NPS, arc share
+    intents:
+      - "test_saberforge.py::test_qa_metrics_and_gates_on_clean_chart"
+  REQ-POS-01:
+    title: AI-assisted labelling in every emitted map's metadata
+    intents:
+      - "test_saberforge.py::test_serialize_round_trips_through_jsmap (marker in Info)"
+      - "test_saberforge.py::test_serialize_marker_present_in_fallback_without_node"
+  REQ-POS-02:
+    title: Own-music default + no auto-publish; --i-have-rights caveat
+    intents:
+      - "test_saberforge.py::test_no_beatsaver_upload_path (no beatsaver.com endpoint anywhere)"
+      - "CLI --i-have-rights prints adapter.COPYRIGHT_CAVEAT"

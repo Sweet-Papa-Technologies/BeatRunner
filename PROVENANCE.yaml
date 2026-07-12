@@ -37,3 +37,34 @@ units:
     context: numpy/scipy DSP (local) or madmom+Demucs (Colab); no model involved
     code_by: author (main context)
     tests_by: pytest tools/beatforge/tests/test_dsp.py
+
+  # SABERFORGE (BEATSABER.SPEC.MD) — TargetAdapter #2. Author != Judge holds across
+  # model invocations here too: the Beat Saber intent designer and the map critic
+  # are SEPARATE Gemini 3.5 Flash calls with separate contexts (REQ-BS-11);
+  # deterministic referees (parity validator + in-core swing simulator) referee both.
+  - unit: beatforge/beatsaber/map-designer
+    role: Author
+    model: gemini-3.5-flash (audio input, thinkingLevel=high, global/v1beta1)
+    context: track audio + analysis.json + design brief + difficulty budget;
+             emits INTENT only (onset refs + kind + hand + phrase feel) — never
+             grid coordinates, cut directions, or parity
+    code_by: author (main context)
+    tests_by: pytest tools/beatforge/tests/test_saberforge.py (offline; model/Colab/
+              external checkers behind fixtures)
+  - unit: beatforge/beatsaber/map-critic
+    role: Judge
+    model: gemini-3.5-flash (audio input, thinkingLevel=high, global/v1beta1)
+    context: FRESH — track audio + the realized map rendered as a per-hand swing
+             sequence only; never sees the designer's working context (REQ-BS-11)
+    code_by: author (main context)
+  - unit: beatforge/beatsaber/parity-realizer
+    role: deterministic referee (beatable-by-construction)
+    context: swing-parity DP (parity.py/realize.py) + ScoreSaber-criteria validator
+             + in-core swing simulator (simulate.py); no model involved
+    code_by: author (main context)
+    tests_by: pytest tools/beatforge/tests/test_saberforge.py
+  - unit: beatforge/beatsaber/ai-assisted-label
+    role: positioning constraint (REQ-POS-01..03)
+    context: every emitted Info/beatmap carries credit "SABERFORGE (AI-assisted
+             draft)"; own-music default; no BeatSaver upload path exists
+    code_by: author (main context)
