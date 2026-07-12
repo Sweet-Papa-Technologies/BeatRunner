@@ -19,6 +19,7 @@ TRACKS_PUB = REPO_ROOT / "public" / "assets" / "tracks"
 MAPS_PUB = REPO_ROOT / "public" / "maps"
 BUILD_DIR = REPO_ROOT / "build" / "analysis"
 STEPMANIA_DIR = REPO_ROOT / "build" / "stepmania"
+SABERFORGE_DIR = REPO_ROOT / "build" / "saberforge"     # Beat Saber song folders + drafts
 PROMPTS_DIR = Path(__file__).resolve().parent / "prompts"
 SCHEMAS_DIR = Path(__file__).resolve().parent / "schemas"
 JOBS_DIR = Path(__file__).resolve().parent / "jobs"

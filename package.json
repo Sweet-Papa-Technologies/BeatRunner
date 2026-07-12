@@ -14,6 +14,7 @@
   "author": "Sweet Papa Technologies",
   "license": "MIT",
   "dependencies": {
+    "bsmap": "^2.3.6",
     "phaser": "^3.90.0"
   },
   "devDependencies": {

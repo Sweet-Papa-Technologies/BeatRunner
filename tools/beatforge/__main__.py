@@ -157,6 +157,34 @@ def cmd_stepforge(a):
         print(f"[stepforge] {tid} ({r['mode']}, mono={r['meter_monotonic']}) -> {r['out']}  [{cs}]")
 
 
+def cmd_saberforge(a):
+    """SABERFORGE: export tracks as Beat Saber Standard song folders (v3 .dat +
+    Info.dat via BeatSaber-JSMap) through the TargetAdapter — DSP truth -> intent
+    designer -> parity realizer -> validate -> simulate -> serialize -> QA +
+    external referees. Output is an AI-assisted DRAFT for ChroMapper; there is no
+    BeatSaver upload path (REQ-POS-01/02). Default uses the Gemini designer;
+    --deterministic is DSP-only (offline)."""
+    from .adapters.beatsaber.adapter import build_song
+    from .adapters.beatsaber.grammar import DIFFICULTIES
+    opts = _opts(a)
+    tracks = (a.track,) if a.track else tuple(config.TRACK_CATALOGUE)
+    diffs = tuple(a.difficulties.split(",")) if a.difficulties else DIFFICULTIES
+    deterministic = a.deterministic
+    client = None
+    if not deterministic:
+        from .llm import make_llm_client
+        client = make_llm_client()
+    for tid in tracks:
+        r = build_song(tid, opts, difficulties=diffs, deterministic=deterministic,
+                       client=client, i_have_rights=a.i_have_rights)
+        cs = " ".join(f"{s}:{i['notes']}n/njs{i['njs']}/sim{i['simulator_clean']}/"
+                      f"gates{all(i['metrics']['gates'].values())}"
+                      for s, i in r["charts"].items())
+        ver = "verified" if r["jsmap_verified"] else "UNVERIFIED"
+        print(f"[saberforge] {tid} ({r['mode']}, mono={r['difficulty_monotonic']}, "
+              f"njs_const={r['njs_constant']}, {ver}) -> {r['out']}  [{cs}]")
+
+
 def cmd_all(a):
     from .pipeline import chart_track
     from .llm import make_llm_client
@@ -225,9 +253,23 @@ def build_parser():
     sf.add_argument("--allow-local-fallback", action="store_true", dest="allow_local_fallback")
     sf.add_argument("--offline", action="store_true")
 
+    sb = sub.add_parser("saberforge", help="export Beat Saber Standard song folders (BeatSaber adapter)")
+    sb.add_argument("--track", help="single track id (default: all)")
+    sb.add_argument("--difficulties", help="comma list e.g. expert,hard (default: easy,normal,hard,expert,expertplus)")
+    sb.add_argument("--deterministic", action="store_true",
+                    help="DSP-only parity placement, no LLM (offline)")
+    sb.add_argument("--i-have-rights", action="store_true", dest="i_have_rights",
+                    help="acknowledge you hold the rights to map this audio (prints the copyright caveat)")
+    sb.add_argument("--backend", choices=["local", "colab"], default=config.DEFAULT_BACKEND)
+    sb.add_argument("--gpu", default=config.COLAB_GPU)
+    sb.add_argument("--force", action="store_true")
+    sb.add_argument("--allow-local-fallback", action="store_true", dest="allow_local_fallback")
+    sb.add_argument("--offline", action="store_true")
+
     for name, fn in {"analyze": cmd_analyze, "chart": cmd_chart, "validate": cmd_validate,
                      "qa": cmd_qa, "generate": cmd_generate, "all": cmd_all,
-                     "compare": cmd_compare, "stepforge": cmd_stepforge}.items():
+                     "compare": cmd_compare, "stepforge": cmd_stepforge,
+                     "saberforge": cmd_saberforge}.items():
         sub.choices[name].set_defaults(fn=fn)
     return p
 
