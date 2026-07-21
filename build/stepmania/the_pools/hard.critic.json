@@ -1,18 +1,15 @@
 {
-  "score": 9,
-  "verdict": "An outstanding Hard chart that captures the syncopated rhythm and energy of the song perfectly, with only minor 16th-note flow hitches.",
+  "score": 6,
+  "verdict": "A rhythmically accurate chart that tracks the song's energy well, but is severely held back by a complete right-side jump bias and some awkward stream transitions.",
   "issues": [
     {
-      "where": "60.793",
-      "problem": "Awkward 16th-note double-step on the left foot (D -> L)."
+      "where": "Entire chart",
+      "problem": "Extreme right-side bias in jump selection. Out of 31 total jumps, every single one involves the Right panel (UR, DR, LR). The complete absence of UL or DL jumps makes the physical movement feel incredibly lopsided and repetitive."
     },
     {
-      "where": "68.409",
-      "problem": "A rapid 16th-note transition from D to L requires a same-foot double tap, disrupting the flow slightly."
-    },
-    {
-      "where": "71.503",
-      "problem": "Awkward 16th-note double-step from U to R."
+      "where": "56.390 - 58.056",
+      "problem": "Awkward stream flow. Rapid sequences like U -> D -> R and U -> D -> L force either uncomfortable crossovers or double-steps that disrupt the physical flow for a chart of this density."
     }
-  ]
+  ],
+  "human_review": true
 }

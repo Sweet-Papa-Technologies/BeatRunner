@@ -67,14 +67,22 @@ def build_song(track_id: str, opts: config.RunOptions, difficulties=DIFFICULTIES
               "mode": "deterministic" if (deterministic or client is None) else "gemini",
               "charts": {}}
     for diff in difficulties:
+        # Progress is printed per stage: a 5-difficulty song is ~30min of model
+        # calls, and a silent process is indistinguishable from a hung one — both
+        # to a human tailing the log and to the batch watchdog.
+        print(f"    [{diff}] designing…", flush=True)
         best = _design_once(adapter, track_id, diff, analysis, deterministic, client, None)
         (out_dir / f"{diff}.design.json").write_text(json.dumps(best["design"], indent=2))
+        print(f"    [{diff}] design ok — {len(best['placements'])} notes", flush=True)
 
         # critic (Author≠Judge, REQ-SM-13) + one targeted revision below the ship
         # threshold, then human-review flag. Gemini path only.
         if not deterministic and client is not None:
+            print(f"    [{diff}] critiquing…", flush=True)
             best["critic"] = _run_critic(track_id, diff, analysis, best["placements"], client)
             if float((best["critic"] or {}).get("score", 0)) < 7:
+                print(f"    [{diff}] critic scored "
+                      f"{(best['critic'] or {}).get('score')} (<7) — revising once…", flush=True)
                 issues = "; ".join(f"{i.get('where','')}: {i.get('problem','')}"
                                    for i in (best["critic"] or {}).get("issues", []))
                 revised = _design_once(adapter, track_id, diff, analysis, False, client,
@@ -89,7 +97,10 @@ def build_song(track_id: str, opts: config.RunOptions, difficulties=DIFFICULTIES
 
         meter, placements = best["meter"], best["placements"]
         per_difficulty[diff] = (meter, placements)
+        print(f"    [{diff}] rendering previews…", flush=True)
         previews = sm_qa.render_previews(placements, analysis, _audio_path(track_id), out_dir / diff)
+        print(f"    [{diff}] DONE — meter {meter}, {len(placements)} notes, "
+              f"critic {(best.get('critic') or {}).get('score', 'n/a')}", flush=True)
         report["charts"][diff] = {
             "notes": len(placements), "meter": meter,
             "jumps": sum(1 for p in placements if len(p.panels) > 1),

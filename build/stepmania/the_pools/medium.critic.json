@@ -1,10 +1,14 @@
 {
-  "score": 9,
-  "verdict": "An exceptionally well-timed and rhythmic chart that beautifully captures the song's tempo shifts and syncopation, held back only by a single unplayable triple-press sequence.",
+  "score": 8,
+  "verdict": "A highly rhythmic and engaging Medium chart with excellent vocal-syncing, slightly let down by a couple of mechanically awkward patterns.",
   "issues": [
     {
-      "where": "33.780 to 34.732",
-      "problem": "While holding both U and D (which occupies both feet), there is a tap on R at 34.494. This creates an unplayable three-panel pattern (a 'hand') without a third foot, forcing an awkward bracket or resulting in a dropped hold."
+      "where": "33.780 to 34.494",
+      "problem": "Holding the Right (R) panel while requiring eighth-note steps on Down (D) and Up (U) forces the player into a rapid, one-foot eighth-note transition. This is too strenuous and physically awkward for a Medium-difficulty chart."
+    },
+    {
+      "where": "67.100 to 67.814",
+      "problem": "The rapid D -> U -> R -> D eighth-note stream causes either a double-step or an uncomfortable crossover (crossing the left foot behind the right to hit R) which disrupts the otherwise smooth flow of the chorus."
     }
   ]
 }
