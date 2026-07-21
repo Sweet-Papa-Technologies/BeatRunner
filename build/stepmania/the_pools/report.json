@@ -4,49 +4,90 @@
   "offset": 0.459,
   "mode": "gemini",
   "charts": {
-    "easy": {
-      "notes": 185,
-      "meter": 3,
-      "jumps": 5,
-      "holds": 18,
-      "repaired": 3,
+    "beginner": {
+      "notes": 134,
+      "meter": 1,
+      "jumps": 4,
+      "holds": 17,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 9,
-        "verdict": "An exceptionally fluid and well-structured Easy chart with natural foot flow, though it contains a couple of slightly advanced patterns for beginners.",
+        "score": 8,
+        "verdict": "An incredibly fluid and well-rhythmed beginner chart that tracks the music beautifully, held back only by a few overly technical elements for the target audience.",
         "issues": [
           {
-            "where": "44.728",
-            "problem": "Overlapping holds (HOLD L starting at 44.728 and HOLD U starting at 44.966) create a co-hold, which is generally too complex for an Easy chart."
+            "where": "37.112 to 37.588",
+            "problem": "Holding the R panel while tapping the L panel requires an independent leg control/stretch that is far too advanced and physically awkward for a Beginner chart."
           },
           {
-            "where": "63.292",
-            "problem": "The 7-note eighth-note stream (R-U-D-L-R-U-D) has perfect physical alternation but represents a minor difficulty spike for Easy players."
+            "where": "60.436, 69.004, 107.085, 116.605",
+            "problem": "The inclusion of jumps (double-panel taps) can be disorienting and physically overwhelming for absolute beginners who are still learning basic pad navigation."
           },
           {
-            "where": "48.298",
-            "problem": "A tap note (R at 48.536) occurs while another pad (U) is held, which can be mechanically confusing for beginners."
+            "where": "10.455 and 19.975",
+            "problem": "The rhythm shifts from strong downbeats (beats 1 and 3) to weak syncopated beats (beats 2 and 4). While musically accurate, this syncopation can easily throw off a beginner's internal timing."
           }
         ]
       },
       "previews": {
-        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/the_pools/easy.assist.ogg"
+        "png": "/Users/fterry/.foreman/worktrees/FRM-1056/build/stepmania/the_pools/beginner.notefield.png",
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1056/build/stepmania/the_pools/beginner.assist.ogg"
       },
       "metrics": {
-        "notes": 185,
-        "onset_alignment": 0.9568,
-        "grid_notes": 8,
+        "notes": 134,
+        "onset_alignment": 0.8731,
+        "grid_notes": 17,
         "panel_balance": {
-          "L": 0.211,
-          "D": 0.289,
-          "U": 0.268,
-          "R": 0.232
+          "L": 0.203,
+          "D": 0.304,
+          "U": 0.283,
+          "R": 0.21
         },
-        "hold_share": 0.0973,
-        "jump_share": 0.027,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.14,
-        "density_energy_spearman": -0.1664,
+        "hold_share": 0.1269,
+        "jump_share": 0.0299,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": -0.0661,
+        "gates": {
+          "onset_alignment": false,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "easy": {
+      "notes": 192,
+      "meter": 3,
+      "jumps": 5,
+      "holds": 17,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 10,
+        "verdict": "An exceptionally well-crafted Easy chart that perfectly balances rhythmic syncopation, comfortable physical foot flow, and appropriate structural density.",
+        "issues": []
+      },
+      "previews": {
+        "png": "/Users/fterry/.foreman/worktrees/FRM-1056/build/stepmania/the_pools/easy.notefield.png",
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1056/build/stepmania/the_pools/easy.assist.ogg"
+      },
+      "metrics": {
+        "notes": 192,
+        "onset_alignment": 0.9531,
+        "grid_notes": 9,
+        "panel_balance": {
+          "L": 0.193,
+          "D": 0.31,
+          "U": 0.305,
+          "R": 0.193
+        },
+        "hold_share": 0.0885,
+        "jump_share": 0.026,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": -0.1967,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -57,92 +98,143 @@
       }
     },
     "medium": {
-      "notes": 318,
-      "meter": 6,
-      "jumps": 21,
-      "holds": 18,
-      "repaired": 1,
+      "notes": 242,
+      "meter": 5,
+      "jumps": 16,
+      "holds": 9,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 9,
-        "verdict": "An exceptionally well-timed and rhythmic chart that beautifully captures the song's tempo shifts and syncopation, held back only by a single unplayable triple-press sequence.",
+        "score": 8,
+        "verdict": "A highly rhythmic and engaging Medium chart with excellent vocal-syncing, slightly let down by a couple of mechanically awkward patterns.",
         "issues": [
           {
-            "where": "33.780 to 34.732",
-            "problem": "While holding both U and D (which occupies both feet), there is a tap on R at 34.494. This creates an unplayable three-panel pattern (a 'hand') without a third foot, forcing an awkward bracket or resulting in a dropped hold."
+            "where": "33.780 to 34.494",
+            "problem": "Holding the Right (R) panel while requiring eighth-note steps on Down (D) and Up (U) forces the player into a rapid, one-foot eighth-note transition. This is too strenuous and physically awkward for a Medium-difficulty chart."
+          },
+          {
+            "where": "67.100 to 67.814",
+            "problem": "The rapid D -> U -> R -> D eighth-note stream causes either a double-step or an uncomfortable crossover (crossing the left foot behind the right to hit R) which disrupts the otherwise smooth flow of the chorus."
           }
         ]
       },
       "previews": {
-        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/the_pools/medium.assist.ogg"
+        "png": "/Users/fterry/.foreman/worktrees/FRM-1056/build/stepmania/the_pools/medium.notefield.png",
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1056/build/stepmania/the_pools/medium.assist.ogg"
       },
       "metrics": {
-        "notes": 318,
-        "onset_alignment": 0.8962,
-        "grid_notes": 33,
+        "notes": 242,
+        "onset_alignment": 0.8471,
+        "grid_notes": 37,
         "panel_balance": {
-          "L": 0.215,
-          "D": 0.265,
-          "U": 0.277,
-          "R": 0.242
+          "L": 0.229,
+          "D": 0.283,
+          "U": 0.267,
+          "R": 0.221
         },
-        "hold_share": 0.0566,
-        "jump_share": 0.066,
-        "flow_cost_max": 7.85,
-        "flow_cost_mean": 0.03,
-        "density_energy_spearman": -0.0862,
+        "hold_share": 0.0372,
+        "jump_share": 0.0661,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": -0.1894,
         "gates": {
           "onset_alignment": false,
           "panel_balance": true,
-          "hold_share": true,
+          "hold_share": false,
           "flow_ceiling": true,
           "density_energy": false
         }
       }
     },
     "hard": {
-      "notes": 263,
+      "notes": 284,
       "meter": 8,
-      "jumps": 30,
-      "holds": 11,
-      "repaired": 1,
+      "jumps": 34,
+      "holds": 14,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 9,
-        "verdict": "An outstanding Hard chart that captures the syncopated rhythm and energy of the song perfectly, with only minor 16th-note flow hitches.",
+        "score": 6,
+        "verdict": "A rhythmically accurate chart that tracks the song's energy well, but is severely held back by a complete right-side jump bias and some awkward stream transitions.",
         "issues": [
           {
-            "where": "60.793",
-            "problem": "Awkward 16th-note double-step on the left foot (D -> L)."
+            "where": "Entire chart",
+            "problem": "Extreme right-side bias in jump selection. Out of 31 total jumps, every single one involves the Right panel (UR, DR, LR). The complete absence of UL or DL jumps makes the physical movement feel incredibly lopsided and repetitive."
           },
           {
-            "where": "68.409",
-            "problem": "A rapid 16th-note transition from D to L requires a same-foot double tap, disrupting the flow slightly."
+            "where": "56.390 - 58.056",
+            "problem": "Awkward stream flow. Rapid sequences like U -> D -> R and U -> D -> L force either uncomfortable crossovers or double-steps that disrupt the physical flow for a chart of this density."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "png": "/Users/fterry/.foreman/worktrees/FRM-1056/build/stepmania/the_pools/hard.notefield.png",
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1056/build/stepmania/the_pools/hard.assist.ogg"
+      },
+      "metrics": {
+        "notes": 284,
+        "onset_alignment": 0.8838,
+        "grid_notes": 33,
+        "panel_balance": {
+          "L": 0.208,
+          "D": 0.258,
+          "U": 0.286,
+          "R": 0.248
+        },
+        "hold_share": 0.0493,
+        "jump_share": 0.1197,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.02,
+        "density_energy_spearman": -0.1195,
+        "gates": {
+          "onset_alignment": false,
+          "panel_balance": true,
+          "hold_share": false,
+          "flow_ceiling": true,
+          "density_energy": false
+        }
+      }
+    },
+    "challenge": {
+      "notes": 439,
+      "meter": 11,
+      "jumps": 26,
+      "holds": 17,
+      "repaired": 7,
+      "repair_ok": true,
+      "critic": {
+        "score": 8,
+        "verdict": "An exceptionally fluid and well-flowing chart with great rhythm representation, marred only by two awkward multi-panel hold configurations.",
+        "issues": [
+          {
+            "where": "33.780 - 34.755",
+            "problem": "Simultaneously holding R, L, and U while tapping D requires bracket-stepping or hands, creating an awkward quad-like physical clash."
           },
           {
-            "where": "71.503",
-            "problem": "Awkward 16th-note double-step from U to R."
+            "where": "40.682 - 41.448",
+            "problem": "Overlapping holds on U, D, and L create a triple hold (hands), which abruptly disrupts the foot-only flow of a standard singles challenge chart."
           }
         ]
       },
       "previews": {
-        "assist": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/the_pools/hard.assist.ogg"
+        "png": "/Users/fterry/.foreman/worktrees/FRM-1056/build/stepmania/the_pools/challenge.notefield.png"
       },
       "metrics": {
-        "notes": 263,
-        "onset_alignment": 0.9392,
-        "grid_notes": 16,
+        "notes": 439,
+        "onset_alignment": 0.9339,
+        "grid_notes": 29,
         "panel_balance": {
-          "L": 0.222,
-          "D": 0.294,
-          "U": 0.256,
-          "R": 0.229
+          "L": 0.213,
+          "D": 0.282,
+          "U": 0.282,
+          "R": 0.224
         },
-        "hold_share": 0.0418,
-        "jump_share": 0.1141,
-        "flow_cost_max": 8.0,
-        "flow_cost_mean": 0.04,
-        "density_energy_spearman": 0.0237,
+        "hold_share": 0.0387,
+        "jump_share": 0.0592,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.1,
+        "density_energy_spearman": -0.1552,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -154,9 +246,9 @@
     }
   },
   "files": {
-    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/the_pools/the_pools.ssc",
-    "sm": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/the_pools/the_pools.sm",
-    "audio": "/Users/fterry/.foreman/worktrees/FRM-1041/build/stepmania/the_pools/the_pools.ogg"
+    "ssc": "/Users/fterry/.foreman/worktrees/FRM-1056/build/stepmania/the_pools/the_pools.ssc",
+    "sm": "/Users/fterry/.foreman/worktrees/FRM-1056/build/stepmania/the_pools/the_pools.sm",
+    "audio": "/Users/fterry/.foreman/worktrees/FRM-1056/build/stepmania/the_pools/the_pools.ogg"
   },
   "out": "build/stepmania/the_pools",
   "meter_monotonic": true
