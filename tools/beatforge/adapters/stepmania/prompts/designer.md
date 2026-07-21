@@ -32,11 +32,16 @@ HARD RULES:
 BUDGET ({difficulty}):
 {budget}
 
+DENSITY BUDGET ({difficulty}) — HARD, measured in notes per bar:
+{density_budget}
+
+{exemplars}
+
 OUTPUT — reply with ONLY this JSON object, no prose, no code fences:
 {
   "design_notes": "per-section: what the music does, what the pattern should feel like",
   "notes": [ {"ref":"p017","kind":"tap"}, {"ref":"p041","kind":"hold","hold_beats":2} ],
-  "phrases": [ {"start_bar":16,"end_bar":24,"texture":"jumpstream","movement":"drift_L_to_R","crossover":"light","jump_density":"accents","intent":"the drop — drive it hard"} ]
+  "phrases": [ {"start_bar":16,"end_bar":24,"texture":"jumpstream","movement":"drift_L_to_R","crossover":"light","jump_density":"accents","density":9.5,"intent":"the drop — drive it hard"} ]
 }
 
 --- MACHINE ANALYSIS (authoritative timing truth) ---

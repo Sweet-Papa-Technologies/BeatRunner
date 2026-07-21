@@ -323,3 +323,171 @@ requirements:
     intents:
       - "test_saberforge.py::test_no_beatsaver_upload_path (no beatsaver.com endpoint anywhere)"
       - "CLI --i-have-rights prints adapter.COPYRIGHT_CAVEAT"
+
+# --------------------------------------------------------------------------- #
+# ROUND 2 (docs/foreman-round2-prompt.md) — cost telemetry + structural dynamics.
+# Traced to tools/beatforge/tests/test_cost.py, test_density.py, test_dsp.py.
+# Every test here is OFFLINE: no Vertex, no Colab, no StepMania runtime. The
+# point of Round 2's dynamics work is that it stops being a prompt instruction
+# and becomes deterministic machinery, so it must be provable without spending a
+# cent — the same standard foot-flow is held to.
+# --------------------------------------------------------------------------- #
+module: tools/beatforge (Round 2)
+requirements:
+  REQ-R2-SACRED-01:
+    title: Anti-hallucination contract stands — LLM references onset IDs only
+    intents:
+      - "test_stepforge.py::test_reject_raw_time — a note carrying time/beat/row is rejected"
+      - "test_stepforge.py::test_reject_panel_in_intent — a note carrying a panel is rejected"
+      - "test_stepforge.py::test_reject_freestyle_texture — closed vocabulary still closed"
+      - "designer-output schema gained only `density` (a number); no timestamp or panel field exists"
+  REQ-R2-SACRED-02:
+    title: No timing regression
+    intents:
+      - "test_dsp.py::test_offset_correction_is_skipped_when_the_grid_is_already_right — well-fitted tracks are untouched"
+      - "PENDING: 13-song harness re-run, median <= 9ms and Fantastic >= 80% (needs Vertex; see docs/round1-vs-round2.md)"
+  REQ-R2-SACRED-03:
+    title: No flow regression; zero forbidden-tier transitions
+    intents:
+      - "test_density.py::test_repair_does_not_introduce_forbidden_tier_flow — density repair keeps flow_cost_max under DOUBLE_STEP+JACK"
+      - "test_stepforge.py::test_eighth_stream_strict_alternation_zero_double_steps (unchanged, green)"
+      - "test_stepforge.py::test_no_crossover_budget_forbids_crossed_feet (unchanged, green)"
+      - "test_density.py::test_flow_guard_rejects_shaping_that_would_break_the_flow_ceiling — shaping that would cross the ceiling is discarded in favour of the unshaped chart"
+      - "test_density.py::test_flow_guard_keeps_shaping_when_flow_is_fine"
+      - "measured: flow gate 73.8% -> 84.6%, flow_cost_max 13.72 -> 11.25 over 65 charts"
+      - "measured: ZERO charts newly break the flow ceiling (7 gained it). Without the guard it was 7 gained / 6 broken — a net gain SACRED-03 does not permit"
+  REQ-R2-SACRED-04:
+    title: core/ DSP analysis unchanged except for additive outputs
+    intents:
+      - "test_density.py::test_analysis_carries_density_plan_additively — every pre-existing field still present"
+      - "empirical: re-scoring the untouched DDC pack gives max |delta rho| = 0.000000 across 65 charts"
+      - "BEAT_ANALYSIS_VERSION bumped local_dsp_v1 -> v2 BECAUSE the schema was extended"
+
+  REQ-R2-COST-01:
+    title: Per-call ledger — stage, song, difficulty, attempt, model, tokens by modality, latency, $
+    intents:
+      - "test_cost.py::test_vertex_call_writes_one_ledger_entry"
+      - "test_cost.py::test_audio_tokens_are_recorded_separately_from_text (audio/multimodal split out)"
+      - "test_cost.py::test_thinking_and_cached_tokens_are_recorded"
+      - "test_cost.py::test_model_string_recorded_is_the_one_sent_not_the_config"
+      - "test_cost.py::test_failed_call_is_still_ledgered (a call that errored after tokens burned still cost money)"
+      - "test_cost.py::test_reprompt_loop_produces_one_entry_per_call"
+      - "test_cost.py::test_unattributed_calls_are_recorded_not_dropped"
+      - "test_cost.py::test_openai_backend_is_ledgered_too"
+      - "test_cost.py::test_ledger_writes_jsonl_to_build_cost_song — build/cost/<song>/cost_ledger.jsonl"
+      - "test_cost.py::test_validate_entry_rejects_missing_fields (schema validation)"
+      - "test_cost.py::test_validate_entry_rejects_audio_tokens_without_audio_attached"
+  REQ-R2-COST-02:
+    title: Non-LLM compute in the ledger; cache hit/miss visible
+    intents:
+      - "test_cost.py::test_cache_hit_records_zero_cost_compute_entry"
+      - "test_cost.py::test_fresh_analysis_records_gpu_minutes_and_cost"
+      - "test_cost.py::test_analyze_track_ledgers_a_cache_hit — the real analyze_track path, not a hand-built entry"
+  REQ-R2-COST-03:
+    title: cost-report rollup — $/song, $/chart, $ by stage, tokens, top-5 calls
+    intents:
+      - "test_cost.py::test_rollup_reports_per_song_and_per_chart_dollars"
+      - "test_cost.py::test_rollup_splits_dollars_by_stage"
+      - "test_cost.py::test_rollup_reports_calls_per_chart_as_a_distribution (distribution, not average)"
+      - "test_cost.py::test_rollup_flags_an_unexpected_model"
+      - "test_cost.py::test_rollup_top_calls_carry_prompt_byte_sizes"
+      - "test_cost.py::test_rollup_reports_audio_share_of_input"
+      - "test_cost.py::test_markdown_renders_and_warns_about_unverified_rates"
+      - "test_cost.py::test_empty_ledger_rolls_up_without_dividing_by_zero"
+      - "CLI: `beatforge cost-report` -> build/cost/cost-report.{md,json}"
+  REQ-R2-COST-04:
+    title: The $80 autopsy — six hypotheses, each with a number and a verdict
+    intents:
+      - "docs/cost-autopsy.md — all six answered; top-2 drivers named"
+      - "pricing.py rates VERIFIED against the Vertex pricing page 2026-07-21; gemini-3.5-flash verified=True"
+      - "test_cost.py::test_the_model_the_pipeline_actually_uses_has_a_verified_rate — guards against dollars computed from a guessed rate"
+      - "test_cost.py::test_report_still_warns_when_an_unverified_rate_is_in_play"
+      - "measured: audio = 15.8% of input tokens, 9.7% of spend (hypothesis #1 FALSIFIED as a driver; 3.5 Flash prices audio at the SAME rate as text)"
+      - "measured: onset inventory = 93-97% of the designer prompt, uncached; caching it is worth ~42% of visible-token cost at the verified 10x cache discount (#2 CONFIRMED)"
+      - "measured: 2-16 model calls per chart by code path (#3 bounded; distribution needs one live run)"
+      - "LIVE RUN (the_pools, 18 calls, $4.28): thinking = 45.8% of spend, designer mean 18,780 tokens/call (predicted 14-25k) -> #5 CONFIRMED on real data"
+      - "LIVE RUN: re-prompt loops = 48.8% of spend, median 4 model calls/chart vs a 2-call happy path -> #3 CONFIRMED as a top-tier driver (draft 1 had deferred it; that was wrong)"
+      - "LIVE RUN: cached_tokens=0 on all 18 calls -> #2 confirmed live"
+      - "LIVE RUN: model=gemini-3.5-flash on all 18 calls -> #4 RESOLVED clean, no silent swap"
+      - "LIVE RUN: compute $0.00 vs Vertex $4.28 -> #6 measured 0.0% compute share on a cache-hit run"
+      - "correction logged: draft 1 used placeholder rates 3.6x low on output; verifying them changed the top-2 ranking and the size of the caching prize"
+  REQ-R2-COST-05:
+    title: Reductions gated on the autopsy
+    intents:
+      - "NOT IMPLEMENTED BY DESIGN — brief section 5 ships the autopsy first; ranked TODO with projected savings in docs/cost-autopsy.md"
+
+  REQ-R2-DYN-01:
+    title: Density budget in the analysis layer — per-bar and per-section, difficulty-scaled
+    intents:
+      - "test_density.py::test_flat_song_yields_a_flat_plan"
+      - "test_density.py::test_build_drop_song_rises_monotonically_then_peaks"
+      - "test_density.py::test_plan_is_strictly_monotone_in_energy (the property the Spearman gate actually needs)"
+      - "test_density.py::test_plan_is_difficulty_scaled"
+      - "test_density.py::test_quiet_bars_still_get_a_floor_not_silence"
+      - "test_density.py::test_band_brackets_the_target"
+      - "test_density.py::test_ceiling_scales_with_tempo"
+      - "test_density.py::test_per_section_aggregates_its_bars"
+      - "test_density.py::test_empty_energy_curve_is_survivable"
+      - "test_density.py::test_bar_band_returns_none_past_the_end_of_the_plan"
+      - "test_density.py::test_density_tier_nps_matches_stepmania_budgets (guards the config/grammar duplication)"
+      - "test_density.py::test_analysis_carries_density_plan_additively"
+  REQ-R2-DYN-02:
+    title: Designer receives the budget as a constraint; parser validates declared density
+    intents:
+      - "test_density.py::test_designer_brief_states_the_budget_as_numbers"
+      - "test_density.py::test_designer_brief_only_carries_this_tiers_bands"
+      - "test_density.py::test_parser_rejects_a_phrase_declaring_out_of_band_density"
+      - "test_density.py::test_parser_accepts_a_phrase_inside_the_band"
+      - "test_density.py::test_phrase_without_a_declared_density_is_still_allowed"
+      - "test_density.py::test_parser_rejects_a_non_numeric_density"
+      - "test_density.py::test_deterministic_intent_declares_density_from_the_plan"
+  REQ-R2-DYN-03:
+    title: Deterministic density repair pass
+    intents:
+      - "test_density.py::test_over_dense_bar_is_thinned_to_the_plan"
+      - "test_density.py::test_thinning_drops_the_lowest_strength_notes_first"
+      - "test_density.py::test_thinning_never_removes_holds_or_rolls (hold pairs and jump semantics preserved)"
+      - "test_density.py::test_under_dense_bar_is_filled_only_from_real_onsets"
+      - "test_density.py::test_fill_stops_when_the_onset_pool_is_empty (never invents a transient)"
+      - "test_density.py::test_repair_does_not_introduce_forbidden_tier_flow"
+      - "test_density.py::test_measure_flags_under_dense_spans_and_builds_a_scoped_reprompt (phrase-scoped, not whole-chart)"
+      - "test_density.py::test_reprompt_note_is_none_when_nothing_is_under_dense"
+      - "test_density.py::test_gate_passes_when_there_is_no_plan_to_judge_against"
+  REQ-R2-DYN-04:
+    title: Critic scores dynamics explicitly with the measured Spearman
+    intents:
+      - "design.py::_dynamics_block hands the critic the computed rho and the gate verdict"
+      - "critic output carries `measured_rho`, overwritten from OUR measurement so a hallucinated value can never reach a QA report"
+      - "a critic-echoed value that disagrees is preserved as `measured_rho_echoed_by_critic` rather than silently dropped"
+      - "QA report per chart carries density_energy_spearman + the density plan verdict"
+  REQ-R2-DYN-05:
+    title: Few-shot exemplars, eval-legal, with measured token overhead
+    intents:
+      - "adapters/stepmania/prompts/exemplars.md — 3 worked examples, described behaviour not copied chart data (no training corpus)"
+      - "measured overhead: ~325 tokens (exemplars) + ~181 tokens (density budget block) per designer call"
+      - "PENDING: A/B on 3 songs attributing rho improvement to the exemplars specifically, or they come back out"
+  REQ-R2-DYN-06:
+    title: Round 2 dynamics targets — mean rho >= 0.47, gate pass >= 43%
+    intents:
+      - "measured (deterministic path, 65 charts): mean rho 0.266 -> 0.501 (target >= 0.47), gate pass 4.6% -> 49.2% (target >= 43%)"
+      - "both targets also beat DDC (0.466 / 43.1%)"
+      - "comparison table committed: docs/round1-vs-round2.md"
+      - "FIRST GEMINI-PATH EVIDENCE (the_pools, Round 1 worst track): mean rho -0.15 -> +0.416 across 5 charts, flow ceiling holds 5/5"
+      - "PENDING: full 13-song measurement via the Gemini designer path on the harness"
+
+  REQ-R2-OUT-01:
+    title: The Pools & Token Economy timing diagnosis
+    intents:
+      - "docs/round2-outliers.md — one diagnosis per song"
+      - "The Pools: offset bug (signed median -18.1ms, residual 10.2ms). FIXED by dsp.refine_offset_from_onsets"
+      - "Token Economy: audio property (signed median +0.5ms, residual 16.3ms, tempo salience 0.20). Documented, not fixed"
+      - "test_dsp.py::test_offset_correction_shifts_the_grid_by_the_median_snap_error"
+      - "test_dsp.py::test_offset_correction_is_skipped_when_the_grid_is_already_right"
+      - "test_dsp.py::test_offset_correction_needs_enough_onsets_to_trust_the_median"
+      - "test_dsp.py::test_offset_correction_is_recorded_in_the_analysis"
+  REQ-R2-OUT-02:
+    title: Room Smells / Bttr / The Pools dynamics after DYN lands
+    intents:
+      - "docs/round2-outliers.md + docs/round1-vs-round2.md with commentary"
+      - "measured: Room Smells 0.209 -> 0.580; Bttr 0.200 -> 0.563; The Pools 0.195 -> 0.358"
+      - "finding: The Pools' Round 1 rho of -0.15 was substantially a TIMING artifact; offset fix alone moves it to +0.195"

@@ -20,6 +20,8 @@ MAPS_PUB = REPO_ROOT / "public" / "maps"
 BUILD_DIR = REPO_ROOT / "build" / "analysis"
 STEPMANIA_DIR = REPO_ROOT / "build" / "stepmania"
 SABERFORGE_DIR = REPO_ROOT / "build" / "saberforge"     # Beat Saber song folders + drafts
+# Cost telemetry (REQ-R2-COST-01): one `<song>/cost_ledger.jsonl` per track.
+COST_DIR = REPO_ROOT / "build" / "cost"
 PROMPTS_DIR = Path(__file__).resolve().parent / "prompts"
 SCHEMAS_DIR = Path(__file__).resolve().parent / "schemas"
 JOBS_DIR = Path(__file__).resolve().parent / "jobs"
@@ -115,8 +117,53 @@ OFFSET_SWEEP_MS = 60.0       # ±60ms offset refinement (REQ-DSP-03)
 OFFSET_STEP_MS = 1.0
 ONSET_SNAP_MAX_MS = 35.0     # grid alignment tolerance (REQ-DSP-03/REQ-VAL-02)
 SUSTAIN_MIN_BEATS = 1.0      # harmonic plateau >= 1 beat -> hold candidate
+# REQ-R2-OUT-01 second-pass offset fit. `fit_offset` samples the onset envelope by
+# frame index (~11.6ms at HOP_LENGTH=256/SR=22050), so it cannot resolve sub-frame
+# beat phase; the parabolically-refined onsets can. When their median snap error
+# exceeds this threshold the grid is re-phased by that median. Below it the median
+# is noise and re-phasing would jitter tracks that were already correct.
+# Set to a large number to disable the correction entirely.
+OFFSET_SNAP_CORRECTION_MIN_MS = 5.0
+OFFSET_SNAP_CORRECTION_MIN_ONSETS = 30
 ONSET_COUNT_SANITY = (50, 400)  # sanity gate for a ~33s track (REQ-DSP-04)
-BEAT_ANALYSIS_VERSION = "local_dsp_v1"  # bump to invalidate all caches
+# v2 adds the additive `density_plan` block (REQ-R2-DYN-01). Per REQ-R2-SACRED-04
+# the cache key is bumped BECAUSE the output schema was extended; no existing
+# field changed meaning.
+BEAT_ANALYSIS_VERSION = "local_dsp_v2"  # bump to invalidate all caches
+
+# --------------------------------------------------------------------------- #
+# Density plan (REQ-R2-DYN-01) — DSP-side ground truth for dynamics.
+#
+# Round 1 lost dynamics because "density follows energy" was a sentence in a
+# prompt. This makes it a number derived from the energy curve, with the same
+# citizenship as the onset inventory: computed in core/, carried in analysis.json,
+# handed to the designer as a budget, and enforced by a deterministic repair pass.
+# --------------------------------------------------------------------------- #
+# The quietest bar still gets this share of the tier ceiling. A floor of 0 would
+# produce empty bars, which violates the "never a dead pause" rule the designer
+# prompt has enforced since Round 1 — dynamics must not be bought with silence.
+DENSITY_PLAN_FLOOR = 0.18
+# Shaping exponent on normalized bar energy. 1.0 = linear. MUST stay > 0: the
+# density-vs-energy gate is Spearman (rank) correlation, so the plan is only
+# useful if it is strictly MONOTONE in energy. Any exponent > 0 preserves that;
+# changing it re-shapes magnitudes without breaking the ranking.
+DENSITY_PLAN_GAMMA = 1.0
+# Half-width of the acceptable band around each bar's target, as a fraction of
+# the target. Wide enough that the designer has musical freedom (a fill, a held
+# chord), tight enough that the shape survives.
+DENSITY_BAND_TOLERANCE = 0.40
+# Sustained-NPS ceiling per tier. MIRRORS adapters/stepmania/grammar.py BUDGETS
+# max_nps_4s — core/ cannot import an adapter, so the values are duplicated here
+# and test_density.py::test_density_tier_nps_matches_stepmania_budgets fails if
+# the two ever drift apart.
+DENSITY_TIER_MAX_NPS = {
+    "beginner": 2.0, "easy": 3.0, "medium": 5.0, "hard": 8.0, "challenge": 10.0,
+}
+# Share of budgeted spans that must land inside their band for the chart to ship.
+# Not 100%: a span whose bars genuinely offer no usable onsets cannot be filled
+# without inventing transients, and inventing them is the failure mode the Round 1
+# brief warned about ("do not chase rho by globally increasing note density").
+DENSITY_PLAN_MIN_IN_BAND = 0.6
 
 # --------------------------------------------------------------------------- #
 # Compute backend (spec §3.5)

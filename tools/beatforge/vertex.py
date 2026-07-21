@@ -24,7 +24,7 @@ import urllib.request
 from pathlib import Path
 from typing import Any
 
-from . import config
+from . import config, ledger
 
 _MIME = {
     "wav": "audio/wav", "mp3": "audio/mp3", "ogg": "audio/ogg", "flac": "audio/flac",
@@ -197,7 +197,9 @@ class VertexClient:
         model = model or config.GEMINI_MODEL
         level = thinking_level or config.THINKING_LEVEL
         parts: list[dict] = []
+        audio_bytes = 0
         if audio_path is not None:
+            audio_bytes = os.path.getsize(audio_path)
             parts.append({"inlineData": {
                 "mimeType": _guess_mime(audio_path), "data": _b64file(audio_path)}})
         parts.append({"text": prompt})
@@ -210,7 +212,27 @@ class VertexClient:
         }
         if system:
             body["systemInstruction"] = {"parts": [{"text": system}]}
-        resp = self._post(self._url(model, "generateContent"), body, timeout)
+
+        # REQ-R2-COST-01: bill the call from the response's own usageMetadata and
+        # the model string we ACTUALLY sent — never from config, which has been
+        # wrong before. Recorded on the failure path too, because a call that
+        # errored after the tokens were consumed still costs money.
+        t0 = _time.monotonic()
+        try:
+            resp = self._post(self._url(model, "generateContent"), body, timeout)
+        except Exception as e:
+            ledger.record_model_call(
+                provider="vertex", model=model, usage=ledger.usage_from_vertex({}),
+                latency_s=_time.monotonic() - t0, prompt_bytes=len(prompt.encode()),
+                audio_attached=audio_path is not None, audio_path=str(audio_path or "") or None,
+                audio_bytes=audio_bytes, thinking_level=level, error=str(e)[:300])
+            raise
+        ledger.record_model_call(
+            provider="vertex", model=model, usage=ledger.usage_from_vertex(resp),
+            latency_s=_time.monotonic() - t0, prompt_bytes=len(prompt.encode()),
+            audio_attached=audio_path is not None, audio_path=str(audio_path or "") or None,
+            audio_bytes=audio_bytes, thinking_level=level)
+
         text = self._all_text(resp)
         if not text:
             raise VertexError(f"empty response from {model}: {json.dumps(resp)[:400]}")
@@ -252,8 +274,16 @@ class VertexClient:
             inst["negative_prompt"] = negative
         if seed is not None:
             inst["seed"] = seed
+        t0 = _time.monotonic()
         resp = self._post(self._url(model, "predict"),
                           {"instances": [inst], "parameters": {}})
+        # Lyria bills per generated clip, not per token, so the token counts are
+        # legitimately zero here; the clip charge is added by the cost report from
+        # pricing.CLIP_PRICES keyed on this entry's model + stage.
+        ledger.record_model_call(
+            provider="vertex", model=model, usage=ledger.usage_from_vertex(resp),
+            latency_s=_time.monotonic() - t0, prompt_bytes=len(prompt.encode()),
+            audio_attached=False)
         preds = resp.get("predictions", [])
         if not preds or "bytesBase64Encoded" not in preds[0]:
             raise VertexError(f"no audio returned: {json.dumps(resp)[:400]}")

@@ -1,5 +1,21 @@
 {
-  "score": 10,
-  "verdict": "An exceptionally well-crafted Easy chart that perfectly balances rhythmic syncopation, comfortable physical foot flow, and appropriate structural density.",
-  "issues": []
+  "score": 6,
+  "verdict": "The chart features comfortable foot alternation and clean steps, but fails to represent the song's energy accurately, feeling far too empty during several driving sections.",
+  "measured_rho": 0.3436,
+  "dynamics": "The chart fails to dynamically track the song's energy (rho = 0.344), with multiple segments falling severely under-budget in terms of density.",
+  "issues": [
+    {
+      "where": "Bars 42-43",
+      "problem": "The density is under budget at only 1.0 notes/bar, failing to match the song's energy level (budget 1.6-3.7)."
+    },
+    {
+      "where": "Bars 67-69",
+      "problem": "The density drops to an extremely sparse 0.5 notes/bar, leaving an energetic portion of the song feeling unmapped (budget 0.8-1.8)."
+    },
+    {
+      "where": "122.343 - 127.579",
+      "problem": "The sudden introduction of rapid hold-release sequences on eighth notes (e.g., holding Right at 122.581, releasing to tap Down at 123.295) creates a steep and frustrating difficulty spike at the very end of an Easy chart."
+    }
+  ],
+  "human_review": true
 }

@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import re
 
-from ... import config
+from ... import config, dsp
 from .grammar import BUDGETS, CROSSOVERS, KINDS, MOVEMENTS, TEXTURES
 from .realize import ResolvedNote
 
@@ -56,7 +56,7 @@ def resolve_intent(design: dict, analysis: dict, difficulty: str) -> list[Resolv
     onsets = _onset_lookup(analysis)
     meter = analysis.get("meter", 4)
     lo_beat, hi_beat = _playable(analysis)
-    phrases = _validate_phrases(design.get("phrases", []))
+    phrases = _validate_phrases(design.get("phrases", []), analysis, difficulty)
 
     notes_in = design.get("notes")
     if not isinstance(notes_in, list):
@@ -229,13 +229,43 @@ def thin_for_difficulty(resolved: list[ResolvedNote], analysis: dict,
     return [n for n, k in zip(notes, keep) if k]
 
 
-def _validate_phrases(phrases: list) -> list:
+def _validate_phrases(phrases: list, analysis: dict | None = None,
+                      difficulty: str | None = None) -> list:
+    """Closed-vocabulary check, plus (REQ-R2-DYN-02) the declared per-phrase
+    density against the plan's band for the bars that phrase covers.
+
+    A phrase MAY omit `density` — the deterministic repair pass (DYN-03) still
+    enforces the plan on the realized chart, so a missing declaration costs
+    nothing. But a declaration that is OUT OF BAND is a rejection: the designer
+    has stated an intention to violate the budget, and letting that through and
+    silently repairing it afterwards is how "density is a suggestion" happened in
+    the first place. Rejecting here is cheaper than repairing later, and the
+    re-prompt tells the model the exact number it must hit."""
+    plan = (analysis or {}).get("density_plan") or {}
     for ph in phrases:
         for field, vocab in (("texture", TEXTURES), ("movement", MOVEMENTS),
                              ("crossover", CROSSOVERS)):
             v = ph.get(field)
             if v is not None and v not in vocab:
                 raise IntentError(f"phrase {field} '{v}' not in closed vocabulary {list(vocab)}")
+
+        declared = ph.get("density")
+        if declared is None or not plan.get("per_bar") or difficulty is None:
+            continue
+        if not isinstance(declared, (int, float)) or isinstance(declared, bool):
+            raise IntentError(
+                f"phrase density {declared!r} must be a number (notes per bar)")
+        band = dsp.range_band(plan, difficulty, ph.get("start_bar", 0),
+                              ph.get("end_bar", 0))
+        if band is None:
+            continue                    # phrase sits outside the analyzed bars
+        lo, hi, target = band
+        if not (lo - 1e-6 <= float(declared) <= hi + 1e-6):
+            raise IntentError(
+                f"phrase bars {ph.get('start_bar')}-{ph.get('end_bar')} declares "
+                f"density {float(declared):.2f} notes/bar, outside the allowed band "
+                f"{lo:.2f}-{hi:.2f} (target {target:.2f}) for {difficulty}. "
+                f"Density follows the song's energy — set it inside the band.")
     return phrases
 
 
@@ -270,12 +300,19 @@ def deterministic_intent(analysis: dict, difficulty: str) -> dict:
         last = beat
     # one phrase per section, movement drifting with energy
     meter = analysis.get("meter", 4)
+    plan = analysis.get("density_plan") or {}
     phrases = []
     for s in analysis.get("sections", []):
         energy = s.get("energy_pct", 0.5)
-        phrases.append({
+        ph = {
             "start_bar": s["start_bar"], "end_bar": s["end_bar"],
             "texture": "stream" if energy > 0.7 else "steps",
             "movement": "drift_L_to_R", "crossover": b.crossover,
-            "jump_density": b.jumps})
+            "jump_density": b.jumps}
+        # The deterministic path declares its density from the plan too, so the
+        # no-LLM route exercises exactly the same contract the designer must meet.
+        band = dsp.range_band(plan, difficulty, s["start_bar"], s["end_bar"])
+        if band is not None:
+            ph["density"] = band[2]
+        phrases.append(ph)
     return {"design_notes": "deterministic", "notes": notes, "phrases": phrases}

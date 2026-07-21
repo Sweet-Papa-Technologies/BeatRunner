@@ -13,7 +13,7 @@ import json
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from . import config, qa
+from . import config, ledger, qa
 from .llm import LLMClient
 from .resolve import ResolveError, resolve_events
 from .validate import RepairExceeded, ValidationResult, validate_and_repair
@@ -135,7 +135,10 @@ def design_chart(
 
     for attempt in range(1, config.DESIGN_MAX_ATTEMPTS + 1):
         prompt = _designer_prompt(difficulty, analysis, violations or last_err)
-        raw_design = client.generate_json(prompt, audio_path=audio_path)
+        stage_name = "designer" if (attempt == 1 and not seed_violations) else "reprompt"
+        with ledger.stage(stage_name, song=track_id, difficulty=difficulty,
+                          attempt=attempt, target="core"):
+            raw_design = client.generate_json(prompt, audio_path=audio_path)
         _dump(track_id, difficulty, f"design.attempt{attempt}", raw_design)
 
         try:
@@ -188,7 +191,9 @@ def critic_pass(
               .replace("{difficulty}", chart.difficulty)
               .replace("{chart}", json.dumps(rows))
               .replace("{sections}", json.dumps(sections)))
-    review = client.generate_json(prompt, audio_path=audio_path)
+    with ledger.stage("critic", song=chart.track_id, difficulty=chart.difficulty,
+                      target="core"):
+        review = client.generate_json(prompt, audio_path=audio_path)
     _dump(chart.track_id, chart.difficulty, "critic", review)
     return review
 

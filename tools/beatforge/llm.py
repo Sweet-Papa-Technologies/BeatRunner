@@ -22,12 +22,13 @@ import shutil
 import socket
 import subprocess
 import tempfile
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
 from typing import Protocol
 
-from . import config
+from . import config, ledger
 from .vertex import VertexClient, VertexError, _parse_json
 
 
@@ -142,12 +143,32 @@ class OpenAICompatClient:
         if system:
             messages.append({"role": "system", "content": system})
         messages.append({"role": "user", "content": content})
-        body: dict = {"model": model or self.model, "messages": messages,
+        sent_model = model or self.model
+        body: dict = {"model": sent_model, "messages": messages,
                       "max_tokens": config.OPENAI_MAX_TOKENS,
                       "temperature": self.temperature}
         if json_out:
             body["response_format"] = {"type": "json_object"}
-        resp = self._post(body, timeout if timeout is not None else self.timeout)
+        # REQ-R2-COST-01: the alternate backend is ledgered too. A self-hosted
+        # model costs GPU-hours rather than Vertex dollars, but "which backend
+        # actually served this call" is exactly what hypothesis #4 asks, and a
+        # backend that leaves no trace can't answer it.
+        t0 = time.monotonic()
+        try:
+            resp = self._post(body, timeout if timeout is not None else self.timeout)
+        except Exception as e:
+            ledger.record_model_call(
+                provider="openai", model=sent_model,
+                usage=ledger.usage_from_openai({}), latency_s=time.monotonic() - t0,
+                prompt_bytes=len(prompt.encode()), audio_attached=audio_path is not None,
+                audio_path=str(audio_path or "") or None, error=str(e)[:300])
+            raise
+        ledger.record_model_call(
+            provider="openai", model=sent_model, usage=ledger.usage_from_openai(resp),
+            latency_s=time.monotonic() - t0, prompt_bytes=len(prompt.encode()),
+            audio_attached=audio_path is not None,
+            audio_path=str(audio_path or "") or None,
+            audio_bytes=os.path.getsize(audio_path) if audio_path else 0)
         try:
             text = resp["choices"][0]["message"]["content"]
         except (KeyError, IndexError, TypeError):
