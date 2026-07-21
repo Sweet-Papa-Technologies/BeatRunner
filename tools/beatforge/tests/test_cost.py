@@ -333,3 +333,44 @@ def test_empty_ledger_rolls_up_without_dividing_by_zero():
     r = costreport.aggregate([])
     assert r["totals"]["usd"] == 0.0 and r["totals"]["usd_per_song"] == 0.0
     costreport.render_markdown(r)        # must not raise
+
+
+def test_read_timeout_is_retried_not_fatal(monkeypatch):
+    """A socket read timeout is as transient as a 503, but it raises a different
+    exception type and used to fall straight through — one timed-out socket
+    killed an entire song 100 minutes into a batch run. Thinking-heavy designer
+    calls sit quiet for minutes, so this failure mode is routine."""
+    c = VertexClient()
+    monkeypatch.setattr(c, "_get_token", lambda force=False: "t")
+    monkeypatch.setattr("beatforge.vertex._time.sleep", lambda s: None)
+    calls = {"n": 0}
+
+    def flaky(req, timeout=None):
+        calls["n"] += 1
+        if calls["n"] == 1:
+            raise TimeoutError("The read operation timed out")
+        class R:
+            def __enter__(self): return self
+            def __exit__(self, *a): return False
+            def read(self): return json.dumps(_vertex_resp()).encode()
+        return R()
+    monkeypatch.setattr("beatforge.vertex.urllib.request.urlopen", flaky)
+    out = c._post("https://example/x", {"a": 1})
+    assert calls["n"] == 2, "the timed-out call must have been retried"
+    assert "usageMetadata" in out
+
+
+def test_network_failure_is_fatal_only_after_retries_are_exhausted(monkeypatch):
+    from beatforge.vertex import VertexError
+    c = VertexClient()
+    monkeypatch.setattr(c, "_get_token", lambda force=False: "t")
+    monkeypatch.setattr("beatforge.vertex._time.sleep", lambda s: None)
+    calls = {"n": 0}
+
+    def always_timeout(req, timeout=None):
+        calls["n"] += 1
+        raise TimeoutError("nope")
+    monkeypatch.setattr("beatforge.vertex.urllib.request.urlopen", always_timeout)
+    with pytest.raises(VertexError, match="network failure after retries"):
+        c._post("https://example/x", {"a": 1})
+    assert calls["n"] == 5, "4 backoffs + the initial attempt"

@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -56,8 +57,34 @@ BUILD = Path(__file__).resolve().parents[2] / "build" / "stepmania"
 # --------------------------------------------------------------------------- #
 SELECTED = ["lucky_lucky", "the_pools", "robo_fast_food", "stay_awake_for_me"]
 
-R2_LABEL = "STEPFORGE-R2"
+R2_LABEL = os.environ.get("COMPARE2_LABEL", "STEPFORGE-R2")
 R1_LABEL = "STEPFORGE-R1"
+
+
+def daemonize(logfile: Path) -> None:
+    """Detach into our own session so nothing that happens to the launching shell
+    can take this run down.
+
+    `nohup` only ignores SIGHUP. It does not help when the parent's whole PROCESS
+    GROUP is signalled, which is what happens when an agent session or terminal is
+    torn down — and this job kept dying that way mid-generation. The double fork
+    plus `setsid()` puts us in a brand-new session with no controlling terminal
+    and reparents us to init, so group-directed signals can't reach us. A reboot
+    still stops it (nothing survives that), which is why the run is resumable.
+    """
+    if os.fork() > 0:
+        os._exit(0)                      # parent returns to the shell immediately
+    os.setsid()                          # new session + new process group, no tty
+    if os.fork() > 0:
+        os._exit(0)                      # can never reacquire a controlling terminal
+
+    logfile.parent.mkdir(parents=True, exist_ok=True)
+    fd = os.open(logfile, os.O_WRONLY | os.O_CREAT | os.O_APPEND, 0o644)
+    os.dup2(fd, 1)
+    os.dup2(fd, 2)
+    devnull = os.open(os.devnull, os.O_RDONLY)
+    os.dup2(devnull, 0)
+    (PACK / f"_PID_{R2_LABEL}.txt").write_text(f"{os.getpid()}\n")
 
 
 def notify(title: str, message: str) -> None:
@@ -143,7 +170,7 @@ def copy_existing() -> dict:
 
 def _status(payload: dict) -> None:
     PACK.mkdir(parents=True, exist_ok=True)
-    (PACK / "_COMPARE2_STATUS.json").write_text(json.dumps(payload, indent=2))
+    (PACK / f"_STATUS_{R2_LABEL}.json").write_text(json.dumps(payload, indent=2))
 
 
 def generate() -> None:
@@ -157,7 +184,7 @@ def generate() -> None:
              "started": time.strftime("%Y-%m-%d %H:%M:%S"), "done": [],
              "failed": [], "in_progress": None, "complete": False}
     _status(state)
-    notify("FoFo Compare 2", f"Round 2 generation started — {len(SELECTED)} songs")
+    notify(f"FoFo Compare 2 — {R2_LABEL}", f"generation started — {len(SELECTED)} songs")
 
     for i, base in enumerate(SELECTED, 1):
         # Resume: a previous run that was killed partway leaves finished songs
@@ -206,7 +233,7 @@ def generate() -> None:
     _status(state)
 
     lines = [
-        "FoFo Test Compare 2 — Round 2 generation COMPLETE",
+        f"FoFo Test Compare 2 — {R2_LABEL} generation COMPLETE",
         f"finished: {state['finished']}   ({state['total_minutes']} min total)",
         "",
         f"pack: {PACK}",
@@ -223,25 +250,151 @@ def generate() -> None:
     if state["failed"]:
         lines += ["", f"FAILED ({len(state['failed'])}):"]
         lines += [f"  - {e['title']}  rc={e['returncode']}" for e in state["failed"]]
-    (PACK / "_DONE.txt").write_text("\n".join(lines) + "\n")
+    (PACK / f"_DONE_{R2_LABEL}.txt").write_text("\n".join(lines) + "\n")
 
     notify("FoFo Compare 2 — ALL DONE",
            f"{len(state['done'])}/{len(SELECTED)} songs in {state['total_minutes']:.0f} min")
     print("\n" + "\n".join(lines))
 
+    # Score the whole pack and write the head-to-head table. Part of the job, so
+    # nobody has to remember to run it — and it fires its own notification.
+    try:
+        score_and_report()
+        notify("FoFo Compare 2 — comparison ready",
+               "five-way table written to _COMPARISON.md in the pack")
+    except Exception as e:                    # scoring must not lose the charts
+        print(f"[score] FAILED: {e}")
+        notify("FoFo Compare 2", f"charts OK but scoring failed: {str(e)[:80]}")
+
+
+GENERATORS = ["AUTOSTEPPER", "DDC", "STEPFORGE-R1", "STEPFORGE-R2", "STEPFORGE-R3"]
+
+
+def score_and_report() -> str:
+    """Score every generator in the pack through the SAME scorer and write the
+    head-to-head table. Runs automatically after generation so the comparison is
+    part of the job, not a thing someone has to remember to do.
+
+    Metric choice follows `round1.html`: that report flags `onset_alignment` and
+    `bpm error` as **rigged in our favour** (we score notes against the very onset
+    inventory our designer picked from, and our #BPMS *is* the analysis BPM), so
+    they are reported for continuity but marked untrustworthy, never used to
+    claim a win.
+    """
+    import statistics
+
+    here = Path(__file__).resolve().parent
+    subprocess.run([sys.executable, "score.py", "--pack", PACK.name,
+                    "--label", "COMPARE2"], cwd=str(here), check=False)
+    data = json.loads((here / "out" / "COMPARE2.json").read_text())["songs"]
+
+    # SONG-MATCHED comparison. If one generator is missing a song (a failed
+    # generation, say), averaging over what each happens to have is not a
+    # comparison — it silently compares different song sets. That bit us once:
+    # a run missing only the sparsest track reported ~40% more notes per chart
+    # purely from the exclusion. Restrict every column to the songs they ALL have.
+    def songs_of(label):
+        return {s[: s.rindex(" [")] for s in data if s.endswith(f"[{label}]")}
+
+    have = [g for g in GENERATORS if songs_of(g)]
+    common = set.intersection(*(songs_of(g) for g in have)) if have else set()
+    dropped = sorted(set.union(*(songs_of(g) for g in have)) - common) if have else []
+
+    def charts(label):
+        return [m for song, diffs in data.items() if song.endswith(f"[{label}]")
+                and song[: song.rindex(" [")] in common
+                for m in diffs.values()]
+
+    def mean(ch, key):
+        v = [c[key] for c in ch if c.get(key) is not None]
+        return statistics.fmean(v) if v else float("nan")
+
+    def gate(ch, key):
+        v = [c["gates"][key] for c in ch if "gates" in c]
+        return sum(v) / len(v) if v else 0.0
+
+    rows, present = [], [g for g in have if charts(g)]
+    L = ["# FoFo Test Compare 2 — five-way head to head", "",
+         f"Songs compared ({len(common)}): {', '.join(sorted(common))}",
+         "", "All charts scored by the same `chartbench/score.py` over identical "
+         "audio and identical DSP analysis. Only the chart differs.", ""]
+    if dropped:
+        L += [f"> **Excluded from every column:** {', '.join(dropped)} — not every "
+              f"generator has {'it' if len(dropped) == 1 else 'them'}, and averaging "
+              f"over different song sets is not a comparison.", ""]
+    L += [
+         "| metric | " + " | ".join(present) + " |",
+         "|---|" + "---:|" * len(present)]
+
+    def row(label, fn, fmt="{:.3f}", flag=""):
+        vals = [fn(charts(g)) for g in present]
+        L.append(f"| {label}{flag} | " + " | ".join(fmt.format(v) for v in vals) + " |")
+        rows.append((label, dict(zip(present, vals))))
+
+    L.append("| **— is it DANCEABLE? (pad UX) —** | " + " | ".join([""] * len(present)) + " |")
+    row("flow gate pass", lambda c: gate(c, "flow_ceiling"), "{:.0%}")
+    row("flow_cost_max", lambda c: mean(c, "flow_cost_max"))
+    row("flow_cost_mean", lambda c: mean(c, "flow_cost_mean"))
+    L.append("| **— does it FOLLOW the song? —** | " + " | ".join([""] * len(present)) + " |")
+    row("density rho", lambda c: mean(c, "density_energy_spearman"))
+    row("density gate pass", lambda c: gate(c, "density_energy"), "{:.0%}")
+    L.append("| **— difficulty / vocabulary —** | " + " | ".join([""] * len(present)) + " |")
+    row("notes per chart", lambda c: mean(c, "notes"), "{:.0f}")
+    row("jump_share", lambda c: mean(c, "jump_share"))
+    row("hold_share", lambda c: mean(c, "hold_share"))
+    row("panel_balance gate", lambda c: gate(c, "panel_balance"), "{:.0%}")
+    L.append("| **— rigged, do NOT cite (see round1.html) —** | "
+             + " | ".join([""] * len(present)) + " |")
+    row("onset_alignment", lambda c: mean(c, "onset_alignment"), "{:.3f}", " ⚠")
+
+    L += ["", "## Notes per chart, by difficulty", "",
+          "| difficulty | " + " | ".join(present) + " |",
+          "|---|" + "---:|" * len(present)]
+    for diff in ("beginner", "easy", "medium", "hard", "challenge"):
+        vals = []
+        for g in present:
+            v = [m["notes"] for song, dd in data.items() if song.endswith(f"[{g}]")
+                 for k, m in dd.items() if k == diff]
+            vals.append(f"{statistics.fmean(v):.0f}" if v else "—")
+        L.append(f"| {diff} | " + " | ".join(vals) + " |")
+
+    md = "\n".join(L) + "\n"
+    (PACK / "_COMPARISON.md").write_text(md)
+    (here.parents[1] / "docs" / "compare2-five-way.md").write_text(md)
+    print("\n" + md)
+    return md
+
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--copy", action="store_true", help="install the 3 existing versions")
-    ap.add_argument("--generate", action="store_true", help="run Round 2 and install it")
+    ap.add_argument("--generate", action="store_true", help="run Round 2/3 and install it")
+    ap.add_argument("--replace", action="store_true",
+                    help="delete this label's existing song folders first, so every "
+                         "song is regenerated instead of resumed")
+    ap.add_argument("--score", action="store_true",
+                    help="score the pack and write the head-to-head comparison")
+    ap.add_argument("--daemon", metavar="LOGFILE",
+                    help="detach into a new session (survives shell/agent teardown) "
+                         "and append all output to LOGFILE")
     a = ap.parse_args()
-    if not (a.copy or a.generate):
-        ap.error("pass --copy and/or --generate")
+    if not (a.copy or a.generate or a.score):
+        ap.error("pass --copy, --generate and/or --score")
+    if a.daemon:
+        daemonize(Path(a.daemon).expanduser().resolve())
     if a.copy:
         print(f"Installing existing versions into '{PACK.name}'…")
         copy_existing()
+    if a.replace:
+        for base in SELECTED:
+            d = PACK / f"{TITLES[base]} [{R2_LABEL}]"
+            if d.exists():
+                shutil.rmtree(d)
+                print(f"  [replace] removed {d.name}")
     if a.generate:
         generate()
+    if a.score:
+        score_and_report()
 
 
 if __name__ == "__main__":

@@ -1,29 +1,16 @@
 {
-  "score": 3,
-  "verdict": "The chart is unplayable on pad due to physically impossible hold-jumps and sudden triple-note hand chords.",
-  "measured_rho": 0.7811,
-  "dynamics": "The overall density tracks the song's energy well (rho = 0.781), though it drops to near-zero inappropriately in bars 67-69.",
+  "score": 9,
+  "verdict": "An exceptionally well-flowing and rhythmically expressive chart that captures the track's funky, syncopated house energy with great physical intuition.",
+  "measured_rho": 0.8526,
+  "dynamics": "With a strong Spearman correlation of +0.853, the note density matches the track's energy perfectly, dropping out during the bridge and peaking during the dense vocal choruses.",
   "issues": [
     {
-      "where": "5.006",
-      "problem": "Holding L while tapping D+U is physically impossible without using hands, as D+U cannot be bracketed with one foot."
+      "where": "78.312 - 78.550",
+      "problem": "Back-to-back 8th note jumps (L+R into U+D) introduce a sudden physical spike compared to the surrounding stream, though it remains readable."
     },
     {
-      "where": "6.910",
-      "problem": "Holding L while tapping D+U is an impossible 3-way pad technique."
-    },
-    {
-      "where": "33.805",
-      "problem": "Triple-note jump (D+L+R) introduces hands without warning on a standard singles chart."
-    },
-    {
-      "where": "44.991",
-      "problem": "Triple-note jump (D+U+L) requires hands."
-    },
-    {
-      "where": "23.452-23.690",
-      "problem": "Rapid 8th-note jumps transitioning from L+R to U+D to L+R are extremely jarring and highly uncomfortable to execute."
+      "where": "65.460 - 65.579",
+      "problem": "The isolated 16th tap (D to R) is rhythmically accurate to the syncopated vocal but may catch intermediate players off guard due to its scarcity elsewhere in the phrase."
     }
-  ],
-  "human_review": true
+  ]
 }

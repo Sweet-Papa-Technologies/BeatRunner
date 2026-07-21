@@ -593,7 +593,7 @@ def density_plan(
     tiers = {
         tier: {
             "max_nps": nps,
-            "ceiling_notes_per_bar": round(nps * bar_seconds, 3),
+            "ceiling_notes_per_bar": round(nps * bar_seconds * config.DENSITY_TARGET_UTILIZATION, 3),
         }
         for tier, nps in config.DENSITY_TIER_MAX_NPS.items()
     }

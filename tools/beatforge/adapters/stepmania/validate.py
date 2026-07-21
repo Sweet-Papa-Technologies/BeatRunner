@@ -40,8 +40,50 @@ def validate_repair(placements: list[Placement], analysis: dict, difficulty: str
     # 2. iterative ergonomic repair
     kept = _repair(kept, b, bpm, offset, repairs)
 
+    # 3. re-cap the jump share AFTER repair (pad ergonomics).
+    #
+    # `decide_jumps` caps jumps as a fraction of the notes it was handed, but
+    # `_nps` thinning then drops *single taps* preferentially — jumps survive. The
+    # surviving share therefore drifts UP as density rises, and it drifted badly:
+    # Round 2's `hard` charts measured 21.5% jumps against a 12% budget, more than
+    # its own `challenge` tier. On a dance pad a jump is a two-foot commitment, so
+    # that is precisely the wrong thing to let inflate.
+    kept = cap_jump_share(kept, b, meter=4, repairs=repairs)
+
     repaired_frac = (original - len(kept)) / original if original else 0.0
     return RepairReport(kept, repairs, original, repaired_frac <= 0.15 + 1e-9)
+
+
+def cap_jump_share(notes, b, meter: int = 4, repairs: list | None = None):
+    """Demote surplus jumps to single taps so the realized share honours the tier.
+
+    Demotes rather than deletes: the note stays on the music (timing untouched,
+    SACRED-02 safe), it just stops costing a second foot. Off-downbeat jumps go
+    first — a jump on beat 1 is the accent the chart is built around, one on an
+    off-beat is the one that makes a pad chart feel scrappy.
+    """
+    from .realize import _JUMP_MAX_FRAC
+
+    jumps = [i for i, p in enumerate(notes) if len(p.panels) > 1 and not p.hold_beats]
+    if not jumps:
+        return notes
+    cap = int(_JUMP_MAX_FRAC.get(b.jumps, 0.10) * len(notes))
+    surplus = len(jumps) - cap
+    if surplus <= 0:
+        return notes
+
+    def priority(i):
+        beat = notes[i].beat
+        on_downbeat = abs(beat % meter) < 1e-3
+        on_beat = abs(beat - round(beat)) < 1e-3
+        return (on_downbeat, on_beat, beat)      # False sorts first -> demoted first
+
+    for i in sorted(jumps, key=priority)[:surplus]:
+        p = notes[i]
+        notes[i] = Placement(p.beat, p.panels[:1], p.kind, p.hold_beats, p.meta)
+        if repairs is not None:
+            repairs.append(("jump_demoted", round(p.beat, 3)))
+    return notes
 
 
 def _repair(notes, b, bpm, offset, repairs, guard_max=5000):
