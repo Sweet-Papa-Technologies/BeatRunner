@@ -1,24 +1,28 @@
 {
-  "score": 5,
-  "verdict": "The chart features decent pattern variety but is marred by awkward hold-tap interactions and poor density scaling during key parts of the song.",
-  "measured_rho": 0.3621,
-  "dynamics": "The chart's density does not track the song's energy well, failing the correlation gate due to overly sparse sections during active musical phrases.",
+  "score": 3,
+  "verdict": "The chart is unplayable on pad due to physically impossible hold-jumps and sudden triple-note hand chords.",
+  "measured_rho": 0.7811,
+  "dynamics": "The overall density tracks the song's energy well (rho = 0.781), though it drops to near-zero inappropriately in bars 67-69.",
   "issues": [
     {
-      "where": "4.768",
-      "problem": "Holding Left while hitting a Right + Up jump is physically awkward and forces an uncomfortable stretch."
+      "where": "5.006",
+      "problem": "Holding L while tapping D+U is physically impossible without using hands, as D+U cannot be bracketed with one foot."
     },
     {
-      "where": "24.285",
-      "problem": "Overlapping Right and Down holds create a tight visual and physical cluster that is difficult to execute alongside the subsequent taps."
+      "where": "6.910",
+      "problem": "Holding L while tapping D+U is an impossible 3-way pad technique."
     },
     {
-      "where": "bars 42-43",
-      "problem": "The density drops significantly (4.0 notes/bar) during an energetic section of the song, making the gameplay feel empty."
+      "where": "33.805",
+      "problem": "Triple-note jump (D+L+R) introduces hands without warning on a standard singles chart."
     },
     {
-      "where": "bars 67-69",
-      "problem": "An abrupt drop in step density down to 0.5 notes/bar halts the chart's momentum while the music is still active."
+      "where": "44.991",
+      "problem": "Triple-note jump (D+U+L) requires hands."
+    },
+    {
+      "where": "23.452-23.690",
+      "problem": "Rapid 8th-note jumps transitioning from L+R to U+D to L+R are extremely jarring and highly uncomfortable to execute."
     }
   ],
   "human_review": true
