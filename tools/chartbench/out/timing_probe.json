@@ -1,0 +1,888 @@
+{
+ "songs": [
+  {
+   "title": "Banana Banana",
+   "true_bpm": 167.3,
+   "onsets_ours": 989,
+   "onsets_indep": 385,
+   "gen": {
+    "STEPFORGE": {
+     "ours": {
+      "n": 884,
+      "signed_median_ms": -0.6,
+      "raw_abs_median_ms": 9.3,
+      "residual_abs_median_ms": 9.4,
+      "residual_iqr_ms": 22.4,
+      "drift_ms_per_min": 4.2,
+      "resid_within_21ms": 0.7025
+     },
+     "indep": {
+      "n": 880,
+      "signed_median_ms": -0.3,
+      "raw_abs_median_ms": 60.7,
+      "residual_abs_median_ms": 60.7,
+      "residual_iqr_ms": 52.5,
+      "drift_ms_per_min": -10.1,
+      "resid_within_21ms": 0.1091
+     }
+    },
+    "AUTOSTEPPER": {
+     "ours": {
+      "n": 777,
+      "signed_median_ms": -6.4,
+      "raw_abs_median_ms": 38.3,
+      "residual_abs_median_ms": 36.6,
+      "residual_iqr_ms": 40.2,
+      "drift_ms_per_min": 29.2,
+      "resid_within_21ms": 0.3024
+     },
+     "indep": {
+      "n": 768,
+      "signed_median_ms": 6.2,
+      "raw_abs_median_ms": 34.3,
+      "residual_abs_median_ms": 33.2,
+      "residual_iqr_ms": 58.1,
+      "drift_ms_per_min": -35.7,
+      "resid_within_21ms": 0.3503
+     }
+    },
+    "DDC": {
+     "ours": {
+      "n": 1300,
+      "signed_median_ms": 58.4,
+      "raw_abs_median_ms": 58.7,
+      "residual_abs_median_ms": 3.5,
+      "residual_iqr_ms": 4.7,
+      "drift_ms_per_min": -0.6,
+      "resid_within_21ms": 0.8615
+     },
+     "indep": {
+      "n": 1294,
+      "signed_median_ms": -30.9,
+      "raw_abs_median_ms": 32.4,
+      "residual_abs_median_ms": 7.8,
+      "residual_iqr_ms": 10.5,
+      "drift_ms_per_min": 1.5,
+      "resid_within_21ms": 0.8918
+     }
+    }
+   }
+  },
+  {
+   "title": "Bttr",
+   "true_bpm": 125.2,
+   "onsets_ours": 794,
+   "onsets_indep": 309,
+   "gen": {
+    "STEPFORGE": {
+     "ours": {
+      "n": 1071,
+      "signed_median_ms": -2.4,
+      "raw_abs_median_ms": 7.9,
+      "residual_abs_median_ms": 6.6,
+      "residual_iqr_ms": 9.9,
+      "drift_ms_per_min": 20.1,
+      "resid_within_21ms": 0.8796
+     },
+     "indep": {
+      "n": 1063,
+      "signed_median_ms": -89.4,
+      "raw_abs_median_ms": 92.3,
+      "residual_abs_median_ms": 13.7,
+      "residual_iqr_ms": 19.7,
+      "drift_ms_per_min": 34.0,
+      "resid_within_21ms": 0.6896
+     }
+    },
+    "AUTOSTEPPER": {
+     "ours": {
+      "n": 1037,
+      "signed_median_ms": 34.7,
+      "raw_abs_median_ms": 75.9,
+      "residual_abs_median_ms": 69.4,
+      "residual_iqr_ms": 62.3,
+      "drift_ms_per_min": -94.6,
+      "resid_within_21ms": 0.0733
+     },
+     "indep": {
+      "n": 1030,
+      "signed_median_ms": 8.6,
+      "raw_abs_median_ms": 29.7,
+      "residual_abs_median_ms": 31.7,
+      "residual_iqr_ms": 45.2,
+      "drift_ms_per_min": 38.2,
+      "resid_within_21ms": 0.3515
+     }
+    },
+    "DDC": {
+     "ours": {
+      "n": 942,
+      "signed_median_ms": 58.7,
+      "raw_abs_median_ms": 59.0,
+      "residual_abs_median_ms": 3.5,
+      "residual_iqr_ms": 4.2,
+      "drift_ms_per_min": 2.6,
+      "resid_within_21ms": 0.8928
+     },
+     "indep": {
+      "n": 944,
+      "signed_median_ms": -31.5,
+      "raw_abs_median_ms": 35.0,
+      "residual_abs_median_ms": 6.5,
+      "residual_iqr_ms": 8.4,
+      "drift_ms_per_min": -0.5,
+      "resid_within_21ms": 0.9216
+     }
+    }
+   }
+  },
+  {
+   "title": "Do It For Me Now",
+   "true_bpm": 143.3,
+   "onsets_ours": 913,
+   "onsets_indep": 468,
+   "gen": {
+    "STEPFORGE": {
+     "ours": {
+      "n": 1005,
+      "signed_median_ms": 0.4,
+      "raw_abs_median_ms": 10.4,
+      "residual_abs_median_ms": 10.4,
+      "residual_iqr_ms": 22.0,
+      "drift_ms_per_min": 2.3,
+      "resid_within_21ms": 0.7065
+     },
+     "indep": {
+      "n": 1005,
+      "signed_median_ms": -77.6,
+      "raw_abs_median_ms": 84.8,
+      "residual_abs_median_ms": 19.2,
+      "residual_iqr_ms": 73.9,
+      "drift_ms_per_min": -56.2,
+      "resid_within_21ms": 0.5353
+     }
+    },
+    "AUTOSTEPPER": {
+     "ours": {
+      "n": 1296,
+      "signed_median_ms": -20.6,
+      "raw_abs_median_ms": 57.1,
+      "residual_abs_median_ms": 53.9,
+      "residual_iqr_ms": 43.8,
+      "drift_ms_per_min": -50.0,
+      "resid_within_21ms": 0.1983
+     },
+     "indep": {
+      "n": 1296,
+      "signed_median_ms": 27.6,
+      "raw_abs_median_ms": 48.5,
+      "residual_abs_median_ms": 41.8,
+      "residual_iqr_ms": 62.6,
+      "drift_ms_per_min": 22.2,
+      "resid_within_21ms": 0.321
+     }
+    },
+    "DDC": {
+     "ours": {
+      "n": 830,
+      "signed_median_ms": 57.4,
+      "raw_abs_median_ms": 57.4,
+      "residual_abs_median_ms": 3.4,
+      "residual_iqr_ms": 5.2,
+      "drift_ms_per_min": -9.2,
+      "resid_within_21ms": 0.8566
+     },
+     "indep": {
+      "n": 830,
+      "signed_median_ms": -31.1,
+      "raw_abs_median_ms": 31.8,
+      "residual_abs_median_ms": 7.5,
+      "residual_iqr_ms": 7.5,
+      "drift_ms_per_min": 2.0,
+      "resid_within_21ms": 0.947
+     }
+    }
+   }
+  },
+  {
+   "title": "Explicit - Fast And Free",
+   "true_bpm": 119.9,
+   "onsets_ours": 444,
+   "onsets_indep": 116,
+   "gen": {
+    "STEPFORGE": {
+     "ours": {
+      "n": 563,
+      "signed_median_ms": -2.9,
+      "raw_abs_median_ms": 5.7,
+      "residual_abs_median_ms": 4.8,
+      "residual_iqr_ms": 9.1,
+      "drift_ms_per_min": 19.4,
+      "resid_within_21ms": 0.9183
+     },
+     "indep": {
+      "n": 408,
+      "signed_median_ms": -94.9,
+      "raw_abs_median_ms": 100.9,
+      "residual_abs_median_ms": 12.7,
+      "residual_iqr_ms": 32.4,
+      "drift_ms_per_min": 102.3,
+      "resid_within_21ms": 0.6373
+     }
+    },
+    "AUTOSTEPPER": {
+     "ours": {
+      "n": 536,
+      "signed_median_ms": 63.1,
+      "raw_abs_median_ms": 63.8,
+      "residual_abs_median_ms": 5.1,
+      "residual_iqr_ms": 19.1,
+      "drift_ms_per_min": 15.8,
+      "resid_within_21ms": 0.75
+     },
+     "indep": {
+      "n": 383,
+      "signed_median_ms": -25.6,
+      "raw_abs_median_ms": 34.9,
+      "residual_abs_median_ms": 14.0,
+      "residual_iqr_ms": 29.3,
+      "drift_ms_per_min": 55.0,
+      "resid_within_21ms": 0.6736
+     }
+    },
+    "DDC": {
+     "ours": {
+      "n": 302,
+      "signed_median_ms": 59.5,
+      "raw_abs_median_ms": 60.4,
+      "residual_abs_median_ms": 4.6,
+      "residual_iqr_ms": 6.6,
+      "drift_ms_per_min": -2.2,
+      "resid_within_21ms": 0.8046
+     },
+     "indep": {
+      "n": 242,
+      "signed_median_ms": -29.7,
+      "raw_abs_median_ms": 35.8,
+      "residual_abs_median_ms": 10.0,
+      "residual_iqr_ms": 11.0,
+      "drift_ms_per_min": 54.0,
+      "resid_within_21ms": 0.8058
+     }
+    }
+   }
+  },
+  {
+   "title": "Lucky Lucky",
+   "true_bpm": 110.0,
+   "onsets_ours": 531,
+   "onsets_indep": 199,
+   "gen": {
+    "STEPFORGE": {
+     "ours": {
+      "n": 678,
+      "signed_median_ms": -6.6,
+      "raw_abs_median_ms": 7.4,
+      "residual_abs_median_ms": 6.0,
+      "residual_iqr_ms": 5.3,
+      "drift_ms_per_min": 20.4,
+      "resid_within_21ms": 0.9631
+     },
+     "indep": {
+      "n": 672,
+      "signed_median_ms": -86.4,
+      "raw_abs_median_ms": 92.2,
+      "residual_abs_median_ms": 26.1,
+      "residual_iqr_ms": 107.4,
+      "drift_ms_per_min": 18.8,
+      "resid_within_21ms": 0.4196
+     }
+    },
+    "AUTOSTEPPER": {
+     "ours": {
+      "n": 552,
+      "signed_median_ms": 63.0,
+      "raw_abs_median_ms": 64.0,
+      "residual_abs_median_ms": 3.8,
+      "residual_iqr_ms": 26.0,
+      "drift_ms_per_min": -3.7,
+      "resid_within_21ms": 0.7409
+     },
+     "indep": {
+      "n": 527,
+      "signed_median_ms": -24.9,
+      "raw_abs_median_ms": 28.5,
+      "residual_abs_median_ms": 8.5,
+      "residual_iqr_ms": 12.3,
+      "drift_ms_per_min": -23.2,
+      "resid_within_21ms": 0.8008
+     }
+    },
+    "DDC": {
+     "ours": {
+      "n": 771,
+      "signed_median_ms": 58.6,
+      "raw_abs_median_ms": 58.8,
+      "residual_abs_median_ms": 3.3,
+      "residual_iqr_ms": 5.1,
+      "drift_ms_per_min": -8.7,
+      "resid_within_21ms": 0.856
+     },
+     "indep": {
+      "n": 762,
+      "signed_median_ms": -31.3,
+      "raw_abs_median_ms": 34.7,
+      "residual_abs_median_ms": 8.0,
+      "residual_iqr_ms": 9.9,
+      "drift_ms_per_min": 22.0,
+      "resid_within_21ms": 0.8688
+     }
+    }
+   }
+  },
+  {
+   "title": "Robo Fast Food",
+   "true_bpm": 149.9,
+   "onsets_ours": 566,
+   "onsets_indep": 245,
+   "gen": {
+    "STEPFORGE": {
+     "ours": {
+      "n": 916,
+      "signed_median_ms": -3.6,
+      "raw_abs_median_ms": 6.9,
+      "residual_abs_median_ms": 7.2,
+      "residual_iqr_ms": 8.6,
+      "drift_ms_per_min": 18.9,
+      "resid_within_21ms": 0.9814
+     },
+     "indep": {
+      "n": 820,
+      "signed_median_ms": -87.7,
+      "raw_abs_median_ms": 93.6,
+      "residual_abs_median_ms": 14.4,
+      "residual_iqr_ms": 158.5,
+      "drift_ms_per_min": -23.7,
+      "resid_within_21ms": 0.6134
+     }
+    },
+    "AUTOSTEPPER": {
+     "ours": {
+      "n": 1196,
+      "signed_median_ms": 5.9,
+      "raw_abs_median_ms": 65.5,
+      "residual_abs_median_ms": 63.8,
+      "residual_iqr_ms": 66.3,
+      "drift_ms_per_min": 12.4,
+      "resid_within_21ms": 0.1639
+     },
+     "indep": {
+      "n": 1084,
+      "signed_median_ms": -10.2,
+      "raw_abs_median_ms": 77.1,
+      "residual_abs_median_ms": 75.8,
+      "residual_iqr_ms": 100.3,
+      "drift_ms_per_min": 12.1,
+      "resid_within_21ms": 0.1753
+     }
+    },
+    "DDC": {
+     "ours": {
+      "n": 484,
+      "signed_median_ms": 62.2,
+      "raw_abs_median_ms": 62.4,
+      "residual_abs_median_ms": 3.0,
+      "residual_iqr_ms": 4.5,
+      "drift_ms_per_min": 6.5,
+      "resid_within_21ms": 0.9132
+     },
+     "indep": {
+      "n": 467,
+      "signed_median_ms": -29.2,
+      "raw_abs_median_ms": 29.9,
+      "residual_abs_median_ms": 6.6,
+      "residual_iqr_ms": 9.5,
+      "drift_ms_per_min": 12.1,
+      "resid_within_21ms": 0.9208
+     }
+    }
+   }
+  },
+  {
+   "title": "Room Smells Like Poo (The Dog Just Took A Crap On The Floor)",
+   "true_bpm": 135.0,
+   "onsets_ours": 880,
+   "onsets_indep": 319,
+   "gen": {
+    "STEPFORGE": {
+     "ours": {
+      "n": 1238,
+      "signed_median_ms": -2.2,
+      "raw_abs_median_ms": 5.4,
+      "residual_abs_median_ms": 5.5,
+      "residual_iqr_ms": 8.7,
+      "drift_ms_per_min": -11.5,
+      "resid_within_21ms": 0.9095
+     },
+     "indep": {
+      "n": 1141,
+      "signed_median_ms": -83.4,
+      "raw_abs_median_ms": 93.4,
+      "residual_abs_median_ms": 26.2,
+      "residual_iqr_ms": 84.0,
+      "drift_ms_per_min": 10.3,
+      "resid_within_21ms": 0.4154
+     }
+    },
+    "AUTOSTEPPER": {
+     "ours": {
+      "n": 971,
+      "signed_median_ms": 60.6,
+      "raw_abs_median_ms": 62.0,
+      "residual_abs_median_ms": 6.0,
+      "residual_iqr_ms": 86.9,
+      "drift_ms_per_min": -15.3,
+      "resid_within_21ms": 0.6045
+     },
+     "indep": {
+      "n": 867,
+      "signed_median_ms": -26.7,
+      "raw_abs_median_ms": 33.6,
+      "residual_abs_median_ms": 12.7,
+      "residual_iqr_ms": 45.0,
+      "drift_ms_per_min": 2.7,
+      "resid_within_21ms": 0.6678
+     }
+    },
+    "DDC": {
+     "ours": {
+      "n": 917,
+      "signed_median_ms": 56.0,
+      "raw_abs_median_ms": 56.4,
+      "residual_abs_median_ms": 5.4,
+      "residual_iqr_ms": 54.0,
+      "drift_ms_per_min": -1.1,
+      "resid_within_21ms": 0.6903
+     },
+     "indep": {
+      "n": 872,
+      "signed_median_ms": -32.5,
+      "raw_abs_median_ms": 37.1,
+      "residual_abs_median_ms": 9.6,
+      "residual_iqr_ms": 15.8,
+      "drift_ms_per_min": -5.6,
+      "resid_within_21ms": 0.7615
+     }
+    }
+   }
+  },
+  {
+   "title": "Smile And Dance",
+   "true_bpm": 168.9,
+   "onsets_ours": 917,
+   "onsets_indep": 332,
+   "gen": {
+    "STEPFORGE": {
+     "ours": {
+      "n": 996,
+      "signed_median_ms": -0.6,
+      "raw_abs_median_ms": 2.9,
+      "residual_abs_median_ms": 2.6,
+      "residual_iqr_ms": 7.3,
+      "drift_ms_per_min": -15.6,
+      "resid_within_21ms": 0.8956
+     },
+     "indep": {
+      "n": 958,
+      "signed_median_ms": 73.5,
+      "raw_abs_median_ms": 81.0,
+      "residual_abs_median_ms": 12.9,
+      "residual_iqr_ms": 138.5,
+      "drift_ms_per_min": 77.2,
+      "resid_within_21ms": 0.618
+     }
+    },
+    "AUTOSTEPPER": {
+     "ours": {
+      "n": 511,
+      "signed_median_ms": 4.9,
+      "raw_abs_median_ms": 33.3,
+      "residual_abs_median_ms": 34.3,
+      "residual_iqr_ms": 42.2,
+      "drift_ms_per_min": -4.4,
+      "resid_within_21ms": 0.2857
+     },
+     "indep": {
+      "n": 513,
+      "signed_median_ms": 24.9,
+      "raw_abs_median_ms": 57.6,
+      "residual_abs_median_ms": 51.3,
+      "residual_iqr_ms": 64.8,
+      "drift_ms_per_min": -13.4,
+      "resid_within_21ms": 0.1657
+     }
+    },
+    "DDC": {
+     "ours": {
+      "n": 871,
+      "signed_median_ms": 57.1,
+      "raw_abs_median_ms": 57.1,
+      "residual_abs_median_ms": 3.9,
+      "residual_iqr_ms": 6.2,
+      "drift_ms_per_min": 11.0,
+      "resid_within_21ms": 0.8014
+     },
+     "indep": {
+      "n": 865,
+      "signed_median_ms": -35.6,
+      "raw_abs_median_ms": 37.2,
+      "residual_abs_median_ms": 6.6,
+      "residual_iqr_ms": 8.0,
+      "drift_ms_per_min": -1.4,
+      "resid_within_21ms": 0.8971
+     }
+    }
+   }
+  },
+  {
+   "title": "Stay Awake For Me",
+   "true_bpm": 171.2,
+   "onsets_ours": 1601,
+   "onsets_indep": 698,
+   "gen": {
+    "STEPFORGE": {
+     "ours": {
+      "n": 1548,
+      "signed_median_ms": -0.9,
+      "raw_abs_median_ms": 4.5,
+      "residual_abs_median_ms": 4.4,
+      "residual_iqr_ms": 5.8,
+      "drift_ms_per_min": 9.8,
+      "resid_within_21ms": 0.9167
+     },
+     "indep": {
+      "n": 1567,
+      "signed_median_ms": 41.1,
+      "raw_abs_median_ms": 76.8,
+      "residual_abs_median_ms": 46.8,
+      "residual_iqr_ms": 86.2,
+      "drift_ms_per_min": -6.7,
+      "resid_within_21ms": 0.0645
+     }
+    },
+    "AUTOSTEPPER": {
+     "ours": {
+      "n": 1113,
+      "signed_median_ms": 2.2,
+      "raw_abs_median_ms": 35.7,
+      "residual_abs_median_ms": 35.5,
+      "residual_iqr_ms": 50.6,
+      "drift_ms_per_min": 12.0,
+      "resid_within_21ms": 0.3154
+     },
+     "indep": {
+      "n": 1129,
+      "signed_median_ms": 4.3,
+      "raw_abs_median_ms": 49.9,
+      "residual_abs_median_ms": 49.1,
+      "residual_iqr_ms": 50.6,
+      "drift_ms_per_min": -0.1,
+      "resid_within_21ms": 0.217
+     }
+    },
+    "DDC": {
+     "ours": {
+      "n": 1384,
+      "signed_median_ms": 52.6,
+      "raw_abs_median_ms": 52.6,
+      "residual_abs_median_ms": 8.6,
+      "residual_iqr_ms": 80.6,
+      "drift_ms_per_min": -14.7,
+      "resid_within_21ms": 0.5795
+     },
+     "indep": {
+      "n": 1384,
+      "signed_median_ms": -33.2,
+      "raw_abs_median_ms": 35.7,
+      "residual_abs_median_ms": 7.2,
+      "residual_iqr_ms": 9.1,
+      "drift_ms_per_min": 0.5,
+      "resid_within_21ms": 0.8584
+     }
+    }
+   }
+  },
+  {
+   "title": "Streaming Is The Life For Me",
+   "true_bpm": 170.1,
+   "onsets_ours": 873,
+   "onsets_indep": 300,
+   "gen": {
+    "STEPFORGE": {
+     "ours": {
+      "n": 1129,
+      "signed_median_ms": -1.1,
+      "raw_abs_median_ms": 4.2,
+      "residual_abs_median_ms": 3.8,
+      "residual_iqr_ms": 7.3,
+      "drift_ms_per_min": -0.3,
+      "resid_within_21ms": 0.9132
+     },
+     "indep": {
+      "n": 1047,
+      "signed_median_ms": 69.8,
+      "raw_abs_median_ms": 80.4,
+      "residual_abs_median_ms": 19.5,
+      "residual_iqr_ms": 140.0,
+      "drift_ms_per_min": -8.3,
+      "resid_within_21ms": 0.5291
+     }
+    },
+    "AUTOSTEPPER": {
+     "ours": {
+      "n": 546,
+      "signed_median_ms": 9.0,
+      "raw_abs_median_ms": 43.0,
+      "residual_abs_median_ms": 43.2,
+      "residual_iqr_ms": 43.1,
+      "drift_ms_per_min": 40.1,
+      "resid_within_21ms": 0.2454
+     },
+     "indep": {
+      "n": 517,
+      "signed_median_ms": -3.0,
+      "raw_abs_median_ms": 44.1,
+      "residual_abs_median_ms": 45.1,
+      "residual_iqr_ms": 60.7,
+      "drift_ms_per_min": 24.7,
+      "resid_within_21ms": 0.2418
+     }
+    },
+    "DDC": {
+     "ours": {
+      "n": 803,
+      "signed_median_ms": 56.3,
+      "raw_abs_median_ms": 56.6,
+      "residual_abs_median_ms": 4.7,
+      "residual_iqr_ms": 9.2,
+      "drift_ms_per_min": -7.1,
+      "resid_within_21ms": 0.7584
+     },
+     "indep": {
+      "n": 774,
+      "signed_median_ms": -32.6,
+      "raw_abs_median_ms": 34.9,
+      "residual_abs_median_ms": 7.0,
+      "residual_iqr_ms": 9.5,
+      "drift_ms_per_min": 22.8,
+      "resid_within_21ms": 0.863
+     }
+    }
+   }
+  },
+  {
+   "title": "The Pools",
+   "true_bpm": 126.0,
+   "onsets_ours": 1337,
+   "onsets_indep": 400,
+   "gen": {
+    "STEPFORGE": {
+     "ours": {
+      "n": 1286,
+      "signed_median_ms": -18.1,
+      "raw_abs_median_ms": 19.1,
+      "residual_abs_median_ms": 10.2,
+      "residual_iqr_ms": 12.0,
+      "drift_ms_per_min": -14.3,
+      "resid_within_21ms": 0.8639
+     },
+     "indep": {
+      "n": 1211,
+      "signed_median_ms": -86.7,
+      "raw_abs_median_ms": 104.1,
+      "residual_abs_median_ms": 34.8,
+      "residual_iqr_ms": 165.5,
+      "drift_ms_per_min": 70.1,
+      "resid_within_21ms": 0.3196
+     }
+    },
+    "AUTOSTEPPER": {
+     "ours": {
+      "n": 1256,
+      "signed_median_ms": 65.5,
+      "raw_abs_median_ms": 66.5,
+      "residual_abs_median_ms": 6.1,
+      "residual_iqr_ms": 33.5,
+      "drift_ms_per_min": -6.3,
+      "resid_within_21ms": 0.7365
+     },
+     "indep": {
+      "n": 1107,
+      "signed_median_ms": -22.0,
+      "raw_abs_median_ms": 26.8,
+      "residual_abs_median_ms": 9.2,
+      "residual_iqr_ms": 11.1,
+      "drift_ms_per_min": 23.2,
+      "resid_within_21ms": 0.8356
+     }
+    },
+    "DDC": {
+     "ours": {
+      "n": 1565,
+      "signed_median_ms": 58.4,
+      "raw_abs_median_ms": 58.6,
+      "residual_abs_median_ms": 3.7,
+      "residual_iqr_ms": 4.8,
+      "drift_ms_per_min": -4.8,
+      "resid_within_21ms": 0.8824
+     },
+     "indep": {
+      "n": 1441,
+      "signed_median_ms": -29.8,
+      "raw_abs_median_ms": 34.0,
+      "residual_abs_median_ms": 8.3,
+      "residual_iqr_ms": 11.6,
+      "drift_ms_per_min": 22.2,
+      "resid_within_21ms": 0.8328
+     }
+    }
+   }
+  },
+  {
+   "title": "Token Economy",
+   "true_bpm": 173.5,
+   "onsets_ours": 1190,
+   "onsets_indep": 569,
+   "gen": {
+    "STEPFORGE": {
+     "ours": {
+      "n": 1326,
+      "signed_median_ms": 0.5,
+      "raw_abs_median_ms": 16.5,
+      "residual_abs_median_ms": 16.3,
+      "residual_iqr_ms": 26.3,
+      "drift_ms_per_min": -0.3,
+      "resid_within_21ms": 0.595
+     },
+     "indep": {
+      "n": 1326,
+      "signed_median_ms": -58.7,
+      "raw_abs_median_ms": 73.2,
+      "residual_abs_median_ms": 39.4,
+      "residual_iqr_ms": 53.5,
+      "drift_ms_per_min": 3.1,
+      "resid_within_21ms": 0.2428
+     }
+    },
+    "AUTOSTEPPER": {
+     "ours": {
+      "n": 1621,
+      "signed_median_ms": 74.4,
+      "raw_abs_median_ms": 74.6,
+      "residual_abs_median_ms": 9.4,
+      "residual_iqr_ms": 30.4,
+      "drift_ms_per_min": -3.5,
+      "resid_within_21ms": 0.694
+     },
+     "indep": {
+      "n": 1626,
+      "signed_median_ms": -9.1,
+      "raw_abs_median_ms": 12.8,
+      "residual_abs_median_ms": 10.0,
+      "residual_iqr_ms": 11.9,
+      "drift_ms_per_min": 16.8,
+      "resid_within_21ms": 0.8444
+     }
+    },
+    "DDC": {
+     "ours": {
+      "n": 1412,
+      "signed_median_ms": 58.2,
+      "raw_abs_median_ms": 58.4,
+      "residual_abs_median_ms": 3.3,
+      "residual_iqr_ms": 5.0,
+      "drift_ms_per_min": -15.2,
+      "resid_within_21ms": 0.8314
+     },
+     "indep": {
+      "n": 1412,
+      "signed_median_ms": -30.9,
+      "raw_abs_median_ms": 31.0,
+      "residual_abs_median_ms": 6.5,
+      "residual_iqr_ms": 7.6,
+      "drift_ms_per_min": 0.1,
+      "resid_within_21ms": 0.9731
+     }
+    }
+   }
+  },
+  {
+   "title": "消えてゆく",
+   "true_bpm": 126.0,
+   "onsets_ours": 1038,
+   "onsets_indep": 411,
+   "gen": {
+    "STEPFORGE": {
+     "ours": {
+      "n": 959,
+      "signed_median_ms": -10.3,
+      "raw_abs_median_ms": 10.3,
+      "residual_abs_median_ms": 2.9,
+      "residual_iqr_ms": 3.3,
+      "drift_ms_per_min": 0.7,
+      "resid_within_21ms": 0.9958
+     },
+     "indep": {
+      "n": 956,
+      "signed_median_ms": -98.2,
+      "raw_abs_median_ms": 98.2,
+      "residual_abs_median_ms": 11.6,
+      "residual_iqr_ms": 95.8,
+      "drift_ms_per_min": 2.1,
+      "resid_within_21ms": 0.6182
+     }
+    },
+    "AUTOSTEPPER": {
+     "ours": {
+      "n": 977,
+      "signed_median_ms": 81.5,
+      "raw_abs_median_ms": 85.4,
+      "residual_abs_median_ms": 33.1,
+      "residual_iqr_ms": 91.7,
+      "drift_ms_per_min": 5.4,
+      "resid_within_21ms": 0.3838
+     },
+     "indep": {
+      "n": 973,
+      "signed_median_ms": 3.8,
+      "raw_abs_median_ms": 13.6,
+      "residual_abs_median_ms": 12.7,
+      "residual_iqr_ms": 15.2,
+      "drift_ms_per_min": -1.1,
+      "resid_within_21ms": 0.741
+     }
+    },
+    "DDC": {
+     "ours": {
+      "n": 1098,
+      "signed_median_ms": 55.7,
+      "raw_abs_median_ms": 57.0,
+      "residual_abs_median_ms": 4.5,
+      "residual_iqr_ms": 8.1,
+      "drift_ms_per_min": 1.7,
+      "resid_within_21ms": 0.7914
+     },
+     "indep": {
+      "n": 1090,
+      "signed_median_ms": -34.6,
+      "raw_abs_median_ms": 37.2,
+      "residual_abs_median_ms": 7.6,
+      "residual_iqr_ms": 9.0,
+      "drift_ms_per_min": 5.9,
+      "resid_within_21ms": 0.8688
+     }
+    }
+   }
+  }
+ ]
+}

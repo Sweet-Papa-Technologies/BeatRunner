@@ -1,0 +1,1722 @@
+{
+ "label": "DDC",
+ "pack": "FoFo-Compare-Mix",
+ "songs": {
+  "Banana Banana [DDC]": {
+   "beginner": {
+    "notes": 98,
+    "onset_alignment": 0.051,
+    "grid_notes": 93,
+    "panel_balance": {
+     "L": 0.238,
+     "D": 0.248,
+     "U": 0.248,
+     "R": 0.267
+    },
+    "hold_share": 0.0612,
+    "jump_share": 0.0306,
+    "flow_cost_max": 38.0,
+    "flow_cost_mean": 8.04,
+    "density_energy_spearman": 0.1408,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 1,
+    "declared_bpm": 125.0,
+    "true_bpm": 167.34
+   },
+   "easy": {
+    "notes": 195,
+    "onset_alignment": 0.0718,
+    "grid_notes": 181,
+    "panel_balance": {
+     "L": 0.244,
+     "D": 0.244,
+     "U": 0.254,
+     "R": 0.259
+    },
+    "hold_share": 0.0308,
+    "jump_share": 0.0308,
+    "flow_cost_max": 39.0,
+    "flow_cost_mean": 10.61,
+    "density_energy_spearman": 0.387,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 3,
+    "declared_bpm": 125.0,
+    "true_bpm": 167.34
+   },
+   "medium": {
+    "notes": 243,
+    "onset_alignment": 0.0741,
+    "grid_notes": 225,
+    "panel_balance": {
+     "L": 0.252,
+     "D": 0.244,
+     "U": 0.248,
+     "R": 0.256
+    },
+    "hold_share": 0.0494,
+    "jump_share": 0.0123,
+    "flow_cost_max": 39.0,
+    "flow_cost_mean": 9.42,
+    "density_energy_spearman": 0.4381,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 5,
+    "declared_bpm": 125.0,
+    "true_bpm": 167.34
+   },
+   "hard": {
+    "notes": 333,
+    "onset_alignment": 0.0721,
+    "grid_notes": 309,
+    "panel_balance": {
+     "L": 0.244,
+     "D": 0.264,
+     "U": 0.256,
+     "R": 0.236
+    },
+    "hold_share": 0.021,
+    "jump_share": 0.0571,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 7.59,
+    "density_energy_spearman": 0.579,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 7,
+    "declared_bpm": 125.0,
+    "true_bpm": 167.34
+   },
+   "challenge": {
+    "notes": 431,
+    "onset_alignment": 0.1531,
+    "grid_notes": 365,
+    "panel_balance": {
+     "L": 0.245,
+     "D": 0.261,
+     "U": 0.268,
+     "R": 0.226
+    },
+    "hold_share": 0.0835,
+    "jump_share": 0.0046,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 8.33,
+    "density_energy_spearman": 0.5587,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 9,
+    "declared_bpm": 125.0,
+    "true_bpm": 167.34
+   }
+  },
+  "Bttr [DDC]": {
+   "beginner": {
+    "notes": 82,
+    "onset_alignment": 0.0488,
+    "grid_notes": 78,
+    "panel_balance": {
+     "L": 0.233,
+     "D": 0.244,
+     "U": 0.256,
+     "R": 0.267
+    },
+    "hold_share": 0.0,
+    "jump_share": 0.0488,
+    "flow_cost_max": 44.0,
+    "flow_cost_mean": 10.54,
+    "density_energy_spearman": 0.6666,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 1,
+    "declared_bpm": 125.0,
+    "true_bpm": 125.17
+   },
+   "easy": {
+    "notes": 127,
+    "onset_alignment": 0.0551,
+    "grid_notes": 120,
+    "panel_balance": {
+     "L": 0.25,
+     "D": 0.286,
+     "U": 0.257,
+     "R": 0.207
+    },
+    "hold_share": 0.2992,
+    "jump_share": 0.1024,
+    "flow_cost_max": 44.0,
+    "flow_cost_mean": 11.58,
+    "density_energy_spearman": 0.6982,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 3,
+    "declared_bpm": 125.0,
+    "true_bpm": 125.17
+   },
+   "medium": {
+    "notes": 157,
+    "onset_alignment": 0.0382,
+    "grid_notes": 151,
+    "panel_balance": {
+     "L": 0.222,
+     "D": 0.297,
+     "U": 0.241,
+     "R": 0.241
+    },
+    "hold_share": 0.0318,
+    "jump_share": 0.0064,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 9.25,
+    "density_energy_spearman": 0.6853,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 5,
+    "declared_bpm": 125.0,
+    "true_bpm": 125.17
+   },
+   "hard": {
+    "notes": 255,
+    "onset_alignment": 0.0431,
+    "grid_notes": 244,
+    "panel_balance": {
+     "L": 0.236,
+     "D": 0.255,
+     "U": 0.262,
+     "R": 0.247
+    },
+    "hold_share": 0.0353,
+    "jump_share": 0.0314,
+    "flow_cost_max": 16.0,
+    "flow_cost_mean": 8.15,
+    "density_energy_spearman": 0.552,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 7,
+    "declared_bpm": 125.0,
+    "true_bpm": 125.17
+   },
+   "challenge": {
+    "notes": 325,
+    "onset_alignment": 0.0492,
+    "grid_notes": 309,
+    "panel_balance": {
+     "L": 0.254,
+     "D": 0.263,
+     "U": 0.257,
+     "R": 0.226
+    },
+    "hold_share": 0.1169,
+    "jump_share": 0.0769,
+    "flow_cost_max": 16.0,
+    "flow_cost_mean": 7.58,
+    "density_energy_spearman": 0.3818,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 9,
+    "declared_bpm": 125.0,
+    "true_bpm": 125.17
+   }
+  },
+  "Do It For Me Now [DDC]": {
+   "beginner": {
+    "notes": 18,
+    "onset_alignment": 0.0556,
+    "grid_notes": 17,
+    "panel_balance": {
+     "L": 0.222,
+     "D": 0.278,
+     "U": 0.222,
+     "R": 0.278
+    },
+    "hold_share": 0.0,
+    "jump_share": 0.0,
+    "flow_cost_max": 13.85,
+    "flow_cost_mean": 7.89,
+    "density_energy_spearman": 0.5916,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": true,
+     "density_energy": true
+    },
+    "meter": 1,
+    "declared_bpm": 125.0,
+    "true_bpm": 143.27
+   },
+   "easy": {
+    "notes": 60,
+    "onset_alignment": 0.0333,
+    "grid_notes": 58,
+    "panel_balance": {
+     "L": 0.203,
+     "D": 0.266,
+     "U": 0.25,
+     "R": 0.281
+    },
+    "hold_share": 0.0,
+    "jump_share": 0.0667,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 8.13,
+    "density_energy_spearman": 0.667,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 3,
+    "declared_bpm": 125.0,
+    "true_bpm": 143.27
+   },
+   "medium": {
+    "notes": 105,
+    "onset_alignment": 0.0476,
+    "grid_notes": 100,
+    "panel_balance": {
+     "L": 0.245,
+     "D": 0.255,
+     "U": 0.255,
+     "R": 0.245
+    },
+    "hold_share": 0.0571,
+    "jump_share": 0.0095,
+    "flow_cost_max": 39.0,
+    "flow_cost_mean": 8.6,
+    "density_energy_spearman": 0.6774,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 5,
+    "declared_bpm": 125.0,
+    "true_bpm": 143.27
+   },
+   "hard": {
+    "notes": 271,
+    "onset_alignment": 0.0332,
+    "grid_notes": 262,
+    "panel_balance": {
+     "L": 0.248,
+     "D": 0.245,
+     "U": 0.252,
+     "R": 0.255
+    },
+    "hold_share": 0.0074,
+    "jump_share": 0.0111,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 8.15,
+    "density_energy_spearman": 0.6892,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 7,
+    "declared_bpm": 125.0,
+    "true_bpm": 143.27
+   },
+   "challenge": {
+    "notes": 376,
+    "onset_alignment": 0.0585,
+    "grid_notes": 354,
+    "panel_balance": {
+     "L": 0.227,
+     "D": 0.263,
+     "U": 0.281,
+     "R": 0.23
+    },
+    "hold_share": 0.0559,
+    "jump_share": 0.0426,
+    "flow_cost_max": 16.0,
+    "flow_cost_mean": 7.65,
+    "density_energy_spearman": 0.7107,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 9,
+    "declared_bpm": 125.0,
+    "true_bpm": 143.27
+   }
+  },
+  "Explicit - Fast And Free [DDC]": {
+   "beginner": {
+    "notes": 2,
+    "onset_alignment": 0.0,
+    "grid_notes": 2,
+    "panel_balance": {
+     "L": 0.5,
+     "D": 0.0,
+     "U": 0.0,
+     "R": 0.5
+    },
+    "hold_share": 0.0,
+    "jump_share": 0.0,
+    "flow_cost_max": 8.0,
+    "flow_cost_mean": 4.0,
+    "density_energy_spearman": -0.1925,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": false,
+     "hold_share": false,
+     "flow_ceiling": true,
+     "density_energy": false
+    },
+    "meter": 1,
+    "declared_bpm": 125.0,
+    "true_bpm": 119.94
+   },
+   "easy": {
+    "notes": 11,
+    "onset_alignment": 0.0909,
+    "grid_notes": 10,
+    "panel_balance": {
+     "L": 0.308,
+     "D": 0.077,
+     "U": 0.231,
+     "R": 0.385
+    },
+    "hold_share": 0.0,
+    "jump_share": 0.1818,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 5.5,
+    "density_energy_spearman": 0.0501,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": false,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 3,
+    "declared_bpm": 125.0,
+    "true_bpm": 119.94
+   },
+   "medium": {
+    "notes": 36,
+    "onset_alignment": 0.1389,
+    "grid_notes": 31,
+    "panel_balance": {
+     "L": 0.231,
+     "D": 0.256,
+     "U": 0.179,
+     "R": 0.333
+    },
+    "hold_share": 0.1944,
+    "jump_share": 0.0833,
+    "flow_cost_max": 39.0,
+    "flow_cost_mean": 8.04,
+    "density_energy_spearman": 0.4405,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 5,
+    "declared_bpm": 125.0,
+    "true_bpm": 119.94
+   },
+   "hard": {
+    "notes": 96,
+    "onset_alignment": 0.0938,
+    "grid_notes": 87,
+    "panel_balance": {
+     "L": 0.291,
+     "D": 0.209,
+     "U": 0.282,
+     "R": 0.218
+    },
+    "hold_share": 0.0833,
+    "jump_share": 0.1458,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 6.52,
+    "density_energy_spearman": 0.6666,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 7,
+    "declared_bpm": 125.0,
+    "true_bpm": 119.94
+   },
+   "challenge": {
+    "notes": 157,
+    "onset_alignment": 0.0892,
+    "grid_notes": 143,
+    "panel_balance": {
+     "L": 0.241,
+     "D": 0.253,
+     "U": 0.253,
+     "R": 0.253
+    },
+    "hold_share": 0.0955,
+    "jump_share": 0.0064,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 8.16,
+    "density_energy_spearman": 0.7985,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 9,
+    "declared_bpm": 125.0,
+    "true_bpm": 119.94
+   }
+  },
+  "Lucky Lucky [DDC]": {
+   "beginner": {
+    "notes": 72,
+    "onset_alignment": 0.0694,
+    "grid_notes": 67,
+    "panel_balance": {
+     "L": 0.267,
+     "D": 0.24,
+     "U": 0.227,
+     "R": 0.267
+    },
+    "hold_share": 0.0,
+    "jump_share": 0.0417,
+    "flow_cost_max": 38.0,
+    "flow_cost_mean": 10.66,
+    "density_energy_spearman": 0.3537,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 1,
+    "declared_bpm": 125.0,
+    "true_bpm": 109.96
+   },
+   "easy": {
+    "notes": 114,
+    "onset_alignment": 0.0702,
+    "grid_notes": 106,
+    "panel_balance": {
+     "L": 0.295,
+     "D": 0.233,
+     "U": 0.217,
+     "R": 0.256
+    },
+    "hold_share": 0.0351,
+    "jump_share": 0.1316,
+    "flow_cost_max": 39.15,
+    "flow_cost_mean": 10.37,
+    "density_energy_spearman": 0.5299,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 3,
+    "declared_bpm": 125.0,
+    "true_bpm": 109.96
+   },
+   "medium": {
+    "notes": 146,
+    "onset_alignment": 0.089,
+    "grid_notes": 133,
+    "panel_balance": {
+     "L": 0.273,
+     "D": 0.238,
+     "U": 0.233,
+     "R": 0.256
+    },
+    "hold_share": 0.0753,
+    "jump_share": 0.1781,
+    "flow_cost_max": 39.15,
+    "flow_cost_mean": 7.18,
+    "density_energy_spearman": 0.5208,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 5,
+    "declared_bpm": 125.0,
+    "true_bpm": 109.96
+   },
+   "hard": {
+    "notes": 192,
+    "onset_alignment": 0.0885,
+    "grid_notes": 175,
+    "panel_balance": {
+     "L": 0.247,
+     "D": 0.247,
+     "U": 0.237,
+     "R": 0.268
+    },
+    "hold_share": 0.2188,
+    "jump_share": 0.0104,
+    "flow_cost_max": 14.0,
+    "flow_cost_mean": 8.05,
+    "density_energy_spearman": 0.5352,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": true,
+     "density_energy": false
+    },
+    "meter": 7,
+    "declared_bpm": 125.0,
+    "true_bpm": 109.96
+   },
+   "challenge": {
+    "notes": 247,
+    "onset_alignment": 0.1336,
+    "grid_notes": 214,
+    "panel_balance": {
+     "L": 0.259,
+     "D": 0.241,
+     "U": 0.27,
+     "R": 0.23
+    },
+    "hold_share": 0.0486,
+    "jump_share": 0.1255,
+    "flow_cost_max": 16.0,
+    "flow_cost_mean": 6.87,
+    "density_energy_spearman": 0.3843,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 9,
+    "declared_bpm": 125.0,
+    "true_bpm": 109.96
+   }
+  },
+  "Robo Fast Food [DDC]": {
+   "beginner": {
+    "notes": 6,
+    "onset_alignment": 0.0,
+    "grid_notes": 6,
+    "panel_balance": {
+     "L": 0.286,
+     "D": 0.143,
+     "U": 0.286,
+     "R": 0.286
+    },
+    "hold_share": 0.0,
+    "jump_share": 0.1667,
+    "flow_cost_max": 29.0,
+    "flow_cost_mean": 8.92,
+    "density_energy_spearman": -0.1065,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": false,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 1,
+    "declared_bpm": 125.0,
+    "true_bpm": 149.95
+   },
+   "easy": {
+    "notes": 28,
+    "onset_alignment": 0.0357,
+    "grid_notes": 27,
+    "panel_balance": {
+     "L": 0.276,
+     "D": 0.207,
+     "U": 0.207,
+     "R": 0.31
+    },
+    "hold_share": 0.0,
+    "jump_share": 0.0357,
+    "flow_cost_max": 39.0,
+    "flow_cost_mean": 9.18,
+    "density_energy_spearman": 0.0858,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 3,
+    "declared_bpm": 125.0,
+    "true_bpm": 149.95
+   },
+   "medium": {
+    "notes": 53,
+    "onset_alignment": 0.0189,
+    "grid_notes": 52,
+    "panel_balance": {
+     "L": 0.259,
+     "D": 0.222,
+     "U": 0.222,
+     "R": 0.296
+    },
+    "hold_share": 0.0,
+    "jump_share": 0.0189,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 9.85,
+    "density_energy_spearman": 0.3459,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 5,
+    "declared_bpm": 125.0,
+    "true_bpm": 149.95
+   },
+   "hard": {
+    "notes": 152,
+    "onset_alignment": 0.0395,
+    "grid_notes": 146,
+    "panel_balance": {
+     "L": 0.21,
+     "D": 0.274,
+     "U": 0.268,
+     "R": 0.248
+    },
+    "hold_share": 0.0132,
+    "jump_share": 0.0329,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 8.72,
+    "density_energy_spearman": 0.5765,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 7,
+    "declared_bpm": 125.0,
+    "true_bpm": 149.95
+   },
+   "challenge": {
+    "notes": 250,
+    "onset_alignment": 0.04,
+    "grid_notes": 240,
+    "panel_balance": {
+     "L": 0.243,
+     "D": 0.27,
+     "U": 0.232,
+     "R": 0.255
+    },
+    "hold_share": 0.0,
+    "jump_share": 0.052,
+    "flow_cost_max": 14.0,
+    "flow_cost_mean": 7.35,
+    "density_energy_spearman": 0.5335,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": true,
+     "density_energy": false
+    },
+    "meter": 9,
+    "declared_bpm": 125.0,
+    "true_bpm": 149.95
+   }
+  },
+  "Room Smells Like Poo (The Dog Just Took A Crap On The Floor) [DDC]": {
+   "beginner": {
+    "notes": 28,
+    "onset_alignment": 0.0714,
+    "grid_notes": 26,
+    "panel_balance": {
+     "L": 0.289,
+     "D": 0.184,
+     "U": 0.263,
+     "R": 0.263
+    },
+    "hold_share": 0.0357,
+    "jump_share": 0.3571,
+    "flow_cost_max": 44.0,
+    "flow_cost_mean": 10.53,
+    "density_energy_spearman": 0.1838,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 1,
+    "declared_bpm": 125.0,
+    "true_bpm": 135.04
+   },
+   "easy": {
+    "notes": 102,
+    "onset_alignment": 0.1176,
+    "grid_notes": 90,
+    "panel_balance": {
+     "L": 0.257,
+     "D": 0.248,
+     "U": 0.248,
+     "R": 0.248
+    },
+    "hold_share": 0.0,
+    "jump_share": 0.0294,
+    "flow_cost_max": 38.0,
+    "flow_cost_mean": 9.99,
+    "density_energy_spearman": 0.2557,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 3,
+    "declared_bpm": 125.0,
+    "true_bpm": 135.04
+   },
+   "medium": {
+    "notes": 149,
+    "onset_alignment": 0.1007,
+    "grid_notes": 134,
+    "panel_balance": {
+     "L": 0.227,
+     "D": 0.24,
+     "U": 0.267,
+     "R": 0.267
+    },
+    "hold_share": 0.0,
+    "jump_share": 0.0067,
+    "flow_cost_max": 39.0,
+    "flow_cost_mean": 8.51,
+    "density_energy_spearman": 0.3793,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 5,
+    "declared_bpm": 125.0,
+    "true_bpm": 135.04
+   },
+   "hard": {
+    "notes": 268,
+    "onset_alignment": 0.097,
+    "grid_notes": 242,
+    "panel_balance": {
+     "L": 0.239,
+     "D": 0.257,
+     "U": 0.264,
+     "R": 0.239
+    },
+    "hold_share": 0.0224,
+    "jump_share": 0.0299,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 7.87,
+    "density_energy_spearman": 0.2403,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 7,
+    "declared_bpm": 125.0,
+    "true_bpm": 135.04
+   },
+   "challenge": {
+    "notes": 371,
+    "onset_alignment": 0.1105,
+    "grid_notes": 330,
+    "panel_balance": {
+     "L": 0.246,
+     "D": 0.248,
+     "U": 0.253,
+     "R": 0.253
+    },
+    "hold_share": 0.0997,
+    "jump_share": 0.0755,
+    "flow_cost_max": 16.0,
+    "flow_cost_mean": 7.27,
+    "density_energy_spearman": 0.119,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 9,
+    "declared_bpm": 125.0,
+    "true_bpm": 135.04
+   }
+  },
+  "Smile And Dance [DDC]": {
+   "beginner": {
+    "notes": 60,
+    "onset_alignment": 0.0167,
+    "grid_notes": 59,
+    "panel_balance": {
+     "L": 0.311,
+     "D": 0.213,
+     "U": 0.148,
+     "R": 0.328
+    },
+    "hold_share": 0.0167,
+    "jump_share": 0.0167,
+    "flow_cost_max": 14.0,
+    "flow_cost_mean": 9.23,
+    "density_energy_spearman": 0.704,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": false,
+     "hold_share": false,
+     "flow_ceiling": true,
+     "density_energy": true
+    },
+    "meter": 1,
+    "declared_bpm": 125.0,
+    "true_bpm": 168.93
+   },
+   "easy": {
+    "notes": 83,
+    "onset_alignment": 0.0964,
+    "grid_notes": 75,
+    "panel_balance": {
+     "L": 0.279,
+     "D": 0.221,
+     "U": 0.233,
+     "R": 0.267
+    },
+    "hold_share": 0.0,
+    "jump_share": 0.0361,
+    "flow_cost_max": 8.15,
+    "flow_cost_mean": 7.42,
+    "density_energy_spearman": 0.6978,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": true,
+     "density_energy": true
+    },
+    "meter": 3,
+    "declared_bpm": 125.0,
+    "true_bpm": 168.93
+   },
+   "medium": {
+    "notes": 121,
+    "onset_alignment": 0.1405,
+    "grid_notes": 104,
+    "panel_balance": {
+     "L": 0.208,
+     "D": 0.256,
+     "U": 0.264,
+     "R": 0.272
+    },
+    "hold_share": 0.0496,
+    "jump_share": 0.0331,
+    "flow_cost_max": 39.0,
+    "flow_cost_mean": 8.94,
+    "density_energy_spearman": 0.6929,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 5,
+    "declared_bpm": 125.0,
+    "true_bpm": 168.93
+   },
+   "hard": {
+    "notes": 237,
+    "onset_alignment": 0.1097,
+    "grid_notes": 211,
+    "panel_balance": {
+     "L": 0.269,
+     "D": 0.223,
+     "U": 0.277,
+     "R": 0.231
+    },
+    "hold_share": 0.0042,
+    "jump_share": 0.0042,
+    "flow_cost_max": 16.0,
+    "flow_cost_mean": 8.4,
+    "density_energy_spearman": 0.7301,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 7,
+    "declared_bpm": 125.0,
+    "true_bpm": 168.93
+   },
+   "challenge": {
+    "notes": 370,
+    "onset_alignment": 0.1946,
+    "grid_notes": 298,
+    "panel_balance": {
+     "L": 0.232,
+     "D": 0.243,
+     "U": 0.286,
+     "R": 0.24
+    },
+    "hold_share": 0.0946,
+    "jump_share": 0.0027,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 8.04,
+    "density_energy_spearman": 0.5328,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 9,
+    "declared_bpm": 125.0,
+    "true_bpm": 168.93
+   }
+  },
+  "Stay Awake For Me [DDC]": {
+   "beginner": {
+    "notes": 46,
+    "onset_alignment": 0.2609,
+    "grid_notes": 34,
+    "panel_balance": {
+     "L": 0.259,
+     "D": 0.207,
+     "U": 0.276,
+     "R": 0.259
+    },
+    "hold_share": 0.0,
+    "jump_share": 0.2609,
+    "flow_cost_max": 39.0,
+    "flow_cost_mean": 6.02,
+    "density_energy_spearman": 0.7113,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 1,
+    "declared_bpm": 125.0,
+    "true_bpm": 171.23
+   },
+   "easy": {
+    "notes": 105,
+    "onset_alignment": 0.2286,
+    "grid_notes": 81,
+    "panel_balance": {
+     "L": 0.229,
+     "D": 0.257,
+     "U": 0.267,
+     "R": 0.248
+    },
+    "hold_share": 0.1048,
+    "jump_share": 0.0,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 8.84,
+    "density_energy_spearman": 0.7488,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 3,
+    "declared_bpm": 125.0,
+    "true_bpm": 171.23
+   },
+   "medium": {
+    "notes": 176,
+    "onset_alignment": 0.2045,
+    "grid_notes": 140,
+    "panel_balance": {
+     "L": 0.242,
+     "D": 0.289,
+     "U": 0.247,
+     "R": 0.222
+    },
+    "hold_share": 0.0,
+    "jump_share": 0.1023,
+    "flow_cost_max": 39.15,
+    "flow_cost_mean": 9.18,
+    "density_energy_spearman": 0.6912,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 5,
+    "declared_bpm": 125.0,
+    "true_bpm": 171.23
+   },
+   "hard": {
+    "notes": 399,
+    "onset_alignment": 0.208,
+    "grid_notes": 316,
+    "panel_balance": {
+     "L": 0.267,
+     "D": 0.259,
+     "U": 0.237,
+     "R": 0.237
+    },
+    "hold_share": 0.0301,
+    "jump_share": 0.005,
+    "flow_cost_max": 16.0,
+    "flow_cost_mean": 8.08,
+    "density_energy_spearman": 0.6396,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 7,
+    "declared_bpm": 125.0,
+    "true_bpm": 171.23
+   },
+   "challenge": {
+    "notes": 659,
+    "onset_alignment": 0.2974,
+    "grid_notes": 463,
+    "panel_balance": {
+     "L": 0.243,
+     "D": 0.254,
+     "U": 0.255,
+     "R": 0.248
+    },
+    "hold_share": 0.0698,
+    "jump_share": 0.0228,
+    "flow_cost_max": 16.0,
+    "flow_cost_mean": 8.13,
+    "density_energy_spearman": 0.5331,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 9,
+    "declared_bpm": 125.0,
+    "true_bpm": 171.23
+   }
+  },
+  "Streaming Is The Life For Me [DDC]": {
+   "beginner": {
+    "notes": 27,
+    "onset_alignment": 0.1852,
+    "grid_notes": 22,
+    "panel_balance": {
+     "L": 0.259,
+     "D": 0.222,
+     "U": 0.259,
+     "R": 0.259
+    },
+    "hold_share": 0.0,
+    "jump_share": 0.0,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 8.15,
+    "density_energy_spearman": 0.4873,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 1,
+    "declared_bpm": 125.0,
+    "true_bpm": 170.12
+   },
+   "easy": {
+    "notes": 82,
+    "onset_alignment": 0.1707,
+    "grid_notes": 68,
+    "panel_balance": {
+     "L": 0.281,
+     "D": 0.213,
+     "U": 0.236,
+     "R": 0.27
+    },
+    "hold_share": 0.1098,
+    "jump_share": 0.0854,
+    "flow_cost_max": 39.0,
+    "flow_cost_mean": 11.01,
+    "density_energy_spearman": 0.4981,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 3,
+    "declared_bpm": 125.0,
+    "true_bpm": 170.12
+   },
+   "medium": {
+    "notes": 111,
+    "onset_alignment": 0.2162,
+    "grid_notes": 87,
+    "panel_balance": {
+     "L": 0.241,
+     "D": 0.268,
+     "U": 0.277,
+     "R": 0.214
+    },
+    "hold_share": 0.009,
+    "jump_share": 0.009,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 8.16,
+    "density_energy_spearman": 0.4959,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 5,
+    "declared_bpm": 125.0,
+    "true_bpm": 170.12
+   },
+   "hard": {
+    "notes": 229,
+    "onset_alignment": 0.1878,
+    "grid_notes": 186,
+    "panel_balance": {
+     "L": 0.252,
+     "D": 0.239,
+     "U": 0.252,
+     "R": 0.256
+    },
+    "hold_share": 0.0044,
+    "jump_share": 0.0218,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 7.96,
+    "density_energy_spearman": 0.4057,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 7,
+    "declared_bpm": 125.0,
+    "true_bpm": 170.12
+   },
+   "challenge": {
+    "notes": 354,
+    "onset_alignment": 0.2147,
+    "grid_notes": 278,
+    "panel_balance": {
+     "L": 0.262,
+     "D": 0.245,
+     "U": 0.248,
+     "R": 0.245
+    },
+    "hold_share": 0.1215,
+    "jump_share": 0.0367,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 7.72,
+    "density_energy_spearman": 0.2657,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 9,
+    "declared_bpm": 125.0,
+    "true_bpm": 170.12
+   }
+  },
+  "The Pools [DDC]": {
+   "beginner": {
+    "notes": 98,
+    "onset_alignment": 0.0204,
+    "grid_notes": 96,
+    "panel_balance": {
+     "L": 0.291,
+     "D": 0.255,
+     "U": 0.227,
+     "R": 0.227
+    },
+    "hold_share": 0.1429,
+    "jump_share": 0.1224,
+    "flow_cost_max": 39.0,
+    "flow_cost_mean": 7.61,
+    "density_energy_spearman": -0.109,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 1,
+    "declared_bpm": 125.0,
+    "true_bpm": 126.05
+   },
+   "easy": {
+    "notes": 202,
+    "onset_alignment": 0.0347,
+    "grid_notes": 195,
+    "panel_balance": {
+     "L": 0.224,
+     "D": 0.263,
+     "U": 0.263,
+     "R": 0.249
+    },
+    "hold_share": 0.0446,
+    "jump_share": 0.0149,
+    "flow_cost_max": 44.0,
+    "flow_cost_mean": 8.6,
+    "density_energy_spearman": 0.1221,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 3,
+    "declared_bpm": 125.0,
+    "true_bpm": 126.05
+   },
+   "medium": {
+    "notes": 286,
+    "onset_alignment": 0.035,
+    "grid_notes": 276,
+    "panel_balance": {
+     "L": 0.256,
+     "D": 0.245,
+     "U": 0.251,
+     "R": 0.248
+    },
+    "hold_share": 0.1329,
+    "jump_share": 0.2413,
+    "flow_cost_max": 39.0,
+    "flow_cost_mean": 6.64,
+    "density_energy_spearman": 0.0512,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 5,
+    "declared_bpm": 125.0,
+    "true_bpm": 126.05
+   },
+   "hard": {
+    "notes": 433,
+    "onset_alignment": 0.0393,
+    "grid_notes": 416,
+    "panel_balance": {
+     "L": 0.255,
+     "D": 0.253,
+     "U": 0.242,
+     "R": 0.249
+    },
+    "hold_share": 0.0439,
+    "jump_share": 0.0762,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 7.96,
+    "density_energy_spearman": 0.1563,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 7,
+    "declared_bpm": 125.0,
+    "true_bpm": 126.05
+   },
+   "challenge": {
+    "notes": 551,
+    "onset_alignment": 0.0472,
+    "grid_notes": 525,
+    "panel_balance": {
+     "L": 0.22,
+     "D": 0.259,
+     "U": 0.287,
+     "R": 0.234
+    },
+    "hold_share": 0.0599,
+    "jump_share": 0.0163,
+    "flow_cost_max": 16.0,
+    "flow_cost_mean": 8.39,
+    "density_energy_spearman": 0.1137,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 9,
+    "declared_bpm": 125.0,
+    "true_bpm": 126.05
+   }
+  },
+  "Token Economy [DDC]": {
+   "beginner": {
+    "notes": 90,
+    "onset_alignment": 0.1111,
+    "grid_notes": 80,
+    "panel_balance": {
+     "L": 0.242,
+     "D": 0.242,
+     "U": 0.275,
+     "R": 0.242
+    },
+    "hold_share": 0.0222,
+    "jump_share": 0.0111,
+    "flow_cost_max": 39.0,
+    "flow_cost_mean": 8.64,
+    "density_energy_spearman": 0.7611,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 1,
+    "declared_bpm": 125.0,
+    "true_bpm": 173.47
+   },
+   "easy": {
+    "notes": 156,
+    "onset_alignment": 0.1026,
+    "grid_notes": 140,
+    "panel_balance": {
+     "L": 0.252,
+     "D": 0.233,
+     "U": 0.258,
+     "R": 0.258
+    },
+    "hold_share": 0.1923,
+    "jump_share": 0.0192,
+    "flow_cost_max": 39.0,
+    "flow_cost_mean": 8.28,
+    "density_energy_spearman": 0.7852,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 3,
+    "declared_bpm": 125.0,
+    "true_bpm": 173.47
+   },
+   "medium": {
+    "notes": 219,
+    "onset_alignment": 0.0822,
+    "grid_notes": 201,
+    "panel_balance": {
+     "L": 0.233,
+     "D": 0.263,
+     "U": 0.25,
+     "R": 0.254
+    },
+    "hold_share": 0.0639,
+    "jump_share": 0.0594,
+    "flow_cost_max": 39.0,
+    "flow_cost_mean": 8.43,
+    "density_energy_spearman": 0.7275,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 5,
+    "declared_bpm": 125.0,
+    "true_bpm": 173.47
+   },
+   "hard": {
+    "notes": 414,
+    "onset_alignment": 0.0483,
+    "grid_notes": 394,
+    "panel_balance": {
+     "L": 0.249,
+     "D": 0.262,
+     "U": 0.242,
+     "R": 0.247
+    },
+    "hold_share": 0.1618,
+    "jump_share": 0.0773,
+    "flow_cost_max": 14.0,
+    "flow_cost_mean": 7.06,
+    "density_energy_spearman": 0.4373,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": true,
+     "density_energy": false
+    },
+    "meter": 7,
+    "declared_bpm": 125.0,
+    "true_bpm": 173.47
+   },
+   "challenge": {
+    "notes": 533,
+    "onset_alignment": 0.045,
+    "grid_notes": 509,
+    "panel_balance": {
+     "L": 0.224,
+     "D": 0.268,
+     "U": 0.261,
+     "R": 0.247
+    },
+    "hold_share": 0.1144,
+    "jump_share": 0.1144,
+    "flow_cost_max": 16.0,
+    "flow_cost_mean": 6.73,
+    "density_energy_spearman": 0.3742,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 9,
+    "declared_bpm": 125.0,
+    "true_bpm": 173.47
+   }
+  },
+  "\u6d88\u3048\u3066\u3086\u304f [DDC]": {
+   "beginner": {
+    "notes": 50,
+    "onset_alignment": 0.08,
+    "grid_notes": 46,
+    "panel_balance": {
+     "L": 0.231,
+     "D": 0.25,
+     "U": 0.25,
+     "R": 0.269
+    },
+    "hold_share": 0.0,
+    "jump_share": 0.04,
+    "flow_cost_max": 39.0,
+    "flow_cost_mean": 9.9,
+    "density_energy_spearman": 0.6049,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 1,
+    "declared_bpm": 125.0,
+    "true_bpm": 126.05
+   },
+   "easy": {
+    "notes": 115,
+    "onset_alignment": 0.0783,
+    "grid_notes": 106,
+    "panel_balance": {
+     "L": 0.234,
+     "D": 0.241,
+     "U": 0.248,
+     "R": 0.277
+    },
+    "hold_share": 0.0174,
+    "jump_share": 0.1913,
+    "flow_cost_max": 44.0,
+    "flow_cost_mean": 8.75,
+    "density_energy_spearman": 0.649,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 3,
+    "declared_bpm": 125.0,
+    "true_bpm": 126.05
+   },
+   "medium": {
+    "notes": 158,
+    "onset_alignment": 0.0633,
+    "grid_notes": 148,
+    "panel_balance": {
+     "L": 0.225,
+     "D": 0.212,
+     "U": 0.263,
+     "R": 0.3
+    },
+    "hold_share": 0.2532,
+    "jump_share": 0.0127,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 8.1,
+    "density_energy_spearman": 0.6492,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 5,
+    "declared_bpm": 125.0,
+    "true_bpm": 126.05
+   },
+   "hard": {
+    "notes": 312,
+    "onset_alignment": 0.0385,
+    "grid_notes": 300,
+    "panel_balance": {
+     "L": 0.244,
+     "D": 0.251,
+     "U": 0.257,
+     "R": 0.248
+    },
+    "hold_share": 0.0224,
+    "jump_share": 0.0096,
+    "flow_cost_max": 14.0,
+    "flow_cost_mean": 7.84,
+    "density_energy_spearman": 0.5297,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": true,
+     "density_energy": false
+    },
+    "meter": 7,
+    "declared_bpm": 125.0,
+    "true_bpm": 126.05
+   },
+   "challenge": {
+    "notes": 463,
+    "onset_alignment": 0.0626,
+    "grid_notes": 434,
+    "panel_balance": {
+     "L": 0.235,
+     "D": 0.254,
+     "U": 0.26,
+     "R": 0.252
+    },
+    "hold_share": 0.0994,
+    "jump_share": 0.0216,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 7.94,
+    "density_energy_spearman": 0.4534,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": false
+    },
+    "meter": 9,
+    "declared_bpm": 125.0,
+    "true_bpm": 126.05
+   }
+  }
+ }
+}
