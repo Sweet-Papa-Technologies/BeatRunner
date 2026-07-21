@@ -185,6 +185,23 @@ def cmd_saberforge(a):
               f"njs_const={r['njs_constant']}, {ver}) -> {r['out']}  [{cs}]")
 
 
+def cmd_cost_report(a):
+    """REQ-R2-COST-03: roll build/cost/*/cost_ledger.jsonl into $/song, $/chart,
+    $ by stage, the token breakdown, and the five priciest calls."""
+    from .costreport import render_markdown, write_report
+    rollup = write_report(song=getattr(a, "track", None))
+    if rollup["totals"]["model_calls"] == 0 and rollup["totals"]["compute_events"] == 0:
+        print(f"[cost-report] no ledger entries under "
+              f"{config.COST_DIR.relative_to(config.REPO_ROOT)} — run a chart first.")
+        return
+    print(render_markdown(rollup) if a.stdout else
+          f"[cost-report] {rollup['totals']['model_calls']} model call(s), "
+          f"${rollup['totals']['usd']:.4f} total, "
+          f"${rollup['totals']['usd_per_song']:.4f}/song, "
+          f"${rollup['totals']['usd_per_chart']:.4f}/chart -> "
+          f"{(config.COST_DIR / 'cost-report.md').relative_to(config.REPO_ROOT)}")
+
+
 def cmd_all(a):
     from .pipeline import chart_track
     from .llm import make_llm_client
@@ -237,6 +254,12 @@ def build_parser():
     av.add_argument("--with-gen", action="store_false", dest="skip_gen",
                     help="run the generation loop first")
 
+    cr = sub.add_parser("cost-report",
+                        help="roll cost ledgers into $/song, $/chart, $ by stage")
+    cr.add_argument("--track", help="single track id (default: every ledger)")
+    cr.add_argument("--stdout", action="store_true",
+                    help="print the full markdown report instead of a one-line summary")
+
     cmp = sub.add_parser("compare", help="benchmark OpenAI-compatible model vs Gemini 3.5 Flash")
     common(cmp)
     cmp.add_argument("--probe-only", action="store_true", dest="probe_only",
@@ -269,7 +292,8 @@ def build_parser():
     for name, fn in {"analyze": cmd_analyze, "chart": cmd_chart, "validate": cmd_validate,
                      "qa": cmd_qa, "generate": cmd_generate, "all": cmd_all,
                      "compare": cmd_compare, "stepforge": cmd_stepforge,
-                     "saberforge": cmd_saberforge}.items():
+                     "saberforge": cmd_saberforge,
+                     "cost-report": cmd_cost_report}.items():
         sub.choices[name].set_defaults(fn=fn)
     return p
 

@@ -9,6 +9,15 @@ import soundfile as sf
 from beatforge import config
 
 
+@pytest.fixture(autouse=True)
+def _isolate_cost_ledger(tmp_path, monkeypatch):
+    """Keep test runs out of the repo's real build/cost/ ledgers. Any test that
+    exercises a client without an explicit `ledger.capture()` still writes a
+    ledger line — by design (REQ-R2-COST-01: nothing goes unrecorded) — so it has
+    to land somewhere disposable, not in the artifact a cost report reads."""
+    monkeypatch.setattr(config, "COST_DIR", tmp_path / "cost")
+
+
 @pytest.fixture
 def click_wav(tmp_path):
     """Factory: a synthetic click track at a known BPM (impulses on every beat +

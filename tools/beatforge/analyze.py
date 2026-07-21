@@ -8,9 +8,10 @@ local-fallback contract (REQ-COMPUTE-05). Never touches the CLI or DSP directly
 from __future__ import annotations
 
 import json
+import time
 from pathlib import Path
 
-from . import config, dsp
+from . import config, dsp, ledger
 from .compute import (AnalysisResult, ColabError, ComputeBackend,
                       LocalCpuBackend, make_backend)
 
@@ -57,16 +58,41 @@ def analyze_track(
     if not opts.force:
         cached = load_cached(track_id)
         if cached and cached.get("cache_key") == key:
+            # REQ-R2-COST-02: a cache hit is logged as an explicit $0 entry. An
+            # absent entry would be indistinguishable from missing instrumentation,
+            # and "re-runs cost nothing for analysis" is a claim the ledger has to
+            # be able to substantiate, not just imply.
+            ledger.record_compute(
+                stage_name="analysis", song=track_id, backend=opts.backend,
+                gpu=None, minutes=0.0, cache_hit=True,
+                detail={"cache_key": key, "reason": "analysis cache hit"})
             return cached
 
     own_backend = backend is None
     if backend is None:
         backend = make_backend(opts)
+    t0 = time.monotonic()
     try:
         result = _run_with_degradation(audio, opts, backend)
     finally:
         if own_backend:
             backend.close()
+
+    # Prefer the job's own self-reported wall clock (Colab measures the work
+    # itself); fall back to what we timed from here, marked estimated, so a
+    # backend that can't report still produces a number instead of a blank.
+    wall = result.job_meta.get("wall_clock_s")
+    estimated = wall is None
+    minutes = (float(wall) if wall is not None else (time.monotonic() - t0)) / 60.0
+    ledger.record_compute(
+        stage_name="analysis", song=track_id,
+        backend=result.job_meta.get("backend", opts.backend),
+        gpu=result.job_meta.get("gpu"), minutes=minutes, cache_hit=False,
+        estimated=estimated,
+        detail={"cache_key": key,
+                "stem_source": result.job_meta.get("stem_source"),
+                "beat_backend": result.job_meta.get("beat_backend"),
+                "onsets": len(result.analysis.get("onsets", []))})
 
     analysis = result.analysis
     analysis["cache_key"] = key

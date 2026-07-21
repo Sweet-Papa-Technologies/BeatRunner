@@ -1,14 +1,24 @@
 {
-  "score": 6,
-  "verdict": "A rhythmically accurate chart that tracks the song's energy well, but is severely held back by a complete right-side jump bias and some awkward stream transitions.",
+  "score": 5,
+  "verdict": "The chart features decent pattern variety but is marred by awkward hold-tap interactions and poor density scaling during key parts of the song.",
+  "measured_rho": 0.3621,
+  "dynamics": "The chart's density does not track the song's energy well, failing the correlation gate due to overly sparse sections during active musical phrases.",
   "issues": [
     {
-      "where": "Entire chart",
-      "problem": "Extreme right-side bias in jump selection. Out of 31 total jumps, every single one involves the Right panel (UR, DR, LR). The complete absence of UL or DL jumps makes the physical movement feel incredibly lopsided and repetitive."
+      "where": "4.768",
+      "problem": "Holding Left while hitting a Right + Up jump is physically awkward and forces an uncomfortable stretch."
     },
     {
-      "where": "56.390 - 58.056",
-      "problem": "Awkward stream flow. Rapid sequences like U -> D -> R and U -> D -> L force either uncomfortable crossovers or double-steps that disrupt the physical flow for a chart of this density."
+      "where": "24.285",
+      "problem": "Overlapping Right and Down holds create a tight visual and physical cluster that is difficult to execute alongside the subsequent taps."
+    },
+    {
+      "where": "bars 42-43",
+      "problem": "The density drops significantly (4.0 notes/bar) during an energetic section of the song, making the gameplay feel empty."
+    },
+    {
+      "where": "bars 67-69",
+      "problem": "An abrupt drop in step density down to 0.5 notes/bar halts the chart's momentum while the music is still active."
     }
   ],
   "human_review": true

@@ -1,6 +1,7 @@
 """DSP ground-truth tests (REQ-DSP-01..04). Runs on synthetic clips in-process
 — no CLI, no Colab, no network."""
 import numpy as np
+import pytest
 
 from beatforge import config, dsp
 
@@ -58,3 +59,43 @@ def test_energy_curve_length_equals_bar_count(click_wav):
     a = dsp.analyze_signal(click_wav(bpm=120.0, dur_s=16.0))
     total_bars = sum(s["end_bar"] - s["start_bar"] for s in a["sections"])
     assert len(a["energy_curve"]) == total_bars
+
+
+# --------------------------------------------------------------------------- #
+# REQ-R2-OUT-01 — second-pass offset fit from refined onset times
+# --------------------------------------------------------------------------- #
+def test_offset_correction_is_skipped_when_the_grid_is_already_right():
+    """Below the threshold the median snap error is noise. Re-phasing on noise
+    would jitter tracks whose offset was already correct — most of the fleet."""
+    onsets = [{"snap_error_ms": e} for e in ([1.0, -1.0] * 40)]
+    off, corr = dsp.refine_offset_from_onsets(onsets, 0.5, 120.0)
+    assert corr == 0.0 and off == 0.5
+
+
+def test_offset_correction_shifts_the_grid_by_the_median_snap_error():
+    """A consistently-signed snap error IS the grid's own error: onsets landing
+    late of their line mean the line is early."""
+    onsets = [{"snap_error_ms": 25.0}] * 100
+    off, corr = dsp.refine_offset_from_onsets(onsets, 0.459, 126.0)
+    assert corr == 25.0
+    # The offset is canonicalised to the first grid line (`% period`, matching
+    # fit_offset), so compare the grid PHASE rather than the raw value: the grid
+    # must have moved 25ms later, modulo one beat.
+    period = 60.0 / 126.0
+    phase = (off - (0.459 + 0.025)) % period
+    assert min(phase, period - phase) == pytest.approx(0, abs=1e-3)
+    assert 0.0 <= off < period
+
+
+def test_offset_correction_needs_enough_onsets_to_trust_the_median():
+    onsets = [{"snap_error_ms": 30.0}] * 5
+    _, corr = dsp.refine_offset_from_onsets(onsets, 0.5, 120.0)
+    assert corr == 0.0
+
+
+def test_offset_correction_is_recorded_in_the_analysis(click_wav):
+    """Auditable: 0.0 means nothing moved, and any nonzero value is the exact
+    shift applied."""
+    a = dsp.analyze_signal(click_wav(bpm=120.0, dur_s=16.0))
+    assert "offset_correction_ms" in a
+    assert isinstance(a["offset_correction_ms"], float)

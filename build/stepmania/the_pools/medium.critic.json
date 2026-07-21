@@ -1,14 +1,17 @@
 {
-  "score": 8,
-  "verdict": "A highly rhythmic and engaging Medium chart with excellent vocal-syncing, slightly let down by a couple of mechanically awkward patterns.",
+  "score": 6,
+  "verdict": "A standard, comfortable chart with decent physical flow, but severely held back by a flat density structure that ignores the song's energy variations.",
+  "measured_rho": 0.1904,
+  "dynamics": "Density does not track the song's intensity shifts well, leading to a weak correlation of +0.190 and undermapped segments during energetic parts of the song.",
   "issues": [
     {
-      "where": "33.780 to 34.494",
-      "problem": "Holding the Right (R) panel while requiring eighth-note steps on Down (D) and Up (U) forces the player into a rapid, one-foot eighth-note transition. This is too strenuous and physically awkward for a Medium-difficulty chart."
+      "where": "67.0s to 70.0s (bars 67-69)",
+      "problem": "The density drops significantly to 1.0 notes/bar, leaving this section feeling empty and undermapped compared to the musical drive."
     },
     {
-      "where": "67.100 to 67.814",
-      "problem": "The rapid D -> U -> R -> D eighth-note stream causes either a double-step or an uncomfortable crossover (crossing the left foot behind the right to hit R) which disrupts the otherwise smooth flow of the chorus."
+      "where": "Entire chart",
+      "problem": "The repetitive rhythm pattern of three eighth notes followed by a quarter rest is overused, leading to a monotonous play experience that doesn't adapt to melodic changes."
     }
-  ]
+  ],
+  "human_review": true
 }

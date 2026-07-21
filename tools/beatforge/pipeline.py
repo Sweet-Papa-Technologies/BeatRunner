@@ -10,7 +10,7 @@ import json
 from dataclasses import asdict
 from pathlib import Path
 
-from . import config, qa
+from . import config, ledger, qa
 from .analyze import analyze_track
 from .compute import ComputeBackend
 from .design import ChartResult, critic_pass, design_chart
@@ -22,6 +22,11 @@ def chart_track(
     backend: ComputeBackend | None = None,
 ) -> dict:
     """Analyze one track and produce all requested difficulties + QA reports."""
+    with ledger.stage("song", song=track_id, target="core"):
+        return _chart_track(track_id, opts, client, backend)
+
+
+def _chart_track(track_id, opts, client, backend) -> dict:
     analysis = analyze_track(track_id, opts, backend=backend)
     audio = _audio_path(track_id)
     base = config.TRACK_CATALOGUE.get(track_id, track_id)
