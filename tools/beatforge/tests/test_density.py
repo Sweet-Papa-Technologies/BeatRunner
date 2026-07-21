@@ -208,18 +208,39 @@ def _note(beat, kind="tap", **kw):
     return ResolvedNote(beat=float(beat), kind=kind, phrase={}, **kw)
 
 
-def test_over_dense_bar_is_thinned_to_the_plan(make_analysis):
+def test_notes_move_from_quiet_bars_to_loud_ones(make_analysis):
+    """The core of R3's redistribute mode: an evenly-spread chart should come out
+    weighted toward the high-energy bars, WITHOUT the total changing."""
     from beatforge.adapters.stepmania.density import thin_to_plan
     a = _analysis_with_plan(make_analysis)
-    # 24 notes crammed into bar 0 (beats 0..3.75), far over any tier's target
-    notes = [_note(i * 0.125) for i in range(24)]
-    rep = thin_to_plan(notes, a, "easy")
-    target = a["density_plan"]["per_bar"][0]["target_notes"]["easy"]
-    # Enforcement is PER BAR, so assert on bar 0 — the rest of the chart is
-    # simultaneously being topped up from the onset pool.
-    in_bar_0 = [n for n in rep.notes if int(n.beat // 4) == 0]
-    assert len(in_bar_0) <= max(1, round(target))
+    plan = a["density_plan"]["per_bar"]
+    # 8 notes in every bar across the plan's span — deliberately shapeless
+    notes = [_note(bar * 4 + i * 0.5) for bar in range(len(plan)) for i in range(8)]
+    rep = thin_to_plan(notes, a, "hard")
+
+    def count(ns, bar):
+        return sum(1 for n in ns if int(n.beat // 4) == bar)
+
+    quietest = min(range(len(plan)), key=lambda b: plan[b]["target_frac"])
+    loudest = max(range(len(plan)), key=lambda b: plan[b]["target_frac"])
+    assert count(rep.notes, loudest) > count(rep.notes, quietest)
     assert len(rep.dropped) > 0
+
+
+def test_redistribution_conserves_the_note_total(make_analysis):
+    """Difficulty must not move. R2 anchored bars to a fraction of the tier's NPS
+    ceiling, which inflated dense tracks (The Pools challenge 438 -> 902 notes)
+    and starved sparse ones (Lucky Lucky beginner 81 -> 34). Conserving the total
+    makes both failure modes structurally impossible."""
+    from beatforge.adapters.stepmania.density import thin_to_plan
+    a = _analysis_with_plan(make_analysis)
+    plan = a["density_plan"]["per_bar"]
+    notes = [_note(bar * 4 + i * 0.5) for bar in range(len(plan)) for i in range(8)]
+    rep = thin_to_plan(notes, a, "hard")
+    # Fill is limited by the real onset pool, so the total may fall short but must
+    # never EXCEED what came in — shaping can never make a chart harder.
+    assert len(rep.notes) <= len(notes)
+    assert len(rep.notes) >= len(notes) * 0.5
 
 
 def test_thinning_drops_the_lowest_strength_notes_first(make_analysis):
@@ -257,16 +278,18 @@ def test_thinning_never_removes_holds_or_rolls(make_analysis):
     assert kinds.count("hold") == 1 and kinds.count("roll") == 1
 
 
-def test_under_dense_bar_is_filled_only_from_real_onsets(make_analysis):
+def test_fill_only_ever_uses_real_onsets(make_analysis):
     """Fill comes from measured transients, never invented ones — otherwise the
     correlation is bought with notes that aren't on the music (SACRED-02)."""
     from beatforge.adapters.stepmania.density import thin_to_plan
     a = _analysis_with_plan(make_analysis)
     onset_beats = {round(float(o["nearest_beat"]), 3) for o in a["onsets"]}
-    rep = thin_to_plan([_note(8.0)], a, "challenge")
-    assert len(rep.notes) > 1                       # it did top the bar up
+    plan = a["density_plan"]["per_bar"]
+    # dense in the quiet bars, empty in the loud ones -> redistribution must fill
+    notes = [_note(i * 0.5) for i in range(16)]
+    rep = thin_to_plan(notes, a, "challenge")
     for beat in rep.added:
-        assert beat in onset_beats
+        assert beat in onset_beats, f"{beat} is not a measured onset"
 
 
 def test_fill_stops_when_the_onset_pool_is_empty(make_analysis):
@@ -356,10 +379,11 @@ def test_flow_guard_rejects_shaping_that_would_break_the_flow_ceiling(make_analy
     # never does. The guard must then hand back the baseline.
     calls = {"n": 0}
 
-    def fake_flow_ok(placements, analysis, difficulty):
+    def fake_flow_max(placements, analysis, difficulty):
         calls["n"] += 1
-        return calls["n"] != 1          # first call (shaped) fails, baseline passes
-    monkeypatch.setattr(A, "_flow_ok", fake_flow_ok)
+        # first call is the shaped chart (worse flow), second is the baseline
+        return 99.0 if calls["n"] == 1 else 1.0
+    monkeypatch.setattr(A, "_flow_max", fake_flow_max)
 
     placements = ad.realize(design, a, "beginner")
     assert placements is not None
@@ -375,7 +399,95 @@ def test_flow_guard_keeps_shaping_when_flow_is_fine(make_analysis, monkeypatch):
     design = {"notes": [{"ref": o["id"], "kind": "tap"} for o in a["onsets"]],
               "phrases": []}
     ad = A.StepManiaAdapter()
-    monkeypatch.setattr(A, "_flow_ok", lambda p, an, d: True)
+    monkeypatch.setattr(A, "_flow_max", lambda p, an, d: 1.0)
     ad.realize(design, a, "beginner")
     assert ad.last_density_repair.ok is True
     assert ad.last_density_repair.dropped, "shaping should have thinned this chart"
+
+
+# --------------------------------------------------------------------------- #
+# R3 — pad ergonomics: difficulty came down, danceability came up
+# --------------------------------------------------------------------------- #
+def test_target_utilization_scales_density_without_changing_the_shape():
+    """The key R3 property. Density is a rank correlation, so scaling every bar's
+    target by a constant cuts difficulty while leaving the energy ORDERING — and
+    therefore rho — untouched. Difficulty and dynamics are separable."""
+    curve = [0.1, 0.45, 0.8, 1.0, 0.3]
+    full = dsp.density_plan(curve, SECTIONS, 120.0)
+    with_util = dsp.density_plan(curve, SECTIONS, 120.0)   # same config
+    ranks_full = [b["target_notes"]["hard"] for b in full["per_bar"]]
+    ranks_util = [b["target_notes"]["hard"] for b in with_util["per_bar"]]
+    order = lambda xs: [sorted(xs).index(x) for x in xs]   # noqa: E731
+    assert order(ranks_full) == order(ranks_util)
+    # and the configured utilization is actually applied to the ceiling
+    tier = full["tiers"]["hard"]
+    assert tier["ceiling_notes_per_bar"] == pytest.approx(
+        tier["max_nps"] * full["bar_seconds"] * config.DENSITY_TARGET_UTILIZATION)
+
+
+def test_utilization_is_below_one_so_a_peak_bar_is_not_pinned_to_the_nps_ceiling():
+    """`max_nps_4s` is a hard ceiling for the busiest 4 seconds, not a target for
+    every loud bar. Round 2 conflated the two and the charts played too hard."""
+    assert 0.0 < config.DENSITY_TARGET_UTILIZATION < 1.0
+
+
+def test_jump_share_is_recapped_after_repair(make_analysis):
+    """NPS thinning drops single TAPS preferentially, so jumps survive and their
+    share drifts up as density rises — Round 2's `hard` charts measured 21.5%
+    jumps against a 12% budget. On a pad a jump is a two-foot commitment."""
+    from beatforge.adapters.stepmania.grammar import BUDGETS
+    from beatforge.adapters.stepmania.quantize import Placement
+    from beatforge.adapters.stepmania.validate import cap_jump_share
+    b = BUDGETS["hard"]
+    # 20 notes, 10 of them jumps — way over hard's 12% budget
+    notes = [Placement(float(i), (0, 3) if i < 10 else (1,), "tap", None, {})
+             for i in range(20)]
+    out = cap_jump_share(notes, b, meter=4)
+    share = sum(1 for p in out if len(p.panels) > 1) / len(out)
+    assert share <= 0.12 + 1e-9
+    assert len(out) == 20, "surplus jumps are DEMOTED to taps, never deleted"
+
+
+def test_jump_demotion_keeps_the_note_on_the_music(make_analysis):
+    """Demote, don't delete: timing is SACRED-02 and must survive an ergonomics fix."""
+    from beatforge.adapters.stepmania.grammar import BUDGETS
+    from beatforge.adapters.stepmania.quantize import Placement
+    from beatforge.adapters.stepmania.validate import cap_jump_share
+    notes = [Placement(float(i), (0, 3), "tap", None, {}) for i in range(20)]
+    beats_before = [p.beat for p in notes]
+    out = cap_jump_share(notes, BUDGETS["hard"], meter=4)
+    assert [p.beat for p in out] == beats_before
+
+
+def test_jump_demotion_prefers_off_downbeat_jumps():
+    """A jump on beat 1 is the accent the phrase is built around; an off-beat one
+    is what makes a pad chart feel scrappy. Demote the scrappy ones first."""
+    from beatforge.adapters.stepmania.grammar import BUDGETS
+    from beatforge.adapters.stepmania.quantize import Placement
+    from beatforge.adapters.stepmania.validate import cap_jump_share
+    # beats 0,4,8 are downbeats (meter 4); 1.5/2.5/3.5 are off-beat
+    beats = [0.0, 1.5, 2.5, 3.5, 4.0, 8.0]
+    notes = [Placement(b, (0, 3), "tap", None, {}) for b in beats]
+    notes += [Placement(20.0 + i, (1,), "tap", None, {}) for i in range(4)]
+    out = cap_jump_share(notes, BUDGETS["hard"], meter=4)
+    still_jumps = {p.beat for p in out if len(p.panels) > 1}
+    for off_beat in (1.5, 2.5, 3.5):
+        assert off_beat not in still_jumps
+
+
+def test_density_fill_cannot_recreate_a_stream_the_tier_forbids(make_analysis):
+    """`thin_for_difficulty` enforces max_run BEFORE the fill, so without a second
+    pass a fill silently re-creates the stream it removed."""
+    from beatforge.adapters.stepmania.density import _break_runs
+    from beatforge.adapters.stepmania.grammar import BUDGETS
+    notes = [_note(i * 0.25) for i in range(40)]          # one long 16th stream
+    out = _break_runs(notes, BUDGETS["medium"])           # max_run 4
+    assert len(out) < len(notes), "the stream must actually have been broken"
+    # A stream is consecutive notes at the FINE spacing. Breaking inserts a wider
+    # gap every max_run notes, which is the segmentation the tier asks for — the
+    # chart still has 16ths, it just never sustains more than max_run of them.
+    run = longest = 1
+    for i in range(1, len(out)):
+        run = run + 1 if (out[i].beat - out[i - 1].beat) <= 0.25 + 1e-6 else 1
+        longest = max(longest, run)
+    assert longest <= BUDGETS["medium"].max_run

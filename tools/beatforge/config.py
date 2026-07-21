@@ -129,7 +129,11 @@ ONSET_COUNT_SANITY = (50, 400)  # sanity gate for a ~33s track (REQ-DSP-04)
 # v2 adds the additive `density_plan` block (REQ-R2-DYN-01). Per REQ-R2-SACRED-04
 # the cache key is bumped BECAUSE the output schema was extended; no existing
 # field changed meaning.
-BEAT_ANALYSIS_VERSION = "local_dsp_v2"  # bump to invalidate all caches
+# v3: DENSITY_TARGET_UTILIZATION rescales `density_plan`'s tier ceilings, so a
+# cached v2 analysis carries Round 2's (too dense) plan. The utilization is an
+# analysis INPUT and therefore has to be part of the cache identity — without this
+# bump, changing it would silently do nothing to any track already analyzed.
+BEAT_ANALYSIS_VERSION = "local_dsp_v3"  # bump to invalidate all caches
 
 # --------------------------------------------------------------------------- #
 # Density plan (REQ-R2-DYN-01) — DSP-side ground truth for dynamics.
@@ -163,6 +167,34 @@ DENSITY_TIER_MAX_NPS = {
 # Not 100%: a span whose bars genuinely offer no usable onsets cannot be filled
 # without inventing transients, and inventing them is the failure mode the Round 1
 # brief warned about ("do not chase rho by globally increasing note density").
+# R3 — how much of a tier's sustained-NPS ceiling a PEAK-energy bar should
+# actually target. Round 2 shipped this at 1.0, i.e. it treated `max_nps_4s` — a
+# hard ceiling for the busiest four seconds — as the goal for every loud bar. The
+# result played exactly as that sounds: charts came out 26-79% denser than Round 1
+# (hard +79%, challenge +62%) and the pack was judged too hard on pad.
+#
+# Because the density gate is a RANK correlation, scaling every bar's target by a
+# constant leaves the shape — and therefore rho — essentially untouched while
+# cutting absolute difficulty. That is the whole trick: dynamics and difficulty
+# are separable here, and only difficulty needs to come down.
+#
+# 0.45 lands the deterministic path at ~211 notes/chart against Round 1's ~231,
+# and the Gemini designer runs denser than deterministic, so the shipped charts
+# land near Round 1's difficulty — the level that was not complained about — while
+# keeping Round 2's dynamics.
+# How the per-bar note budget is anchored.
+#   "redistribute" — keep the note TOTAL the tier naturally produces and move
+#       those notes toward high-energy bars. Conservative by construction: it
+#       changes the distribution, never the budget, so difficulty stays put and
+#       only dynamics moves. This is what R3 ships.
+#   "ceiling"      — R2 behaviour: anchor each bar to a fraction of the tier NPS
+#       ceiling. Inflated dense tracks and starved sparse ones. Kept for A/B only.
+DENSITY_MODE = os.environ.get("BEATFORGE_DENSITY_MODE", "redistribute")
+# In "redistribute" mode this is only a SAFETY CLAMP: no bar may be pushed past
+# this fraction of the tier's sustained-NPS ceiling however loud it is. It is no
+# longer the anchor for the target (that is the conserved note total), so it can
+# sit high without re-creating R2's inflation.
+DENSITY_TARGET_UTILIZATION = 0.75
 DENSITY_PLAN_MIN_IN_BAND = 0.6
 
 # --------------------------------------------------------------------------- #

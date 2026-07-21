@@ -5,21 +5,21 @@
   "mode": "gemini",
   "charts": {
     "beginner": {
-      "notes": 205,
+      "notes": 187,
       "meter": 1,
-      "jumps": 6,
-      "holds": 24,
-      "repaired": 10,
+      "jumps": 5,
+      "holds": 18,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 9,
-        "verdict": "An exceptionally well-crafted Beginner chart with perfect quantization, comfortable flow, and excellent song representation.",
-        "measured_rho": 0.6732,
-        "dynamics": "The chart's density tracks the song's energy beautifully, with a strong Spearman correlation of 0.673, keeping the physical demand perfectly in sync with the musical intensity.",
+        "score": 7,
+        "verdict": "An exceptionally well-timed beginner chart with a great layout, marred only by the inclusion of jumps which are too advanced for the Beginner difficulty.",
+        "measured_rho": 0.6837,
+        "dynamics": "The chart's density tracks the song's energy changes very well, matching the build-ups and chill sections perfectly with a strong positive correlation of 0.684.",
         "issues": [
           {
-            "where": "70.458",
-            "problem": "This step forces either an awkward crossover or a double-step/double-tap sequence (D -> U -> R -> D) which is slightly uncomfortable and unintuitive for a Beginner player."
+            "where": "62.842, 83.786, 91.402, 99.018, 102.826",
+            "problem": "These timestamps contain jumps (LR, DR, UR, etc.). Beginner/Novice charts should avoid jumps entirely, as players at this entry level are still learning basic foot navigation and cannot comfortably perform double-foot jumps."
           }
         ]
       },
@@ -28,396 +28,20 @@
         "assist": "/Users/fterry/.foreman/worktrees/FRM-1063/build/stepmania/the_pools/beginner.assist.ogg"
       },
       "metrics": {
-        "notes": 205,
-        "onset_alignment": 0.9902,
+        "notes": 187,
+        "onset_alignment": 0.9893,
         "grid_notes": 2,
         "panel_balance": {
-          "L": 0.19,
-          "D": 0.308,
-          "U": 0.299,
-          "R": 0.204
-        },
-        "hold_share": 0.1171,
-        "jump_share": 0.0293,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.39,
-        "density_energy_spearman": 0.6732,
-        "gates": {
-          "onset_alignment": true,
-          "panel_balance": true,
-          "hold_share": true,
-          "flow_ceiling": true,
-          "density_energy": true
-        },
-        "density_plan": {
-          "spans": [
-            {
-              "bars": [
-                0,
-                28
-              ],
-              "notes": 86,
-              "measured": 3.071,
-              "band": [
-                2.016,
-                4.703
-              ],
-              "target": 3.36
-            },
-            {
-              "bars": [
-                28,
-                32
-              ],
-              "notes": 10,
-              "measured": 2.5,
-              "band": [
-                1.476,
-                3.444
-              ],
-              "target": 2.46
-            },
-            {
-              "bars": [
-                32,
-                40
-              ],
-              "notes": 25,
-              "measured": 3.125,
-              "band": [
-                2.099,
-                4.898
-              ],
-              "target": 3.499
-            },
-            {
-              "bars": [
-                40,
-                42
-              ],
-              "notes": 4,
-              "measured": 2.0,
-              "band": [
-                1.391,
-                3.246
-              ],
-              "target": 2.319
-            },
-            {
-              "bars": [
-                42,
-                43
-              ],
-              "notes": 2,
-              "measured": 2.0,
-              "band": [
-                1.058,
-                2.468
-              ],
-              "target": 1.763
-            },
-            {
-              "bars": [
-                43,
-                67
-              ],
-              "notes": 77,
-              "measured": 3.208,
-              "band": [
-                2.108,
-                4.918
-              ],
-              "target": 3.513
-            },
-            {
-              "bars": [
-                67,
-                69
-              ],
-              "notes": 1,
-              "measured": 0.5,
-              "band": [
-                0.507,
-                1.183
-              ],
-              "target": 0.845
-            }
-          ],
-          "under_dense": [
-            {
-              "bars": [
-                67,
-                69
-              ],
-              "notes": 1,
-              "measured": 0.5,
-              "band": [
-                0.507,
-                1.183
-              ],
-              "target": 0.845
-            }
-          ],
-          "over_dense": [],
-          "in_band": 6,
-          "plan_available": true,
-          "in_band_frac": 0.8571
-        }
-      },
-      "density": {
-        "report": {
-          "spans": [
-            {
-              "bars": [
-                0,
-                28
-              ],
-              "notes": 86,
-              "measured": 3.071,
-              "band": [
-                2.016,
-                4.703
-              ],
-              "target": 3.36
-            },
-            {
-              "bars": [
-                28,
-                32
-              ],
-              "notes": 10,
-              "measured": 2.5,
-              "band": [
-                1.476,
-                3.444
-              ],
-              "target": 2.46
-            },
-            {
-              "bars": [
-                32,
-                40
-              ],
-              "notes": 25,
-              "measured": 3.125,
-              "band": [
-                2.099,
-                4.898
-              ],
-              "target": 3.499
-            },
-            {
-              "bars": [
-                40,
-                42
-              ],
-              "notes": 4,
-              "measured": 2.0,
-              "band": [
-                1.391,
-                3.246
-              ],
-              "target": 2.319
-            },
-            {
-              "bars": [
-                42,
-                43
-              ],
-              "notes": 2,
-              "measured": 2.0,
-              "band": [
-                1.058,
-                2.468
-              ],
-              "target": 1.763
-            },
-            {
-              "bars": [
-                43,
-                67
-              ],
-              "notes": 77,
-              "measured": 3.208,
-              "band": [
-                2.108,
-                4.918
-              ],
-              "target": 3.513
-            },
-            {
-              "bars": [
-                67,
-                69
-              ],
-              "notes": 1,
-              "measured": 0.5,
-              "band": [
-                0.507,
-                1.183
-              ],
-              "target": 0.845
-            }
-          ],
-          "under_dense": [
-            {
-              "bars": [
-                67,
-                69
-              ],
-              "notes": 1,
-              "measured": 0.5,
-              "band": [
-                0.507,
-                1.183
-              ],
-              "target": 0.845
-            }
-          ],
-          "over_dense": [],
-          "in_band": 6,
-          "plan_available": true,
-          "in_band_frac": 0.8571
-        },
-        "thinned": 33,
-        "filled": 9,
-        "spans": [
-          {
-            "bars": [
-              0,
-              28
-            ],
-            "band": [
-              2.016,
-              4.703
-            ],
-            "target": 3.36,
-            "before": 3.643,
-            "after": 3.071
-          },
-          {
-            "bars": [
-              28,
-              32
-            ],
-            "band": [
-              1.476,
-              3.444
-            ],
-            "target": 2.46,
-            "before": 2.5,
-            "after": 2.5
-          },
-          {
-            "bars": [
-              32,
-              40
-            ],
-            "band": [
-              2.099,
-              4.898
-            ],
-            "target": 3.499,
-            "before": 3.5,
-            "after": 3.5
-          },
-          {
-            "bars": [
-              40,
-              42
-            ],
-            "band": [
-              1.391,
-              3.246
-            ],
-            "target": 2.319,
-            "before": 2.5,
-            "after": 2.0
-          },
-          {
-            "bars": [
-              42,
-              43
-            ],
-            "band": [
-              1.058,
-              2.468
-            ],
-            "target": 1.763,
-            "before": 2.0,
-            "after": 2.0
-          },
-          {
-            "bars": [
-              43,
-              67
-            ],
-            "band": [
-              2.108,
-              4.918
-            ],
-            "target": 3.513,
-            "before": 3.792,
-            "after": 3.5
-          },
-          {
-            "bars": [
-              67,
-              69
-            ],
-            "band": [
-              0.507,
-              1.183
-            ],
-            "target": 0.845,
-            "before": 0.5,
-            "after": 0.5
-          }
-        ]
-      },
-      "density_energy_spearman": 0.6732
-    },
-    "easy": {
-      "notes": 322,
-      "meter": 3,
-      "jumps": 9,
-      "holds": 31,
-      "repaired": 4,
-      "repair_ok": true,
-      "critic": {
-        "score": 9,
-        "verdict": "An excellent Easy chart with natural foot flow, accurate rhythms, and great density scaling, though the staggered holds are slightly advanced.",
-        "measured_rho": 0.5837,
-        "dynamics": "The chart's density tracks the song's energy well, showing a solid Spearman correlation of +0.584.",
-        "issues": [
-          {
-            "where": "115.203 - 115.917",
-            "problem": "Staggered overlapping holds (L then R) might be slightly too complex for an Easy chart, though they are technically correct."
-          },
-          {
-            "where": "119.011 - 119.725",
-            "problem": "Staggered overlapping holds (L then R) repeated here, which increases the reading difficulty slightly for beginners."
-          }
-        ]
-      },
-      "previews": {
-        "png": "/Users/fterry/.foreman/worktrees/FRM-1063/build/stepmania/the_pools/easy.notefield.png"
-      },
-      "metrics": {
-        "notes": 322,
-        "onset_alignment": 0.9627,
-        "grid_notes": 12,
-        "panel_balance": {
-          "L": 0.218,
-          "D": 0.284,
-          "U": 0.275,
-          "R": 0.224
+          "L": 0.214,
+          "D": 0.297,
+          "U": 0.281,
+          "R": 0.208
         },
         "hold_share": 0.0963,
-        "jump_share": 0.028,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.1,
-        "density_energy_spearman": 0.5837,
+        "jump_share": 0.0267,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.6837,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -432,91 +56,91 @@
                 0,
                 28
               ],
-              "notes": 135,
-              "measured": 4.821,
+              "notes": 78,
+              "measured": 2.786,
               "band": [
-                3.024,
-                7.055
+                1.512,
+                3.528
               ],
-              "target": 5.039
+              "target": 2.52
             },
             {
               "bars": [
                 28,
                 32
               ],
-              "notes": 15,
-              "measured": 3.75,
+              "notes": 8,
+              "measured": 2.0,
               "band": [
-                2.214,
-                5.167
+                1.107,
+                2.583
               ],
-              "target": 3.691
+              "target": 1.845
             },
             {
               "bars": [
                 32,
                 40
               ],
-              "notes": 40,
-              "measured": 5.0,
+              "notes": 23,
+              "measured": 2.875,
               "band": [
-                3.149,
-                7.347
+                1.574,
+                3.674
               ],
-              "target": 5.248
+              "target": 2.624
             },
             {
               "bars": [
                 40,
                 42
               ],
-              "notes": 7,
-              "measured": 3.5,
+              "notes": 4,
+              "measured": 2.0,
               "band": [
-                2.087,
-                4.87
+                1.043,
+                2.435
               ],
-              "target": 3.478
+              "target": 1.739
             },
             {
               "bars": [
                 42,
                 43
               ],
-              "notes": 3,
-              "measured": 3.0,
+              "notes": 1,
+              "measured": 1.0,
               "band": [
-                1.586,
-                3.702
+                0.793,
+                1.851
               ],
-              "target": 2.644
+              "target": 1.322
             },
             {
               "bars": [
                 43,
                 67
               ],
-              "notes": 120,
-              "measured": 5.0,
+              "notes": 72,
+              "measured": 3.0,
               "band": [
-                3.162,
-                7.377
+                1.581,
+                3.689
               ],
-              "target": 5.27
+              "target": 2.635
             },
             {
               "bars": [
                 67,
                 69
               ],
-              "notes": 2,
-              "measured": 1.0,
+              "notes": 1,
+              "measured": 0.5,
               "band": [
-                0.761,
-                1.775
+                0.38,
+                0.887
               ],
-              "target": 1.268
+              "target": 0.634
             }
           ],
           "under_dense": [],
@@ -534,91 +158,91 @@
                 0,
                 28
               ],
-              "notes": 135,
-              "measured": 4.821,
+              "notes": 78,
+              "measured": 2.786,
               "band": [
-                3.024,
-                7.055
+                1.512,
+                3.528
               ],
-              "target": 5.039
+              "target": 2.52
             },
             {
               "bars": [
                 28,
                 32
               ],
-              "notes": 15,
-              "measured": 3.75,
+              "notes": 8,
+              "measured": 2.0,
               "band": [
-                2.214,
-                5.167
+                1.107,
+                2.583
               ],
-              "target": 3.691
+              "target": 1.845
             },
             {
               "bars": [
                 32,
                 40
               ],
-              "notes": 40,
-              "measured": 5.0,
+              "notes": 23,
+              "measured": 2.875,
               "band": [
-                3.149,
-                7.347
+                1.574,
+                3.674
               ],
-              "target": 5.248
+              "target": 2.624
             },
             {
               "bars": [
                 40,
                 42
               ],
-              "notes": 7,
-              "measured": 3.5,
+              "notes": 4,
+              "measured": 2.0,
               "band": [
-                2.087,
-                4.87
+                1.043,
+                2.435
               ],
-              "target": 3.478
+              "target": 1.739
             },
             {
               "bars": [
                 42,
                 43
               ],
-              "notes": 3,
-              "measured": 3.0,
+              "notes": 1,
+              "measured": 1.0,
               "band": [
-                1.586,
-                3.702
+                0.793,
+                1.851
               ],
-              "target": 2.644
+              "target": 1.322
             },
             {
               "bars": [
                 43,
                 67
               ],
-              "notes": 120,
-              "measured": 5.0,
+              "notes": 72,
+              "measured": 3.0,
               "band": [
-                3.162,
-                7.377
+                1.581,
+                3.689
               ],
-              "target": 5.27
+              "target": 2.635
             },
             {
               "bars": [
                 67,
                 69
               ],
-              "notes": 2,
-              "measured": 1.0,
+              "notes": 1,
+              "measured": 0.5,
               "band": [
-                0.761,
-                1.775
+                0.38,
+                0.887
               ],
-              "target": 1.268
+              "target": 0.634
             }
           ],
           "under_dense": [],
@@ -627,8 +251,8 @@
           "plan_available": true,
           "in_band_frac": 1.0
         },
-        "thinned": 1,
-        "filled": 62,
+        "thinned": 3,
+        "filled": 15,
         "spans": [
           {
             "bars": [
@@ -636,12 +260,12 @@
               28
             ],
             "band": [
-              3.024,
-              7.055
+              1.512,
+              3.528
             ],
-            "target": 5.039,
-            "before": 3.821,
-            "after": 4.857
+            "target": 2.52,
+            "before": 2.393,
+            "after": 2.786
           },
           {
             "bars": [
@@ -649,12 +273,12 @@
               32
             ],
             "band": [
-              2.214,
-              5.167
+              1.107,
+              2.583
             ],
-            "target": 3.691,
-            "before": 3.75,
-            "after": 3.75
+            "target": 1.845,
+            "before": 2.25,
+            "after": 2.0
           },
           {
             "bars": [
@@ -662,12 +286,12 @@
               40
             ],
             "band": [
-              3.149,
-              7.347
+              1.574,
+              3.674
             ],
-            "target": 5.248,
-            "before": 4.125,
-            "after": 5.125
+            "target": 2.624,
+            "before": 3.0,
+            "after": 2.875
           },
           {
             "bars": [
@@ -675,12 +299,12 @@
               42
             ],
             "band": [
-              2.087,
-              4.87
+              1.043,
+              2.435
             ],
-            "target": 3.478,
-            "before": 3.0,
-            "after": 3.5
+            "target": 1.739,
+            "before": 1.5,
+            "after": 2.0
           },
           {
             "bars": [
@@ -688,12 +312,12 @@
               43
             ],
             "band": [
-              1.586,
-              3.702
+              0.793,
+              1.851
             ],
-            "target": 2.644,
-            "before": 3.0,
-            "after": 3.0
+            "target": 1.322,
+            "before": 1.0,
+            "after": 1.0
           },
           {
             "bars": [
@@ -701,12 +325,12 @@
               67
             ],
             "band": [
-              3.162,
-              7.377
+              1.581,
+              3.689
             ],
-            "target": 5.27,
-            "before": 4.125,
-            "after": 5.083
+            "target": 2.635,
+            "before": 2.917,
+            "after": 3.0
           },
           {
             "bars": [
@@ -714,67 +338,67 @@
               69
             ],
             "band": [
-              0.761,
-              1.775
+              0.38,
+              0.887
             ],
-            "target": 1.268,
-            "before": 1.0,
-            "after": 1.0
+            "target": 0.634,
+            "before": 0.5,
+            "after": 0.5
           }
         ]
       },
-      "density_energy_spearman": 0.5837
+      "density_energy_spearman": 0.6837
     },
-    "medium": {
-      "notes": 362,
-      "meter": 5,
-      "jumps": 23,
-      "holds": 40,
-      "repaired": 2,
+    "easy": {
+      "notes": 193,
+      "meter": 2,
+      "jumps": 5,
+      "holds": 22,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 6,
-        "verdict": "A mostly standard Medium chart held back by awkward 3-panel holds and poor density scaling during energetic sections.",
-        "measured_rho": 0.3871,
-        "dynamics": "The chart's density does not correlate well with the music's energy, falling drastically under budget in bars 42-43 and 67-69.",
+        "score": 7,
+        "verdict": "A solid beginner chart with a good rhythmic foundation, but it is held back by complex body spins and minor structural density mismatches.",
+        "measured_rho": 0.5486,
+        "dynamics": "The chart's overall density moderately tracks the song's energy (rho = 0.549), though it drops below budget and feels too empty during the chorus around bars 67-69.",
         "issues": [
           {
-            "where": "41.183",
-            "problem": "Requires holding three panels (R, D, and U) simultaneously, creating an awkward 'hand' pattern unsuitable for a Medium single chart."
+            "where": "5.244 - 6.672",
+            "problem": "The sequence R -> U -> D -> L forces a 360-degree body spin, which is overly complex and disorienting for an Easy-tier chart."
           },
           {
-            "where": "34.519",
-            "problem": "Tapping L while holding both U and D requires an advanced bracket or hand technique that violates the expected difficulty scaling."
-          },
-          {
-            "where": "bars 42-43",
-            "problem": "The density drops to 1.0 notes/bar, leaving an energetic portion of the song feeling empty and under-mapped."
+            "where": "29.521 - 31.425",
+            "problem": "Another full body spin sequence (R -> U -> D -> L -> U) forces the player to completely turn away from the screen."
           },
           {
             "where": "bars 67-69",
-            "problem": "Mapping only 1.0 notes/bar here under-represents the song's energy budget."
+            "problem": "The density drops to 0.5 notes/bar, which is significantly under budget for this highly energetic segment of the song."
+          },
+          {
+            "where": "123.771 - 124.723",
+            "problem": "Holding D while tapping U requires a wide physical stretch that is uncomfortable for beginner-level players."
           }
-        ],
-        "human_review": true
+        ]
       },
       "previews": {
-        "png": "/Users/fterry/.foreman/worktrees/FRM-1063/build/stepmania/the_pools/medium.notefield.png"
+        "png": "/Users/fterry/.foreman/worktrees/FRM-1063/build/stepmania/the_pools/easy.notefield.png",
+        "assist": "/Users/fterry/.foreman/worktrees/FRM-1063/build/stepmania/the_pools/easy.assist.ogg"
       },
       "metrics": {
-        "notes": 362,
-        "onset_alignment": 0.9972,
-        "grid_notes": 1,
+        "notes": 193,
+        "onset_alignment": 0.9741,
+        "grid_notes": 5,
         "panel_balance": {
-          "L": 0.208,
-          "D": 0.299,
-          "U": 0.273,
-          "R": 0.221
+          "L": 0.187,
+          "D": 0.313,
+          "U": 0.313,
+          "R": 0.187
         },
-        "hold_share": 0.1105,
-        "jump_share": 0.0635,
+        "hold_share": 0.114,
+        "jump_share": 0.0259,
         "flow_cost_max": 0.2,
-        "flow_cost_mean": 0.01,
-        "density_energy_spearman": 0.3871,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.5486,
         "gates": {
           "onset_alignment": true,
           "panel_balance": true,
@@ -789,125 +413,112 @@
                 0,
                 28
               ],
-              "notes": 154,
-              "measured": 5.5,
+              "notes": 81,
+              "measured": 2.893,
               "band": [
-                5.039,
-                11.758
+                2.268,
+                5.291
               ],
-              "target": 8.399
+              "target": 3.779
             },
             {
               "bars": [
                 28,
                 32
               ],
-              "notes": 17,
-              "measured": 4.25,
+              "notes": 9,
+              "measured": 2.25,
               "band": [
-                3.691,
-                8.611
+                1.661,
+                3.875
               ],
-              "target": 6.151
+              "target": 2.768
             },
             {
               "bars": [
                 32,
                 40
               ],
-              "notes": 46,
-              "measured": 5.75,
+              "notes": 24,
+              "measured": 3.0,
               "band": [
-                5.248,
-                12.245
+                2.362,
+                5.51
               ],
-              "target": 8.747
+              "target": 3.936
             },
             {
               "bars": [
                 40,
                 42
               ],
-              "notes": 8,
-              "measured": 4.0,
+              "notes": 4,
+              "measured": 2.0,
               "band": [
-                3.478,
-                8.116
+                1.565,
+                3.652
               ],
-              "target": 5.797
+              "target": 2.609
             },
             {
               "bars": [
                 42,
                 43
               ],
-              "notes": 1,
-              "measured": 1.0,
+              "notes": 2,
+              "measured": 2.0,
               "band": [
-                2.644,
-                6.17
+                1.19,
+                2.776
               ],
-              "target": 4.407
+              "target": 1.983
             },
             {
               "bars": [
                 43,
                 67
               ],
-              "notes": 134,
-              "measured": 5.583,
+              "notes": 72,
+              "measured": 3.0,
               "band": [
-                5.27,
-                12.296
+                2.371,
+                5.533
               ],
-              "target": 8.783
+              "target": 3.952
             },
             {
               "bars": [
                 67,
                 69
               ],
-              "notes": 2,
-              "measured": 1.0,
+              "notes": 1,
+              "measured": 0.5,
               "band": [
-                1.268,
-                2.958
+                0.571,
+                1.331
               ],
-              "target": 2.113
+              "target": 0.951
             }
           ],
           "under_dense": [
             {
               "bars": [
-                42,
-                43
-              ],
-              "notes": 1,
-              "measured": 1.0,
-              "band": [
-                2.644,
-                6.17
-              ],
-              "target": 4.407
-            },
-            {
-              "bars": [
                 67,
                 69
               ],
-              "notes": 2,
-              "measured": 1.0,
+              "notes": 1,
+              "measured": 0.5,
               "band": [
-                1.268,
-                2.958
+                0.571,
+                1.331
               ],
-              "target": 2.113
+              "target": 0.951
             }
           ],
           "over_dense": [],
-          "in_band": 5,
+          "in_band": 6,
           "plan_available": true,
-          "in_band_frac": 0.7143
+          "in_band_frac": 0.8571
         }
       },
       "density": {
@@ -918,128 +529,115 @@
                 0,
                 28
               ],
-              "notes": 154,
-              "measured": 5.5,
+              "notes": 81,
+              "measured": 2.893,
               "band": [
-                5.039,
-                11.758
+                2.268,
+                5.291
               ],
-              "target": 8.399
+              "target": 3.779
             },
             {
               "bars": [
                 28,
                 32
               ],
-              "notes": 17,
-              "measured": 4.25,
+              "notes": 9,
+              "measured": 2.25,
               "band": [
-                3.691,
-                8.611
+                1.661,
+                3.875
               ],
-              "target": 6.151
+              "target": 2.768
             },
             {
               "bars": [
                 32,
                 40
               ],
-              "notes": 46,
-              "measured": 5.75,
+              "notes": 24,
+              "measured": 3.0,
               "band": [
-                5.248,
-                12.245
+                2.362,
+                5.51
               ],
-              "target": 8.747
+              "target": 3.936
             },
             {
               "bars": [
                 40,
                 42
               ],
-              "notes": 8,
-              "measured": 4.0,
+              "notes": 4,
+              "measured": 2.0,
               "band": [
-                3.478,
-                8.116
+                1.565,
+                3.652
               ],
-              "target": 5.797
+              "target": 2.609
             },
             {
               "bars": [
                 42,
                 43
               ],
-              "notes": 1,
-              "measured": 1.0,
+              "notes": 2,
+              "measured": 2.0,
               "band": [
-                2.644,
-                6.17
+                1.19,
+                2.776
               ],
-              "target": 4.407
+              "target": 1.983
             },
             {
               "bars": [
                 43,
                 67
               ],
-              "notes": 134,
-              "measured": 5.583,
+              "notes": 72,
+              "measured": 3.0,
               "band": [
-                5.27,
-                12.296
+                2.371,
+                5.533
               ],
-              "target": 8.783
+              "target": 3.952
             },
             {
               "bars": [
                 67,
                 69
               ],
-              "notes": 2,
-              "measured": 1.0,
+              "notes": 1,
+              "measured": 0.5,
               "band": [
-                1.268,
-                2.958
+                0.571,
+                1.331
               ],
-              "target": 2.113
+              "target": 0.951
             }
           ],
           "under_dense": [
             {
               "bars": [
-                42,
-                43
-              ],
-              "notes": 1,
-              "measured": 1.0,
-              "band": [
-                2.644,
-                6.17
-              ],
-              "target": 4.407
-            },
-            {
-              "bars": [
                 67,
                 69
               ],
-              "notes": 2,
-              "measured": 1.0,
+              "notes": 1,
+              "measured": 0.5,
               "band": [
-                1.268,
-                2.958
+                0.571,
+                1.331
               ],
-              "target": 2.113
+              "target": 0.951
             }
           ],
           "over_dense": [],
-          "in_band": 5,
+          "in_band": 6,
           "plan_available": true,
-          "in_band_frac": 0.7143
+          "in_band_frac": 0.8571
         },
-        "thinned": 0,
-        "filled": 0,
+        "thinned": 31,
+        "filled": 21,
         "spans": [
           {
             "bars": [
@@ -1047,12 +645,12 @@
               28
             ],
             "band": [
-              5.039,
-              11.758
+              2.268,
+              5.291
             ],
-            "target": 8.399,
-            "before": 5.571,
-            "after": 8.0
+            "target": 3.779,
+            "before": 2.679,
+            "after": 2.893
           },
           {
             "bars": [
@@ -1060,12 +658,12 @@
               32
             ],
             "band": [
-              3.691,
-              8.611
+              1.661,
+              3.875
             ],
-            "target": 6.151,
-            "before": 4.25,
-            "after": 6.0
+            "target": 2.768,
+            "before": 2.25,
+            "after": 2.25
           },
           {
             "bars": [
@@ -1073,12 +671,12 @@
               40
             ],
             "band": [
-              5.248,
-              12.245
+              2.362,
+              5.51
             ],
-            "target": 8.747,
-            "before": 5.75,
-            "after": 8.625
+            "target": 3.936,
+            "before": 3.5,
+            "after": 3.0
           },
           {
             "bars": [
@@ -1086,12 +684,12 @@
               42
             ],
             "band": [
-              3.478,
-              8.116
+              1.565,
+              3.652
             ],
-            "target": 5.797,
-            "before": 4.0,
-            "after": 5.5
+            "target": 2.609,
+            "before": 2.5,
+            "after": 2.0
           },
           {
             "bars": [
@@ -1099,11 +697,11 @@
               43
             ],
             "band": [
-              2.644,
-              6.17
+              1.19,
+              2.776
             ],
-            "target": 4.407,
-            "before": 1.0,
+            "target": 1.983,
+            "before": 2.0,
             "after": 2.0
           },
           {
@@ -1112,12 +710,12 @@
               67
             ],
             "band": [
-              5.27,
-              12.296
+              2.371,
+              5.533
             ],
-            "target": 8.783,
-            "before": 5.583,
-            "after": 8.5
+            "target": 3.952,
+            "before": 3.5,
+            "after": 3.0
           },
           {
             "bars": [
@@ -1125,454 +723,56 @@
               69
             ],
             "band": [
-              1.268,
-              2.958
+              0.571,
+              1.331
             ],
-            "target": 2.113,
-            "before": 1.0,
-            "after": 1.0
-          }
-        ]
-      },
-      "density_energy_spearman": 0.3871
-    },
-    "hard": {
-      "notes": 848,
-      "meter": 9,
-      "jumps": 20,
-      "holds": 11,
-      "repaired": 15,
-      "repair_ok": true,
-      "critic": {
-        "score": 3,
-        "verdict": "The chart is unplayable on pad due to physically impossible hold-jumps and sudden triple-note hand chords.",
-        "measured_rho": 0.7811,
-        "dynamics": "The overall density tracks the song's energy well (rho = 0.781), though it drops to near-zero inappropriately in bars 67-69.",
-        "issues": [
-          {
-            "where": "5.006",
-            "problem": "Holding L while tapping D+U is physically impossible without using hands, as D+U cannot be bracketed with one foot."
-          },
-          {
-            "where": "6.910",
-            "problem": "Holding L while tapping D+U is an impossible 3-way pad technique."
-          },
-          {
-            "where": "33.805",
-            "problem": "Triple-note jump (D+L+R) introduces hands without warning on a standard singles chart."
-          },
-          {
-            "where": "44.991",
-            "problem": "Triple-note jump (D+U+L) requires hands."
-          },
-          {
-            "where": "23.452-23.690",
-            "problem": "Rapid 8th-note jumps transitioning from L+R to U+D to L+R are extremely jarring and highly uncomfortable to execute."
-          }
-        ],
-        "human_review": true
-      },
-      "previews": {
-        "png": "/Users/fterry/.foreman/worktrees/FRM-1063/build/stepmania/the_pools/hard.notefield.png"
-      },
-      "metrics": {
-        "notes": 848,
-        "onset_alignment": 1.0,
-        "grid_notes": 0,
-        "panel_balance": {
-          "L": 0.221,
-          "D": 0.266,
-          "U": 0.289,
-          "R": 0.224
-        },
-        "hold_share": 0.013,
-        "jump_share": 0.0236,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.11,
-        "density_energy_spearman": 0.7811,
-        "gates": {
-          "onset_alignment": true,
-          "panel_balance": true,
-          "hold_share": false,
-          "flow_ceiling": true,
-          "density_energy": true
-        },
-        "density_plan": {
-          "spans": [
-            {
-              "bars": [
-                0,
-                28
-              ],
-              "notes": 341,
-              "measured": 12.179,
-              "band": [
-                8.063,
-                18.813
-              ],
-              "target": 13.438
-            },
-            {
-              "bars": [
-                28,
-                32
-              ],
-              "notes": 39,
-              "measured": 9.75,
-              "band": [
-                5.905,
-                13.778
-              ],
-              "target": 9.841
-            },
-            {
-              "bars": [
-                32,
-                40
-              ],
-              "notes": 109,
-              "measured": 13.625,
-              "band": [
-                8.397,
-                19.593
-              ],
-              "target": 13.995
-            },
-            {
-              "bars": [
-                40,
-                42
-              ],
-              "notes": 19,
-              "measured": 9.5,
-              "band": [
-                5.565,
-                12.986
-              ],
-              "target": 9.276
-            },
-            {
-              "bars": [
-                42,
-                43
-              ],
-              "notes": 7,
-              "measured": 7.0,
-              "band": [
-                4.231,
-                9.871
-              ],
-              "target": 7.051
-            },
-            {
-              "bars": [
-                43,
-                67
-              ],
-              "notes": 332,
-              "measured": 13.833,
-              "band": [
-                8.431,
-                19.673
-              ],
-              "target": 14.052
-            },
-            {
-              "bars": [
-                67,
-                69
-              ],
-              "notes": 1,
-              "measured": 0.5,
-              "band": [
-                2.028,
-                4.733
-              ],
-              "target": 3.381
-            }
-          ],
-          "under_dense": [
-            {
-              "bars": [
-                67,
-                69
-              ],
-              "notes": 1,
-              "measured": 0.5,
-              "band": [
-                2.028,
-                4.733
-              ],
-              "target": 3.381
-            }
-          ],
-          "over_dense": [],
-          "in_band": 6,
-          "plan_available": true,
-          "in_band_frac": 0.8571
-        }
-      },
-      "density": {
-        "report": {
-          "spans": [
-            {
-              "bars": [
-                0,
-                28
-              ],
-              "notes": 341,
-              "measured": 12.179,
-              "band": [
-                8.063,
-                18.813
-              ],
-              "target": 13.438
-            },
-            {
-              "bars": [
-                28,
-                32
-              ],
-              "notes": 39,
-              "measured": 9.75,
-              "band": [
-                5.905,
-                13.778
-              ],
-              "target": 9.841
-            },
-            {
-              "bars": [
-                32,
-                40
-              ],
-              "notes": 109,
-              "measured": 13.625,
-              "band": [
-                8.397,
-                19.593
-              ],
-              "target": 13.995
-            },
-            {
-              "bars": [
-                40,
-                42
-              ],
-              "notes": 19,
-              "measured": 9.5,
-              "band": [
-                5.565,
-                12.986
-              ],
-              "target": 9.276
-            },
-            {
-              "bars": [
-                42,
-                43
-              ],
-              "notes": 7,
-              "measured": 7.0,
-              "band": [
-                4.231,
-                9.871
-              ],
-              "target": 7.051
-            },
-            {
-              "bars": [
-                43,
-                67
-              ],
-              "notes": 332,
-              "measured": 13.833,
-              "band": [
-                8.431,
-                19.673
-              ],
-              "target": 14.052
-            },
-            {
-              "bars": [
-                67,
-                69
-              ],
-              "notes": 1,
-              "measured": 0.5,
-              "band": [
-                2.028,
-                4.733
-              ],
-              "target": 3.381
-            }
-          ],
-          "under_dense": [
-            {
-              "bars": [
-                67,
-                69
-              ],
-              "notes": 1,
-              "measured": 0.5,
-              "band": [
-                2.028,
-                4.733
-              ],
-              "target": 3.381
-            }
-          ],
-          "over_dense": [],
-          "in_band": 6,
-          "plan_available": true,
-          "in_band_frac": 0.8571
-        },
-        "thinned": 0,
-        "filled": 696,
-        "spans": [
-          {
-            "bars": [
-              0,
-              28
-            ],
-            "band": [
-              8.063,
-              18.813
-            ],
-            "target": 13.438,
-            "before": 4.143,
-            "after": 12.429
-          },
-          {
-            "bars": [
-              28,
-              32
-            ],
-            "band": [
-              5.905,
-              13.778
-            ],
-            "target": 9.841,
-            "before": 0.75,
-            "after": 9.75
-          },
-          {
-            "bars": [
-              32,
-              40
-            ],
-            "band": [
-              8.397,
-              19.593
-            ],
-            "target": 13.995,
-            "before": 0.75,
-            "after": 14.0
-          },
-          {
-            "bars": [
-              40,
-              42
-            ],
-            "band": [
-              5.565,
-              12.986
-            ],
-            "target": 9.276,
-            "before": 0.5,
-            "after": 9.5
-          },
-          {
-            "bars": [
-              42,
-              43
-            ],
-            "band": [
-              4.231,
-              9.871
-            ],
-            "target": 7.051,
-            "before": 1.0,
-            "after": 7.0
-          },
-          {
-            "bars": [
-              43,
-              67
-            ],
-            "band": [
-              8.431,
-              19.673
-            ],
-            "target": 14.052,
-            "before": 1.625,
-            "after": 14.042
-          },
-          {
-            "bars": [
-              67,
-              69
-            ],
-            "band": [
-              2.028,
-              4.733
-            ],
-            "target": 3.381,
+            "target": 0.951,
             "before": 0.5,
             "after": 0.5
           }
         ]
       },
-      "density_energy_spearman": 0.7811
+      "density_energy_spearman": 0.5486
     },
-    "challenge": {
-      "notes": 1023,
-      "meter": 12,
-      "jumps": 0,
-      "holds": 67,
-      "repaired": 32,
+    "medium": {
+      "notes": 322,
+      "meter": 5,
+      "jumps": 22,
+      "holds": 30,
+      "repaired": 0,
       "repair_ok": true,
       "critic": {
-        "score": 2,
-        "verdict": "Unplayable as a standard dance-single chart due to constant three-panel jump conflicts with active holds, combined with dizzying forced spins.",
-        "measured_rho": 0.739,
-        "dynamics": "While the overall note density correlates well with the song's energy (rho = 0.739), the structural implementation of the steps is severely flawed.",
+        "score": 8,
+        "verdict": "An incredibly natural and rhythmic Medium chart that unfortunately contains an unintentional 3-panel hand sequence.",
+        "measured_rho": 0.6546,
+        "dynamics": "The chart tracks the song's energy beautifully with a strong positive correlation, dropping to a very sparse density during the breakdown around 67-69 seconds.",
         "issues": [
           {
-            "where": "Throughout the chart (e.g., 1.912-2.150, 3.816-4.054, 7.624-7.862)",
-            "problem": "Unplayable three-panel jump conflicts. The chart places hold notes on one panel (e.g., D) and then requires a jump on the other two panels (e.g., U+L) while the hold is still active, requiring three feet or hand-plants."
-          },
-          {
-            "where": "2.388 - 3.697 and 4.292 - 5.601",
-            "problem": "Highly repetitive, forced 360-degree spins. The 16th runs are copy-pasted circular patterns (R-D-U-L and L-D-U-R) that force the player to rotate continuously, causing dizziness and bad foot flow."
-          },
-          {
-            "where": "62.008 - 63.199",
-            "problem": "Extremely awkward 16th-note jumps embedded inside rapid streams (e.g., D -> [L+U] -> D). This is jarring, physically unsafe, and causes unavoidable double-steps or slides."
+            "where": "33.805 to 34.757",
+            "problem": "While HOLD U and HOLD L are both active, a tap R is placed at 34.519. This creates an unintentional 3-panel 'hand' requirement, which is highly inappropriate and physically awkward for a Medium difficulty chart."
           }
-        ],
-        "human_review": true
+        ]
       },
       "previews": {
-        "png": "/Users/fterry/.foreman/worktrees/FRM-1063/build/stepmania/the_pools/challenge.notefield.png"
+        "png": "/Users/fterry/.foreman/worktrees/FRM-1063/build/stepmania/the_pools/medium.notefield.png"
       },
       "metrics": {
-        "notes": 1023,
-        "onset_alignment": 0.7527,
-        "grid_notes": 253,
+        "notes": 322,
+        "onset_alignment": 1.0,
+        "grid_notes": 0,
         "panel_balance": {
-          "L": 0.217,
-          "D": 0.276,
-          "U": 0.288,
-          "R": 0.219
+          "L": 0.215,
+          "D": 0.27,
+          "U": 0.282,
+          "R": 0.233
         },
-        "hold_share": 0.0655,
-        "jump_share": 0.0,
-        "flow_cost_max": 8.15,
-        "flow_cost_mean": 0.25,
-        "density_energy_spearman": 0.739,
+        "hold_share": 0.0932,
+        "jump_share": 0.0683,
+        "flow_cost_max": 0.2,
+        "flow_cost_mean": 0.01,
+        "density_energy_spearman": 0.6546,
         "gates": {
-          "onset_alignment": false,
+          "onset_alignment": true,
           "panel_balance": true,
           "hold_share": true,
           "flow_ceiling": true,
@@ -1585,91 +785,91 @@
                 0,
                 28
               ],
-              "notes": 403,
-              "measured": 14.393,
+              "notes": 136,
+              "measured": 4.857,
               "band": [
-                10.079,
-                23.517
+                3.779,
+                8.819
               ],
-              "target": 16.798
+              "target": 6.299
             },
             {
               "bars": [
                 28,
                 32
               ],
-              "notes": 45,
-              "measured": 11.25,
+              "notes": 15,
+              "measured": 3.75,
               "band": [
-                7.381,
-                17.222
+                2.768,
+                6.458
               ],
-              "target": 12.302
+              "target": 4.613
             },
             {
               "bars": [
                 32,
                 40
               ],
-              "notes": 135,
-              "measured": 16.875,
+              "notes": 38,
+              "measured": 4.75,
               "band": [
-                10.496,
-                24.491
+                3.936,
+                9.184
               ],
-              "target": 17.493
+              "target": 6.56
             },
             {
               "bars": [
                 40,
                 42
               ],
-              "notes": 22,
-              "measured": 11.0,
+              "notes": 7,
+              "measured": 3.5,
               "band": [
-                6.957,
-                16.232
+                2.609,
+                6.087
               ],
-              "target": 11.594
+              "target": 4.348
             },
             {
               "bars": [
                 42,
                 43
               ],
-              "notes": 9,
-              "measured": 9.0,
+              "notes": 2,
+              "measured": 2.0,
               "band": [
-                5.288,
-                12.339
+                1.983,
+                4.627
               ],
-              "target": 8.814
+              "target": 3.305
             },
             {
               "bars": [
                 43,
                 67
               ],
-              "notes": 406,
-              "measured": 16.917,
+              "notes": 123,
+              "measured": 5.125,
               "band": [
-                10.539,
-                24.591
+                3.952,
+                9.222
               ],
-              "target": 17.565
+              "target": 6.587
             },
             {
               "bars": [
                 67,
                 69
               ],
-              "notes": 3,
-              "measured": 1.5,
+              "notes": 1,
+              "measured": 0.5,
               "band": [
-                2.536,
-                5.916
+                0.951,
+                2.219
               ],
-              "target": 4.226
+              "target": 1.585
             }
           ],
           "under_dense": [
@@ -1678,13 +878,13 @@
                 67,
                 69
               ],
-              "notes": 3,
-              "measured": 1.5,
+              "notes": 1,
+              "measured": 0.5,
               "band": [
-                2.536,
-                5.916
+                0.951,
+                2.219
               ],
-              "target": 4.226
+              "target": 1.585
             }
           ],
           "over_dense": [],
@@ -1701,91 +901,91 @@
                 0,
                 28
               ],
-              "notes": 403,
-              "measured": 14.393,
+              "notes": 136,
+              "measured": 4.857,
               "band": [
-                10.079,
-                23.517
+                3.779,
+                8.819
               ],
-              "target": 16.798
+              "target": 6.299
             },
             {
               "bars": [
                 28,
                 32
               ],
-              "notes": 45,
-              "measured": 11.25,
+              "notes": 15,
+              "measured": 3.75,
               "band": [
-                7.381,
-                17.222
+                2.768,
+                6.458
               ],
-              "target": 12.302
+              "target": 4.613
             },
             {
               "bars": [
                 32,
                 40
               ],
-              "notes": 135,
-              "measured": 16.875,
+              "notes": 38,
+              "measured": 4.75,
               "band": [
-                10.496,
-                24.491
+                3.936,
+                9.184
               ],
-              "target": 17.493
+              "target": 6.56
             },
             {
               "bars": [
                 40,
                 42
               ],
-              "notes": 22,
-              "measured": 11.0,
+              "notes": 7,
+              "measured": 3.5,
               "band": [
-                6.957,
-                16.232
+                2.609,
+                6.087
               ],
-              "target": 11.594
+              "target": 4.348
             },
             {
               "bars": [
                 42,
                 43
               ],
-              "notes": 9,
-              "measured": 9.0,
+              "notes": 2,
+              "measured": 2.0,
               "band": [
-                5.288,
-                12.339
+                1.983,
+                4.627
               ],
-              "target": 8.814
+              "target": 3.305
             },
             {
               "bars": [
                 43,
                 67
               ],
-              "notes": 406,
-              "measured": 16.917,
+              "notes": 123,
+              "measured": 5.125,
               "band": [
-                10.539,
-                24.591
+                3.952,
+                9.222
               ],
-              "target": 17.565
+              "target": 6.587
             },
             {
               "bars": [
                 67,
                 69
               ],
-              "notes": 3,
-              "measured": 1.5,
+              "notes": 1,
+              "measured": 0.5,
               "band": [
-                2.536,
-                5.916
+                0.951,
+                2.219
               ],
-              "target": 4.226
+              "target": 1.585
             }
           ],
           "under_dense": [
@@ -1794,13 +994,13 @@
                 67,
                 69
               ],
-              "notes": 3,
-              "measured": 1.5,
+              "notes": 1,
+              "measured": 0.5,
               "band": [
-                2.536,
-                5.916
+                0.951,
+                2.219
               ],
-              "target": 4.226
+              "target": 1.585
             }
           ],
           "over_dense": [],
@@ -1808,8 +1008,8 @@
           "plan_available": true,
           "in_band_frac": 0.8571
         },
-        "thinned": 0,
-        "filled": 125,
+        "thinned": 27,
+        "filled": 19,
         "spans": [
           {
             "bars": [
@@ -1817,12 +1017,12 @@
               28
             ],
             "band": [
-              10.079,
-              23.517
+              3.779,
+              8.819
             ],
-            "target": 16.798,
-            "before": 12.393,
-            "after": 14.821
+            "target": 6.299,
+            "before": 5.179,
+            "after": 4.857
           },
           {
             "bars": [
@@ -1830,12 +1030,12 @@
               32
             ],
             "band": [
-              7.381,
-              17.222
+              2.768,
+              6.458
             ],
-            "target": 12.302,
-            "before": 9.0,
-            "after": 12.0
+            "target": 4.613,
+            "before": 3.5,
+            "after": 3.75
           },
           {
             "bars": [
@@ -1843,12 +1043,12 @@
               40
             ],
             "band": [
-              10.496,
-              24.491
+              3.936,
+              9.184
             ],
-            "target": 17.493,
-            "before": 16.125,
-            "after": 17.5
+            "target": 6.56,
+            "before": 5.0,
+            "after": 4.75
           },
           {
             "bars": [
@@ -1856,12 +1056,12 @@
               42
             ],
             "band": [
-              6.957,
-              16.232
+              2.609,
+              6.087
             ],
-            "target": 11.594,
-            "before": 11.0,
-            "after": 11.5
+            "target": 4.348,
+            "before": 2.5,
+            "after": 3.5
           },
           {
             "bars": [
@@ -1869,12 +1069,12 @@
               43
             ],
             "band": [
-              5.288,
-              12.339
+              1.983,
+              4.627
             ],
-            "target": 8.814,
-            "before": 8.0,
-            "after": 9.0
+            "target": 3.305,
+            "before": 2.0,
+            "after": 2.0
           },
           {
             "bars": [
@@ -1882,12 +1082,12 @@
               67
             ],
             "band": [
-              10.539,
-              24.591
+              3.952,
+              9.222
             ],
-            "target": 17.565,
-            "before": 16.042,
-            "after": 17.375
+            "target": 6.587,
+            "before": 5.333,
+            "after": 5.125
           },
           {
             "bars": [
@@ -1895,16 +1095,825 @@
               69
             ],
             "band": [
-              2.536,
-              5.916
+              0.951,
+              2.219
             ],
-            "target": 4.226,
-            "before": 1.5,
-            "after": 1.5
+            "target": 1.585,
+            "before": 0.5,
+            "after": 0.5
           }
         ]
       },
-      "density_energy_spearman": 0.739
+      "density_energy_spearman": 0.6546
+    },
+    "hard": {
+      "notes": 410,
+      "meter": 8,
+      "jumps": 0,
+      "holds": 47,
+      "repaired": 0,
+      "repair_ok": true,
+      "critic": {
+        "score": 9,
+        "verdict": "An exceptionally well-flowing and rhythmically expressive chart that captures the track's funky, syncopated house energy with great physical intuition.",
+        "measured_rho": 0.8526,
+        "dynamics": "With a strong Spearman correlation of +0.853, the note density matches the track's energy perfectly, dropping out during the bridge and peaking during the dense vocal choruses.",
+        "issues": [
+          {
+            "where": "78.312 - 78.550",
+            "problem": "Back-to-back 8th note jumps (L+R into U+D) introduce a sudden physical spike compared to the surrounding stream, though it remains readable."
+          },
+          {
+            "where": "65.460 - 65.579",
+            "problem": "The isolated 16th tap (D to R) is rhythmically accurate to the syncopated vocal but may catch intermediate players off guard due to its scarcity elsewhere in the phrase."
+          }
+        ]
+      },
+      "previews": {
+        "png": "/Users/fterry/.foreman/worktrees/FRM-1063/build/stepmania/the_pools/hard.notefield.png"
+      },
+      "metrics": {
+        "notes": 410,
+        "onset_alignment": 0.9976,
+        "grid_notes": 1,
+        "panel_balance": {
+          "L": 0.222,
+          "D": 0.28,
+          "U": 0.278,
+          "R": 0.22
+        },
+        "hold_share": 0.1146,
+        "jump_share": 0.0,
+        "flow_cost_max": 0.0,
+        "flow_cost_mean": 0.0,
+        "density_energy_spearman": 0.8526,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": true
+        },
+        "density_plan": {
+          "spans": [
+            {
+              "bars": [
+                0,
+                28
+              ],
+              "notes": 167,
+              "measured": 5.964,
+              "band": [
+                6.047,
+                14.11
+              ],
+              "target": 10.079
+            },
+            {
+              "bars": [
+                28,
+                32
+              ],
+              "notes": 19,
+              "measured": 4.75,
+              "band": [
+                4.429,
+                10.333
+              ],
+              "target": 7.381
+            },
+            {
+              "bars": [
+                32,
+                40
+              ],
+              "notes": 53,
+              "measured": 6.625,
+              "band": [
+                6.298,
+                14.695
+              ],
+              "target": 10.496
+            },
+            {
+              "bars": [
+                40,
+                42
+              ],
+              "notes": 9,
+              "measured": 4.5,
+              "band": [
+                4.174,
+                9.739
+              ],
+              "target": 6.957
+            },
+            {
+              "bars": [
+                42,
+                43
+              ],
+              "notes": 3,
+              "measured": 3.0,
+              "band": [
+                3.173,
+                7.403
+              ],
+              "target": 5.288
+            },
+            {
+              "bars": [
+                43,
+                67
+              ],
+              "notes": 157,
+              "measured": 6.542,
+              "band": [
+                6.323,
+                14.755
+              ],
+              "target": 10.539
+            },
+            {
+              "bars": [
+                67,
+                69
+              ],
+              "notes": 2,
+              "measured": 1.0,
+              "band": [
+                1.521,
+                3.55
+              ],
+              "target": 2.536
+            }
+          ],
+          "under_dense": [
+            {
+              "bars": [
+                0,
+                28
+              ],
+              "notes": 167,
+              "measured": 5.964,
+              "band": [
+                6.047,
+                14.11
+              ],
+              "target": 10.079
+            },
+            {
+              "bars": [
+                42,
+                43
+              ],
+              "notes": 3,
+              "measured": 3.0,
+              "band": [
+                3.173,
+                7.403
+              ],
+              "target": 5.288
+            },
+            {
+              "bars": [
+                67,
+                69
+              ],
+              "notes": 2,
+              "measured": 1.0,
+              "band": [
+                1.521,
+                3.55
+              ],
+              "target": 2.536
+            }
+          ],
+          "over_dense": [],
+          "in_band": 4,
+          "plan_available": true,
+          "in_band_frac": 0.5714
+        }
+      },
+      "density": {
+        "report": {
+          "spans": [
+            {
+              "bars": [
+                0,
+                28
+              ],
+              "notes": 167,
+              "measured": 5.964,
+              "band": [
+                6.047,
+                14.11
+              ],
+              "target": 10.079
+            },
+            {
+              "bars": [
+                28,
+                32
+              ],
+              "notes": 19,
+              "measured": 4.75,
+              "band": [
+                4.429,
+                10.333
+              ],
+              "target": 7.381
+            },
+            {
+              "bars": [
+                32,
+                40
+              ],
+              "notes": 53,
+              "measured": 6.625,
+              "band": [
+                6.298,
+                14.695
+              ],
+              "target": 10.496
+            },
+            {
+              "bars": [
+                40,
+                42
+              ],
+              "notes": 9,
+              "measured": 4.5,
+              "band": [
+                4.174,
+                9.739
+              ],
+              "target": 6.957
+            },
+            {
+              "bars": [
+                42,
+                43
+              ],
+              "notes": 3,
+              "measured": 3.0,
+              "band": [
+                3.173,
+                7.403
+              ],
+              "target": 5.288
+            },
+            {
+              "bars": [
+                43,
+                67
+              ],
+              "notes": 157,
+              "measured": 6.542,
+              "band": [
+                6.323,
+                14.755
+              ],
+              "target": 10.539
+            },
+            {
+              "bars": [
+                67,
+                69
+              ],
+              "notes": 2,
+              "measured": 1.0,
+              "band": [
+                1.521,
+                3.55
+              ],
+              "target": 2.536
+            }
+          ],
+          "under_dense": [
+            {
+              "bars": [
+                0,
+                28
+              ],
+              "notes": 167,
+              "measured": 5.964,
+              "band": [
+                6.047,
+                14.11
+              ],
+              "target": 10.079
+            },
+            {
+              "bars": [
+                42,
+                43
+              ],
+              "notes": 3,
+              "measured": 3.0,
+              "band": [
+                3.173,
+                7.403
+              ],
+              "target": 5.288
+            },
+            {
+              "bars": [
+                67,
+                69
+              ],
+              "notes": 2,
+              "measured": 1.0,
+              "band": [
+                1.521,
+                3.55
+              ],
+              "target": 2.536
+            }
+          ],
+          "over_dense": [],
+          "in_band": 4,
+          "plan_available": true,
+          "in_band_frac": 0.5714
+        },
+        "thinned": 41,
+        "filled": 42,
+        "spans": [
+          {
+            "bars": [
+              0,
+              28
+            ],
+            "band": [
+              6.047,
+              14.11
+            ],
+            "target": 10.079,
+            "before": 5.357,
+            "after": 5.964
+          },
+          {
+            "bars": [
+              28,
+              32
+            ],
+            "band": [
+              4.429,
+              10.333
+            ],
+            "target": 7.381,
+            "before": 6.75,
+            "after": 4.75
+          },
+          {
+            "bars": [
+              32,
+              40
+            ],
+            "band": [
+              6.298,
+              14.695
+            ],
+            "target": 10.496,
+            "before": 7.125,
+            "after": 6.625
+          },
+          {
+            "bars": [
+              40,
+              42
+            ],
+            "band": [
+              4.174,
+              9.739
+            ],
+            "target": 6.957,
+            "before": 5.0,
+            "after": 4.5
+          },
+          {
+            "bars": [
+              42,
+              43
+            ],
+            "band": [
+              3.173,
+              7.403
+            ],
+            "target": 5.288,
+            "before": 4.0,
+            "after": 3.0
+          },
+          {
+            "bars": [
+              43,
+              67
+            ],
+            "band": [
+              6.323,
+              14.755
+            ],
+            "target": 10.539,
+            "before": 6.75,
+            "after": 6.542
+          },
+          {
+            "bars": [
+              67,
+              69
+            ],
+            "band": [
+              1.521,
+              3.55
+            ],
+            "target": 2.536,
+            "before": 1.0,
+            "after": 1.0
+          }
+        ]
+      },
+      "density_energy_spearman": 0.8526
+    },
+    "challenge": {
+      "notes": 590,
+      "meter": 11,
+      "jumps": 13,
+      "holds": 40,
+      "repaired": 11,
+      "repair_ok": true,
+      "critic": {
+        "score": 6,
+        "verdict": "A decent tech chart with solid ideas, but held back by some awkward three-panel interactions and a slight dip in energy tracking during the middle section.",
+        "measured_rho": 0.5323,
+        "dynamics": "The density generally follows the song's energy (rho = 0.532), but it fails the strict correlation gate due to a severe under-density in bars 67-69.",
+        "issues": [
+          {
+            "where": "69.506",
+            "problem": "Requires jumping on D and R while holding U (from 69.268 to 69.744), creating an awkward 3-panel interaction that is difficult to execute without hands."
+          },
+          {
+            "where": "34.519",
+            "problem": "Requires tapping U while holding both D (33.805) and R (34.281), which forces a 3-panel hold-and-tap that is physically impossible to execute cleanly with just two feet."
+          },
+          {
+            "where": "Bars 67-69",
+            "problem": "The density drops to 1.0 notes/bar, which is significantly under the song's energy budget (1.9-4.4) for this section, causing a noticeable lull in gameplay."
+          }
+        ],
+        "human_review": true
+      },
+      "previews": {
+        "png": "/Users/fterry/.foreman/worktrees/FRM-1063/build/stepmania/the_pools/challenge.notefield.png"
+      },
+      "metrics": {
+        "notes": 590,
+        "onset_alignment": 0.9983,
+        "grid_notes": 1,
+        "panel_balance": {
+          "L": 0.221,
+          "D": 0.275,
+          "U": 0.282,
+          "R": 0.222
+        },
+        "hold_share": 0.0678,
+        "jump_share": 0.022,
+        "flow_cost_max": 8.15,
+        "flow_cost_mean": 0.15,
+        "density_energy_spearman": 0.5323,
+        "gates": {
+          "onset_alignment": true,
+          "panel_balance": true,
+          "hold_share": true,
+          "flow_ceiling": true,
+          "density_energy": false
+        },
+        "density_plan": {
+          "spans": [
+            {
+              "bars": [
+                0,
+                28
+              ],
+              "notes": 243,
+              "measured": 8.679,
+              "band": [
+                7.559,
+                17.638
+              ],
+              "target": 12.598
+            },
+            {
+              "bars": [
+                28,
+                32
+              ],
+              "notes": 28,
+              "measured": 7.0,
+              "band": [
+                5.536,
+                12.917
+              ],
+              "target": 9.226
+            },
+            {
+              "bars": [
+                32,
+                40
+              ],
+              "notes": 80,
+              "measured": 10.0,
+              "band": [
+                7.872,
+                18.368
+              ],
+              "target": 13.12
+            },
+            {
+              "bars": [
+                40,
+                42
+              ],
+              "notes": 13,
+              "measured": 6.5,
+              "band": [
+                5.217,
+                12.174
+              ],
+              "target": 8.696
+            },
+            {
+              "bars": [
+                42,
+                43
+              ],
+              "notes": 4,
+              "measured": 4.0,
+              "band": [
+                3.966,
+                9.254
+              ],
+              "target": 6.61
+            },
+            {
+              "bars": [
+                43,
+                67
+              ],
+              "notes": 220,
+              "measured": 9.167,
+              "band": [
+                7.904,
+                18.443
+              ],
+              "target": 13.174
+            },
+            {
+              "bars": [
+                67,
+                69
+              ],
+              "notes": 2,
+              "measured": 1.0,
+              "band": [
+                1.902,
+                4.437
+              ],
+              "target": 3.169
+            }
+          ],
+          "under_dense": [
+            {
+              "bars": [
+                67,
+                69
+              ],
+              "notes": 2,
+              "measured": 1.0,
+              "band": [
+                1.902,
+                4.437
+              ],
+              "target": 3.169
+            }
+          ],
+          "over_dense": [],
+          "in_band": 6,
+          "plan_available": true,
+          "in_band_frac": 0.8571
+        }
+      },
+      "density": {
+        "report": {
+          "spans": [
+            {
+              "bars": [
+                0,
+                28
+              ],
+              "notes": 243,
+              "measured": 8.679,
+              "band": [
+                7.559,
+                17.638
+              ],
+              "target": 12.598
+            },
+            {
+              "bars": [
+                28,
+                32
+              ],
+              "notes": 28,
+              "measured": 7.0,
+              "band": [
+                5.536,
+                12.917
+              ],
+              "target": 9.226
+            },
+            {
+              "bars": [
+                32,
+                40
+              ],
+              "notes": 80,
+              "measured": 10.0,
+              "band": [
+                7.872,
+                18.368
+              ],
+              "target": 13.12
+            },
+            {
+              "bars": [
+                40,
+                42
+              ],
+              "notes": 13,
+              "measured": 6.5,
+              "band": [
+                5.217,
+                12.174
+              ],
+              "target": 8.696
+            },
+            {
+              "bars": [
+                42,
+                43
+              ],
+              "notes": 4,
+              "measured": 4.0,
+              "band": [
+                3.966,
+                9.254
+              ],
+              "target": 6.61
+            },
+            {
+              "bars": [
+                43,
+                67
+              ],
+              "notes": 220,
+              "measured": 9.167,
+              "band": [
+                7.904,
+                18.443
+              ],
+              "target": 13.174
+            },
+            {
+              "bars": [
+                67,
+                69
+              ],
+              "notes": 2,
+              "measured": 1.0,
+              "band": [
+                1.902,
+                4.437
+              ],
+              "target": 3.169
+            }
+          ],
+          "under_dense": [
+            {
+              "bars": [
+                67,
+                69
+              ],
+              "notes": 2,
+              "measured": 1.0,
+              "band": [
+                1.902,
+                4.437
+              ],
+              "target": 3.169
+            }
+          ],
+          "over_dense": [],
+          "in_band": 6,
+          "plan_available": true,
+          "in_band_frac": 0.8571
+        },
+        "thinned": 55,
+        "filled": 29,
+        "spans": [
+          {
+            "bars": [
+              0,
+              28
+            ],
+            "band": [
+              7.559,
+              17.638
+            ],
+            "target": 12.598,
+            "before": 9.5,
+            "after": 8.964
+          },
+          {
+            "bars": [
+              28,
+              32
+            ],
+            "band": [
+              5.536,
+              12.917
+            ],
+            "target": 9.226,
+            "before": 11.25,
+            "after": 7.0
+          },
+          {
+            "bars": [
+              32,
+              40
+            ],
+            "band": [
+              7.872,
+              18.368
+            ],
+            "target": 13.12,
+            "before": 11.0,
+            "after": 10.0
+          },
+          {
+            "bars": [
+              40,
+              42
+            ],
+            "band": [
+              5.217,
+              12.174
+            ],
+            "target": 8.696,
+            "before": 8.5,
+            "after": 6.5
+          },
+          {
+            "bars": [
+              42,
+              43
+            ],
+            "band": [
+              3.966,
+              9.254
+            ],
+            "target": 6.61,
+            "before": 4.0,
+            "after": 4.0
+          },
+          {
+            "bars": [
+              43,
+              67
+            ],
+            "band": [
+              7.904,
+              18.443
+            ],
+            "target": 13.174,
+            "before": 9.333,
+            "after": 9.292
+          },
+          {
+            "bars": [
+              67,
+              69
+            ],
+            "band": [
+              1.902,
+              4.437
+            ],
+            "target": 3.169,
+            "before": 1.0,
+            "after": 1.0
+          }
+        ]
+      },
+      "density_energy_spearman": 0.5323
     }
   },
   "files": {

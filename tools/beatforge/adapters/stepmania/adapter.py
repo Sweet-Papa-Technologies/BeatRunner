@@ -20,17 +20,20 @@ from .serialize import write_song_folder
 from .validate import validate_repair
 
 
-def _flow_ok(placements: list, analysis: dict, difficulty: str) -> bool:
-    """Whether this chart would pass the `flow_ceiling` gate.
-
-    Measured on the chart AFTER validate/repair, because that is the chart the
-    gate actually judges — repair drops notes for NPS/jack/hold-overlap and those
-    drops change the foot path. Comparing pre-repair charts here let two of the
-    six flow regressions slip through the guard.
-    """
+def _flow_max(placements: list, analysis: dict, difficulty: str) -> float:
+    """Worst single foot-flow transition cost in this chart, measured AFTER
+    validate/repair — that is the chart the gate actually judges, and repair's
+    note drops change the foot path."""
     repaired = validate_repair(placements, analysis, difficulty).placements
     max_cost, _ = sm_qa._flow_costs(repaired, BUDGETS[difficulty])
-    return max_cost < ff.DOUBLE_STEP + ff.JACK + 1e-6
+    return max_cost
+
+
+FLOW_CEILING = ff.DOUBLE_STEP + ff.JACK      # forbidden-tier transition
+
+
+def _flow_ok(placements: list, analysis: dict, difficulty: str) -> bool:
+    return _flow_max(placements, analysis, difficulty) < FLOW_CEILING + 1e-6
 
 
 class StepManiaAdapter:
@@ -71,8 +74,14 @@ class StepManiaAdapter:
         # because its bar is *zero* charts with forbidden-tier transitions. So
         # when shaping would newly break the ceiling, the unshaped chart wins and
         # that chart simply forgoes its density gain.
-        if (_flow_ok(shaped, analysis, difficulty)
-                or not _flow_ok(base, analysis, difficulty)):
+        # RATCHET (R3): shaping may never make foot flow worse. R2 used the weaker
+        # rule "reject only if shaping newly crosses the ceiling", which let flow
+        # degrade freely on charts that were already over it — and the real pack
+        # measured the damage: the `easy` flow gate fell 75% -> 25% and
+        # flow_cost_max nearly doubled. Pad comfort is the product; density is a
+        # target. When they conflict, comfort wins.
+        if (_flow_max(shaped, analysis, difficulty)
+                <= _flow_max(base, analysis, difficulty) + 1e-6):
             self.last_density_repair = rep
             return shaped
         self.last_density_repair = DensityRepair(

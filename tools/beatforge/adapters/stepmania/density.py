@@ -40,6 +40,7 @@ from ... import config, dsp
 #     17.3%). Thinning must not make that worse.
 #   mine      — a mine is a deliberate gap marker, not density.
 _PROTECTED_KINDS = ("hold", "roll", "mine")
+FILL_MODE = "target"   # target | lo | none  (see thin_to_plan)
 
 
 @dataclass
@@ -111,6 +112,24 @@ def _fill_pool(resolved: list, analysis: dict, difficulty: str) -> dict:
     return pool
 
 
+def _break_runs(notes: list, b) -> list:
+    """Drop a note from any run of consecutive ≤8th-spaced notes longer than the
+    tier's `max_run`. Mirrors resolve.thin_for_difficulty's rule so the two agree."""
+    max_run = getattr(b, "max_run", 8)
+    keep = [True] * len(notes)
+    i = 0
+    while i < len(notes):
+        j = i
+        while j + 1 < len(notes) and (notes[j + 1].beat - notes[j].beat) <= 0.5 + 1e-6:
+            j += 1
+        if j - i + 1 > max_run:
+            for k in range(i, j + 1):
+                if (k - i) % (max_run + 1) == max_run and notes[k].kind not in _PROTECTED_KINDS:
+                    keep[k] = False
+        i = j + 1
+    return [n for n, k in zip(notes, keep) if k]
+
+
 def _phrase_at(resolved: list, bar: int, meter: int) -> dict:
     """Phrase intent for an EMPTY bar: borrow it from the nearest charted note,
     so a bar we fill from scratch still belongs to its phrase."""
@@ -160,10 +179,40 @@ def thin_to_plan(resolved: list, analysis: dict, difficulty: str) -> DensityRepa
     dropped: list = []
     added: list = []
 
+    # --- how many notes should this bar hold? ---------------------------------
+    #
+    # REDISTRIBUTE (default): keep the note TOTAL the tier would naturally
+    # produce and move those notes to where the energy is. Round 2 anchored each
+    # bar to a fraction of `max_nps_4s * bar_seconds` — a tier ceiling with no
+    # relationship to what the song actually offers — so dense tracks inflated
+    # (The Pools challenge 438 -> 902 notes) while sparse ones were starved
+    # (Lucky Lucky beginner 81 -> 34). Redistribution has neither failure mode: it
+    # is conservative by construction, because it never changes the budget, only
+    # its distribution. Difficulty stays where it was; dynamics is what moves.
+    weights = [e["target_frac"] for e in plan["per_bar"]]
+    bar_targets: dict[int, float] = {}
+    if config.DENSITY_MODE == "redistribute" and sum(weights) > 0:
+        # Only redistribute across bars the chart actually spans, so a short chart
+        # in a long song isn't diluted by bars it never reaches.
+        spanned = sorted(by_bar)
+        if spanned:
+            lo_bar, hi_bar = spanned[0], spanned[-1]
+            live = [(b, weights[b]) for b in range(lo_bar, min(hi_bar + 1, len(weights)))]
+            wsum = sum(w for _, w in live) or 1.0
+            total = len(resolved)
+            for b, w in live:
+                bar_targets[b] = total * w / wsum
     for bar, entry in enumerate(plan["per_bar"]):
-        target = entry["target_notes"].get(difficulty)
+        target = bar_targets.get(bar, entry["target_notes"].get(difficulty))
+        if config.DENSITY_MODE == "redistribute" and bar not in bar_targets:
+            continue                      # outside the chart's span; leave alone
         if target is None:
             continue
+        # The tier's NPS ceiling still binds — redistribution may never push a bar
+        # past what the tier allows, however loud that bar is.
+        ceiling = entry["target_notes"].get(difficulty)
+        if ceiling is not None:
+            target = min(target, ceiling / max(1e-9, entry["target_frac"]))
         notes = by_bar.get(bar, [])
         want = max(1, int(round(target)))
 
@@ -180,17 +229,25 @@ def thin_to_plan(resolved: list, analysis: dict, difficulty: str) -> DensityRepa
                 dropped.append((round(float(n.beat), 3),
                                 round(strength.get(round(float(n.beat), 3), 0.0), 4),
                                 "over_target"))
-        elif len(notes) < want:
+        elif len(notes) < want and FILL_MODE != "none":
             # Inherit the phrase intent so a filled note carries the same
             # movement/crossover/texture the DP will solve the rest of the bar
             # under. An empty phrase would silently fall back to "static".
             phrase = notes[0].phrase if notes else _phrase_at(resolved, bar, meter)
-            for o in pool.get(bar, [])[:want - len(notes)]:
+            cap = want if FILL_MODE == "target" else max(1, int(entry["band"][difficulty][0]))
+            for o in pool.get(bar, [])[:max(0, cap - len(notes))]:
                 added.append(ResolvedNote(beat=float(o["nearest_beat"]),
                                           kind="tap", phrase=phrase))
 
     survivors = [n for n in resolved if keep[id(n)]] + added
     survivors.sort(key=lambda n: n.beat)
+
+    # Re-break long runs. `thin_for_difficulty` enforced the tier's `max_run`
+    # BEFORE we filled, so a fill can silently re-create the stream it removed —
+    # which is how a "medium" ends up asking for an expert 16-note burst. Pad
+    # ergonomics outrank hitting the density number exactly.
+    from .grammar import BUDGETS
+    survivors = _break_runs(survivors, BUDGETS[difficulty])
 
     # Section-level before/after, for the QA report and the designer's phrase
     # contract — the enforcement is per bar, but a human reads sections.

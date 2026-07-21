@@ -19,6 +19,7 @@ import base64
 import json
 import os
 import re
+import socket
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -157,6 +158,23 @@ class VertexClient:
                     _time.sleep(wait)
                     continue
                 raise VertexError(f"HTTP {e.code} from Vertex:\n{detail[:1200]}")
+            except (TimeoutError, socket.timeout, urllib.error.URLError, OSError) as e:
+                # A read timeout or dropped connection is exactly as transient as a
+                # 503, but it raises a different exception type and so used to fall
+                # straight through — one timed-out socket killed a whole song
+                # 100 minutes into a batch. A thinking-heavy designer call can sit
+                # quiet for minutes, which makes this failure mode routine, not rare.
+                reason = getattr(e, "reason", e)
+                if isinstance(e, urllib.error.URLError) and not isinstance(
+                        reason, (TimeoutError, socket.timeout, ConnectionError, OSError)):
+                    raise VertexError(f"cannot reach Vertex: {reason}")
+                if attempt < len(backoffs):
+                    wait = backoffs[attempt]
+                    print(f"[vertex] network/timeout ({type(e).__name__}: {reason}); "
+                          f"backing off {wait}s (retry {attempt + 1}/{len(backoffs)})")
+                    _time.sleep(wait)
+                    continue
+                raise VertexError(f"network failure after retries: {type(e).__name__}: {reason}")
         raise VertexError("exhausted retries")
 
     # ---- thinking config (spec §3: full thinking power) ------------------ #

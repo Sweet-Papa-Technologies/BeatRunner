@@ -17,7 +17,11 @@ from .compute import (AnalysisResult, ColabError, ComputeBackend,
 
 
 def _cache_key(audio_path: str) -> str:
-    return f"{dsp.audio_sha256(audio_path)[:16]}-{config.BEAT_ANALYSIS_VERSION}"
+    # The density plan is part of the analysis output, so its tunables are part of
+    # the cache identity. Omitting them let a re-tuned plan silently resolve to a
+    # stale cached analysis.
+    return (f"{dsp.audio_sha256(audio_path)[:16]}-{config.BEAT_ANALYSIS_VERSION}"
+            f"-u{config.DENSITY_TARGET_UTILIZATION}")
 
 
 def analysis_path(track_id: str) -> Path:
