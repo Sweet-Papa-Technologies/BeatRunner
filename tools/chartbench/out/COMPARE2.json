@@ -530,6 +530,402 @@
     "true_bpm": 109.96
    }
   },
+  "Lucky Lucky [STEPFORGE-R3-G36]": {
+   "beginner": {
+    "notes": 57,
+    "onset_alignment": 0.9649,
+    "grid_notes": 2,
+    "panel_balance": {
+     "L": 0.211,
+     "D": 0.316,
+     "U": 0.281,
+     "R": 0.193
+    },
+    "hold_share": 0.1228,
+    "jump_share": 0.0,
+    "flow_cost_max": 8.15,
+    "flow_cost_mean": 7.85,
+    "density_energy_spearman": 0.8167,
+    "gates": {
+     "onset_alignment": true,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": true,
+     "density_energy": true
+    },
+    "meter": 1,
+    "declared_bpm": 109.96,
+    "true_bpm": 109.96
+   },
+   "easy": {
+    "notes": 88,
+    "onset_alignment": 0.9659,
+    "grid_notes": 3,
+    "panel_balance": {
+     "L": 0.233,
+     "D": 0.278,
+     "U": 0.267,
+     "R": 0.222
+    },
+    "hold_share": 0.1477,
+    "jump_share": 0.0227,
+    "flow_cost_max": 8.15,
+    "flow_cost_mean": 7.54,
+    "density_energy_spearman": 0.7639,
+    "gates": {
+     "onset_alignment": true,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": true,
+     "density_energy": true
+    },
+    "meter": 3,
+    "declared_bpm": 109.96,
+    "true_bpm": 109.96
+   },
+   "medium": {
+    "notes": 115,
+    "onset_alignment": 0.9565,
+    "grid_notes": 5,
+    "panel_balance": {
+     "L": 0.22,
+     "D": 0.285,
+     "U": 0.276,
+     "R": 0.22
+    },
+    "hold_share": 0.087,
+    "jump_share": 0.0696,
+    "flow_cost_max": 8.15,
+    "flow_cost_mean": 6.83,
+    "density_energy_spearman": 0.8422,
+    "gates": {
+     "onset_alignment": true,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": true,
+     "density_energy": true
+    },
+    "meter": 5,
+    "declared_bpm": 109.96,
+    "true_bpm": 109.96
+   },
+   "hard": {
+    "notes": 164,
+    "onset_alignment": 0.9756,
+    "grid_notes": 4,
+    "panel_balance": {
+     "L": 0.218,
+     "D": 0.274,
+     "U": 0.291,
+     "R": 0.218
+    },
+    "hold_share": 0.0671,
+    "jump_share": 0.0915,
+    "flow_cost_max": 8.15,
+    "flow_cost_mean": 6.5,
+    "density_energy_spearman": 0.7541,
+    "gates": {
+     "onset_alignment": true,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": true,
+     "density_energy": true
+    },
+    "meter": 8,
+    "declared_bpm": 109.96,
+    "true_bpm": 109.96
+   },
+   "challenge": {
+    "notes": 203,
+    "onset_alignment": 0.9852,
+    "grid_notes": 3,
+    "panel_balance": {
+     "L": 0.208,
+     "D": 0.292,
+     "U": 0.292,
+     "R": 0.208
+    },
+    "hold_share": 0.064,
+    "jump_share": 0.0443,
+    "flow_cost_max": 14.15,
+    "flow_cost_mean": 7.32,
+    "density_energy_spearman": 0.8051,
+    "gates": {
+     "onset_alignment": true,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 11,
+    "declared_bpm": 109.96,
+    "true_bpm": 109.96
+   }
+  },
+  "Lucky Lucky [STEPFORGE-R3-LITE]": {
+   "beginner": {
+    "notes": 40,
+    "onset_alignment": 1.0,
+    "grid_notes": 0,
+    "panel_balance": {
+     "L": 0.171,
+     "D": 0.317,
+     "U": 0.317,
+     "R": 0.195
+    },
+    "hold_share": 0.25,
+    "jump_share": 0.025,
+    "flow_cost_max": 8.15,
+    "flow_cost_mean": 7.6,
+    "density_energy_spearman": 0.6516,
+    "gates": {
+     "onset_alignment": true,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": true,
+     "density_energy": true
+    },
+    "meter": 1,
+    "declared_bpm": 109.96,
+    "true_bpm": 109.96
+   },
+   "easy": {
+    "notes": 76,
+    "onset_alignment": 1.0,
+    "grid_notes": 0,
+    "panel_balance": {
+     "L": 0.2,
+     "D": 0.3,
+     "U": 0.3,
+     "R": 0.2
+    },
+    "hold_share": 0.1842,
+    "jump_share": 0.1842,
+    "flow_cost_max": 38.0,
+    "flow_cost_mean": 10.29,
+    "density_energy_spearman": 0.7889,
+    "gates": {
+     "onset_alignment": true,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 3,
+    "declared_bpm": 109.96,
+    "true_bpm": 109.96
+   },
+   "medium": {
+    "notes": 95,
+    "onset_alignment": 1.0,
+    "grid_notes": 0,
+    "panel_balance": {
+     "L": 0.225,
+     "D": 0.275,
+     "U": 0.296,
+     "R": 0.204
+    },
+    "hold_share": 0.0316,
+    "jump_share": 0.4947,
+    "flow_cost_max": 13.0,
+    "flow_cost_mean": 2.1,
+    "density_energy_spearman": 0.7531,
+    "gates": {
+     "onset_alignment": true,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": true,
+     "density_energy": true
+    },
+    "meter": 5,
+    "declared_bpm": 109.96,
+    "true_bpm": 109.96
+   },
+   "hard": {
+    "notes": 155,
+    "onset_alignment": 1.0,
+    "grid_notes": 0,
+    "panel_balance": {
+     "L": 0.2,
+     "D": 0.282,
+     "U": 0.288,
+     "R": 0.229
+    },
+    "hold_share": 0.0194,
+    "jump_share": 0.0968,
+    "flow_cost_max": 10.0,
+    "flow_cost_mean": 6.75,
+    "density_energy_spearman": 0.8762,
+    "gates": {
+     "onset_alignment": true,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": true,
+     "density_energy": true
+    },
+    "meter": 8,
+    "declared_bpm": 109.96,
+    "true_bpm": 109.96
+   },
+   "challenge": {
+    "notes": 194,
+    "onset_alignment": 1.0,
+    "grid_notes": 0,
+    "panel_balance": {
+     "L": 0.215,
+     "D": 0.289,
+     "U": 0.285,
+     "R": 0.211
+    },
+    "hold_share": 0.1546,
+    "jump_share": 0.5361,
+    "flow_cost_max": 10.0,
+    "flow_cost_mean": 2.62,
+    "density_energy_spearman": 0.7596,
+    "gates": {
+     "onset_alignment": true,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": true,
+     "density_energy": true
+    },
+    "meter": 12,
+    "declared_bpm": 109.96,
+    "true_bpm": 109.96
+   }
+  },
+  "Lucky Lucky [STEPFORGE-R3]": {
+   "beginner": {
+    "notes": 57,
+    "onset_alignment": 1.0,
+    "grid_notes": 0,
+    "panel_balance": {
+     "L": 0.193,
+     "D": 0.316,
+     "U": 0.298,
+     "R": 0.193
+    },
+    "hold_share": 0.1228,
+    "jump_share": 0.0,
+    "flow_cost_max": 8.15,
+    "flow_cost_mean": 7.85,
+    "density_energy_spearman": 0.8074,
+    "gates": {
+     "onset_alignment": true,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": true,
+     "density_energy": true
+    },
+    "meter": 1,
+    "declared_bpm": 109.96,
+    "true_bpm": 109.96
+   },
+   "easy": {
+    "notes": 78,
+    "onset_alignment": 1.0,
+    "grid_notes": 0,
+    "panel_balance": {
+     "L": 0.198,
+     "D": 0.284,
+     "U": 0.284,
+     "R": 0.235
+    },
+    "hold_share": 0.141,
+    "jump_share": 0.0385,
+    "flow_cost_max": 39.0,
+    "flow_cost_mean": 7.89,
+    "density_energy_spearman": 0.7347,
+    "gates": {
+     "onset_alignment": true,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": false,
+     "density_energy": true
+    },
+    "meter": 3,
+    "declared_bpm": 109.96,
+    "true_bpm": 109.96
+   },
+   "medium": {
+    "notes": 113,
+    "onset_alignment": 0.9823,
+    "grid_notes": 2,
+    "panel_balance": {
+     "L": 0.2,
+     "D": 0.275,
+     "U": 0.3,
+     "R": 0.225
+    },
+    "hold_share": 0.1504,
+    "jump_share": 0.0619,
+    "flow_cost_max": 8.15,
+    "flow_cost_mean": 7.02,
+    "density_energy_spearman": 0.8197,
+    "gates": {
+     "onset_alignment": true,
+     "panel_balance": true,
+     "hold_share": false,
+     "flow_ceiling": true,
+     "density_energy": true
+    },
+    "meter": 5,
+    "declared_bpm": 109.96,
+    "true_bpm": 109.96
+   },
+   "hard": {
+    "notes": 188,
+    "onset_alignment": 0.8032,
+    "grid_notes": 37,
+    "panel_balance": {
+     "L": 0.197,
+     "D": 0.303,
+     "U": 0.298,
+     "R": 0.202
+    },
+    "hold_share": 0.0745,
+    "jump_share": 0.0,
+    "flow_cost_max": 8.15,
+    "flow_cost_mean": 7.96,
+    "density_energy_spearman": 0.6859,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": true,
+     "density_energy": true
+    },
+    "meter": 8,
+    "declared_bpm": 109.96,
+    "true_bpm": 109.96
+   },
+   "challenge": {
+    "notes": 245,
+    "onset_alignment": 0.8694,
+    "grid_notes": 32,
+    "panel_balance": {
+     "L": 0.213,
+     "D": 0.285,
+     "U": 0.3,
+     "R": 0.202
+    },
+    "hold_share": 0.0694,
+    "jump_share": 0.0327,
+    "flow_cost_max": 8.15,
+    "flow_cost_mean": 7.52,
+    "density_energy_spearman": 0.8581,
+    "gates": {
+     "onset_alignment": false,
+     "panel_balance": true,
+     "hold_share": true,
+     "flow_ceiling": true,
+     "density_energy": true
+    },
+    "meter": 12,
+    "declared_bpm": 109.96,
+    "true_bpm": 109.96
+   }
+  },
   "Robo Fast Food [AUTOSTEPPER]": {
    "beginner": {
     "notes": 193,

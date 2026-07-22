@@ -80,6 +80,19 @@ TABLE: dict[str, ModelPrice] = {
     #      most expensive token this pipeline can emit.
     # Cached input at $0.15 is a 10x discount on $1.50, which is what makes
     # context caching the highest-leverage structural fix available.
+    # Verified 2026-07-21 against the Vertex pricing page AND probed live against
+    # the project (both return 200 and both accept an audio part — checked, because
+    # a designer that cannot hear the track is useless to us however cheap it is).
+    "gemini-3.6-flash": ModelPrice(
+        "gemini-3.6-flash", text_in=1.50, audio_in=1.50, out=7.50,
+        cached_in=0.15, thinking_out=7.50, verified=True,
+        note="Verified 2026-07-21, global endpoint. Same input rate as 3.5 Flash, "
+             "output 17% cheaper ($7.50 vs $9.00). Audio billed at the input rate."),
+    "gemini-3.5-flash-lite": ModelPrice(
+        "gemini-3.5-flash-lite", text_in=0.30, audio_in=0.30, out=2.50,
+        cached_in=0.03, thinking_out=2.50, verified=True,
+        note="Verified 2026-07-21, global endpoint. 5x cheaper input and 3.6x "
+             "cheaper output than 3.5 Flash. Non-global would be 0.33/2.75/0.033."),
     "gemini-3.5-flash": ModelPrice(
         "gemini-3.5-flash", text_in=1.50, audio_in=1.50, out=9.00,
         cached_in=0.15, thinking_out=9.00, verified=True,

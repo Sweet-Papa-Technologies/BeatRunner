@@ -181,6 +181,7 @@ def generate() -> None:
     """
     t0 = time.time()
     state = {"pack": str(PACK), "songs": SELECTED, "label": R2_LABEL,
+             "model": os.environ.get("BEATFORGE_GEMINI_MODEL", "gemini-3.5-flash"),
              "started": time.strftime("%Y-%m-%d %H:%M:%S"), "done": [],
              "failed": [], "in_progress": None, "complete": False}
     _status(state)
@@ -374,10 +375,19 @@ def main():
                          "song is regenerated instead of resumed")
     ap.add_argument("--score", action="store_true",
                     help="score the pack and write the head-to-head comparison")
+    ap.add_argument("--songs", help="comma list of track ids to restrict this run to "
+                                    "(default: all four)")
     ap.add_argument("--daemon", metavar="LOGFILE",
                     help="detach into a new session (survives shell/agent teardown) "
                          "and append all output to LOGFILE")
     a = ap.parse_args()
+    if a.songs:
+        global SELECTED
+        picked = [t.strip() for t in a.songs.split(",") if t.strip()]
+        unknown = [t for t in picked if t not in TITLES]
+        if unknown:
+            ap.error(f"unknown track id(s): {unknown}; known: {sorted(TITLES)}")
+        SELECTED = picked
     if not (a.copy or a.generate or a.score):
         ap.error("pass --copy, --generate and/or --score")
     if a.daemon:

@@ -44,7 +44,18 @@ JOBS_DIR = Path(__file__).resolve().parent / "jobs"
 #     kick" from audio alone.
 #   * Supports reasoning via `generationConfig.thinkingConfig.thinkingLevel`
 #     (minimal|low|medium|high); high produced thoughtsTokenCount>0.
-GEMINI_MODEL = os.environ.get("BEATFORGE_GEMINI_MODEL", "gemini-3.5-flash")
+# DEFAULT: gemini-3.6-flash. Chosen on measured evidence, not vibes — a
+# same-song, same-pipeline bench (docs/model-comparison.md, Lucky Lucky, 5 charts
+# each) put it ahead of 3.5 Flash on every axis that matters AND cheaper:
+#   cost/chart  $0.2534 vs $0.4095   (-38%)
+#   flow_cost_max     9.35 vs 14.32  (best foot flow of the three)
+#   density rho      0.796 vs 0.781
+#   wall clock   6.4 min vs 12.6 min
+# gemini-3.5-flash-lite is cheaper again (-86%) and scores fine on rho, but its
+# jump_share came out 0.267 against 3.6's 0.046 — nearly 6x the two-foot
+# commitments, which is the exact pad-comfort problem R3 existed to fix. Cheap is
+# not free if the chart stops being danceable.
+GEMINI_MODEL = os.environ.get("BEATFORGE_GEMINI_MODEL", "gemini-3.6-flash")
 
 # thinking_level (spec §3): Gemini 3.x uses `thinkingLevel`; the pipeline requests
 # "high" (full thinking power, user directive). vertex.py emits the correct
@@ -339,3 +350,15 @@ class RunOptions:
     difficulties: tuple = DIFFICULTIES
     gpu: str = COLAB_GPU
     offline: bool = False          # skip all Vertex calls (fixture/test mode)
+
+# SweetPapa's Founders Mix #2 (2026-07-21). Registered so the simfile carries
+# the real title/artist — without this every export is titled `fm2_<base>`.
+TRACK_META['fm2_banana_banana'] = ('Banana Banana', 'Sweet Papa & the Tones')
+TRACK_META['fm2_do_it_for_me_now'] = ('Do It For Me Now', 'Sweet Papa & the Tones')
+TRACK_META['fm2_lucky_lucky'] = ('Lucky Lucky', 'Sweet Papa & the Tones')
+TRACK_META['fm2_smile_and_dance'] = ('Smile and Dance', 'Sweet Papa & the Tones')
+TRACK_META['fm2_some_will_say'] = ('Some Will Say', 'Sweet Papa & the Tones')
+TRACK_META['fm2_stay_awake_for_me'] = ('Stay Awake For Me', 'Sweet Papa & the Tones')
+TRACK_META['fm2_streaming_is_the_life_for_me'] = ('Streaming Is The Life For Me', 'Sweet Papa & the Tones')
+TRACK_META['fm2_token_economy'] = ('Token Economy', 'Sweet Papa & the Tones')
+TRACK_META['fm2_kieteyuku'] = ('消えてゆく', 'Sweet Papa & the Tones')
